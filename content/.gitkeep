@@ -1,0 +1,3 @@
+# This directory is a mount point for the private Obsidian notes vault (2ru17-Engram-Vault).
+# In production, notes are cloned here during build via CI/CD.
+# In local development, notes are synced here via ../scripts/sync_vault.sh.
