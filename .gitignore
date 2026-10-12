@@ -1,9 +1,11 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Content Vault
+/content/*
+!/content/.gitkeep
 
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.*
 
 # testing
 /coverage
@@ -23,10 +25,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# local env files
-.env*.local
-.env
+# env files
+.env*
 
 # vercel
 .vercel
