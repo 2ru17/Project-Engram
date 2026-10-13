@@ -1,7 +1,3 @@
-# Content Vault
-/content/*
-!/content/.gitkeep
-
 # dependencies
 /node_modules
 /.pnp
