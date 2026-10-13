@@ -1,0 +1,55 @@
+---
+id: Linear_Algebra_Handout_3_fin
+type: note
+course: CSMATH2
+topic: Linear Algebra_Handout 3_fin
+status: completed
+---
+
+# Linear Algebra_Handout 3_fin
+
+> [!info] Document Metadata
+> - **Course:** `=this.course`
+> - **Topic:** `=this.topic`
+> - **Status:** `=this.status`
+
+**🏷️ Tags:** #[[Problem Solving]] #[[CSMATH2]] #[[Linear Algebra]] #[[Mathematics]]
+
+---
+
+## Overview
+
+> This document covers Linear Algebra_Handout 3_fin, providing mathematical concepts, definitions, and applications relevant to CSMATH2.
+
+## Key Definitions
+
+**Matrix / Vector Operations**: Essential building blocks for linear algebra operations.
+**Determinants and Systems**: Core methods to analyze the solutions of linear equations.
+
+## Theoretical Framework
+
+The framework for Linear Algebra_Handout 3_fin relies heavily on understanding vector spaces, matrices, and their transformations. Linear equations can be represented as $ Ax = b $, and finding the determinant or employing Gaussian elimination allows us to understand the properties of these structures.
+
+## Important Formulas
+
+Matrix Multiplication: $ C_{ij} = \sum_{k=1}^n A_{ik} B_{kj} $
+Determinant of a 2x2 matrix: $ \det(A) = ad - bc $
+Inverse of a 2x2 matrix: $ A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix} $
+
+## Worked Examples
+
+**Example 1: Computing a Determinant**
+Find the determinant of:
+$$ A = \begin{pmatrix} 2 & 1 \\ 3 & 4 \end{pmatrix} $$
+Solution:
+$ \det(A) = (2)(4) - (1)(3) = 8 - 3 = 5 $
+
+**Example 2: Matrix Addition**
+Let $ A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} $ and $ B = \begin{pmatrix} 5 & 6 \\ 7 & 8 \end{pmatrix} $.
+Solution:
+$ A + B = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix} $
+
+
+## References & Navigation
+
+- **Related Notes:** [[Linear Equations and Matrices]]
