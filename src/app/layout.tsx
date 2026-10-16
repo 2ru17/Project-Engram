@@ -54,27 +54,57 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: {
     template: "%s | PROJECT ENGRAM",
-    default: "PROJECT ENGRAM",
+    default: "PROJECT ENGRAM // 銘印",
   },
   description:
     "Project Engram — Academic Knowledge Vault, Relational Concept Graph, and Computer Science Monograph Archive",
-  metadataBase: new URL("https://project-engram-2ru17.vercel.app"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://2ru17-project-engram.vercel.app"
+  ),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "PROJECT ENGRAM",
+    title: "PROJECT ENGRAM // 銘印",
     description:
       "Academic Knowledge Vault, Relational Concept Graph, and Computer Science Monograph Archive",
     siteName: "Project Engram",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Project Engram // 銘印 - Computer Science Knowledge Archive",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PROJECT ENGRAM",
+    title: "PROJECT ENGRAM // 銘印",
     description:
       "Academic Knowledge Vault, Relational Concept Graph, and Computer Science Monograph Archive",
+    images: ["/opengraph-image"],
   },
-  robots: { index: true, follow: true },
-  icons: { icon: "/favicon.ico" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon.svg", type: "image/svg+xml" }],
+  },
 };
 
 export const viewport: Viewport = {

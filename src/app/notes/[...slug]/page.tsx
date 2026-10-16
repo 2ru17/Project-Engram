@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs';
 import path from 'path';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import MarkdownRender from '@/components/MarkdownRender';
 import ClientNoteLayout from '@/components/ClientNoteLayout';
@@ -83,6 +84,100 @@ async function findBacklinksInVault(dir: string, hubName: string): Promise<{ nam
 
   await scan(dir);
   return results;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string[] }> | { slug: string[] };
+}): Promise<Metadata> {
+  const resolvedParams = await params;
+  const slugArray = (resolvedParams?.slug || []).map(decodeURIComponent);
+  if (slugArray.length === 0) {
+    return { title: 'Monograph' };
+  }
+
+  const baseDir = path.join(process.cwd(), 'content', 'Main Notes');
+  let targetPath = path.join(baseDir, ...slugArray);
+  let isVirtual = false;
+
+  if (!(await fileExists(targetPath))) {
+    if (await fileExists(targetPath + '.md')) {
+      targetPath += '.md';
+    } else {
+      const deepMatch = await findNoteInVault(baseDir, slugArray[slugArray.length - 1]);
+      if (deepMatch) {
+        targetPath = deepMatch.fullPath;
+      } else {
+        isVirtual = true;
+      }
+    }
+  }
+
+  let isDir = false;
+  if (!isVirtual && (await fileExists(targetPath))) {
+    const statObj = await fs.stat(/*turbopackIgnore: true*/ targetPath);
+    isDir = statObj.isDirectory();
+  }
+
+  const title = isVirtual
+    ? slugArray[slugArray.length - 1]
+    : isDir
+    ? path.basename(targetPath)
+    : path.basename(targetPath, '.md');
+
+  let description = isVirtual
+    ? `Structural Virtual Concept Hub connecting relational records in Project Engram for ${title}.`
+    : `Curated academic monograph and study reference in Project Engram for ${title}.`;
+
+  if (!isVirtual && !isDir && (await fileExists(targetPath))) {
+    try {
+      const content = await fs.readFile(/*turbopackIgnore: true*/ targetPath, 'utf-8');
+      const cleanContent = content
+        .replace(/^---\n[\s\S]*?\n---\n/, '')
+        .replace(/> \[!info\] Document Metadata[\s\S]*?(?=\n\n[^>]|$)/i, '')
+        .replace(/🏷️ Tags: .*?\n/g, '')
+        .replace(/[#*`_\[\]>]/g, '')
+        .trim();
+      if (cleanContent) {
+        description =
+          cleanContent.slice(0, 160).replace(/\s+/g, ' ') +
+          (cleanContent.length > 160 ? '...' : '');
+      }
+    } catch {
+      // Fallback
+    }
+  }
+
+  const canonicalPath = `/notes/${slugArray.map(encodeURIComponent).join('/')}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalPath,
+    },
+    openGraph: {
+      title: `${title} | PROJECT ENGRAM`,
+      description,
+      type: 'article',
+      url: canonicalPath,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${title} - Project Engram`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | PROJECT ENGRAM`,
+      description,
+      images: ['/opengraph-image'],
+    },
+  };
 }
 
 export default async function NotePage({ params }: { params: Promise<{ slug: string[] }> | { slug: string[] } }) {

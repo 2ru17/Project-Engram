@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="engram-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f17"/>
+      <stop offset="50%" stop-color="#070a0f"/>
+      <stop offset="100%" stop-color="#040609"/>
+    </linearGradient>
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#0077B6"/>
+    </linearGradient>
+    <linearGradient id="bezel-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#4B5E78" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- iOS squircle fill -->
+  <rect width="512" height="512" fill="url(#engram-bg)"/>
+  <rect width="496" height="496" x="8" y="8" rx="100" stroke="url(#bezel-stroke)" stroke-width="3" stroke-opacity="0.6"/>
+
+  <!-- Orbital Astrolabe Rings -->
+  <circle cx="256" cy="256" r="190" stroke="#4B5E78" stroke-width="2" stroke-opacity="0.3" stroke-dasharray="8 6"/>
+  <circle cx="256" cy="256" r="148" stroke="#00E5FF" stroke-width="1.5" stroke-opacity="0.35" stroke-dasharray="4 8"/>
+  <circle cx="256" cy="256" r="110" stroke="#4B5E78" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- Cardinal Tick Markers -->
+  <line x1="256" y1="46" x2="256" y2="76" stroke="#00E5FF" stroke-width="4" stroke-linecap="round"/>
+  <line x1="256" y1="436" x2="256" y2="466" stroke="#00E5FF" stroke-width="4" stroke-linecap="round"/>
+  <line x1="46" y1="256" x2="76" y2="256" stroke="#00E5FF" stroke-width="4" stroke-linecap="round"/>
+  <line x1="436" y1="256" x2="466" y2="256" stroke="#00E5FF" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Outer Diamond Bezel -->
+  <g transform="rotate(45 256 256)">
+    <rect x="146" y="146" width="220" height="220" rx="28" fill="#0d1420" stroke="url(#cyan-glow)" stroke-width="5"/>
+    <rect x="166" y="166" width="180" height="180" rx="16" stroke="#4B5E78" stroke-width="2" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Center Core Hanko Monogram -->
+  <polygon points="256,196 306,256 256,316 206,256" fill="url(#cyan-glow)" fill-opacity="0.25" stroke="#00E5FF" stroke-width="3"/>
+  <circle cx="256" cy="256" r="16" fill="#00E5FF"/>
+  <circle cx="256" cy="256" r="7" fill="#0b0f17"/>
+
+  <!-- Corner Accents -->
+  <circle cx="256" cy="196" r="5" fill="#00E5FF"/>
+  <circle cx="256" cy="316" r="5" fill="#00E5FF"/>
+  <circle cx="206" cy="256" r="5" fill="#00E5FF"/>
+  <circle cx="306" cy="256" r="5" fill="#00E5FF"/>
+</svg>

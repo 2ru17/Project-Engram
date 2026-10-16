@@ -850,7 +850,7 @@ export default function HomePage() {
             先延ばしは成功の天罰。 // Knowledge forged in code, preserved in ink.
           </p>
 
-          <div className="flex items-center gap-6 font-mono text-[10px] tracking-widest text-[var(--zen-ink-muted)]">
+          <div className="flex flex-wrap items-center justify-center gap-6 font-mono text-[10px] tracking-widest text-[var(--zen-ink-muted)]">
             <Link href="/notes?view=graph" className="hover:text-[var(--zen-cyan)] transition-colors">
               GRAPH
             </Link>
@@ -860,14 +860,27 @@ export default function HomePage() {
             </Link>
             <span>·</span>
             <a
-              href="https://github.com/2ru17"
+              href="https://github.com/2ru17/Project-Engram"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[var(--zen-cyan)] transition-colors"
             >
-              GITHUB
+              REPOSITORY
+            </a>
+            <span>·</span>
+            <a
+              href="https://github.com/2ru17/Project-Engram/blob/main/LICENSE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[var(--zen-cyan)] transition-colors"
+            >
+              MIT LICENSE
             </a>
           </div>
+
+          <p className="text-[11px] text-[var(--zen-ink-muted)]/70 max-w-lg mt-6 leading-relaxed font-mono">
+            Open-source under MIT License. Curated academic monographs for pedagogical and research reference. Zero tracking cookies, zero telemetry.
+          </p>
         </div>
       </footer>
     </div>
