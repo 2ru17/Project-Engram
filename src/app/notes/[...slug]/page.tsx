@@ -86,6 +86,14 @@ async function findBacklinksInVault(dir: string, hubName: string): Promise<{ nam
   return results;
 }
 
+// Security: Guard against path traversal attacks.
+// Ensures the resolved file path is strictly inside the allowed content directory.
+function isWithinContentDir(resolvedPath: string, baseDir: string): boolean {
+  const normalizedBase = path.resolve(baseDir) + path.sep;
+  const normalizedTarget = path.resolve(resolvedPath);
+  return normalizedTarget.startsWith(normalizedBase) || normalizedTarget === path.resolve(baseDir);
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -100,6 +108,11 @@ export async function generateMetadata({
   const baseDir = path.join(process.cwd(), 'content', 'Main Notes');
   let targetPath = path.join(baseDir, ...slugArray);
   let isVirtual = false;
+
+  // Path traversal guard
+  if (!isWithinContentDir(targetPath, baseDir)) {
+    return { title: 'Monograph' };
+  }
 
   if (!(await fileExists(targetPath))) {
     if (await fileExists(targetPath + '.md')) {
@@ -192,6 +205,11 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
   let targetPath = path.join(baseDir, ...slugArray);
   let isVirtual = false;
   let backlinks: { name: string, path: string }[] = [];
+
+  // Path traversal guard
+  if (!isWithinContentDir(targetPath, baseDir)) {
+    notFound();
+  }
   
   if (!(await fileExists(targetPath))) {
     if (await fileExists(targetPath + '.md')) {
