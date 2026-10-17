@@ -64,34 +64,34 @@ Exception handling introduces slight runtime overhead during the normal executio
 ## Multiple Choice Questions
 
 1. What is the primary purpose of Exception Handling in Java?
-    - **A)** To optimize the execution speed of the program.
-    - **B)** To handle runtime errors and maintain the normal flow of the application.
-    - **C)** To hide source code implementation details.
-    - **D)** To prevent compile-time syntax errors.
+- **A)** To optimize the execution speed of the program.
+- **B)** To handle runtime errors and maintain the normal flow of the application.
+- **C)** To hide source code implementation details.
+- **D)** To prevent compile-time syntax errors.
 
 2. How do Checked Exceptions differ from Unchecked Exceptions?
-    - **A)** Checked exceptions are checked at runtime, while unchecked exceptions are checked at compile-time.
-    - **B)** Checked exceptions must be declared or handled at compile-time, unlike unchecked exceptions.
-    - **C)** Checked exceptions represent serious system errors like `OutOfMemoryError`.
-    - **D)** Unchecked exceptions require a `throws` declaration in the method signature.
+- **A)** Checked exceptions are checked at runtime, while unchecked exceptions are checked at compile-time.
+- **B)** Checked exceptions must be declared or handled at compile-time, unlike unchecked exceptions.
+- **C)** Checked exceptions represent serious system errors like `OutOfMemoryError`.
+- **D)** Unchecked exceptions require a `throws` declaration in the method signature.
 
 3. Which block of code executes regardless of whether an exception occurs or not?
-    - **A)** `try`
-    - **B)** `catch`
-    - **C)** `finally`
-    - **D)** `throw`
+- **A)** `try`
+- **B)** `catch`
+- **C)** `finally`
+- **D)** `throw`
 
 4. What does the `throws` keyword indicate when used in a method signature?
-    - **A)** It explicitly throws a new exception object immediately.
-    - **B)** It catches any exceptions thrown within the method.
-    - **C)** It declares that the method might throw exceptions, passing the responsibility to the caller.
-    - **D)** It defines a custom exception class.
+- **A)** It explicitly throws a new exception object immediately.
+- **B)** It catches any exceptions thrown within the method.
+- **C)** It declares that the method might throw exceptions, passing the responsibility to the caller.
+- **D)** It defines a custom exception class.
 
 5. Why is it recommended to avoid using exceptions for normal control flow?
-    - **A)** Because exceptions can only be thrown once per application run.
-    - **B)** Because they introduce significant overhead due to stack trace generation and stack unwinding.
-    - **C)** Because it causes the Java Virtual Machine to crash immediately.
-    - **D)** Because checked exceptions cannot be caught by standard `catch` blocks.
+- **A)** Because exceptions can only be thrown once per application run.
+- **B)** Because they introduce significant overhead due to stack trace generation and stack unwinding.
+- **C)** Because it causes the Java Virtual Machine to crash immediately.
+- **D)** Because checked exceptions cannot be caught by standard `catch` blocks.
 
 ### Answer Key & Explanations
 1. **B)** Exception handling provides a safety net to catch errors gracefully, preventing the entire application from crashing unexpectedly.

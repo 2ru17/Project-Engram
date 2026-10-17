@@ -213,34 +213,34 @@ using IEEE 754 Round to Nearest, Ties to Even.
 ## Multiple Choice Questions
 
 1. During floating-point addition, what is the primary purpose of the Sticky Bit ($S$)?
-    - **A)** To store the sign of the larger operand
-    - **B)** To record whether any non-zero bit was shifted past the Round Bit ($R$) during significand alignment
-    - **C)** To detect division by zero exceptions
-    - **D)** To track exponent overflow into infinity
+- **A)** To store the sign of the larger operand
+- **B)** To record whether any non-zero bit was shifted past the Round Bit ($R$) during significand alignment
+- **C)** To detect division by zero exceptions
+- **D)** To track exponent overflow into infinity
 
 2. Under the IEEE 754 default rounding mode (Round to Nearest, Ties to Even), how is an intermediate significand with extension bits $G=1, R=0, S=0$ and LSb $L=1$ rounded?
-    - **A)** Round down (discard $G, R, S$, leaving $L=1$)
-    - **B)** Round up (add 1 to $L$, making the LSb `0`)
-    - **C)** Set the significand to zero
-    - **D)** Convert the number to a Quiet NaN
+- **A)** Round down (discard $G, R, S$, leaving $L=1$)
+- **B)** Round up (add 1 to $L$, making the LSb `0`)
+- **C)** Set the significand to zero
+- **D)** Convert the number to a Quiet NaN
 
 3. What is the cause of Catastrophic Cancellation in floating-point computation?
-    - **A)** Adding two extremely large numbers of opposite signs
-    - **B)** Subtracting two nearly equal numbers, which eliminates significant leading digits and elevates low-order rounding noise
-    - **C)** Multiplying a normalized float by a denormalized float
-    - **D)** Dividing positive infinity by negative infinity
+- **A)** Adding two extremely large numbers of opposite signs
+- **B)** Subtracting two nearly equal numbers, which eliminates significant leading digits and elevates low-order rounding noise
+- **C)** Multiplying a normalized float by a denormalized float
+- **D)** Dividing positive infinity by negative infinity
 
 4. If two single-precision floats have biased exponents $E_1' = 140$ and $E_2' = 135$, by how many bit positions must the smaller significand be shifted right during alignment?
-    - **A)** 3 positions
-    - **B)** 5 positions
-    - **C)** 8 positions
-    - **D)** 10 positions
+- **A)** 3 positions
+- **B)** 5 positions
+- **C)** 8 positions
+- **D)** 10 positions
 
 5. In floating-point multiplication, why is the exponent calculation formula $E_z' = E_x' + E_y' - \text{Bias}$ rather than $E_x' + E_y'$?
-    - **A)** Because adding two biased exponents includes two copies of the bias constant, requiring one bias to be subtracted to maintain the true biased representation
-    - **B)** To prevent the multiplier accumulator from overflowing
-    - **C)** Because the significand product is always normalized
-    - **D)** To account for the sign bit XOR operation
+- **A)** Because adding two biased exponents includes two copies of the bias constant, requiring one bias to be subtracted to maintain the true biased representation
+- **B)** To prevent the multiplier accumulator from overflowing
+- **C)** Because the significand product is always normalized
+- **D)** To account for the sign bit XOR operation
 
 ### Answer Key & Explanations
 

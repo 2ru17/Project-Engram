@@ -187,64 +187,64 @@ $$
 ## Multiple Choice Questions
 
 1. Which condition mathematically defines a critical point $c$ of a differentiable function $f$?
-    - **A)** $f(c) = 0$
-    - **B)** $f'(c) = 0$ or $f'(c)$ is undefined, with $c$ in the domain of $f$
-    - **C)** $f''(c) = 0$
-    - **D)** $f'(c) > 0$ and $f''(c) < 0$
+- **A)** $f(c) = 0$
+- **B)** $f'(c) = 0$ or $f'(c)$ is undefined, with $c$ in the domain of $f$
+- **C)** $f''(c) = 0$
+- **D)** $f'(c) > 0$ and $f''(c) < 0$
 
 2. If $f'(c) = 0$ and $f''(c) < 0$, what does the Second Derivative Test conclude about $x = c$?
-    - **A)** The function has an inflection point at $c$.
-    - **B)** The test is inconclusive.
-    - **C)** The function attains a local maximum at $c$.
-    - **D)** The function attains a local minimum at $c$.
+- **A)** The function has an inflection point at $c$.
+- **B)** The test is inconclusive.
+- **C)** The function attains a local maximum at $c$.
+- **D)** The function attains a local minimum at $c$.
 
 3. Why can one minimize squared distance $D(x) = [d(x)]^2$ instead of Euclidean distance $d(x)$ in geometric optimization?
-    - **A)** Because squaring eliminates negative values in the domain.
-    - **B)** Because $g(u) = u^2$ is strictly increasing for $u \ge 0$, preserving the location of extrema while eliminating radical differentiation.
-    - **C)** Because square roots cannot be differentiated using the power rule.
-    - **D)** Because squaring converts local extrema into absolute extrema.
+- **A)** Because squaring eliminates negative values in the domain.
+- **B)** Because $g(u) = u^2$ is strictly increasing for $u \ge 0$, preserving the location of extrema while eliminating radical differentiation.
+- **C)** Because square roots cannot be differentiated using the power rule.
+- **D)** Because squaring converts local extrema into absolute extrema.
 
 4. In the cylindrical can problem with fixed volume $V$, what is the optimal geometric relationship between height $h$ and radius $r$ to minimize surface area?
-    - **A)** $h = r$
-    - **B)** $h = \pi r$
-    - **C)** $h = 2r$ (height equals diameter)
-    - **D)** $h = 4r$
+- **A)** $h = r$
+- **B)** $h = \pi r$
+- **C)** $h = 2r$ (height equals diameter)
+- **D)** $h = 4r$
 
 5. Under the Closed Interval Method for finding absolute extrema of a continuous function on $[a, b]$, which set of candidate points must be evaluated?
-    - **A)** Only points where $f''(x) = 0$.
-    - **B)** The endpoints $a, b$ and all critical points $c \in (a, b)$.
-    - **C)** Only the midpoint $(a + b)/2$.
-    - **D)** Only the roots where $f(x) = 0$.
+- **A)** Only points where $f''(x) = 0$.
+- **B)** The endpoints $a, b$ and all critical points $c \in (a, b)$.
+- **C)** Only the midpoint $(a + b)/2$.
+- **D)** Only the roots where $f(x) = 0$.
 
 6. What occurs if $f'(c) = 0$ and $f''(c) = 0$?
-    - **A)** $c$ is guaranteed to be an inflection point.
-    - **B)** $c$ cannot be an extremum.
-    - **C)** The Second Derivative Test is inconclusive; one must use the First Derivative Test.
-    - **D)** The function is discontinuous at $c$.
+- **A)** $c$ is guaranteed to be an inflection point.
+- **B)** $c$ cannot be an extremum.
+- **C)** The Second Derivative Test is inconclusive; one must use the First Derivative Test.
+- **D)** The function is discontinuous at $c$.
 
 7. In the open-top box problem with cardboard $16 \times 30$, why was the critical point $x = 12$ rejected?
-    - **A)** Because $V'(12) \ne 0$.
-    - **B)** Because $x = 12$ falls outside the physical domain $(0, 8)$, producing negative width $16 - 2(12) = -8$.
-    - **C)** Because $V''(12) < 0$.
-    - **D)** Because volume cannot be an integer.
+- **A)** Because $V'(12) \ne 0$.
+- **B)** Because $x = 12$ falls outside the physical domain $(0, 8)$, producing negative width $16 - 2(12) = -8$.
+- **C)** Because $V''(12) < 0$.
+- **D)** Because volume cannot be an integer.
 
 8. According to the Extreme Value Theorem, which conditions guarantee the existence of both an absolute maximum and an absolute minimum?
-    - **A)** Differentiability on an open interval $(a, b)$.
-    - **B)** Continuity on a closed interval $[a, b]$.
-    - **C)** Monotonicity across the entire real line $\mathbb{R}$.
-    - **D)** Non-zero second derivative on $[a, b]$.
+- **A)** Differentiability on an open interval $(a, b)$.
+- **B)** Continuity on a closed interval $[a, b]$.
+- **C)** Monotonicity across the entire real line $\mathbb{R}$.
+- **D)** Non-zero second derivative on $[a, b]$.
 
 9. What does a sign change of $f'(x)$ from negative to positive as $x$ increases through $c$ signify?
-    - **A)** $f$ transitions from concave up to concave down.
-    - **B)** $f$ has a local minimum at $c$.
-    - **C)** $f$ has a local maximum at $c$.
-    - **D)** $f$ has a vertical asymptote at $c$.
+- **A)** $f$ transitions from concave up to concave down.
+- **B)** $f$ has a local minimum at $c$.
+- **C)** $f$ has a local maximum at $c$.
+- **D)** $f$ has a vertical asymptote at $c$.
 
 10. When optimizing the cost of a rectangular fence where one side borders a river (requiring no fencing), which principle applies?
-    - **A)** The perimeter constraint equation omits one length variable ($P = 2w + l$), altering the optimal aspect ratio to $l = 2w$.
-    - **B)** The area must be zero.
-    - **C)** Calculus cannot be applied when boundaries are asymmetric.
-    - **D)** The cost will be identical to a 4-sided enclosure.
+- **A)** The perimeter constraint equation omits one length variable ($P = 2w + l$), altering the optimal aspect ratio to $l = 2w$.
+- **B)** The area must be zero.
+- **C)** Calculus cannot be applied when boundaries are asymmetric.
+- **D)** The cost will be identical to a 4-sided enclosure.
 
 ---
 

@@ -60,64 +60,64 @@ This module covers how to represent decimal digits using different types of bina
 ## Multiple Choice Questions
 
 1. How many minimum bits are required to represent a single decimal digit using a binary code?
-    - **A)** 2 bits
-    - **B)** 3 bits
-    - **C)** 4 bits
-    - **D)** 8 bits
+- **A)** 2 bits
+- **B)** 3 bits
+- **C)** 4 bits
+- **D)** 8 bits
 
 2. Which of the following binary codes is NOT considered self-complementing?
-    - **A)** 2421 code
-    - **B)** Excess-3 code
-    - **C)** 8, 4, -2, -1 code
-    - **D)** BCD (8 4 2 1) code
+- **A)** 2421 code
+- **B)** Excess-3 code
+- **C)** 8, 4, -2, -1 code
+- **D)** BCD (8 4 2 1) code
 
 3. What is the Excess-3 code representation for the decimal digit 5?
-    - **A)** 0101
-    - **B)** 1000
-    - **C)** 0111
-    - **D)** 1011
+- **A)** 0101
+- **B)** 1000
+- **C)** 0111
+- **D)** 1011
 
 4. In the Biquinary code (5 0 4 3 2 1 0), how is the decimal digit 3 represented?
-    - **A)** 0 1 0 1 0 0 0
-    - **B)** 0 1 0 0 0 1 0
-    - **C)** 1 0 0 1 0 0 0
-    - **D)** 0 0 1 1 0 0 0
+- **A)** 0 1 0 1 0 0 0
+- **B)** 0 1 0 0 0 1 0
+- **C)** 1 0 0 1 0 0 0
+- **D)** 0 0 1 1 0 0 0
 
 5. What is a key characteristic of Grey Code (Reflected Code)?
-    - **A)** It uses a parity bit for error correction
-    - **B)** Only one bit changes when transitioning from one number to the next
-    - **C)** It is heavily weighted based on position
-    - **D)** It requires 5 bits per decimal digit
+- **A)** It uses a parity bit for error correction
+- **B)** Only one bit changes when transitioning from one number to the next
+- **C)** It is heavily weighted based on position
+- **D)** It requires 5 bits per decimal digit
 
 6. In the 2421 code, what is the binary sequence for the decimal digit 6?
-    - **A)** 0110
-    - **B)** 1100
-    - **C)** 1001
-    - **D)** 0101
+- **A)** 0110
+- **B)** 1100
+- **C)** 1001
+- **D)** 0101
 
 7. Which of the following codes is known to be used in rotating motors?
-    - **A)** Excess-3 Code
-    - **B)** Biquinary Code
-    - **C)** Grey Code
-    - **D)** 2421 Code
+- **A)** Excess-3 Code
+- **B)** Biquinary Code
+- **C)** Grey Code
+- **D)** 2421 Code
 
 8. What is the BCD (8 4 2 1) representation for the decimal number 395?
-    - **A)** 0011 1111 1011
-    - **B)** 0110 1100 1000
-    - **C)** 0011 1001 0101
-    - **D)** 0101 1111 1011
+- **A)** 0011 1111 1011
+- **B)** 0110 1100 1000
+- **C)** 0011 1001 0101
+- **D)** 0101 1111 1011
 
 9. How many unused bit combinations are there when representing decimal digits with 4-bit binary codes?
-    - **A)** 4
-    - **B)** 6
-    - **C)** 8
-    - **D)** 10
+- **A)** 4
+- **B)** 6
+- **C)** 8
+- **D)** 10
 
 10. What is the 8, 4, -2, -1 code representation for the decimal digit 9?
-    - **A)** 1111
-    - **B)** 1001
-    - **C)** 1100
-    - **D)** 1011
+- **A)** 1111
+- **B)** 1001
+- **C)** 1100
+- **D)** 1011
 
 ### Answer Key & Explanations
 1. **C)** A minimum of 4 bits is required since 2^3=8 is not enough to cover the 10 decimal digits (0-9).

@@ -52,64 +52,64 @@ Defensive security focuses on maintaining a robust security posture to prevent, 
 
 ## Multiple Choice Questions
 1. What is the primary function of a Security Operations Center (SOC)?
-    - **A)** Developing secure software
-    - **B)** Performing authorized penetration tests
-    - **C)** Protecting, monitoring, identifying, and eliminating threats
-    - **D)** Managing IT infrastructure and cabling
+- **A)** Developing secure software
+- **B)** Performing authorized penetration tests
+- **C)** Protecting, monitoring, identifying, and eliminating threats
+- **D)** Managing IT infrastructure and cabling
 
 2. Which technology is central to a SOC for aggregating and analyzing log data?
-    - **A)** IDS
-    - **B)** SIEM
-    - **C)** Firewall
-    - **D)** VPN
+- **A)** IDS
+- **B)** SIEM
+- **C)** Firewall
+- **D)** VPN
 
 3. In a typical SOC hierarchy, which tier is responsible for initial alert triage?
-    - **A)** Tier 1
-    - **B)** Tier 2
-    - **C)** Tier 3
-    - **D)** Tier 4
+- **A)** Tier 1
+- **B)** Tier 2
+- **C)** Tier 3
+- **D)** Tier 4
 
 4. Proactively searching networks for threats that bypass standard security controls is called:
-    - **A)** Penetration Testing
-    - **B)** Vulnerability Scanning
-    - **C)** Threat Hunting
-    - **D)** Patch Management
+- **A)** Penetration Testing
+- **B)** Vulnerability Scanning
+- **C)** Threat Hunting
+- **D)** Patch Management
 
 5. According to the NIST Incident Response lifecycle, what is the first phase?
-    - **A)** Detection and Analysis
-    - **B)** Preparation
-    - **C)** Containment
-    - **D)** Post-Incident Activity
+- **A)** Detection and Analysis
+- **B)** Preparation
+- **C)** Containment
+- **D)** Post-Incident Activity
 
 6. Which phase of IR involves isolating a compromised host from the network?
-    - **A)** Preparation
-    - **B)** Detection
-    - **C)** Containment
-    - **D)** Recovery
+- **A)** Preparation
+- **B)** Detection
+- **C)** Containment
+- **D)** Recovery
 
 7. What is an Indicator of Compromise (IoC)?
-    - **A)** A firewall policy rule
-    - **B)** A piece of forensic data that identifies potentially malicious activity
-    - **C)** A software patch
-    - **D)** A security policy document
+- **A)** A firewall policy rule
+- **B)** A piece of forensic data that identifies potentially malicious activity
+- **C)** A software patch
+- **D)** A security policy document
 
 8. After resolving a major security incident, the team holds a meeting to discuss what went wrong and how to improve. Which phase is this?
-    - **A)** Preparation
-    - **B)** Containment
-    - **C)** Eradication
-    - **D)** Post-Incident Activity
+- **A)** Preparation
+- **B)** Containment
+- **C)** Eradication
+- **D)** Post-Incident Activity
 
 9. What does SOAR stand for in the context of modern SOC operations?
-    - **A)** Security Operations and Assessment Reporting
-    - **B)** Security Orchestration, Automation, and Response
-    - **C)** System Optimization and Alert Resolution
-    - **D)** Secure Online Authentication Register
+- **A)** Security Operations and Assessment Reporting
+- **B)** Security Orchestration, Automation, and Response
+- **C)** System Optimization and Alert Resolution
+- **D)** Secure Online Authentication Register
 
 10. A SOC analyst receives an alert for a known malware hash. Which system most likely generated this specific alert?
-    - **A)** Network Router
-    - **B)** Endpoint Detection and Response (EDR) / Antivirus
-    - **C)** Load Balancer
-    - **D)** DHCP Server
+- **A)** Network Router
+- **B)** Endpoint Detection and Response (EDR) / Antivirus
+- **C)** Load Balancer
+- **D)** DHCP Server
 
 ### Answer Key & Explanations
 1. **C.** The SOC is responsible for the continuous monitoring and defense of the organization's IT systems.

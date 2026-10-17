@@ -62,58 +62,58 @@ int main() {
 ## Multiple Choice Questions
 
 1. What best describes the role of **`for` Loop**?
-    - **A)** A compact loop structure combining initialization, condition check, and update
-    - **B)** A deprecated standard that has been replaced in modern implementations
-    - **C)** Iterating one time too many or one time too few (e.g., using `<=` instead of ...
-    - **D)** `for(int i=0; i<10; i++); { ... }` The semicolon terminates the loop immediat...
+- **A)** A compact loop structure combining initialization, condition check, and update
+- **B)** A deprecated standard that has been replaced in modern implementations
+- **C)** Iterating one time too many or one time too few (e.g., using `<=` instead of ...
+- **D)** `for(int i=0; i<10; i++); { ... }` The semicolon terminates the loop immediat...
 
 2. What best describes the role of **🏷️ Tags**?
-    - **A)** #[[Code Snippets]] #[[CCPROG1]] #[[Loops]] #[[C]] #[[M6]]
-    - **B)** `for(int i=0; i<10; i++); { ... }` The semicolon terminates the loop immediat...
-    - **C)** A software-only abstraction that does not correspond to physical hardware
-    - **D)** Iterating one time too many or one time too few (e.g., using `<=` instead of ...
+- **A)** #[[Code Snippets]] #[[CCPROG1]] #[[Loops]] #[[C]] #[[M6]]
+- **B)** `for(int i=0; i<10; i++); { ... }` The semicolon terminates the loop immediat...
+- **C)** A software-only abstraction that does not correspond to physical hardware
+- **D)** Iterating one time too many or one time too few (e.g., using `<=` instead of ...
 
 3. What best describes the role of **Off-by-One Error**?
-    - **A)** A deprecated standard that has been replaced in modern implementations
-    - **B)** A compact loop structure combining initialization, condition check, and update
-    - **C)** #[[Code Snippets]] #[[CCPROG1]] #[[Loops]] #[[C]] #[[M6]]
-    - **D)** Iterating one time too many or one time too few (e.g., using `<=` instead of ...
+- **A)** A deprecated standard that has been replaced in modern implementations
+- **B)** A compact loop structure combining initialization, condition check, and update
+- **C)** #[[Code Snippets]] #[[CCPROG1]] #[[Loops]] #[[C]] #[[M6]]
+- **D)** Iterating one time too many or one time too few (e.g., using `<=` instead of ...
 
 4. What best describes the role of **Infinite Loop**?
-    - **A)** Forgetting to update the loop control variable (e.g., forgetting `i++`)
-    - **B)** A loop whose condition never becomes false
-    - **C)** A measurement unit used exclusively in network performance benchmarking
-    - **D)** `for(int i=0; i<10; i++); { ... }` The semicolon terminates the loop immediat...
+- **A)** Forgetting to update the loop control variable (e.g., forgetting `i++`)
+- **B)** A loop whose condition never becomes false
+- **C)** A measurement unit used exclusively in network performance benchmarking
+- **D)** `for(int i=0; i<10; i++); { ... }` The semicolon terminates the loop immediat...
 
 5. According to the material on **Iterative Statements in C**, which statement is correct?
-    - **A)** while(condition): The condition is tested at the start. If false initially, the loop body never r...
-    - **B)** while(condition): The condition is not tested at the start. If false initially, the loop body never r...
-    - **C)** The described behavior is considered deprecated in modern implementations
-    - **D)** This principle only applies in theoretical models, not practical systems
+- **A)** while(condition): The condition is tested at the start. If false initially, the loop body never r...
+- **B)** while(condition): The condition is not tested at the start. If false initially, the loop body never r...
+- **C)** The described behavior is considered deprecated in modern implementations
+- **D)** This principle only applies in theoretical models, not practical systems
 
 6. According to the material on **Iterative Statements in C**, which statement is correct?
-    - **A)** id: ccprog1_iterative_statements
-    - **B)** The opposite of the stated principle applies
-    - **C)** The described behavior is considered deprecated in modern implementations
-    - **D)** This principle only applies in theoretical models, not practical systems
+- **A)** id: ccprog1_iterative_statements
+- **B)** The opposite of the stated principle applies
+- **C)** The described behavior is considered deprecated in modern implementations
+- **D)** This principle only applies in theoretical models, not practical systems
 
 7. According to the material on **Iterative Statements in C**, which statement is correct?
-    - **A)** The described behavior is considered deprecated in modern implementations
-    - **B)** This principle only applies in theoretical models, not practical systems
-    - **C)** The opposite of the stated principle applies
-    - **D)** topic: Iterative Statements in C
+- **A)** The described behavior is considered deprecated in modern implementations
+- **B)** This principle only applies in theoretical models, not practical systems
+- **C)** The opposite of the stated principle applies
+- **D)** topic: Iterative Statements in C
 
 8. According to the material on **Iterative Statements in C**, which statement is correct?
-    - **A)** printf("For loop count: %d\n", k);
-    - **B)** This principle only applies in theoretical models, not practical systems
-    - **C)** The described behavior is considered deprecated in modern implementations
-    - **D)** The opposite of the stated principle applies
+- **A)** printf("For loop count: %d\n", k);
+- **B)** This principle only applies in theoretical models, not practical systems
+- **C)** The described behavior is considered deprecated in modern implementations
+- **D)** The opposite of the stated principle applies
 
 9. Which of the following is identified as a common pitfall when studying **Iterative Statements in C**?
-    - **A)** Off-by-One Error: Iterating one time too many or one time too few (e.g., using `<=` instead of `<...
-    - **B)** Over-relying on memorization instead of understanding the underlying theory
-    - **C)** Spending too much time on implementation before understanding the concept
-    - **D)** Confusing this topic with an unrelated area of study
+- **A)** Off-by-One Error: Iterating one time too many or one time too few (e.g., using `<=` instead of `<...
+- **B)** Over-relying on memorization instead of understanding the underlying theory
+- **C)** Spending too much time on implementation before understanding the concept
+- **D)** Confusing this topic with an unrelated area of study
 
 ### Answer Key & Explanations
 1. **A)** **`for` Loop** is defined in the note as: A compact loop structure combining initialization, condition check, and update.

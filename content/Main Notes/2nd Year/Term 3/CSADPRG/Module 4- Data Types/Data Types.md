@@ -111,64 +111,64 @@ j = *ptr; // Sets j to the value located at the address ptr
 ## Multiple Choice Questions
 
 **1. What is the main purpose of an Abstract Data Type (ADT)?**
-    - **A)** To map primitive data types directly to hardware
-    - **B)** To define properties of type systems
-    - **C)** To hide the inner design of how a type works from the user
-    - **D)** To track dynamic attributes during runtime
+- **A)** To map primitive data types directly to hardware
+- **B)** To define properties of type systems
+- **C)** To hide the inner design of how a type works from the user
+- **D)** To track dynamic attributes during runtime
 
 **2. Which type of equivalence determines if two variables are of the same type by checking if they have identical structures?**
-    - **A)** Name Equivalence
-    - **B)** Structure Type Equivalence
-    - **C)** Coercion Equivalence
-    - **D)** Abstract Equivalence
+- **A)** Name Equivalence
+- **B)** Structure Type Equivalence
+- **C)** Coercion Equivalence
+- **D)** Abstract Equivalence
 
 **3. What does a Descriptor do?**
-    - **A)** Converts a type implicitly by compiler-generated code
-    - **B)** Models real numbers as approximations
-    - **C)** Provides maximum flexibility at the cost of overhead
-    - **D)** Stores a collection of the attributes of a variable in memory
+- **A)** Converts a type implicitly by compiler-generated code
+- **B)** Models real numbers as approximations
+- **C)** Provides maximum flexibility at the cost of overhead
+- **D)** Stores a collection of the attributes of a variable in memory
 
 **4. Which of the following is true about floating-point data types?**
-    - **A)** They model real numbers as approximations and most utilize the IEEE 754 Standard.
-    - **B)** They store a fixed number of decimal digits using Binary Coded Decimals (BCD).
-    - **C)** They are the simplest type representing switches or flags.
-    - **D)** They are heavily used in functional programming and script languages.
+- **A)** They model real numbers as approximations and most utilize the IEEE 754 Standard.
+- **B)** They store a fixed number of decimal digits using Binary Coded Decimals (BCD).
+- **C)** They are the simplest type representing switches or flags.
+- **D)** They are heavily used in functional programming and script languages.
 
 **5. What is Coercion in programming languages?**
-    - **A)** The explicit casting of pointers
-    - **B)** The application of an operator to an operand of an inappropriate type
-    - **C)** The implicit conversion of a type by compiler-generated code to a legal type
-    - **D)** A set of rules that associates properties to types
+- **A)** The explicit casting of pointers
+- **B)** The application of an operator to an operand of an inappropriate type
+- **C)** The implicit conversion of a type by compiler-generated code to a legal type
+- **D)** A set of rules that associates properties to types
 
 **6. In the context of structured data types, what is the primary difference between a struct and a union in C?**
-    - **A)** Struct fields share the same memory space, while union fields do not.
-    - **B)** Union fields share the same memory space, while struct fields take up distinct memory space.
-    - **C)** Structs can only hold primitive types, while unions can hold objects.
-    - **D)** Unions require garbage collection, while structs do not.
+- **A)** Struct fields share the same memory space, while union fields do not.
+- **B)** Union fields share the same memory space, while struct fields take up distinct memory space.
+- **C)** Structs can only hold primitive types, while unions can hold objects.
+- **D)** Unions require garbage collection, while structs do not.
 
 **7. What is a Dangling Pointer?**
-    - **A)** A pointer that has been successfully deallocated.
-    - **B)** A pointer that points to a heap-dynamic variable that has been deallocated.
-    - **C)** A pointer that has lost all references, creating garbage.
-    - **D)** A pointer that points to a specific memory cell called a tombstone.
+- **A)** A pointer that has been successfully deallocated.
+- **B)** A pointer that points to a heap-dynamic variable that has been deallocated.
+- **C)** A pointer that has lost all references, creating garbage.
+- **D)** A pointer that points to a specific memory cell called a tombstone.
 
 **8. Which string length design varies with no maximum value, providing maximum flexibility at the cost of overhead?**
-    - **A)** Static
-    - **B)** Limited Dynamic
-    - **C)** Discriminated Dynamic
-    - **D)** Dynamic
+- **A)** Static
+- **B)** Limited Dynamic
+- **C)** Discriminated Dynamic
+- **D)** Dynamic
 
 **9. What is the purpose of Tombstones in pointer implementation?**
-    - **A)** To eagerly reclaim inaccessible heap memory using reference counters.
-    - **B)** To prevent dangling pointers by setting extra cells pointing to the variable to nil upon deallocation.
-    - **C)** To store fields in adjacent memory for heterogeneous aggregates.
-    - **D)** To ensure safe dereferencing using (key, address) pairs.
+- **A)** To eagerly reclaim inaccessible heap memory using reference counters.
+- **B)** To prevent dangling pointers by setting extra cells pointing to the variable to nil upon deallocation.
+- **C)** To store fields in adjacent memory for heterogeneous aggregates.
+- **D)** To ensure safe dereferencing using (key, address) pairs.
 
 **10. Which data structure is described as a possibly heterogeneous aggregate of data elements identified by names (fields)?**
-    - **A)** Array
-    - **B)** Tuple
-    - **C)** Record
-    - **D)** List
+- **A)** Array
+- **B)** Tuple
+- **C)** Record
+- **D)** List
 
 ### Answer Key & Explanations
 

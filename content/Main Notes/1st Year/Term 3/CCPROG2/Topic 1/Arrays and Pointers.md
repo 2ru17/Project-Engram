@@ -57,20 +57,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. In C, what does an array name naturally decay to when used in most expressions?
-    - **A)** A constant integer representing its size
-    - **B)** A pointer to its first element
-    - **C)** A pointer to the entire array structure
-    - **D)** A void pointer
+- **A)** A constant integer representing its size
+- **B)** A pointer to its first element
+- **C)** A pointer to the entire array structure
+- **D)** A void pointer
 2. Which expression is entirely equivalent to `arr[3]` in pointer arithmetic?
-    - **A)** `*(arr + 3)`
-    - **B)** `*arr + 3`
-    - **C)** `&(arr + 3)`
-    - **D)** `arr * 3`
+- **A)** `*(arr + 3)`
+- **B)** `*arr + 3`
+- **C)** `&(arr + 3)`
+- **D)** `arr * 3`
 3. Why is it advantageous to pass arrays as pointers to functions?
-    - **A)** It creates a safe duplicate of the array
-    - **B)** It automatically resizes the array
-    - **C)** It avoids the overhead of copying all array elements
-    - **D)** It forces the function to return a pointer
+- **A)** It creates a safe duplicate of the array
+- **B)** It automatically resizes the array
+- **C)** It avoids the overhead of copying all array elements
+- **D)** It forces the function to return a pointer
 
 ### Answer Key & Explanations
 1. **B)** An array name decays to point directly to the memory address of the first item (index 0).

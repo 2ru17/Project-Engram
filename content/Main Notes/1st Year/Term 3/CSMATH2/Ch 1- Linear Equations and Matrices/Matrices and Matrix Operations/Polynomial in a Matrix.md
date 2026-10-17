@@ -52,22 +52,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. To properly evaluate a polynomial $p(x)$ at a given matrix $A$, what type of matrix must $A$ be?
-    - **A)** A column matrix.
-    - **B)** An identity matrix.
-    - **C)** A square matrix.
-    - **D)** A zero matrix.
+- **A)** A column matrix.
+- **B)** An identity matrix.
+- **C)** A square matrix.
+- **D)** A zero matrix.
 
 2. When substituting a matrix $A$ into a polynomial $p(x)$, how is the constant term $c_0$ handled?
-    - **A)** It is ignored and dropped from the equation.
-    - **B)** It is multiplied by the matrix $A$.
-    - **C)** It becomes $c_0 I_n$, where $I_n$ is the identity matrix.
-    - **D)** It is added to every single entry of the resulting matrix.
+- **A)** It is ignored and dropped from the equation.
+- **B)** It is multiplied by the matrix $A$.
+- **C)** It becomes $c_0 I_n$, where $I_n$ is the identity matrix.
+- **D)** It is added to every single entry of the resulting matrix.
 
 3. What does the Cayley-Hamilton theorem formally state regarding a square matrix and its characteristic polynomial?
-    - **A)** Every square matrix satisfies its own characteristic polynomial, meaning $p(A) = O$.
-    - **B)** The polynomial evaluated at the matrix yields the identity matrix, $p(A) = I$.
-    - **C)** No square matrix can be evaluated in a polynomial.
-    - **D)** The characteristic polynomial $p(\lambda) = 0$ is equivalent to $A = O$.
+- **A)** Every square matrix satisfies its own characteristic polynomial, meaning $p(A) = O$.
+- **B)** The polynomial evaluated at the matrix yields the identity matrix, $p(A) = I$.
+- **C)** No square matrix can be evaluated in a polynomial.
+- **D)** The characteristic polynomial $p(\lambda) = 0$ is equivalent to $A = O$.
 
 ### Answer Key & Explanations
 1. **C)** Polynomials involve matrix powers ($A^2, A^3$, etc.), and matrix powers are only defined for square matrices.

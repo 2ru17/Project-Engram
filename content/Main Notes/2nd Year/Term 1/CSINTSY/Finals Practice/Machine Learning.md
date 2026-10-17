@@ -124,64 +124,64 @@ _Please contact me through discord or my the university email for any problems r
 ## Multiple Choice Questions
 
 1. In supervised learning, what kind of data is provided to the algorithm?
-    - **A)** Only unlabeled input data
-    - **B)** A labeled dataset containing both input features and correct outputs
-    - **C)** Raw environmental interactions with reward signals
-    - **D)** An entirely randomized set of noise data
+- **A)** Only unlabeled input data
+- **B)** A labeled dataset containing both input features and correct outputs
+- **C)** Raw environmental interactions with reward signals
+- **D)** An entirely randomized set of noise data
 
 2. Which task is an example of regression in supervised learning?
-    - **A)** Identifying an image as a dog or cat
-    - **B)** Predicting the exact continuous price of a house
-    - **C)** Grouping customers into distinct segments
-    - **D)** Filtering spam emails from a inbox
+- **A)** Identifying an image as a dog or cat
+- **B)** Predicting the exact continuous price of a house
+- **C)** Grouping customers into distinct segments
+- **D)** Filtering spam emails from a inbox
 
 3. What is the main objective of unsupervised learning?
-    - **A)** To maximize cumulative rewards through actions
-    - **B)** To learn a mapping from inputs to predefined labels
-    - **C)** To find hidden structures or patterns in unlabeled data
-    - **D)** To classify data into positive and negative classes
+- **A)** To maximize cumulative rewards through actions
+- **B)** To learn a mapping from inputs to predefined labels
+- **C)** To find hidden structures or patterns in unlabeled data
+- **D)** To classify data into positive and negative classes
 
 4. Which machine learning paradigm involves an agent interacting with an environment to maximize cumulative reward?
-    - **A)** Reinforcement Learning
-    - **B)** Dimensionality Reduction
-    - **C)** Supervised Classification
-    - **D)** Unsupervised Clustering
+- **A)** Reinforcement Learning
+- **B)** Dimensionality Reduction
+- **C)** Supervised Classification
+- **D)** Unsupervised Clustering
 
 5. In a confusion matrix, what does a False Positive (FP) represent?
-    - **A)** An instance that is actually positive but predicted as negative
-    - **B)** An instance that is actually negative but incorrectly predicted as positive
-    - **C)** An instance correctly predicted as positive
-    - **D)** An instance correctly predicted as negative
+- **A)** An instance that is actually positive but predicted as negative
+- **B)** An instance that is actually negative but incorrectly predicted as positive
+- **C)** An instance correctly predicted as positive
+- **D)** An instance correctly predicted as negative
 
 6. Why might "Accuracy" be a misleading metric for evaluating a classification model?
-    - **A)** It ignores True Negatives entirely.
-    - **B)** It is mathematically complex to compute.
-    - **C)** It can appear high on highly imbalanced datasets even if the model performs poorly on the minority class.
-    - **D)** It only measures how well the model predicts the negative class.
+- **A)** It ignores True Negatives entirely.
+- **B)** It is mathematically complex to compute.
+- **C)** It can appear high on highly imbalanced datasets even if the model performs poorly on the minority class.
+- **D)** It only measures how well the model predicts the negative class.
 
 7. Which metric specifically answers the question: "Of all the actual positives in the dataset, how many did the model successfully find?"
-    - **A)** Precision
-    - **B)** Recall (Sensitivity)
-    - **C)** Accuracy
-    - **D)** The F1 Score
+- **A)** Precision
+- **B)** Recall (Sensitivity)
+- **C)** Accuracy
+- **D)** The F1 Score
 
 8. What is the purpose of the F1 Score?
-    - **A)** To provide a metric that solely focuses on False Positives.
-    - **B)** To provide the arithmetic mean of Accuracy and Recall.
-    - **C)** To act as a harmonic mean that balances both Precision and Recall.
-    - **D)** To substitute for the confusion matrix entirely.
+- **A)** To provide a metric that solely focuses on False Positives.
+- **B)** To provide the arithmetic mean of Accuracy and Recall.
+- **C)** To act as a harmonic mean that balances both Precision and Recall.
+- **D)** To substitute for the confusion matrix entirely.
 
 9. In feature engineering, what does One-Hot Encoding accomplish?
-    - **A)** It removes irrelevant features from the dataset.
-    - **B)** It converts categorical data into binary vectors.
-    - **C)** It extracts the frequency of words in text data.
-    - **D)** It clusters numerical data into continuous ranges.
+- **A)** It removes irrelevant features from the dataset.
+- **B)** It converts categorical data into binary vectors.
+- **C)** It extracts the frequency of words in text data.
+- **D)** It clusters numerical data into continuous ranges.
 
 10. What is TF-IDF primarily used for?
-    - **A)** Training Reinforcement Learning agents.
-    - **B)** Converting categorical labels to binary numbers.
-    - **C)** Reducing the dimensionality of image datasets.
-    - **D)** Evaluating how important a word is to a document in text mining.
+- **A)** Training Reinforcement Learning agents.
+- **B)** Converting categorical labels to binary numbers.
+- **C)** Reducing the dimensionality of image datasets.
+- **D)** Evaluating how important a word is to a document in text mining.
 
 ### Answer Key & Explanations
 1. **B)** Supervised learning relies on labeled datasets where both the input ($X$) and correct output ($Y$) are provided.

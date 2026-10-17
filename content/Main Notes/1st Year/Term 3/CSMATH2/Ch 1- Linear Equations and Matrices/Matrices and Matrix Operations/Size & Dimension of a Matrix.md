@@ -59,22 +59,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. How is the size or dimension of a matrix correctly denoted?
-    - **A)** Number of columns $	imes$ Number of rows
-    - **B)** Number of rows $	imes$ Number of columns
-    - **C)** Number of rows $+$ Number of columns
-    - **D)** Number of columns $/$ Number of rows
+- **A)** Number of columns $	imes$ Number of rows
+- **B)** Number of rows $	imes$ Number of columns
+- **C)** Number of rows $+$ Number of columns
+- **D)** Number of columns $/$ Number of rows
 
 2. In a matrix of size $4 	imes 3$, what does the entry $a_{31}$ represent?
-    - **A)** The entry in the 1st row and 3rd column.
-    - **B)** The entry in the 3rd row and 1st column.
-    - **C)** The entry in the 4th row and 3rd column.
-    - **D)** The entry in the 31st position of the matrix.
+- **A)** The entry in the 1st row and 3rd column.
+- **B)** The entry in the 3rd row and 1st column.
+- **C)** The entry in the 4th row and 3rd column.
+- **D)** The entry in the 31st position of the matrix.
 
 3. Which of the following describes a common pitfall when interpreting the size of a matrix?
-    - **A)** Thinking that a $3 	imes 1$ matrix is the exact same size as a $1 	imes 3$ matrix.
-    - **B)** Assuming size matters only for matrix addition.
-    - **C)** Using negative numbers to describe dimensions.
-    - **D)** Confusing matrix size with matrix trace.
+- **A)** Thinking that a $3 	imes 1$ matrix is the exact same size as a $1 	imes 3$ matrix.
+- **B)** Assuming size matters only for matrix addition.
+- **C)** Using negative numbers to describe dimensions.
+- **D)** Confusing matrix size with matrix trace.
 
 ### Answer Key & Explanations
 1. **B)** The size of a matrix is always given by the number of rows ($m$) followed by the number of columns ($n$), written as $m 	imes n$.

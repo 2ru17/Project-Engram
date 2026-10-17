@@ -119,64 +119,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "**Scenario Data** ![[Pasted image 20251121092549.png]]  **Host (Internal):** `10.0.1.19` (Private) **Router (LAN Side):** `10.0.1.25` **Router _____ Side):** `135.122.202.208` (Public) **Remote Server (Destination):** `128.119.166.189` **Traffic Details:** Host `10.0.1.19` sends to `128.119.166.189`."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** WANInternet
-    - **D)** Protocol
+- **A)** Router
+- **B)** Network
+- **C)** WANInternet
+- **D)** Protocol
 
 2. Which word completes the following sentence from the text: "What is the source IP address for this _____  **Analysis:** Inside the LAN, the packet acts normally."?
-    - **A)** datagram
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** datagram
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 3. Which word completes the following sentence from the text: "_____ | **3 (WAN)** | Incoming      | **Remote IP** (Server) | **Public IP** (Router) | Server replies to the Router."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** 
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** 
+- **D)** Network
 
 4. Which word completes the following sentence from the text: "At step 4, what is the destination IP address for this datagram**  **Analysis:** The router _____ the Public destination back to the Private destination (`10.0.1.19`) based on the NAT table entry."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** translates
-    - **D)** Protocol
+- **A)** Network
+- **B)** Router
+- **C)** translates
+- **D)** Protocol
 
 5. Which word completes the following sentence from the text: "The reply hits the _____ outside interface._  **6."?
-    - **A)** routers
-    - **B)** Network
-    - **C)** Router
-    - **D)** Protocol
+- **A)** routers
+- **B)** Network
+- **C)** Router
+- **D)** Protocol
 
 6. Which word completes the following sentence from the text: "The NAT Table  The router maintains a translation table mapping _____ IP : Private Port} to {Public IP : Public Port}."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Private
-    - **D)** Protocol
+- **A)** Network
+- **B)** Router
+- **C)** Private
+- **D)** Protocol
 
 7. Which word completes the following sentence from the text: "This allows it to route incoming _____ back to the correct internal device."?
-    - **A)** Network
-    - **B)** responses
-    - **C)** Protocol
-    - **D)** Router
+- **A)** Network
+- **B)** responses
+- **C)** Protocol
+- **D)** Router
 
 8. Which word completes the following sentence from the text: "At step 2, what is the destination IP address for _____ datagram?**  **Analysis:** The router does not touch the destination."?
-    - **A)** Protocol
-    - **B)** this
-    - **C)** Router
-    - **D)** Network
+- **A)** Protocol
+- **B)** this
+- **C)** Router
+- **D)** Network
 
 9. Which word completes the following sentence from the text: "It replaces `10.0.1.19` with its own WAN address so _____ internet sees the request coming from the router."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** the
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** the
+- **D)** Network
 
 10. Which word completes the following sentence from the text: "At step 1, what is the destination IP address?**  _____ The computer wants to reach the web server."?
-    - **A)** Analysis
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** Analysis
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 
 ### Answer Key & Explanations

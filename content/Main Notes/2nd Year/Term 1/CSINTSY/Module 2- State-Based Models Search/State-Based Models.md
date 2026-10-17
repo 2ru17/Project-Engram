@@ -53,34 +53,34 @@ The table below summarizes the theoretical characteristics of various tree searc
 ## Multiple Choice Questions
 
 1. Which of the following correctly defines the `IsEnd(s)` function in search problem formulation?
-    - **A)** It returns the penalty or cost of performing an action from state $s$.
-    - **B)** It returns true if the current state $s$ is a goal state, and false otherwise.
-    - **C)** It generates all valid actions that can be executed from the start state.
-    - **D)** It calculates the space complexity of the algorithm.
+- **A)** It returns the penalty or cost of performing an action from state $s$.
+- **B)** It returns true if the current state $s$ is a goal state, and false otherwise.
+- **C)** It generates all valid actions that can be executed from the start state.
+- **D)** It calculates the space complexity of the algorithm.
 
 2. In the context of evaluating search algorithms, what does "Completeness" refer to?
-    - **A)** The algorithm evaluates every possible path in the search space regardless of the goal.
-    - **B)** The algorithm always finds a solution if one exists.
-    - **C)** The algorithm requires a finite state space to even begin execution.
-    - **D)** The algorithm operates without using any memory overhead.
+- **A)** The algorithm evaluates every possible path in the search space regardless of the goal.
+- **B)** The algorithm always finds a solution if one exists.
+- **C)** The algorithm requires a finite state space to even begin execution.
+- **D)** The algorithm operates without using any memory overhead.
 
 3. Under what condition is Depth-First Search (DFS) considered optimal according to the theoretical framework?
-    - **A)** When the branching factor is infinite.
-    - **B)** When the action costs are constant and greater than zero.
-    - **C)** When all action costs are 0, making the cost irrelevant.
-    - **D)** When it uses iterative deepening.
+- **A)** When the branching factor is infinite.
+- **B)** When the action costs are constant and greater than zero.
+- **C)** When all action costs are 0, making the cost irrelevant.
+- **D)** When it uses iterative deepening.
 
 4. Which algorithm combines the completeness of Breadth-First Search (BFS) with the space efficiency of Depth-First Search (DFS)?
-    - **A)** A* Search
-    - **B)** Uniform Cost Search
-    - **C)** Backtracking Search
-    - **D)** DFS-Iterative Deepening (DFS-ID)
+- **A)** A* Search
+- **B)** Uniform Cost Search
+- **C)** Backtracking Search
+- **D)** DFS-Iterative Deepening (DFS-ID)
 
 5. In the "Wolf, Goat, and Cabbage" puzzle formulation, what represents a "State"?
-    - **A)** The number of times the raft has crossed the river.
-    - **B)** The total cost required to move all items across the river safely.
-    - **C)** The current position (left or right bank) of the farmer, wolf, goat, and cabbage.
-    - **D)** The action of the farmer eating the cabbage.
+- **A)** The number of times the raft has crossed the river.
+- **B)** The total cost required to move all items across the river safely.
+- **C)** The current position (left or right bank) of the farmer, wolf, goat, and cabbage.
+- **D)** The action of the farmer eating the cabbage.
 
 ### Answer Key & Explanations
 1. **B)** `IsEnd(s)` is defined as a boolean function that returns true when $s$ is a goal state.

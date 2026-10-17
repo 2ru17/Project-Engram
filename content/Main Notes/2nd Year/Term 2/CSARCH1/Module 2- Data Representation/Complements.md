@@ -73,64 +73,64 @@ Subtraction of two $n$-digit unsigned numbers ($M - N$) in base $r$:
 ## Multiple Choice Questions
 
 1. What is the 9's complement of the decimal number 1230?
-    - **A)** 8770
-    - **B)** 8769
-    - **C)** 9999
-    - **D)** 1000
+- **A)** 8770
+- **B)** 8769
+- **C)** 9999
+- **D)** 1000
 
 2. The radix complement of a number in base r is equivalent to:
-    - **A)** (r-1)'s complement
-    - **B)** (r-1)'s complement + 1
-    - **C)** (r-1)'s complement - 1
-    - **D)** The number itself inverted
+- **A)** (r-1)'s complement
+- **B)** (r-1)'s complement + 1
+- **C)** (r-1)'s complement - 1
+- **D)** The number itself inverted
 
 3. What is the 1's complement of the binary number 0110?
-    - **A)** 1010
-    - **B)** 1001
-    - **C)** 1000
-    - **D)** 1111
+- **A)** 1010
+- **B)** 1001
+- **C)** 1000
+- **D)** 1111
 
 4. What is the 2's complement of the binary number 1111?
-    - **A)** 0000
-    - **B)** 0001
-    - **C)** 1110
-    - **D)** 1000
+- **A)** 0000
+- **B)** 0001
+- **C)** 1110
+- **D)** 1000
 
 5. What is the 10's complement of the decimal number 725?
-    - **A)** 274
-    - **B)** 275
-    - **C)** 999
-    - **D)** 300
+- **A)** 274
+- **B)** 275
+- **C)** 999
+- **D)** 300
 
 6. When performing subtraction M - N using r's complement, what indicates that M is less than N?
-    - **A)** An end carry is produced
-    - **B)** The sum produces no end carry
-    - **C)** The result is perfectly zero
-    - **D)** The most significant bit becomes 1 immediately
+- **A)** An end carry is produced
+- **B)** The sum produces no end carry
+- **C)** The result is perfectly zero
+- **D)** The most significant bit becomes 1 immediately
 
 7. What is the 2's complement of the binary number 0110?
-    - **A)** 1001
-    - **B)** 1010
-    - **C)** 1011
-    - **D)** 0101
+- **A)** 1001
+- **B)** 1010
+- **C)** 1011
+- **D)** 0101
 
 8. What is the primary purpose of using complements in digital computers?
-    - **A)** To multiply floating-point numbers faster
-    - **B)** To increase memory storage capacity
-    - **C)** To simplify the subtraction operation using logic manipulation
-    - **D)** To compress binary data streams
+- **A)** To multiply floating-point numbers faster
+- **B)** To increase memory storage capacity
+- **C)** To simplify the subtraction operation using logic manipulation
+- **D)** To compress binary data streams
 
 9. What is the (r-1)'s complement of 1100 in base 8 (octal)?
-    - **A)** 6677
-    - **B)** 6700
-    - **C)** 7777
-    - **D)** 0011
+- **A)** 6677
+- **B)** 6700
+- **C)** 7777
+- **D)** 0011
 
 10. If M = 15 and N = 14, what is the result of adding M to the 10's complement of N (using 2 digits)?
-    - **A)** 101 (with carry discarded, leaving 01)
-    - **B)** 99 (no carry)
-    - **C)** 15 (with carry)
-    - **D)** 100 (no carry)
+- **A)** 101 (with carry discarded, leaving 01)
+- **B)** 99 (no carry)
+- **C)** 15 (with carry)
+- **D)** 100 (no carry)
 
 ### Answer Key & Explanations
 1. **B)** The 9's complement is derived by subtracting each digit from 9: (9999 - 1230 = 8769).

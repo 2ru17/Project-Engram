@@ -67,22 +67,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What are the formal dimensions of a row matrix?
-    - **A)** $n \times 1$
-    - **B)** $n \times n$
-    - **C)** $1 \times n$
-    - **D)** $1 \times 1$
+- **A)** $n \times 1$
+- **B)** $n \times n$
+- **C)** $1 \times n$
+- **D)** $1 \times 1$
 
 2. What is the result of taking the transpose of a row matrix?
-    - **A)** An identity matrix.
-    - **B)** A scalar value.
-    - **C)** A column matrix.
-    - **D)** Another row matrix.
+- **A)** An identity matrix.
+- **B)** A scalar value.
+- **C)** A column matrix.
+- **D)** Another row matrix.
 
 3. In matrix multiplication, what does a $1 \times n$ row matrix multiplied by an $n \times 1$ column matrix yield?
-    - **A)** A scalar, representing the dot product of the two vectors.
-    - **B)** An $n \times n$ square matrix.
-    - **C)** A zero matrix.
-    - **D)** A new row matrix.
+- **A)** A scalar, representing the dot product of the two vectors.
+- **B)** An $n \times n$ square matrix.
+- **C)** A zero matrix.
+- **D)** A new row matrix.
 
 ### Answer Key & Explanations
 1. **C)** A row matrix (or row vector) is defined as a matrix with exactly one row and $n$ columns, making it a $1 \times n$ matrix.

@@ -91,22 +91,22 @@ This route path will match requests to the root route, /.
 ## Multiple Choice Questions
 
 1. What is Express?
-    - **A)** A built-in database management system for Node.js.
-    - **B)** A heavyweight front-end CSS framework.
-    - **C)** A light-weight NodeJS framework that provides robust features for web and mobile applications.
-    - **D)** A command-line tool used exclusively to generate package.json files.
+- **A)** A built-in database management system for Node.js.
+- **B)** A heavyweight front-end CSS framework.
+- **C)** A light-weight NodeJS framework that provides robust features for web and mobile applications.
+- **D)** A command-line tool used exclusively to generate package.json files.
 
 2. When defining a route in Express, what does the `req` parameter in the callback function represent?
-    - **A)** The response that will be sent back to the client.
-    - **B)** The request object containing information about the incoming HTTP request.
-    - **C)** The template engine configuration.
-    - **D)** The URL route path string.
+- **A)** The response that will be sent back to the client.
+- **B)** The request object containing information about the incoming HTTP request.
+- **C)** The template engine configuration.
+- **D)** The URL route path string.
 
 3. Which method is used to bind and listen for connections on a specified host and port in an Express application?
-    - **A)** `app.listen()`
-    - **B)** `app.get()`
-    - **C)** `app.init()`
-    - **D)** `app.bind()`
+- **A)** `app.listen()`
+- **B)** `app.get()`
+- **C)** `app.init()`
+- **D)** `app.bind()`
 
 ### Answer Key & Explanations
 1. **C)** Express is a light-weight NodeJS framework that provides robust features for web and mobile applications.

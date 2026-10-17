@@ -56,22 +56,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does $f(n) = \Theta(g(n))$ signify?
-    - **A)** $f(n)$ grows no faster than $g(n)$.
-    - **B)** $f(n)$ grows strictly slower than $g(n)$.
-    - **C)** $f(n)$ grows at the same rate as $g(n)$.
-    - **D)** $f(n)$ grows at least as fast as $g(n)$.
+- **A)** $f(n)$ grows no faster than $g(n)$.
+- **B)** $f(n)$ grows strictly slower than $g(n)$.
+- **C)** $f(n)$ grows at the same rate as $g(n)$.
+- **D)** $f(n)$ grows at least as fast as $g(n)$.
 
 2. What is required for $f(n) = \Theta(g(n))$ to be true?
-    - **A)** Only $f(n) = O(g(n))$ must hold.
-    - **B)** Only $f(n) = \Omega(g(n))$ must hold.
-    - **C)** Both $f(n) = O(g(n))$ and $f(n) = \Omega(g(n))$ must hold.
-    - **D)** Neither $O(g(n))$ nor $\Omega(g(n))$ are required.
+- **A)** Only $f(n) = O(g(n))$ must hold.
+- **B)** Only $f(n) = \Omega(g(n))$ must hold.
+- **C)** Both $f(n) = O(g(n))$ and $f(n) = \Omega(g(n))$ must hold.
+- **D)** Neither $O(g(n))$ nor $\Omega(g(n))$ are required.
 
 3. What type of bound does Big-Theta ($\Theta$) provide?
-    - **A)** Asymptotic upper bound
-    - **B)** Asymptotic lower bound
-    - **C)** Asymptotic tight bound
-    - **D)** Asymptotic probabilistic bound
+- **A)** Asymptotic upper bound
+- **B)** Asymptotic lower bound
+- **C)** Asymptotic tight bound
+- **D)** Asymptotic probabilistic bound
 
 ### Answer Key & Explanations
 1. **C)** Big-Theta signifies that a function grows at the exact same rate asymptotically as another function.

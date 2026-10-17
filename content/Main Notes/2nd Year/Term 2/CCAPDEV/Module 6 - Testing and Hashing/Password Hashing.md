@@ -88,22 +88,22 @@ user.isModified('password') checks whether the password field of the document ha
 ## Multiple Choice Questions
 
 1. Why is it dangerous to store a user's password as "cleartext" in a database?
-    - **A)** Cleartext takes up significantly more database storage space than hashed passwords.
-    - **B)** Cleartext cannot be used to authenticate a session in MongoDB.
-    - **C)** It creates a severe security vulnerability, compromising user confidentiality if the database is breached.
-    - **D)** Cleartext passwords automatically expire after a set time limit.
+- **A)** Cleartext takes up significantly more database storage space than hashed passwords.
+- **B)** Cleartext cannot be used to authenticate a session in MongoDB.
+- **C)** It creates a severe security vulnerability, compromising user confidentiality if the database is breached.
+- **D)** Cleartext passwords automatically expire after a set time limit.
 
 2. What is a key property of a proper hashing function used for passwords?
-    - **A)** It is a two-way function, allowing admins to retrieve the original password if forgotten.
-    - **B)** It is a one-way function, meaning it cannot be converted back to its original plaintext form.
-    - **C)** It encrypts the password uniquely for every separate database table automatically.
-    - **D)** It is completely bypassable if the `SALT_WORK_FACTOR` is set to 0.
+- **A)** It is a two-way function, allowing admins to retrieve the original password if forgotten.
+- **B)** It is a one-way function, meaning it cannot be converted back to its original plaintext form.
+- **C)** It encrypts the password uniquely for every separate database table automatically.
+- **D)** It is completely bypassable if the `SALT_WORK_FACTOR` is set to 0.
 
 3. How does a Mongoose "pre hook" (middleware) assist in password hashing?
-    - **A)** It connects directly to the user's browser to hash the password before it travels over the network.
-    - **B)** It decrypts the password when the user logs in.
-    - **C)** It allows you to execute working code (such as applying a bcrypt hash) *before* a specific operation (like `save`) is performed on the database.
-    - **D)** It automatically creates a new database collection just for storing passwords.
+- **A)** It connects directly to the user's browser to hash the password before it travels over the network.
+- **B)** It decrypts the password when the user logs in.
+- **C)** It allows you to execute working code (such as applying a bcrypt hash) *before* a specific operation (like `save`) is performed on the database.
+- **D)** It automatically creates a new database collection just for storing passwords.
 
 ### Answer Key & Explanations
 1. **C)** Plaintext data stored as is is referred to as cleartext, which leads to a severe vulnerability and breaches confidentiality.

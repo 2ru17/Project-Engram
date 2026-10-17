@@ -69,64 +69,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does frequency counting measure in A Priori Analysis?
-    - **A)** The physical memory consumed by the program in bytes
-    - **B)** The total number of elementary operations executed as a function of input size
-    - **C)** The exact execution time in seconds
-    - **D)** The number of loops in the code
+- **A)** The physical memory consumed by the program in bytes
+- **B)** The total number of elementary operations executed as a function of input size
+- **C)** The exact execution time in seconds
+- **D)** The number of loops in the code
 
 2. Under frequency counting rules, how much does a single assignment, read, or write statement typically count?
-    - **A)** 0
-    - **B)** 1
-    - **C)** 2
-    - **D)** It depends on the variable size
+- **A)** 0
+- **B)** 1
+- **C)** 2
+- **D)** It depends on the variable size
 
 3. According to the general frequency counting overview, what is often the count for declarations?
-    - **A)** 1
-    - **B)** 2
-    - **C)** Often Count = 0 (no execution time)
-    - **D)** They are multiplied by input size
+- **A)** 1
+- **B)** 2
+- **C)** Often Count = 0 (no execution time)
+- **D)** They are multiplied by input size
 
 4. What is the counting rule for an `if-else` conditional statement in the worst-case scenario?
-    - **A)** cost(condition) + cost(if-block) + cost(else-block)
-    - **B)** cost(condition) + max(cost(if-block), cost(else-block))
-    - **C)** max(cost(if-block), cost(else-block))
-    - **D)** cost(condition) + min(cost(if-block), cost(else-block))
+- **A)** cost(condition) + cost(if-block) + cost(else-block)
+- **B)** cost(condition) + max(cost(if-block), cost(else-block))
+- **C)** max(cost(if-block), cost(else-block))
+- **D)** cost(condition) + min(cost(if-block), cost(else-block))
 
 5. For a simple `for` loop `for i = 1 to n: body`, what is the rough total cost?
-    - **A)** n + cost(body)
-    - **B)** n * cost(body)
-    - **C)** n / cost(body)
-    - **D)** cost(body) ^ n
+- **A)** n + cost(body)
+- **B)** n * cost(body)
+- **C)** n / cost(body)
+- **D)** cost(body) ^ n
 
 6. In nested loops like `for i = 1 to n: for j = 1 to n: body`, what is the approximate cost?
-    - **A)** n * cost(body)
-    - **B)** 2n * cost(body)
-    - **C)** n * n * cost(body)
-    - **D)** cost(body) ^ (2n)
+- **A)** n * cost(body)
+- **B)** 2n * cost(body)
+- **C)** n * n * cost(body)
+- **D)** cost(body) ^ (2n)
 
 7. How is a function call counted?
-    - **A)** Just 1 for the call itself.
-    - **B)** The cost of setting up the call plus the cost of executing the function body.
-    - **C)** Only the operations inside the function body.
-    - **D)** Function calls are ignored in frequency counting.
+- **A)** Just 1 for the call itself.
+- **B)** The cost of setting up the call plus the cost of executing the function body.
+- **C)** Only the operations inside the function body.
+- **D)** Function calls are ignored in frequency counting.
 
 8. What is the typical mathematical result of a frequency count before simplification?
-    - **A)** A Big-O notation
-    - **B)** An exact polynomial or function representing total steps
-    - **C)** A probability distribution
-    - **D)** A matrix
+- **A)** A Big-O notation
+- **B)** An exact polynomial or function representing total steps
+- **C)** A probability distribution
+- **D)** A matrix
 
 9. What is a common pitfall when counting loops?
-    - **A)** Forgetting to simplify using asymptotic notation
-    - **B)** Counting the loop body one extra time
-    - **C)** Forgetting to count loop header comparisons, which execute one more time than the body
-    - **D)** Assuming nested loops are always independent
+- **A)** Forgetting to simplify using asymptotic notation
+- **B)** Counting the loop body one extra time
+- **C)** Forgetting to count loop header comparisons, which execute one more time than the body
+- **D)** Assuming nested loops are always independent
 
 10. After obtaining the exact polynomial from a frequency count, what is typically the next step?
-    - **A)** Converting it to machine code
-    - **B)** Running benchmarking software
-    - **C)** Simplifying it using asymptotic notation
-    - **D)** Removing all conditional statements
+- **A)** Converting it to machine code
+- **B)** Running benchmarking software
+- **C)** Simplifying it using asymptotic notation
+- **D)** Removing all conditional statements
 
 ### Answer Key & Explanations
 1. **B)** Frequency counting calculates the exact number of basic operational steps an algorithm takes in terms of the input size $n$.

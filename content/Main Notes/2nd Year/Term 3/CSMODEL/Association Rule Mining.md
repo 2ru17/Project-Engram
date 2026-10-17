@@ -554,34 +554,34 @@ print(strong_rules[['antecedents', 'consequents', 'support', 'confidence', 'lift
 ## Multiple Choice Questions
 
 1. What does the `support` metric measure in Association Rule Mining?
-    - **A)** The probability of the consequent given the antecedent
-    - **B)** The frequency of an itemset appearing in the database
-    - **C)** The ratio of confidence to expected confidence
-    - **D)** The statistical significance of a rule
+- **A)** The probability of the consequent given the antecedent
+- **B)** The frequency of an itemset appearing in the database
+- **C)** The ratio of confidence to expected confidence
+- **D)** The statistical significance of a rule
 
 2. Which algorithm uses a candidate generation step to find frequent itemsets?
-    - **A)** FP-Growth
-    - **B)** Apriori
-    - **C)** K-Means
-    - **D)** DBSCAN
+- **A)** FP-Growth
+- **B)** Apriori
+- **C)** K-Means
+- **D)** DBSCAN
 
 3. In rule A -> B, how is `confidence` defined?
-    - **A)** Support(A U B) / Support(A)
-    - **B)** Support(A U B) / Support(B)
-    - **C)** Support(A) * Support(B)
-    - **D)** Support(A) / Support(A U B)
+- **A)** Support(A U B) / Support(A)
+- **B)** Support(A U B) / Support(B)
+- **C)** Support(A) * Support(B)
+- **D)** Support(A) / Support(A U B)
 
 4. A lift value greater than 1 indicates that:
-    - **A)** The antecedent and consequent are negatively correlated
-    - **B)** The antecedent and consequent are independent
-    - **C)** The antecedent and consequent are positively correlated
-    - **D)** The rule is invalid
+- **A)** The antecedent and consequent are negatively correlated
+- **B)** The antecedent and consequent are independent
+- **C)** The antecedent and consequent are positively correlated
+- **D)** The rule is invalid
 
 5. How does FP-Growth improve upon Apriori?
-    - **A)** By generating more candidate itemsets
-    - **B)** By avoiding the candidate generation phase entirely
-    - **C)** By only finding association rules with 100% confidence
-    - **D)** By converting all categorical variables into numeric values
+- **A)** By generating more candidate itemsets
+- **B)** By avoiding the candidate generation phase entirely
+- **C)** By only finding association rules with 100% confidence
+- **D)** By converting all categorical variables into numeric values
 
 ### Answer Key & Explanations
 1. **B)** Support is the proportion of transactions that contain the itemset.

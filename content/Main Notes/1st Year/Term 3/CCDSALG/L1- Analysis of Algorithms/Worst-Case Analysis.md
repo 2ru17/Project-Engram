@@ -70,64 +70,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does worst-case analysis determine?
-    - **A)** The minimum running time over all possible inputs.
-    - **B)** The expected running time based on probability distributions.
-    - **C)** The maximum running time of an algorithm over all possible inputs of size $n$.
-    - **D)** The optimal memory allocation for an array.
+- **A)** The minimum running time over all possible inputs.
+- **B)** The expected running time based on probability distributions.
+- **C)** The maximum running time of an algorithm over all possible inputs of size $n$.
+- **D)** The optimal memory allocation for an array.
 
 2. How is worst-case analysis formally expressed?
-    - **A)** $T(n) = \min\{T(I) : |I| = n\}$
-    - **B)** $T(n) = \max\{T(I) : |I| = n\}$
-    - **C)** $T(n) = \sum\{T(I) : |I| = n\} / n$
-    - **D)** $T(n) = O(1)$
+- **A)** $T(n) = \min\{T(I) : |I| = n\}$
+- **B)** $T(n) = \max\{T(I) : |I| = n\}$
+- **C)** $T(n) = \sum\{T(I) : |I| = n\} / n$
+- **D)** $T(n) = O(1)$
 
 3. Why is worst-case analysis commonly used over other types?
-    - **A)** It provides a guaranteed upper bound on running time, requiring no assumptions about input distribution.
-    - **B)** It is the hardest to compute, providing academic rigor.
-    - **C)** It relies heavily on probabilistic modeling.
-    - **D)** It guarantees the fastest execution possible.
+- **A)** It provides a guaranteed upper bound on running time, requiring no assumptions about input distribution.
+- **B)** It is the hardest to compute, providing academic rigor.
+- **C)** It relies heavily on probabilistic modeling.
+- **D)** It guarantees the fastest execution possible.
 
 4. In worst-case analysis, what is the worst-case input for Linear Search?
-    - **A)** The target is the first element in the array.
-    - **B)** The target is the median element.
-    - **C)** The array is already sorted.
-    - **D)** The target is not in the array or is the very last element.
+- **A)** The target is the first element in the array.
+- **B)** The target is the median element.
+- **C)** The array is already sorted.
+- **D)** The target is not in the array or is the very last element.
 
 5. What is the worst-case time complexity of Bubble Sort?
-    - **A)** $O(\log n)$
-    - **B)** $O(n)$
-    - **C)** $O(n \log n)$
-    - **D)** $O(n^2)$
+- **A)** $O(\log n)$
+- **B)** $O(n)$
+- **C)** $O(n \log n)$
+- **D)** $O(n^2)$
 
 6. What is a known scenario that triggers the worst-case time for Quick Sort?
-    - **A)** An already sorted array with a bad pivot.
-    - **B)** A completely randomized array.
-    - **C)** An array containing only negative numbers.
-    - **D)** A target element missing from the array.
+- **A)** An already sorted array with a bad pivot.
+- **B)** A completely randomized array.
+- **C)** An array containing only negative numbers.
+- **D)** A target element missing from the array.
 
 7. What is a common pitfall when discussing worst-case analysis?
-    - **A)** Assuming it guarantees the algorithm will always finish quickly.
-    - **B)** Assuming the worst-case is the "typical" or average case in practice.
-    - **C)** Expressing it in Big-O notation.
-    - **D)** Using it for safety-critical systems.
+- **A)** Assuming it guarantees the algorithm will always finish quickly.
+- **B)** Assuming the worst-case is the "typical" or average case in practice.
+- **C)** Expressing it in Big-O notation.
+- **D)** Using it for safety-critical systems.
 
 8. Which mathematical notation is most frequently used to express the bound found in worst-case analysis?
-    - **A)** Little-o Notation
-    - **B)** Big-Omega Notation
-    - **C)** Big-O Notation
-    - **D)** Logarithmic Notation
+- **A)** Little-o Notation
+- **B)** Big-Omega Notation
+- **C)** Big-O Notation
+- **D)** Logarithmic Notation
 
 9. What makes worst-case analysis particularly crucial for safety-critical systems?
-    - **A)** It optimizes for power consumption.
-    - **B)** It provides an absolute mathematical guarantee that the algorithm will finish within a specified maximum time limit.
-    - **C)** It converts recursive functions into iterative loops automatically.
-    - **D)** It minimizes space complexity.
+- **A)** It optimizes for power consumption.
+- **B)** It provides an absolute mathematical guarantee that the algorithm will finish within a specified maximum time limit.
+- **C)** It converts recursive functions into iterative loops automatically.
+- **D)** It minimizes space complexity.
 
 10. What is the worst-case input for Insertion Sort?
-    - **A)** A perfectly shuffled array.
-    - **B)** An array with all identical elements.
-    - **C)** An already sorted array.
-    - **D)** An array sorted in reverse order.
+- **A)** A perfectly shuffled array.
+- **B)** An array with all identical elements.
+- **C)** An already sorted array.
+- **D)** An array sorted in reverse order.
 
 ### Answer Key & Explanations
 1. **C)** Worst-case analysis strictly seeks out the absolute maximum amount of time an algorithm could possibly take for a given input size.

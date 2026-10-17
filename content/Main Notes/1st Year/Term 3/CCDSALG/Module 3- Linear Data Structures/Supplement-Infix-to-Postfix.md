@@ -81,28 +81,28 @@ flowchart TD
 ## Multiple Choice Questions
 
 1. What algorithm by E.W. Dijkstra is mentioned for converting infix to postfix notation?
-    - **A)** Master Theorem
-    - **B)** Shunting Yard algorithm
-    - **C)** Quick Sort
-    - **D)** Prim's algorithm
+- **A)** Master Theorem
+- **B)** Shunting Yard algorithm
+- **C)** Quick Sort
+- **D)** Prim's algorithm
 
 2. Which data structure is primarily used to evaluate postfix expressions and convert infix to postfix?
-    - **A)** Queue
-    - **B)** Binary Tree
-    - **C)** Hash Table
-    - **D)** Stack
+- **A)** Queue
+- **B)** Binary Tree
+- **C)** Hash Table
+- **D)** Stack
 
 3. What is the postfix notation for the infix expression `1 + 2 - 3`?
-    - **A)** `1 2 + 3 -`
-    - **B)** `1 2 3 + -`
-    - **C)** `+ - 1 2 3`
-    - **D)** `1 + 2 3 -`
+- **A)** `1 2 + 3 -`
+- **B)** `1 2 3 + -`
+- **C)** `+ - 1 2 3`
+- **D)** `1 + 2 3 -`
 
 4. What is the postfix notation for the infix expression `(1 + 2) * 3`?
-    - **A)** `1 2 3 + *`
-    - **B)** `1 2 + 3 *`
-    - **C)** `* + 1 2 3`
-    - **D)** `1 * 2 + 3`
+- **A)** `1 2 3 + *`
+- **B)** `1 2 + 3 *`
+- **C)** `* + 1 2 3`
+- **D)** `1 * 2 + 3`
 
 ### Answer Key & Explanations
 1. **B)** The document specifically notes that Dijkstra's Shunting Yard algorithm is the established method for this conversion.

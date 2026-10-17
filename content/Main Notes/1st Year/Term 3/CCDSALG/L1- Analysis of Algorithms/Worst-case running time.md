@@ -73,64 +73,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. How is worst-case running time mathematically defined?
-    - **A)** $T(n) = \sum_{I} T(I) / n$
-    - **B)** $T(n) = \max_{|I|=n} T(I)$
-    - **C)** $T(n) = \min_{|I|=n} T(I)$
-    - **D)** $T(n) = O(n)$
+- **A)** $T(n) = \sum_{I} T(I) / n$
+- **B)** $T(n) = \max_{|I|=n} T(I)$
+- **C)** $T(n) = \min_{|I|=n} T(I)$
+- **D)** $T(n) = O(n)$
 
 2. Why is worst-case running time the default metric in Algorithm Analysis?
-    - **A)** It relies on complex probability distributions.
-    - **B)** It provides a strict upper bound, requiring no probability assumptions, and is safer for critical applications.
-    - **C)** It is the only metric supported by the RAM model.
-    - **D)** It guarantees that the algorithm operates in $O(1)$ space.
+- **A)** It relies on complex probability distributions.
+- **B)** It provides a strict upper bound, requiring no probability assumptions, and is safer for critical applications.
+- **C)** It is the only metric supported by the RAM model.
+- **D)** It guarantees that the algorithm operates in $O(1)$ space.
 
 3. If we want a TIGHT bound on the worst-case running time, which notation is preferred?
-    - **A)** Big-O ($\mathcal{O}$)
-    - **B)** Big-Omega ($\Omega$)
-    - **C)** Big-Theta ($\Theta$)
-    - **D)** Little-o ($o$)
+- **A)** Big-O ($\mathcal{O}$)
+- **B)** Big-Omega ($\Omega$)
+- **C)** Big-Theta ($\Theta$)
+- **D)** Little-o ($o$)
 
 4. What is the worst-case running time of Binary Search?
-    - **A)** $O(1)$
-    - **B)** $O(n)$
-    - **C)** $O(\log n)$
-    - **D)** $O(n \log n)$
+- **A)** $O(1)$
+- **B)** $O(n)$
+- **C)** $O(\log n)$
+- **D)** $O(n \log n)$
 
 5. Which of the following statements about Merge Sort is true?
-    - **A)** Its worst-case time is significantly worse than its best-case time.
-    - **B)** Its worst-case and best-case running times are the same ($\Theta(n \log n)$).
-    - **C)** It runs in $O(n)$ time when the array is already sorted.
-    - **D)** Its worst-case input is a reverse-sorted array.
+- **A)** Its worst-case time is significantly worse than its best-case time.
+- **B)** Its worst-case and best-case running times are the same ($\Theta(n \log n)$).
+- **C)** It runs in $O(n)$ time when the array is already sorted.
+- **D)** Its worst-case input is a reverse-sorted array.
 
 6. In Quick Sort, how does the worst-case running time compare to the average-case?
-    - **A)** They are identical.
-    - **B)** The worst-case is faster.
-    - **C)** The worst-case ($O(n^2)$) is much worse than the average-case ($O(n \log n)$).
-    - **D)** The worst-case is $O(n \log n)$, but average is $O(n)$.
+- **A)** They are identical.
+- **B)** The worst-case is faster.
+- **C)** The worst-case ($O(n^2)$) is much worse than the average-case ($O(n \log n)$).
+- **D)** The worst-case is $O(n \log n)$, but average is $O(n)$.
 
 7. What is a common pitfall regarding the best, worst, and average cases of an algorithm?
-    - **A)** Assuming all algorithms have different best, worst, and average cases (e.g., Merge Sort is the same for all).
-    - **B)** Assuming they are all expressed using Big-Theta.
-    - **C)** Forgetting that constants are ignored.
-    - **D)** Believing that they determine space complexity.
+- **A)** Assuming all algorithms have different best, worst, and average cases (e.g., Merge Sort is the same for all).
+- **B)** Assuming they are all expressed using Big-Theta.
+- **C)** Forgetting that constants are ignored.
+- **D)** Believing that they determine space complexity.
 
 8. What is a common pitfall regarding the scope of worst-case running time?
-    - **A)** Confusing the worst-case running time of a specific algorithm with the theoretical lower bound of the problem itself.
-    - **B)** Assuming it only applies to recursive functions.
-    - **C)** Believing it determines the memory constraints.
-    - **D)** Expressing it in asymptotic notation.
+- **A)** Confusing the worst-case running time of a specific algorithm with the theoretical lower bound of the problem itself.
+- **B)** Assuming it only applies to recursive functions.
+- **C)** Believing it determines the memory constraints.
+- **D)** Expressing it in asymptotic notation.
 
 9. What is the worst-case input for Linear Search?
-    - **A)** The element is exactly in the middle.
-    - **B)** The element is at the beginning.
-    - **C)** The array is sorted.
-    - **D)** The element is not in the array.
+- **A)** The element is exactly in the middle.
+- **B)** The element is at the beginning.
+- **C)** The array is sorted.
+- **D)** The element is not in the array.
 
 10. Why might actual running time formulas like $T(n) = 3n^2 + 5n + 2$ be abstracted into Big-O notation when discussing worst-case running time?
-    - **A)** Because constants vary by hardware, so we care primarily about the Order of Growth.
-    - **B)** Because polynomials are impossible to compute manually.
-    - **C)** Because Big-O notation is more precise.
-    - **D)** Because worst-case analysis cannot calculate constants.
+- **A)** Because constants vary by hardware, so we care primarily about the Order of Growth.
+- **B)** Because polynomials are impossible to compute manually.
+- **C)** Because Big-O notation is more precise.
+- **D)** Because worst-case analysis cannot calculate constants.
 
 ### Answer Key & Explanations
 1. **B)** It is strictly defined as the maximum time $T(I)$ taken across all possible inputs $I$ that share the exact same size $n$.

@@ -111,64 +111,64 @@ while ((ch = getchar()) != EOF) {
 ## Multiple Choice Questions
 
 1. Which of the following is defined as a foundational construct in programming used to specify computations, typically consisting of operators, operands, parentheses, and function calls?
-    - **A)** Statement
-    - **B)** Keyword
-    - **C)** Expression
-    - **D)** Variable
+- **A)** Statement
+- **B)** Keyword
+- **C)** Expression
+- **D)** Variable
 
 2. What determines the order in which adjacent operators of different precedence levels are evaluated?
-    - **A)** Operator associativity
-    - **B)** Operator precedence
-    - **C)** Coercion
-    - **D)** Short-circuit evaluation
+- **A)** Operator associativity
+- **B)** Operator precedence
+- **C)** Coercion
+- **D)** Short-circuit evaluation
 
 3. Which of the following describes a function side effect?
-    - **A)** A function returning multiple values
-    - **B)** A function executing without evaluating all operands
-    - **C)** A function modifying one of its parameters or a global variable
-    - **D)** A function automatically converting variable types
+- **A)** A function returning multiple values
+- **B)** A function executing without evaluating all operands
+- **C)** A function modifying one of its parameters or a global variable
+- **D)** A function automatically converting variable types
 
 4. What is the term for using a single operator symbol for multiple purposes, such as using `+` for both arithmetic addition and string concatenation?
-    - **A)** Overloading
-    - **B)** Coercion
-    - **C)** Associativity
-    - **D)** Narrowing
+- **A)** Overloading
+- **B)** Coercion
+- **C)** Associativity
+- **D)** Narrowing
 
 5. Which type of implicit type conversion is generally considered safe?
-    - **A)** Narrowing conversion
-    - **B)** Widening conversion
-    - **C)** Mixed-mode conversion
-    - **D)** Overloaded conversion
+- **A)** Narrowing conversion
+- **B)** Widening conversion
+- **C)** Mixed-mode conversion
+- **D)** Overloaded conversion
 
 6. Which evaluation strategy improves efficiency by determining the result of an expression without evaluating all operands or operators?
-    - **A)** Compound evaluation
-    - **B)** Associative evaluation
-    - **C)** Coercive evaluation
-    - **D)** Short-circuit evaluation
+- **A)** Compound evaluation
+- **B)** Associative evaluation
+- **C)** Coercive evaluation
+- **D)** Short-circuit evaluation
 
 7. In imperative languages, what issue arises when an operand is fetched before a function call that modifies it?
-    - **A)** Integer overflow
-    - **B)** Narrowing conversion
-    - **C)** Unpredictable outcome due to function side effects
-    - **D)** Fatal critical error
+- **A)** Integer overflow
+- **B)** Narrowing conversion
+- **C)** Unpredictable outcome due to function side effects
+- **D)** Fatal critical error
 
 8. Which operator type is used when an expression evaluates to a Boolean value and generally possesses lower precedence than arithmetic operators?
-    - **A)** Compound assignment operators
-    - **B)** Ternary operators
-    - **C)** Relational operators
-    - **D)** Unary operators
+- **A)** Compound assignment operators
+- **B)** Ternary operators
+- **C)** Relational operators
+- **D)** Unary operators
 
 9. What is a potential drawback of treating assignments as expressions?
-    - **A)** It prevents dynamic binding.
-    - **B)** It can lead to side effects or reduced error detection.
-    - **C)** It strictly enforces evaluation orders.
-    - **D)** It eliminates mutable variables.
+- **A)** It prevents dynamic binding.
+- **B)** It can lead to side effects or reduced error detection.
+- **C)** It strictly enforces evaluation orders.
+- **D)** It eliminates mutable variables.
 
 10. In pure functional languages, what role do assignment statements play?
-    - **A)** They dynamically change the binding of values to variables and mutate state.
-    - **B)** They are used primarily for shorthand notation.
-    - **C)** They do not mutate state; they merely bind names to values.
-    - **D)** They are evaluated using short-circuit evaluation.
+- **A)** They dynamically change the binding of values to variables and mutate state.
+- **B)** They are used primarily for shorthand notation.
+- **C)** They do not mutate state; they merely bind names to values.
+- **D)** They are evaluated using short-circuit evaluation.
 
 ### Answer Key & Explanations
 

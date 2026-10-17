@@ -71,64 +71,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does the "order of growth" of an algorithm describe?
-    - **A)** The exact number of milliseconds the algorithm takes to execute.
-    - **B)** The rate at which the algorithm's running time increases with input size, ignoring constants and lower-order terms.
-    - **C)** The amount of physical disk space used.
-    - **D)** The number of variables assigned.
+- **A)** The exact number of milliseconds the algorithm takes to execute.
+- **B)** The rate at which the algorithm's running time increases with input size, ignoring constants and lower-order terms.
+- **C)** The amount of physical disk space used.
+- **D)** The number of variables assigned.
 
 2. For the running time function $T(n) = 3n^2 + 5n + 2$, what is its order of growth?
-    - **A)** $n^2$
-    - **B)** $3n^2$
-    - **C)** $5n$
-    - **D)** $n$
+- **A)** $n^2$
+- **B)** $3n^2$
+- **C)** $5n$
+- **D)** $n$
 
 3. Why are constant factors ignored in the order of growth analysis?
-    - **A)** Because they are always zero.
-    - **B)** Because constants are never used in algorithms.
-    - **C)** Because they depend on implementation details (hardware, compiler) and are overwhelmed by the dominant term for large $n$.
-    - **D)** Because they make the math too difficult to solve.
+- **A)** Because they are always zero.
+- **B)** Because constants are never used in algorithms.
+- **C)** Because they depend on implementation details (hardware, compiler) and are overwhelmed by the dominant term for large $n$.
+- **D)** Because they make the math too difficult to solve.
 
 4. Which of the following is a simplification rule for determining order of growth?
-    - **A)** Keep all terms regardless of size.
-    - **B)** Multiply all constants together.
-    - **C)** Drop lower-order terms.
-    - **D)** Ignore the dominant term.
+- **A)** Keep all terms regardless of size.
+- **B)** Multiply all constants together.
+- **C)** Drop lower-order terms.
+- **D)** Ignore the dominant term.
 
 5. If $T_1(n) = 100n$ and $T_2(n) = 2n^2$, which function will eventually be faster (have a smaller value) for sufficiently large $n$?
-    - **A)** $T_1(n)$
-    - **B)** $T_2(n)$
-    - **C)** They will always be identical.
-    - **D)** It depends entirely on the compiler.
+- **A)** $T_1(n)$
+- **B)** $T_2(n)$
+- **C)** They will always be identical.
+- **D)** It depends entirely on the compiler.
 
 6. How does order of growth directly relate to asymptotic notation?
-    - **A)** Order of growth is the exact opposite of asymptotic notation.
-    - **B)** Order of growth is what asymptotic notation formally captures and describes.
-    - **C)** Order of growth only handles best-case, while asymptotic handles worst-case.
-    - **D)** Asymptotic notation keeps constant coefficients, while order of growth drops them.
+- **A)** Order of growth is the exact opposite of asymptotic notation.
+- **B)** Order of growth is what asymptotic notation formally captures and describes.
+- **C)** Order of growth only handles best-case, while asymptotic handles worst-case.
+- **D)** Asymptotic notation keeps constant coefficients, while order of growth drops them.
 
 7. What does Big-Theta ($\Theta$) notation describe regarding the order of growth?
-    - **A)** A strict lower bound.
-    - **B)** A strict upper bound.
-    - **C)** A tight bound on the order of growth.
-    - **D)** An exact millisecond execution time.
+- **A)** A strict lower bound.
+- **B)** A strict upper bound.
+- **C)** A tight bound on the order of growth.
+- **D)** An exact millisecond execution time.
 
 8. When simplifying $n^3 + n^2 \log n$, what is the result?
-    - **A)** $n^2 \log n$
-    - **B)** $n^3$
-    - **C)** $n^3 \log n$
-    - **D)** $n^5$
+- **A)** $n^2 \log n$
+- **B)** $n^3$
+- **C)** $n^3 \log n$
+- **D)** $n^5$
 
 9. What is a common pitfall regarding the order of growth?
-    - **A)** Confusing it with exact running time, failing to realize it is an approximation.
-    - **B)** Remembering to drop lower-order terms.
-    - **C)** Preferring lower growth rates over higher ones.
-    - **D)** Using it to compare algorithms.
+- **A)** Confusing it with exact running time, failing to realize it is an approximation.
+- **B)** Remembering to drop lower-order terms.
+- **C)** Preferring lower growth rates over higher ones.
+- **D)** Using it to compare algorithms.
 
 10. Why might an algorithm with a higher order of growth be faster for very small inputs?
-    - **A)** Because higher orders of growth are always faster.
-    - **B)** Because lower-order algorithms cannot process small inputs.
-    - **C)** Because the ignored constant factors might be significant for small inputs.
-    - **D)** Because asymptotic notation reverses for small values of $n$.
+- **A)** Because higher orders of growth are always faster.
+- **B)** Because lower-order algorithms cannot process small inputs.
+- **C)** Because the ignored constant factors might be significant for small inputs.
+- **D)** Because asymptotic notation reverses for small values of $n$.
 
 ### Answer Key & Explanations
 1. **B)** Order of growth strips away the noise of hardware and constants to focus purely on the dominant mathematical rate of increase as $n$ scales.

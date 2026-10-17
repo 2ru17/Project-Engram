@@ -201,52 +201,52 @@ High-Priority Attack Vectors for Scanning Phase:
 ## Multiple Choice Questions
 
 1. What is the fundamental characteristic of passive reconnaissance that differentiates it from active reconnaissance?
-    - **A)** Passive reconnaissance requires administrative credentials on the target domain.
-    - **B)** Passive reconnaissance relies entirely on third-party data sources without directly interacting with target systems.
-    - **C)** Passive reconnaissance automatically exploits remote buffer overflow vulnerabilities.
-    - **D)** Passive reconnaissance only works against IPv6 networks.
+- **A)** Passive reconnaissance requires administrative credentials on the target domain.
+- **B)** Passive reconnaissance relies entirely on third-party data sources without directly interacting with target systems.
+- **C)** Passive reconnaissance automatically exploits remote buffer overflow vulnerabilities.
+- **D)** Passive reconnaissance only works against IPv6 networks.
 
 2. Which Google Dork operator would an ethical hacker use to identify publicly exposed database backup files on a client's website?
-    - **A)** `site:target.com link:admin`
-    - **B)** `site:target.com filetype:sql | filetype:bak`
-    - **C)** `site:target.com define:database`
-    - **D)** `site:target.com cache:index`
+- **A)** `site:target.com link:admin`
+- **B)** `site:target.com filetype:sql | filetype:bak`
+- **C)** `site:target.com define:database`
+- **D)** `site:target.com cache:index`
 
 3. A security tester queries `crt.sh` using the search string `%.example.com`. What information will this query uncover?
-    - **A)** Cleartext user passwords stored in database tables
-    - **B)** All current and historical SSL/TLS certificates logged for the domain and its subdomains
-    - **C)** The full source code of the backend web server
-    - **D)** Active SSH session keys for the Linux server
+- **A)** Cleartext user passwords stored in database tables
+- **B)** All current and historical SSL/TLS certificates logged for the domain and its subdomains
+- **C)** The full source code of the backend web server
+- **D)** Active SSH session keys for the Linux server
 
 4. What severe vulnerability occurs when a DNS server allows any external client to execute an `AXFR` query?
-    - **A)** Denial of Service via buffer exhaustion
-    - **B)** Full DNS Zone Transfer exposing all internal and external DNS mapping records
-    - **C)** Cross-Site Scripting (XSS) in the browser
-    - **D)** Server-side SQL injection in the DNS daemon
+- **A)** Denial of Service via buffer exhaustion
+- **B)** Full DNS Zone Transfer exposing all internal and external DNS mapping records
+- **C)** Cross-Site Scripting (XSS) in the browser
+- **D)** Server-side SQL injection in the DNS daemon
 
 5. Which tool is specifically designed to crawl social media platforms to determine if an employee's username exists across hundreds of public services?
-    - **A)** `dnsrecon`
-    - **B)** `sherlock`
-    - **C)** `whatweb`
-    - **D)** `sublist3r`
+- **A)** `dnsrecon`
+- **B)** `sherlock`
+- **C)** `whatweb`
+- **D)** `sublist3r`
 
 6. Why might a penetration tester search Shodan using the filter `ssl:"target.com"` instead of simply scanning `www.target.com`?
-    - **A)** To automatically crack all SSL certificates using brute force
-    - **B)** To discover obscure, unindexed origin servers hosting the target's SSL certificate that may bypass CDN firewalls
-    - **C)** To alter the DNS records on root nameservers
-    - **D)** To encrypt the target's web server traffic
+- **A)** To automatically crack all SSL certificates using brute force
+- **B)** To discover obscure, unindexed origin servers hosting the target's SSL certificate that may bypass CDN firewalls
+- **C)** To alter the DNS records on root nameservers
+- **D)** To encrypt the target's web server traffic
 
 7. During passive reconnaissance, an analyst finds an old GitHub commit from a client developer containing hardcoded API keys. What is the most appropriate next step?
-    - **A)** Immediately use the keys to wipe the production database
-    - **B)** Document the discovery, timestamp the repository URL, and flag the finding for safe validation
-    - **C)** Post the keys to a public forum to force the developer to fix it
-    - **D)** Ignore the finding because it came from a passive source
+- **A)** Immediately use the keys to wipe the production database
+- **B)** Document the discovery, timestamp the repository URL, and flag the finding for safe validation
+- **C)** Post the keys to a public forum to force the developer to fix it
+- **D)** Ignore the finding because it came from a passive source
 
 8. Why is it dangerous to perform active reconnaissance against an IP address discovered via WHOIS without additional verification?
-    - **A)** The IP may belong to a multi-tenant cloud provider or shared hosting environment outside the authorized scope.
-    - **B)** It will instantly corrupt the penetration tester's operating system.
-    - **C)** WHOIS data is always encrypted and cannot be read without a license.
-    - **D)** Active reconnaissance will immediately disable all DNS servers globally.
+- **A)** The IP may belong to a multi-tenant cloud provider or shared hosting environment outside the authorized scope.
+- **B)** It will instantly corrupt the penetration tester's operating system.
+- **C)** WHOIS data is always encrypted and cannot be read without a license.
+- **D)** Active reconnaissance will immediately disable all DNS servers globally.
 
 ### Answer Key & Explanations
 

@@ -53,64 +53,64 @@ Since Prefix B is a longer match (24 bits vs 21 bits), the router forwards the p
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "It is implemented _____ hardware (nanosecond timeframe)."?
-    - **A)** Router
-    - **B)** in
-    - **C)** Protocol
-    - **D)** Network
+- **A)** Router
+- **B)** in
+- **C)** Protocol
+- **D)** Network
 
 2. Which word completes the following sentence from the text: "**CIDR (Classless InterDomain Routing):** The format `a.b.c.d/x` where `x` _____ the number of bits in the subnet portion."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** is
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** is
 
 3. Which word completes the following sentence from the text: "Nodes exchange distance information _____ with their neighbors iteratively."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** only
+- **A)** Network
+- **B)** Protocol
+- **C)** Router
+- **D)** only
 
 4. Which word completes the following sentence from the text: "**Tunneling:** A transition method where an IPv6 datagram is encapsulated as _____ payload within an IPv4 datagram to travel across IPv4 routers."?
-    - **A)** the
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** the
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 5. Which word completes the following sentence from the text: "**DHCP (Dynamic Host Configuration Protocol):** Dynamically allocates an IP address (as well as first-hop _____ IP, DNS server IP, and network mask) to a host joining the network."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** router
-    - **D)** Network
+- **A)** Protocol
+- **B)** Router
+- **C)** router
+- **D)** Network
 
 6. Which word completes the following sentence from the text: "Local devices use private IP space, and the NAT _____ changes the source IP and port for outgoing datagrams."?
-    - **A)** router
-    - **B)** Network
-    - **C)** Router
-    - **D)** Protocol
+- **A)** router
+- **B)** Network
+- **C)** Router
+- **D)** Protocol
 
 7. Which word completes the following sentence from the text: "**Routing (Control Plane):** The network-wide logic that determines the end-to-end _____ packets take from source to destination using routing algorithms."?
-    - **A)** path
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** path
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 8. Which word completes the following sentence from the text: "Given the destination address: `11001000 00010111 00011000 10101010` _____ Prefix C (first 21 bits are `..."?
-    - **A)** Router
-    - **B)** Matches
-    - **C)** Protocol
-    - **D)** Network
+- **A)** Router
+- **B)** Matches
+- **C)** Protocol
+- **D)** Network
 
 9. Which word completes the following sentence from the text: "All routers have the _____ topology and link costs."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** Router
-    - **D)** complete
+- **A)** Protocol
+- **B)** Network
+- **C)** Router
+- **D)** complete
 
 10. Which word completes the following sentence from the text: "Does not match Prefix B or C _____ 21st bit is 0, not 1)."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** the
-    - **D)** Router
+- **A)** Protocol
+- **B)** Network
+- **C)** the
+- **D)** Router
 
 
 ### Answer Key & Explanations

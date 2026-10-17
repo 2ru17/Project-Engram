@@ -502,34 +502,34 @@ Applying `.str.lower()` normalizes casing: `'apple'`, `'apple'`, `'apple'`, `'ba
 ## Multiple Choice Questions
 
 1. What does the missing data mechanism MCAR stand for?
-    - **A)** Missing Categorically And Randomly
-    - **B)** Missing Completely At Random
-    - **C)** Missing Correlated At Random
-    - **D)** Mean Calculation At Random
+- **A)** Missing Categorically And Randomly
+- **B)** Missing Completely At Random
+- **C)** Missing Correlated At Random
+- **D)** Mean Calculation At Random
 
 2. Which outlier detection method uses the formula: [Q1 - 1.5 * IQR, Q3 + 1.5 * IQR]?
-    - **A)** Z-score method
-    - **B)** Isolation Forest
-    - **C)** IQR method
-    - **D)** Standard deviation method
+- **A)** Z-score method
+- **B)** Isolation Forest
+- **C)** IQR method
+- **D)** Standard deviation method
 
 3. When data is MAR (Missing At Random), the missingness is related to:
-    - **A)** The missing value itself
-    - **B)** Unobserved variables
-    - **C)** Observed variables in the dataset
-    - **D)** Completely random chance
+- **A)** The missing value itself
+- **B)** Unobserved variables
+- **C)** Observed variables in the dataset
+- **D)** Completely random chance
 
 4. Which imputation strategy can introduce the most bias if the data is not MCAR?
-    - **A)** Mean imputation
-    - **B)** Multiple imputation
-    - **C)** K-Nearest Neighbors imputation
-    - **D)** Regression imputation
+- **A)** Mean imputation
+- **B)** Multiple imputation
+- **C)** K-Nearest Neighbors imputation
+- **D)** Regression imputation
 
 5. A Z-score threshold of 3 implies that an observation is considered an outlier if it is:
-    - **A)** More than 3 standard deviations from the mean
-    - **B)** Less than 3% of the total range
-    - **C)** Greater than the 3rd quartile
-    - **D)** 3 times the median value
+- **A)** More than 3 standard deviations from the mean
+- **B)** Less than 3% of the total range
+- **C)** Greater than the 3rd quartile
+- **D)** 3 times the median value
 
 ### Answer Key & Explanations
 1. **B)** MCAR means the missingness is completely independent of both observed and unobserved data.

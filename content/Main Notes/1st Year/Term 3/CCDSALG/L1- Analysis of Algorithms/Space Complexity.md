@@ -61,34 +61,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does space complexity measure?
-    - **A)** The physical dimensions of the hard drive.
-    - **B)** The amount of memory space required by an algorithm as a function of Input Size.
-    - **C)** The time it takes to allocate memory.
-    - **D)** The number of lines of code.
+- **A)** The physical dimensions of the hard drive.
+- **B)** The amount of memory space required by an algorithm as a function of Input Size.
+- **C)** The time it takes to allocate memory.
+- **D)** The number of lines of code.
 
 2. Which component of space complexity is typically constant and independent of the input size?
-    - **A)** Instruction Space (space for compiled code)
-    - **B)** Variable Data Space
-    - **C)** Environment Stack Space
-    - **D)** Dynamic Arrays
+- **A)** Instruction Space (space for compiled code)
+- **B)** Variable Data Space
+- **C)** Environment Stack Space
+- **D)** Dynamic Arrays
 
 3. What does "Environment Stack Space" refer to?
-    - **A)** Space used for storing global constants.
-    - **B)** Space for saving context during function calls, especially in recursion.
-    - **C)** Space for the compiled binary executable.
-    - **D)** Space used by iterative `while` loops.
+- **A)** Space used for storing global constants.
+- **B)** Space for saving context during function calls, especially in recursion.
+- **C)** Space for the compiled binary executable.
+- **D)** Space used by iterative `while` loops.
 
 4. What is a common pitfall when analyzing space complexity?
-    - **A)** Forgetting that the recursive call stack contributes to space complexity.
-    - **B)** Assuming all variables take 1 byte of memory.
-    - **C)** Including Instruction Space in Big-O analysis.
-    - **D)** Overestimating the size of constants.
+- **A)** Forgetting that the recursive call stack contributes to space complexity.
+- **B)** Assuming all variables take 1 byte of memory.
+- **C)** Including Instruction Space in Big-O analysis.
+- **D)** Overestimating the size of constants.
 
 5. Which analysis techniques are used for space complexity?
-    - **A)** Completely different techniques than time complexity.
-    - **B)** Hardware benchmarking tools.
-    - **C)** Similar techniques as time complexity, such as Frequency Count and Asymptotic Notation.
-    - **D)** Only probabilistic analysis.
+- **A)** Completely different techniques than time complexity.
+- **B)** Hardware benchmarking tools.
+- **C)** Similar techniques as time complexity, such as Frequency Count and Asymptotic Notation.
+- **D)** Only probabilistic analysis.
 
 ### Answer Key & Explanations
 1. **B)** Space complexity mathematically evaluates how much RAM/memory an algorithm needs to function as the input data scales.

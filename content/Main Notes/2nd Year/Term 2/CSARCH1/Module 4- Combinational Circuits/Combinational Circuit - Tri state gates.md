@@ -38,34 +38,34 @@ A tri-state NOT gate is an inverter gate with 3 outputs: 0, 1, and high-impedanc
 ## Multiple Choice Questions
 
 1. What are the three possible outputs of a tri-state gate?
-    - **A)** 0, 1, and intermediate-voltage
-    - **B)** 0, 1, and high-impedance
-    - **C)** Low, High, and Floating-ground
-    - **D)** 0, 1, and unknown (x)
+- **A)** 0, 1, and intermediate-voltage
+- **B)** 0, 1, and high-impedance
+- **C)** Low, High, and Floating-ground
+- **D)** 0, 1, and unknown (x)
 
 2. What does high-impedance state mean in a tri-state gate?
-    - **A)** The output is shorted to ground.
-    - **B)** The output is connected to Vcc.
-    - **C)** The output is disconnected (open circuit).
-    - **D)** The output acts as an amplifier.
+- **A)** The output is shorted to ground.
+- **B)** The output is connected to Vcc.
+- **C)** The output is disconnected (open circuit).
+- **D)** The output acts as an amplifier.
 
 3. For a tri-state buffer with positive control, when is the output high-impedance?
-    - **A)** When the control input is 1
-    - **B)** When the control input is 0
-    - **C)** When the data input is 0
-    - **D)** When the data input is 1
+- **A)** When the control input is 1
+- **B)** When the control input is 0
+- **C)** When the data input is 0
+- **D)** When the data input is 1
 
 4. How does a negative control tri-state buffer behave when its control input is 0?
-    - **A)** The output is high-impedance
-    - **B)** The output is the complement of the input
-    - **C)** The output follows the input normally
-    - **D)** The output is strictly 1
+- **A)** The output is high-impedance
+- **B)** The output is the complement of the input
+- **C)** The output follows the input normally
+- **D)** The output is strictly 1
 
 5. A tri-state NOT gate with positive control will output what when control is 1 and input is 0?
-    - **A)** 0
-    - **B)** 1
-    - **C)** High-impedance (Z)
-    - **D)** Unknown (X)
+- **A)** 0
+- **B)** 1
+- **C)** High-impedance (Z)
+- **D)** Unknown (X)
 
 ### Answer Key & Explanations
 1. **B)** A tri-state gate outputs 0, 1, and high-impedance (z).

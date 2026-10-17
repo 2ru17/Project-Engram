@@ -102,64 +102,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "MAC Addresses**  **Source MAC:** The _____ interface sending the frame."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** router
+- **A)** Network
+- **B)** Router
+- **C)** Protocol
+- **D)** router
 
 2. Which word completes the following sentence from the text: "Problem Analysis  ### Point 6 (Node C $\rightarrow$ First Router)  _Context: The packet is _____ the source computer (C) and heading to its default gateway (the router interface)._  **1/2."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** leaving
+- **A)** Router
+- **B)** Network
+- **C)** Protocol
+- **D)** leaving
 
 3. Which word completes the following sentence from the text: "Do the source and destination MAC addresses change at point _____  **Analysis:** Point 4 represents a new physical link (wire)."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** 4
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** 4
 
 4. Which word completes the following sentence from the text: "Do the source and destination MAC _____ change at point 2?**  **Analysis:** Yes."?
-    - **A)** addresses
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** addresses
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 5. Which word completes the following sentence from the text: "$\rightarrow$ **Router Interface _____ (81-D8...)**  **3/4."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** 6
-    - **D)** Router
+- **A)** Protocol
+- **B)** Network
+- **C)** 6
+- **D)** Router
 
 6. Which word completes the following sentence from the text: "The router is now the sender (Link _____ and Node A is the receiver."?
-    - **A)** Layer
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** Network
+- **A)** Layer
+- **B)** Router
+- **C)** Protocol
+- **D)** Network
 
 7. Which word completes the following sentence from the text: "**Correct Answer:** **Yes** (The previous MACs were for the _____ link; the new MACs are for the Router-Router link)."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** CRouter
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** CRouter
 
 8. Which word completes the following sentence from the text: "**MAC Addresses (Link Layer):** act _____ the "Next Hop" ticket."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** like
+- **A)** Network
+- **B)** Router
+- **C)** Protocol
+- **D)** like
 
 9. Which word completes the following sentence from the text: "Confusing the source/destination MAC at a _____ hop with the original sender/receiver."?
-    - **A)** given
-    - **B)** Network
-    - **C)** Router
-    - **D)** Protocol
+- **A)** given
+- **B)** Network
+- **C)** Router
+- **D)** Protocol
 
 10. Which word completes the following sentence from the text: "--- id: Addressing-and-Forwarding type: note course: CSNETWK topic: status: completed ---  # Addressing and Forwarding  > [!info] Document Metadata > - **Course:** `=this.course` > - **Topic:** `=this.topic` > - **Status:** `=this.status`  **🏷️ Tags:** #[[CSNETWK]] _____ Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]  ---  ## Overview  > The Golden Rule of Forwarding  ## Key Concepts  IP Addresses (Network Layer) MAC Addresses (Link Layer) Sender Receiver Path  ## Details / Theory  ## 1."?
-    - **A)** Network
-    - **B)** Computer
-    - **C)** Protocol
-    - **D)** Router
+- **A)** Network
+- **B)** Computer
+- **C)** Protocol
+- **D)** Router
 
 
 ### Answer Key & Explanations

@@ -185,64 +185,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "Forgetting to update (relax) neighbors when a cheaper _____ is found through the newly expanded node."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** path
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** path
 
 2. Which word completes the following sentence from the text: "The Network Topology  **Scenario Data** ![[Pasted image 20251121093234.png]]  **Source Node:** _____ **Goal:** Find shortest paths to X, V, and Z."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** U
-    - **D)** Router
+- **A)** Protocol
+- **B)** Network
+- **C)** U
+- **D)** Router
 
 3. Which word completes the following sentence from the text: "It requires non-negative edge weights and runs in _____ or $O(n \log n)$ with a priority queue."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** On2
+- **A)** Router
+- **B)** Network
+- **C)** Protocol
+- **D)** On2
 
 4. Which word completes the following sentence from the text: "Write your answer as _____  **Analytical Breakdown:**  1."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** np
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** np
+- **D)** Network
 
 5. Which word completes the following sentence from the text: "**Step 4 (Expand W):** W _____ next cheapest (9, via U)."?
-    - **A)** is
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** Network
+- **A)** is
+- **B)** Protocol
+- **C)** Router
+- **D)** Network
 
 6. Which word completes the following sentence from the text: "**Total Cost:** 14 **Predecessor:** w  **Correct Answer:** **14,w**  ## Summary of Logic (Cheat Sheet)  _____                 |          |                 |              | | --------------- | -------- | --------------- | ------------ | | **Destination** | **Cost** | **Predecessor** | **Path**     | | **X**           | 7        | u               | Direct (u-x) | | **V**           | 6        | u               | Direct (u-v) | | **Z**           | 14       | w               | u-w-z        |  **Algorithm Tip:** Always explore the node with the _lowest current cost_ first."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** 
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** 
 
 7. Which word completes the following sentence from the text: "**Correct Answer:** **6,u**  ### Question 3  **What is the shortest _____ to node z and what node is its predecessor?"?
-    - **A)** Router
-    - **B)** Network
-    - **C)** distance
-    - **D)** Protocol
+- **A)** Router
+- **B)** Network
+- **C)** distance
+- **D)** Protocol
 
 8. Which word completes the following sentence from the text: "**Distance:** 6 **Predecessor (p):** The _____ immediately before V is **u**."?
-    - **A)** Network
-    - **B)** node
-    - **C)** Router
-    - **D)** Protocol
+- **A)** Network
+- **B)** node
+- **C)** Router
+- **D)** Protocol
 
 9. Which word completes the following sentence from the text: "Path U _____ V $\rightarrow$ W $\rightarrow$ X?"?
-    - **A)** Protocol
-    - **B)** rightarrow
-    - **C)** Network
-    - **D)** Router
+- **A)** Protocol
+- **B)** rightarrow
+- **C)** Network
+- **D)** Router
 
 10. Which word completes the following sentence from the text: "Any other path (e.g., through X) would start with a cost _____ 7 (U $\rightarrow$ X), which is already higher than 6."?
-    - **A)** Protocol
-    - **B)** of
-    - **C)** Network
-    - **D)** Router
+- **A)** Protocol
+- **B)** of
+- **C)** Network
+- **D)** Router
 
 
 ### Answer Key & Explanations

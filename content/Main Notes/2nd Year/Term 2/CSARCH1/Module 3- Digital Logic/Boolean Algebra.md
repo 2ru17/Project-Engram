@@ -131,64 +131,64 @@ The complement of a function $\bar{F}$ can be obtained in two ways:
 ## Multiple Choice Questions
 
 1. What is a "literal" in the context of a Boolean expression?
-    - **A)** An integer value of 0 or 1
-    - **B)** Each appearance of a variable or its complement
-    - **C)** The final output of the logic gate
-    - **D)** A grouping of terms joined by an OR operator
+- **A)** An integer value of 0 or 1
+- **B)** Each appearance of a variable or its complement
+- **C)** The final output of the logic gate
+- **D)** A grouping of terms joined by an OR operator
 
 2. A minterm is obtained from which type of operation on n variables?
-    - **A)** OR term
-    - **B)** AND term
-    - **C)** XOR term
-    - **D)** NOT term
+- **A)** OR term
+- **B)** AND term
+- **C)** XOR term
+- **D)** NOT term
 
 3. In a maxterm, how is a variable with a value of binary 1 represented?
-    - **A)** As an unprimed variable
-    - **B)** As a primed or complemented variable
-    - **C)** As a 0
-    - **D)** As a don't-care condition
+- **A)** As an unprimed variable
+- **B)** As a primed or complemented variable
+- **C)** As a 0
+- **D)** As a don't-care condition
 
 4. The canonical sum of minterms is obtained by taking which values from a truth table?
-    - **A)** All the binary 0s
-    - **B)** All the binary 1s
-    - **C)** Only the prime implicants
-    - **D)** The don't-care terms
+- **A)** All the binary 0s
+- **B)** All the binary 1s
+- **C)** Only the prime implicants
+- **D)** The don't-care terms
 
 5. What is the Standard Sum of Product (SOP)?
-    - **A)** A simplified Boolean expression containing OR terms, AND-ed together
-    - **B)** A single minterm encompassing all variables
-    - **C)** A simplified Boolean expression containing AND terms, OR-ed together
-    - **D)** An unsimplified Boolean equation with parentheses
+- **A)** A simplified Boolean expression containing OR terms, AND-ed together
+- **B)** A single minterm encompassing all variables
+- **C)** A simplified Boolean expression containing AND terms, OR-ed together
+- **D)** An unsimplified Boolean equation with parentheses
 
 6. According to the axioms of Boolean Algebra, what is the result of 1 + 1?
-    - **A)** 0
-    - **B)** 1
-    - **C)** 2
-    - **D)** 10
+- **A)** 0
+- **B)** 1
+- **C)** 2
+- **D)** 10
 
 7. The duality principle states that an algebraic expression remains valid if we interchange:
-    - **A)** AND with OR, and 0 with 1
-    - **B)** NOT with AND, and 1 with 0
-    - **C)** Variables with their complements
-    - **D)** Positive logic with negative logic
+- **A)** AND with OR, and 0 with 1
+- **B)** NOT with AND, and 1 with 0
+- **C)** Variables with their complements
+- **D)** Positive logic with negative logic
 
 8. Which theorem states that X + X•Y = X?
-    - **A)** Commutative Law
-    - **B)** Distributive Law
-    - **C)** Absorption Law
-    - **D)** De Morgan's Law
+- **A)** Commutative Law
+- **B)** Distributive Law
+- **C)** Absorption Law
+- **D)** De Morgan's Law
 
 9. According to De Morgan's Law, what is the equivalent of the expression (X•Y)'?
-    - **A)** X' • Y'
-    - **B)** X + Y
-    - **C)** X' + Y'
-    - **D)** (X+Y)'
+- **A)** X' • Y'
+- **B)** X + Y
+- **C)** X' + Y'
+- **D)** (X+Y)'
 
 10. What is one valid method to obtain the complement of a function?
-    - **A)** Multiply all terms by 1
-    - **B)** Divide the function by 0
-    - **C)** Get the dual of the function and then complement each literal
-    - **D)** Swap all variables with their adjacent letters
+- **A)** Multiply all terms by 1
+- **B)** Divide the function by 0
+- **C)** Get the dual of the function and then complement each literal
+- **D)** Swap all variables with their adjacent letters
 
 ### Answer Key & Explanations
 1. **B)** A literal represents each individual appearance of a variable, whether it is primed or unprimed.

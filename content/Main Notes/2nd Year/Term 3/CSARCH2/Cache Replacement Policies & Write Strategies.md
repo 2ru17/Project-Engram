@@ -202,34 +202,34 @@ Calculate:
 ## Multiple Choice Questions
 
 1. Which cache miss classification represents misses that occur regardless of cache capacity and associativity?
-    - **A)** Capacity Misses
-    - **B)** Conflict Misses
-    - **C)** Compulsory (Cold) Misses
-    - **D)** Coherence Misses
+- **A)** Capacity Misses
+- **B)** Conflict Misses
+- **C)** Compulsory (Cold) Misses
+- **D)** Coherence Misses
 
 2. What is the key operational difference between Write-Through and Write-Back cache write policies?
-    - **A)** Write-Through writes to cache and main memory simultaneously, while Write-Back writes only to cache and updates main memory upon eviction
-    - **B)** Write-Through requires a Dirty bit, while Write-Back does not
-    - **C)** Write-Through can only be used with Fully Associative caches
-    - **D)** Write-Back requires all reads to be forwarded through the ALU
+- **A)** Write-Through writes to cache and main memory simultaneously, while Write-Back writes only to cache and updates main memory upon eviction
+- **B)** Write-Through requires a Dirty bit, while Write-Back does not
+- **C)** Write-Through can only be used with Fully Associative caches
+- **D)** Write-Back requires all reads to be forwarded through the ALU
 
 3. In a system with L1 Hit Time $= 1.2\text{ ns}$, L1 Miss Rate $= 4\%$, and Main Memory Penalty $= 50\text{ ns}$, what is the Average Memory Access Time (AMAT)?
-    - **A)** $1.20\text{ ns}$
-    - **B)** $2.00\text{ ns}$
-    - **C)** $3.20\text{ ns}$
-    - **D)** $5.20\text{ ns}$
+- **A)** $1.20\text{ ns}$
+- **B)** $2.00\text{ ns}$
+- **C)** $3.20\text{ ns}$
+- **D)** $5.20\text{ ns}$
 
 4. What is the purpose of the Dirty bit ($D$) in a Write-Back cache entry?
-    - **A)** To signal that the data has experienced a parity error
-    - **B)** To indicate that the cache block has been modified and must be written to main memory when evicted
-    - **C)** To lock the line from being replaced by the LRU algorithm
-    - **D)** To prevent instruction fetches from accessing data lines
+- **A)** To signal that the data has experienced a parity error
+- **B)** To indicate that the cache block has been modified and must be written to main memory when evicted
+- **C)** To lock the line from being replaced by the LRU algorithm
+- **D)** To prevent instruction fetches from accessing data lines
 
 5. Which cache replacement policy is provably immune to Belady's Anomaly?
-    - **A)** First-In, First-Out (FIFO)
-    - **B)** Least Recently Used (LRU)
-    - **C)** Random Replacement
-    - **D)** Direct Mapping
+- **A)** First-In, First-Out (FIFO)
+- **B)** Least Recently Used (LRU)
+- **C)** Random Replacement
+- **D)** Direct Mapping
 
 ### Answer Key & Explanations
 

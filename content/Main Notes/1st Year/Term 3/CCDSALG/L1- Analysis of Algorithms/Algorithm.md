@@ -70,64 +70,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which of the following is a characteristic of an algorithm?
-    - **A)** Infinite execution time
-    - **B)** Ambiguous instructions
-    - **C)** Produces at least one quantity as output
-    - **D)** Requires exactly one input
+- **A)** Infinite execution time
+- **B)** Ambiguous instructions
+- **C)** Produces at least one quantity as output
+- **D)** Requires exactly one input
 
 2. What does the "Definiteness" characteristic of an algorithm mean?
-    - **A)** The algorithm terminates after a finite number of steps.
-    - **B)** Each instruction is clear and unambiguous.
-    - **C)** Every instruction must be basic enough to be carried out manually.
-    - **D)** It produces the correct output for all valid inputs.
+- **A)** The algorithm terminates after a finite number of steps.
+- **B)** Each instruction is clear and unambiguous.
+- **C)** Every instruction must be basic enough to be carried out manually.
+- **D)** It produces the correct output for all valid inputs.
 
 3. Which property ensures that a procedure does not loop forever?
-    - **A)** Effectiveness
-    - **B)** Definiteness
-    - **C)** Finiteness
-    - **D)** Efficiency
+- **A)** Effectiveness
+- **B)** Definiteness
+- **C)** Finiteness
+- **D)** Efficiency
 
 4. What is the difference between an algorithm and a program?
-    - **A)** An algorithm is a concrete implementation; a program is an abstract procedure.
-    - **B)** An algorithm is finite and abstract; a program is its concrete implementation.
-    - **C)** A program must be written in pseudocode, while an algorithm is written in a programming language.
-    - **D)** There is no difference; the terms are synonymous.
+- **A)** An algorithm is a concrete implementation; a program is an abstract procedure.
+- **B)** An algorithm is finite and abstract; a program is its concrete implementation.
+- **C)** A program must be written in pseudocode, while an algorithm is written in a programming language.
+- **D)** There is no difference; the terms are synonymous.
 
 5. What does "Correctness" in algorithm design refer to?
-    - **A)** How well it uses time and memory resources
-    - **B)** Whether it produces the right output for all valid inputs
-    - **C)** If the algorithm is easy to read and maintain
-    - **D)** Whether it is the best possible algorithm for the problem
+- **A)** How well it uses time and memory resources
+- **B)** Whether it produces the right output for all valid inputs
+- **C)** If the algorithm is easy to read and maintain
+- **D)** Whether it is the best possible algorithm for the problem
 
 6. Which characteristic requires that an instruction be basic enough to be executed by a person with pencil and paper?
-    - **A)** Definiteness
-    - **B)** Effectiveness
-    - **C)** Finiteness
-    - **D)** Simplicity
+- **A)** Definiteness
+- **B)** Effectiveness
+- **C)** Finiteness
+- **D)** Simplicity
 
 7. What does Time Complexity measure?
-    - **A)** How long the algorithm takes to run
-    - **B)** How much memory the algorithm requires
-    - **C)** The physical space on the hard drive used by the program
-    - **D)** The number of lines of code in the implementation
+- **A)** How long the algorithm takes to run
+- **B)** How much memory the algorithm requires
+- **C)** The physical space on the hard drive used by the program
+- **D)** The number of lines of code in the implementation
 
 8. Why is space complexity important, despite modern hardware advancements?
-    - **A)** It is the only metric that matters for correctness.
-    - **B)** It helps avoid infinite loops.
-    - **C)** It is crucial, especially on memory-constrained systems.
-    - **D)** It defines the theoretical lower bound of a problem.
+- **A)** It is the only metric that matters for correctness.
+- **B)** It helps avoid infinite loops.
+- **C)** It is crucial, especially on memory-constrained systems.
+- **D)** It defines the theoretical lower bound of a problem.
 
 9. What is a common mistake when designing algorithms?
-    - **A)** Ensuring that the procedure is finite
-    - **B)** Conflating correctness with efficiency
-    - **C)** Considering both time and space complexity
-    - **D)** Providing zero or more external inputs
+- **A)** Ensuring that the procedure is finite
+- **B)** Conflating correctness with efficiency
+- **C)** Considering both time and space complexity
+- **D)** Providing zero or more external inputs
 
 10. Which of the following metrics determines if the algorithm is easy to understand, implement, and maintain?
-    - **A)** Correctness
-    - **B)** Efficiency
-    - **C)** Simplicity/Readability
-    - **D)** Optimality
+- **A)** Correctness
+- **B)** Efficiency
+- **C)** Simplicity/Readability
+- **D)** Optimality
 
 ### Answer Key & Explanations
 1. **C)** An algorithm must produce at least one quantity as an output. It can take zero or more inputs.

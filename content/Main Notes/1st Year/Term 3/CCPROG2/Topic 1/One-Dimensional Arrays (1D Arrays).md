@@ -138,20 +138,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. Which best describes a 1D array?
-    - **A)** A grid of rows and columns
-    - **B)** A linear sequence of elements accessed by a single index
-    - **C)** A structure containing disparate data types
-    - **D)** A tree-based data structure
+- **A)** A grid of rows and columns
+- **B)** A linear sequence of elements accessed by a single index
+- **C)** A structure containing disparate data types
+- **D)** A tree-based data structure
 2. How do you access the very first element of a 1D array named `list`?
-    - **A)** `list[1]`
-    - **B)** `list[first]`
-    - **C)** `list[0]`
-    - **D)** `list[-1]`
+- **A)** `list[1]`
+- **B)** `list[first]`
+- **C)** `list[0]`
+- **D)** `list[-1]`
 3. In a 1D array of size N, what is the index of the last element?
-    - **A)** N
-    - **B)** N + 1
-    - **C)** N - 1
-    - **D)** 0
+- **A)** N
+- **B)** N + 1
+- **C)** N - 1
+- **D)** 0
 
 ### Answer Key & Explanations
 1. **B)** 1D arrays are the simplest array form, resembling a straight list of variables.

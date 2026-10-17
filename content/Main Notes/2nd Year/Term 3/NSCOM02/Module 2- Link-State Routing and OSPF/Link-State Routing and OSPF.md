@@ -107,64 +107,64 @@ The router installs the OSPF route in its routing table (represented by an `O` i
 
 ## Multiple Choice Questions
 1. Which routing algorithm is utilized by Link-State protocols like OSPF?
-    - **A)** Bellman-Ford
-    - **B)** DUAL
-    - **C)** Dijkstra's Shortest Path First (SPF)
-    - **D)** Path-Vector
+- **A)** Bellman-Ford
+- **B)** DUAL
+- **C)** Dijkstra's Shortest Path First (SPF)
+- **D)** Path-Vector
 
 2. Instead of hop count, what metric does OSPF use to determine the best path?
-    - **A)** Delay
-    - **B)** Cost (inversely related to bandwidth)
-    - **C)** Reliability
-    - **D)** MTU
+- **A)** Delay
+- **B)** Cost (inversely related to bandwidth)
+- **C)** Reliability
+- **D)** MTU
 
 3. What structure does every OSPF router in an area build to independently calculate the shortest path to all networks?
-    - **A)** The BGP Routing Information Base (RIB)
-    - **B)** The MAC Address Table
-    - **C)** The Link-State Database (LSDB)
-    - **D)** The Distance-Vector Table
+- **A)** The BGP Routing Information Base (RIB)
+- **B)** The MAC Address Table
+- **C)** The Link-State Database (LSDB)
+- **D)** The Distance-Vector Table
 
 4. Which OSPF packet type is responsible for initially establishing neighbor relationships?
-    - **A)** Type 1 - Hello
-    - **B)** Type 2 - DBD
-    - **C)** Type 3 - LSR
-    - **D)** Type 4 - LSU
+- **A)** Type 1 - Hello
+- **B)** Type 2 - DBD
+- **C)** Type 3 - LSR
+- **D)** Type 4 - LSU
 
 5. What information is carried inside a Type 4 Link-State Update (LSU) packet?
-    - **A)** Only the router's IP address
-    - **B)** ICMP Echo Requests
-    - **C)** Link-State Advertisements (LSAs) detailing topology changes
-    - **D)** BGP Keepalives
+- **A)** Only the router's IP address
+- **B)** ICMP Echo Requests
+- **C)** Link-State Advertisements (LSAs) detailing topology changes
+- **D)** BGP Keepalives
 
 6. In a multi-area OSPF design, what is Area 0 exclusively known as?
-    - **A)** The Stub Area
-    - **B)** The Backbone Area
-    - **C)** The Autonomous System Area
-    - **D)** The Default Area
+- **A)** The Stub Area
+- **B)** The Backbone Area
+- **C)** The Autonomous System Area
+- **D)** The Default Area
 
 7. A router learns about the 172.16.0.0/16 network from both RIP and OSPF. Which route will be installed in the routing table, and why?
-    - **A)** RIP, because its AD is 120
-    - **B)** RIP, because it uses hop count
-    - **C)** OSPF, because its AD (110) is lower than RIP's (120)
-    - **D)** OSPF, because it uses cost
+- **A)** RIP, because its AD is 120
+- **B)** RIP, because it uses hop count
+- **C)** OSPF, because its AD (110) is lower than RIP's (120)
+- **D)** OSPF, because it uses cost
 
 8. What is a primary drawback of using OSPF compared to RIP?
-    - **A)** OSPF converges much slower than RIP
-    - **B)** OSPF is limited to 15 hops
-    - **C)** OSPF consumes more router CPU and memory resources
-    - **D)** OSPF cannot support hierarchical design
+- **A)** OSPF converges much slower than RIP
+- **B)** OSPF is limited to 15 hops
+- **C)** OSPF consumes more router CPU and memory resources
+- **D)** OSPF cannot support hierarchical design
 
 9. In an OSPF network, what is the purpose of the Database Description (DBD) packet?
-    - **A)** To acknowledge the receipt of an update
-    - **B)** To provide a summary of the router's LSDB to a neighbor
-    - **C)** To request a specific missing LSA
-    - **D)** To terminate the neighbor adjacency
+- **A)** To acknowledge the receipt of an update
+- **B)** To provide a summary of the router's LSDB to a neighbor
+- **C)** To request a specific missing LSA
+- **D)** To terminate the neighbor adjacency
 
 10. Which code letter represents an OSPF route in a Cisco routing table?
-    - **A)** O
-    - **B)** S
-    - **C)** C
-    - **D)** R
+- **A)** O
+- **B)** S
+- **C)** C
+- **D)** R
 
 ### Answer Key & Explanations
 1. **C** - OSPF uses Dijkstra's Shortest Path First (SPF) algorithm to calculate loop-free paths.

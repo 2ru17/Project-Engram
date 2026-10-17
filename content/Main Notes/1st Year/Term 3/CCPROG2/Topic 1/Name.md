@@ -76,20 +76,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. What does the array name represent when passed to a function?
-    - **A)** A full copy of all its elements
-    - **B)** The address of its first element
-    - **C)** The size of the array
-    - **D)** The data type of the array
+- **A)** A full copy of all its elements
+- **B)** The address of its first element
+- **C)** The size of the array
+- **D)** The data type of the array
 2. Which of the following is an invalid array name in C?
-    - **A)** `my_array`
-    - **B)** `_data`
-    - **C)** `1stArray`
-    - **D)** `array1`
+- **A)** `my_array`
+- **B)** `_data`
+- **C)** `1stArray`
+- **D)** `array1`
 3. Why can't you assign a new array directly to an array name using the `=` operator (e.g., `arr = newArr;`)?
-    - **A)** Because the array name evaluates to a constant pointer to its base address
-    - **B)** Because C does not support assignments
-    - **C)** Because arrays are invisible
-    - **D)** Because you must use `==` instead
+- **A)** Because the array name evaluates to a constant pointer to its base address
+- **B)** Because C does not support assignments
+- **C)** Because arrays are invisible
+- **D)** Because you must use `==` instead
 
 ### Answer Key & Explanations
 1. **B)** The identifier acts as a reference pointing to the memory base, preventing deep copies.

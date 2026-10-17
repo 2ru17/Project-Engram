@@ -51,20 +51,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. What characteristic defines the layout of array elements in memory?
-    - **A)** They are fragmented across the heap
-    - **B)** They are stored contiguously sequentially
-    - **C)** They are distributed in a linked sequence
-    - **D)** They overlap each other to save space
+- **A)** They are fragmented across the heap
+- **B)** They are stored contiguously sequentially
+- **C)** They are distributed in a linked sequence
+- **D)** They overlap each other to save space
 2. What attribute specifies the number of items an array can hold?
-    - **A)** Element Type
-    - **B)** Dimension
-    - **C)** Size
-    - **D)** Base Address
+- **A)** Element Type
+- **B)** Dimension
+- **C)** Size
+- **D)** Base Address
 3. Which attribute determines the kind of data every element in the array must be?
-    - **A)** Element Type
-    - **B)** Dimension
-    - **C)** Scope
-    - **D)** Memory Allocator
+- **A)** Element Type
+- **B)** Dimension
+- **C)** Scope
+- **D)** Memory Allocator
 
 ### Answer Key & Explanations
 1. **B)** Elements occupy uninterrupted neighboring memory cells for direct addressing.

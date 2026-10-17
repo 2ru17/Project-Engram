@@ -58,28 +58,28 @@ $$ C = 3000 \log_2(1 + 3162) \approx 3000 \times 11.62 \approx 34860 \text{ bps}
 ## Multiple Choice Questions
 
 1. Which of the following is responsible for the physical connection between devices?
-    - **A)** Network Layer
-    - **B)** Data Link Layer
-    - **C)** Physical Layer
-    - **D)** Access Control Layer
+- **A)** Network Layer
+- **B)** Data Link Layer
+- **C)** Physical Layer
+- **D)** Access Control Layer
 
 2. The transmission of data requires which of the following?
-    - **A)** Continuous analog signaling
-    - **B)** Unrestricted bandwidth
-    - **C)** Precise synchronization and structuring
-    - **D)** Elimination of all noise
+- **A)** Continuous analog signaling
+- **B)** Unrestricted bandwidth
+- **C)** Precise synchronization and structuring
+- **D)** Elimination of all noise
 
 3. In the provided Shannon capacity calculation, what is $\log_2(1 + 3162)$ approximately equal to?
-    - **A)** 3000
-    - **B)** 11.62
-    - **C)** 34860
-    - **D)** 3162
+- **A)** 3000
+- **B)** 11.62
+- **C)** 34860
+- **D)** 3162
 
 4. Which layer ensures error-free transmission of data frames?
-    - **A)** Physical Layer
-    - **B)** Data Link Layer
-    - **C)** Network Layer
-    - **D)** Transport Layer
+- **A)** Physical Layer
+- **B)** Data Link Layer
+- **C)** Network Layer
+- **D)** Transport Layer
 
 ### Answer Key & Explanations
 1. **C)** The Physical Layer is defined as "The lowest layer responsible for the physical connection between devices."

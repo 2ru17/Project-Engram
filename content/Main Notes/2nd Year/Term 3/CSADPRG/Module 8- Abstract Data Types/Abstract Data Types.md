@@ -111,64 +111,64 @@ Java is similar to C++ but has notable differences:
 ## Multiple Choice Questions
 
 1. Which of the following best describes the principle of information hiding in Abstract Data Types (ADTs)?
-    - **A)** The grouping of logically related subprograms into a single unit.
-    - **B)** The prevention of direct user manipulation of the actual data representation by enforcing access via specified operations.
-    - **C)** The use of subprograms to encapsulate logic and reduce the number of variables.
-    - **D)** The ability to allocate and reclaim heap storage automatically.
+- **A)** The grouping of logically related subprograms into a single unit.
+- **B)** The prevention of direct user manipulation of the actual data representation by enforcing access via specified operations.
+- **C)** The use of subprograms to encapsulate logic and reduce the number of variables.
+- **D)** The ability to allocate and reclaim heap storage automatically.
 
 2. What are the two conditions user-defined abstract data types must satisfy to have the same characteristics as built-in data types?
-    - **A)** Public representation and multiple syntactic units
-    - **B)** Parametrized typing and explicit access modifiers
-    - **C)** Hidden representation and a single syntactic unit
-    - **D)** Friend functions and accessor methods
+- **A)** Public representation and multiple syntactic units
+- **B)** Parametrized typing and explicit access modifiers
+- **C)** Hidden representation and a single syntactic unit
+- **D)** Friend functions and accessor methods
 
 3. In C++, what is the purpose of "friend" functions or classes?
-    - **A)** To group logically related subprograms into a separately compiled unit.
-    - **B)** To initialize the data members of an instance automatically.
-    - **C)** To allow objects to share a single copy of member functions.
-    - **D)** To grant private member access to specific, unrelated units.
+- **A)** To group logically related subprograms into a separately compiled unit.
+- **B)** To initialize the data members of an instance automatically.
+- **C)** To allow objects to share a single copy of member functions.
+- **D)** To grant private member access to specific, unrelated units.
 
 4. How does Java handle objects and memory allocation compared to C++?
-    - **A)** Java objects are stored on the stack and accessed directly.
-    - **B)** Java objects are exclusively heap-allocated and accessed through reference variables.
-    - **C)** Java allows users to manually reclaim heap storage using destructors.
-    - **D)** Java requires objects to be allocated using C-style structs.
+- **A)** Java objects are stored on the stack and accessed directly.
+- **B)** Java objects are exclusively heap-allocated and accessed through reference variables.
+- **C)** Java allows users to manually reclaim heap storage using destructors.
+- **D)** Java requires objects to be allocated using C-style structs.
 
 5. Which programming language utilizes "Package Scope" as an alternative to C++'s "friend" mechanisms?
-    - **A)** C#
-    - **B)** Ruby
-    - **C)** Ada
-    - **D)** Java
+- **A)** C#
+- **B)** Ruby
+- **C)** Ada
+- **D)** Java
 
 6. Which of the following is NOT one of the primary benefits of abstraction mentioned in the text?
-    - **A)** Reliability
-    - **B)** Simplicity
-    - **C)** Inheritance
-    - **D)** Flexibility
+- **A)** Reliability
+- **B)** Simplicity
+- **C)** Inheritance
+- **D)** Flexibility
 
 7. What term refers to a view or representation of an entity that includes only the most significant attributes while hiding irrelevant details?
-    - **A)** Encapsulation
-    - **B)** Abstraction
-    - **C)** Object
-    - **D)** Process Abstraction
+- **A)** Encapsulation
+- **B)** Abstraction
+- **C)** Object
+- **D)** Process Abstraction
 
 8. In the context of C++ implementations of ADTs, which of the following is true regarding data members and member functions?
-    - **A)** Instances share a single copy of data members and have their own copies of member functions.
-    - **B)** Instances have their own copies of data members but share a single copy of member functions.
-    - **C)** Instances have their own copies of both data members and member functions.
-    - **D)** Instances share a single copy of both data members and member functions.
+- **A)** Instances share a single copy of data members and have their own copies of member functions.
+- **B)** Instances have their own copies of data members but share a single copy of member functions.
+- **C)** Instances have their own copies of both data members and member functions.
+- **D)** Instances share a single copy of both data members and member functions.
 
 9. Which of the following encapsulation mechanisms is correctly paired with its programming language?
-    - **A)** Ruby: Header files
-    - **B)** C#: JAR files
-    - **C)** Ada: Packages
-    - **D)** C: Modules
+- **A)** Ruby: Header files
+- **B)** C#: JAR files
+- **C)** Ada: Packages
+- **D)** C: Modules
 
 10. What is a key language design issue for Abstract Data Types?
-    - **A)** Determining if accessor methods should be private or protected.
-    - **B)** Deciding whether all user-defined types must be classes.
-    - **C)** Deciding whether the specification of the type should be physically separated from its implementation.
-    - **D)** Choosing between destructors and garbage collection for memory reclamation.
+- **A)** Determining if accessor methods should be private or protected.
+- **B)** Deciding whether all user-defined types must be classes.
+- **C)** Deciding whether the specification of the type should be physically separated from its implementation.
+- **D)** Choosing between destructors and garbage collection for memory reclamation.
 
 ### Answer Key & Explanations
 

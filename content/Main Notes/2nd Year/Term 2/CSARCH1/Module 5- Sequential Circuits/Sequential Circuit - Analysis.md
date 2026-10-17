@@ -105,64 +105,64 @@ Determine next states using the T characteristic table. (This represents a Moore
 ## Multiple Choice Questions
 
 1. What is the maximum number of states a sequential circuit with n flip-flops can have?
-    - **A)** n
-    - **B)** 2n
-    - **C)** 2^n
-    - **D)** n^2
+- **A)** n
+- **B)** 2n
+- **C)** 2^n
+- **D)** n^2
 
 2. What is the first step in analyzing a synchronous sequential circuit if the flip-flop input equations are not given?
-    - **A)** Draw the state diagram
-    - **B)** Derive the state transition table
-    - **C)** Determine the flip-flop input equations from the logic diagram
-    - **D)** Perform state reduction
+- **A)** Draw the state diagram
+- **B)** Derive the state transition table
+- **C)** Determine the flip-flop input equations from the logic diagram
+- **D)** Perform state reduction
 
 3. What distinguishes a Mealy Finite State Machine from a Moore FSM?
-    - **A)** The output in a Mealy FSM is a function only of the present state.
-    - **B)** The output in a Mealy FSM is a function of both the present state and the input.
-    - **C)** Mealy machines do not use flip-flops.
-    - **D)** Mealy machines operate without a clock.
+- **A)** The output in a Mealy FSM is a function only of the present state.
+- **B)** The output in a Mealy FSM is a function of both the present state and the input.
+- **C)** Mealy machines do not use flip-flops.
+- **D)** Mealy machines operate without a clock.
 
 4. In a Moore Finite State Machine, the output depends entirely on:
-    - **A)** Both present state and input
-    - **B)** Only the input
-    - **C)** Only the present state
-    - **D)** Only the previous state
+- **A)** Both present state and input
+- **B)** Only the input
+- **C)** Only the present state
+- **D)** Only the previous state
 
 5. Where are outputs typically indicated in the state diagram of a Mealy machine?
-    - **A)** Inside the circles representing the states
-    - **B)** Along the directed lines, separated from the input by a slash
-    - **C)** In a separate output diagram
-    - **D)** Next to the clock signal
+- **A)** Inside the circles representing the states
+- **B)** Along the directed lines, separated from the input by a slash
+- **C)** In a separate output diagram
+- **D)** Next to the clock signal
 
 6. In a Moore machine's state diagram, where are the outputs typically shown?
-    - **A)** Next to the input on the transition lines
-    - **B)** Inside the circles together with the present state
-    - **C)** In the transition condition
-    - **D)** They are not shown on the diagram
+- **A)** Next to the input on the transition lines
+- **B)** Inside the circles together with the present state
+- **C)** In the transition condition
+- **D)** They are not shown on the diagram
 
 7. Why might the output of a Mealy machine have momentary false values (glitches)?
-    - **A)** Because it uses T flip-flops instead of D flip-flops
-    - **B)** Due to the delay between the time inputs change and the time flip-flop outputs change
-    - **C)** Because Moore machines are faster
-    - **D)** Because of the clock frequency being too low
+- **A)** Because it uses T flip-flops instead of D flip-flops
+- **B)** Due to the delay between the time inputs change and the time flip-flop outputs change
+- **C)** Because Moore machines are faster
+- **D)** Because of the clock frequency being too low
 
 8. When analyzing a circuit with JK flip-flops, what is needed to determine the next state from the present state and inputs?
-    - **A)** The flip-flop input equations and the characteristic table of the JK flip-flop
-    - **B)** Only the D flip-flop characteristic equation
-    - **C)** The state reduction algorithm
-    - **D)** The output equation alone
+- **A)** The flip-flop input equations and the characteristic table of the JK flip-flop
+- **B)** Only the D flip-flop characteristic equation
+- **C)** The state reduction algorithm
+- **D)** The output equation alone
 
 9. What is the characteristic equation for a T flip-flop?
-    - **A)** Q(t+1) = T
-    - **B)** Q(t+1) = T ⊕ Q(t)
-    - **C)** Q(t+1) = T' + Q
-    - **D)** Q(t+1) = JQ' + K'Q
+- **A)** Q(t+1) = T
+- **B)** Q(t+1) = T ⊕ Q(t)
+- **C)** Q(t+1) = T' + Q
+- **D)** Q(t+1) = JQ' + K'Q
 
 10. Which of the following equations accurately represents a D flip-flop's behavior?
-    - **A)** Q(t+1) = D'Q
-    - **B)** Q(t+1) = D
-    - **C)** Q(t+1) = D ⊕ Q
-    - **D)** Q(t+1) = D + Q'
+- **A)** Q(t+1) = D'Q
+- **B)** Q(t+1) = D
+- **C)** Q(t+1) = D ⊕ Q
+- **D)** Q(t+1) = D + Q'
 
 ### Answer Key & Explanations
 1. **C)** An n-bit memory (n flip-flops) can store up to 2^n values, translating to a maximum of 2^n states.

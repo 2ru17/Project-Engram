@@ -625,34 +625,34 @@ Only non-zero for BINDING constraints.
 ## Multiple Choice Questions
 
 1. In Linear Programming, what must be true about the objective function and constraints?
-    - **A)** They can include quadratic terms
-    - **B)** They must be entirely linear
-    - **C)** They must involve integer variables only
-    - **D)** They can only represent maximization problems
+- **A)** They can include quadratic terms
+- **B)** They must be entirely linear
+- **C)** They must involve integer variables only
+- **D)** They can only represent maximization problems
 
 2. The optimal solution to an LP problem always occurs at:
-    - **A)** The origin
-    - **B)** The exact center of the feasible region
-    - **C)** A corner point (vertex) of the feasible region
-    - **D)** An arbitrary point outside the feasible region
+- **A)** The origin
+- **B)** The exact center of the feasible region
+- **C)** A corner point (vertex) of the feasible region
+- **D)** An arbitrary point outside the feasible region
 
 3. What does a slack variable represent in a standard form LP?
-    - **A)** The amount of a resource that is overused
-    - **B)** The unused capacity or leftover amount of a resource in a <= constraint
-    - **C)** A negative decision variable
-    - **D)** The marginal cost of production
+- **A)** The amount of a resource that is overused
+- **B)** The unused capacity or leftover amount of a resource in a <= constraint
+- **C)** A negative decision variable
+- **D)** The marginal cost of production
 
 4. If a constraint has a shadow price of 0, what does this indicate?
-    - **A)** The constraint is binding and fully consumed
-    - **B)** The constraint is non-binding (there is unused capacity)
-    - **C)** The problem is infeasible
-    - **D)** The objective function cannot be maximized
+- **A)** The constraint is binding and fully consumed
+- **B)** The constraint is non-binding (there is unused capacity)
+- **C)** The problem is infeasible
+- **D)** The objective function cannot be maximized
 
 5. By default, `scipy.optimize.linprog` solves which type of problem?
-    - **A)** Maximization
-    - **B)** Minimization
-    - **C)** Mixed-Integer Programming
-    - **D)** Non-linear optimization
+- **A)** Maximization
+- **B)** Minimization
+- **C)** Mixed-Integer Programming
+- **D)** Non-linear optimization
 
 ### Answer Key & Explanations
 1. **B)** LP requires all relationships (objective and constraints) to be strictly linear.

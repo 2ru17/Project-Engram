@@ -55,64 +55,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is the main purpose of asymptotic notation?
-    - **A)** To measure exact memory usage in bytes
-    - **B)** To describe an algorithm's efficiency as input size approaches infinity
-    - **C)** To determine which algorithm is faster for small inputs
-    - **D)** To calculate the precise number of clock cycles used
+- **A)** To measure exact memory usage in bytes
+- **B)** To describe an algorithm's efficiency as input size approaches infinity
+- **C)** To determine which algorithm is faster for small inputs
+- **D)** To calculate the precise number of clock cycles used
 
 2. Which of the following is ignored when using asymptotic notation?
-    - **A)** The input size
-    - **B)** Constant factors and lower-order terms
-    - **C)** The dominant term
-    - **D)** The algorithm's structural complexity
+- **A)** The input size
+- **B)** Constant factors and lower-order terms
+- **C)** The dominant term
+- **D)** The algorithm's structural complexity
 
 3. Which asymptotic notation is commonly used to describe an upper bound of an algorithm?
-    - **A)** Big-Theta (Θ)
-    - **B)** Big-Omega (Ω)
-    - **C)** Big-O (O)
-    - **D)** Little-omega (ω)
+- **A)** Big-Theta (Θ)
+- **B)** Big-Omega (Ω)
+- **C)** Big-O (O)
+- **D)** Little-omega (ω)
 
 4. Which of the following growth rates is considered linearithmic?
-    - **A)** Θ(n)
-    - **B)** Θ(n^2)
-    - **C)** Θ(log n)
-    - **D)** Θ(n log n)
+- **A)** Θ(n)
+- **B)** Θ(n^2)
+- **C)** Θ(log n)
+- **D)** Θ(n log n)
 
 5. What is the typical growth rate for a basic matrix multiplication algorithm as listed in the notes?
-    - **A)** Θ(n)
-    - **B)** Θ(n^2)
-    - **C)** Θ(n^3)
-    - **D)** Θ(2^n)
+- **A)** Θ(n)
+- **B)** Θ(n^2)
+- **C)** Θ(n^3)
+- **D)** Θ(2^n)
 
 6. If an algorithm generates all possible permutations of a string, what is its expected order of growth?
-    - **A)** Θ(2^n)
-    - **B)** Θ(n^3)
-    - **C)** Θ(n!)
-    - **D)** Θ(n log n)
+- **A)** Θ(2^n)
+- **B)** Θ(n^3)
+- **C)** Θ(n!)
+- **D)** Θ(n log n)
 
 7. What does Big-Theta (Θ) notation represent?
-    - **A)** A loose upper bound
-    - **B)** A strict lower bound
-    - **C)** A tight bound on the growth rate
-    - **D)** The exact runtime in seconds
+- **A)** A loose upper bound
+- **B)** A strict lower bound
+- **C)** A tight bound on the growth rate
+- **D)** The exact runtime in seconds
 
 8. Which of the following is a property of Big-O, Big-Omega, and Big-Theta?
-    - **A)** Reflexivity
-    - **B)** Symmetry for all notations
-    - **C)** Transpose symmetry only for Big-Theta
-    - **D)** Invertibility
+- **A)** Reflexivity
+- **B)** Symmetry for all notations
+- **C)** Transpose symmetry only for Big-Theta
+- **D)** Invertibility
 
 9. What is a common pitfall when using asymptotic notation?
-    - **A)** Thinking it applies only when n approaches zero
-    - **B)** Using Big-O when a tight bound (Θ) is known and more informative
-    - **C)** Applying it to space complexity instead of time complexity
-    - **D)** Ignoring the constant factors for small inputs
+- **A)** Thinking it applies only when n approaches zero
+- **B)** Using Big-O when a tight bound (Θ) is known and more informative
+- **C)** Applying it to space complexity instead of time complexity
+- **D)** Ignoring the constant factors for small inputs
 
 10. Why does an algorithm with a lower asymptotic complexity eventually outperform one with higher complexity?
-    - **A)** Because constant factors eventually disappear
-    - **B)** It is independent of hardware constraints
-    - **C)** It scales better for sufficiently large input sizes
-    - **D)** The processor allocates more memory to it
+- **A)** Because constant factors eventually disappear
+- **B)** It is independent of hardware constraints
+- **C)** It scales better for sufficiently large input sizes
+- **D)** The processor allocates more memory to it
 
 ### Answer Key & Explanations
 1. **B)** Asymptotic notation describes limiting behavior as input size n approaches infinity.

@@ -56,20 +56,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. Which operation generally requires an $O(n)$ time complexity in an array?
-    - **A)** Accessing the last element
-    - **B)** Inserting an element at the beginning
-    - **C)** Overwriting the first element
-    - **D)** Finding the memory address of the first element
+- **A)** Accessing the last element
+- **B)** Inserting an element at the beginning
+- **C)** Overwriting the first element
+- **D)** Finding the memory address of the first element
 2. Why is deleting an element from the middle of an array inefficient?
-    - **A)** Because memory must be completely reallocated
-    - **B)** Because all subsequent elements must be shifted to fill the gap
-    - **C)** Because pointers need to be freed manually
-    - **D)** Because arrays cannot be modified after compilation
+- **A)** Because memory must be completely reallocated
+- **B)** Because all subsequent elements must be shifted to fill the gap
+- **C)** Because pointers need to be freed manually
+- **D)** Because arrays cannot be modified after compilation
 3. What consideration must programmers manually manage when inserting elements into an array?
-    - **A)** Making sure the array capacity is not exceeded (Bounds Checking)
-    - **B)** Ensuring the compiler has auto-resized the array
-    - **C)** Writing garbage collection routines
-    - **D)** Casting all values to void pointers
+- **A)** Making sure the array capacity is not exceeded (Bounds Checking)
+- **B)** Ensuring the compiler has auto-resized the array
+- **C)** Writing garbage collection routines
+- **D)** Casting all values to void pointers
 
 ### Answer Key & Explanations
 1. **B)** Insertion at the start forces all existing elements to shift rightward.

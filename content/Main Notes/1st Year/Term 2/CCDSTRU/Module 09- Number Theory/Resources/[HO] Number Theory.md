@@ -163,64 +163,64 @@ The unique solution modulo 105 is $x = \mathbf{23}$.
 ## Multiple Choice Questions
 
 1. Under what necessary and sufficient condition does an integer $a$ have a modular multiplicative inverse modulo $m$?
-    - **A)** $a < m$
-    - **B)** $\gcd(a, m) = 1$ ($a$ and $m$ are relatively prime)
-    - **C)** $m$ must be an even number
-    - **D)** $a$ must be prime
+- **A)** $a < m$
+- **B)** $\gcd(a, m) = 1$ ($a$ and $m$ are relatively prime)
+- **C)** $m$ must be an even number
+- **D)** $a$ must be prime
 
 2. What does Bézout's Identity state for non-zero integers $a$ and $b$?
-    - **A)** $a + b = \operatorname{lcm}(a, b)$
-    - **B)** There exist integers $s$ and $t$ such that $sa + tb = \gcd(a, b)$
-    - **C)** $a^b \equiv b^a \pmod{ab}$
-    - **D)** $\gcd(a, b) = 1$ for all integers
+- **A)** $a + b = \operatorname{lcm}(a, b)$
+- **B)** There exist integers $s$ and $t$ such that $sa + tb = \gcd(a, b)$
+- **C)** $a^b \equiv b^a \pmod{ab}$
+- **D)** $\gcd(a, b) = 1$ for all integers
 
 3. In the Chinese Remainder Theorem, what condition must the set of moduli $\{m_1, m_2, \dots, m_k\}$ satisfy?
-    - **A)** All moduli must be prime numbers.
-    - **B)** The moduli must be pairwise relatively prime ($\gcd(m_i, m_j) = 1$ for all $i \ne j$).
-    - **C)** The sum of all moduli must be odd.
-    - **D)** The moduli must be in descending order.
+- **A)** All moduli must be prime numbers.
+- **B)** The moduli must be pairwise relatively prime ($\gcd(m_i, m_j) = 1$ for all $i \ne j$).
+- **C)** The sum of all moduli must be odd.
+- **D)** The moduli must be in descending order.
 
 4. If $\gcd(a, b) = 12$ and $\operatorname{lcm}(a, b) = 360$, what is the product $a \cdot b$?
-    - **A)** 30
-    - **B)** 372
-    - **C)** 4320
-    - **D)** 2160
+- **A)** 30
+- **B)** 372
+- **C)** 4320
+- **D)** 2160
 
 5. What is the modular multiplicative inverse of $17$ modulo $43$?
-    - **A)** 5
-    - **B)** 38
-    - **C)** 19
-    - **D)** 26
+- **A)** 5
+- **B)** 38
+- **C)** 19
+- **D)** 26
 
 6. If $a \equiv b \pmod m$ and $c \equiv d \pmod m$, which of the following operations is NOT universally valid?
-    - **A)** $a + c \equiv b + d \pmod m$
-    - **B)** $ac \equiv bd \pmod m$
-    - **C)** $a^k \equiv b^k \pmod m$ for positive integer $k$
-    - **D)** $a / c \equiv b / d \pmod m$
+- **A)** $a + c \equiv b + d \pmod m$
+- **B)** $ac \equiv bd \pmod m$
+- **C)** $a^k \equiv b^k \pmod m$ for positive integer $k$
+- **D)** $a / c \equiv b / d \pmod m$
 
 7. When testing whether $n = 101$ is prime using trial division, what is the largest prime divisor that needs to be tested?
-    - **A)** 101
-    - **B)** 50
-    - **C)** 7 ($\lfloor\sqrt{101}\rfloor = 10$, primes are 2, 3, 5, 7)
-    - **D)** 11
+- **A)** 101
+- **B)** 50
+- **C)** 7 ($\lfloor\sqrt{101}\rfloor = 10$, primes are 2, 3, 5, 7)
+- **D)** 11
 
 8. What is the solution to $7x \equiv 3 \pmod{19}$?
-    - **A)** $x \equiv 14 \pmod{19}$
-    - **B)** $x \equiv 5 \pmod{19}$
-    - **C)** $x \equiv 2 \pmod{19}$
-    - **D)** No solution exists
+- **A)** $x \equiv 14 \pmod{19}$
+- **B)** $x \equiv 5 \pmod{19}$
+- **C)** $x \equiv 2 \pmod{19}$
+- **D)** No solution exists
 
 9. For what modulus $m$ is $12 \equiv 2 \pmod m$ valid?
-    - **A)** $m = 3$ only
-    - **B)** Any integer $m > 0$ that divides $12 - 2 = 10$ ($m \in \{1, 2, 5, 10\}$)
-    - **C)** $m = 7$
-    - **D)** $m = 12$
+- **A)** $m = 3$ only
+- **B)** Any integer $m > 0$ that divides $12 - 2 = 10$ ($m \in \{1, 2, 5, 10\}$)
+- **C)** $m = 7$
+- **D)** $m = 12$
 
 10. In the Chinese Remainder Theorem example, what is the unique solution modulo 105 for $x \equiv 2 \pmod 3$, $x \equiv 3 \pmod 5$, and $x \equiv 2 \pmod 7$?
-    - **A)** 23
-    - **B)** 45
-    - **C)** 53
-    - **D)** 83
+- **A)** 23
+- **B)** 45
+- **C)** 53
+- **D)** 83
 
 ---
 

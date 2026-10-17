@@ -51,34 +51,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Why is worst-case running time often the primary focus in algorithm analysis?
-    - **A)** It is the easiest to calculate.
-    - **B)** It provides a performance guarantee.
-    - **C)** It represents the most optimistic scenario.
-    - **D)** It relies on random input distributions.
+- **A)** It is the easiest to calculate.
+- **B)** It provides a performance guarantee.
+- **C)** It represents the most optimistic scenario.
+- **D)** It relies on random input distributions.
 
 2. What is the primary tool used for analyzing recursive algorithms like Divide and Conquer?
-    - **A)** Asymptotic notation
-    - **B)** Amortized analysis
-    - **C)** Recurrences
-    - **D)** Space complexity
+- **A)** Asymptotic notation
+- **B)** Amortized analysis
+- **C)** Recurrences
+- **D)** Space complexity
 
 3. When is amortized analysis most appropriate to use?
-    - **A)** For completely static algorithms
-    - **B)** For simple loops with constant time
-    - **C)** For recursive algorithms without base cases
-    - **D)** For data structures with occasional costly maintenance operations
+- **A)** For completely static algorithms
+- **B)** For simple loops with constant time
+- **C)** For recursive algorithms without base cases
+- **D)** For data structures with occasional costly maintenance operations
 
 4. Which of the following is a common pitfall mentioned in the text?
-    - **A)** Applying amortized analysis to single operations instead of sequences
-    - **B)** Using recurrences with correct base cases
-    - **C)** Focusing heavily on best-case running time
-    - **D)** Confusing time complexity with space complexity
+- **A)** Applying amortized analysis to single operations instead of sequences
+- **B)** Using recurrences with correct base cases
+- **C)** Focusing heavily on best-case running time
+- **D)** Confusing time complexity with space complexity
 
 5. What does asymptotic notation ($O$, $\Omega$, $\Theta$) describe?
-    - **A)** The exact number of operations
-    - **B)** The exact running time in seconds
-    - **C)** The growth rate of the algorithm
-    - **D)** The specific hardware constraints
+- **A)** The exact number of operations
+- **B)** The exact running time in seconds
+- **C)** The growth rate of the algorithm
+- **D)** The specific hardware constraints
 
 ### Answer Key & Explanations
 1. **B)** Worst-case analysis provides a firm upper bound, guaranteeing the algorithm will not take longer than predicted.

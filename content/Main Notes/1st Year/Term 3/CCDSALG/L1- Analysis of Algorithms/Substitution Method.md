@@ -75,64 +75,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What are the two main steps of the Substitution Method?
-    - **A)** Guess the form of the solution, then prove it correct using mathematical induction.
-    - **B)** Draw a tree, then sum the levels.
-    - **C)** Apply a formula, then simplify the polynomial.
-    - **D)** Write the code, then benchmark it.
+- **A)** Guess the form of the solution, then prove it correct using mathematical induction.
+- **B)** Draw a tree, then sum the levels.
+- **C)** Apply a formula, then simplify the polynomial.
+- **D)** Write the code, then benchmark it.
 
 2. What mathematical technique is fundamental to proving the guess in the Substitution Method?
-    - **A)** Calculus
-    - **B)** Mathematical induction
-    - **C)** Matrix algebra
-    - **D)** Trigonometry
+- **A)** Calculus
+- **B)** Mathematical induction
+- **C)** Matrix algebra
+- **D)** Trigonometry
 
 3. In the Substitution Method, where can the initial "guess" come from?
-    - **A)** It must be provided by the compiler.
-    - **B)** Intuition or the Recursion Tree Method.
-    - **C)** It is always $O(n^2)$.
-    - **D)** It is randomly selected.
+- **A)** It must be provided by the compiler.
+- **B)** Intuition or the Recursion Tree Method.
+- **C)** It is always $O(n^2)$.
+- **D)** It is randomly selected.
 
 4. What is verified in the "Base case" of the inductive proof?
-    - **A)** $T(n) \leq c \cdot g(n)$ for all $n$.
-    - **B)** $T(n_0) \leq c \cdot g(n_0)$ for some small $n_0$.
-    - **C)** $T(k) \leq c \cdot g(k)$ for $k < n$.
-    - **D)** The algorithm terminates.
+- **A)** $T(n) \leq c \cdot g(n)$ for all $n$.
+- **B)** $T(n_0) \leq c \cdot g(n_0)$ for some small $n_0$.
+- **C)** $T(k) \leq c \cdot g(k)$ for $k < n$.
+- **D)** The algorithm terminates.
 
 5. In the Inductive step, what do you assume to be true?
-    - **A)** $T(n) = O(1)$
-    - **B)** $T(k) \leq c \cdot g(k)$ for all $k < n$
-    - **C)** $c = 0$
-    - **D)** The algorithm is recursive.
+- **A)** $T(n) = O(1)$
+- **B)** $T(k) \leq c \cdot g(k)$ for all $k < n$
+- **C)** $c = 0$
+- **D)** The algorithm is recursive.
 
 6. In the worked example $T(n) = 2T(n/2) + n$, what is the guessed bound?
-    - **A)** $O(n)$
-    - **B)** $O(n^2)$
-    - **C)** $O(n \log n)$
-    - **D)** $O(1)$
+- **A)** $O(n)$
+- **B)** $O(n^2)$
+- **C)** $O(n \log n)$
+- **D)** $O(1)$
 
 7. What is a common tip if your initial guess in the substitution method fails to prove?
-    - **A)** Abandon the method entirely.
-    - **B)** Try a tighter or looser bound, or subtract a lower-order term in the hypothesis.
-    - **C)** Switch to the Master Theorem regardless of the recurrence format.
-    - **D)** Use Big-Omega instead of Big-O.
+- **A)** Abandon the method entirely.
+- **B)** Try a tighter or looser bound, or subtract a lower-order term in the hypothesis.
+- **C)** Switch to the Master Theorem regardless of the recurrence format.
+- **D)** Use Big-Omega instead of Big-O.
 
 8. What is a common pitfall when executing the inductive proof?
-    - **A)** Verifying the base case.
-    - **B)** Using $O$-notation directly in the algebraic proof instead of concrete constants (like $c$).
-    - **C)** Assuming the tree is bottom-heavy.
-    - **D)** Expanding the recurrence correctly.
+- **A)** Verifying the base case.
+- **B)** Using $O$-notation directly in the algebraic proof instead of concrete constants (like $c$).
+- **C)** Assuming the tree is bottom-heavy.
+- **D)** Expanding the recurrence correctly.
 
 9. If $T(n) = T(n/2) + 1$, what is the mathematically proven upper bound using substitution?
-    - **A)** $O(n)$
-    - **B)** $O(n \log n)$
-    - **C)** $O(\log n)$
-    - **D)** $O(1)$
+- **A)** $O(n)$
+- **B)** $O(n \log n)$
+- **C)** $O(\log n)$
+- **D)** $O(1)$
 
 10. Why must you find an appropriate constant $c$ during the proof?
-    - **A)** Because asymptotic notation relies on the existence of such constants to bound the function.
-    - **B)** To determine the exact millisecond execution time.
-    - **C)** To satisfy the compiler.
-    - **D)** Because $c$ represents the input size $n$.
+- **A)** Because asymptotic notation relies on the existence of such constants to bound the function.
+- **B)** To determine the exact millisecond execution time.
+- **C)** To satisfy the compiler.
+- **D)** Because $c$ represents the input size $n$.
 
 ### Answer Key & Explanations
 1. **A)** The method is entirely based on formulating a hypothesis (guess) and systematically proving it true across all values via induction.

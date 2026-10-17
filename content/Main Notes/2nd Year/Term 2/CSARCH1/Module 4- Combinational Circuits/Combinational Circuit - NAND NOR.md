@@ -56,34 +56,34 @@ Procedure for converting a multilevel OR-AND circuit into an all-NOR gate circui
 ## Multiple Choice Questions
 
 1. Why are NAND and NOR gates known as universal gates?
-    - **A)** They can be used to implement any Boolean function.
-    - **B)** They are the only gates available in IC packages.
-    - **C)** They take universally accepted voltage levels.
-    - **D)** They have universal delay characteristics.
+- **A)** They can be used to implement any Boolean function.
+- **B)** They are the only gates available in IC packages.
+- **C)** They take universally accepted voltage levels.
+- **D)** They have universal delay characteristics.
 
 2. The implementation of Boolean functions with NAND gates requires the function to be in what form?
-    - **A)** Product-of-Sum
-    - **B)** Sum-of-Product
-    - **C)** Canonical Product
-    - **D)** Minimized XOR form
+- **A)** Product-of-Sum
+- **B)** Sum-of-Product
+- **C)** Canonical Product
+- **D)** Minimized XOR form
 
 3. The implementation of Boolean functions with NOR gates requires the function to be in what form?
-    - **A)** Sum-of-Product
-    - **B)** Product-of-Sum
-    - **C)** Factored form
-    - **D)** Complemented form
+- **A)** Sum-of-Product
+- **B)** Product-of-Sum
+- **C)** Factored form
+- **D)** Complemented form
 
 4. What is the first step in converting a multilevel AND-OR circuit into an all NAND gate circuit?
-    - **A)** Convert all AND gates to NAND gates with AND-invert graphic symbols
-    - **B)** Convert all OR gates to NAND gates with invert-OR graphic symbols
-    - **C)** Add inverters to all inputs
-    - **D)** Complement the output
+- **A)** Convert all AND gates to NAND gates with AND-invert graphic symbols
+- **B)** Convert all OR gates to NAND gates with invert-OR graphic symbols
+- **C)** Add inverters to all inputs
+- **D)** Complement the output
 
 5. In converting a multilevel OR-AND to an all NOR circuit, what must be done to unmatched bubbles?
-    - **A)** Insert an inverter (a one-input NOR gate) or complement the input literal
-    - **B)** Replace the bubble with an AND gate
-    - **C)** Simply ignore the bubble as it cancels out
-    - **D)** Change the overall function to Sum-of-Products
+- **A)** Insert an inverter (a one-input NOR gate) or complement the input literal
+- **B)** Replace the bubble with an AND gate
+- **C)** Simply ignore the bubble as it cancels out
+- **D)** Change the overall function to Sum-of-Products
 
 ### Answer Key & Explanations
 1. **A)** NAND and NOR gates are known as universal gates because any Boolean function can be implemented using only them.

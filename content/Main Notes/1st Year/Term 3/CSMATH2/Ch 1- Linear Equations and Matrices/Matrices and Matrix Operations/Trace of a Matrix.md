@@ -51,22 +51,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. How is the trace of a square matrix $A$, denoted $\text{tr}(A)$, mathematically calculated?
-    - **A)** By taking the product of its main diagonal entries.
-    - **B)** By taking the sum of its main diagonal entries.
-    - **C)** By calculating its determinant.
-    - **D)** By summing all the entries in the matrix.
+- **A)** By taking the product of its main diagonal entries.
+- **B)** By taking the sum of its main diagonal entries.
+- **C)** By calculating its determinant.
+- **D)** By summing all the entries in the matrix.
 
 2. Which of the following is a true property regarding the trace operation?
-    - **A)** $\text{tr}(A + B) = \text{tr}(A) \cdot \text{tr}(B)$
-    - **B)** $\text{tr}(A^T) = -\text{tr}(A)$
-    - **C)** $\text{tr}(AB) = \text{tr}(BA)$
-    - **D)** $\text{tr}(cA) = c + \text{tr}(A)$
+- **A)** $\text{tr}(A + B) = \text{tr}(A) \cdot \text{tr}(B)$
+- **B)** $\text{tr}(A^T) = -\text{tr}(A)$
+- **C)** $\text{tr}(AB) = \text{tr}(BA)$
+- **D)** $\text{tr}(cA) = c + \text{tr}(A)$
 
 3. Does the trace operation distribute over matrix multiplication, meaning does $\text{tr}(AB) = \text{tr}(A) \cdot \text{tr}(B)$?
-    - **A)** Yes, this is a fundamental property of the trace.
-    - **B)** Yes, but only for diagonal matrices.
-    - **C)** No, this is a common pitfall and is generally false.
-    - **D)** No, because the trace is only defined for non-square matrices.
+- **A)** Yes, this is a fundamental property of the trace.
+- **B)** Yes, but only for diagonal matrices.
+- **C)** No, this is a common pitfall and is generally false.
+- **D)** No, because the trace is only defined for non-square matrices.
 
 ### Answer Key & Explanations
 1. **B)** The trace of a square matrix $A$ is defined as the sum of its main diagonal entries ($\sum a_{ii}$).

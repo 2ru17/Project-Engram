@@ -432,34 +432,34 @@ What is the output of `res`? A) `['Small', 'Medium', 'Large']` B) `['Medium', 'L
 ## Multiple Choice Questions
 
 1. What is the main purpose of feature scaling (e.g., Min-Max, Standardization)?
-    - **A)** To convert categorical text to numerical formats
-    - **B)** To ensure features have a similar scale, preventing features with large values from dominating
-    - **C)** To remove missing data
-    - **D)** To select the most important features
+- **A)** To convert categorical text to numerical formats
+- **B)** To ensure features have a similar scale, preventing features with large values from dominating
+- **C)** To remove missing data
+- **D)** To select the most important features
 
 2. What is Data Leakage in machine learning?
-    - **A)** When the model is too complex and overfits
-    - **B)** When information from outside the training dataset is used to create the model
-    - **C)** When missing values are imputed incorrectly
-    - **D)** When categorical variables are not encoded
+- **A)** When the model is too complex and overfits
+- **B)** When information from outside the training dataset is used to create the model
+- **C)** When missing values are imputed incorrectly
+- **D)** When categorical variables are not encoded
 
 3. Standard Scaler transforms data such that:
-    - **A)** It scales values between 0 and 1
-    - **B)** It has a mean of 0 and a standard deviation of 1
-    - **C)** It has a mean of 1 and a standard deviation of 0
-    - **D)** It removes all outliers automatically
+- **A)** It scales values between 0 and 1
+- **B)** It has a mean of 0 and a standard deviation of 1
+- **C)** It has a mean of 1 and a standard deviation of 0
+- **D)** It removes all outliers automatically
 
 4. Why must One-Hot Encoding be used instead of Label Encoding for nominal categorical variables?
-    - **A)** Label encoding creates an artificial ordinal relationship between categories
-    - **B)** One-Hot encoding uses less memory
-    - **C)** Label encoding can only handle numeric inputs
-    - **D)** One-Hot encoding handles missing values better
+- **A)** Label encoding creates an artificial ordinal relationship between categories
+- **B)** One-Hot encoding uses less memory
+- **C)** Label encoding can only handle numeric inputs
+- **D)** One-Hot encoding handles missing values better
 
 5. When performing a train-test split, when should scaling parameters (like min/max or mean) be calculated?
-    - **A)** On the entire dataset before splitting
-    - **B)** On the training set only, then applied to both train and test
-    - **C)** On the test set only
-    - **D)** Independently on both train and test sets
+- **A)** On the entire dataset before splitting
+- **B)** On the training set only, then applied to both train and test
+- **C)** On the test set only
+- **D)** Independently on both train and test sets
 
 ### Answer Key & Explanations
 1. **B)** Feature scaling normalizes the ranges so distance-based and gradient-based algorithms perform correctly.

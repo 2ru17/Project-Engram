@@ -229,34 +229,34 @@ Calculate:
 ## Multiple Choice Questions
 
 1. A benchmark program's execution time on a $3.0\text{ GHz}$ CPU is 12 seconds with an average CPI of 1.8. What is the total instruction count of the program?
-    - **A)** $1.5 \times 10^{10}$ instructions
-    - **B)** $2.0 \times 10^{10}$ instructions
-    - **C)** $3.6 \times 10^{10}$ instructions
-    - **D)** $6.48 \times 10^{10}$ instructions
+- **A)** $1.5 \times 10^{10}$ instructions
+- **B)** $2.0 \times 10^{10}$ instructions
+- **C)** $3.6 \times 10^{10}$ instructions
+- **D)** $6.48 \times 10^{10}$ instructions
 
 2. If an architectural enhancement accelerates database search operations by $4\times$, and search operations consume $60\%$ of total execution time, what is the overall system speedup according to Amdahl's Law?
-    - **A)** $1.82\times$
-    - **B)** $2.00\times$
-    - **C)** $2.35\times$
-    - **D)** $2.86\times$
+- **A)** $1.82\times$
+- **B)** $2.00\times$
+- **C)** $2.35\times$
+- **D)** $2.86\times$
 
 3. Why is MFLOPS a more reliable metric than MIPS when benchmarking scientific computation engines?
-    - **A)** Floating-point operations always execute in exactly one clock cycle
-    - **B)** It normalizes performance by counting standard arithmetic floating-point operations rather than arbitrary instruction counts
-    - **C)** It includes branch prediction accuracy within the formula
-    - **D)** It directly measures semiconductor transistor switching latency
+- **A)** Floating-point operations always execute in exactly one clock cycle
+- **B)** It normalizes performance by counting standard arithmetic floating-point operations rather than arbitrary instruction counts
+- **C)** It includes branch prediction accuracy within the formula
+- **D)** It directly measures semiconductor transistor switching latency
 
 4. A 32-bit wide memory bus operates at $200\text{ MHz}$. What is the theoretical peak data bandwidth of this bus?
-    - **A)** $400\text{ MB/s}$
-    - **B)** $600\text{ MB/s}$
-    - **C)** $800\text{ MB/s}$
-    - **D)** $1600\text{ MB/s}$
+- **A)** $400\text{ MB/s}$
+- **B)** $600\text{ MB/s}$
+- **C)** $800\text{ MB/s}$
+- **D)** $1600\text{ MB/s}$
 
 5. Under the CPU performance equation, which variable is primarily determined by compiler optimization and algorithm design?
-    - **A)** Clock cycle time ($T$)
-    - **B)** Clock frequency ($f$)
-    - **C)** Instruction Count ($I$)
-    - **D)** Transistor gate delay
+- **A)** Clock cycle time ($T$)
+- **B)** Clock frequency ($f$)
+- **C)** Instruction Count ($I$)
+- **D)** Transistor gate delay
 
 ### Answer Key & Explanations
 

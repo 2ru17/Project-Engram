@@ -98,64 +98,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. When counting function calls in frequency analysis, which of the following must be included?
-    - **A)** Only the call operation itself
-    - **B)** Only the operations within the function
-    - **C)** The call operation, the operations inside the function, and any parameter evaluation
-    - **D)** Only the return statement
+- **A)** Only the call operation itself
+- **B)** Only the operations within the function
+- **C)** The call operation, the operations inside the function, and any parameter evaluation
+- **D)** Only the return statement
 
 2. For the statement `sum = add(a, b)`, what does the total count consist of?
-    - **A)** 1 for the call, plus the operations inside `add()`
-    - **B)** 2 for the parameters, plus 1 for the assignment
-    - **C)** The exact number of variables inside `add()`
-    - **D)** 0, because it is an external function
+- **A)** 1 for the call, plus the operations inside `add()`
+- **B)** 2 for the parameters, plus 1 for the assignment
+- **C)** The exact number of variables inside `add()`
+- **D)** 0, because it is an external function
 
 3. When a nested loop's inner bound depends on the outer loop's variable, what mathematical tool should be used?
-    - **A)** Asymptotic notation
-    - **B)** Summation notation
-    - **C)** Recurrence relations
-    - **D)** Matrix multiplication
+- **A)** Asymptotic notation
+- **B)** Summation notation
+- **C)** Recurrence relations
+- **D)** Matrix multiplication
 
 4. What is the formula for the summation $\Sigma(1)$ from $i=1$ to $n$?
-    - **A)** $n^2$
-    - **B)** $n(n+1)/2$
-    - **C)** $n$
-    - **D)** $1$
+- **A)** $n^2$
+- **B)** $n(n+1)/2$
+- **C)** $n$
+- **D)** $1$
 
 5. What is the standard formula for the summation of $i$ ($\Sigma(i)$) from $i=1$ to $n$?
-    - **A)** $n^2 / 2$
-    - **B)** $n(n+1)/2$
-    - **C)** $n(n+1)(2n+1)/6$
-    - **D)** $n$
+- **A)** $n^2 / 2$
+- **B)** $n(n+1)/2$
+- **C)** $n(n+1)(2n+1)/6$
+- **D)** $n$
 
 6. What is the standard formula for the summation of squares ($\Sigma(i^2)$) from $i=1$ to $n$?
-    - **A)** $n^2$
-    - **B)** $n(n+1)/2$
-    - **C)** $n(n+1)(2n+1)/6$
-    - **D)** $n^3 / 3$
+- **A)** $n^2$
+- **B)** $n(n+1)/2$
+- **C)** $n(n+1)(2n+1)/6$
+- **D)** $n^3 / 3$
 
 7. For a standard `for` loop, what is the frequency count for the loop header assuming bounds `lb` to `ub`?
-    - **A)** ub - lb
-    - **B)** ub - lb + 1
-    - **C)** ub - lb + 2
-    - **D)** (ub - lb) / 2
+- **A)** ub - lb
+- **B)** ub - lb + 1
+- **C)** ub - lb + 2
+- **D)** (ub - lb) / 2
 
 8. For a standard `for` loop body, how many times does it execute given bounds `lb` to `ub`?
-    - **A)** ub - lb
-    - **B)** ub - lb + 1
-    - **C)** ub - lb + 2
-    - **D)** 1
+- **A)** ub - lb
+- **B)** ub - lb + 1
+- **C)** ub - lb + 2
+- **D)** 1
 
 9. What is a common pitfall when counting function calls?
-    - **A)** Counting the function call as 1 operation
-    - **B)** Forgetting to count operations inside the called function
-    - **C)** Using summation formulas for independent nested loops
-    - **D)** Counting the loop header twice
+- **A)** Counting the function call as 1 operation
+- **B)** Forgetting to count operations inside the called function
+- **C)** Using summation formulas for independent nested loops
+- **D)** Counting the loop header twice
 
 10. How does a `while (x < ub)` loop header differ from a `while (x <= ub)` loop header in frequency count?
-    - **A)** It executes one more time.
-    - **B)** It executes exactly the same number of times.
-    - **C)** It executes one fewer time (`ub - lb + 1` vs `ub - lb + 2`).
-    - **D)** It relies on summation formulas.
+- **A)** It executes one more time.
+- **B)** It executes exactly the same number of times.
+- **C)** It executes one fewer time (`ub - lb + 1` vs `ub - lb + 2`).
+- **D)** It relies on summation formulas.
 
 ### Answer Key & Explanations
 1. **C)** A complete frequency count must account for the call overhead, parameter evaluation, and the internal operations of the function.

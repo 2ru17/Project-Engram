@@ -227,64 +227,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is a recurrence relation?
-    - **A)** An iterative loop that counts backwards.
-    - **B)** A sequence of values where the value at a certain index is based on previous values in the sequence.
-    - **C)** A function that cannot be analyzed.
-    - **D)** A matrix used for graph traversals.
+- **A)** An iterative loop that counts backwards.
+- **B)** A sequence of values where the value at a certain index is based on previous values in the sequence.
+- **C)** A function that cannot be analyzed.
+- **D)** A matrix used for graph traversals.
 
 2. In a recursive algorithm, what is the "base case"?
-    - **A)** The case where the array is sorted.
-    - **B)** The condition under which recursion ends.
-    - **C)** The part of the function where recursion happens.
-    - **D)** The worst-case running time.
+- **A)** The case where the array is sorted.
+- **B)** The condition under which recursion ends.
+- **C)** The part of the function where recursion happens.
+- **D)** The worst-case running time.
 
 3. For the factorial function $T(n) = T(n - 1) + b$, what is the final time complexity?
-    - **A)** $O(1)$
-    - **B)** $O(\log n)$
-    - **C)** $O(n)$
-    - **D)** $O(n^2)$
+- **A)** $O(1)$
+- **B)** $O(\log n)$
+- **C)** $O(n)$
+- **D)** $O(n^2)$
 
 4. What is the time complexity of the naive recursive Fibonacci function $T(n) = T(n-1) + T(n-2)$?
-    - **A)** $O(n)$
-    - **B)** $O(n \log n)$
-    - **C)** $O(2^n)$
-    - **D)** $O(n^2)$
+- **A)** $O(n)$
+- **B)** $O(n \log n)$
+- **C)** $O(2^n)$
+- **D)** $O(n^2)$
 
 5. Which method for solving recurrences expands the equation step-by-step to derive a pattern?
-    - **A)** Master's Theorem
-    - **B)** Iteration Method
-    - **C)** Substitution Method
-    - **D)** Amortized Analysis
+- **A)** Master's Theorem
+- **B)** Iteration Method
+- **C)** Substitution Method
+- **D)** Amortized Analysis
 
 6. Using the Master's Theorem on Binary Search $T(n) = T(n/2) + c$, what is the final time complexity?
-    - **A)** $O(n)$
-    - **B)** $O(n \log n)$
-    - **C)** $O(\log n)$
-    - **D)** $O(1)$
+- **A)** $O(n)$
+- **B)** $O(n \log n)$
+- **C)** $O(\log n)$
+- **D)** $O(1)$
 
 7. What is a common pitfall when solving recurrences?
-    - **A)** Forgetting to define the base case, meaning the recurrence has no termination.
-    - **B)** Multiplying $n$ by itself.
-    - **C)** Using iterative loops inside the recurrence.
-    - **D)** Assuming the Master's Theorem handles every recurrence.
+- **A)** Forgetting to define the base case, meaning the recurrence has no termination.
+- **B)** Multiplying $n$ by itself.
+- **C)** Using iterative loops inside the recurrence.
+- **D)** Assuming the Master's Theorem handles every recurrence.
 
 8. In the Master Theorem formula $T(n) = aT(n/b) + f(n)$, what does $b$ represent?
-    - **A)** The number of subproblems.
-    - **B)** The factor by which the input shrinks.
-    - **C)** The non-recursive work.
-    - **D)** The base case constant.
+- **A)** The number of subproblems.
+- **B)** The factor by which the input shrinks.
+- **C)** The non-recursive work.
+- **D)** The base case constant.
 
 9. Can the Master Theorem be applied to the recurrence $T(n) = 2T(n-1)$?
-    - **A)** Yes, yielding $O(2^n)$.
-    - **B)** Yes, yielding $O(n)$.
-    - **C)** No, because it is not in the form $T(n) = aT(n/b) + f(n)$.
-    - **D)** No, because $a > 1$.
+- **A)** Yes, yielding $O(2^n)$.
+- **B)** Yes, yielding $O(n)$.
+- **C)** No, because it is not in the form $T(n) = aT(n/b) + f(n)$.
+- **D)** No, because $a > 1$.
 
 10. What is the time complexity of the recurrence $T(n) = 2T(n/2) + 1$, representing a simple binary tree traversal?
-    - **A)** $O(n \log n)$
-    - **B)** $O(\log n)$
-    - **C)** $O(n)$
-    - **D)** $O(n^2)$
+- **A)** $O(n \log n)$
+- **B)** $O(\log n)$
+- **C)** $O(n)$
+- **D)** $O(n^2)$
 
 ### Answer Key & Explanations
 1. **B)** A recurrence describes a function dynamically by referring back to itself on progressively smaller inputs.

@@ -63,65 +63,65 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What foundational structural condition must be met for a matrix to be considered any of these special types (diagonal, symmetric, etc.)?
-    - **A)** It must contain no zeros.
-    - **B)** It must be a square matrix ($n 	imes n$).
-    - **C)** It must be a column vector.
-    - **D)** It must have a trace of 1.
+- **A)** It must contain no zeros.
+- **B)** It must be a square matrix ($n 	imes n$).
+- **C)** It must be a column vector.
+- **D)** It must have a trace of 1.
 
 2. Which type of matrix is strictly defined by the condition $a_{ij} = 0$ for all $i 
 eq j$?
-    - **A)** Identity Matrix
-    - **B)** Triangular Matrix
-    - **C)** Diagonal Matrix
-    - **D)** Symmetric Matrix
+- **A)** Identity Matrix
+- **B)** Triangular Matrix
+- **C)** Diagonal Matrix
+- **D)** Symmetric Matrix
 
 3. How is an Identity Matrix structurally defined within the hierarchy of square matrices?
-    - **A)** A diagonal matrix where all main diagonal entries are equal to 1.
-    - **B)** A scalar matrix where all entries are 1.
-    - **C)** A symmetric matrix where all diagonal entries are 0.
-    - **D)** A matrix where every entry is identical.
+- **A)** A diagonal matrix where all main diagonal entries are equal to 1.
+- **B)** A scalar matrix where all entries are 1.
+- **C)** A symmetric matrix where all diagonal entries are 0.
+- **D)** A matrix where every entry is identical.
 
 4. Which special matrix type has the defining transpose property $A^T = A$?
-    - **A)** Skew-Symmetric Matrix
-    - **B)** Lower Triangular Matrix
-    - **C)** Symmetric Matrix
-    - **D)** Upper Triangular Matrix
+- **A)** Skew-Symmetric Matrix
+- **B)** Lower Triangular Matrix
+- **C)** Symmetric Matrix
+- **D)** Upper Triangular Matrix
 
 5. A matrix that strictly has zeros below the main diagonal ($a_{ij} = 0$ for $i > j$) is called what?
-    - **A)** Lower Triangular Matrix
-    - **B)** Upper Triangular Matrix
-    - **C)** Diagonal Matrix
-    - **D)** Scalar Matrix
+- **A)** Lower Triangular Matrix
+- **B)** Upper Triangular Matrix
+- **C)** Diagonal Matrix
+- **D)** Scalar Matrix
 
 6. What is the hierarchical relationship between scalar matrices and diagonal matrices?
-    - **A)** Every diagonal matrix is a scalar matrix.
-    - **B)** Scalar matrices and diagonal matrices are completely disjoint.
-    - **C)** Every scalar matrix is a diagonal matrix.
-    - **D)** They are the exact same thing.
+- **A)** Every diagonal matrix is a scalar matrix.
+- **B)** Scalar matrices and diagonal matrices are completely disjoint.
+- **C)** Every scalar matrix is a diagonal matrix.
+- **D)** They are the exact same thing.
 
 7. What kind of matrix is formed if a matrix is simultaneously both upper triangular and lower triangular?
-    - **A)** A Zero Matrix
-    - **B)** A Symmetric Matrix
-    - **C)** A Diagonal Matrix
-    - **D)** A Skew-Symmetric Matrix
+- **A)** A Zero Matrix
+- **B)** A Symmetric Matrix
+- **C)** A Diagonal Matrix
+- **D)** A Skew-Symmetric Matrix
 
 8. In a skew-symmetric matrix ($A^T = -A$), what is the mandated value for all main diagonal entries $a_{ii}$?
-    - **A)** 1
-    - **B)** -1
-    - **C)** 0
-    - **D)** Any positive integer
+- **A)** 1
+- **B)** -1
+- **C)** 0
+- **D)** Any positive integer
 
 9. For both upper and lower triangular matrices, how can you easily compute the matrix determinant?
-    - **A)** By summing all entries in the matrix.
-    - **B)** By calculating the trace.
-    - **C)** By multiplying all the main diagonal entries together.
-    - **D)** It is always equal to 1.
+- **A)** By summing all entries in the matrix.
+- **B)** By calculating the trace.
+- **C)** By multiplying all the main diagonal entries together.
+- **D)** It is always equal to 1.
 
 10. Which sequence correctly represents the structural matrix hierarchy from most specific to least specific?
-    - **A)** Triangular $\subset$ Diagonal $\subset$ Scalar $\subset$ Identity
-    - **B)** Identity $\subset$ Scalar $\subset$ Diagonal $\subset$ Triangular
-    - **C)** Diagonal $\subset$ Identity $\subset$ Triangular $\subset$ Scalar
-    - **D)** Scalar $\subset$ Triangular $\subset$ Identity $\subset$ Diagonal
+- **A)** Triangular $\subset$ Diagonal $\subset$ Scalar $\subset$ Identity
+- **B)** Identity $\subset$ Scalar $\subset$ Diagonal $\subset$ Triangular
+- **C)** Diagonal $\subset$ Identity $\subset$ Triangular $\subset$ Scalar
+- **D)** Scalar $\subset$ Triangular $\subset$ Identity $\subset$ Diagonal
 
 ### Answer Key & Explanations
 1. **B)** All these special matrix types (diagonal, identity, symmetric, etc.) fundamentally require the matrix to be a square matrix ($n 	imes n$).

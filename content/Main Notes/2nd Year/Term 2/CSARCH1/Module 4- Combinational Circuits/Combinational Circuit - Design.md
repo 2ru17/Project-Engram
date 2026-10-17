@@ -46,64 +46,64 @@ Classes will be suspended ($F=1$) if there is a majority vote (sum of points $> 
 ## Multiple Choice Questions
 
 1. What is the first step in the design procedure for a combinational circuit?
-    - **A)** Draw the logic diagram immediately
-    - **B)** From circuit specifications, determine the required number of inputs and outputs
-    - **C)** Derive the truth table
-    - **D)** Simplify the Boolean functions
+- **A)** Draw the logic diagram immediately
+- **B)** From circuit specifications, determine the required number of inputs and outputs
+- **C)** Derive the truth table
+- **D)** Simplify the Boolean functions
 
 2. After identifying inputs and outputs, what is the next step in combinational design?
-    - **A)** Simulate the circuit
-    - **B)** Write the HDL code
-    - **C)** Derive the truth table defining the relationship between inputs and outputs
-    - **D)** Wire up the breadboard
+- **A)** Simulate the circuit
+- **B)** Write the HDL code
+- **C)** Derive the truth table defining the relationship between inputs and outputs
+- **D)** Wire up the breadboard
 
 3. What is the purpose of deriving simplified Boolean functions in the design process?
-    - **A)** To make the truth table larger
-    - **B)** To reduce the number of logic gates needed, saving cost and space
-    - **C)** To increase the power consumption of the circuit
-    - **D)** To convert the circuit to sequential logic
+- **A)** To make the truth table larger
+- **B)** To reduce the number of logic gates needed, saving cost and space
+- **C)** To increase the power consumption of the circuit
+- **D)** To convert the circuit to sequential logic
 
 4. What tool is commonly used to obtain the simplified Boolean functions from the truth table?
-    - **A)** Multiplexer
-    - **B)** Karnaugh Map (K-map)
-    - **C)** Decoder
-    - **D)** Flip-flop
+- **A)** Multiplexer
+- **B)** Karnaugh Map (K-map)
+- **C)** Decoder
+- **D)** Flip-flop
 
 5. What does a "Code Converter" combinational circuit do?
-    - **A)** It amplifies analog signals
-    - **B)** It converts the voltage level of the circuit
-    - **C)** It makes two systems compatible by translating one binary code into another
-    - **D)** It converts combinational circuits to sequential circuits
+- **A)** It amplifies analog signals
+- **B)** It converts the voltage level of the circuit
+- **C)** It makes two systems compatible by translating one binary code into another
+- **D)** It converts combinational circuits to sequential circuits
 
 6. In a BCD to Excess-3 code converter, what happens to the binary input value?
-    - **A)** It is multiplied by 3
-    - **B)** 3 is added to the BCD value
-    - **C)** It is XORed with 3
-    - **D)** It is inverted
+- **A)** It is multiplied by 3
+- **B)** 3 is added to the BCD value
+- **C)** It is XORed with 3
+- **D)** It is inverted
 
 7. How many valid input combinations does a standard BCD (Binary Coded Decimal) input have?
-    - **A)** 8
-    - **B)** 10
-    - **C)** 12
-    - **D)** 16
+- **A)** 8
+- **B)** 10
+- **C)** 12
+- **D)** 16
 
 8. In the vote example given (Dean=4, Chair=3, Teacher=2, Student=1), what condition causes classes to be suspended?
-    - **A)** Only if the Dean votes yes
-    - **B)** Only if everyone votes yes
-    - **C)** If the total sum of points from "yes" votes constitutes a majority (F=1)
-    - **D)** If the student votes no
+- **A)** Only if the Dean votes yes
+- **B)** Only if everyone votes yes
+- **C)** If the total sum of points from "yes" votes constitutes a majority (F=1)
+- **D)** If the student votes no
 
 9. In a truth table for a 4-input design problem, how many rows are required?
-    - **A)** 4
-    - **B)** 8
-    - **C)** 16
-    - **D)** 32
+- **A)** 4
+- **B)** 8
+- **C)** 16
+- **D)** 32
 
 10. What is the final step in the formal combinational circuit design procedure?
-    - **A)** Memorize the Boolean function
-    - **B)** Draw the logic diagram and verify the correctness of the design
-    - **C)** Sell the circuit design
-    - **D)** Build a sequential state machine
+- **A)** Memorize the Boolean function
+- **B)** Draw the logic diagram and verify the correctness of the design
+- **C)** Sell the circuit design
+- **D)** Build a sequential state machine
 
 ### Answer Key & Explanations
 1. **B)** Design begins conceptually by determining how many inputs are needed and what outputs must be generated.

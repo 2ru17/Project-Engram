@@ -46,34 +46,34 @@ Imagine a dataset with numerical features for temperature and humidity.  Initial
 ## Multiple Choice Questions
 
 1. Which category of machine learning does K-Means Clustering belong to?
-    - **A)** Supervised Learning
-    - **B)** Reinforcement Learning
-    - **C)** Unsupervised Learning
-    - **D)** Semi-Supervised Learning
+- **A)** Supervised Learning
+- **B)** Reinforcement Learning
+- **C)** Unsupervised Learning
+- **D)** Semi-Supervised Learning
 
 2. What is the primary role of the hyperparameter $k$ in the K-Means algorithm?
-    - **A)** It defines the number of features in the dataset.
-    - **B)** It specifies the number of distinct, non-overlapping clusters to form.
-    - **C)** It determines the maximum number of iterations before the algorithm stops.
-    - **D)** It acts as the learning rate for updating centroids.
+- **A)** It defines the number of features in the dataset.
+- **B)** It specifies the number of distinct, non-overlapping clusters to form.
+- **C)** It determines the maximum number of iterations before the algorithm stops.
+- **D)** It acts as the learning rate for updating centroids.
 
 3. During the K-Means algorithm execution, how are data points assigned to clusters?
-    - **A)** By calculating the Euclidean distance to the nearest centroid.
-    - **B)** By picking a cluster at random for each iteration.
-    - **C)** By evaluating the target label of the data point.
-    - **D)** By sorting the data points and dividing them evenly into $k$ groups.
+- **A)** By calculating the Euclidean distance to the nearest centroid.
+- **B)** By picking a cluster at random for each iteration.
+- **C)** By evaluating the target label of the data point.
+- **D)** By sorting the data points and dividing them evenly into $k$ groups.
 
 4. What does the "Inertia" (Within-Cluster Sum of Squares) metric measure in K-Means clustering?
-    - **A)** The distance between different cluster centroids.
-    - **B)** The algorithm's computational execution time.
-    - **C)** The total number of points successfully assigned to clusters.
-    - **D)** Cluster quality, by calculating the sum of squared distances of samples to their closest cluster center.
+- **A)** The distance between different cluster centroids.
+- **B)** The algorithm's computational execution time.
+- **C)** The total number of points successfully assigned to clusters.
+- **D)** Cluster quality, by calculating the sum of squared distances of samples to their closest cluster center.
 
 5. How is the "Elbow Method" used to select the optimal number of clusters $k$?
-    - **A)** By finding the $k$ value that maximizes Inertia.
-    - **B)** By plotting Inertia against various $k$ values and selecting the point where the rate of decrease sharply shifts.
-    - **C)** By testing random $k$ values until a specific target Inertia is reached.
-    - **D)** By visually inspecting the dataset in a 3D scatter plot.
+- **A)** By finding the $k$ value that maximizes Inertia.
+- **B)** By plotting Inertia against various $k$ values and selecting the point where the rate of decrease sharply shifts.
+- **C)** By testing random $k$ values until a specific target Inertia is reached.
+- **D)** By visually inspecting the dataset in a 3D scatter plot.
 
 ### Answer Key & Explanations
 1. **C)** K-Means is an unsupervised learning algorithm because it works with unlabeled data to find hidden structures (clusters).

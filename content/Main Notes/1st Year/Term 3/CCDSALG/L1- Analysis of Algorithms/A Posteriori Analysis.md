@@ -52,64 +52,64 @@ To conduct a meaningful a posteriori analysis, developers rely on benchmarking a
 ## Multiple Choice Questions
 
 1. What does A Posteriori Analysis primarily measure?
-    - **A)** Theoretical bounds
-    - **B)** Actual execution time and memory usage
-    - **C)** Asymptotic growth rate
-    - **D)** The mathematical complexity of an algorithm
+- **A)** Theoretical bounds
+- **B)** Actual execution time and memory usage
+- **C)** Asymptotic growth rate
+- **D)** The mathematical complexity of an algorithm
 
 2. When is A Posteriori Analysis conducted?
-    - **A)** Before the algorithm is designed
-    - **B)** During the mathematical modeling phase
-    - **C)** After the algorithm has been implemented and executed
-    - **D)** Only when theoretical analysis fails
+- **A)** Before the algorithm is designed
+- **B)** During the mathematical modeling phase
+- **C)** After the algorithm has been implemented and executed
+- **D)** Only when theoretical analysis fails
 
 3. Which of the following is NOT a factor that influences A Posteriori measurements?
-    - **A)** CPU architecture and clock speed
-    - **B)** Operating system overhead
-    - **C)** The asymptotic notation of the algorithm
-    - **D)** Compiler and language runtime
+- **A)** CPU architecture and clock speed
+- **B)** Operating system overhead
+- **C)** The asymptotic notation of the algorithm
+- **D)** Compiler and language runtime
 
 4. How does A Posteriori Analysis handle constants and lower-order terms?
-    - **A)** It ignores them entirely.
-    - **B)** It accounts for them, unlike theoretical models.
-    - **C)** It replaces them with Big-O notation.
-    - **D)** It assumes they are equal to zero.
+- **A)** It ignores them entirely.
+- **B)** It accounts for them, unlike theoretical models.
+- **C)** It replaces them with Big-O notation.
+- **D)** It assumes they are equal to zero.
 
 5. What is the primary purpose of benchmarking in A Posteriori Analysis?
-    - **A)** To mathematically prove the correctness of an algorithm
-    - **B)** To track which sections of code consume the most resources
-    - **C)** To run a program on defined datasets to measure performance metrics
-    - **D)** To convert pseudo-code into machine code
+- **A)** To mathematically prove the correctness of an algorithm
+- **B)** To track which sections of code consume the most resources
+- **C)** To run a program on defined datasets to measure performance metrics
+- **D)** To convert pseudo-code into machine code
 
 6. Which process provides a micro-level view by identifying bottlenecks in the code?
-    - **A)** Benchmarking
-    - **B)** Profiling
-    - **C)** Compiling
-    - **D)** Asymptotic bounding
+- **A)** Benchmarking
+- **B)** Profiling
+- **C)** Compiling
+- **D)** Asymptotic bounding
 
 7. How might the choice of programming language affect A Posteriori Analysis?
-    - **A)** It changes the time complexity class of the algorithm.
-    - **B)** Different compilers handle memory management and instruction generation differently.
-    - **C)** It alters the mathematical correctness of the algorithm.
-    - **D)** It completely removes the need for benchmarking.
+- **A)** It changes the time complexity class of the algorithm.
+- **B)** Different compilers handle memory management and instruction generation differently.
+- **C)** It alters the mathematical correctness of the algorithm.
+- **D)** It completely removes the need for benchmarking.
 
 8. Which of the following best describes the difference between A Posteriori and A Priori analysis?
-    - **A)** A Posteriori is theoretical, while A Priori is empirical.
-    - **B)** A Posteriori evaluates implemented programs, while A Priori evaluates mathematical models.
-    - **C)** A Posteriori focuses on time complexity, while A Priori focuses on space complexity.
-    - **D)** A Posteriori is only used for sorting algorithms.
+- **A)** A Posteriori is theoretical, while A Priori is empirical.
+- **B)** A Posteriori evaluates implemented programs, while A Priori evaluates mathematical models.
+- **C)** A Posteriori focuses on time complexity, while A Priori focuses on space complexity.
+- **D)** A Posteriori is only used for sorting algorithms.
 
 9. Why are input data characteristics important in A Posteriori Analysis?
-    - **A)** They determine the Big-O notation of the code.
-    - **B)** The size, order, and distribution of data significantly impact performance.
-    - **C)** They dictate which programming language must be used.
-    - **D)** They eliminate operating system overhead.
+- **A)** They determine the Big-O notation of the code.
+- **B)** The size, order, and distribution of data significantly impact performance.
+- **C)** They dictate which programming language must be used.
+- **D)** They eliminate operating system overhead.
 
 10. In which scenario would A Posteriori Analysis be most useful?
-    - **A)** Determining if an algorithm runs in O(n) or O(n^2) time
-    - **B)** Comparing the real-world efficiency of two sorting algorithms running on identical hardware
-    - **C)** Proving that a problem is NP-Complete
-    - **D)** Calculating the theoretical minimum number of operations for a task
+- **A)** Determining if an algorithm runs in O(n) or O(n^2) time
+- **B)** Comparing the real-world efficiency of two sorting algorithms running on identical hardware
+- **C)** Proving that a problem is NP-Complete
+- **D)** Calculating the theoretical minimum number of operations for a task
 
 ### Answer Key & Explanations
 1. **B)** A Posteriori analysis involves direct measurement of the physical time and memory consumed during execution.

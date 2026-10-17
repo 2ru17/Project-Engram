@@ -94,20 +94,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. Which of the following best describes an array in C?
-    - **A)** A dynamic structure that resizes automatically
-    - **B)** A collection of variables of different types
-    - **C)** A contiguous block of memory holding elements of the same type
-    - **D)** A sequence of distinct nodes linked via pointers
+- **A)** A dynamic structure that resizes automatically
+- **B)** A collection of variables of different types
+- **C)** A contiguous block of memory holding elements of the same type
+- **D)** A sequence of distinct nodes linked via pointers
 2. Which syntax represents a valid 1D array declaration?
-    - **A)** `int array(10);`
-    - **B)** `int array[10];`
-    - **C)** `array<int> 10;`
-    - **D)** `int[10] array;`
+- **A)** `int array(10);`
+- **B)** `int array[10];`
+- **C)** `array<int> 10;`
+- **D)** `int[10] array;`
 3. What is a key limitation of arrays in standard C?
-    - **A)** They cannot hold floating-point numbers
-    - **B)** Their size is fixed upon declaration
-    - **C)** They do not allow random access
-    - **D)** They cannot be passed to functions
+- **A)** They cannot hold floating-point numbers
+- **B)** Their size is fixed upon declaration
+- **C)** They do not allow random access
+- **D)** They cannot be passed to functions
 
 ### Answer Key & Explanations
 1. **C)** Arrays aggregate multiple identical types sequentially in adjacent memory blocks.

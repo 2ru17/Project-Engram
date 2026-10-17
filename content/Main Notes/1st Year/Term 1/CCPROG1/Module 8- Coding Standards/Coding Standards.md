@@ -45,64 +45,64 @@ status: completed
 ## Multiple Choice Questions
 
 1. What best describes the role of **Indentation**?
-    - **A)** Spaces or tabs used to format code structure visually
-    - **B)** When multiple programmers work on the same project, a shared standard ensures...
-    - **C)** #[[Conceptual]] #[[CCPROG1]] #[[Best Practices]] #[[M8]]
-    - **D)** A software-only abstraction that does not correspond to physical hardware
+- **A)** Spaces or tabs used to format code structure visually
+- **B)** When multiple programmers work on the same project, a shared standard ensures...
+- **C)** #[[Conceptual]] #[[CCPROG1]] #[[Best Practices]] #[[M8]]
+- **D)** A software-only abstraction that does not correspond to physical hardware
 
 2. What best describes the role of **Meaningful Names**?
-    - **A)** Use `#define` or `const` for raw numbers to give them context (e.g., `#define...
-    - **B)** A software-only abstraction that does not correspond to physical hardware
-    - **C)** Use descriptive names (`total_sales` instead of `ts`)
-    - **D)** Use 4 spaces (or 1 tab) for each level of block nesting
+- **A)** Use `#define` or `const` for raw numbers to give them context (e.g., `#define...
+- **B)** A software-only abstraction that does not correspond to physical hardware
+- **C)** Use descriptive names (`total_sales` instead of `ts`)
+- **D)** Use 4 spaces (or 1 tab) for each level of block nesting
 
 3. What best describes the role of **Avoid Magic Numbers**?
-    - **A)** A legacy protocol maintained only for backward compatibility
-    - **B)** Use `#define` or `const` for raw numbers to give them context (e.g., `#define...
-    - **C)** Rules for naming variables, functions, and files (e.g., camelCase, snake_case)
-    - **D)** Spaces or tabs used to format code structure visually
+- **A)** A legacy protocol maintained only for backward compatibility
+- **B)** Use `#define` or `const` for raw numbers to give them context (e.g., `#define...
+- **C)** Rules for naming variables, functions, and files (e.g., camelCase, snake_case)
+- **D)** Spaces or tabs used to format code structure visually
 
 4. What best describes the role of **Proper Indentation**?
-    - **A)** When multiple programmers work on the same project, a shared standard ensures...
-    - **B)** An optional component that is only used in enterprise-grade systems
-    - **C)** Use 4 spaces (or 1 tab) for each level of block nesting
-    - **D)** Use `#define` or `const` for raw numbers to give them context (e.g., `#define...
+- **A)** When multiple programmers work on the same project, a shared standard ensures...
+- **B)** An optional component that is only used in enterprise-grade systems
+- **C)** Use 4 spaces (or 1 tab) for each level of block nesting
+- **D)** Use `#define` or `const` for raw numbers to give them context (e.g., `#define...
 
 5. In the sequence described in this topic, what happens during the **Readability:** step?
-    - **A)** Clean, well-formatted code is easier to read.
-    - **B)** This step is not part of the described process
-    - **C)** When multiple programmers work on the same project, a shared standard ensures...
-    - **D)** Standardized code is easier to update and debug later.
+- **A)** Clean, well-formatted code is easier to read.
+- **B)** This step is not part of the described process
+- **C)** When multiple programmers work on the same project, a shared standard ensures...
+- **D)** Standardized code is easier to update and debug later.
 
 6. Which step immediately follows **Readability:**?
-    - **A)** Maintainability:
-    - **B)** There is no subsequent step
-    - **C)** Collaboration:
-    - **D)** There is no subsequent step
+- **A)** Maintainability:
+- **B)** There is no subsequent step
+- **C)** Collaboration:
+- **D)** There is no subsequent step
 
 7. According to the material on **Coding Standards**, which statement is correct?
-    - **A)** This principle only applies in theoretical models, not practical systems
-    - **B)** Coding standards are a set of rules, guidelines, and best practices that developers follow when w...
-    - **C)** Coding standards are not a set of rules, guidelines, and best practices that developers follow when w...
-    - **D)** The described behavior is considered deprecated in modern implementations
+- **A)** This principle only applies in theoretical models, not practical systems
+- **B)** Coding standards are a set of rules, guidelines, and best practices that developers follow when w...
+- **C)** Coding standards are not a set of rules, guidelines, and best practices that developers follow when w...
+- **D)** The described behavior is considered deprecated in modern implementations
 
 8. According to the material on **Coding Standards**, which statement is correct?
-    - **A)** The opposite of the stated principle applies
-    - **B)** This principle only applies in theoretical models, not practical systems
-    - **C)** `` Proper Indentation: Use 4 spaces (or 1 tab) for each level of block nesting. Comments: Comment...
-    - **D)** The described behavior is considered deprecated in modern implementations
+- **A)** The opposite of the stated principle applies
+- **B)** This principle only applies in theoretical models, not practical systems
+- **C)** `` Proper Indentation: Use 4 spaces (or 1 tab) for each level of block nesting. Comments: Comment...
+- **D)** The described behavior is considered deprecated in modern implementations
 
 9. According to the material on **Coding Standards**, which statement is correct?
-    - **A)** 1. Readability: Clean, well-formatted code is easier to read.
-    - **B)** The described behavior is considered deprecated in modern implementations
-    - **C)** This principle only applies in theoretical models, not practical systems
-    - **D)** 1. Readability: Clean, well-formatted code is not easier to read.
+- **A)** 1. Readability: Clean, well-formatted code is easier to read.
+- **B)** The described behavior is considered deprecated in modern implementations
+- **C)** This principle only applies in theoretical models, not practical systems
+- **D)** 1. Readability: Clean, well-formatted code is not easier to read.
 
 10. According to the material on **Coding Standards**, which statement is correct?
-    - **A)** The described behavior is considered deprecated in modern implementations
-    - **B)** Writing excessively clever or compact code that becomes impossible for others to read. Using inco...
-    - **C)** The opposite of the stated principle applies
-    - **D)** This principle only applies in theoretical models, not practical systems
+- **A)** The described behavior is considered deprecated in modern implementations
+- **B)** Writing excessively clever or compact code that becomes impossible for others to read. Using inco...
+- **C)** The opposite of the stated principle applies
+- **D)** This principle only applies in theoretical models, not practical systems
 
 ### Answer Key & Explanations
 1. **A)** **Indentation** is defined in the note as: Spaces or tabs used to format code structure visually.

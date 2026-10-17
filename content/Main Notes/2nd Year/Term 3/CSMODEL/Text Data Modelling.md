@@ -451,34 +451,34 @@ Why is `Line X` flawed for an exam or production machine learning evaluation? A)
 ## Multiple Choice Questions
 
 1. What is the primary difference between Stemming and Lemmatization?
-    - **A)** Stemming uses a dictionary, Lemmatization uses heuristic rules
-    - **B)** Stemming often outputs non-words by chopping suffixes; Lemmatization outputs valid dictionary base words
-    - **C)** Stemming is much slower than Lemmatization
-    - **D)** Lemmatization does not require POS tags
+- **A)** Stemming uses a dictionary, Lemmatization uses heuristic rules
+- **B)** Stemming often outputs non-words by chopping suffixes; Lemmatization outputs valid dictionary base words
+- **C)** Stemming is much slower than Lemmatization
+- **D)** Lemmatization does not require POS tags
 
 2. In the TF-IDF calculation, what happens to the IDF weight if a word appears in every single document?
-    - **A)** The IDF weight becomes negative
-    - **B)** The IDF weight is maximized
-    - **C)** The IDF weight becomes zero
-    - **D)** It is unaffected
+- **A)** The IDF weight becomes negative
+- **B)** The IDF weight is maximized
+- **C)** The IDF weight becomes zero
+- **D)** It is unaffected
 
 3. In a Bag of Words (`CountVectorizer`) model, what information is lost?
-    - **A)** The frequency of words
-    - **B)** The length of the document
-    - **C)** Word order and grammatical structure
-    - **D)** The exact vocabulary used
+- **A)** The frequency of words
+- **B)** The length of the document
+- **C)** Word order and grammatical structure
+- **D)** The exact vocabulary used
 
 4. Which Word2Vec architecture predicts a target word based on its surrounding context words?
-    - **A)** Skip-Gram
-    - **B)** TF-IDF
-    - **C)** Continuous Bag of Words (CBOW)
-    - **D)** N-Grams
+- **A)** Skip-Gram
+- **B)** TF-IDF
+- **C)** Continuous Bag of Words (CBOW)
+- **D)** N-Grams
 
 5. Why should `fit_transform()` only be used on training data, and not on test data?
-    - **A)** It causes the test data to be deleted
-    - **B)** It rebuilds a new vocabulary for the test set, leading to mismatched feature spaces and data leakage
-    - **C)** It prevents the model from calculating TF-IDF scores
-    - **D)** It makes the algorithm run infinitely
+- **A)** It causes the test data to be deleted
+- **B)** It rebuilds a new vocabulary for the test set, leading to mismatched feature spaces and data leakage
+- **C)** It prevents the model from calculating TF-IDF scores
+- **D)** It makes the algorithm run infinitely
 
 ### Answer Key & Explanations
 1. **B)** Stemming uses crude rules (e.g. chopping ing), while Lemmatization maps words to their canonical lemma.

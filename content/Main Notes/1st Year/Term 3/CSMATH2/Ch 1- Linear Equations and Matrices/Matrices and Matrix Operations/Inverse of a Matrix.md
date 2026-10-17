@@ -163,64 +163,64 @@ $$
 ## Multiple Choice Questions
 
 1. What is the fundamental property of the inverse matrix $A^{-1}$ with respect to a square matrix $A$?
-    - **A)** $A + A^{-1} = I$
-    - **B)** $AA^{-1} = A^{-1}A = I$
-    - **C)** $A - A^{-1} = O$
-    - **D)** $AA^{-1} = O$
+- **A)** $A + A^{-1} = I$
+- **B)** $AA^{-1} = A^{-1}A = I$
+- **C)** $A - A^{-1} = O$
+- **D)** $AA^{-1} = O$
 
 2. What condition must be met for a square matrix $A$ to be invertible (nonsingular)?
-    - **A)** Its determinant must be equal to zero.
-    - **B)** Its determinant must not be equal to zero ($\det(A) \neq 0$).
-    - **C)** It must be equivalent to the zero matrix.
-    - **D)** It must have a trace of zero.
+- **A)** Its determinant must be equal to zero.
+- **B)** Its determinant must not be equal to zero ($\det(A) \neq 0$).
+- **C)** It must be equivalent to the zero matrix.
+- **D)** It must have a trace of zero.
 
 3. For a $2 \times 2$ matrix $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, what is the explicit formula for its inverse?
-    - **A)** $\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$
-    - **B)** $\frac{1}{ad - bc} \begin{bmatrix} d & c \\ b & a \end{bmatrix}$
-    - **C)** $\frac{1}{ad - bc} \begin{bmatrix} a & -b \\ -c & d \end{bmatrix}$
-    - **D)** $\frac{1}{ad - bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$
+- **A)** $\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$
+- **B)** $\frac{1}{ad - bc} \begin{bmatrix} d & c \\ b & a \end{bmatrix}$
+- **C)** $\frac{1}{ad - bc} \begin{bmatrix} a & -b \\ -c & d \end{bmatrix}$
+- **D)** $\frac{1}{ad - bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$
 
 4. How is the inverse of a matrix product $(AB)^{-1}$ calculated?
-    - **A)** $A^{-1}B^{-1}$
-    - **B)** $B^{-1}A^{-1}$
-    - **C)** $A^T B^T$
-    - **D)** $I - AB$
+- **A)** $A^{-1}B^{-1}$
+- **B)** $B^{-1}A^{-1}$
+- **C)** $A^T B^T$
+- **D)** $I - AB$
 
 5. According to the properties of matrix inverses, what is the inverse of a scalar multiple $(kA)^{-1}$ assuming $k \neq 0$?
-    - **A)** $k A^{-1}$
-    - **B)** $-k A^{-1}$
-    - **C)** $\frac{1}{k} A^{-1}$
-    - **D)** $A^{-1} + k$
+- **A)** $k A^{-1}$
+- **B)** $-k A^{-1}$
+- **C)** $\frac{1}{k} A^{-1}$
+- **D)** $A^{-1} + k$
 
 6. In the Gauss-Jordan method for finding the inverse of a matrix $A$, what is the initial setup?
-    - **A)** Form the augmented matrix $[A \mid O]$
-    - **B)** Form the augmented matrix $[I \mid A]$
-    - **C)** Form the augmented matrix $[A \mid I]$
-    - **D)** Form the augmented matrix $[A^T \mid I]$
+- **A)** Form the augmented matrix $[A \mid O]$
+- **B)** Form the augmented matrix $[I \mid A]$
+- **C)** Form the augmented matrix $[A \mid I]$
+- **D)** Form the augmented matrix $[A^T \mid I]$
 
 7. What is the expected final outcome of applying row operations in the Gauss-Jordan method to find an inverse?
-    - **A)** The matrix transforms into $[I \mid A^{-1}]$
-    - **B)** The matrix transforms into $[A^{-1} \mid I]$
-    - **C)** The matrix transforms into $[A \mid A^{-1}]$
-    - **D)** The matrix transforms into $[I \mid O]$
+- **A)** The matrix transforms into $[I \mid A^{-1}]$
+- **B)** The matrix transforms into $[A^{-1} \mid I]$
+- **C)** The matrix transforms into $[A \mid A^{-1}]$
+- **D)** The matrix transforms into $[I \mid O]$
 
 8. Which of the following statements about non-square matrices is true?
-    - **A)** They always have a unique two-sided inverse.
-    - **B)** They can be inverted using the Gauss-Jordan method.
-    - **C)** They never have a (two-sided) inverse.
-    - **D)** Their inverse is defined by their transpose.
+- **A)** They always have a unique two-sided inverse.
+- **B)** They can be inverted using the Gauss-Jordan method.
+- **C)** They never have a (two-sided) inverse.
+- **D)** Their inverse is defined by their transpose.
 
 9. If a matrix $A$ is invertible, how many unique inverse matrices does it possess?
-    - **A)** Infinitely many
-    - **B)** Exactly two
-    - **C)** Exactly one
-    - **D)** Zero
+- **A)** Infinitely many
+- **B)** Exactly two
+- **C)** Exactly one
+- **D)** Zero
 
 10. What is the relationship between the transpose and the inverse of a matrix?
-    - **A)** $(A^T)^{-1} = A^T$
-    - **B)** $(A^T)^{-1} = (A^{-1})^T$
-    - **C)** $(A^{-1})^T = I$
-    - **D)** $(A^T)^{-1} = A$
+- **A)** $(A^T)^{-1} = A^T$
+- **B)** $(A^T)^{-1} = (A^{-1})^T$
+- **C)** $(A^{-1})^T = I$
+- **D)** $(A^T)^{-1} = A$
 
 ### Answer Key & Explanations
 1. **B)** The defining property of an inverse matrix is that multiplying it by the original matrix in either order yields the identity matrix: $AA^{-1} = A^{-1}A = I$.

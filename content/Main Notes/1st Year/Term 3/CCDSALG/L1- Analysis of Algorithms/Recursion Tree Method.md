@@ -105,64 +105,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is the Recursion Tree Method used for?
-    - **A)** Generating iterative loops automatically.
-    - **B)** Visually solving recurrences by drawing recursive calls as a tree and summing costs per level.
-    - **C)** Managing binary search trees in memory.
-    - **D)** Storing output data hierarchically.
+- **A)** Generating iterative loops automatically.
+- **B)** Visually solving recurrences by drawing recursive calls as a tree and summing costs per level.
+- **C)** Managing binary search trees in memory.
+- **D)** Storing output data hierarchically.
 
 2. In a recursion tree for $T(n) = aT(n/b) + f(n)$, what does each node represent?
-    - **A)** The exact Big-O notation for that step.
-    - **B)** The total cost of all subproblems combined.
-    - **C)** The cost of a single recursive call, excluding its children's costs.
-    - **D)** The number of loops.
+- **A)** The exact Big-O notation for that step.
+- **B)** The total cost of all subproblems combined.
+- **C)** The cost of a single recursive call, excluding its children's costs.
+- **D)** The number of loops.
 
 3. For a recurrence that divides the input by $b$ at each step, what is the total depth of the recursion tree?
-    - **A)** $\log_b n$
-    - **B)** $b \log n$
-    - **C)** $n/b$
-    - **D)** $n^b$
+- **A)** $\log_b n$
+- **B)** $b \log n$
+- **C)** $n/b$
+- **D)** $n^b$
 
 4. In the worked example $T(n) = 2T(n/2) + n$, what is the total cost at level 1?
-    - **A)** $n/2$
-    - **B)** $n$
-    - **C)** $2n$
-    - **D)** $n^2$
+- **A)** $n/2$
+- **B)** $n$
+- **C)** $2n$
+- **D)** $n^2$
 
 5. In the worked example $T(n) = 2T(n/2) + n$, how many leaves does the tree have at the final level?
-    - **A)** $\log_2 n$
-    - **B)** $n/2$
-    - **C)** $n$
-    - **D)** $2n$
+- **A)** $\log_2 n$
+- **B)** $n/2$
+- **C)** $n$
+- **D)** $2n$
 
 6. In the worked example $T(n) = 3T(n/4) + cn^2$, what does the geometric series indicate about the tree?
-    - **A)** The root dominates (top-heavy tree).
-    - **B)** The leaves dominate (bottom-heavy tree).
-    - **C)** The work is perfectly balanced across all levels.
-    - **D)** The recurrence cannot be solved.
+- **A)** The root dominates (top-heavy tree).
+- **B)** The leaves dominate (bottom-heavy tree).
+- **C)** The work is perfectly balanced across all levels.
+- **D)** The recurrence cannot be solved.
 
 7. Which method is the Recursion Tree Method often used to help or generate a "guess" for?
-    - **A)** Frequency counting
-    - **B)** The Substitution Method
-    - **C)** Iterative unrolling
-    - **D)** The Master Theorem
+- **A)** Frequency counting
+- **B)** The Substitution Method
+- **C)** Iterative unrolling
+- **D)** The Master Theorem
 
 8. What is a common pitfall when drawing a recursion tree?
-    - **A)** Forgetting to account for the cost at the leaf level.
-    - **B)** Drawing the tree upside down.
-    - **C)** Assuming the tree has exactly 2 branches at every node regardless of $a$.
-    - **D)** Using asymptotic notation instead of constants.
+- **A)** Forgetting to account for the cost at the leaf level.
+- **B)** Drawing the tree upside down.
+- **C)** Assuming the tree has exactly 2 branches at every node regardless of $a$.
+- **D)** Using asymptotic notation instead of constants.
 
 9. When computing the number of nodes per level, by what factor does it increase each time?
-    - **A)** It multiplies by $b$.
-    - **B)** It multiplies by $a$.
-    - **C)** It adds $f(n)$.
-    - **D)** It divides by $n$.
+- **A)** It multiplies by $b$.
+- **B)** It multiplies by $a$.
+- **C)** It adds $f(n)$.
+- **D)** It divides by $n$.
 
 10. Why might someone choose to use the Recursion Tree Method over the Master Theorem?
-    - **A)** Because the Master Theorem is mathematically unproven.
-    - **B)** To get a visual/intuitive understanding of the recurrence, or when the Master Theorem doesn’t directly apply.
-    - **C)** Because it provides an exact millisecond execution time.
-    - **D)** Because it is the only way to analyze sorting algorithms.
+- **A)** Because the Master Theorem is mathematically unproven.
+- **B)** To get a visual/intuitive understanding of the recurrence, or when the Master Theorem doesn’t directly apply.
+- **C)** Because it provides an exact millisecond execution time.
+- **D)** Because it is the only way to analyze sorting algorithms.
 
 ### Answer Key & Explanations
 1. **B)** It is a technique for modeling recursive calls hierarchically to easily sum up the work done at every level of depth.

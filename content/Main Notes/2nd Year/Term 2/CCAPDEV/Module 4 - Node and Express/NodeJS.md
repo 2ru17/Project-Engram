@@ -97,22 +97,22 @@ bounded
 ## Multiple Choice Questions
 
 1. Which Node.js module must be required to create a basic web server manually?
-    - **A)** `express`
-    - **B)** `fs`
-    - **C)** `http`
-    - **D)** `path`
+- **A)** `express`
+- **B)** `fs`
+- **C)** `http`
+- **D)** `path`
 
 2. What does the `req` parameter represent in the request listener function `function (req, res) { }`?
-    - **A)** A ServerResponse object responsible for the stream back to the client.
-    - **B)** An IncomingMessage object containing details about the client request.
-    - **C)** A configuration file for the server's active port.
-    - **D)** The HTTP status code of the incoming connection.
+- **A)** A ServerResponse object responsible for the stream back to the client.
+- **B)** An IncomingMessage object containing details about the client request.
+- **C)** A configuration file for the server's active port.
+- **D)** The HTTP status code of the incoming connection.
 
 3. How do you make a Node.js HTTP server start accepting requests?
-    - **A)** By invoking `server.start()`
-    - **B)** By invoking `http.init()`
-    - **C)** By invoking `server.listen([port])`
-    - **D)** By invoking `req.accept()`
+- **A)** By invoking `server.start()`
+- **B)** By invoking `http.init()`
+- **C)** By invoking `server.listen([port])`
+- **D)** By invoking `req.accept()`
 
 ### Answer Key & Explanations
 1. **C)** To create a server, you need to include the core `http` module using `require('http')`.

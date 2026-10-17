@@ -198,52 +198,52 @@ Proceed to Module 4 (Enumeration) to banner grab and inspect MySQL permissions a
 ## Multiple Choice Questions
 
 1. Why does a TCP SYN scan (`-sS`) require root or administrative privileges to execute?
-    - **A)** Because it modifies the host's default gateway routing table.
-    - **B)** Because it constructs and transmits raw TCP packets bypassing the OS network stack.
-    - **C)** Because it automatically alters the remote server's file permissions.
-    - **D)** Because it decrypts encrypted SSH passwords in kernel memory.
+- **A)** Because it modifies the host's default gateway routing table.
+- **B)** Because it constructs and transmits raw TCP packets bypassing the OS network stack.
+- **C)** Because it automatically alters the remote server's file permissions.
+- **D)** Because it decrypts encrypted SSH passwords in kernel memory.
 
 2. In a TCP SYN scan, what packet does the scanner transmit immediately upon receiving a `SYN/ACK` from the target port?
-    - **A)** `ACK`
-    - **B)** `FIN`
-    - **C)** `RST`
-    - **D)** `PSH`
+- **A)** `ACK`
+- **B)** `FIN`
+- **C)** `RST`
+- **D)** `PSH`
 
 3. An Nmap scan against port 80 returns the state `filtered`. What does this indicate?
-    - **A)** The port is actively accepting connections and serving an HTTP website.
-    - **B)** The port responded with a `RST` packet indicating no service is listening.
-    - **C)** A packet filtering device (firewall or ACL) dropped the probe, preventing Nmap from determining the true state.
-    - **D)** The web server software was uninstalled by the system administrator.
+- **A)** The port is actively accepting connections and serving an HTTP website.
+- **B)** The port responded with a `RST` packet indicating no service is listening.
+- **C)** A packet filtering device (firewall or ACL) dropped the probe, preventing Nmap from determining the true state.
+- **D)** The web server software was uninstalled by the system administrator.
 
 4. Which Nmap command combination executes a ping sweep across the subnet `10.0.0.0/24` without performing any port scanning?
-    - **A)** `nmap -sT 10.0.0.0/24`
-    - **B)** `nmap -sn 10.0.0.0/24`
-    - **C)** `nmap -p- 10.0.0.0/24`
-    - **D)** `nmap -A 10.0.0.0/24`
+- **A)** `nmap -sT 10.0.0.0/24`
+- **B)** `nmap -sn 10.0.0.0/24`
+- **C)** `nmap -p- 10.0.0.0/24`
+- **D)** `nmap -A 10.0.0.0/24`
 
 5. Why are full 65,535-port UDP scans (`-sU -p-`) significantly slower than TCP scans against Linux targets?
-    - **A)** UDP packets are twice as large as TCP packets.
-    - **B)** The Linux kernel enforces strict ICMP rate limiting (typically 1 ICMP Port Unreachable packet per second).
-    - **C)** UDP requires a four-way handshake for every port probed.
-    - **D)** Nmap can only scan one UDP port per hour.
+- **A)** UDP packets are twice as large as TCP packets.
+- **B)** The Linux kernel enforces strict ICMP rate limiting (typically 1 ICMP Port Unreachable packet per second).
+- **C)** UDP requires a four-way handshake for every port probed.
+- **D)** Nmap can only scan one UDP port per hour.
 
 6. What is the effect of specifying the timing template `-T4` during an Nmap scan?
-    - **A)** It delays each probe by 5 minutes to evade intrusion detection systems.
-    - **B)** It sets aggressive timing parameters suitable for modern, reliable broadband networks.
-    - **C)** It automatically exploits all discovered vulnerabilities using Metasploit.
-    - **D)** It converts all TCP scans into UDP broadcasts.
+- **A)** It delays each probe by 5 minutes to evade intrusion detection systems.
+- **B)** It sets aggressive timing parameters suitable for modern, reliable broadband networks.
+- **C)** It automatically exploits all discovered vulnerabilities using Metasploit.
+- **D)** It converts all TCP scans into UDP broadcasts.
 
 7. Which Nmap flag combination instructs the tool to run default safe NSE scripts, detect service versions, and identify the remote operating system?
-    - **A)** `-sn -PR`
-    - **B)** `-sC -sV -O`
-    - **C)** `-T0 -p 80`
-    - **D)** `-oG output.gnmap`
+- **A)** `-sn -PR`
+- **B)** `-sC -sV -O`
+- **C)** `-T0 -p 80`
+- **D)** `-oG output.gnmap`
 
 8. A penetration tester scans only the default top 1000 ports and concludes that a server only runs SSH. Later, an attacker compromises the server via an admin console listening on port 8443. What scanning mistake occurred?
-    - **A)** The tester failed to scan the full 1–65535 TCP port range (`-p-`).
-    - **B)** The tester used a TCP SYN scan instead of a ping sweep.
-    - **C)** The tester failed to turn off their own firewall.
-    - **D)** The tester should have scanned only UDP ports.
+- **A)** The tester failed to scan the full 1–65535 TCP port range (`-p-`).
+- **B)** The tester used a TCP SYN scan instead of a ping sweep.
+- **C)** The tester failed to turn off their own firewall.
+- **D)** The tester should have scanned only UDP ports.
 
 ### Answer Key & Explanations
 

@@ -83,22 +83,22 @@ Variables... example
 ## Multiple Choice Questions
 
 1. Which of the following variable scopes was introduced in ES6 (2015) and is limited to variables declared within `{ }`?
-    - **A)** Global Scope
-    - **B)** Function Scope
-    - **C)** Block Scope
-    - **D)** Lexical Scope
+- **A)** Global Scope
+- **B)** Function Scope
+- **C)** Block Scope
+- **D)** Lexical Scope
 
 2. Because JavaScript is an untyped language, which of the following statements is true?
-    - **A)** Variables can only be assigned string values upon initialization.
-    - **B)** The data type of a variable can change based on the value assigned to it.
-    - **C)** You must explicitly declare the data type of a variable before using it.
-    - **D)** Variables cannot hold boolean values.
+- **A)** Variables can only be assigned string values upon initialization.
+- **B)** The data type of a variable can change based on the value assigned to it.
+- **C)** You must explicitly declare the data type of a variable before using it.
+- **D)** Variables cannot hold boolean values.
 
 3. Which of the following correctly describes "Function Scope" in JavaScript?
-    - **A)** Variables declared within a function are only visible within that function.
-    - **B)** Variables declared within a function are accessible globally anywhere in the script.
-    - **C)** Variables are limited to the nearest enclosing loop or conditional block.
-    - **D)** It allows functions to automatically hoist all global variables.
+- **A)** Variables declared within a function are only visible within that function.
+- **B)** Variables declared within a function are accessible globally anywhere in the script.
+- **C)** Variables are limited to the nearest enclosing loop or conditional block.
+- **D)** It allows functions to automatically hoist all global variables.
 
 ### Answer Key & Explanations
 1. **C)** Block Scope applies to variables declared within a block (i.e., `{ }`) and is a feature introduced in ES6.

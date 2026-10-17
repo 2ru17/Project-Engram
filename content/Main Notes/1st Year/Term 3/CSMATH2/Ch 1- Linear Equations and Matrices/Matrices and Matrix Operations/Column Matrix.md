@@ -66,22 +66,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What are the dimensions of a column matrix with $m$ rows?
-    - **A)** $m \times m$
-    - **B)** $1 \times m$
-    - **C)** $m \times 1$
-    - **D)** $1 \times 1$
+- **A)** $m \times m$
+- **B)** $1 \times m$
+- **C)** $m \times 1$
+- **D)** $1 \times 1$
 
 2. What is the result of taking the transpose of a column matrix?
-    - **A)** A scalar
-    - **B)** A square matrix
-    - **C)** A row matrix
-    - **D)** An identity matrix
+- **A)** A scalar
+- **B)** A square matrix
+- **C)** A row matrix
+- **D)** An identity matrix
 
 3. Which of the following statements about a column matrix and a row matrix with identical entries is true?
-    - **A)** They are equal as matrices.
-    - **B)** They represent the exact same vector in all mathematical contexts.
-    - **C)** They are not equal as matrices due to different dimensions.
-    - **D)** They can be added together without any transformations.
+- **A)** They are equal as matrices.
+- **B)** They represent the exact same vector in all mathematical contexts.
+- **C)** They are not equal as matrices due to different dimensions.
+- **D)** They can be added together without any transformations.
 
 ### Answer Key & Explanations
 1. **C)** A column matrix (column vector) is defined as a matrix with exactly one column and $m$ rows, denoted as an $m \times 1$ matrix.

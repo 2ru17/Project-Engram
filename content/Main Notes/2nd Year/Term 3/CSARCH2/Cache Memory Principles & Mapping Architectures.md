@@ -256,34 +256,34 @@ $$\text{Total Hardware Bits} = N \times \left( (B \times 8) + t + 1_{\text{Valid
 ## Multiple Choice Questions
 
 1. A 32-bit byte-addressable system uses a Direct-Mapped cache with 512 lines and a block size of 32 bytes. What is the bit configuration of the address fields?
-    - **A)** Tag: 18 bits, Line: 9 bits, Offset: 5 bits
-    - **B)** Tag: 16 bits, Line: 10 bits, Offset: 6 bits
-    - **C)** Tag: 20 bits, Line: 7 bits, Offset: 5 bits
-    - **D)** Tag: 15 bits, Line: 9 bits, Offset: 8 bits
+- **A)** Tag: 18 bits, Line: 9 bits, Offset: 5 bits
+- **B)** Tag: 16 bits, Line: 10 bits, Offset: 6 bits
+- **C)** Tag: 20 bits, Line: 7 bits, Offset: 5 bits
+- **D)** Tag: 15 bits, Line: 9 bits, Offset: 8 bits
 
 2. How many tag comparators operate in parallel during a cache lookup in an 8-Way Set-Associative cache?
-    - **A)** 1 comparator
-    - **B)** 8 comparators
-    - **C)** Total number of sets comparators
-    - **D)** Total number of cache lines comparators
+- **A)** 1 comparator
+- **B)** 8 comparators
+- **C)** Total number of sets comparators
+- **D)** Total number of cache lines comparators
 
 3. What is the primary advantage of Fully Associative cache mapping over Direct Mapping?
-    - **A)** Requires zero comparator circuits
-    - **B)** Completely eliminates conflict misses by allowing any memory block to occupy any cache frame
-    - **C)** Halves the memory bus cycle latency
-    - **D)** Uses fewer tag bits per cache entry
+- **A)** Requires zero comparator circuits
+- **B)** Completely eliminates conflict misses by allowing any memory block to occupy any cache frame
+- **C)** Halves the memory bus cycle latency
+- **D)** Uses fewer tag bits per cache entry
 
 4. In a $k$-Way Set-Associative cache with 2,048 total lines and $k = 4$, how many bits are required for the SET index field?
-    - **A)** 8 bits
-    - **B)** 9 bits
-    - **C)** 10 bits
-    - **D)** 11 bits
+- **A)** 8 bits
+- **B)** 9 bits
+- **C)** 10 bits
+- **D)** 11 bits
 
 5. What is the function of the Valid bit ($V$) in each cache line?
-    - **A)** Indicates whether the CPU is in supervisor kernel mode
-    - **B)** Indicates whether the line contains valid initialized memory data
-    - **C)** Indicates whether the line must be written back to DRAM
-    - **D)** Controls the tri-state output buffer gating
+- **A)** Indicates whether the CPU is in supervisor kernel mode
+- **B)** Indicates whether the line contains valid initialized memory data
+- **C)** Indicates whether the line must be written back to DRAM
+- **D)** Controls the tri-state output buffer gating
 
 ### Answer Key & Explanations
 

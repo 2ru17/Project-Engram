@@ -542,34 +542,34 @@ Correct Option is **C**.
 ## Multiple Choice Questions
 
 1. In Bayes theorem, what does the `prior` represent?
-    - **A)** The probability of the data given the hypothesis
-    - **B)** The initial belief about the hypothesis before seeing data
-    - **C)** The updated belief after observing data
-    - **D)** The marginal likelihood of the data
+- **A)** The probability of the data given the hypothesis
+- **B)** The initial belief about the hypothesis before seeing data
+- **C)** The updated belief after observing data
+- **D)** The marginal likelihood of the data
 
 2. Which term describes a prior distribution that, when multiplied by the likelihood, results in a posterior from the same distribution family?
-    - **A)** Uniform prior
-    - **B)** Objective prior
-    - **C)** Conjugate prior
-    - **D)** Empirical prior
+- **A)** Uniform prior
+- **B)** Objective prior
+- **C)** Conjugate prior
+- **D)** Empirical prior
 
 3. What is the fundamental assumption of the Naive Bayes classifier?
-    - **A)** Features are mutually exclusive
-    - **B)** Features are conditionally independent given the class label
-    - **C)** The prior probabilities are equal for all classes
-    - **D)** The likelihood function is normally distributed
+- **A)** Features are mutually exclusive
+- **B)** Features are conditionally independent given the class label
+- **C)** The prior probabilities are equal for all classes
+- **D)** The likelihood function is normally distributed
 
 4. How does the Bayesian approach differ from the Frequentist approach?
-    - **A)** Bayesian inference treats parameters as fixed and unknown
-    - **B)** Bayesian inference treats parameters as random variables with probability distributions
-    - **C)** Frequentist inference incorporates prior beliefs natively
-    - **D)** Bayesian inference does not use likelihood functions
+- **A)** Bayesian inference treats parameters as fixed and unknown
+- **B)** Bayesian inference treats parameters as random variables with probability distributions
+- **C)** Frequentist inference incorporates prior beliefs natively
+- **D)** Bayesian inference does not use likelihood functions
 
 5. The `posterior` probability is proportional to:
-    - **A)** Likelihood + Prior
-    - **B)** Likelihood / Prior
-    - **C)** Likelihood * Prior
-    - **D)** Prior - Likelihood
+- **A)** Likelihood + Prior
+- **B)** Likelihood / Prior
+- **C)** Likelihood * Prior
+- **D)** Prior - Likelihood
 
 ### Answer Key & Explanations
 1. **B)** The prior is the initial probability of the hypothesis.

@@ -73,64 +73,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does time complexity measure?
-    - **A)** The physical time in seconds it takes to compile code.
-    - **B)** The amount of computational time an algorithm takes as a function of the input size $n$.
-    - **C)** The exact number of variables created.
-    - **D)** The complexity of the code's logic and readability.
+- **A)** The physical time in seconds it takes to compile code.
+- **B)** The amount of computational time an algorithm takes as a function of the input size $n$.
+- **C)** The exact number of variables created.
+- **D)** The complexity of the code's logic and readability.
 
 2. How are primitive operations typically counted to determine time complexity?
-    - **A)** By timing the execution with a stopwatch.
-    - **B)** Using the Frequency Count method.
-    - **C)** By counting the number of lines of code.
-    - **D)** By guessing based on the number of loops.
+- **A)** By timing the execution with a stopwatch.
+- **B)** Using the Frequency Count method.
+- **C)** By counting the number of lines of code.
+- **D)** By guessing based on the number of loops.
 
 3. Which notation is most commonly used to express time complexity by classifying its growth rate?
-    - **A)** Little-o Notation
-    - **B)** Big-O Notation
-    - **C)** Little-omega Notation
-    - **D)** Roman Numerals
+- **A)** Little-o Notation
+- **B)** Big-O Notation
+- **C)** Little-omega Notation
+- **D)** Roman Numerals
 
 4. What is the time complexity of a simple array index access?
-    - **A)** $O(\log n)$
-    - **B)** $O(1)$
-    - **C)** $O(n)$
-    - **D)** $O(n^2)$
+- **A)** $O(\log n)$
+- **B)** $O(1)$
+- **C)** $O(n)$
+- **D)** $O(n^2)$
 
 5. Which of the following time complexities is considered the most efficient (slowest growing)?
-    - **A)** $O(n)$
-    - **B)** $O(n \log n)$
-    - **C)** $O(\log n)$
-    - **D)** $O(n^2)$
+- **A)** $O(n)$
+- **B)** $O(n \log n)$
+- **C)** $O(\log n)$
+- **D)** $O(n^2)$
 
 6. What does worst-case time complexity represent?
-    - **A)** The minimum time over all inputs of size $n$.
-    - **B)** The expected time over all inputs of size $n$.
-    - **C)** The maximum time over all inputs of size $n$.
-    - **D)** The time when the computer's memory is full.
+- **A)** The minimum time over all inputs of size $n$.
+- **B)** The expected time over all inputs of size $n$.
+- **C)** The maximum time over all inputs of size $n$.
+- **D)** The time when the computer's memory is full.
 
 7. What does average-case time complexity represent?
-    - **A)** The time taken by the median input.
-    - **B)** The expected time over all inputs of size $n$ based on a probability distribution.
-    - **C)** The maximum time minus the minimum time.
-    - **D)** The average of $O(1)$ and $O(n^2)$.
+- **A)** The time taken by the median input.
+- **B)** The expected time over all inputs of size $n$ based on a probability distribution.
+- **C)** The maximum time minus the minimum time.
+- **D)** The average of $O(1)$ and $O(n^2)$.
 
 8. Do we measure actual wall-clock time when determining theoretical time complexity?
-    - **A)** Yes, using benchmarking tools.
-    - **B)** No, we count the number of primitive/elementary operations executed.
-    - **C)** Yes, but only on standard reference hardware.
-    - **D)** No, we measure the memory space in bytes.
+- **A)** Yes, using benchmarking tools.
+- **B)** No, we count the number of primitive/elementary operations executed.
+- **C)** Yes, but only on standard reference hardware.
+- **D)** No, we measure the memory space in bytes.
 
 9. What is a common pitfall regarding $O(n^2)$ time complexity?
-    - **A)** Believing it means the algorithm executes in exactly 2 seconds.
-    - **B)** Confusing it with actual execution time and assuming it means "slow" for all inputs, rather than describing the growth rate.
-    - **C)** Forgetting that it stands for Space Complexity.
-    - **D)** Assuming it is faster than $O(n)$.
+- **A)** Believing it means the algorithm executes in exactly 2 seconds.
+- **B)** Confusing it with actual execution time and assuming it means "slow" for all inputs, rather than describing the growth rate.
+- **C)** Forgetting that it stands for Space Complexity.
+- **D)** Assuming it is faster than $O(n)$.
 
 10. Why does $O(2n)$ simplify to $O(n)$?
-    - **A)** Because time complexity analysis drops constants to focus purely on the order of growth.
-    - **B)** Because $2n$ is a typographical error.
-    - **C)** Because we divide the function by two to get average time.
-    - **D)** Because $2n$ is impossible to calculate.
+- **A)** Because time complexity analysis drops constants to focus purely on the order of growth.
+- **B)** Because $2n$ is a typographical error.
+- **C)** Because we divide the function by two to get average time.
+- **D)** Because $2n$ is impossible to calculate.
 
 ### Answer Key & Explanations
 1. **B)** Time complexity maps out the scaling curve of an algorithm, tracking how the required operations grow relative to larger and larger inputs.

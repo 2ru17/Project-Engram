@@ -35,28 +35,28 @@ The second mock exam focuses heavily on algorithm analysis (frequency counting, 
 ## Multiple Choice Questions
 
 1. What is a key focus of Mock Midterm Exam 02 that differentiates it slightly from the first exam?
-    - **A)** Determining appropriate asymptotic notations (Big Oh, Omega, Theta) and expression conversions.
-    - **B)** Implementing graph theory.
-    - **C)** Memory allocation in C.
-    - **D)** Database normalization.
+- **A)** Determining appropriate asymptotic notations (Big Oh, Omega, Theta) and expression conversions.
+- **B)** Implementing graph theory.
+- **C)** Memory allocation in C.
+- **D)** Database normalization.
 
 2. Which algorithmic notation is used to describe a tight bound on running time?
-    - **A)** Big Oh
-    - **B)** Big Omega
-    - **C)** Big Theta
-    - **D)** Little Oh
+- **A)** Big Oh
+- **B)** Big Omega
+- **C)** Big Theta
+- **D)** Little Oh
 
 3. What time complexity does Merge Sort achieve by combining two sorted arrays in $O(n)$ time?
-    - **A)** $O(n)$
-    - **B)** $O(n^2)$
-    - **C)** $O(n \log_2 n)$
-    - **D)** $O(\log n)$
+- **A)** $O(n)$
+- **B)** $O(n^2)$
+- **C)** $O(n \log_2 n)$
+- **D)** $O(\log n)$
 
 4. What worked example is mentioned regarding expression conversion?
-    - **A)** Converting a binary tree to a linked list.
-    - **B)** Converting a complex arithmetic expression to postfix and prefix notations.
-    - **C)** Converting JSON to XML.
-    - **D)** Converting a string to an integer.
+- **A)** Converting a binary tree to a linked list.
+- **B)** Converting a complex arithmetic expression to postfix and prefix notations.
+- **C)** Converting JSON to XML.
+- **D)** Converting a string to an integer.
 
 ### Answer Key & Explanations
 1. **A)** Exam 02 heavily emphasizes distinguishing between Big Oh, Omega, and Theta, as well as converting between infix, prefix, and postfix expressions.

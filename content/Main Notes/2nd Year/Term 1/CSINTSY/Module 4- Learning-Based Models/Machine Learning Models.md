@@ -53,34 +53,34 @@ Root Mean Squared Error (RMSE)
 ## Multiple Choice Questions
 
 1. How does Machine Learning primarily differ from traditional (symbolic) AI?
-    - **A)** ML models rules explicitly from the top-down to process data.
-    - **B)** ML uses a bottom-up approach, taking data and outputs to discover underlying rules automatically.
-    - **C)** ML relies entirely on logic programming languages.
-    - **D)** ML can only be applied to text-based data, whereas traditional AI handles images.
+- **A)** ML models rules explicitly from the top-down to process data.
+- **B)** ML uses a bottom-up approach, taking data and outputs to discover underlying rules automatically.
+- **C)** ML relies entirely on logic programming languages.
+- **D)** ML can only be applied to text-based data, whereas traditional AI handles images.
 
 2. In supervised learning, what is the key difference between classification and regression tasks?
-    - **A)** Classification predicts continuous variables, while regression groups unlabeled data.
-    - **B)** Classification groups data without labels, while regression uses labeled data.
-    - **C)** Classification predicts categorical variables (classes), while regression predicts continuous numerical variables.
-    - **D)** Classification uses K-Fold cross-validation, while regression relies on Accuracy.
+- **A)** Classification predicts continuous variables, while regression groups unlabeled data.
+- **B)** Classification groups data without labels, while regression uses labeled data.
+- **C)** Classification predicts categorical variables (classes), while regression predicts continuous numerical variables.
+- **D)** Classification uses K-Fold cross-validation, while regression relies on Accuracy.
 
 3. Which evaluation metric is specifically defined as the harmonic mean of precision and recall?
-    - **A)** Accuracy
-    - **B)** Mean Squared Error (MSE)
-    - **C)** Root Mean Squared Error (RMSE)
-    - **D)** F1-Score
+- **A)** Accuracy
+- **B)** Mean Squared Error (MSE)
+- **C)** Root Mean Squared Error (RMSE)
+- **D)** F1-Score
 
 4. What is the primary purpose of splitting a dataset into training and testing sets?
-    - **A)** To ensure the model evaluates fast enough on production hardware.
-    - **B)** To evaluate how well the trained model generalizes to unseen data.
-    - **C)** To double the amount of data the algorithm can learn from.
-    - **D)** To convert unsupervised data into supervised labels.
+- **A)** To ensure the model evaluates fast enough on production hardware.
+- **B)** To evaluate how well the trained model generalizes to unseen data.
+- **C)** To double the amount of data the algorithm can learn from.
+- **D)** To convert unsupervised data into supervised labels.
 
 5. How does K-Fold Cross-Validation operate?
-    - **A)** It trains $K$ separate models and discards the worst performing ones.
-    - **B)** It divides the data into $K$ parts, using $K-1$ parts for training and 1 part for testing, repeating this process $K$ times.
-    - **C)** It repeats the training process exactly $K$ times on the exact same train/test split to ensure stability.
-    - **D)** It applies $K$ different algorithms to the data to find the best fit.
+- **A)** It trains $K$ separate models and discards the worst performing ones.
+- **B)** It divides the data into $K$ parts, using $K-1$ parts for training and 1 part for testing, repeating this process $K$ times.
+- **C)** It repeats the training process exactly $K$ times on the exact same train/test split to ensure stability.
+- **D)** It applies $K$ different algorithms to the data to find the best fit.
 
 ### Answer Key & Explanations
 1. **B)** Traditional AI manually defines rules to generate answers, while ML feeds answers and data into an algorithm to figure out the rules.

@@ -48,22 +48,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What defines a scalar matrix?
-    - **A)** A diagonal matrix whose main diagonal entries are all equal.
-    - **B)** Any square matrix with at least one zero.
-    - **C)** An identity matrix multiplied by a negative number.
-    - **D)** A matrix composed entirely of ones.
+- **A)** A diagonal matrix whose main diagonal entries are all equal.
+- **B)** Any square matrix with at least one zero.
+- **C)** An identity matrix multiplied by a negative number.
+- **D)** A matrix composed entirely of ones.
 
 2. How can a scalar matrix with diagonal entries $k$ be written using the identity matrix $I_n$?
-    - **A)** $I_n + k$
-    - **B)** $k I_n$
-    - **C)** $I_n / k$
-    - **D)** $I_n - k$
+- **A)** $I_n + k$
+- **B)** $k I_n$
+- **C)** $I_n / k$
+- **D)** $I_n - k$
 
 3. What is a key property of a scalar matrix $kI$ when multiplied by any matrix $A$ of the same size?
-    - **A)** It always yields the zero matrix $O$.
-    - **B)** It always yields the identity matrix $I$.
-    - **C)** It commutes with $A$, meaning $kI \cdot A = A \cdot kI = kA$.
-    - **D)** It only commutes if $A$ is also a scalar matrix.
+- **A)** It always yields the zero matrix $O$.
+- **B)** It always yields the identity matrix $I$.
+- **C)** It commutes with $A$, meaning $kI \cdot A = A \cdot kI = kA$.
+- **D)** It only commutes if $A$ is also a scalar matrix.
 
 ### Answer Key & Explanations
 1. **A)** The definition states that a scalar matrix is a diagonal matrix where all main diagonal entries are equal to a constant $k$.

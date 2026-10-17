@@ -65,22 +65,22 @@ status: completed
 ## Multiple Choice Questions
 
 1. According to the guiding principles of REST, what does "Statelessness" mean?
-    - **A)** The server maintains an active, continuous socket connection with the client.
-    - **B)** Each request from the client must contain all information necessary to understand it, and session state is kept entirely on the client.
-    - **C)** The server is not allowed to use a database to store any persistent information.
-    - **D)** Clients cannot cache responses locally.
+- **A)** The server maintains an active, continuous socket connection with the client.
+- **B)** Each request from the client must contain all information necessary to understand it, and session state is kept entirely on the client.
+- **C)** The server is not allowed to use a database to store any persistent information.
+- **D)** Clients cannot cache responses locally.
 
 2. Which of the following HTTP methods is typically used to request data and is considered "Safe" (i.e., it does not alter the state of the server)?
-    - **A)** POST
-    - **B)** PUT
-    - **C)** DELETE
-    - **D)** GET
+- **A)** POST
+- **B)** PUT
+- **C)** DELETE
+- **D)** GET
 
 3. What is the primary benefit of Client-Server decoupling in REST architecture?
-    - **A)** It allows the server to directly manipulate the client's DOM.
-    - **B)** It forces both components to share the exact same programming language.
-    - **C)** It improves the portability of the user interface across platforms and simplifies server components.
-    - **D)** It merges the data storage layer directly into the client's browser.
+- **A)** It allows the server to directly manipulate the client's DOM.
+- **B)** It forces both components to share the exact same programming language.
+- **C)** It improves the portability of the user interface across platforms and simplifies server components.
+- **D)** It merges the data storage layer directly into the client's browser.
 
 ### Answer Key & Explanations
 1. **B)** Statelessness means that each request must contain all the information necessary for the server to understand it, keeping the session state entirely on the client.

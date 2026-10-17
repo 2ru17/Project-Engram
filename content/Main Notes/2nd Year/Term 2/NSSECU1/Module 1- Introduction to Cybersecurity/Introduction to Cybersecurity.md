@@ -55,64 +55,64 @@ Consider a web application that stores user data.
 
 ## Multiple Choice Questions
 1. Which of the following is NOT part of the CIA Triad?
-    - **A)** Confidentiality
-    - **B)** Integrity
-    - **C)** Authorization
-    - **D)** Availability
+- **A)** Confidentiality
+- **B)** Integrity
+- **C)** Authorization
+- **D)** Availability
 
 2. What does Confidentiality ensure?
-    - **A)** Data is accessible when needed
-    - **B)** Data is accurate and unaltered
-    - **C)** Data is only accessible to authorized individuals
-    - **D)** Systems are redundant
+- **A)** Data is accessible when needed
+- **B)** Data is accurate and unaltered
+- **C)** Data is only accessible to authorized individuals
+- **D)** Systems are redundant
 
 3. A weakness in a system that can be exploited is called a:
-    - **A)** Threat
-    - **B)** Vulnerability
-    - **C)** Risk
-    - **D)** Exploit
+- **A)** Threat
+- **B)** Vulnerability
+- **C)** Risk
+- **D)** Exploit
 
 4. Which security control is designed to fix an issue after an incident has occurred?
-    - **A)** Preventative
-    - **B)** Detective
-    - **C)** Corrective
-    - **D)** Deterrent
+- **A)** Preventative
+- **B)** Detective
+- **C)** Corrective
+- **D)** Deterrent
 
 5. What is the formula often used to conceptualize risk?
-    - **A)** Risk = Threat $\times$ Vulnerability $\times$ Impact
-    - **B)** Risk = Threat + Vulnerability
-    - **C)** Risk = Impact / Threat
-    - **D)** Risk = Vulnerability - Mitigation
+- **A)** Risk = Threat $\times$ Vulnerability $\times$ Impact
+- **B)** Risk = Threat + Vulnerability
+- **C)** Risk = Impact / Threat
+- **D)** Risk = Vulnerability - Mitigation
 
 6. Hashing is primarily used to ensure which part of the CIA Triad?
-    - **A)** Confidentiality
-    - **B)** Integrity
-    - **C)** Availability
-    - **D)** Non-repudiation
+- **A)** Confidentiality
+- **B)** Integrity
+- **C)** Availability
+- **D)** Non-repudiation
 
 7. Implementing a backup generator is an example of supporting which principle?
-    - **A)** Confidentiality
-    - **B)** Integrity
-    - **C)** Availability
-    - **D)** Authentication
+- **A)** Confidentiality
+- **B)** Integrity
+- **C)** Availability
+- **D)** Authentication
 
 8. Threat modeling is best performed during which phase of software development?
-    - **A)** Deployment
-    - **B)** Maintenance
-    - **C)** Design
-    - **D)** Incident Response
+- **A)** Deployment
+- **B)** Maintenance
+- **C)** Design
+- **D)** Incident Response
 
 9. Accepting a risk means:
-    - **A)** Implementing all possible controls
-    - **B)** Ignoring the risk completely
-    - **C)** Acknowledging the risk and choosing not to mitigate it further due to cost-benefit analysis
-    - **D)** Transferring the risk to a third party
+- **A)** Implementing all possible controls
+- **B)** Ignoring the risk completely
+- **C)** Acknowledging the risk and choosing not to mitigate it further due to cost-benefit analysis
+- **D)** Transferring the risk to a third party
 
 10. Which of the following best describes an Insider Threat?
-    - **A)** A state-sponsored hacker
-    - **B)** A script kiddie
-    - **C)** A disgruntled employee with valid access
-    - **D)** An automated botnet
+- **A)** A state-sponsored hacker
+- **B)** A script kiddie
+- **C)** A disgruntled employee with valid access
+- **D)** An automated botnet
 
 ### Answer Key & Explanations
 1. **C.** Authorization is not part of the CIA Triad; the triad consists of Confidentiality, Integrity, and Availability.

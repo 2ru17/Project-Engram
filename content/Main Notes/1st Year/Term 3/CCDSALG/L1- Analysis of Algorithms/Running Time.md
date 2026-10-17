@@ -55,34 +55,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is the primary goal of measuring "Running Time" in theoretical algorithm analysis?
-    - **A)** To find out the exact number of seconds the algorithm takes to run.
-    - **B)** To predict the time an algorithm takes to execute as a function of input size $n$.
-    - **C)** To measure battery consumption.
-    - **D)** To count the number of variables in the code.
+- **A)** To find out the exact number of seconds the algorithm takes to run.
+- **B)** To predict the time an algorithm takes to execute as a function of input size $n$.
+- **C)** To measure battery consumption.
+- **D)** To count the number of variables in the code.
 
 2. Which abstract computational model is typically assumed when quantifying running time?
-    - **A)** Quantum Computer Model
-    - **B)** Multi-Core Parallel Model
-    - **C)** RAM Model (Random Access Machine)
-    - **D)** Turing Machine
+- **A)** Quantum Computer Model
+- **B)** Multi-Core Parallel Model
+- **C)** RAM Model (Random Access Machine)
+- **D)** Turing Machine
 
 3. What is a key assumption made about instructions under the standard model of computation?
-    - **A)** They execute in parallel.
-    - **B)** Complex instructions take exponentially more time.
-    - **C)** Instructions execute sequentially, and basic instructions take constant time (1 time unit).
-    - **D)** Memory access time increases with data size.
+- **A)** They execute in parallel.
+- **B)** Complex instructions take exponentially more time.
+- **C)** Instructions execute sequentially, and basic instructions take constant time (1 time unit).
+- **D)** Memory access time increases with data size.
 
 4. What limitation does the standard analysis model have regarding modern hardware?
-    - **A)** It perfectly models cache behavior but ignores RAM.
-    - **B)** It doesn't account for memory hierarchy (caches, virtual memory), pipelining, or multi-core processors.
-    - **C)** It cannot analyze recursive functions.
-    - **D)** It only works for sorting algorithms.
+- **A)** It perfectly models cache behavior but ignores RAM.
+- **B)** It doesn't account for memory hierarchy (caches, virtual memory), pipelining, or multi-core processors.
+- **C)** It cannot analyze recursive functions.
+- **D)** It only works for sorting algorithms.
 
 5. What is a common pitfall regarding running time analysis?
-    - **A)** Trying to predict exact wall-clock running time from the analysis instead of an approximation of growth.
-    - **B)** Using Big-O notation.
-    - **C)** Assuming variables take up space.
-    - **D)** Counting the input size as $n$.
+- **A)** Trying to predict exact wall-clock running time from the analysis instead of an approximation of growth.
+- **B)** Using Big-O notation.
+- **C)** Assuming variables take up space.
+- **D)** Counting the input size as $n$.
 
 ### Answer Key & Explanations
 1. **B)** Running time analysis aims to map the number of computational steps required relative to the size of the input, mapping scaling behavior rather than raw speed.

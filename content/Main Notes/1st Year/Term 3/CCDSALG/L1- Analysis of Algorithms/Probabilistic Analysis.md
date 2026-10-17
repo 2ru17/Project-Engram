@@ -56,34 +56,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is the primary purpose of probabilistic analysis?
-    - **A)** To find the exact worst-case running time of an algorithm.
-    - **B)** To analyze algorithm performance based on probabilistic assumptions about input distribution or randomization.
-    - **C)** To determine the physical memory constraints of a program.
-    - **D)** To convert recursive functions into iterative loops.
+- **A)** To find the exact worst-case running time of an algorithm.
+- **B)** To analyze algorithm performance based on probabilistic assumptions about input distribution or randomization.
+- **C)** To determine the physical memory constraints of a program.
+- **D)** To convert recursive functions into iterative loops.
 
 2. How does probabilistic analysis differ from average-case analysis?
-    - **A)** They are exactly the same concept.
-    - **B)** Average-case only looks at sorting algorithms.
-    - **C)** Average-case assumes a distribution over inputs; probabilistic analysis can also study randomized algorithms for ANY input.
-    - **D)** Probabilistic analysis only applies to worst-case inputs.
+- **A)** They are exactly the same concept.
+- **B)** Average-case only looks at sorting algorithms.
+- **C)** Average-case assumes a distribution over inputs; probabilistic analysis can also study randomized algorithms for ANY input.
+- **D)** Probabilistic analysis only applies to worst-case inputs.
 
 3. Which of the following is a common application of probabilistic analysis mentioned in the notes?
-    - **A)** Analyzing the exact lower bound of Merge Sort.
-    - **B)** Analyzing the expected height of a randomly built binary search tree.
-    - **C)** Analyzing the space complexity of an array.
-    - **D)** Analyzing a simple `for` loop.
+- **A)** Analyzing the exact lower bound of Merge Sort.
+- **B)** Analyzing the expected height of a randomly built binary search tree.
+- **C)** Analyzing the space complexity of an array.
+- **D)** Analyzing a simple `for` loop.
 
 4. What is a major pitfall when performing probabilistic analysis?
-    - **A)** Treating the expected running time as an absolute guarantee rather than an average.
-    - **B)** Using probabilities.
-    - **C)** Assuming the worst-case is the best-case.
-    - **D)** Analyzing recursive functions.
+- **A)** Treating the expected running time as an absolute guarantee rather than an average.
+- **B)** Using probabilities.
+- **C)** Assuming the worst-case is the best-case.
+- **D)** Analyzing recursive functions.
 
 5. What assumption must be realistic for probabilistic results (based on input distribution) to be practically valid?
-    - **A)** That the input is always sorted.
-    - **B)** That the assumed input distribution (e.g., uniform distribution) actually matches reality.
-    - **C)** That the algorithm has $O(1)$ space complexity.
-    - **D)** That there are no loops in the code.
+- **A)** That the input is always sorted.
+- **B)** That the assumed input distribution (e.g., uniform distribution) actually matches reality.
+- **C)** That the algorithm has $O(1)$ space complexity.
+- **D)** That there are no loops in the code.
 
 ### Answer Key & Explanations
 1. **B)** It evaluates algorithms by applying probability theory either to the likelihood of certain inputs occurring or to random decisions made inside the algorithm.

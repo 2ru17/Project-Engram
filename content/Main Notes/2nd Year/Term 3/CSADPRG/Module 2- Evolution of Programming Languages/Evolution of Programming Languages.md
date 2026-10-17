@@ -70,64 +70,64 @@ The evolution of programming languages highlights a progression from early machi
 ## Multiple Choice Questions
 
 1. Which early programming language was designed by Konrad Zuse but never implemented?
-    - **A)** Plankalkül
-    - **B)** Speedcoding
-    - **C)** Fortran
-    - **D)** LISP
+- **A)** Plankalkül
+- **B)** Speedcoding
+- **C)** Fortran
+- **D)** LISP
 
 2. What design principle involves combining a small set of primitive constructs in a few ways to build control and data structures, as seen in ALGOL 68?
-    - **A)** Coroutines
-    - **B)** Data abstraction
-    - **C)** Orthogonality
-    - **D)** Logic programming
+- **A)** Coroutines
+- **B)** Data abstraction
+- **C)** Orthogonality
+- **D)** Logic programming
 
 3. Which language was the first major scientific language and focused heavily on machine efficiency?
-    - **A)** COBOL
-    - **B)** Fortran
-    - **C)** C
-    - **D)** LISP
+- **A)** COBOL
+- **B)** Fortran
+- **C)** C
+- **D)** LISP
 
 4. LISP pioneered which programming paradigm?
-    - **A)** Object-oriented programming
-    - **B)** Functional programming
-    - **C)** Logic programming
-    - **D)** Structured programming
+- **A)** Object-oriented programming
+- **B)** Functional programming
+- **C)** Logic programming
+- **D)** Structured programming
 
 5. What was a key contribution of ALGOL 60 to programming language history?
-    - **A)** It introduced hierarchical data structures for business processing.
-    - **B)** It was the first full implementation of an object-oriented language.
-    - **C)** It became the first machine-independent language with a formally defined syntax.
-    - **D)** It introduced the use of a formal logic notation.
+- **A)** It introduced hierarchical data structures for business processing.
+- **B)** It was the first full implementation of an object-oriented language.
+- **C)** It became the first machine-independent language with a formally defined syntax.
+- **D)** It introduced the use of a formal logic notation.
 
 6. Which language was designed for business data processing and was required to look like simple English?
-    - **A)** BASIC
-    - **B)** PL/1
-    - **C)** Pascal
-    - **D)** COBOL
+- **A)** BASIC
+- **B)** PL/1
+- **C)** Pascal
+- **D)** COBOL
 
 7. Which language introduced the concept of *classes* containing both local data and functionality, marking the beginning of data abstraction?
-    - **A)** SIMULA 67
-    - **B)** Smalltalk
-    - **C)** C++
-    - **D)** Java
+- **A)** SIMULA 67
+- **B)** Smalltalk
+- **C)** C++
+- **D)** Java
 
 8. What was Smalltalk's major contribution to programming languages?
-    - **A)** It was the first language designed for systems programming.
-    - **B)** It was the first full implementation of an object-oriented language and pioneered the graphical user interface.
-    - **C)** It introduced block structures and local scopes.
-    - **D)** It was designed primarily for teaching structured programming.
+- **A)** It was the first language designed for systems programming.
+- **B)** It was the first full implementation of an object-oriented language and pioneered the graphical user interface.
+- **C)** It introduced block structures and local scopes.
+- **D)** It was designed primarily for teaching structured programming.
 
 9. Prolog operates under which programming paradigm?
-    - **A)** Imperative programming
-    - **B)** Scripting
-    - **C)** Object-oriented programming
-    - **D)** Logic programming
+- **A)** Imperative programming
+- **B)** Scripting
+- **C)** Object-oriented programming
+- **D)** Logic programming
 
 10. Which language was developed by Larry Wall and features implicit variables and associative arrays (hashes)?
-    - **A)** JavaScript
-    - **B)** C
-    - **C)** Perl
-    - **D)** APL
+- **A)** JavaScript
+- **B)** C
+- **C)** Perl
+- **D)** APL
 
 ### Answer Key & Explanations
 1. **A** - Plankalkül was designed by Konrad Zuse in 1945 but was never implemented, despite featuring advanced data structures and invariants.

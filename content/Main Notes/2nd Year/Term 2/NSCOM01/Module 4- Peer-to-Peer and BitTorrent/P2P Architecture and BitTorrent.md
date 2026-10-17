@@ -55,64 +55,64 @@ $$D_{P2P} \ge \max\left\{ \frac{F}{u_s}, \frac{F}{d_{min}}, \frac{N \cdot F}{u_s
 
 ## Multiple Choice Questions
 1. What is a defining characteristic of a P2P architecture?
-    - **A)** It requires an always-on central database server.
-    - **B)** End systems communicate directly with each other.
-    - **C)** All traffic must route through a Proxy server.
-    - **D)** Upload capacity remains constant regardless of the number of users.
+- **A)** It requires an always-on central database server.
+- **B)** End systems communicate directly with each other.
+- **C)** All traffic must route through a Proxy server.
+- **D)** Upload capacity remains constant regardless of the number of users.
 
 2. Why is P2P considered "self-scaling"?
-    - **A)** Because the central server automatically upgrades its CPU.
-    - **B)** Because new peers bring both service demands and new service capacity (upload bandwidth).
-    - **C)** Because it uses UDP instead of TCP.
-    - **D)** Because files are never larger than 256 Kb.
+- **A)** Because the central server automatically upgrades its CPU.
+- **B)** Because new peers bring both service demands and new service capacity (upload bandwidth).
+- **C)** Because it uses UDP instead of TCP.
+- **D)** Because files are never larger than 256 Kb.
 
 3. In a Client-Server model, as the number of clients ($N$) increases, the distribution time:
-    - **A)** Decreases exponentially
-    - **B)** Remains constant
-    - **C)** Increases linearly
-    - **D)** Drops to zero
+- **A)** Decreases exponentially
+- **B)** Remains constant
+- **C)** Increases linearly
+- **D)** Drops to zero
 
 4. In BitTorrent, what is a "Torrent"?
-    - **A)** A single file being downloaded
-    - **B)** The central server that stores the files
-    - **C)** The group of peers exchanging chunks of a file
-    - **D)** The algorithm used to sort files
+- **A)** A single file being downloaded
+- **B)** The central server that stores the files
+- **C)** The group of peers exchanging chunks of a file
+- **D)** The algorithm used to sort files
 
 5. What is the role of a Tracker in BitTorrent?
-    - **A)** It stores and uploads the file chunks to peers.
-    - **B)** It monitors network bandwidth for the ISP.
-    - **C)** It keeps track of the IP addresses of peers participating in the torrent.
-    - **D)** It encrypts the chunks before transmission.
+- **A)** It stores and uploads the file chunks to peers.
+- **B)** It monitors network bandwidth for the ISP.
+- **C)** It keeps track of the IP addresses of peers participating in the torrent.
+- **D)** It encrypts the chunks before transmission.
 
 6. What size are BitTorrent chunks typically?
-    - **A)** 64 bytes
-    - **B)** 160 bytes
-    - **C)** 256 Kb
-    - **D)** 1 Mb
+- **A)** 64 bytes
+- **B)** 160 bytes
+- **C)** 256 Kb
+- **D)** 1 Mb
 
 7. Which strategy ensures that the most scarce pieces of a file are duplicated quickly across the network?
-    - **A)** Tit-for-Tat
-    - **B)** Optimistic Unchoking
-    - **C)** Rarest First
-    - **D)** Round-Robin
+- **A)** Tit-for-Tat
+- **B)** Optimistic Unchoking
+- **C)** Rarest First
+- **D)** Round-Robin
 
 8. What is the primary purpose of the Tit-for-Tat mechanism in BitTorrent?
-    - **A)** To encrypt data streams
-    - **B)** To reward peers that upload at high rates and penalize leechers
-    - **C)** To synchronize audio and video playout
-    - **D)** To locate the nearest Tracker
+- **A)** To encrypt data streams
+- **B)** To reward peers that upload at high rates and penalize leechers
+- **C)** To synchronize audio and video playout
+- **D)** To locate the nearest Tracker
 
 9. How often does a BitTorrent peer re-evaluate its top 4 trading partners under the Tit-for-Tat rule?
-    - **A)** Every 1 second
-    - **B)** Every 10 seconds
-    - **C)** Every 30 seconds
-    - **D)** Every hour
+- **A)** Every 1 second
+- **B)** Every 10 seconds
+- **C)** Every 30 seconds
+- **D)** Every hour
 
 10. What mechanism allows a brand-new peer, who has no chunks to trade, to receive their first chunk?
-    - **A)** Rarest First
-    - **B)** Tracker Handshake
-    - **C)** Optimistic Unchoking
-    - **D)** Registrar Server
+- **A)** Rarest First
+- **B)** Tracker Handshake
+- **C)** Optimistic Unchoking
+- **D)** Registrar Server
 
 ### Answer Key & Explanations
 1. **B** - P2P is decentralized; peers connect directly.

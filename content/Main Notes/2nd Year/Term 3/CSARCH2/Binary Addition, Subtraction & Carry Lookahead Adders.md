@@ -266,34 +266,34 @@ Hierarchical CLA achieves an overall delay of $O(\log n)$.
 ## Multiple Choice Questions
 
 1. In an $n$-bit 2's complement adder, what boolean expression detects signed arithmetic overflow?
-    - **A)** $V = C_n \cdot C_{n-1}$
-    - **B)** $V = C_n \oplus C_{n-1}$
-    - **C)** $V = C_n + C_0$
-    - **D)** $V = \overline{C_n} \cdot C_{n-1}$
+- **A)** $V = C_n \cdot C_{n-1}$
+- **B)** $V = C_n \oplus C_{n-1}$
+- **C)** $V = C_n + C_0$
+- **D)** $V = \overline{C_n} \cdot C_{n-1}$
 
 2. What is the fundamental asymptotic time complexity of an $n$-bit Ripple Carry Adder compared to an $n$-bit Hierarchical Carry Lookahead Adder?
-    - **A)** RCA: $O(1)$; CLA: $O(n)$
-    - **B)** RCA: $O(\log n)$; CLA: $O(n)$
-    - **C)** RCA: $O(n)$; CLA: $O(\log n)$
-    - **D)** RCA: $O(n^2)$; CLA: $O(n)$
+- **A)** RCA: $O(1)$; CLA: $O(n)$
+- **B)** RCA: $O(\log n)$; CLA: $O(n)$
+- **C)** RCA: $O(n)$; CLA: $O(\log n)$
+- **D)** RCA: $O(n^2)$; CLA: $O(n)$
 
 3. For a 1-bit Full Adder stage, what is the boolean expression for the Carry Propagate ($P_i$) term?
-    - **A)** $P_i = A_i \cdot B_i$
-    - **B)** $P_i = A_i \oplus B_i$
-    - **C)** $P_i = A_i + C_i$
-    - **D)** $P_i = \overline{A_i \cdot B_i}$
+- **A)** $P_i = A_i \cdot B_i$
+- **B)** $P_i = A_i \oplus B_i$
+- **C)** $P_i = A_i + C_i$
+- **D)** $P_i = \overline{A_i \cdot B_i}$
 
 4. What is the primary physical constraint that prevents microprocessors from implementing single-level 64-bit Carry Lookahead Adders?
-    - **A)** Excessive clock cycle skew in synchronous flip-flops
-    - **B)** High gate fan-in and fan-out constraints in silicon lithography
-    - **C)** Inability to perform boolean OR operations on more than 2 variables
-    - **D)** Sub-threshold leakage current in 2's complement registers
+- **A)** Excessive clock cycle skew in synchronous flip-flops
+- **B)** High gate fan-in and fan-out constraints in silicon lithography
+- **C)** Inability to perform boolean OR operations on more than 2 variables
+- **D)** Sub-threshold leakage current in 2's complement registers
 
 5. In a unified 4-bit Adder/Subtractor circuit, if the subtraction control line $\text{Sub} = 1$, what are the inputs applied to the first Full Adder stage (FA 0)?
-    - **A)** $A_0$, $B_0$, $C_0 = 0$
-    - **B)** $A_0$, $\overline{B_0}$, $C_0 = 0$
-    - **C)** $A_0$, $\overline{B_0}$, $C_0 = 1$
-    - **D)** $\overline{A_0}$, $B_0$, $C_0 = 1$
+- **A)** $A_0$, $B_0$, $C_0 = 0$
+- **B)** $A_0$, $\overline{B_0}$, $C_0 = 0$
+- **C)** $A_0$, $\overline{B_0}$, $C_0 = 1$
+- **D)** $\overline{A_0}$, $B_0$, $C_0 = 1$
 
 ### Answer Key & Explanations
 

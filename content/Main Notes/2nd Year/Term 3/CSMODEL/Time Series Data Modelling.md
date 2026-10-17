@@ -926,34 +926,34 @@ ERROR METRICS (lower = better)
 ## Multiple Choice Questions
 
 1. A time series is considered `Stationary` when:
-    - **A)** Its mean and variance are constant over time
-    - **B)** It contains a strong upward trend
-    - **C)** It has obvious seasonal cycles
-    - **D)** The observations are randomly shuffled
+- **A)** Its mean and variance are constant over time
+- **B)** It contains a strong upward trend
+- **C)** It has obvious seasonal cycles
+- **D)** The observations are randomly shuffled
 
 2. In an ARIMA(p, d, q) model, what does the parameter `d` represent?
-    - **A)** The autoregressive order
-    - **B)** The degree of differencing required to make the series stationary
-    - **C)** The moving average order
-    - **D)** The seasonal period length
+- **A)** The autoregressive order
+- **B)** The degree of differencing required to make the series stationary
+- **C)** The moving average order
+- **D)** The seasonal period length
 
 3. When determining the parameters for an ARIMA model, a sharp cut-off in the ACF plot suggests:
-    - **A)** The AR order (p)
-    - **B)** The MA order (q)
-    - **C)** The differencing order (d)
-    - **D)** The seasonality (s)
+- **A)** The AR order (p)
+- **B)** The MA order (q)
+- **C)** The differencing order (d)
+- **D)** The seasonality (s)
 
 4. The Augmented Dickey-Fuller (ADF) test is used to:
-    - **A)** Determine the optimal learning rate
-    - **B)** Test whether a time series is stationary or has a unit root
-    - **C)** Detect outliers in the dataset
-    - **D)** Impute missing values
+- **A)** Determine the optimal learning rate
+- **B)** Test whether a time series is stationary or has a unit root
+- **C)** Detect outliers in the dataset
+- **D)** Impute missing values
 
 5. What is the fundamental difference between an AR model and an MA model?
-    - **A)** AR uses past values of the series; MA uses past forecast errors
-    - **B)** AR is used for forecasting; MA is used for clustering
-    - **C)** AR uses past forecast errors; MA uses past values of the series
-    - **D)** AR requires non-stationary data; MA requires stationary data
+- **A)** AR uses past values of the series; MA uses past forecast errors
+- **B)** AR is used for forecasting; MA is used for clustering
+- **C)** AR uses past forecast errors; MA uses past values of the series
+- **D)** AR requires non-stationary data; MA requires stationary data
 
 ### Answer Key & Explanations
 1. **A)** Stationarity implies statistical properties like mean and variance do not change over time.

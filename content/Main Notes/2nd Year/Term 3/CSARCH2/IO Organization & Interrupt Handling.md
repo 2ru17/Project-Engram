@@ -174,34 +174,34 @@ Calculate the percentage of total CPU capacity consumed under each paradigm.
 ## Multiple Choice Questions
 
 1. In Memory-Mapped I/O (MMIO), how does the processor access peripheral device control registers?
-    - **A)** Using special `IN` and `OUT` assembly instructions exclusively
-    - **B)** Using standard memory access instructions (`MOV`, `LOAD`, `STORE`) targeting reserved physical memory addresses
-    - **C)** By transmitting microcode over the serial bus
-    - **D)** By issuing page fault traps to the operating system
+- **A)** Using special `IN` and `OUT` assembly instructions exclusively
+- **B)** Using standard memory access instructions (`MOV`, `LOAD`, `STORE`) targeting reserved physical memory addresses
+- **C)** By transmitting microcode over the serial bus
+- **D)** By issuing page fault traps to the operating system
 
 2. What is the primary operational advantage of Direct Memory Access (DMA) over Interrupt-Driven I/O?
-    - **A)** DMA allows the CPU to calculate floating-point operations faster
-    - **B)** DMA enables high-speed bulk data transfers directly between devices and memory without requiring CPU cycles for every individual byte
-    - **C)** DMA eliminates the need for physical DRAM
-    - **D)** DMA prevents all cache misses
+- **A)** DMA allows the CPU to calculate floating-point operations faster
+- **B)** DMA enables high-speed bulk data transfers directly between devices and memory without requiring CPU cycles for every individual byte
+- **C)** DMA eliminates the need for physical DRAM
+- **D)** DMA prevents all cache misses
 
 3. What action does the CPU take immediately upon receiving a hardware interrupt request (assuming interrupts are unmasked)?
-    - **A)** Immediately halts and reboots the motherboard
-    - **B)** Completes the execution of the current machine instruction before saving context and servicing the interrupt
-    - **C)** Aborts the current instruction mid-cycle and clears the register file
-    - **D)** Switches from 64-bit mode to 16-bit real mode
+- **A)** Immediately halts and reboots the motherboard
+- **B)** Completes the execution of the current machine instruction before saving context and servicing the interrupt
+- **C)** Aborts the current instruction mid-cycle and clears the register file
+- **D)** Switches from 64-bit mode to 16-bit real mode
 
 4. In DMA **Cycle Stealing** mode, how does the DMA controller transfer data?
-    - **A)** It locks the system bus for several minutes continuously
-    - **B)** It takes control of the bus for one bus cycle at a time, interleaving word transfers with CPU bus operations
-    - **C)** It transfers data only when the computer is powered down
-    - **D)** It re-encodes data using Booth's multiplication algorithm
+- **A)** It locks the system bus for several minutes continuously
+- **B)** It takes control of the bus for one bus cycle at a time, interleaving word transfers with CPU bus operations
+- **C)** It transfers data only when the computer is powered down
+- **D)** It re-encodes data using Booth's multiplication algorithm
 
 5. What data structure does the CPU reference to locate the memory address of an Interrupt Service Routine corresponding to an interrupt vector number?
-    - **A)** Translation Lookaside Buffer (TLB)
-    - **B)** Interrupt Vector Table (IVT) / Interrupt Descriptor Table (IDT)
-    - **C)** Cache Tag Array
-    - **D)** Branch Target Buffer (BTB)
+- **A)** Translation Lookaside Buffer (TLB)
+- **B)** Interrupt Vector Table (IVT) / Interrupt Descriptor Table (IDT)
+- **C)** Cache Tag Array
+- **D)** Branch Target Buffer (BTB)
 
 ### Answer Key & Explanations
 

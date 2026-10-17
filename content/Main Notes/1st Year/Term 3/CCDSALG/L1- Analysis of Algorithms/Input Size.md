@@ -56,34 +56,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. In algorithm analysis, what does the parameter $n$ typically represent?
-    - **A)** The number of loops in the code
-    - **B)** The execution time in seconds
-    - **C)** The size of the input (e.g., number of items in an array)
-    - **D)** The amount of physical memory used
+- **A)** The number of loops in the code
+- **B)** The execution time in seconds
+- **C)** The size of the input (e.g., number of items in an array)
+- **D)** The amount of physical memory used
 
 2. How is algorithm performance typically expressed in theoretical analysis?
-    - **A)** As a function of $n$
-    - **B)** As a constant value
-    - **C)** In milliseconds
-    - **D)** As a percentage of CPU usage
+- **A)** As a function of $n$
+- **B)** As a constant value
+- **C)** In milliseconds
+- **D)** As a percentage of CPU usage
 
 3. For a graph algorithm, what might the input size $n$ represent?
-    - **A)** The number of lines of code
-    - **B)** The number of vertices or edges
-    - **C)** The length of the shortest path
-    - **D)** The maximum weight of an edge
+- **A)** The number of lines of code
+- **B)** The number of vertices or edges
+- **C)** The length of the shortest path
+- **D)** The maximum weight of an edge
 
 4. What is a common pitfall regarding input size?
-    - **A)** Always defining it as the number of bits
-    - **B)** Using the wrong parameter for input size (e.g., vertices vs edges in a graph)
-    - **C)** Assuming $n$ must be an integer
-    - **D)** Using $n$ to represent time instead of space
+- **A)** Always defining it as the number of bits
+- **B)** Using the wrong parameter for input size (e.g., vertices vs edges in a graph)
+- **C)** Assuming $n$ must be an integer
+- **D)** Using $n$ to represent time instead of space
 
 5. Why is properly defining the input size critical?
-    - **A)** Because it dictates which programming language must be used
-    - **B)** Because it determines if the code will compile
-    - **C)** Because the input size definition affects the entire complexity analysis
-    - **D)** Because it guarantees total correctness
+- **A)** Because it dictates which programming language must be used
+- **B)** Because it determines if the code will compile
+- **C)** Because the input size definition affects the entire complexity analysis
+- **D)** Because it guarantees total correctness
 
 ### Answer Key & Explanations
 1. **C)** $n$ is the standard parameter used to characterize the size of the problem the algorithm is solving.

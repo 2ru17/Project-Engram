@@ -63,22 +63,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What condition is strictly required to perform matrix addition $A + B$?
-    - **A)** The matrices must both be square matrices.
-    - **B)** Both matrices must have the exact same dimensions.
-    - **C)** The number of columns in $A$ must equal the number of rows in $B$.
-    - **D)** The matrices must have non-zero determinants.
+- **A)** The matrices must both be square matrices.
+- **B)** Both matrices must have the exact same dimensions.
+- **C)** The number of columns in $A$ must equal the number of rows in $B$.
+- **D)** The matrices must have non-zero determinants.
 
 2. In matrix addition, how is the entry $(A+B)_{ij}$ computed?
-    - **A)** By taking the dot product of row $i$ and column $j$.
-    - **B)** By adding the corresponding entries $a_{ij}$ and $b_{ij}$.
-    - **C)** By summing all elements in both matrices.
-    - **D)** By multiplying the corresponding entries $a_{ij}$ and $b_{ij}$.
+- **A)** By taking the dot product of row $i$ and column $j$.
+- **B)** By adding the corresponding entries $a_{ij}$ and $b_{ij}$.
+- **C)** By summing all elements in both matrices.
+- **D)** By multiplying the corresponding entries $a_{ij}$ and $b_{ij}$.
 
 3. What is a common pitfall when attempting to add matrices?
-    - **A)** Adding matrices of different sizes, which is undefined.
-    - **B)** Applying commutativity to matrix addition.
-    - **C)** Forgetting to multiply by a scalar first.
-    - **D)** Adding matrices that have negative entries.
+- **A)** Adding matrices of different sizes, which is undefined.
+- **B)** Applying commutativity to matrix addition.
+- **C)** Forgetting to multiply by a scalar first.
+- **D)** Adding matrices that have negative entries.
 
 ### Answer Key & Explanations
 1. **B)** Matrix addition is only defined if the matrices $A$ and $B$ have the exact same size (dimensions).

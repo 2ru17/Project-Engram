@@ -636,34 +636,34 @@ print(max(pr, key=pr.get))
 ## Multiple Choice Questions
 
 1. What does an adjacency matrix represent in graph data modelling?
-    - **A)** The textual features of nodes
-    - **B)** A square matrix indicating whether pairs of vertices are adjacent or connected by edges
-    - **C)** The geographic distances between nodes
-    - **D)** A list of edges without node references
+- **A)** The textual features of nodes
+- **B)** A square matrix indicating whether pairs of vertices are adjacent or connected by edges
+- **C)** The geographic distances between nodes
+- **D)** A list of edges without node references
 
 2. PageRank determines the importance of a node based on:
-    - **A)** Its alphabetical order
-    - **B)** The number and quality of links pointing to it
-    - **C)** The total number of outgoing edges
-    - **D)** The size of its data payload
+- **A)** Its alphabetical order
+- **B)** The number and quality of links pointing to it
+- **C)** The total number of outgoing edges
+- **D)** The size of its data payload
 
 3. Degree centrality measures:
-    - **A)** The shortest path between a node and all others
-    - **B)** The number of direct connections a node has
-    - **C)** The amount of time a node has existed
-    - **D)** The probability of a random walk visiting the node
+- **A)** The shortest path between a node and all others
+- **B)** The number of direct connections a node has
+- **C)** The amount of time a node has existed
+- **D)** The probability of a random walk visiting the node
 
 4. A directed graph is characterized by:
-    - **A)** Edges having a specific orientation or direction (from node A to node B)
-    - **B)** Edges that can only connect a node to itself
-    - **C)** Bidirectional relationships exclusively
-    - **D)** Having no cycles
+- **A)** Edges having a specific orientation or direction (from node A to node B)
+- **B)** Edges that can only connect a node to itself
+- **C)** Bidirectional relationships exclusively
+- **D)** Having no cycles
 
 5. What is the primary purpose of node embeddings?
-    - **A)** To compress the graph into a single integer
-    - **B)** To map nodes to low-dimensional continuous vectors while preserving network topology
-    - **C)** To visualize graphs in 3D
-    - **D)** To delete disconnected nodes
+- **A)** To compress the graph into a single integer
+- **B)** To map nodes to low-dimensional continuous vectors while preserving network topology
+- **C)** To visualize graphs in 3D
+- **D)** To delete disconnected nodes
 
 ### Answer Key & Explanations
 1. **B)** An adjacency matrix has a 1 (or weight) if an edge exists between node i and node j.

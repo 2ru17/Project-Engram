@@ -69,64 +69,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. If a matrix has an equal number of rows and columns ($m = n$), what is it formally called?
-    - **A)** A scalar matrix
-    - **B)** A zero matrix
-    - **C)** A square matrix
-    - **D)** A symmetric matrix
+- **A)** A scalar matrix
+- **B)** A zero matrix
+- **C)** A square matrix
+- **D)** A symmetric matrix
 
 2. In the notation for a zero matrix $O_{m \times n}$, what do the variables $m$ and $n$ explicitly specify?
-    - **A)** The determinant of the matrix.
-    - **B)** The size (rows and columns) of the matrix.
-    - **C)** The coordinates of the non-zero entries.
-    - **D)** The rank of the matrix.
+- **A)** The determinant of the matrix.
+- **B)** The size (rows and columns) of the matrix.
+- **C)** The coordinates of the non-zero entries.
+- **D)** The rank of the matrix.
 
 3. Which of the following definitions best describes a column matrix?
-    - **A)** A matrix with exactly one column and $m$ rows, size $m \times 1$.
-    - **B)** A matrix with exactly one row and $n$ columns, size $1 \times n$.
-    - **C)** A square matrix where all columns are identical.
-    - **D)** A matrix composed only of ones.
+- **A)** A matrix with exactly one column and $m$ rows, size $m \times 1$.
+- **B)** A matrix with exactly one row and $n$ columns, size $1 \times n$.
+- **C)** A square matrix where all columns are identical.
+- **D)** A matrix composed only of ones.
 
 4. A matrix of size $1 \times n$ (having only one row) is specifically referred to as what?
-    - **A)** A diagonal matrix
-    - **B)** A scalar matrix
-    - **C)** A row matrix
-    - **D)** A singular matrix
+- **A)** A diagonal matrix
+- **B)** A scalar matrix
+- **C)** A row matrix
+- **D)** A singular matrix
 
 5. According to the note, what specific role does the zero matrix $O$ play in matrix addition?
-    - **A)** It acts as the multiplicative identity.
-    - **B)** It acts as the additive identity, where $A + O = A$.
-    - **C)** It inverses the matrix it is added to.
-    - **D)** It makes the resulting matrix singular.
+- **A)** It acts as the multiplicative identity.
+- **B)** It acts as the additive identity, where $A + O = A$.
+- **C)** It inverses the matrix it is added to.
+- **D)** It makes the resulting matrix singular.
 
 6. Which sequence correctly represents the matrix structural hierarchy from most specific to least specific?
-    - **A)** Diagonal $\subset$ Identity $\subset$ Triangular $\subset$ Scalar
-    - **B)** Scalar $\subset$ Triangular $\subset$ Identity $\subset$ Diagonal
-    - **C)** Identity $\subset$ Scalar $\subset$ Diagonal $\subset$ Triangular
-    - **D)** Triangular $\subset$ Diagonal $\subset$ Scalar $\subset$ Identity
+- **A)** Diagonal $\subset$ Identity $\subset$ Triangular $\subset$ Scalar
+- **B)** Scalar $\subset$ Triangular $\subset$ Identity $\subset$ Diagonal
+- **C)** Identity $\subset$ Scalar $\subset$ Diagonal $\subset$ Triangular
+- **D)** Triangular $\subset$ Diagonal $\subset$ Scalar $\subset$ Identity
 
 7. What is highlighted as a common pitfall when classifying types of matrices?
-    - **A)** Confusing matrix types, such as upper versus lower triangular matrices.
-    - **B)** Believing that zero matrices must be square.
-    - **C)** Forgetting that a row matrix is the same as a column matrix.
-    - **D)** Attempting to invert a non-square identity matrix.
+- **A)** Confusing matrix types, such as upper versus lower triangular matrices.
+- **B)** Believing that zero matrices must be square.
+- **C)** Forgetting that a row matrix is the same as a column matrix.
+- **D)** Attempting to invert a non-square identity matrix.
 
 8. In a square matrix of order $n$, what must structurally be true about its dimensions?
-    - **A)** The number of rows $m$ and columns $n$ are exactly equal to each other.
-    - **B)** The number of rows must be greater than the columns.
-    - **C)** The dimension must be exactly $3 \times 3$.
-    - **D)** The number of columns must be one.
+- **A)** The number of rows $m$ and columns $n$ are exactly equal to each other.
+- **B)** The number of rows must be greater than the columns.
+- **C)** The dimension must be exactly $3 \times 3$.
+- **D)** The number of columns must be one.
 
 9. What strict condition must a matrix meet to be considered a Zero Matrix $\mathbf{O}$?
-    - **A)** Its trace must be zero.
-    - **B)** Its determinant must be zero.
-    - **C)** Every single entry $a_{ij}$ must be exactly zero.
-    - **D)** At least one full row must be zero.
+- **A)** Its trace must be zero.
+- **B)** Its determinant must be zero.
+- **C)** Every single entry $a_{ij}$ must be exactly zero.
+- **D)** At least one full row must be zero.
 
 10. Which of the following vectors is a clear example of a row matrix?
-    - **A)** $\begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}$
-    - **B)** $[1, 2, -1, 4]$
-    - **C)** $\begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}$
-    - **D)** An identity matrix of size 3.
+- **A)** $\begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}$
+- **B)** $[1, 2, -1, 4]$
+- **C)** $\begin{bmatrix} 0 & 0 \\ 0 & 0 \end{bmatrix}$
+- **D)** An identity matrix of size 3.
 
 ### Answer Key & Explanations
 1. **C)** A matrix where the number of rows equals the number of columns ($m = n$) is called a square matrix.

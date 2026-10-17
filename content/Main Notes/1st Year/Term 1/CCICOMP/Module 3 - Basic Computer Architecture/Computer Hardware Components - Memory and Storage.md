@@ -46,64 +46,64 @@ Data moves between Main Memory and Secondary Storage via read/write operations. 
 ## Multiple Choice Questions
 
 1. Which characteristic best describes Primary Memory (Internal) compared to Secondary Storage?
-    - **A)** It is non-volatile, highly economical, and extremely slow.
-    - **B)** It is volatile, highly expensive, and extremely fast.
-    - **C)** It is used exclusively for long-term data archiving.
-    - **D)** It is comprised entirely of magnetic spinning platters.
+- **A)** It is non-volatile, highly economical, and extremely slow.
+- **B)** It is volatile, highly expensive, and extremely fast.
+- **C)** It is used exclusively for long-term data archiving.
+- **D)** It is comprised entirely of magnetic spinning platters.
 
 2. What type of RAM uses a complex transistor circuit (flip-flop) and does not need to be constantly refreshed?
-    - **A)** VRAM
-    - **B)** DRAM (Dynamic RAM)
-    - **C)** SRAM (Static RAM)
-    - **D)** EEPROM
+- **A)** VRAM
+- **B)** DRAM (Dynamic RAM)
+- **C)** SRAM (Static RAM)
+- **D)** EEPROM
 
 3. Why is DRAM typically used for a system's Main Memory rather than SRAM?
-    - **A)** It is slower but highly economical and uses a single transistor and capacitor per bit.
-    - **B)** It is much faster than SRAM and does not require refreshing.
-    - **C)** It is non-volatile and can retain data without power.
-    - **D)** It is built directly into the CPU cores.
+- **A)** It is slower but highly economical and uses a single transistor and capacitor per bit.
+- **B)** It is much faster than SRAM and does not require refreshing.
+- **C)** It is non-volatile and can retain data without power.
+- **D)** It is built directly into the CPU cores.
 
 4. What does ROM (Read-Only Memory) typically contain?
-    - **A)** Temporary data for actively running applications.
-    - **B)** Non-volatile, unchanging system instructions like the BIOS/UEFI.
-    - **C)** Frequently accessed user documents and media files.
-    - **D)** Network configuration caching for the hypervisor.
+- **A)** Temporary data for actively running applications.
+- **B)** Non-volatile, unchanging system instructions like the BIOS/UEFI.
+- **C)** Frequently accessed user documents and media files.
+- **D)** Network configuration caching for the hypervisor.
 
 5. In the memory hierarchy, which storage type is the fastest but has the smallest capacity?
-    - **A)** L3 Cache
-    - **B)** Main Memory (RAM)
-    - **C)** Secondary Storage
-    - **D)** CPU Registers
+- **A)** L3 Cache
+- **B)** Main Memory (RAM)
+- **C)** Secondary Storage
+- **D)** CPU Registers
 
 6. What happens if the processor requires data that is not currently in RAM (a page fault)?
-    - **A)** The system immediately crashes.
-    - **B)** The CPU automatically terminates the running program.
-    - **C)** The system must fetch it from much slower secondary storage, incurring a latency penalty.
-    - **D)** The data is permanently lost.
+- **A)** The system immediately crashes.
+- **B)** The CPU automatically terminates the running program.
+- **C)** The system must fetch it from much slower secondary storage, incurring a latency penalty.
+- **D)** The data is permanently lost.
 
 7. How does Solid-State Storage differ from Magnetic Storage?
-    - **A)** It uses mechanical read/write heads and is more prone to physical failure.
-    - **B)** It uses NAND flash memory with no moving parts and is significantly faster.
-    - **C)** It uses lasers to read microscopic pits on a disc.
-    - **D)** It relies on continuous electrical refreshing to maintain state.
+- **A)** It uses mechanical read/write heads and is more prone to physical failure.
+- **B)** It uses NAND flash memory with no moving parts and is significantly faster.
+- **C)** It uses lasers to read microscopic pits on a disc.
+- **D)** It relies on continuous electrical refreshing to maintain state.
 
 8. Which secondary storage technology uses lasers to read and write microscopic pits on a plastic disc?
-    - **A)** Magnetic Tape
-    - **B)** SSDs
-    - **C)** Optical Storage (CD, DVD, BRD)
-    - **D)** Storage Area Networks
+- **A)** Magnetic Tape
+- **B)** SSDs
+- **C)** Optical Storage (CD, DVD, BRD)
+- **D)** Storage Area Networks
 
 9. What is a Storage Area Network (SAN)?
-    - **A)** A lightweight, low-cost USB flash drive architecture.
-    - **B)** An Internet-based storage solution hosted by third parties.
-    - **C)** A specialized file server attached to a local network.
-    - **D)** A high-performance dedicated network for block-level storage.
+- **A)** A lightweight, low-cost USB flash drive architecture.
+- **B)** An Internet-based storage solution hosted by third parties.
+- **C)** A specialized file server attached to a local network.
+- **D)** A high-performance dedicated network for block-level storage.
 
 10. Which type of cache is typically shared across all cores in a multi-core CPU?
-    - **A)** L1 Cache
-    - **B)** L2 Cache
-    - **C)** L3 Cache
-    - **D)** CPU Registers
+- **A)** L1 Cache
+- **B)** L2 Cache
+- **C)** L3 Cache
+- **D)** CPU Registers
 
 ### Answer Key & Explanations
 1. **B)** Primary memory is defined as volatile, highly expensive, extremely fast, and interacts directly with the CPU.

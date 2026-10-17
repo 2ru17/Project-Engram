@@ -74,64 +74,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What are the three standard steps in the Divide and Conquer paradigm?
-    - **A)** Iterate, Recurse, Return
-    - **B)** Divide, Conquer, Combine
-    - **C)** Initialize, Maintain, Terminate
-    - **D)** Split, Sort, Search
+- **A)** Iterate, Recurse, Return
+- **B)** Divide, Conquer, Combine
+- **C)** Initialize, Maintain, Terminate
+- **D)** Split, Sort, Search
 
 2. In the "Conquer" step, how are subproblems solved?
-    - **A)** Iteratively using loops
-    - **B)** Using dynamic programming
-    - **C)** Recursively, or directly if they are small enough (base case)
-    - **D)** By combining their solutions
+- **A)** Iteratively using loops
+- **B)** Using dynamic programming
+- **C)** Recursively, or directly if they are small enough (base case)
+- **D)** By combining their solutions
 
 3. Which recurrence relation represents the Merge Sort algorithm?
-    - **A)** $T(n) = T(n/2) + 1$
-    - **B)** $T(n) = 2T(n/2) + n$
-    - **C)** $T(n) = 7T(n/2) + n^2$
-    - **D)** $T(n) = T(n-1) + n$
+- **A)** $T(n) = T(n/2) + 1$
+- **B)** $T(n) = 2T(n/2) + n$
+- **C)** $T(n) = 7T(n/2) + n^2$
+- **D)** $T(n) = T(n-1) + n$
 
 4. What is the recurrence relation for Binary Search?
-    - **A)** $T(n) = 2T(n/2) + n$
-    - **B)** $T(n) = T(n/2) + 1$
-    - **C)** $T(n) = 2T(n/2) + 1$
-    - **D)** $T(n) = T(n-1) + 1$
+- **A)** $T(n) = 2T(n/2) + n$
+- **B)** $T(n) = T(n/2) + 1$
+- **C)** $T(n) = 2T(n/2) + 1$
+- **D)** $T(n) = T(n-1) + 1$
 
 5. Which of the following is NOT a classic Divide and Conquer algorithm mentioned in the notes?
-    - **A)** Merge Sort
-    - **B)** Binary Search
-    - **C)** Strassen’s Matrix Multiplication
-    - **D)** Bubble Sort
+- **A)** Merge Sort
+- **B)** Binary Search
+- **C)** Strassen’s Matrix Multiplication
+- **D)** Bubble Sort
 
 6. When is Divide and Conquer most appropriate?
-    - **A)** When subproblems heavily overlap
-    - **B)** When the problem cannot be broken down
-    - **C)** When the problem can be naturally broken into independent subproblems
-    - **D)** When the combine step takes exponential time
+- **A)** When subproblems heavily overlap
+- **B)** When the problem cannot be broken down
+- **C)** When the problem can be naturally broken into independent subproblems
+- **D)** When the combine step takes exponential time
 
 7. What is a known disadvantage of Divide and Conquer algorithms?
-    - **A)** They can never be run in parallel.
-    - **B)** They always have a time complexity of $O(n^2)$.
-    - **C)** The recursive overhead due to the function call stack.
-    - **D)** They do not use recurrences.
+- **A)** They can never be run in parallel.
+- **B)** They always have a time complexity of $O(n^2)$.
+- **C)** The recursive overhead due to the function call stack.
+- **D)** They do not use recurrences.
 
 8. If subproblems overlap significantly, which paradigm is more appropriate than Divide and Conquer?
-    - **A)** Greedy Algorithms
-    - **B)** Brute Force
-    - **C)** Dynamic Programming
-    - **D)** Amortized Analysis
+- **A)** Greedy Algorithms
+- **B)** Brute Force
+- **C)** Dynamic Programming
+- **D)** Amortized Analysis
 
 9. What is a common pitfall when implementing a divide and conquer algorithm?
-    - **A)** Using the Master Theorem for analysis
-    - **B)** Forgetting the base case, leading to infinite recursion
-    - **C)** Dividing the problem into constant fractions
-    - **D)** Making the subproblems independent
+- **A)** Using the Master Theorem for analysis
+- **B)** Forgetting the base case, leading to infinite recursion
+- **C)** Dividing the problem into constant fractions
+- **D)** Making the subproblems independent
 
 10. Which mathematical tool is commonly used to analyze the running time of Divide and Conquer algorithms?
-    - **A)** The Master Theorem
-    - **B)** The Accounting Method
-    - **C)** Loop Invariants
-    - **D)** Probability Distributions
+- **A)** The Master Theorem
+- **B)** The Accounting Method
+- **C)** Loop Invariants
+- **D)** Probability Distributions
 
 ### Answer Key & Explanations
 1. **B)** The paradigm formally consists of Dividing the problem, Conquering the subproblems, and Combining the results.

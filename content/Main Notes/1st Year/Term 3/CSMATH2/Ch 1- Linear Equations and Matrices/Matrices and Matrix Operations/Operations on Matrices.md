@@ -62,64 +62,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which of the following operations strictly requires the involved matrices to have the exact same dimensions?
-    - **A)** Matrix Multiplication and Transpose
-    - **B)** Matrix Addition and Subtraction
-    - **C)** Scalar Multiplication and Matrix Addition
-    - **D)** Matrix Subtraction and Multiplication
+- **A)** Matrix Multiplication and Transpose
+- **B)** Matrix Addition and Subtraction
+- **C)** Scalar Multiplication and Matrix Addition
+- **D)** Matrix Subtraction and Multiplication
 
 2. What is the primary dimensional requirement for standard matrix multiplication $A \cdot B$?
-    - **A)** The number of rows in $A$ must equal the number of columns in $B$.
-    - **B)** The number of columns in $A$ must equal the number of rows in $B$.
-    - **C)** Both $A$ and $B$ must be square matrices of the exact same size.
-    - **D)** The number of rows in $A$ must equal the number of rows in $B$.
+- **A)** The number of rows in $A$ must equal the number of columns in $B$.
+- **B)** The number of columns in $A$ must equal the number of rows in $B$.
+- **C)** Both $A$ and $B$ must be square matrices of the exact same size.
+- **D)** The number of rows in $A$ must equal the number of rows in $B$.
 
 3. If $A$ is an $m \times n$ matrix, what will be the dimensions of its transpose $A^T$?
-    - **A)** $m \times m$
-    - **B)** $n \times n$
-    - **C)** $m \times n$
-    - **D)** $n \times m$
+- **A)** $m \times m$
+- **B)** $n \times n$
+- **C)** $m \times n$
+- **D)** $n \times m$
 
 4. Which of the following fundamental matrix operations is generally commutative?
-    - **A)** Matrix Multiplication
-    - **B)** Matrix Division
-    - **C)** Matrix Addition
-    - **D)** Matrix Transposition
+- **A)** Matrix Multiplication
+- **B)** Matrix Division
+- **C)** Matrix Addition
+- **D)** Matrix Transposition
 
 5. According to the distributive property for matrices, what does $A(B + C)$ equal?
-    - **A)** $AB + C$
-    - **B)** $A + BC$
-    - **C)** $AB + AC$
-    - **D)** $BA + CA$
+- **A)** $AB + C$
+- **B)** $A + BC$
+- **C)** $AB + AC$
+- **D)** $BA + CA$
 
 6. What is the correct property for expanding the transpose of a matrix product, $(AB)^T$?
-    - **A)** $A^T B^T$
-    - **B)** $B^T A^T$
-    - **C)** $A B^T$
-    - **D)** $(BA)^T$
+- **A)** $A^T B^T$
+- **B)** $B^T A^T$
+- **C)** $A B^T$
+- **D)** $(BA)^T$
 
 7. Under what specific condition does the binomial expansion $(A+B)^2 = A^2 + 2AB + B^2$ hold true for matrices?
-    - **A)** Only if both $A$ and $B$ are identity matrices.
-    - **B)** It holds true for all square matrices.
-    - **C)** Only if $A$ and $B$ commute, meaning $AB = BA$.
-    - **D)** Only if $A$ and $B$ are the exact same matrix.
+- **A)** Only if both $A$ and $B$ are identity matrices.
+- **B)** It holds true for all square matrices.
+- **C)** Only if $A$ and $B$ commute, meaning $AB = BA$.
+- **D)** Only if $A$ and $B$ are the exact same matrix.
 
 8. Which operation involves multiplying every single entry of a matrix by the same constant value?
-    - **A)** Matrix Multiplication
-    - **B)** Scalar Multiplication
-    - **C)** Matrix Trace
-    - **D)** Cross Product
+- **A)** Matrix Multiplication
+- **B)** Scalar Multiplication
+- **C)** Matrix Trace
+- **D)** Cross Product
 
 9. If $AB = AC$, what does this imply in general matrix algebra?
-    - **A)** $B = C$ definitively.
-    - **B)** Matrix $A$ is the identity matrix.
-    - **C)** It does not necessarily imply anything about the equality of $B$ and $C$ because there is no cancellation law.
-    - **D)** Both $B$ and $C$ must be the zero matrix.
+- **A)** $B = C$ definitively.
+- **B)** Matrix $A$ is the identity matrix.
+- **C)** It does not necessarily imply anything about the equality of $B$ and $C$ because there is no cancellation law.
+- **D)** Both $B$ and $C$ must be the zero matrix.
 
 10. What does the matrix equation $AB = O$ (the zero matrix) mean in linear algebra?
-    - **A)** Either matrix $A$ or matrix $B$ must be the zero matrix.
-    - **B)** The product is the zero matrix, but neither $A$ nor $B$ must necessarily be the zero matrix.
-    - **C)** Both $A$ and $B$ must be the zero matrix.
-    - **D)** Matrix $A$ is the inverse of matrix $B$.
+- **A)** Either matrix $A$ or matrix $B$ must be the zero matrix.
+- **B)** The product is the zero matrix, but neither $A$ nor $B$ must necessarily be the zero matrix.
+- **C)** Both $A$ and $B$ must be the zero matrix.
+- **D)** Matrix $A$ is the inverse of matrix $B$.
 
 ### Answer Key & Explanations
 1. **B)** Matrix addition and subtraction can only be performed on matrices of identical size.

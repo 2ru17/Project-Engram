@@ -196,34 +196,34 @@ Gradual Underflow (With IEEE 754 Denormals):
 ## Multiple Choice Questions
 
 1. In IEEE 754 Single Precision, what is the biased exponent ($E'$) and fraction ($f$) configuration for positive infinity ($+\infty$)?
-    - **A)** $E' = 0$, $f = 0$, $S = 0$
-    - **B)** $E' = 255$, $f = 0$, $S = 0$
-    - **C)** $E' = 255$, $f \neq 0$, $S = 0$
-    - **D)** $E' = 127$, $f = 0$, $S = 0$
+- **A)** $E' = 0$, $f = 0$, $S = 0$
+- **B)** $E' = 255$, $f = 0$, $S = 0$
+- **C)** $E' = 255$, $f \neq 0$, $S = 0$
+- **D)** $E' = 127$, $f = 0$, $S = 0$
 
 2. What is the fundamental purpose of denormalized numbers in the IEEE 754 standard?
-    - **A)** To speed up floating-point division hardware
-    - **B)** To provide gradual underflow and prevent an underflow gap near zero
-    - **C)** To allow 64-bit numbers to fit into 32-bit registers
-    - **D)** To encode negative zero without using a sign bit
+- **A)** To speed up floating-point division hardware
+- **B)** To provide gradual underflow and prevent an underflow gap near zero
+- **C)** To allow 64-bit numbers to fit into 32-bit registers
+- **D)** To encode negative zero without using a sign bit
 
 3. What is the decimal value represented by the 32-bit single precision hexadecimal word `0xBF800000`?
-    - **A)** $+1.0$
-    - **B)** $-1.0$
-    - **C)** $-0.5$
-    - **D)** $-2.0$
+- **A)** $+1.0$
+- **B)** $-1.0$
+- **C)** $-0.5$
+- **D)** $-2.0$
 
 4. Which feature differentiates a Quiet NaN (qNaN) from a Signaling NaN (sNaN)?
-    - **A)** A Quiet NaN has an exponent of 0, while a Signaling NaN has an exponent of 255
-    - **B)** A Quiet NaN has the MSB of the fraction set to `1` and does not raise an exception, whereas a Signaling NaN has the MSB of the fraction set to `0` and traps the CPU
-    - **C)** A Quiet NaN represents division by zero, while a Signaling NaN represents square root of negative numbers
-    - **D)** Quiet NaNs only exist in Double Precision formats
+- **A)** A Quiet NaN has an exponent of 0, while a Signaling NaN has an exponent of 255
+- **B)** A Quiet NaN has the MSB of the fraction set to `1` and does not raise an exception, whereas a Signaling NaN has the MSB of the fraction set to `0` and traps the CPU
+- **C)** A Quiet NaN represents division by zero, while a Signaling NaN represents square root of negative numbers
+- **D)** Quiet NaNs only exist in Double Precision formats
 
 5. In IEEE 754 Double Precision (Binary64), what is the exponent bias?
-    - **A)** 127
-    - **B)** 255
-    - **C)** 1023
-    - **D)** 2047
+- **A)** 127
+- **B)** 255
+- **C)** 1023
+- **D)** 2047
 
 ### Answer Key & Explanations
 

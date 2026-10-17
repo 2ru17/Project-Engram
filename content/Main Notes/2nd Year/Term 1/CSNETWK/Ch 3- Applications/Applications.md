@@ -60,64 +60,64 @@ Average end-to-end delay = $0.6 \times (\text{origin delay}) + 0.4 \times (\text
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "**HTTP Responses:** Includes status codes (e.g., `200 OK`, `301 Moved _____ `400 Bad Request`, `404 Not Found`, `505 Version Not Supported`)."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** Permanently
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** Permanently
 
 2. Which word completes the following sentence from the text: "A `Conditional GET` (using `If-modified-since`) _____ keep caches up to date."?
-    - **A)** Router
-    - **B)** helps
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Router
+- **B)** helps
+- **C)** Network
+- **D)** Protocol
 
 3. Which word completes the following sentence from the text: "UDP provides unreliable, best-effort datagram _____ with no connection setup."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** delivery
-    - **D)** Router
+- **A)** Protocol
+- **B)** Network
+- **C)** delivery
+- **D)** Router
 
 4. Which word completes the following sentence from the text: "**Proprietary protocols:** Closed _____ (Skype, Zoom)."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** definitions
+- **A)** Network
+- **B)** Router
+- **C)** Protocol
+- **D)** definitions
 
 5. Which word completes the following sentence from the text: "Arbitrary end systems directly communicate, bringing self-scalability _____ each peer adds service capacity and demand."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** since
-    - **D)** Router
+- **A)** Network
+- **B)** Protocol
+- **C)** since
+- **D)** Router
 
 6. Which word completes the following sentence from the text: "*With cache (40% hit rate):* The request rate _____ to the origin server drops to 60%."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** going
-    - **D)** Network
+- **A)** Protocol
+- **B)** Router
+- **C)** going
+- **D)** Network
 
 7. Which word completes the following sentence from the text: "**Web Caches (Proxy Servers):** Intermediaries that store _____ requested objects to satisfy client requests locally."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** recently
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** recently
 
 8. Which word completes the following sentence from the text: "**DNS (Domain Name System):** A distributed, hierarchical _____ mapping human-readable hostnames to IP addresses."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** database
+- **A)** Network
+- **B)** Protocol
+- **C)** Router
+- **D)** database
 
 9. Which word completes the following sentence from the text: "Clients intermittently connect to the server and do not _____ communicate with each other (e.g., HTTP, IMAP, FTP)."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** directly
-    - **D)** Router
+- **A)** Protocol
+- **B)** Network
+- **C)** directly
+- **D)** Router
 
 10. Which word completes the following sentence from the text: "**HTTP Requests:** Includes methods like GET (requests object), POST _____ user input), HEAD (requests headers only), PUT (uploads object)."?
-    - **A)** Protocol
-    - **B)** sends
-    - **C)** Network
-    - **D)** Router
+- **A)** Protocol
+- **B)** sends
+- **C)** Network
+- **D)** Router
 
 
 ### Answer Key & Explanations

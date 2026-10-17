@@ -157,64 +157,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "$$\text{Throughput} = \min(R_s, R_c, \frac{R}{N})$$  $R_s$: Rate of Server Link $R_c$: Rate of _____ Link $R$: Rate of Shared Link $N$: Number of concurrent flows  ## 2."?
-    - **A)** Client
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Client
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 2. Which word completes the following sentence from the text: "Confusing link capacity with actual per-flow throughput _____ $\min(R_s, R_c, R/N)$ is the correct formula."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** 
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** 
 
 3. Which word completes the following sentence from the text: "**Correct Answer:** **1**  ### Question 4  **Assuming that the servers are sending at the maximum _____ possible, what are the link utilizations for the client links (Rc)?**  **Analytical Breakdown:**  1."?
-    - **A)** rate
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** rate
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 4. Which word completes the following sentence from the text: "**Link Capacity:** The total capacity of _____ shared link $R$ is **400 Mbps**."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** the
-    - **D)** Router
+- **A)** Network
+- **B)** Protocol
+- **C)** the
+- **D)** Router
 
 5. Which word completes the following sentence from the text: "If $R_c$ is small (e.g., weak _____ the client is the bottleneck."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** WiFi
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** WiFi
+- **D)** Network
 
 6. Which word completes the following sentence from the text: "**Actual Flow:** There are **4** _____ each sending **10 Mbps**."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** pairs
+- **A)** Network
+- **B)** Protocol
+- **C)** Router
+- **D)** pairs
 
 7. Which word completes the following sentence from the text: "The Network Topology  **Scenario Data** ![[Pasted image 20251121094535.png]]  _____ 4 Servers sending to 4 Clients (4 pairs)."?
-    - **A)** Network
-    - **B)** Topology
-    - **C)** Protocol
-    - **D)** Router
+- **A)** Network
+- **B)** Topology
+- **C)** Protocol
+- **D)** Router
 
 8. Which word completes the following sentence from the text: "The entire path cannot be _____ than this single link."?
-    - **A)** faster
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** Router
+- **A)** faster
+- **B)** Protocol
+- **C)** Network
+- **D)** Router
 
 9. Which word completes the following sentence from the text: "**Compare Capacities:** $R_s = 10$ Mbps Shared Share _____ = 100 Mbps $R_c = 90$ Mbps  2."?
-    - **A)** R4
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** Network
+- **A)** R4
+- **B)** Router
+- **C)** Protocol
+- **D)** Network
 
 10. Which word completes the following sentence from the text: "**Correct Answer:** **Rs**  ### Question 3  **Assuming that the servers are sending at the maximum _____ possible, what are the link utilizations for the server links (Rs)?**  **Analytical Breakdown:**  1."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** rate
+- **A)** Router
+- **B)** Network
+- **C)** Protocol
+- **D)** rate
 
 
 ### Answer Key & Explanations

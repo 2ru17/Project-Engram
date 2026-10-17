@@ -59,22 +59,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. How is an elementary matrix constructed?
-    - **A)** By taking the determinant of a square matrix.
-    - **B)** By performing multiple elementary row operations simultaneously.
-    - **C)** By performing a single elementary row operation on the identity matrix.
-    - **D)** By transforming any matrix into its reduced row echelon form.
+- **A)** By taking the determinant of a square matrix.
+- **B)** By performing multiple elementary row operations simultaneously.
+- **C)** By performing a single elementary row operation on the identity matrix.
+- **D)** By transforming any matrix into its reduced row echelon form.
 
 2. Which of the following statements about the inverse of an elementary matrix is true?
-    - **A)** Elementary matrices are not invertible.
-    - **B)** An elementary matrix is always invertible, and its inverse is another elementary matrix.
-    - **C)** The inverse of an elementary matrix is the identity matrix.
-    - **D)** An elementary matrix is invertible only if its determinant is exactly 1.
+- **A)** Elementary matrices are not invertible.
+- **B)** An elementary matrix is always invertible, and its inverse is another elementary matrix.
+- **C)** The inverse of an elementary matrix is the identity matrix.
+- **D)** An elementary matrix is invertible only if its determinant is exactly 1.
 
 3. According to the equivalent statements for an $n \times n$ matrix $A$, if $A$ is nonsingular, which of the following must also be true?
-    - **A)** $A$ can be written as a product of elementary matrices.
-    - **B)** $A$ is equivalent to a zero matrix.
-    - **C)** The system $A\mathbf{x} = 0$ has infinitely many solutions.
-    - **D)** $A$ has a determinant equal to zero.
+- **A)** $A$ can be written as a product of elementary matrices.
+- **B)** $A$ is equivalent to a zero matrix.
+- **C)** The system $A\mathbf{x} = 0$ has infinitely many solutions.
+- **D)** $A$ has a determinant equal to zero.
 
 ### Answer Key & Explanations
 1. **C)** An $n \times n$ matrix is an elementary matrix if it is obtained from the identity matrix $I_n$ by performing a single elementary row operation.

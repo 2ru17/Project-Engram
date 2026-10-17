@@ -88,64 +88,64 @@ Design a 3-bit binary counter using T flip-flops.
 ## Multiple Choice Questions
 
 1. What is typically the first step in the design procedure for a synchronous sequential circuit?
-    - **A)** Draw the logic diagram
-    - **B)** Derive a state diagram from the word description and specifications
-    - **C)** Assign binary values to states
-    - **D)** Choose the type of flip-flop
+- **A)** Draw the logic diagram
+- **B)** Derive a state diagram from the word description and specifications
+- **C)** Assign binary values to states
+- **D)** Choose the type of flip-flop
 
 2. After obtaining the state diagram, what is often the next step to optimize the design?
-    - **A)** Immediately draw the circuit diagram
-    - **B)** Reduce the number of states if necessary
-    - **C)** Route the clock signal
-    - **D)** Generate the testbench
+- **A)** Immediately draw the circuit diagram
+- **B)** Reduce the number of states if necessary
+- **C)** Route the clock signal
+- **D)** Generate the testbench
 
 3. What tool is heavily used to find the simplified flip-flop input equations from the excitation table?
-    - **A)** Boolean algebraic division
-    - **B)** Karnaugh Maps (K-maps)
-    - **C)** State reduction table
-    - **D)** Truth table inversion
+- **A)** Boolean algebraic division
+- **B)** Karnaugh Maps (K-maps)
+- **C)** State reduction table
+- **D)** Truth table inversion
 
 4. What is the purpose of an excitation table in sequential circuit design?
-    - **A)** It defines the present state values for given outputs.
-    - **B)** It specifies what inputs are required at the flip-flops to cause a desired state transition.
-    - **C)** It lists the gate delays of the combinational logic.
-    - **D)** It maps the clock frequency to the states.
+- **A)** It defines the present state values for given outputs.
+- **B)** It specifies what inputs are required at the flip-flops to cause a desired state transition.
+- **C)** It lists the gate delays of the combinational logic.
+- **D)** It maps the clock frequency to the states.
 
 5. In an excitation table for a D flip-flop, what must the input D be to transition from Q(t)=0 to Q(t+1)=1?
-    - **A)** 0
-    - **B)** 1
-    - **C)** X (don't care)
-    - **D)** Toggle
+- **A)** 0
+- **B)** 1
+- **C)** X (don't care)
+- **D)** Toggle
 
 6. In an excitation table for a JK flip-flop, if Q(t)=0 and Q(t+1)=0, what are the values of J and K?
-    - **A)** J=0, K=0
-    - **B)** J=1, K=X
-    - **C)** J=0, K=X
-    - **D)** J=X, K=0
+- **A)** J=0, K=0
+- **B)** J=1, K=X
+- **C)** J=0, K=X
+- **D)** J=X, K=0
 
 7. For a T flip-flop, what must the input T be to maintain the current state (Q(t) to Q(t+1) is 1 to 1)?
-    - **A)** 1
-    - **B)** X
-    - **C)** 0
-    - **D)** High-Z
+- **A)** 1
+- **B)** X
+- **C)** 0
+- **D)** High-Z
 
 8. When designing a 3-bit binary counter, how many flip-flops are required?
-    - **A)** 2
-    - **B)** 3
-    - **C)** 4
-    - **D)** 8
+- **A)** 2
+- **B)** 3
+- **C)** 4
+- **D)** 8
 
 9. What is the sequence of steps for sequential design?
-    - **A)** Word problem -> State Diagram -> State Table -> Excitation Table -> Equations -> Circuit
-    - **B)** Circuit -> Equations -> State Table -> State Diagram -> Word problem
-    - **C)** Equations -> State Diagram -> Excitation Table -> Word problem -> Circuit
-    - **D)** Word problem -> Circuit -> State Table -> State Diagram -> Equations
+- **A)** Word problem -> State Diagram -> State Table -> Excitation Table -> Equations -> Circuit
+- **B)** Circuit -> Equations -> State Table -> State Diagram -> Word problem
+- **C)** Equations -> State Diagram -> Excitation Table -> Word problem -> Circuit
+- **D)** Word problem -> Circuit -> State Table -> State Diagram -> Equations
 
 10. During state assignment, what is done?
-    - **A)** Clock signals are assigned to gates
-    - **B)** Binary values are assigned to the different states
-    - **C)** Input variables are minimized
-    - **D)** Output logic is eliminated
+- **A)** Clock signals are assigned to gates
+- **B)** Binary values are assigned to the different states
+- **C)** Input variables are minimized
+- **D)** Output logic is eliminated
 
 ### Answer Key & Explanations
 1. **B)** The design begins by translating the specifications into a visual state diagram.

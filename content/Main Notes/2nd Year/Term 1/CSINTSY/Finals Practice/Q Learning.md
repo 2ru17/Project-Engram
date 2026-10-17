@@ -111,64 +111,64 @@ _Please contact me through discord or my the university email for any problems r
 ## Multiple Choice Questions
 
 1. What does it mean for Q-Learning to be a "model-free" algorithm?
-    - **A)** It explicitly builds a graph of all state transitions before learning.
-    - **B)** It does not need prior knowledge of the environment's Transition Probability or Reward Function.
-    - **C)** It relies entirely on supervised labeled datasets rather than interaction.
-    - **D)** It operates without using any variables or states.
+- **A)** It explicitly builds a graph of all state transitions before learning.
+- **B)** It does not need prior knowledge of the environment's Transition Probability or Reward Function.
+- **C)** It relies entirely on supervised labeled datasets rather than interaction.
+- **D)** It operates without using any variables or states.
 
 2. In Q-Learning, what does the Q-Function $Q(s, a)$ represent?
-    - **A)** The immediate reward of taking action $a$ in state $s$.
-    - **B)** The exact number of steps required to reach the goal from state $s$.
-    - **C)** The expected cumulative future reward of taking action $a$ in state $s$ and acting optimally thereafter.
-    - **D)** The probability that taking action $a$ in state $s$ will lead to a specific new state.
+- **A)** The immediate reward of taking action $a$ in state $s$.
+- **B)** The exact number of steps required to reach the goal from state $s$.
+- **C)** The expected cumulative future reward of taking action $a$ in state $s$ and acting optimally thereafter.
+- **D)** The probability that taking action $a$ in state $s$ will lead to a specific new state.
 
 3. How are the values in a Q-Table typically initialized before the agent starts learning?
-    - **A)** They are pre-calculated using the Bellman Equation.
-    - **B)** They are initialized to the maximum possible reward in the environment.
-    - **C)** They are initialized to 0 or random values.
-    - **D)** They are copied from a previously trained Deep Neural Network.
+- **A)** They are pre-calculated using the Bellman Equation.
+- **B)** They are initialized to the maximum possible reward in the environment.
+- **C)** They are initialized to 0 or random values.
+- **D)** They are copied from a previously trained Deep Neural Network.
 
 4. What is the role of the Learning Rate ($\alpha$) in the Q-Learning update rule?
-    - **A)** It determines how much new information overrides old information.
-    - **B)** It balances the trade-off between current and future rewards.
-    - **C)** It sets the probability of exploring versus exploiting.
-    - **D)** It guarantees that the Q-table will converge immediately.
+- **A)** It determines how much new information overrides old information.
+- **B)** It balances the trade-off between current and future rewards.
+- **C)** It sets the probability of exploring versus exploiting.
+- **D)** It guarantees that the Q-table will converge immediately.
 
 5. In the Q-Learning update rule, what does the term $\max_{a'} Q(s', a')$ represent?
-    - **A)** The highest immediate reward possible from the starting state.
-    - **B)** The maximum penalty the agent can receive in the current episode.
-    - **C)** The estimate of optimal future value from the next state $s'$.
-    - **D)** The probability of transitioning to state $s'$.
+- **A)** The highest immediate reward possible from the starting state.
+- **B)** The maximum penalty the agent can receive in the current episode.
+- **C)** The estimate of optimal future value from the next state $s'$.
+- **D)** The probability of transitioning to state $s'$.
 
 6. What does the Temporal Difference (TD) Error represent?
-    - **A)** The absolute time it takes for the algorithm to run.
-    - **B)** The difference between the actual reward and the discount factor.
-    - **C)** The difference between the target value (what actually happened plus expected future) and the current estimated value.
-    - **D)** The mathematical error caused by choosing exploitation over exploration.
+- **A)** The absolute time it takes for the algorithm to run.
+- **B)** The difference between the actual reward and the discount factor.
+- **C)** The difference between the target value (what actually happened plus expected future) and the current estimated value.
+- **D)** The mathematical error caused by choosing exploitation over exploration.
 
 7. In the context of reinforcement learning, what is "Exploration"?
-    - **A)** Choosing the action currently known to yield the highest Q-value.
-    - **B)** Trying new or random actions to discover their rewards.
-    - **C)** Updating the Q-table with the Bellman equation.
-    - **D)** Decreasing the learning rate over time.
+- **A)** Choosing the action currently known to yield the highest Q-value.
+- **B)** Trying new or random actions to discover their rewards.
+- **C)** Updating the Q-table with the Bellman equation.
+- **D)** Decreasing the learning rate over time.
 
 8. What is the purpose of the Epsilon-Greedy ($\epsilon$-greedy) strategy?
-    - **A)** To force the agent to only take actions that maximize immediate reward.
-    - **B)** To balance the trade-off between exploring new actions and exploiting known good actions.
-    - **C)** To gradually increase the discount factor $\gamma$ as learning progresses.
-    - **D)** To ensure the agent never visits the same state twice.
+- **A)** To force the agent to only take actions that maximize immediate reward.
+- **B)** To balance the trade-off between exploring new actions and exploiting known good actions.
+- **C)** To gradually increase the discount factor $\gamma$ as learning progresses.
+- **D)** To ensure the agent never visits the same state twice.
 
 9. How does the parameter $\epsilon$ (epsilon) typically change over time in a Q-Learning implementation?
-    - **A)** It remains constant at 0.5 throughout the process.
-    - **B)** It starts low to exploit, and increases to explore more later.
-    - **C)** It starts high to encourage exploration, and decays to encourage exploitation as learning progresses.
-    - **D)** It oscillates randomly between 0 and 1 every episode.
+- **A)** It remains constant at 0.5 throughout the process.
+- **B)** It starts low to exploit, and increases to explore more later.
+- **C)** It starts high to encourage exploration, and decays to encourage exploitation as learning progresses.
+- **D)** It oscillates randomly between 0 and 1 every episode.
 
 10. What happens if an agent uses pure exploitation ($\epsilon = 0$) too early in the learning process?
-    - **A)** The agent will immediately find the global optimal path.
-    - **B)** The agent may get stuck in a suboptimal policy because it fails to discover better paths.
-    - **C)** The Q-Table will fill up with negative values.
-    - **D)** The environment's reward function will reset.
+- **A)** The agent will immediately find the global optimal path.
+- **B)** The agent may get stuck in a suboptimal policy because it fails to discover better paths.
+- **C)** The Q-Table will fill up with negative values.
+- **D)** The environment's reward function will reset.
 
 ### Answer Key & Explanations
 1. **B)** Model-free means the agent does not require knowledge of the environment's internal mechanics (Transition Probabilities $T$ or Reward Function $R$) to learn.

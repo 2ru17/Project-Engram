@@ -47,64 +47,64 @@ status: completed
 ## Multiple Choice Questions
 
 1. What is the defining characteristic of a Supertype in an Enhanced ER Model?
-    - **A)** It is an entity that depends entirely on a weak entity.
-    - **B)** It is a generic entity type that has a relationship with one or more subtypes.
-    - **C)** It is a relation that results from a many-to-many relationship.
-    - **D)** It represents the bottom-up process of defining specific entity types.
+- **A)** It is an entity that depends entirely on a weak entity.
+- **B)** It is a generic entity type that has a relationship with one or more subtypes.
+- **C)** It is a relation that results from a many-to-many relationship.
+- **D)** It represents the bottom-up process of defining specific entity types.
 
 2. Which term describes the process where subtypes automatically possess all attributes and relationships of their supertype?
-    - **A)** Specialization
-    - **B)** Generalization
-    - **C)** Attribute Inheritance
-    - **D)** Subtype Discrimination
+- **A)** Specialization
+- **B)** Generalization
+- **C)** Attribute Inheritance
+- **D)** Subtype Discrimination
 
 3. What is the top-down process of defining one or more subtypes from a single supertype called?
-    - **A)** Generalization
-    - **B)** Normalization
-    - **C)** Specialization
-    - **D)** Instantiation
+- **A)** Generalization
+- **B)** Normalization
+- **C)** Specialization
+- **D)** Instantiation
 
 4. According to the Completeness Constraint, what does Total Specialization require?
-    - **A)** An instance of the supertype does not have to be a member of any subtype.
-    - **B)** An instance of the supertype must belong to at least one subtype.
-    - **C)** An instance can only belong to exactly one subtype.
-    - **D)** An instance can belong to multiple subtypes simultaneously.
+- **A)** An instance of the supertype does not have to be a member of any subtype.
+- **B)** An instance of the supertype must belong to at least one subtype.
+- **C)** An instance can only belong to exactly one subtype.
+- **D)** An instance can belong to multiple subtypes simultaneously.
 
 5. Under the Disjointness Constraint, the Overlap Rule (o) specifies that:
-    - **A)** An instance can only be one of the subtypes.
-    - **B)** An instance can be more than one of the subtypes simultaneously.
-    - **C)** An instance must not belong to any subtype.
-    - **D)** An instance must share its primary key with a weak entity.
+- **A)** An instance can only be one of the subtypes.
+- **B)** An instance can be more than one of the subtypes simultaneously.
+- **C)** An instance must not belong to any subtype.
+- **D)** An instance must share its primary key with a weak entity.
 
 6. When transforming a 1:M relationship into relational tables, where is the foreign key placed?
-    - **A)** On the "one" side of the relationship.
-    - **B)** On the "many" side of the relationship.
-    - **C)** In a newly created intersection table.
-    - **D)** As a composite primary key in the associative entity.
+- **A)** On the "one" side of the relationship.
+- **B)** On the "many" side of the relationship.
+- **C)** In a newly created intersection table.
+- **D)** As a composite primary key in the associative entity.
 
 7. How is a Many-to-Many (M:N) relationship resolved during the transformation to relations?
-    - **A)** By placing a foreign key in both entity tables.
-    - **B)** By creating a new intersection table with a composite primary key from both entities.
-    - **C)** By moving all attributes to the table with fewer records.
-    - **D)** By assigning a recursive foreign key to one of the entities.
+- **A)** By placing a foreign key in both entity tables.
+- **B)** By creating a new intersection table with a composite primary key from both entities.
+- **C)** By moving all attributes to the table with fewer records.
+- **D)** By assigning a recursive foreign key to one of the entities.
 
 8. When transforming a Weak Entity into a relation, what forms its primary key?
-    - **A)** Only its own partial identifier.
-    - **B)** A newly generated surrogate key.
-    - **C)** A composite of its partial identifier and the primary key of its identifying strong entity.
-    - **D)** The primary key of the identifying strong entity alone.
+- **A)** Only its own partial identifier.
+- **B)** A newly generated surrogate key.
+- **C)** A composite of its partial identifier and the primary key of its identifying strong entity.
+- **D)** The primary key of the identifying strong entity alone.
 
 9. How are multi-valued attributes handled when transforming an EERD to relations?
-    - **A)** They are broken down into simple components within the same table.
-    - **B)** They are ignored and left out of the final database schema.
-    - **C)** They become a separate relation with a foreign key back to the original entity.
-    - **D)** They are converted into an associative entity.
+- **A)** They are broken down into simple components within the same table.
+- **B)** They are ignored and left out of the final database schema.
+- **C)** They become a separate relation with a foreign key back to the original entity.
+- **D)** They are converted into an associative entity.
 
 10. What is a Subtype Discriminator?
-    - **A)** An attribute in the supertype that dictates which subtype(s) an instance belongs to.
-    - **B)** A constraint that prevents an instance from inheriting attributes.
-    - **C)** A rule that enforces total specialization over partial specialization.
-    - **D)** A foreign key used in a unary 1:M relationship.
+- **A)** An attribute in the supertype that dictates which subtype(s) an instance belongs to.
+- **B)** A constraint that prevents an instance from inheriting attributes.
+- **C)** A rule that enforces total specialization over partial specialization.
+- **D)** A foreign key used in a unary 1:M relationship.
 
 ### Answer Key & Explanations
 1. **B)** A supertype is specifically defined as a generalized entity type connected to one or more subgroupings (subtypes).

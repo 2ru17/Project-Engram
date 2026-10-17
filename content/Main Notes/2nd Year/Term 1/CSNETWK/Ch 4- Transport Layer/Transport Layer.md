@@ -66,64 +66,64 @@ Wraparound the carry out (1):
 ## Multiple Choice Questions
 
 1. What is the primary purpose of multiplexing in the transport layer?
-    - **A)** Encrypting data for secure transmission
-    - **B)** Handling data from multiple sockets and adding a transport header to create segments
-    - **C)** Delivering received segments to the correct socket using header info
-    - **D)** Routing packets to their final destination
+- **A)** Encrypting data for secure transmission
+- **B)** Handling data from multiple sockets and adding a transport header to create segments
+- **C)** Delivering received segments to the correct socket using header info
+- **D)** Routing packets to their final destination
 
 2. Which 4-tuple is used by TCP for connection-oriented demultiplexing?
-    - **A)** Source IP, Source MAC, Destination IP, Destination MAC
-    - **B)** Source IP, Source port, Destination IP, Destination port
-    - **C)** Source IP, Destination IP, Protocol, TTL
-    - **D)** Source port, Destination port, Sequence number, ACK number
+- **A)** Source IP, Source MAC, Destination IP, Destination MAC
+- **B)** Source IP, Source port, Destination IP, Destination port
+- **C)** Source IP, Destination IP, Protocol, TTL
+- **D)** Source port, Destination port, Sequence number, ACK number
 
 3. Which feature is NOT provided by UDP?
-    - **A)** Small header size
-    - **B)** Connectionless demultiplexing
-    - **C)** Congestion control
-    - **D)** Error detection via checksum
+- **A)** Small header size
+- **B)** Connectionless demultiplexing
+- **C)** Congestion control
+- **D)** Error detection via checksum
 
 4. What is the purpose of the `rwnd` field in the TCP header?
-    - **A)** It indicates the routing window size
-    - **B)** It specifies the congestion window size
-    - **C)** It advertises the receiver's free buffer space for flow control
-    - **D)** It holds the next expected sequence number
+- **A)** It indicates the routing window size
+- **B)** It specifies the congestion window size
+- **C)** It advertises the receiver's free buffer space for flow control
+- **D)** It holds the next expected sequence number
 
 5. How does TCP establish a connection safely?
-    - **A)** Using a 2-way handshake
-    - **B)** Using a 3-way handshake (SYN, SYN-ACK, ACK)
-    - **C)** Using a 4-way handshake (FIN, ACK, FIN, ACK)
-    - **D)** By broadcasting a connection request
+- **A)** Using a 2-way handshake
+- **B)** Using a 3-way handshake (SYN, SYN-ACK, ACK)
+- **C)** Using a 4-way handshake (FIN, ACK, FIN, ACK)
+- **D)** By broadcasting a connection request
 
 6. When does a TCP Fast Retransmit occur?
-    - **A)** When the sender's timeout interval expires
-    - **B)** When the receiver's buffer is full
-    - **C)** When the sender receives 3 duplicate ACKs for the same data
-    - **D)** When a segment's checksum fails
+- **A)** When the sender's timeout interval expires
+- **B)** When the receiver's buffer is full
+- **C)** When the sender receives 3 duplicate ACKs for the same data
+- **D)** When a segment's checksum fails
 
 7. What is the role of the $\alpha$ parameter in estimating TCP's RTT?
-    - **A)** It determines the weight given to the new SampleRTT versus the previous EstimatedRTT
-    - **B)** It sets the safety margin for the timeout interval
-    - **C)** It defines the maximum window size
-    - **D)** It acts as a multiplier for the Deviation RTT
+- **A)** It determines the weight given to the new SampleRTT versus the previous EstimatedRTT
+- **B)** It sets the safety margin for the timeout interval
+- **C)** It defines the maximum window size
+- **D)** It acts as a multiplier for the Deviation RTT
 
 8. If EstimatedRTT is 100 ms and DevRTT is 10 ms, what is the TimeoutInterval?
-    - **A)** 110 ms
-    - **B)** 140 ms
-    - **C)** 104 ms
-    - **D)** 90 ms
+- **A)** 110 ms
+- **B)** 140 ms
+- **C)** 104 ms
+- **D)** 90 ms
 
 9. How is the Internet Checksum computed for a UDP segment?
-    - **A)** By XORing all 16-bit integers
-    - **B)** By adding all 16-bit words and taking the 1's complement
-    - **C)** By calculating an MD5 hash of the payload
-    - **D)** By performing a cyclic redundancy check (CRC)
+- **A)** By XORing all 16-bit integers
+- **B)** By adding all 16-bit words and taking the 1's complement
+- **C)** By calculating an MD5 hash of the payload
+- **D)** By performing a cyclic redundancy check (CRC)
 
 10. What sequence numbers does the connection establishment handshake agree upon?
-    - **A)** Final sequence numbers
-    - **B)** Initial sequence numbers
-    - **C)** Acknowledgment window numbers
-    - **D)** Port numbers
+- **A)** Final sequence numbers
+- **B)** Initial sequence numbers
+- **C)** Acknowledgment window numbers
+- **D)** Port numbers
 
 ### Answer Key & Explanations
 1. **B)** Multiplexing involves gathering data from multiple sockets at the sender and adding headers to create segments.

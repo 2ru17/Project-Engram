@@ -75,20 +75,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. Why must an array specify an element type during declaration?
-    - **A)** To determine how much memory each element will consume
-    - **B)** To allow the array to hold different types later
-    - **C)** To disable pointer arithmetic
-    - **D)** To enforce dynamic typing
+- **A)** To determine how much memory each element will consume
+- **B)** To allow the array to hold different types later
+- **C)** To disable pointer arithmetic
+- **D)** To enforce dynamic typing
 2. Can a standard C array hold a mix of `int` and `float` variables?
-    - **A)** Yes, by declaring it as a mixed array
-    - **B)** No, because C arrays are strictly homogeneous collections
-    - **C)** Yes, if the array size is left empty
-    - **D)** No, unless they are cast to characters
+- **A)** Yes, by declaring it as a mixed array
+- **B)** No, because C arrays are strictly homogeneous collections
+- **C)** Yes, if the array size is left empty
+- **D)** No, unless they are cast to characters
 3. Which of the following determines the total memory allocated for an array?
-    - **A)** The element type multiplied by the array size
-    - **B)** The dimension alone
-    - **C)** The compiler's default padding rule
-    - **D)** The first assigned value
+- **A)** The element type multiplied by the array size
+- **B)** The dimension alone
+- **C)** The compiler's default padding rule
+- **D)** The first assigned value
 
 ### Answer Key & Explanations
 1. **A)** The compiler needs the type to compute pointer offsets and allocate exact block sizes.

@@ -51,64 +51,64 @@ Users subscribe to Internet Service Providers (ISPs) to gain broadband access. C
 ## Multiple Choice Questions
 
 1. What does Data Transfer Rate (Bandwidth) measure?
-    - **A)** The actual, realized speed of a download.
-    - **B)** The theoretical maximum speed at which data can be transmitted between two nodes on a network.
-    - **C)** The time it takes for a single packet to reach its destination.
-    - **D)** The storage capacity of a network switch.
+- **A)** The actual, realized speed of a download.
+- **B)** The theoretical maximum speed at which data can be transmitted between two nodes on a network.
+- **C)** The time it takes for a single packet to reach its destination.
+- **D)** The storage capacity of a network switch.
 
 2. How does throughput differ from bandwidth?
-    - **A)** Throughput is always perfectly equal to bandwidth.
-    - **B)** Throughput is theoretical, while bandwidth is practical.
-    - **C)** Throughput is the actual, realized speed of data transfer, typically lower due to network overhead and congestion.
-    - **D)** Throughput applies only to wireless networks.
+- **A)** Throughput is always perfectly equal to bandwidth.
+- **B)** Throughput is theoretical, while bandwidth is practical.
+- **C)** Throughput is the actual, realized speed of data transfer, typically lower due to network overhead and congestion.
+- **D)** Throughput applies only to wireless networks.
 
 3. What is a MAC address?
-    - **A)** A temporary, logical address used for internet routing.
-    - **B)** A permanent, physical address assigned to a network interface controller (NIC) by the manufacturer.
-    - **C)** A subnet identifier for Wide Area Networks.
-    - **D)** A security code used to encrypt Wi-Fi signals.
+- **A)** A temporary, logical address used for internet routing.
+- **B)** A permanent, physical address assigned to a network interface controller (NIC) by the manufacturer.
+- **C)** A subnet identifier for Wide Area Networks.
+- **D)** A security code used to encrypt Wi-Fi signals.
 
 4. What function does a Subnet Mask serve in an IP network?
-    - **A)** It encrypts data packets for secure transmission.
-    - **B)** It physically connects a LAN to a WAN.
-    - **C)** It determines which portion of an IP address represents the network number and which represents the host number.
-    - **D)** It acts as a firewall against malicious traffic.
+- **A)** It encrypts data packets for secure transmission.
+- **B)** It physically connects a LAN to a WAN.
+- **C)** It determines which portion of an IP address represents the network number and which represents the host number.
+- **D)** It acts as a firewall against malicious traffic.
 
 5. Which transmission medium uses light signals and does not degrade over long distances?
-    - **A)** Copper wire
-    - **B)** Coaxial cable
-    - **C)** Radio frequencies
-    - **D)** Fiber optic cables
+- **A)** Copper wire
+- **B)** Coaxial cable
+- **C)** Radio frequencies
+- **D)** Fiber optic cables
 
 6. What is a Wide Area Network (WAN)?
-    - **A)** A telecommunications network extending over a large geographic distance, often connecting multiple LANs.
-    - **B)** A network restricted to a single room or office.
-    - **C)** A localized network for home appliances.
-    - **D)** A network exclusively using Bluetooth technology.
+- **A)** A telecommunications network extending over a large geographic distance, often connecting multiple LANs.
+- **B)** A network restricted to a single room or office.
+- **C)** A localized network for home appliances.
+- **D)** A network exclusively using Bluetooth technology.
 
 7. Which network component serves as the router that provides access to external networks?
-    - **A)** Subnet Mask
-    - **B)** MAC Address
-    - **C)** Default Gateway
-    - **D)** Network Interface Card (NIC)
+- **A)** Subnet Mask
+- **B)** MAC Address
+- **C)** Default Gateway
+- **D)** Network Interface Card (NIC)
 
 8. What type of broadband connection uses coaxial cables where connections are shared and speed can drop during high usage?
-    - **A)** DSL
-    - **B)** Fiber
-    - **C)** Mobile
-    - **D)** Cable
+- **A)** DSL
+- **B)** Fiber
+- **C)** Mobile
+- **D)** Cable
 
 9. Which type of device is a smartphone or printer in a network context?
-    - **A)** Infrastructure Device
-    - **B)** Transmission Medium
-    - **C)** End Device
-    - **D)** Gateway Device
+- **A)** Infrastructure Device
+- **B)** Transmission Medium
+- **C)** End Device
+- **D)** Gateway Device
 
 10. How does a DSL broadband connection transmit data?
-    - **A)** Using optical fiber light signals.
-    - **B)** Using copper wire phone lines, where speed degrades as distance from the source increases.
-    - **C)** Using shared coaxial television cables.
-    - **D)** Using satellite radio frequencies exclusively.
+- **A)** Using optical fiber light signals.
+- **B)** Using copper wire phone lines, where speed degrades as distance from the source increases.
+- **C)** Using shared coaxial television cables.
+- **D)** Using satellite radio frequencies exclusively.
 
 ### Answer Key & Explanations
 1. **B)** Bandwidth is the theoretical maximum speed data can be transmitted, measured in bps.

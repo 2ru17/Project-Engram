@@ -60,22 +60,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. In the context of matrix operations, what does the term "scalar" formally refer to?
-    - **A)** A matrix with one row and one column.
-    - **B)** A real number.
-    - **C)** The determinant of a matrix.
-    - **D)** The trace of a matrix.
+- **A)** A matrix with one row and one column.
+- **B)** A real number.
+- **C)** The determinant of a matrix.
+- **D)** The trace of a matrix.
 
 2. How is the operation of scalar multiplication $cA$ performed on a matrix $A$?
-    - **A)** By adding the scalar $c$ to every entry of $A$.
-    - **B)** By multiplying only the diagonal entries of $A$ by $c$.
-    - **C)** By multiplying every single entry of $A$ by the scalar $c$.
-    - **D)** By raising every entry of $A$ to the power of $c$.
+- **A)** By adding the scalar $c$ to every entry of $A$.
+- **B)** By multiplying only the diagonal entries of $A$ by $c$.
+- **C)** By multiplying every single entry of $A$ by the scalar $c$.
+- **D)** By raising every entry of $A$ to the power of $c$.
 
 3. Which of the following properties applies to scalar multiplication with a matrix?
-    - **A)** It changes the dimensions of the matrix.
-    - **B)** It only works if the matrix is square.
-    - **C)** It always yields an invertible matrix.
-    - **D)** It always commutes, meaning $kA = Ak$.
+- **A)** It changes the dimensions of the matrix.
+- **B)** It only works if the matrix is square.
+- **C)** It always yields an invertible matrix.
+- **D)** It always commutes, meaning $kA = Ak$.
 
 ### Answer Key & Explanations
 1. **B)** As noted in the overview, real numbers used in matrix contexts are referred to as scalars.

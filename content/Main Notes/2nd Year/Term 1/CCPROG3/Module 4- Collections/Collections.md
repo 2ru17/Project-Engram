@@ -71,34 +71,34 @@ public class CollectionExample {
 ## Multiple Choice Questions
 
 1. What is the primary purpose of the Java Collections Framework?
-    - **A)** To manage memory allocation for variables.
-    - **B)** To provide a unified architecture for representing and manipulating groups of objects.
-    - **C)** To handle graphical user interface events.
-    - **D)** To compile Java source code into Bytecode.
+- **A)** To manage memory allocation for variables.
+- **B)** To provide a unified architecture for representing and manipulating groups of objects.
+- **C)** To handle graphical user interface events.
+- **D)** To compile Java source code into Bytecode.
 
 2. Which core interface in the Collections Framework cannot contain duplicate elements?
-    - **A)** List
-    - **B)** Set
-    - **C)** Map
-    - **D)** ArrayList
+- **A)** List
+- **B)** Set
+- **C)** Map
+- **D)** ArrayList
 
 3. In the context of a Map, which of the following is true?
-    - **A)** It maps keys to values and cannot contain duplicate keys.
-    - **B)** It is an ordered collection that allows duplicates.
-    - **C)** It is a specialized form of a List.
-    - **D)** It can only hold primitive data types.
+- **A)** It maps keys to values and cannot contain duplicate keys.
+- **B)** It is an ordered collection that allows duplicates.
+- **C)** It is a specialized form of a List.
+- **D)** It can only hold primitive data types.
 
 4. What is the amortized time complexity for adding an element to an ArrayList?
-    - **A)** O(n)
-    - **B)** O(log n)
-    - **C)** O(1)
-    - **D)** O(n^2)
+- **A)** O(n)
+- **B)** O(log n)
+- **C)** O(1)
+- **D)** O(n^2)
 
 5. What does the diamond operator `<>` do in the statement `List<String> list = new ArrayList<>();`?
-    - **A)** It indicates that the collection is empty.
-    - **B)** It infers the generic type from the variable declaration.
-    - **C)** It prevents the addition of any elements to the list.
-    - **D)** It casts the ArrayList to a String.
+- **A)** It indicates that the collection is empty.
+- **B)** It infers the generic type from the variable declaration.
+- **C)** It prevents the addition of any elements to the list.
+- **D)** It casts the ArrayList to a String.
 
 ### Answer Key & Explanations
 1. **B)** The framework provides interfaces, implementations, and algorithms specifically designed for handling object collections efficiently.

@@ -41,34 +41,34 @@ Given a state table with abstract states (a, b, c, d, e, f, g), state reduction 
 ## Multiple Choice Questions
 
 1. What is the primary goal of the state-reduction problem?
-    - **A)** To increase the number of flip-flops for redundancy
-    - **B)** To reduce the number of flip-flops or simplify the combinational logic by minimizing states
-    - **C)** To reduce the clock frequency of the circuit
-    - **D)** To remove output dependencies from the inputs
+- **A)** To increase the number of flip-flops for redundancy
+- **B)** To reduce the number of flip-flops or simplify the combinational logic by minimizing states
+- **C)** To reduce the clock frequency of the circuit
+- **D)** To remove output dependencies from the inputs
 
 2. Under what condition are two states considered equivalent?
-    - **A)** If they have the same binary assignment
-    - **B)** If they lead to the same next state for at least one input
-    - **C)** If, for every input, they give the same output and send the circuit to the same or equivalent state
-    - **D)** If they are adjacent in the state diagram
+- **A)** If they have the same binary assignment
+- **B)** If they lead to the same next state for at least one input
+- **C)** If, for every input, they give the same output and send the circuit to the same or equivalent state
+- **D)** If they are adjacent in the state diagram
 
 3. What can be done when two states are found to be equivalent?
-    - **A)** Both states must be kept to maintain stability.
-    - **B)** One of them can be removed without altering the input-output relationships.
-    - **C)** They must be merged into a single state with a new output.
-    - **D)** A new flip-flop must be added to distinguish them.
+- **A)** Both states must be kept to maintain stability.
+- **B)** One of them can be removed without altering the input-output relationships.
+- **C)** They must be merged into a single state with a new output.
+- **D)** A new flip-flop must be added to distinguish them.
 
 4. Which of the following are common methods for state assignment?
-    - **A)** Hexadecimal Code
-    - **B)** Binary, Gray Code, and One-Hot
-    - **C)** ASCII Code
-    - **D)** Floating Point Encoding
+- **A)** Hexadecimal Code
+- **B)** Binary, Gray Code, and One-Hot
+- **C)** ASCII Code
+- **D)** Floating Point Encoding
 
 5. In a one-hot state assignment for 5 states, how many bits (and thus flip-flops) are used?
-    - **A)** 2
-    - **B)** 3
-    - **C)** 5
-    - **D)** 10
+- **A)** 2
+- **B)** 3
+- **C)** 5
+- **D)** 10
 
 ### Answer Key & Explanations
 1. **B)** Reducing states may allow using fewer flip-flops or simplify the resulting combinational logic, maintaining exactly the same input-output behavior.

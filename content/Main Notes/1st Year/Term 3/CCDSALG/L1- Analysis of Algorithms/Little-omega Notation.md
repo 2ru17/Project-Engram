@@ -54,34 +54,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does $f(n) = \omega(g(n))$ mathematically signify?
-    - **A)** $f(n)$ grows strictly slower than $g(n)$
-    - **B)** $f(n)$ grows strictly faster than $g(n)$
-    - **C)** $f(n)$ grows at the same rate as $g(n)$
-    - **D)** $f(n)$ grows no slower than $g(n)$, allowing equality
+- **A)** $f(n)$ grows strictly slower than $g(n)$
+- **B)** $f(n)$ grows strictly faster than $g(n)$
+- **C)** $f(n)$ grows at the same rate as $g(n)$
+- **D)** $f(n)$ grows no slower than $g(n)$, allowing equality
 
 2. What is the limit definition for little-omega notation?
-    - **A)** limit as $n \to \infty$ of $f(n)/g(n) = 0$
-    - **B)** limit as $n \to \infty$ of $f(n)/g(n) = 1$
-    - **C)** limit as $n \to \infty$ of $f(n)/g(n) = \infty$
-    - **D)** limit as $n \to 0$ of $f(n)/g(n) = 0$
+- **A)** limit as $n \to \infty$ of $f(n)/g(n) = 0$
+- **B)** limit as $n \to \infty$ of $f(n)/g(n) = 1$
+- **C)** limit as $n \to \infty$ of $f(n)/g(n) = \infty$
+- **D)** limit as $n \to 0$ of $f(n)/g(n) = 0$
 
 3. Is the statement $n^2 = \omega(n^2)$ correct?
-    - **A)** Yes, because they are equal.
-    - **B)** Yes, because it satisfies Big-Omega.
-    - **C)** No, because little-omega requires $f(n)$ to grow strictly faster, excluding equality.
-    - **D)** No, because little-omega is only used for sub-linear functions.
+- **A)** Yes, because they are equal.
+- **B)** Yes, because it satisfies Big-Omega.
+- **C)** No, because little-omega requires $f(n)$ to grow strictly faster, excluding equality.
+- **D)** No, because little-omega is only used for sub-linear functions.
 
 4. How does little-omega relate to little-o?
-    - **A)** It is the exact same notation.
-    - **B)** It is the transpose; if $f(n) = \omega(g(n))$, then $g(n) = o(f(n))$.
-    - **C)** They both represent tight bounds.
-    - **D)** Little-omega handles space complexity while little-o handles time complexity.
+- **A)** It is the exact same notation.
+- **B)** It is the transpose; if $f(n) = \omega(g(n))$, then $g(n) = o(f(n))$.
+- **C)** They both represent tight bounds.
+- **D)** Little-omega handles space complexity while little-o handles time complexity.
 
 5. Which of the following is a common pitfall regarding little-omega notation?
-    - **A)** Using the limit $f(n)/g(n) \to 0$ instead of $\infty$
-    - **B)** Confusing it with Big-O notation
-    - **C)** Using it to describe exact equality
-    - **D)** Applying it to constants
+- **A)** Using the limit $f(n)/g(n) \to 0$ instead of $\infty$
+- **B)** Confusing it with Big-O notation
+- **C)** Using it to describe exact equality
+- **D)** Applying it to constants
 
 ### Answer Key & Explanations
 1. **B)** Little-omega ($\omega$) represents a strict lower bound, meaning $f(n)$ must grow strictly faster than $g(n)$.

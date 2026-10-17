@@ -56,64 +56,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does a "lower bound" determine in algorithm analysis?
-    - **A)** The fastest possible execution time of a specific algorithm.
-    - **B)** The minimum amount of work any algorithm must perform to solve a given problem.
-    - **C)** The lowest amount of memory a variable can hold.
-    - **D)** The best-case scenario of an algorithm.
+- **A)** The fastest possible execution time of a specific algorithm.
+- **B)** The minimum amount of work any algorithm must perform to solve a given problem.
+- **C)** The lowest amount of memory a variable can hold.
+- **D)** The best-case scenario of an algorithm.
 
 2. Why is finding a lower bound for a problem useful?
-    - **A)** It automatically generates the code for the optimal algorithm.
-    - **B)** It proves that Big-O notation is unnecessary.
-    - **C)** It helps understand the inherent difficulty of a problem and determines if an algorithm is optimal.
-    - **D)** It minimizes space complexity to $O(1)$.
+- **A)** It automatically generates the code for the optimal algorithm.
+- **B)** It proves that Big-O notation is unnecessary.
+- **C)** It helps understand the inherent difficulty of a problem and determines if an algorithm is optimal.
+- **D)** It minimizes space complexity to $O(1)$.
 
 3. What is the established lower bound for any comparison-based sorting algorithm in the worst case?
-    - **A)** $\Omega(n)$
-    - **B)** $\Omega(\log n)$
-    - **C)** $\Omega(n \log n)$
-    - **D)** $\Omega(n^2)$
+- **A)** $\Omega(n)$
+- **B)** $\Omega(\log n)$
+- **C)** $\Omega(n \log n)$
+- **D)** $\Omega(n^2)$
 
 4. If a problem has a lower bound of $\Omega(n \log n)$ and an algorithm solves it in $\Theta(n \log n)$, what can be said about the algorithm?
-    - **A)** It is inherently flawed.
-    - **B)** It is asymptotically optimal.
-    - **C)** It has terrible space complexity.
-    - **D)** It can be optimized to $O(n)$.
+- **A)** It is inherently flawed.
+- **B)** It is asymptotically optimal.
+- **C)** It has terrible space complexity.
+- **D)** It can be optimized to $O(n)$.
 
 5. Which of the following is a technique used to prove lower bounds?
-    - **A)** Master Theorem
-    - **B)** Frequency counting
-    - **C)** Decision trees
-    - **D)** Mathematical induction
+- **A)** Master Theorem
+- **B)** Frequency counting
+- **C)** Decision trees
+- **D)** Mathematical induction
 
 6. What does an adversary argument attempt to do?
-    - **A)** Construct a best-case input to trick the algorithm.
-    - **B)** Construct a worst-case input dynamically to force the algorithm to do the maximum work.
-    - **C)** Prove the algorithm uses too much memory.
-    - **D)** Reduce the problem to constant time.
+- **A)** Construct a best-case input to trick the algorithm.
+- **B)** Construct a worst-case input dynamically to force the algorithm to do the maximum work.
+- **C)** Prove the algorithm uses too much memory.
+- **D)** Reduce the problem to constant time.
 
 7. What is a common pitfall regarding the scope of a lower bound?
-    - **A)** Confusing it with a specific algorithm's complexity—a lower bound applies to the whole problem.
-    - **B)** Assuming lower bounds only apply to iterative loops.
-    - **C)** Using decision trees instead of Big-O notation.
-    - **D)** Thinking lower bounds define average-case performance.
+- **A)** Confusing it with a specific algorithm's complexity—a lower bound applies to the whole problem.
+- **B)** Assuming lower bounds only apply to iterative loops.
+- **C)** Using decision trees instead of Big-O notation.
+- **D)** Thinking lower bounds define average-case performance.
 
 8. Does the $\Omega(n \log n)$ lower bound apply to ALL sorting algorithms?
-    - **A)** Yes, without exception.
-    - **B)** No, it only applies to comparison-based sorting algorithms.
-    - **C)** No, it only applies to recursive sorting algorithms.
-    - **D)** Yes, but only in the best-case scenario.
+- **A)** Yes, without exception.
+- **B)** No, it only applies to comparison-based sorting algorithms.
+- **C)** No, it only applies to recursive sorting algorithms.
+- **D)** Yes, but only in the best-case scenario.
 
 9. What is a limitation of the decision-tree model for proving lower bounds?
-    - **A)** It is impossible to draw.
-    - **B)** It only counts comparisons, failing to capture non-comparison operations.
-    - **C)** It requires exponential time to evaluate.
-    - **D)** It only applies to graph algorithms.
+- **A)** It is impossible to draw.
+- **B)** It only counts comparisons, failing to capture non-comparison operations.
+- **C)** It requires exponential time to evaluate.
+- **D)** It only applies to graph algorithms.
 
 10. What is the difference between an adversary argument and average-case analysis?
-    - **A)** Adversary arguments construct probabilistic models, while average-case analysis does not.
-    - **B)** Average-case analysis constructs worst-case inputs, while adversary arguments evaluate normal inputs.
-    - **C)** Adversary arguments actively construct a worst-case input, whereas average-case analyzes the expected performance over all inputs.
-    - **D)** There is no difference; they are synonymous.
+- **A)** Adversary arguments construct probabilistic models, while average-case analysis does not.
+- **B)** Average-case analysis constructs worst-case inputs, while adversary arguments evaluate normal inputs.
+- **C)** Adversary arguments actively construct a worst-case input, whereas average-case analyzes the expected performance over all inputs.
+- **D)** There is no difference; they are synonymous.
 
 ### Answer Key & Explanations
 1. **B)** A lower bound provides a theoretical limit on how efficient any solution to a specific computational problem can possibly be.

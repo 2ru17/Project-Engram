@@ -62,64 +62,64 @@ Endianness refers to the convention used to interpret the byte ordering of multi
 ## Multiple Choice Questions
 
 1. What is the smallest addressable data unit in most computer architectures?
-    - **A)** Bit
-    - **B)** Nibble
-    - **C)** Byte
-    - **D)** Word
+- **A)** Bit
+- **B)** Nibble
+- **C)** Byte
+- **D)** Word
 
 2. How many bits are contained in a "Nibble"?
-    - **A)** 2 bits
-    - **B)** 4 bits
-    - **C)** 8 bits
-    - **D)** 16 bits
+- **A)** 2 bits
+- **B)** 4 bits
+- **C)** 8 bits
+- **D)** 16 bits
 
 3. In a standard byte, which bit is considered the most significant bit (MSb)?
-    - **A)** Bit 0
-    - **B)** Bit 1
-    - **C)** Bit 7
-    - **D)** Bit 8
+- **A)** Bit 0
+- **B)** Bit 1
+- **C)** Bit 7
+- **D)** Bit 8
 
 4. What does the term "Endianness" refer to in computer architecture?
-    - **A)** The physical location of the memory chip
-    - **B)** The convention used to interpret the byte ordering of multi-byte data
-    - **C)** The maximum size of a data word
-    - **D)** The speed at which memory can be accessed
+- **A)** The physical location of the memory chip
+- **B)** The convention used to interpret the byte ordering of multi-byte data
+- **C)** The maximum size of a data word
+- **D)** The speed at which memory can be accessed
 
 5. In a Little Endian system, where is the least-significant byte stored?
-    - **A)** At the highest memory byte address
-    - **B)** At the lowest memory byte address
-    - **C)** In the middle of the memory block
-    - **D)** In the cache exclusively
+- **A)** At the highest memory byte address
+- **B)** At the lowest memory byte address
+- **C)** In the middle of the memory block
+- **D)** In the cache exclusively
 
 6. If the 32-bit hex data 55443322 is stored at address 0000 in a Little Endian system, what is the content of address 0001?
-    - **A)** 55
-    - **B)** 44
-    - **C)** 33
-    - **D)** 22
+- **A)** 55
+- **B)** 44
+- **C)** 33
+- **D)** 22
 
 7. For the hexadecimal number 123ACAFE16, what is the most significant byte (MSB)?
-    - **A)** FE16
-    - **B)** 1216
-    - **C)** 1616
-    - **D)** CA16
+- **A)** FE16
+- **B)** 1216
+- **C)** 1616
+- **D)** CA16
 
 8. Who coined the terms Big Endian and Little Endian based on a novel by Jonathan Swift?
-    - **A)** Alan Turing
-    - **B)** John von Neumann
-    - **C)** Danny Cohen
-    - **D)** Grace Hopper
+- **A)** Alan Turing
+- **B)** John von Neumann
+- **C)** Danny Cohen
+- **D)** Grace Hopper
 
 9. If address 0000 contains 22, 0001 contains 33, 0002 contains 44, and 0003 contains 55, what is the 32-bit data read in a Big Endian system?
-    - **A)** 55443322
-    - **B)** 22334455
-    - **C)** 33225544
-    - **D)** 44552233
+- **A)** 55443322
+- **B)** 22334455
+- **C)** 33225544
+- **D)** 44552233
 
 10. In computer architecture conventions, what number does bit indexing typically start at?
-    - **A)** 0
-    - **B)** 1
-    - **C)** -1
-    - **D)** 8
+- **A)** 0
+- **B)** 1
+- **C)** -1
+- **D)** 8
 
 ### Answer Key & Explanations
 1. **C)** The byte (8 bits) is the smallest addressable data unit.

@@ -179,52 +179,52 @@ Remediation must balance CVSS scores with organizational context:
 ## Multiple Choice Questions
 
 1. What is the primary purpose of the Executive Summary section in a VAPT report?
-    - **A)** To list every raw Nmap command executed during the assessment
-    - **B)** To communicate organizational risk posture, business impact, and strategic priorities to non-technical leadership in clear, accessible language
-    - **C)** To provide assembly code for buffer overflow exploits
-    - **D)** To invoice the client for software licenses
+- **A)** To list every raw Nmap command executed during the assessment
+- **B)** To communicate organizational risk posture, business impact, and strategic priorities to non-technical leadership in clear, accessible language
+- **C)** To provide assembly code for buffer overflow exploits
+- **D)** To invoice the client for software licenses
 
 2. Which classification taxonomy identifies specific flaw mechanisms like "CWE-89: SQL Injection" or "CWE-79: Cross-Site Scripting"?
-    - **A)** Common Weakness Enumeration (CWE)
-    - **B)** Common Vulnerabilities and Exposures (CVE)
-    - **C)** Payment Card Industry Data Security Standard (PCI-DSS)
-    - **D)** ISO 27001
+- **A)** Common Weakness Enumeration (CWE)
+- **B)** Common Vulnerabilities and Exposures (CVE)
+- **C)** Payment Card Industry Data Security Standard (PCI-DSS)
+- **D)** ISO 27001
 
 3. What is the fundamental requirement of the "Proof of Concept (PoC)" section within a technical finding?
-    - **A)** It must include at least 500 lines of unrelated Python code.
-    - **B)** It must provide clear, repeatable, step-by-step instructions that allow developers to reproduce and verify the vulnerability independently.
-    - **C)** It must delete all server logs to hide the tester's identity.
-    - **D)** It must be written in binary machine code.
+- **A)** It must include at least 500 lines of unrelated Python code.
+- **B)** It must provide clear, repeatable, step-by-step instructions that allow developers to reproduce and verify the vulnerability independently.
+- **C)** It must delete all server logs to hide the tester's identity.
+- **D)** It must be written in binary machine code.
 
 4. How does an analyst prioritize remediation actions when presenting recommendations to a client?
-    - **A)** Alphabetically by vulnerability name
-    - **B)** By balancing CVSS severity scores, business criticality of affected assets, and the feasibility/speed of mitigation (quick wins vs strategic fixes)
-    - **C)** By fixing the lowest severity issues first
-    - **D)** Based on the order the vulnerabilities were discovered in the calendar week
+- **A)** Alphabetically by vulnerability name
+- **B)** By balancing CVSS severity scores, business criticality of affected assets, and the feasibility/speed of mitigation (quick wins vs strategic fixes)
+- **C)** By fixing the lowest severity issues first
+- **D)** Based on the order the vulnerabilities were discovered in the calendar week
 
 5. Why is copy-pasting raw automated vulnerability scanner outputs directly into a client deliverable considered unprofessional?
-    - **A)** It causes the PDF file size to exceed email limits.
-    - **B)** Automated outputs frequently contain unverified false positives, lack business context, and fail to provide tailored remediation guidance.
-    - **C)** Scanners always write reports in ancient Latin.
-    - **D)** Automated scanners only test hardware cables.
+- **A)** It causes the PDF file size to exceed email limits.
+- **B)** Automated outputs frequently contain unverified false positives, lack business context, and fail to provide tailored remediation guidance.
+- **C)** Scanners always write reports in ancient Latin.
+- **D)** Automated scanners only test hardware cables.
 
 6. An analyst documents an IDOR vulnerability affecting customer invoices. Which remediation recommendation is technically accurate?
-    - **A)** Rename the database table to `invoices_hidden`.
-    - **B)** Implement server-side authorization checks ensuring the requesting user ID matches the ownership record of the requested invoice object before returning data.
-    - **C)** Switch the website font to Comic Sans.
-    - **D)** Hide the URL using a URL shortener.
+- **A)** Rename the database table to `invoices_hidden`.
+- **B)** Implement server-side authorization checks ensuring the requesting user ID matches the ownership record of the requested invoice object before returning data.
+- **C)** Switch the website font to Comic Sans.
+- **D)** Hide the URL using a URL shortener.
 
 7. What information belongs in the Scope & Rules of Engagement section of a VAPT report?
-    - **A)** The penetration tester's home address
-    - **B)** The explicitly authorized IP ranges, domains, testing timeframes, and explicitly excluded systems
-    - **C)** The client CEO's personal social media password
-    - **D)** The source code of the Kali Linux operating system
+- **A)** The penetration tester's home address
+- **B)** The explicitly authorized IP ranges, domains, testing timeframes, and explicitly excluded systems
+- **C)** The client CEO's personal social media password
+- **D)** The source code of the Kali Linux operating system
 
 8. When documenting evidence of a high-severity vulnerability involving customer passwords in a database, how should the data be presented in the final report?
-    - **A)** Displayed in full plaintext in 48pt font on the title page
-    - **B)** Sanitized and redacted (e.g., masking sensitive characters) to prove data access without creating a secondary data leak
-    - **C)** Uploaded to a public torrent website
-    - **D)** Deleted from the report entirely without mentioning the vulnerability
+- **A)** Displayed in full plaintext in 48pt font on the title page
+- **B)** Sanitized and redacted (e.g., masking sensitive characters) to prove data access without creating a secondary data leak
+- **C)** Uploaded to a public torrent website
+- **D)** Deleted from the report entirely without mentioning the vulnerability
 
 ### Answer Key & Explanations
 
