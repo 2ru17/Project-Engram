@@ -108,64 +108,64 @@ $$
 ## Multiple Choice Questions
 
 1. Which probability represents a Type I error ($\alpha$)?
-    - **A)** The probability of failing to reject $H_0$ when $H_0$ is true.
-    - **B)** The probability of rejecting $H_0$ when $H_0$ is true.
-    - **C)** The probability of rejecting $H_0$ when $H_0$ is false.
-    - **D)** The probability of failing to reject $H_0$ when $H_0$ is false.
+- **A)** The probability of failing to reject $H_0$ when $H_0$ is true.
+- **B)** The probability of rejecting $H_0$ when $H_0$ is true.
+- **C)** The probability of rejecting $H_0$ when $H_0$ is false.
+- **D)** The probability of failing to reject $H_0$ when $H_0$ is false.
 
 2. What is the statistical power of a hypothesis test?
-    - **A)** $1 - \alpha$
-    - **B)** $\alpha / \beta$
-    - **C)** $1 - \beta$
-    - **D)** $\beta$
+- **A)** $1 - \alpha$
+- **B)** $\alpha / \beta$
+- **C)** $1 - \beta$
+- **D)** $\beta$
 
 3. If a test produces a $p$-value of $0.018$ and the chosen significance level is $\alpha = 0.05$, what is the correct statistical decision?
-    - **A)** Fail to reject $H_0$ because $p < \alpha$.
-    - **B)** Reject $H_0$ because $p \le \alpha$.
-    - **C)** Accept $H_0$ as definitively proven.
-    - **D)** Change $\alpha$ to $0.01$ to force non-rejection.
+- **A)** Fail to reject $H_0$ because $p < \alpha$.
+- **B)** Reject $H_0$ because $p \le \alpha$.
+- **C)** Accept $H_0$ as definitively proven.
+- **D)** Change $\alpha$ to $0.01$ to force non-rejection.
 
 4. What distinguishes a $t$-test from a $z$-test when testing a single population mean?
-    - **A)** A $t$-test is used when population standard deviation $\sigma$ is unknown and estimated by sample standard deviation $s$.
-    - **B)** A $z$-test requires $n < 30$, whereas a $t$-test requires $n \ge 100$.
-    - **C)** A $t$-test can only be one-tailed.
-    - **D)** A $t$-test assumes a uniform distribution.
+- **A)** A $t$-test is used when population standard deviation $\sigma$ is unknown and estimated by sample standard deviation $s$.
+- **B)** A $z$-test requires $n < 30$, whereas a $t$-test requires $n \ge 100$.
+- **C)** A $t$-test can only be one-tailed.
+- **D)** A $t$-test assumes a uniform distribution.
 
 5. When performing a two-tailed test with $\alpha = 0.01$, what is the tail probability in each rejection region?
-    - **A)** $0.01$
-    - **B)** $0.02$
-    - **C)** $0.005$
-    - **D)** $0.05$
+- **A)** $0.01$
+- **B)** $0.02$
+- **C)** $0.005$
+- **D)** $0.05$
 
 6. Why do statisticians state "fail to reject $H_0$" rather than "accept $H_0$"?
-    - **A)** Because sample data can fail to disprove the null, but cannot definitively prove the absence of an effect.
-    - **B)** Because $H_0$ is always false in practice.
-    - **C)** Because the test statistic is always positive.
-    - **D)** Because Type I errors cannot be quantified.
+- **A)** Because sample data can fail to disprove the null, but cannot definitively prove the absence of an effect.
+- **B)** Because $H_0$ is always false in practice.
+- **C)** Because the test statistic is always positive.
+- **D)** Because Type I errors cannot be quantified.
 
 7. How does increasing the sample size $n$ affect the standard error and test sensitivity, holding variance constant?
-    - **A)** Increases standard error, decreasing statistical power.
-    - **B)** Decreases standard error ($\sigma / \sqrt{n}$), increasing statistical power ($1 - \beta$).
-    - **C)** Increases $\alpha$, leading to more Type I errors.
-    - **D)** Has no effect on test sensitivity.
+- **A)** Increases standard error, decreasing statistical power.
+- **B)** Decreases standard error ($\sigma / \sqrt{n}$), increasing statistical power ($1 - \beta$).
+- **C)** Increases $\alpha$, leading to more Type I errors.
+- **D)** Has no effect on test sensitivity.
 
 8. In our worked latency example with $Z = 2.00$, what would the conclusion have been if the test had been set at $\alpha = 0.01$ ($z_{\text{crit}} = \pm 2.576$)?
-    - **A)** Reject $H_0$ because $2.00 > 0.01$.
-    - **B)** Fail to reject $H_0$ because $Z_{\text{calc}} = 2.00 < 2.576$ (and $p = 0.0455 > 0.01$).
-    - **C)** The test becomes invalid.
-    - **D)** The sample mean becomes negative.
+- **A)** Reject $H_0$ because $2.00 > 0.01$.
+- **B)** Fail to reject $H_0$ because $Z_{\text{calc}} = 2.00 < 2.576$ (and $p = 0.0455 > 0.01$).
+- **C)** The test becomes invalid.
+- **D)** The sample mean becomes negative.
 
 9. What is the degrees of freedom ($df$) for a single-sample $t$-test with sample size $n = 25$?
-    - **A)** $25$
-    - **B)** $24$
-    - **C)** $23$
-    - **D)** $26$
+- **A)** $25$
+- **B)** $24$
+- **C)** $23$
+- **D)** $26$
 
 10. If the null hypothesis is rejected at $\alpha = 0.01$, what is guaranteed about its outcome at $\alpha = 0.05$?
-    - **A)** It will also be rejected at $\alpha = 0.05$, because any $p \le 0.01$ is strictly less than $0.05$.
-    - **B)** It will fail to be rejected at $\alpha = 0.05$.
-    - **C)** The test is inconclusive at $\alpha = 0.05$.
-    - **D)** The power of the test drops to zero.
+- **A)** It will also be rejected at $\alpha = 0.05$, because any $p \le 0.01$ is strictly less than $0.05$.
+- **B)** It will fail to be rejected at $\alpha = 0.05$.
+- **C)** The test is inconclusive at $\alpha = 0.05$.
+- **D)** The power of the test drops to zero.
 
 ---
 

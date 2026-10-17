@@ -43,64 +43,64 @@ status: completed
 ## Multiple Choice Questions
 
 1. What best describes the role of **Test Cases**?
-    - **A)** An error, flaw, or fault in a computer program that produces an incorrect or ...
-    - **B)** Specific sets of inputs and expected outputs used to test a program
-    - **C)** Testing functionality without looking at the internal code structure. Focuses...
-    - **D)** A software-only abstraction that does not correspond to physical hardware
+- **A)** An error, flaw, or fault in a computer program that produces an incorrect or ...
+- **B)** Specific sets of inputs and expected outputs used to test a program
+- **C)** Testing functionality without looking at the internal code structure. Focuses...
+- **D)** A software-only abstraction that does not correspond to physical hardware
 
 2. What best describes the role of **Bug**?
-    - **A)** A theoretical concept with no practical hardware implementation
-    - **B)** An error, flaw, or fault in a computer program that produces an incorrect or ...
-    - **C)** Testing values at the extremes of allowed inputs (e.g., an empty string, `0`,...
-    - **D)** Verify that the fix worked and did not introduce new bugs
+- **A)** A theoretical concept with no practical hardware implementation
+- **B)** An error, flaw, or fault in a computer program that produces an incorrect or ...
+- **C)** Testing values at the extremes of allowed inputs (e.g., an empty string, `0`,...
+- **D)** Verify that the fix worked and did not introduce new bugs
 
 3. What best describes the role of **White-box Testing**?
-    - **A)** An error, flaw, or fault in a computer program that produces an incorrect or ...
-    - **B)** A measurement unit used exclusively in network performance benchmarking
-    - **C)** Testing internal structures, logic paths, and edge cases by reading the sourc...
-    - **D)** Specific sets of inputs and expected outputs used to test a program
+- **A)** An error, flaw, or fault in a computer program that produces an incorrect or ...
+- **B)** A measurement unit used exclusively in network performance benchmarking
+- **C)** Testing internal structures, logic paths, and edge cases by reading the sourc...
+- **D)** Specific sets of inputs and expected outputs used to test a program
 
 4. What best describes the role of **Re-test**?
-    - **A)** A deprecated standard that has been replaced in modern implementations
-    - **B)** Verify that the fix worked and did not introduce new bugs
-    - **C)** The program runs but produces incorrect outputs because the underlying algori...
-    - **D)** Testing functionality without looking at the internal code structure. Focuses...
+- **A)** A deprecated standard that has been replaced in modern implementations
+- **B)** Verify that the fix worked and did not introduce new bugs
+- **C)** The program runs but produces incorrect outputs because the underlying algori...
+- **D)** Testing functionality without looking at the internal code structure. Focuses...
 
 5. In the sequence described in this topic, what happens during the **Fix the Bug:** step?
-    - **A)** Modify the code to resolve the issue.
-    - **B)** Verify that the fix worked and did not introduce new bugs.
-    - **C)** Notice that the program is not behaving as expected.
-    - **D)** Understand *why* the error is occurring.
+- **A)** Modify the code to resolve the issue.
+- **B)** Verify that the fix worked and did not introduce new bugs.
+- **C)** Notice that the program is not behaving as expected.
+- **D)** Understand *why* the error is occurring.
 
 6. Which step immediately follows **Fix the Bug:**?
-    - **A)** Re-test:
-    - **B)** Analyze the Cause:
-    - **C)** Identify the Error:
-    - **D)** There is no subsequent step
+- **A)** Re-test:
+- **B)** Analyze the Cause:
+- **C)** Identify the Error:
+- **D)** There is no subsequent step
 
 7. According to the material on **Testing and Debugging**, which statement is correct?
-    - **A)** The opposite of the stated principle applies
-    - **B)** 4. Fix the Bug: Modify the code to resolve the issue.
-    - **C)** This principle only applies in theoretical models, not practical systems
-    - **D)** The described behavior is considered deprecated in modern implementations
+- **A)** The opposite of the stated principle applies
+- **B)** 4. Fix the Bug: Modify the code to resolve the issue.
+- **C)** This principle only applies in theoretical models, not practical systems
+- **D)** The described behavior is considered deprecated in modern implementations
 
 8. According to the material on **Testing and Debugging**, which statement is correct?
-    - **A)** The described behavior is considered deprecated in modern implementations
-    - **B)** This principle only applies in theoretical models, not practical systems
-    - **C)** 5. Re-test: Verify that the fix worked and did not introduce new bugs.
-    - **D)** The opposite of the stated principle applies
+- **A)** The described behavior is considered deprecated in modern implementations
+- **B)** This principle only applies in theoretical models, not practical systems
+- **C)** 5. Re-test: Verify that the fix worked and did not introduce new bugs.
+- **D)** The opposite of the stated principle applies
 
 9. According to the material on **Testing and Debugging**, which statement is correct?
-    - **A)** This principle only applies in theoretical models, not practical systems
-    - **B)** Testing is the process of evaluating a program to verify that it functions exactly as intended, w...
-    - **C)** The described behavior is considered deprecated in modern implementations
-    - **D)** Testing is not the process of evaluating a program to verify that it functions exactly as intended, w...
+- **A)** This principle only applies in theoretical models, not practical systems
+- **B)** Testing is the process of evaluating a program to verify that it functions exactly as intended, w...
+- **C)** The described behavior is considered deprecated in modern implementations
+- **D)** Testing is not the process of evaluating a program to verify that it functions exactly as intended, w...
 
 10. According to the material on **Testing and Debugging**, which statement is correct?
-    - **A)** 1. Identify the Error: Notice that the program is not not behaving as expected.
-    - **B)** The described behavior is considered deprecated in modern implementations
-    - **C)** This principle only applies in theoretical models, not practical systems
-    - **D)** 1. Identify the Error: Notice that the program is not behaving as expected.
+- **A)** 1. Identify the Error: Notice that the program is not not behaving as expected.
+- **B)** The described behavior is considered deprecated in modern implementations
+- **C)** This principle only applies in theoretical models, not practical systems
+- **D)** 1. Identify the Error: Notice that the program is not behaving as expected.
 
 ### Answer Key & Explanations
 1. **B)** **Test Cases** is defined in the note as: Specific sets of inputs and expected outputs used to test a program.

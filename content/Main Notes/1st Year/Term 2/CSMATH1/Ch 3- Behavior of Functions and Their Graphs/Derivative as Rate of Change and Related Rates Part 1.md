@@ -151,64 +151,64 @@ $$
 ## Multiple Choice Questions
 
 1. In a related rates problem, why must numerical values of time-dependent variables NOT be substituted into the governing equation prior to differentiation?
-    - **A)** Because substituting values first treats dynamic variables as constants, causing their rates of change to incorrectly differentiate to zero.
-    - **B)** Because numbers cannot be manipulated using algebraic operations.
-    - **C)** Because rates of change must always be negative.
-    - **D)** Because differentiation is only valid for non-Euclidean geometries.
+- **A)** Because substituting values first treats dynamic variables as constants, causing their rates of change to incorrectly differentiate to zero.
+- **B)** Because numbers cannot be manipulated using algebraic operations.
+- **C)** Because rates of change must always be negative.
+- **D)** Because differentiation is only valid for non-Euclidean geometries.
 
 2. In the sliding ladder problem with $x^2 + y^2 = L^2$, what is the algebraic expression for the rate of vertical descent $\frac{dy}{dt}$?
-    - **A)** $\frac{dy}{dt} = \frac{y}{x} \frac{dx}{dt}$
-    - **B)** $\frac{dy}{dt} = -\frac{x}{y} \frac{dx}{dt}$
-    - **C)** $\frac{dy}{dt} = -2xy \frac{dx}{dt}$
-    - **D)** $\frac{dy}{dt} = -\sqrt{L^2 - x^2}$
+- **A)** $\frac{dy}{dt} = \frac{y}{x} \frac{dx}{dt}$
+- **B)** $\frac{dy}{dt} = -\frac{x}{y} \frac{dx}{dt}$
+- **C)** $\frac{dy}{dt} = -2xy \frac{dx}{dt}$
+- **D)** $\frac{dy}{dt} = -\sqrt{L^2 - x^2}$
 
 3. For a spherical balloon inflating with constant volumetric rate $\frac{dV}{dt} = C$, how does the rate of radial growth $\frac{dr}{dt}$ behave as the radius $r$ increases?
-    - **A)** $\frac{dr}{dt}$ increases linearly with $r$.
-    - **B)** $\frac{dr}{dt}$ remains constant.
-    - **C)** $\frac{dr}{dt}$ decreases inversely proportional to $r^2$ ($\frac{dr}{dt} = \frac{C}{4\pi r^2}$).
-    - **D)** $\frac{dr}{dt}$ becomes negative.
+- **A)** $\frac{dr}{dt}$ increases linearly with $r$.
+- **B)** $\frac{dr}{dt}$ remains constant.
+- **C)** $\frac{dr}{dt}$ decreases inversely proportional to $r^2$ ($\frac{dr}{dt} = \frac{C}{4\pi r^2}$).
+- **D)** $\frac{dr}{dt}$ becomes negative.
 
 4. In the inverted conical tank problem ($H=10\text{ m}, R=4\text{ m}$), what geometric principle eliminates the radius variable $r$ in terms of water depth $h$?
-    - **A)** Cavalieri's Principle
-    - **B)** The Law of Cosines
-    - **C)** Similar Triangles ($\frac{r}{h} = \frac{R}{H}$)
-    - **D)** Green's Theorem
+- **A)** Cavalieri's Principle
+- **B)** The Law of Cosines
+- **C)** Similar Triangles ($\frac{r}{h} = \frac{R}{H}$)
+- **D)** Green's Theorem
 
 5. If the base of a $13\text{ m}$ ladder moves away from a wall at $0.5\text{ m/s}$, how fast is the top descending when the base is $5\text{ m}$ from the wall?
-    - **A)** $0.50\text{ m/s}$
-    - **B)** $0.2083\text{ m/s}$ (or $-5/24\text{ m/s}$)
-    - **C)** $1.20\text{ m/s}$
-    - **D)** $0.0833\text{ m/s}$
+- **A)** $0.50\text{ m/s}$
+- **B)** $0.2083\text{ m/s}$ (or $-5/24\text{ m/s}$)
+- **C)** $1.20\text{ m/s}$
+- **D)** $0.0833\text{ m/s}$
 
 6. In the conical tank draining problem at $\frac{dV}{dt} = -2\text{ m}^3/\text{min}$, what is the rate of height drop $\frac{dh}{dt}$ when $h = 5\text{ m}$?
-    - **A)** $-\frac{1}{2\pi}\text{ m/min}$
-    - **B)** $-\frac{1}{\pi}\text{ m/min}$
-    - **C)** $-2\pi\text{ m/min}$
-    - **D)** $-\frac{4}{25}\text{ m/min}$
+- **A)** $-\frac{1}{2\pi}\text{ m/min}$
+- **B)** $-\frac{1}{\pi}\text{ m/min}$
+- **C)** $-2\pi\text{ m/min}$
+- **D)** $-\frac{4}{25}\text{ m/min}$
 
 7. Two cars depart an intersection simultaneously; Car A travels North at $60\text{ km/h}$ and Car B travels East at $80\text{ km/h}$. At what rate is the straight-line distance $z$ between them separating?
-    - **A)** $140\text{ km/h}$
-    - **B)** $100\text{ km/h}$
-    - **C)** $20\text{ km/h}$
-    - **D)** $70\text{ km/h}$
+- **A)** $140\text{ km/h}$
+- **B)** $100\text{ km/h}$
+- **C)** $20\text{ km/h}$
+- **D)** $70\text{ km/h}$
 
 8. For an inflating sphere, if $\frac{dr}{dt} = \frac{1}{\pi}\text{ cm/s}$ when $r = 5\text{ cm}$, what is the instantaneous rate of increase of its surface area $\frac{dS}{dt}$?
-    - **A)** $20\text{ cm}^2/\text{s}$
-    - **B)** $40\text{ cm}^2/\text{s}$
-    - **C)** $80\pi\text{ cm}^2/\text{s}$
-    - **D)** $100/\pi\text{ cm}^2/\text{s}$
+- **A)** $20\text{ cm}^2/\text{s}$
+- **B)** $40\text{ cm}^2/\text{s}$
+- **C)** $80\pi\text{ cm}^2/\text{s}$
+- **D)** $100/\pi\text{ cm}^2/\text{s}$
 
 9. What does a negative rate of change (e.g., $\frac{dy}{dt} < 0$) signify in physical modeling?
-    - **A)** The quantity is increasing over time.
-    - **B)** The quantity is decreasing over time.
-    - **C)** The mathematical model is invalid.
-    - **D)** The measurement is stationary.
+- **A)** The quantity is increasing over time.
+- **B)** The quantity is decreasing over time.
+- **C)** The mathematical model is invalid.
+- **D)** The measurement is stationary.
 
 10. If the area of a circle $A = \pi r^2$ expands at a constant rate of $10\pi\text{ cm}^2/\text{s}$, how fast is the radius increasing when $r = 5\text{ cm}$?
-    - **A)** $2\text{ cm/s}$
-    - **B)** $1\text{ cm/s}$
-    - **C)** $5\text{ cm/s}$
-    - **D)** $0.5\text{ cm/s}$
+- **A)** $2\text{ cm/s}$
+- **B)** $1\text{ cm/s}$
+- **C)** $5\text{ cm/s}$
+- **D)** $0.5\text{ cm/s}$
 
 ---
 

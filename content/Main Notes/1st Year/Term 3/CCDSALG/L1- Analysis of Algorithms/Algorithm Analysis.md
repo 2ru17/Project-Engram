@@ -65,34 +65,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which of the following is NOT a purpose of algorithm analysis?
-    - **A)** To predict resource usage like time and memory
-    - **B)** To compare algorithms without full implementation
-    - **C)** To measure the exact amount of time to execute any command
-    - **D)** To provide a basis for choosing the most suitable algorithm
+- **A)** To predict resource usage like time and memory
+- **B)** To compare algorithms without full implementation
+- **C)** To measure the exact amount of time to execute any command
+- **D)** To provide a basis for choosing the most suitable algorithm
 
 2. What assumption does the RAM Model make about instruction execution?
-    - **A)** Instructions are executed concurrently.
-    - **B)** Instructions are executed one at a time.
-    - **C)** Only basic arithmetic is permitted.
-    - **D)** Network latency must be considered.
+- **A)** Instructions are executed concurrently.
+- **B)** Instructions are executed one at a time.
+- **C)** Only basic arithmetic is permitted.
+- **D)** Network latency must be considered.
 
 3. Which factor is necessary to know the exact exact execution time of a command?
-    - **A)** The time required by each machine instruction
-    - **B)** The Big-O notation of the algorithm
-    - **C)** The space complexity of the code
-    - **D)** The number of loops in the algorithm
+- **A)** The time required by each machine instruction
+- **B)** The Big-O notation of the algorithm
+- **C)** The space complexity of the code
+- **D)** The number of loops in the algorithm
 
 4. What is a common pitfall in algorithm analysis?
-    - **A)** Assuming instructions execute sequentially
-    - **B)** Comparing algorithms theoretically
-    - **C)** Attempting to measure exact execution time instead of analyzing growth
-    - **D)** Predicting performance based on mathematical models
+- **A)** Assuming instructions execute sequentially
+- **B)** Comparing algorithms theoretically
+- **C)** Attempting to measure exact execution time instead of analyzing growth
+- **D)** Predicting performance based on mathematical models
 
 5. What type of analysis studies the behavior of an algorithm mathematically before execution?
-    - **A)** A Posteriori Analysis
-    - **B)** A Priori Analysis
-    - **C)** Benchmarking
-    - **D)** Profiling
+- **A)** A Posteriori Analysis
+- **B)** A Priori Analysis
+- **C)** Benchmarking
+- **D)** Profiling
 
 ### Answer Key & Explanations
 1. **C)** It is impossible to know the exact exact amount of time to execute a command without specific hardware metrics; analysis focuses on estimating and comparing growth.

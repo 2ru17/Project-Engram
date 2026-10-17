@@ -60,34 +60,34 @@ Establishing relationships does not inherently impact time complexity but increa
 ## Multiple Choice Questions
 
 1. What type of relationship is described as a "uses-a" relationship where a class depends on another as a parameter or local variable?
-    - **A)** Aggregation
-    - **B)** Composition
-    - **C)** Dependency
-    - **D)** Association
+- **A)** Aggregation
+- **B)** Composition
+- **C)** Dependency
+- **D)** Association
 
 2. How does Aggregation differ from Composition in class relationships?
-    - **A)** Aggregation requires the part to be instantiated inside the constructor of the whole.
-    - **B)** In Aggregation, the part can exist independently of the whole, whereas in Composition it cannot.
-    - **C)** Composition represents a "uses-a" relationship while Aggregation is "part-of".
-    - **D)** Aggregation is strictly used for inheritance.
+- **A)** Aggregation requires the part to be instantiated inside the constructor of the whole.
+- **B)** In Aggregation, the part can exist independently of the whole, whereas in Composition it cannot.
+- **C)** Composition represents a "uses-a" relationship while Aggregation is "part-of".
+- **D)** Aggregation is strictly used for inheritance.
 
 3. Which of the following code snippets best demonstrates Composition?
-    - **A)** `class House { private Room room; public House() { this.room = new Room(); } }`
-    - **B)** `class Teacher { List<Student> students; }`
-    - **C)** `class Printer { void print(Document doc) { } }`
-    - **D)** `class Department { List<Professor> professors; }`
+- **A)** `class House { private Room room; public House() { this.room = new Room(); } }`
+- **B)** `class Teacher { List<Student> students; }`
+- **C)** `class Printer { void print(Document doc) { } }`
+- **D)** `class Department { List<Professor> professors; }`
 
 4. What is the primary characteristic of an Association relationship?
-    - **A)** It strictly manages the lifecycle of the associated objects.
-    - **B)** It represents a whole-part relationship.
-    - **C)** All objects involved have their own lifecycle and there is no owner.
-    - **D)** One class is inherited from another.
+- **A)** It strictly manages the lifecycle of the associated objects.
+- **B)** It represents a whole-part relationship.
+- **C)** All objects involved have their own lifecycle and there is no owner.
+- **D)** One class is inherited from another.
 
 5. How does establishing class relationships impact complexity?
-    - **A)** It drastically increases time complexity.
-    - **B)** It has no impact on memory usage.
-    - **C)** It increases memory usage (space complexity) due to object references.
-    - **D)** It reduces the number of classes needed.
+- **A)** It drastically increases time complexity.
+- **B)** It has no impact on memory usage.
+- **C)** It increases memory usage (space complexity) due to object references.
+- **D)** It reduces the number of classes needed.
 
 ### Answer Key & Explanations
 1. **C)** Dependency describes a temporary "uses-a" relationship where a class relies on another for a specific operation, often via parameters.
@@ -99,34 +99,34 @@ Establishing relationships does not inherently impact time complexity but increa
 ## Multiple Choice Questions
 
 1. What type of relationship is described as a "uses-a" relationship where a class depends on another as a parameter or local variable?
-    - **A)** Aggregation
-    - **B)** Composition
-    - **C)** Dependency
-    - **D)** Association
+- **A)** Aggregation
+- **B)** Composition
+- **C)** Dependency
+- **D)** Association
 
 2. How does Aggregation differ from Composition in class relationships?
-    - **A)** Aggregation requires the part to be instantiated inside the constructor of the whole.
-    - **B)** In Aggregation, the part can exist independently of the whole, whereas in Composition it cannot.
-    - **C)** Composition represents a "uses-a" relationship while Aggregation is "part-of".
-    - **D)** Aggregation is strictly used for inheritance.
+- **A)** Aggregation requires the part to be instantiated inside the constructor of the whole.
+- **B)** In Aggregation, the part can exist independently of the whole, whereas in Composition it cannot.
+- **C)** Composition represents a "uses-a" relationship while Aggregation is "part-of".
+- **D)** Aggregation is strictly used for inheritance.
 
 3. Which of the following code snippets best demonstrates Composition?
-    - **A)** `class House { private Room room; public House() { this.room = new Room(); } }`
-    - **B)** `class Teacher { List<Student> students; }`
-    - **C)** `class Printer { void print(Document doc) { } }`
-    - **D)** `class Department { List<Professor> professors; }`
+- **A)** `class House { private Room room; public House() { this.room = new Room(); } }`
+- **B)** `class Teacher { List<Student> students; }`
+- **C)** `class Printer { void print(Document doc) { } }`
+- **D)** `class Department { List<Professor> professors; }`
 
 4. What is the primary characteristic of an Association relationship?
-    - **A)** It strictly manages the lifecycle of the associated objects.
-    - **B)** It represents a whole-part relationship.
-    - **C)** All objects involved have their own lifecycle and there is no owner.
-    - **D)** One class is inherited from another.
+- **A)** It strictly manages the lifecycle of the associated objects.
+- **B)** It represents a whole-part relationship.
+- **C)** All objects involved have their own lifecycle and there is no owner.
+- **D)** One class is inherited from another.
 
 5. How does establishing class relationships impact complexity?
-    - **A)** It drastically increases time complexity.
-    - **B)** It has no impact on memory usage.
-    - **C)** It increases memory usage (space complexity) due to object references.
-    - **D)** It reduces the number of classes needed.
+- **A)** It drastically increases time complexity.
+- **B)** It has no impact on memory usage.
+- **C)** It increases memory usage (space complexity) due to object references.
+- **D)** It reduces the number of classes needed.
 
 ### Answer Key & Explanations
 1. **C)** Dependency describes a temporary "uses-a" relationship where a class relies on another for a specific operation, often via parameters.

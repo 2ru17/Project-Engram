@@ -75,64 +75,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What are the two requirements for an algorithm to be considered "correct"?
-    - **A)** It uses minimal memory and terminates.
-    - **B)** It terminates in finite time and produces the correct output for every valid input.
-    - **C)** It has a tight Big-O bound and runs on any hardware.
-    - **D)** It compiles without errors and uses a loop invariant.
+- **A)** It uses minimal memory and terminates.
+- **B)** It terminates in finite time and produces the correct output for every valid input.
+- **C)** It has a tight Big-O bound and runs on any hardware.
+- **D)** It compiles without errors and uses a loop invariant.
 
 2. What distinguishes total correctness from partial correctness?
-    - **A)** Total correctness only applies to recursive algorithms.
-    - **B)** Partial correctness requires the algorithm to terminate, while total correctness does not.
-    - **C)** Total correctness guarantees the algorithm always terminates and output is correct.
-    - **D)** Partial correctness ignores space complexity.
+- **A)** Total correctness only applies to recursive algorithms.
+- **B)** Partial correctness requires the algorithm to terminate, while total correctness does not.
+- **C)** Total correctness guarantees the algorithm always terminates and output is correct.
+- **D)** Partial correctness ignores space complexity.
 
 3. What does the "Initialization" step of a loop invariant proof verify?
-    - **A)** The invariant is true before the first iteration of the loop.
-    - **B)** The invariant remains true after the iteration.
-    - **C)** The loop terminates properly.
-    - **D)** The input size is greater than zero.
+- **A)** The invariant is true before the first iteration of the loop.
+- **B)** The invariant remains true after the iteration.
+- **C)** The loop terminates properly.
+- **D)** The input size is greater than zero.
 
 4. Which of the following describes the "Maintenance" step in proving correctness using loop invariants?
-    - **A)** Ensuring the algorithm halts.
-    - **B)** Verifying the base case for recursion.
-    - **C)** If the invariant is true before an iteration, it remains true after the iteration.
-    - **D)** Clearing memory after the loop finishes.
+- **A)** Ensuring the algorithm halts.
+- **B)** Verifying the base case for recursion.
+- **C)** If the invariant is true before an iteration, it remains true after the iteration.
+- **D)** Clearing memory after the loop finishes.
 
 5. What is the final step in a loop invariant proof that gives the desired result?
-    - **A)** Induction
-    - **B)** Maintenance
-    - **C)** Initialization
-    - **D)** Termination
+- **A)** Induction
+- **B)** Maintenance
+- **C)** Initialization
+- **D)** Termination
 
 6. In the linear search example, what is the loop invariant at the start of iteration $i$?
-    - **A)** The target is always located at `arr[i]`.
-    - **B)** The target is not in `arr[0..i-1]`.
-    - **C)** The array is sorted.
-    - **D)** The loop will terminate in $O(1)$ time.
+- **A)** The target is always located at `arr[i]`.
+- **B)** The target is not in `arr[0..i-1]`.
+- **C)** The array is sorted.
+- **D)** The loop will terminate in $O(1)$ time.
 
 7. What is the standard mathematical tool used to prove the correctness of recursive algorithms?
-    - **A)** Mathematical induction
-    - **B)** Amortized analysis
-    - **C)** Asymptotic notation
-    - **D)** Frequency counting
+- **A)** Mathematical induction
+- **B)** Amortized analysis
+- **C)** Asymptotic notation
+- **D)** Frequency counting
 
 8. What is a common pitfall when proving correctness?
-    - **A)** Choosing a loop invariant that is too strong.
-    - **B)** Confusing partial and total correctness by forgetting to prove termination.
-    - **C)** Using mathematical induction for iterative loops.
-    - **D)** Proving the base case before the inductive step.
+- **A)** Choosing a loop invariant that is too strong.
+- **B)** Confusing partial and total correctness by forgetting to prove termination.
+- **C)** Using mathematical induction for iterative loops.
+- **D)** Proving the base case before the inductive step.
 
 9. What does the inductive step in a mathematical induction proof typically involve?
-    - **A)** Showing the algorithm is correct for the smallest input.
-    - **B)** Assuming correctness for inputs smaller than $n$, and proving it for input $n$.
-    - **C)** Establishing a loop invariant before the first recursive call.
-    - **D)** Calculating the asymptotic lower bound.
+- **A)** Showing the algorithm is correct for the smallest input.
+- **B)** Assuming correctness for inputs smaller than $n$, and proving it for input $n$.
+- **C)** Establishing a loop invariant before the first recursive call.
+- **D)** Calculating the asymptotic lower bound.
 
 10. Which of the following is true about partial correctness?
-    - **A)** It guarantees the algorithm will eventually stop.
-    - **B)** An algorithm can be partially correct but never terminate.
-    - **C)** It is equivalent to total correctness.
-    - **D)** It only applies to algorithms with $O(1)$ space complexity.
+- **A)** It guarantees the algorithm will eventually stop.
+- **B)** An algorithm can be partially correct but never terminate.
+- **C)** It is equivalent to total correctness.
+- **D)** It only applies to algorithms with $O(1)$ space complexity.
 
 ### Answer Key & Explanations
 1. **B)** Correctness demands that for all valid inputs, the algorithm halts (finiteness) and produces the mathematically correct result.

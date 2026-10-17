@@ -118,34 +118,34 @@ $$
 ## Multiple Choice Questions
 
 1. Which of the following is NOT a valid elementary row operation?
-    - **A)** Multiplying a row by a nonzero scalar.
-    - **B)** Adding a multiple of one row to another row.
-    - **C)** Swapping the positions of two rows.
-    - **D)** Multiplying a row by zero.
+- **A)** Multiplying a row by a nonzero scalar.
+- **B)** Adding a multiple of one row to another row.
+- **C)** Swapping the positions of two rows.
+- **D)** Multiplying a row by zero.
 
 2. Performing an elementary row operation on matrix $A$ is equivalent to which algebraic operation?
-    - **A)** Adding an elementary matrix to $A$.
-    - **B)** Left-multiplying $A$ by the corresponding elementary matrix $E$.
-    - **C)** Right-multiplying $A$ by the corresponding elementary matrix $E$.
-    - **D)** Taking the transpose of $A$.
+- **A)** Adding an elementary matrix to $A$.
+- **B)** Left-multiplying $A$ by the corresponding elementary matrix $E$.
+- **C)** Right-multiplying $A$ by the corresponding elementary matrix $E$.
+- **D)** Taking the transpose of $A$.
 
 3. What is the inverse operation that reverses $R_i + kR_j \to R_i$?
-    - **A)** $R_i \leftrightarrow R_j$
-    - **B)** $\frac{1}{k}R_i \to R_i$
-    - **C)** $R_i - kR_j \to R_i$
-    - **D)** $R_j - kR_i \to R_j$
+- **A)** $R_i \leftrightarrow R_j$
+- **B)** $\frac{1}{k}R_i \to R_i$
+- **C)** $R_i - kR_j \to R_i$
+- **D)** $R_j - kR_i \to R_j$
 
 4. How does multiplying a single row by a nonzero scalar $k$ affect $\det(A)$?
-    - **A)** The determinant remains unchanged.
-    - **B)** The determinant becomes zero.
-    - **C)** The determinant is scaled by $k$ ($\det(E A) = k \det(A)$).
-    - **D)** The determinant is scaled by $1/k$.
+- **A)** The determinant remains unchanged.
+- **B)** The determinant becomes zero.
+- **C)** The determinant is scaled by $k$ ($\det(E A) = k \det(A)$).
+- **D)** The determinant is scaled by $1/k$.
 
 5. What does a row of all zeros in the Row Echelon Form (REF) of an $n \times n$ matrix signify about the matrix?
-    - **A)** The matrix is invertible.
-    - **B)** The matrix has full rank $n$.
-    - **C)** The matrix is singular ($\det(A) = 0$) and its rows are linearly dependent.
-    - **D)** The system $A\mathbf{x} = \mathbf{0}$ has only the trivial solution.
+- **A)** The matrix is invertible.
+- **B)** The matrix has full rank $n$.
+- **C)** The matrix is singular ($\det(A) = 0$) and its rows are linearly dependent.
+- **D)** The system $A\mathbf{x} = \mathbf{0}$ has only the trivial solution.
 
 ---
 

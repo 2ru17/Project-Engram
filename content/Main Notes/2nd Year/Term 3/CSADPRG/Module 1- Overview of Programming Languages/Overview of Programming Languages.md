@@ -77,64 +77,64 @@ The interaction with computers happens through machine language, executed by the
 ## Multiple Choice Questions
 
 1. Which of the following describes the skill of programming as discussed in the overview?
-    - **A)** Exclusively understanding mathematical formulas
-    - **B)** Developing knowledge in both logic and syntax
-    - **C)** Memorizing various machine languages
-    - **D)** Learning how to configure hardware systems
+- **A)** Exclusively understanding mathematical formulas
+- **B)** Developing knowledge in both logic and syntax
+- **C)** Memorizing various machine languages
+- **D)** Learning how to configure hardware systems
 
 2. What does "syntax" mean in the context of programming languages?
-    - **A)** Knowing what a program should do
-    - **B)** The execution speed of the program
-    - **C)** Knowing how to express logic within the bounds of a language
-    - **D)** The ease with which programs can be read
+- **A)** Knowing what a program should do
+- **B)** The execution speed of the program
+- **C)** Knowing how to express logic within the bounds of a language
+- **D)** The ease with which programs can be read
 
 3. What is defined as referring to a memory cell using multiple names?
-    - **A)** Orthogonality
-    - **B)** Expressivity
-    - **C)** Overloading
-    - **D)** Aliasing
+- **A)** Orthogonality
+- **B)** Expressivity
+- **C)** Overloading
+- **D)** Aliasing
 
 4. Which programming domain was primarily driven by the need for simple data structures and intense floating-point computations?
-    - **A)** Scientific
-    - **B)** Business
-    - **C)** Artificial Intelligence
-    - **D)** Web Software
+- **A)** Scientific
+- **B)** Business
+- **C)** Artificial Intelligence
+- **D)** Web Software
 
 5. Having multiple ways to accomplish a single operation is an example of what factor that affects readability?
-    - **A)** Operator overloading
-    - **B)** Feature multiplicity
-    - **C)** Exception handling
-    - **D)** Aliasing
+- **A)** Operator overloading
+- **B)** Feature multiplicity
+- **C)** Exception handling
+- **D)** Aliasing
 
 6. What is considered a design trade-off between C and Java concerning array indices?
-    - **A)** Java does not check array indices, making it faster than C.
-    - **B)** C checks array indices to ensure reliability, while Java focuses on speed.
-    - **C)** Java checks array indices for reliability, which adds to execution cost compared to C.
-    - **D)** Both C and Java check array indices for reliability.
+- **A)** Java does not check array indices, making it faster than C.
+- **B)** C checks array indices to ensure reliability, while Java focuses on speed.
+- **C)** Java checks array indices for reliability, which adds to execution cost compared to C.
+- **D)** Both C and Java check array indices for reliability.
 
 7. Which implementation method translates source code entirely into machine language before execution?
-    - **A)** Pure Interpretation
-    - **B)** Compilation
-    - **C)** Hybrid Interpretation Systems
-    - **D)** Just-in-Time Processing
+- **A)** Pure Interpretation
+- **B)** Compilation
+- **C)** Hybrid Interpretation Systems
+- **D)** Just-in-Time Processing
 
 8. Why is pure interpretation generally considered slower than compilation?
-    - **A)** Because it translates code to machine language before execution.
-    - **B)** Because it forms intermediate parse trees that are complex.
-    - **C)** Because it interprets source code without translation, making it 10 to 100 times slower.
-    - **D)** Because it involves an optional optimization phase during runtime.
+- **A)** Because it translates code to machine language before execution.
+- **B)** Because it forms intermediate parse trees that are complex.
+- **C)** Because it interprets source code without translation, making it 10 to 100 times slower.
+- **D)** Because it involves an optional optimization phase during runtime.
 
 9. What describes a language having a relatively small set of primitive constructs that can be combined in a relatively small number of ways?
-    - **A)** Orthogonality
-    - **B)** Readability
-    - **C)** Type Checking
-    - **D)** Expressivity
+- **A)** Orthogonality
+- **B)** Readability
+- **C)** Type Checking
+- **D)** Expressivity
 
 10. Which of the following is an example of operator overloading in Python as mentioned in the text?
-    - **A)** The `<<` symbol used for bitwise shift and output stream.
-    - **B)** The `+` symbol used for addition and string concatenation.
-    - **C)** The `++` operator used for incrementing a variable.
-    - **D)** Returning structs from functions but not arrays.
+- **A)** The `<<` symbol used for bitwise shift and output stream.
+- **B)** The `+` symbol used for addition and string concatenation.
+- **C)** The `++` operator used for incrementing a variable.
+- **D)** Returning structs from functions but not arrays.
 
 ### Answer Key & Explanations
 

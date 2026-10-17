@@ -51,22 +51,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. In matrix notation, what does the entry $a_{ij}$ represent?
-    - **A)** The entry located at the $j$-th row and $i$-th column.
-    - **B)** The entry located at the $i$-th row and $j$-th column.
-    - **C)** The product of the $i$-th row and the $j$-th column.
-    - **D)** A matrix with $i$ rows and $j$ columns.
+- **A)** The entry located at the $j$-th row and $i$-th column.
+- **B)** The entry located at the $i$-th row and $j$-th column.
+- **C)** The product of the $i$-th row and the $j$-th column.
+- **D)** A matrix with $i$ rows and $j$ columns.
 
 2. What is the fundamental definition of a matrix $A$?
-    - **A)** A scalar value representing the area of a rectangle.
-    - **B)** A single row of variables in a linear equation.
-    - **C)** A square array containing only binary numbers.
-    - **D)** A rectangular array of real numbers.
+- **A)** A scalar value representing the area of a rectangle.
+- **B)** A single row of variables in a linear equation.
+- **C)** A square array containing only binary numbers.
+- **D)** A rectangular array of real numbers.
 
 3. Which of the following is a common pitfall when interpreting matrix index notation?
-    - **A)** Always assuming the row index comes first.
-    - **B)** Using the letter $i$ for columns and $j$ for rows.
-    - **C)** Referring to $a_{ij}$ as "column $i$, row $j$".
-    - **D)** Using bold letters to denote the matrix entries.
+- **A)** Always assuming the row index comes first.
+- **B)** Using the letter $i$ for columns and $j$ for rows.
+- **C)** Referring to $a_{ij}$ as "column $i$, row $j$".
+- **D)** Using bold letters to denote the matrix entries.
 
 ### Answer Key & Explanations
 1. **B)** The notation $a_{ij}$ refers to the $(i, j)$ entry, which is located at the $i$-th row and $j$-th column.

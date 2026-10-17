@@ -41,64 +41,64 @@ Without such mechanisms in HPC environments, the system would stall waiting on I
 ## Multiple Choice Questions
 
 1. What is the primary function of an input device?
-    - **A)** To store frequently accessed data in a faster storage medium.
-    - **B)** To gather data and convert it into machine-readable forms.
-    - **C)** To execute the Fetch-Decode-Execute machine cycle.
-    - **D)** To convert electrical signals into a human-readable format.
+- **A)** To store frequently accessed data in a faster storage medium.
+- **B)** To gather data and convert it into machine-readable forms.
+- **C)** To execute the Fetch-Decode-Execute machine cycle.
+- **D)** To convert electrical signals into a human-readable format.
 
 2. Which concept involves the temporary storage of data while it is transferred between devices operating at different speeds?
-    - **A)** Buffering
-    - **B)** Latency
-    - **C)** Compiling
-    - **D)** Virtualization
+- **A)** Buffering
+- **B)** Latency
+- **C)** Compiling
+- **D)** Virtualization
 
 3. What is latency in the context of I/O operations?
-    - **A)** The theoretical maximum speed of a network connection.
-    - **B)** The temporary storage of data for a print spooler.
-    - **C)** The time delay between a request for data and when the data transfer begins.
-    - **D)** The conversion rate of optical scanners.
+- **A)** The theoretical maximum speed of a network connection.
+- **B)** The temporary storage of data for a print spooler.
+- **C)** The time delay between a request for data and when the data transfer begins.
+- **D)** The conversion rate of optical scanners.
 
 4. What type of system software acts as an interface between the operating system and a hardware device?
-    - **A)** Hypervisor
-    - **B)** Compiler
-    - **C)** Device Driver
-    - **D)** Utility Program
+- **A)** Hypervisor
+- **B)** Compiler
+- **C)** Device Driver
+- **D)** Utility Program
 
 5. How do capacitive touchscreens sense location?
-    - **A)** By generating bitmap representations of printed images.
-    - **B)** By relying on physical pressure applied to the screen.
-    - **C)** By relying on the electrical conductivity of objects like a finger.
-    - **D)** By utilizing an upside-down mechanical tracking ball.
+- **A)** By generating bitmap representations of printed images.
+- **B)** By relying on physical pressure applied to the screen.
+- **C)** By relying on the electrical conductivity of objects like a finger.
+- **D)** By utilizing an upside-down mechanical tracking ball.
 
 6. Which type of printer is ideal for multi-copy forms because it physically presses a ribbon onto the paper?
-    - **A)** Laser Printer
-    - **B)** Inkjet Printer
-    - **C)** Impact Printer (e.g., Dot Matrix)
-    - **D)** Thermal Printer
+- **A)** Laser Printer
+- **B)** Inkjet Printer
+- **C)** Impact Printer (e.g., Dot Matrix)
+- **D)** Thermal Printer
 
 7. Why is caching used in I/O operations?
-    - **A)** To permanently archive completed file transfers.
-    - **B)** To translate high-level OS commands into device-specific actions.
-    - **C)** To store frequently accessed data in a faster storage medium to speed up retrieval.
-    - **D)** To emulate physical network cards for Virtual Machines.
+- **A)** To permanently archive completed file transfers.
+- **B)** To translate high-level OS commands into device-specific actions.
+- **C)** To store frequently accessed data in a faster storage medium to speed up retrieval.
+- **D)** To emulate physical network cards for Virtual Machines.
 
 8. What defines the maximum amount of data that can be transferred concurrently across an I/O device?
-    - **A)** Data Transfer Rate
-    - **B)** Latency
-    - **C)** Bandwidth
-    - **D)** Spooling
+- **A)** Data Transfer Rate
+- **B)** Latency
+- **C)** Bandwidth
+- **D)** Spooling
 
 9. How can physical I/O hardware be efficiently shared among multiple Virtual Machines (VMs) in cloud environments?
-    - **A)** By physically unplugging and reconnecting hardware ports.
-    - **B)** It is emulated as virtual devices by a hypervisor.
-    - **C)** By increasing the clock speed of the underlying CPU.
-    - **D)** By running all VMs off a single monolithic kernel.
+- **A)** By physically unplugging and reconnecting hardware ports.
+- **B)** It is emulated as virtual devices by a hypervisor.
+- **C)** By increasing the clock speed of the underlying CPU.
+- **D)** By running all VMs off a single monolithic kernel.
 
 10. In High-Performance Computing (HPC), why are mechanisms like Direct Memory Access (DMA) critical?
-    - **A)** To prevent the CPU from bottlenecking by waiting on slower I/O devices.
-    - **B)** To replace the need for physical storage entirely.
-    - **C)** To convert visual graphics into executable machine code.
-    - **D)** To ensure that impact printers receive data synchronously.
+- **A)** To prevent the CPU from bottlenecking by waiting on slower I/O devices.
+- **B)** To replace the need for physical storage entirely.
+- **C)** To convert visual graphics into executable machine code.
+- **D)** To ensure that impact printers receive data synchronously.
 
 ### Answer Key & Explanations
 1. **B)** Input devices gather data and convert it into machine-readable forms.

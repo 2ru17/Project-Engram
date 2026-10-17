@@ -100,64 +100,64 @@ flowchart TD
 
 ## Multiple Choice Questions
 1. In a Software-Defined Network (SDN), what function is completely removed from the individual switches?
-    - **A)** The Data Plane
-    - **B)** The Physical Ports
-    - **C)** The Control Plane
-    - **D)** Packet Forwarding
+- **A)** The Data Plane
+- **B)** The Physical Ports
+- **C)** The Control Plane
+- **D)** Packet Forwarding
 
 2. What is the primary role of the Data Plane in a network device?
-    - **A)** To calculate the shortest path tree
-    - **B)** To exchange routing updates with neighbors
-    - **C)** To forward incoming packets to the correct output port based on local tables
-    - **D)** To authenticate the SDN controller
+- **A)** To calculate the shortest path tree
+- **B)** To exchange routing updates with neighbors
+- **C)** To forward incoming packets to the correct output port based on local tables
+- **D)** To authenticate the SDN controller
 
 3. Which protocol serves as the standard Southbound API between an SDN controller and the forwarding switches?
-    - **A)** BGP
-    - **B)** OpenFlow
-    - **C)** OSPF
-    - **D)** SNMP
+- **A)** BGP
+- **B)** OpenFlow
+- **C)** OSPF
+- **D)** SNMP
 
 4. What interface does a network administrator or software application use to program network logic into the centralized SDN controller?
-    - **A)** The Southbound API
-    - **B)** The Northbound API
-    - **C)** The East-West API
-    - **D)** The Data Plane API
+- **A)** The Southbound API
+- **B)** The Northbound API
+- **C)** The East-West API
+- **D)** The Data Plane API
 
 5. In an OpenFlow switch, what two primary components make up a flow table entry?
-    - **A)** IP address and MAC address
-    - **B)** Match fields and Actions
-    - **C)** LSA and LSDB
-    - **D)** AS-PATH and NEXT-HOP
+- **A)** IP address and MAC address
+- **B)** Match fields and Actions
+- **C)** LSA and LSDB
+- **D)** AS-PATH and NEXT-HOP
 
 6. What is a primary advantage of utilizing SDN in a modern enterprise network?
-    - **A)** It eliminates the need for IP addressing
-    - **B)** It allows centralized, programmable, and automated control of network-wide traffic flows
-    - **C)** It allows routers to physically move data without using electricity
-    - **D)** It replaces all copper cabling with fiber optics
+- **A)** It eliminates the need for IP addressing
+- **B)** It allows centralized, programmable, and automated control of network-wide traffic flows
+- **C)** It allows routers to physically move data without using electricity
+- **D)** It replaces all copper cabling with fiber optics
 
 7. Which plane is responsible for actually modifying packet headers if instructed?
-    - **A)** Control Plane
-    - **B)** Management Plane
-    - **C)** Data Plane
-    - **D)** Application Plane
+- **A)** Control Plane
+- **B)** Management Plane
+- **C)** Data Plane
+- **D)** Application Plane
 
 8. What happens in an OpenFlow switch if a packet doesn't match any existing flow entries?
-    - **A)** It is broadcast out all ports
-    - **B)** It is sent to the Controller for processing
-    - **C)** It drops the packet silently
-    - **D)** It routes it via OSPF
+- **A)** It is broadcast out all ports
+- **B)** It is sent to the Controller for processing
+- **C)** It drops the packet silently
+- **D)** It routes it via OSPF
 
 9. In the SDN paradigm, traditional routing protocols (like OSPF or BGP) are typically:
-    - **A)** Moved to the Data Plane
-    - **B)** Executed on the centralized Controller or abandoned entirely for custom logic
-    - **C)** Run on every single switch simultaneously
-    - **D)** Converted into OpenFlow actions
+- **A)** Moved to the Data Plane
+- **B)** Executed on the centralized Controller or abandoned entirely for custom logic
+- **C)** Run on every single switch simultaneously
+- **D)** Converted into OpenFlow actions
 
 10. What connects the Application Plane to the Control Plane in SDN?
-    - **A)** Southbound Interfaces
-    - **B)** Northbound Interfaces
-    - **C)** Physical cables
-    - **D)** Fiber optic links
+- **A)** Southbound Interfaces
+- **B)** Northbound Interfaces
+- **C)** Physical cables
+- **D)** Fiber optic links
 
 ### Answer Key & Explanations
 1. **C** - The Control plane is abstracted away to the centralized controller.

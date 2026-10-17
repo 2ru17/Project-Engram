@@ -58,64 +58,64 @@ When Host A wants to send a datagram to Host B on a different subnet through Rou
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "--- id: link_layer type: note course: CSNETWK topic: Link Layer status: completed ---  # Link Layer  > [!info] Document Metadata > - **Course:** `=this.course` > - **Topic:** `=this.topic` > - **Status:** `=this.status`  **🏷️ Tags:** _____ Science]] #[[CSNETWK]] #[[Link Layer]] #[[Conceptual]]  ---  ## Overview  The Link Layer is responsible for transferring a datagram from one node (host or router) to an adjacent node over a specific link (wired, wireless, LAN)."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Computer
+- **A)** Router
+- **B)** Network
+- **C)** Protocol
+- **D)** Computer
 
 2. Which word completes the following sentence from the text: "**Flow Control:** Pacing the transmission rate _____ adjacent sending and receiving nodes."?
-    - **A)** between
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** between
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 3. Which word completes the following sentence from the text: "If an IP isn't in the table, the node broadcasts an ARP Query frame _____ the special MAC address `FF-FF-FF-FF-FF-FF`, and the target node replies with its MAC address."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** to
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** to
+- **D)** Network
 
 4. Which word completes the following sentence from the text: "**Reliable Delivery:** Ensures frames are _____ correctly between adjacent nodes."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** delivered
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** delivered
 
 5. Which word completes the following sentence from the text: "(Often used for wireless links _____ to high error rates)."?
-    - **A)** due
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** Network
+- **A)** due
+- **B)** Protocol
+- **C)** Router
+- **D)** Network
 
 6. Which word completes the following sentence from the text: "**Type:** Indicates the higher-layer protocol _____ IP) to demultiplex the payload."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** mostly
+- **A)** Network
+- **B)** Router
+- **C)** Protocol
+- **D)** mostly
 
 7. Which word completes the following sentence from the text: "Each IP node keeps an **ARP Table** mapping IP _____ to MAC addresses with a Time To Live (TTL)."?
-    - **A)** addresses
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** Router
+- **A)** addresses
+- **B)** Protocol
+- **C)** Network
+- **D)** Router
 
 8. Which word completes the following sentence from the text: "**Error Detection & Correction:** Receiver detects errors (e.g., via cyclic redundancy _____ CRC) and either requests retransmission or corrects the bit errors directly."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** check
-    - **D)** Router
+- **A)** Protocol
+- **B)** Network
+- **C)** check
+- **D)** Router
 
 9. Which word completes the following sentence from the text: "The frame's destination MAC _____ is Router R's MAC."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** address
-    - **D)** Protocol
+- **A)** Router
+- **B)** Network
+- **C)** address
+- **D)** Protocol
 
 10. Which word completes the following sentence from the text: "It uniquely identifies an _____ locally on a LAN."?
-    - **A)** interface
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** interface
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 
 ### Answer Key & Explanations

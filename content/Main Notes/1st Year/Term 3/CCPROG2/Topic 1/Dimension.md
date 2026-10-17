@@ -73,20 +73,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. What does the term 'dimension' refer to in the context of C arrays?
-    - **A)** The physical byte size of the elements
-    - **B)** The number of indices required to access a single element
-    - **C)** The variable type used for storage
-    - **D)** The maximum allowed value for an integer
+- **A)** The physical byte size of the elements
+- **B)** The number of indices required to access a single element
+- **C)** The variable type used for storage
+- **D)** The maximum allowed value for an integer
 2. How many dimensions does the array `int grid[10][10];` have?
-    - **A)** 1
-    - **B)** 2
-    - **C)** 10
-    - **D)** 100
+- **A)** 1
+- **B)** 2
+- **C)** 10
+- **D)** 100
 3. Which of the following best represents a one-dimensional array conceptually?
-    - **A)** A grid
-    - **B)** A line or list of items
-    - **C)** A cube
-    - **D)** A single variable
+- **A)** A grid
+- **B)** A line or list of items
+- **C)** A cube
+- **D)** A single variable
 
 ### Answer Key & Explanations
 1. **B)** Dimensionality represents the structural depth, matching the count of bracket pairs.

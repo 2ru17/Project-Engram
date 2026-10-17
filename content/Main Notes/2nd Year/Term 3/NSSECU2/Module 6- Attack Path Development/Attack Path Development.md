@@ -176,52 +176,52 @@ Stop Condition:       If Redis requires `AUTH <password>`, stop immediately; do 
 ## Multiple Choice Questions
 
 1. What is the primary purpose of developing an Attack Path rather than running random automated exploit modules?
-    - **A)** To increase the number of network packets transmitted per second
-    - **B)** To logically correlate multi-stage evidence, verify preconditions, minimize system instability, and achieve demonstrable proof of business risk
-    - **C)** To avoid generating written documentation
-    - **D)** To permanently delete the target's operating system
+- **A)** To increase the number of network packets transmitted per second
+- **B)** To logically correlate multi-stage evidence, verify preconditions, minimize system instability, and achieve demonstrable proof of business risk
+- **C)** To avoid generating written documentation
+- **D)** To permanently delete the target's operating system
 
 2. Which condition in the 6-Point Exploit Matching Checklist ensures that a compiled buffer overflow exploit will execute valid CPU instructions on the target host?
-    - **A)** Product Title Match
-    - **B)** Operating System and Architecture Compatibility (e.g., Linux x86_64 vs Windows x86)
-    - **C)** Color of the Terminal Text
-    - **D)** Domain Name Registration Expiration Date
+- **A)** Product Title Match
+- **B)** Operating System and Architecture Compatibility (e.g., Linux x86_64 vs Windows x86)
+- **C)** Color of the Terminal Text
+- **D)** Domain Name Registration Expiration Date
 
 3. An analyst uses the command `searchsploit -m 50123.py`. What does the `-m` flag perform?
-    - **A)** It automatically compiles and executes the script against `localhost`.
-    - **B)** It mirrors (copies) the exploit script directly into the current working directory for safe code review and modification.
-    - **C)** It mails the exploit to the system administrator.
-    - **D)** It deletes the exploit from Exploit-DB.
+- **A)** It automatically compiles and executes the script against `localhost`.
+- **B)** It mirrors (copies) the exploit script directly into the current working directory for safe code review and modification.
+- **C)** It mails the exploit to the system administrator.
+- **D)** It deletes the exploit from Exploit-DB.
 
 4. In the Prioritization Matrix, what priority tier should be assigned to an attack path with Strong Supporting Evidence and High Potential Impact (e.g., verified unauthenticated RCE)?
-    - **A)** Validate First (Priority 1)
-    - **B)** Validate Later (Priority 2)
-    - **C)** Research More
-    - **D)** Park / Ignore
+- **A)** Validate First (Priority 1)
+- **B)** Validate Later (Priority 2)
+- **C)** Research More
+- **D)** Park / Ignore
 
 5. Why must an ethical hacker inspect the source code of a public exploit script line-by-line before running it against a client target?
-    - **A)** To translate the programming language into HTML
-    - **B)** To verify that the script does not contain destructive actions (e.g., `rm -rf /`), unhandled memory crashes, or backdoored payloads
-    - **C)** To verify that the exploit contains at least 10,000 lines of code
-    - **D)** To remove all comments and variable names
+- **A)** To translate the programming language into HTML
+- **B)** To verify that the script does not contain destructive actions (e.g., `rm -rf /`), unhandled memory crashes, or backdoored payloads
+- **C)** To verify that the exploit contains at least 10,000 lines of code
+- **D)** To remove all comments and variable names
 
 6. What is a "Stop Condition" in the context of a penetration testing validation plan?
-    - **A)** The moment when the tester shuts down their laptop for lunch
-    - **B)** A predetermined operational boundary where testing halts immediately if unexpected behavior, errors, or risks of disruption occur
-    - **C)** An operating system command that disables all CPU interrupts
-    - **D)** The expiration of the client's commercial software license
+- **A)** The moment when the tester shuts down their laptop for lunch
+- **B)** A predetermined operational boundary where testing halts immediately if unexpected behavior, errors, or risks of disruption occur
+- **C)** An operating system command that disables all CPU interrupts
+- **D)** The expiration of the client's commercial software license
 
 7. An analyst discovers an open port 8080 running Jenkins. Nmap scripts report the version as `Jenkins 2.121.1`. Searchsploit reveals an unauthenticated RCE exploit (CVE-2018-1000861). What is the safest non-destructive validation step?
-    - **A)** Format the hard drive of the Jenkins server
-    - **B)** Send a benign pre-flight probe or execute a non-destructive command (e.g., `whoami` or `id`) to confirm code execution without modifying job configurations
-    - **C)** Immediately delete all client build pipelines and user accounts
-    - **D)** Disconnect the client's data center power supply
+- **A)** Format the hard drive of the Jenkins server
+- **B)** Send a benign pre-flight probe or execute a non-destructive command (e.g., `whoami` or `id`) to confirm code execution without modifying job configurations
+- **C)** Immediately delete all client build pipelines and user accounts
+- **D)** Disconnect the client's data center power supply
 
 8. What mistake is made when a tester assumes a server is vulnerable to a remote exploit simply because the base software version matches, without checking if the required vulnerable module is loaded?
-    - **A)** Title-Matching Fallacy
-    - **B)** Correct Threat Modeling
-    - **C)** Thorough Enumeration
-    - **D)** Reverse Shell Pivoting
+- **A)** Title-Matching Fallacy
+- **B)** Correct Threat Modeling
+- **C)** Thorough Enumeration
+- **D)** Reverse Shell Pivoting
 
 ### Answer Key & Explanations
 

@@ -97,64 +97,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which of the following mathematical conditions is equivalent to a square matrix $A$ being invertible (nonsingular)?
-    - **A)** Its determinant is zero ($\det(A) = 0$).
-    - **B)** Its determinant is non-zero ($\det(A) \neq 0$).
-    - **C)** It is a zero matrix.
-    - **D)** It is not row equivalent to the identity matrix.
+- **A)** Its determinant is zero ($\det(A) = 0$).
+- **B)** Its determinant is non-zero ($\det(A) \neq 0$).
+- **C)** It is a zero matrix.
+- **D)** It is not row equivalent to the identity matrix.
 
 2. What is the correct formula for the inverse of a scalar multiple of a matrix, $(cA)^{-1}$, assuming $c \neq 0$?
-    - **A)** $c A^{-1}$
-    - **B)** $-c A^{-1}$
-    - **C)** $\frac{1}{c} A^{-1}$
-    - **D)** $A^{-1} + c$
+- **A)** $c A^{-1}$
+- **B)** $-c A^{-1}$
+- **C)** $\frac{1}{c} A^{-1}$
+- **D)** $A^{-1} + c$
 
 3. According to the properties of matrix inverses, what is the inverse of the matrix transpose, $(A^T)^{-1}$?
-    - **A)** $(A^{-1})^T$
-    - **B)** $A^T$
-    - **C)** $I_n$
-    - **D)** $A^{-1}$
+- **A)** $(A^{-1})^T$
+- **B)** $A^T$
+- **C)** $I_n$
+- **D)** $A^{-1}$
 
 4. If $A$ is an invertible matrix, what is the determinant of its inverse, $\det(A^{-1})$?
-    - **A)** $-\det(A)$
-    - **B)** $\det(A)$
-    - **C)** $1 / \det(A)$
-    - **D)** $0$
+- **A)** $-\det(A)$
+- **B)** $\det(A)$
+- **C)** $1 / \det(A)$
+- **D)** $0$
 
 5. In the Gauss-Jordan elimination method for finding the inverse of matrix $A$, what augmented matrix is initially formed before applying row operations?
-    - **A)** $[A | O]$
-    - **B)** $[A^T | I]$
-    - **C)** $[I | A]$
-    - **D)** $[A | I]$
+- **A)** $[A | O]$
+- **B)** $[A^T | I]$
+- **C)** $[I | A]$
+- **D)** $[A | I]$
 
 6. How is the inverse of a $2 \times 2$ matrix $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$ calculated using the Adjoint method?
-    - **A)** $\frac{1}{ad-bc} \begin{bmatrix} d & c \\ b & a \end{bmatrix}$
-    - **B)** $\frac{1}{ad-bc} \begin{bmatrix} a & -b \\ -c & d \end{bmatrix}$
-    - **C)** $\frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$
-    - **D)** $\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$
+- **A)** $\frac{1}{ad-bc} \begin{bmatrix} d & c \\ b & a \end{bmatrix}$
+- **B)** $\frac{1}{ad-bc} \begin{bmatrix} a & -b \\ -c & d \end{bmatrix}$
+- **C)** $\frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$
+- **D)** $\begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$
 
 7. If $D$ is an invertible diagonal matrix defined as $\text{diag}(d_1, d_2, \ldots, d_n)$, what is its inverse $D^{-1}$?
-    - **A)** $\text{diag}(-d_1, -d_2, \ldots, -d_n)$
-    - **B)** $\text{diag}(1/d_1, 1/d_2, \ldots, 1/d_n)$
-    - **C)** The identity matrix $I_n$
-    - **D)** It is not invertible.
+- **A)** $\text{diag}(-d_1, -d_2, \ldots, -d_n)$
+- **B)** $\text{diag}(1/d_1, 1/d_2, \ldots, 1/d_n)$
+- **C)** The identity matrix $I_n$
+- **D)** It is not invertible.
 
 8. What is the simple formula for the inverse of an orthogonal matrix $Q$, which inherently satisfies $Q^TQ = I$?
-    - **A)** $Q^{-1} = Q^T$
-    - **B)** $Q^{-1} = I$
-    - **C)** $Q^{-1} = -Q$
-    - **D)** $Q^{-1} = Q^2$
+- **A)** $Q^{-1} = Q^T$
+- **B)** $Q^{-1} = I$
+- **C)** $Q^{-1} = -Q$
+- **D)** $Q^{-1} = Q^2$
 
 9. According to the "Invertible Matrix Theorem", which of the following guarantees that an $n \times n$ matrix $A$ is invertible?
-    - **A)** The columns of $A$ form a linearly dependent set.
-    - **B)** The homogeneous system $AX = 0$ has infinitely many solutions.
-    - **C)** The homogeneous system $AX = 0$ has only the trivial solution.
-    - **D)** The matrix has a rank less than $n$.
+- **A)** The columns of $A$ form a linearly dependent set.
+- **B)** The homogeneous system $AX = 0$ has infinitely many solutions.
+- **C)** The homogeneous system $AX = 0$ has only the trivial solution.
+- **D)** The matrix has a rank less than $n$.
 
 10. What is a key property regarding the computation of the inverse of a matrix product, $(AB)^{-1}$?
-    - **A)** The order remains the same: $A^{-1} B^{-1}$
-    - **B)** The order is reversed: $B^{-1} A^{-1}$
-    - **C)** It equals the transpose $(AB)^T$
-    - **D)** It distributes as $A^{-1} + B^{-1}$
+- **A)** The order remains the same: $A^{-1} B^{-1}$
+- **B)** The order is reversed: $B^{-1} A^{-1}$
+- **C)** It equals the transpose $(AB)^T$
+- **D)** It distributes as $A^{-1} + B^{-1}$
 
 ### Answer Key & Explanations
 1. **B)** The Invertible Matrix Theorem states a matrix is invertible if and only if $\det(A) \neq 0$.

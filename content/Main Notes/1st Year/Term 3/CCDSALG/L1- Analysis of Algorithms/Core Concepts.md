@@ -54,34 +54,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. In algorithm analysis, what does "input size" refer to?
-    - **A)** The magnitude or numerical value of the input
-    - **B)** The number of data items or bits representing the problem scale
-    - **C)** The exact number of variables declared in the code
-    - **D)** The physical size of the data on the hard drive
+- **A)** The magnitude or numerical value of the input
+- **B)** The number of data items or bits representing the problem scale
+- **C)** The exact number of variables declared in the code
+- **D)** The physical size of the data on the hard drive
 
 2. What is the difference between running time and wall-clock time?
-    - **A)** Running time is hardware-dependent, wall-clock time is a function of input size.
-    - **B)** They are identical concepts.
-    - **C)** Running time is a function of input size, while wall-clock time is hardware-dependent.
-    - **D)** Wall-clock time measures space complexity instead of time.
+- **A)** Running time is hardware-dependent, wall-clock time is a function of input size.
+- **B)** They are identical concepts.
+- **C)** Running time is a function of input size, while wall-clock time is hardware-dependent.
+- **D)** Wall-clock time measures space complexity instead of time.
 
 3. Why is performing a raw frequency count often less meaningful on its own?
-    - **A)** Because frequency counts cannot be calculated for loops.
-    - **B)** Because it forgets to tally memory operations.
-    - **C)** Because it must be simplified using asymptotic notation to classify the growth rate.
-    - **D)** Because it only applies to recursive algorithms.
+- **A)** Because frequency counts cannot be calculated for loops.
+- **B)** Because it forgets to tally memory operations.
+- **C)** Because it must be simplified using asymptotic notation to classify the growth rate.
+- **D)** Because it only applies to recursive algorithms.
 
 4. What is a common pitfall when applying asymptotic notation like $O(n^2)$?
-    - **A)** Using it as a tight bound when it only represents an upper bound
-    - **B)** Applying it to space complexity
-    - **C)** Ignoring the input size entirely
-    - **D)** Assuming it provides a lower bound
+- **A)** Using it as a tight bound when it only represents an upper bound
+- **B)** Applying it to space complexity
+- **C)** Ignoring the input size entirely
+- **D)** Assuming it provides a lower bound
 
 5. What are recurrences primarily used for in algorithm analysis?
-    - **A)** Iterative loops
-    - **B)** Variable declarations
-    - **C)** Recursive algorithms
-    - **D)** Defining input sizes
+- **A)** Iterative loops
+- **B)** Variable declarations
+- **C)** Recursive algorithms
+- **D)** Defining input sizes
 
 ### Answer Key & Explanations
 1. **B)** Input size refers to the scale of the problem, such as the number of elements in an array or bits in an integer, not their numerical magnitude.

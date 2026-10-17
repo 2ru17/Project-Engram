@@ -69,46 +69,46 @@ int main() {
 ## Multiple Choice Questions
 
 1. What best describes the role of **🏷️ Tags**?
-    - **A)** #[[Code Snippets]] #[[CCPROG1]] #[[Control Flow]] #[[C]] #[[M5]]
-    - **B)** A deprecated standard that has been replaced in modern implementations
-    - **C)** Allows a variable to be tested for equality against a list of values
-    - **D)** A theoretical concept with no practical hardware implementation
+- **A)** #[[Code Snippets]] #[[CCPROG1]] #[[Control Flow]] #[[C]] #[[M5]]
+- **B)** A deprecated standard that has been replaced in modern implementations
+- **C)** Allows a variable to be tested for equality against a list of values
+- **D)** A theoretical concept with no practical hardware implementation
 
 2. What best describes the role of **`switch` Statement**?
-    - **A)** A measurement unit used exclusively in network performance benchmarking
-    - **B)** Allows a variable to be tested for equality against a list of values
-    - **C)** A theoretical concept with no practical hardware implementation
-    - **D)** #[[Code Snippets]] #[[CCPROG1]] #[[Control Flow]] #[[C]] #[[M5]]
+- **A)** A measurement unit used exclusively in network performance benchmarking
+- **B)** Allows a variable to be tested for equality against a list of values
+- **C)** A theoretical concept with no practical hardware implementation
+- **D)** #[[Code Snippets]] #[[CCPROG1]] #[[Control Flow]] #[[C]] #[[M5]]
 
 3. According to the material on **Conditional Statements**, which statement is correct?
-    - **A)** The described behavior is considered deprecated in modern implementations
-    - **B)** Condition: A logical expression that evaluates to true (non-zero) or false (zero). if Statement: ...
-    - **C)** The opposite of the stated principle applies
-    - **D)** This principle only applies in theoretical models, not practical systems
+- **A)** The described behavior is considered deprecated in modern implementations
+- **B)** Condition: A logical expression that evaluates to true (non-zero) or false (zero). if Statement: ...
+- **C)** The opposite of the stated principle applies
+- **D)** This principle only applies in theoretical models, not practical systems
 
 4. According to the material on **Conditional Statements**, which statement is correct?
-    - **A)** This principle only applies in theoretical models, not practical systems
-    - **B)** if (condition): The code block inside {} runs if condition is not true. else if (condition): Checked ...
-    - **C)** The described behavior is considered deprecated in modern implementations
-    - **D)** if (condition): The code block inside {} runs if condition is true. else if (condition): Checked ...
+- **A)** This principle only applies in theoretical models, not practical systems
+- **B)** if (condition): The code block inside {} runs if condition is not true. else if (condition): Checked ...
+- **C)** The described behavior is considered deprecated in modern implementations
+- **D)** if (condition): The code block inside {} runs if condition is true. else if (condition): Checked ...
 
 5. According to the material on **Conditional Statements**, which statement is correct?
-    - **A)** The described behavior is considered deprecated in modern implementations
-    - **B)** Conditional statements, or selection structures, allow a program to make decisions and execute di...
-    - **C)** This principle only applies in theoretical models, not practical systems
-    - **D)** The opposite of the stated principle applies
+- **A)** The described behavior is considered deprecated in modern implementations
+- **B)** Conditional statements, or selection structures, allow a program to make decisions and execute di...
+- **C)** This principle only applies in theoretical models, not practical systems
+- **D)** The opposite of the stated principle applies
 
 6. According to the material on **Conditional Statements**, which statement is correct?
-    - **A)** This principle only applies in theoretical models, not practical systems
-    - **B)** id: ccprog1_conditional_statements
-    - **C)** The described behavior is considered deprecated in modern implementations
-    - **D)** The opposite of the stated principle applies
+- **A)** This principle only applies in theoretical models, not practical systems
+- **B)** id: ccprog1_conditional_statements
+- **C)** The described behavior is considered deprecated in modern implementations
+- **D)** The opposite of the stated principle applies
 
 7. Which of the following is identified as a common pitfall when studying **Conditional Statements**?
-    - **A)** Forgetting the `break;` statement in a `switch`, which causes "fall-through" execution. Using `=`...
-    - **B)** Over-relying on memorization instead of understanding the underlying theory
-    - **C)** Spending too much time on implementation before understanding the concept
-    - **D)** Confusing this topic with an unrelated area of study
+- **A)** Forgetting the `break;` statement in a `switch`, which causes "fall-through" execution. Using `=`...
+- **B)** Over-relying on memorization instead of understanding the underlying theory
+- **C)** Spending too much time on implementation before understanding the concept
+- **D)** Confusing this topic with an unrelated area of study
 
 ### Answer Key & Explanations
 1. **A)** **🏷️ Tags** is defined in the note as: #[[Code Snippets]] #[[CCPROG1]] #[[Control Flow]] #[[C]] #[[M5]].

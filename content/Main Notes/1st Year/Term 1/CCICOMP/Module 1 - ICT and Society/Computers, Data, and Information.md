@@ -75,64 +75,64 @@ Computers are typically categorized based on their intended use, scale, and proc
 ## Multiple Choice Questions
 
 1. Which of the following best describes the primary function of a computer?
-    - **A)** A networking tool exclusively used to connect globally distributed mainframes.
-    - **B)** A data processing device that collects, processes, outputs, and stores data.
-    - **C)** A mechanical device designed solely for rapid mathematical calculations.
-    - **D)** A storage medium for archiving raw facts without processing capabilities.
+- **A)** A networking tool exclusively used to connect globally distributed mainframes.
+- **B)** A data processing device that collects, processes, outputs, and stores data.
+- **C)** A mechanical device designed solely for rapid mathematical calculations.
+- **D)** A storage medium for archiving raw facts without processing capabilities.
 
 2. How does information differ from data in the context of computing?
-    - **A)** Information is a representation of raw facts, whereas data is organized and meaningful.
-    - **B)** Data refers strictly to binary digits, whereas information refers to physical hardware.
-    - **C)** Information is data that has been organized, processed, or presented in a meaningful fashion.
-    - **D)** There is no difference; they are interchangeable terms for computer memory.
+- **A)** Information is a representation of raw facts, whereas data is organized and meaningful.
+- **B)** Data refers strictly to binary digits, whereas information refers to physical hardware.
+- **C)** Information is data that has been organized, processed, or presented in a meaningful fashion.
+- **D)** There is no difference; they are interchangeable terms for computer memory.
 
 3. Which of the following statements about Primary Storage (RAM) is true?
-    - **A)** It is non-volatile and retains files long-term.
-    - **B)** It only stores the operating system's system software.
-    - **C)** It permanently saves data even when the system is powered off.
-    - **D)** It is a volatile storage medium that holds instructions for currently running programs.
+- **A)** It is non-volatile and retains files long-term.
+- **B)** It only stores the operating system's system software.
+- **C)** It permanently saves data even when the system is powered off.
+- **D)** It is a volatile storage medium that holds instructions for currently running programs.
 
 4. What is the fundamental language used internally by computers to represent electrical states?
-    - **A)** Binary, consisting of 0s and 1s.
-    - **B)** Decimal, using digits 0 through 9.
-    - **C)** ASCII, utilizing a 128-character set.
-    - **D)** Hexadecimal, involving numbers and letters A-F.
+- **A)** Binary, consisting of 0s and 1s.
+- **B)** Decimal, using digits 0 through 9.
+- **C)** ASCII, utilizing a 128-character set.
+- **D)** Hexadecimal, involving numbers and letters A-F.
 
 5. How many bytes are contained within a single Kilobyte (KB)?
-    - **A)** 1000 bytes
-    - **B)** 1024 bytes
-    - **C)** 10,000 bytes
-    - **D)** 1,048,576 bytes
+- **A)** 1000 bytes
+- **B)** 1024 bytes
+- **C)** 10,000 bytes
+- **D)** 1,048,576 bytes
 
 6. Which hardware component is often referred to as the "brain" of the computer?
-    - **A)** Secondary Storage
-    - **B)** The Input/Output (I/O) Device
-    - **C)** The Central Processing Unit (CPU)
-    - **D)** The Motherboard
+- **A)** Secondary Storage
+- **B)** The Input/Output (I/O) Device
+- **C)** The Central Processing Unit (CPU)
+- **D)** The Motherboard
 
 7. What type of computer is designed by large organizations to rapidly process enormous volumes of data and execute thousands of programs simultaneously?
-    - **A)** Supercomputers
-    - **B)** Servers
-    - **C)** Mainframes
-    - **D)** Clusters
+- **A)** Supercomputers
+- **B)** Servers
+- **C)** Mainframes
+- **D)** Clusters
 
 8. Which of the following is a defining characteristic of special-purpose (embedded) computers?
-    - **A)** They are versatile and meant to run a multitude of different applications.
-    - **B)** They are engineered for one specific task and integrated within a larger system.
-    - **C)** They are optimized for extremely complex scientific calculations.
-    - **D)** They link dissimilar, geographically distributed networks to solve problems.
+- **A)** They are versatile and meant to run a multitude of different applications.
+- **B)** They are engineered for one specific task and integrated within a larger system.
+- **C)** They are optimized for extremely complex scientific calculations.
+- **D)** They link dissimilar, geographically distributed networks to solve problems.
 
 9. Operating systems and utilities fall under which classification of software?
-    - **A)** Application Software
-    - **B)** Embedded Software
-    - **C)** Firmware Software
-    - **D)** System Software
+- **A)** Application Software
+- **B)** Embedded Software
+- **C)** Firmware Software
+- **D)** System Software
 
 10. In digital data representation, what is a nibble?
-    - **A)** A combination of four bits.
-    - **B)** A single 0 or 1.
-    - **C)** A sequence of eight bytes.
-    - **D)** Half of a bit.
+- **A)** A combination of four bits.
+- **B)** A single 0 or 1.
+- **C)** A sequence of eight bytes.
+- **D)** Half of a bit.
 
 ### Answer Key & Explanations
 1. **B)** The note defines a computer as a data processing device that performs four major functions: Input, Process, Output, and Storage.

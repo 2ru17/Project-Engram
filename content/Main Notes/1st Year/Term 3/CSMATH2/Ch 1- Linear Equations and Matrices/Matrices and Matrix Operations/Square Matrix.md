@@ -56,22 +56,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What fundamentally defines a square matrix?
-    - **A)** A matrix that has an equal number of rows and columns.
-    - **B)** A matrix where all entries are perfect squares.
-    - **C)** A matrix that has exactly four entries.
-    - **D)** A matrix whose inverse is equal to itself.
+- **A)** A matrix that has an equal number of rows and columns.
+- **B)** A matrix where all entries are perfect squares.
+- **C)** A matrix that has exactly four entries.
+- **D)** A matrix whose inverse is equal to itself.
 
 2. Which of the following mathematical operations or properties applies ONLY to square matrices?
-    - **A)** Transpose and Scalar Multiplication
-    - **B)** Determinant and Trace
-    - **C)** Matrix Addition and Subtraction
-    - **D)** Row Reduction to Echelon Form
+- **A)** Transpose and Scalar Multiplication
+- **B)** Determinant and Trace
+- **C)** Matrix Addition and Subtraction
+- **D)** Row Reduction to Echelon Form
 
 3. Is every square matrix invertible (nonsingular)?
-    - **A)** Yes, being square guarantees invertibility.
-    - **B)** Yes, as long as it does not contain negative entries.
-    - **C)** No, only square matrices with a non-zero determinant ($\det(A) \neq 0$) are invertible.
-    - **D)** No, only diagonal matrices are invertible.
+- **A)** Yes, being square guarantees invertibility.
+- **B)** Yes, as long as it does not contain negative entries.
+- **C)** No, only square matrices with a non-zero determinant ($\det(A) \neq 0$) are invertible.
+- **D)** No, only diagonal matrices are invertible.
 
 ### Answer Key & Explanations
 1. **A)** As noted in the summary, a square matrix is one that has an equal number of rows and columns ($n \times n$).

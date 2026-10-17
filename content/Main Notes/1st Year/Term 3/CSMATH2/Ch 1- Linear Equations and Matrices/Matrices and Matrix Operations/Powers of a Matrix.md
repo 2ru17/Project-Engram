@@ -53,22 +53,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. By convention in linear algebra, what does $A^0$ equal for a square matrix $A$?
-    - **A)** The scalar 1
-    - **B)** The zero matrix $O$
-    - **C)** The identity matrix $I_n$
-    - **D)** The original matrix $A$
+- **A)** The scalar 1
+- **B)** The zero matrix $O$
+- **C)** The identity matrix $I_n$
+- **D)** The original matrix $A$
 
 2. What strict rule applies when trying to raise a matrix to a power $k$ (e.g., $A^k$)?
-    - **A)** The matrix must be an identity matrix.
-    - **B)** The matrix must be a square matrix.
-    - **C)** The matrix must have non-zero entries.
-    - **D)** The power $k$ must be a negative integer.
+- **A)** The matrix must be an identity matrix.
+- **B)** The matrix must be a square matrix.
+- **C)** The matrix must have non-zero entries.
+- **D)** The power $k$ must be a negative integer.
 
 3. Under what condition is the exponent rule $(AB)^k = A^k B^k$ valid for matrices?
-    - **A)** Always, this is a standard law of exponents.
-    - **B)** Only when both $A$ and $B$ are identity matrices.
-    - **C)** Only when matrices $A$ and $B$ commute, so $AB = BA$.
-    - **D)** Never, it is mathematically impossible.
+- **A)** Always, this is a standard law of exponents.
+- **B)** Only when both $A$ and $B$ are identity matrices.
+- **C)** Only when matrices $A$ and $B$ commute, so $AB = BA$.
+- **D)** Never, it is mathematically impossible.
 
 ### Answer Key & Explanations
 1. **C)** The definition states that $A^0 = I_n$ (the identity matrix), similar to how $x^0 = 1$ for scalars, but represented as a matrix.

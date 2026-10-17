@@ -96,64 +96,64 @@ sequenceDiagram
 
 ## Multiple Choice Questions
 1. What is the maximum allowable hop count for a valid route in the Routing Information Protocol (RIP)?
-    - **A)** 15
-    - **B)** 16
-    - **C)** 120
-    - **D)** 255
+- **A)** 15
+- **B)** 16
+- **C)** 120
+- **D)** 255
 
 2. Which mechanism prevents a router from advertising a route back onto the same interface from which it was originally learned?
-    - **A)** Route Poisoning
-    - **B)** Hold-down Timers
-    - **C)** Split Horizon
-    - **D)** Triggered Updates
+- **A)** Route Poisoning
+- **B)** Hold-down Timers
+- **C)** Split Horizon
+- **D)** Triggered Updates
 
 3. A routing table displays the entry: R 192.168.10.0/24 [120/4] via 10.1.1.2. What does the value 4 represent?
-    - **A)** The Administrative Distance
-    - **B)** The number of routers the packet must pass through to reach the destination
-    - **C)** The amount of time in seconds before the route expires
-    - **D)** The exit interface ID
+- **A)** The Administrative Distance
+- **B)** The number of routers the packet must pass through to reach the destination
+- **C)** The amount of time in seconds before the route expires
+- **D)** The exit interface ID
 
 4. Which issue occurs in distance-vector networks when a link fails and routers repeatedly advertise increasing metrics to each other?
-    - **A)** The Bouncing Effect (Count-to-Infinity)
-    - **B)** Link-State Flooding
-    - **C)** Hot Potato Routing
-    - **D)** The Broadcast Storm
+- **A)** The Bouncing Effect (Count-to-Infinity)
+- **B)** Link-State Flooding
+- **C)** Hot Potato Routing
+- **D)** The Broadcast Storm
 
 5. What is the primary purpose of Route Poisoning?
-    - **A)** To safely share routing tables over the Internet
-    - **B)** To immediately advertise a failed network with an infinite metric (e.g., 16 in RIP)
-    - **C)** To delay routing updates until the network is stable
-    - **D)** To encrypt distance-vector routing updates
+- **A)** To safely share routing tables over the Internet
+- **B)** To immediately advertise a failed network with an infinite metric (e.g., 16 in RIP)
+- **C)** To delay routing updates until the network is stable
+- **D)** To encrypt distance-vector routing updates
 
 6. How do triggered updates improve distance-vector routing?
-    - **A)** They increase the bandwidth of the link
-    - **B)** They force the router to use OSPF instead of RIP
-    - **C)** They allow a router to advertise a topology change immediately without waiting for the periodic timer
-    - **D)** They convert hop counts into link costs
+- **A)** They increase the bandwidth of the link
+- **B)** They force the router to use OSPF instead of RIP
+- **C)** They allow a router to advertise a topology change immediately without waiting for the periodic timer
+- **D)** They convert hop counts into link costs
 
 7. Which of the following best describes the "routing by rumor" concept?
-    - **A)** A router independently builds a complete map of the network
-    - **B)** A router makes forwarding decisions based entirely on the routing tables sent by its immediate neighbors
-    - **C)** A router asks the centralized SDN controller for paths
-    - **D)** A router queries DNS to find IP routes
+- **A)** A router independently builds a complete map of the network
+- **B)** A router makes forwarding decisions based entirely on the routing tables sent by its immediate neighbors
+- **C)** A router asks the centralized SDN controller for paths
+- **D)** A router queries DNS to find IP routes
 
 8. What is the default Administrative Distance (AD) for RIP?
-    - **A)** 1
-    - **B)** 90
-    - **C)** 110
-    - **D)** 120
+- **A)** 1
+- **B)** 90
+- **C)** 110
+- **D)** 120
 
 9. What is the role of a Hold-down Timer in routing protocols?
-    - **A)** To keep the BGP session alive
-    - **B)** To prevent a router from accepting a potentially bad replacement route for a set period after a failure
-    - **C)** To measure the delay across a physical cable
-    - **D)** To schedule when the router will reboot
+- **A)** To keep the BGP session alive
+- **B)** To prevent a router from accepting a potentially bad replacement route for a set period after a failure
+- **C)** To measure the delay across a physical cable
+- **D)** To schedule when the router will reboot
 
 10. Poison Reverse goes a step further than Split Horizon by doing what?
-    - **A)** Sending the route back out the same interface it was learned, but marked as unreachable
-    - **B)** Refusing to send the route back out the same interface it was learned
-    - **C)** Dropping all packets destined for a specific IP
-    - **D)** Changing the routing protocol to Link-State
+- **A)** Sending the route back out the same interface it was learned, but marked as unreachable
+- **B)** Refusing to send the route back out the same interface it was learned
+- **C)** Dropping all packets destined for a specific IP
+- **D)** Changing the routing protocol to Link-State
 
 ### Answer Key & Explanations
 1. **A** - RIP allows up to 15 hops; 16 is considered unreachable.

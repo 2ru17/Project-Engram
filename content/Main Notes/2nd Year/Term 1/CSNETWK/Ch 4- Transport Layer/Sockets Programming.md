@@ -91,64 +91,64 @@ while True:
 ## Multiple Choice Questions
 
 1. Which transport protocol is known for being connectionless and unreliable?
-    - **A)** TCP
-    - **B)** HTTP
-    - **C)** UDP
-    - **D)** FTP
+- **A)** TCP
+- **B)** HTTP
+- **C)** UDP
+- **D)** FTP
 
 2. What must a client know in order to communicate with a server process?
-    - **A)** The server's MAC address and port number
-    - **B)** The server's IP address and port number
-    - **C)** The server's host name only
-    - **D)** The server's IP address and subnet mask
+- **A)** The server's MAC address and port number
+- **B)** The server's IP address and port number
+- **C)** The server's host name only
+- **D)** The server's IP address and subnet mask
 
 3. What type of socket is created when using UDP?
-    - **A)** `SOCK_STREAM`
-    - **B)** `SOCK_RAW`
-    - **C)** `SOCK_DGRAM`
-    - **D)** `SOCK_SEQPACKET`
+- **A)** `SOCK_STREAM`
+- **B)** `SOCK_RAW`
+- **C)** `SOCK_DGRAM`
+- **D)** `SOCK_SEQPACKET`
 
 4. What type of socket is created when using TCP?
-    - **A)** `SOCK_DGRAM`
-    - **B)** `SOCK_STREAM`
-    - **C)** `SOCK_RAW`
-    - **D)** `SOCK_RDM`
+- **A)** `SOCK_DGRAM`
+- **B)** `SOCK_STREAM`
+- **C)** `SOCK_RAW`
+- **D)** `SOCK_RDM`
 
 5. In UDP communication, what must be attached to every message sent?
-    - **A)** A sequence number
-    - **B)** An acknowledgment number
-    - **C)** The destination IP address and port
-    - **D)** A SYN flag
+- **A)** A sequence number
+- **B)** An acknowledgment number
+- **C)** The destination IP address and port
+- **D)** A SYN flag
 
 6. Why does a TCP server create a *new* socket upon accepting a connection?
-    - **A)** To replace the old, corrupted socket
-    - **B)** To handle communication with that specific client independently
-    - **C)** Because sockets can only send one message
-    - **D)** To change the port number for security
+- **A)** To replace the old, corrupted socket
+- **B)** To handle communication with that specific client independently
+- **C)** Because sockets can only send one message
+- **D)** To change the port number for security
 
 7. Which method is used by a TCP server to wait for incoming connections?
-    - **A)** `bind()`
-    - **B)** `connect()`
-    - **C)** `listen()`
-    - **D)** `recvfrom()`
+- **A)** `bind()`
+- **B)** `connect()`
+- **C)** `listen()`
+- **D)** `recvfrom()`
 
 8. Which method is used by a TCP server to extract a connection request from the queue?
-    - **A)** `accept()`
-    - **B)** `listen()`
-    - **C)** `receive()`
-    - **D)** `connect()`
+- **A)** `accept()`
+- **B)** `listen()`
+- **C)** `receive()`
+- **D)** `connect()`
 
 9. In the provided UDP Python example, what does `recvfrom(2048)` do?
-    - **A)** Receives up to 2048 packets
-    - **B)** Reads a reply from the socket with a buffer size of 2048 bytes
-    - **C)** Sends a message to port 2048
-    - **D)** Waits for 2048 milliseconds
+- **A)** Receives up to 2048 packets
+- **B)** Reads a reply from the socket with a buffer size of 2048 bytes
+- **C)** Sends a message to port 2048
+- **D)** Waits for 2048 milliseconds
 
 10. What kind of transfer does TCP provide between client and server processes?
-    - **A)** Unreliable, unordered datagram transfer
-    - **B)** Reliable, in-order byte-stream transfer
-    - **C)** Best-effort packet delivery
-    - **D)** Connectionless block transfer
+- **A)** Unreliable, unordered datagram transfer
+- **B)** Reliable, in-order byte-stream transfer
+- **C)** Best-effort packet delivery
+- **D)** Connectionless block transfer
 
 ### Answer Key & Explanations
 1. **C)** UDP is a connectionless, unreliable transport protocol.

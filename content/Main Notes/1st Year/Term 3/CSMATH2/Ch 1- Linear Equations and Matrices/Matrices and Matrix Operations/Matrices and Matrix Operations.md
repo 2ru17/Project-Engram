@@ -68,22 +68,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is the primary purpose of the "Matrices and Matrix Operations" note?
-    - **A)** To provide a deep dive into vector calculus.
-    - **B)** To serve as the top-level overview note for Chapter 1's matrix operations content.
-    - **C)** To list all the homework assignments for the course.
-    - **D)** To strictly define elementary row operations.
+- **A)** To provide a deep dive into vector calculus.
+- **B)** To serve as the top-level overview note for Chapter 1's matrix operations content.
+- **C)** To list all the homework assignments for the course.
+- **D)** To strictly define elementary row operations.
 
 2. Which of the following is highlighted as a common pitfall in matrix operations?
-    - **A)** Failing to calculate the determinant correctly.
-    - **B)** Treating matrices exactly like numbers and wrongly assuming rules like commutativity apply.
-    - **C)** Writing matrices with bold letters instead of brackets.
-    - **D)** Assuming all matrices are invertible.
+- **A)** Failing to calculate the determinant correctly.
+- **B)** Treating matrices exactly like numbers and wrongly assuming rules like commutativity apply.
+- **C)** Writing matrices with bold letters instead of brackets.
+- **D)** Assuming all matrices are invertible.
 
 3. When performing matrix operations, what important requirement is commonly forgotten, leading to errors?
-    - **A)** Converting the matrix to reduced row echelon form first.
-    - **B)** The specific dimension requirements for each operation.
-    - **C)** Ensuring the matrix is a square matrix.
-    - **D)** Multiplying by the identity matrix before proceeding.
+- **A)** Converting the matrix to reduced row echelon form first.
+- **B)** The specific dimension requirements for each operation.
+- **C)** Ensuring the matrix is a square matrix.
+- **D)** Multiplying by the identity matrix before proceeding.
 
 ### Answer Key & Explanations
 1. **B)** The summary states this is the top-level overview note linking to subtopics regarding Chapter 1 matrix operations.

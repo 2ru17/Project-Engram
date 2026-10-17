@@ -78,64 +78,64 @@ The decimal value is the sum of all digit values (digit $\times$ place value).
 ## Multiple Choice Questions
 
 1. What does the "radix" of a positional number system represent?
-    - **A)** The position of the decimal point
-    - **B)** The total number of unique symbols available
-    - **C)** The maximum value a single digit can hold
-    - **D)** The number of digits in the whole number
+- **A)** The position of the decimal point
+- **B)** The total number of unique symbols available
+- **C)** The maximum value a single digit can hold
+- **D)** The number of digits in the whole number
 
 2. What is the radix of the binary number system?
-    - **A)** 1
-    - **B)** 2
-    - **C)** 8
-    - **D)** 10
+- **A)** 1
+- **B)** 2
+- **C)** 8
+- **D)** 10
 
 3. What is the radix of the hexadecimal number system?
-    - **A)** 8
-    - **B)** 10
-    - **C)** 16
-    - **D)** 20
+- **A)** 8
+- **B)** 10
+- **C)** 16
+- **D)** 20
 
 4. How many unique symbols are there in a quaternary (base-4) number system?
-    - **A)** 2
-    - **B)** 4
-    - **C)** 8
-    - **D)** 10
+- **A)** 2
+- **B)** 4
+- **C)** 8
+- **D)** 10
 
 5. Which of the following correctly denotes a hexadecimal number?
-    - **A)** 0O67.4
-    - **B)** 0x2A7.8
-    - **C)** 0b0101.1
-    - **D)** 124.5d
+- **A)** 0O67.4
+- **B)** 0x2A7.8
+- **C)** 0b0101.1
+- **D)** 124.5d
 
 6. In any positional number system, what is the mathematical formula for a digit's value?
-    - **A)** The digit added to its place value
-    - **B)** The digit multiplied by its place value
-    - **C)** The base raised to the power of the digit
-    - **D)** The digit divided by the radix
+- **A)** The digit added to its place value
+- **B)** The digit multiplied by its place value
+- **C)** The base raised to the power of the digit
+- **D)** The digit divided by the radix
 
 7. In the octal number system, what is the place value of the first digit to the left of the octal point?
-    - **A)** 8^-1
-    - **B)** 8^0
-    - **C)** 8^1
-    - **D)** 8^2
+- **A)** 8^-1
+- **B)** 8^0
+- **C)** 8^1
+- **D)** 8^2
 
 8. What is the number system with a radix of 12 called?
-    - **A)** Undecimal
-    - **B)** Duodecimal
-    - **C)** Tridecimal
-    - **D)** Tetradecimal
+- **A)** Undecimal
+- **B)** Duodecimal
+- **C)** Tridecimal
+- **D)** Tetradecimal
 
 9. For position indexing relative to the radix point, what position is assigned to the first digit on the right side of the radix point?
-    - **A)** 0
-    - **B)** 1
-    - **C)** -1
-    - **D)** -2
+- **A)** 0
+- **B)** 1
+- **C)** -1
+- **D)** -2
 
 10. Which number system has a radix of 60?
-    - **A)** Hexatrigesimal
-    - **B)** Sexagesimal
-    - **C)** Duosexagesimal
-    - **D)** Tetrasexagesimal
+- **A)** Hexatrigesimal
+- **B)** Sexagesimal
+- **C)** Duosexagesimal
+- **D)** Tetrasexagesimal
 
 ### Answer Key & Explanations
 1. **B)** The radix or base defines the total number of unique symbols used in that system.

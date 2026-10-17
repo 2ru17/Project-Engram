@@ -59,64 +59,64 @@ Throughput = $\min(100, 15, 100) = 15 \text{ Mbps}$. The client's access link is
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "**Rate adaptation** dynamically changes _____ transmission rate based on the SNR (slower rates have lower BERs at low SNR)."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** the
-    - **D)** Router
+- **A)** Network
+- **B)** Protocol
+- **C)** the
+- **D)** Router
 
 2. Which word completes the following sentence from the text: "Throughput is constrained by traffic volume, traffic type, network delays, and most importantly, the **bottleneck link**—the link along the end-to-end _____ with the lowest capacity (the minimum of the server's rate $R_s$, the client's rate $R_c$, or shared backbone rates)."?
-    - **A)** Network
-    - **B)** path
-    - **C)** Router
-    - **D)** Protocol
+- **A)** Network
+- **B)** path
+- **C)** Router
+- **D)** Protocol
 
 3. Which word completes the following sentence from the text: "*Issues:* Suffers from **attenuation** (signal deterioration over distance), **Electromagnetic/Radio Frequency _____ (EMI/RFI)**, and **crosstalk** (magnetic field disturbance between adjacent wires)."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** Interference
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** Interference
 
 4. Which word completes the following sentence from the text: "The client receives data over an access _____ with capacity $R_c = 15 \text{ Mbps}$."?
-    - **A)** link
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** link
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 5. Which word completes the following sentence from the text: "**Bluetooth (PAN):** Personal Area Network under _____ meters, used as a cable replacement."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** 10
-    - **D)** Network
+- **A)** Protocol
+- **B)** Router
+- **C)** 10
+- **D)** Network
 
 6. Which word completes the following sentence from the text: "Throughput = $\min(100, 15, _____ = 15 \text{ Mbps}$."?
-    - **A)** 100
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** 100
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 7. Which word completes the following sentence from the text: "It depends on physical _____ and signaling technologies."?
-    - **A)** Router
-    - **B)** properties
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Router
+- **B)** properties
+- **C)** Network
+- **D)** Protocol
 
 8. Which word completes the following sentence from the text: "There is a shared backbone with capacity $R _____ 1 \text{ Gbps}$ serving 10 equal connections."?
-    - **A)** 
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** Network
+- **A)** 
+- **B)** Protocol
+- **C)** Router
+- **D)** Network
 
 9. Which word completes the following sentence from the text: "**Wireless Media:** Transmits signals via _____ radio or microwave frequencies."?
-    - **A)** Protocol
-    - **B)** electromagnetic
-    - **C)** Network
-    - **D)** Router
+- **A)** Protocol
+- **B)** electromagnetic
+- **C)** Network
+- **D)** Router
 
 10. Which word completes the following sentence from the text: "**Network Modes:** *Infr_____structure Mode:* Devices communicate with a base station / Access Point (AP)."?
-    - **A)** Network
-    - **B)** a
-    - **C)** Protocol
-    - **D)** Router
+- **A)** Network
+- **B)** a
+- **C)** Protocol
+- **D)** Router
 
 
 ### Answer Key & Explanations

@@ -64,64 +64,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does Best-Case Analysis determine?
-    - **A)** The maximum running time over all inputs
-    - **B)** The minimum running time over all possible inputs of size n
-    - **C)** The expected running time based on probability
-    - **D)** The average execution time of the algorithm
+- **A)** The maximum running time over all inputs
+- **B)** The minimum running time over all possible inputs of size n
+- **C)** The expected running time based on probability
+- **D)** The average execution time of the algorithm
 
 2. Which asymptotic notation is commonly used to express the lower bound in best-case analysis?
-    - **A)** Big-O
-    - **B)** Big-Theta
-    - **C)** Big-Omega
-    - **D)** Little-o
+- **A)** Big-O
+- **B)** Big-Theta
+- **C)** Big-Omega
+- **D)** Little-o
 
 3. Why is best-case analysis generally considered the least useful in practice?
-    - **A)** It is impossible to calculate for most algorithms.
-    - **B)** It represents the most optimistic scenario, which rarely occurs.
-    - **C)** It always gives a time complexity of O(1).
-    - **D)** It requires complex probability distributions.
+- **A)** It is impossible to calculate for most algorithms.
+- **B)** It represents the most optimistic scenario, which rarely occurs.
+- **C)** It always gives a time complexity of O(1).
+- **D)** It requires complex probability distributions.
 
 4. What is the best-case input for Linear Search?
-    - **A)** The target is not in the array.
-    - **B)** The array is already sorted.
-    - **C)** The target is the first element.
-    - **D)** The target is the last element.
+- **A)** The target is not in the array.
+- **B)** The array is already sorted.
+- **C)** The target is the first element.
+- **D)** The target is the last element.
 
 5. For Bubble Sort and Insertion Sort, what constitutes a best-case input?
-    - **A)** A completely randomized array
-    - **B)** An array sorted in reverse order
-    - **C)** An array that is already sorted
-    - **D)** An array containing all identical elements
+- **A)** A completely randomized array
+- **B)** An array sorted in reverse order
+- **C)** An array that is already sorted
+- **D)** An array containing all identical elements
 
 6. What is a practical use for Best-Case Analysis?
-    - **A)** Providing safety guarantees for critical systems
-    - **B)** Proving that an algorithm has O(1) space complexity
-    - **C)** Identifying if an algorithm has adaptive behavior
-    - **D)** Guaranteeing the maximum runtime for a task
+- **A)** Providing safety guarantees for critical systems
+- **B)** Proving that an algorithm has O(1) space complexity
+- **C)** Identifying if an algorithm has adaptive behavior
+- **D)** Guaranteeing the maximum runtime for a task
 
 7. What does it mean if an algorithm is "adaptive"?
-    - **A)** It performs better on partially sorted or favorable data.
-    - **B)** It adapts to run on multiple CPU cores.
-    - **C)** It changes its code during execution.
-    - **D)** It ignores constant factors dynamically.
+- **A)** It performs better on partially sorted or favorable data.
+- **B)** It adapts to run on multiple CPU cores.
+- **C)** It changes its code during execution.
+- **D)** It ignores constant factors dynamically.
 
 8. What is the best-case time complexity for Quick Sort when partitions are perfectly balanced?
-    - **A)** O(1)
-    - **B)** O(n)
-    - **C)** O(n log n)
-    - **D)** O(n^2)
+- **A)** O(1)
+- **B)** O(n)
+- **C)** O(n log n)
+- **D)** O(n^2)
 
 9. What is a common pitfall regarding best-case analysis?
-    - **A)** Using it to establish the mathematical limit of a problem
-    - **B)** Confusing the best-case of an algorithm with the lower bound of a computational problem
-    - **C)** Believing that best-case analysis is the only valid metric
-    - **D)** Applying Big-Omega notation incorrectly
+- **A)** Using it to establish the mathematical limit of a problem
+- **B)** Confusing the best-case of an algorithm with the lower bound of a computational problem
+- **C)** Believing that best-case analysis is the only valid metric
+- **D)** Applying Big-Omega notation incorrectly
 
 10. Which of the following statements about Best-Case Analysis is false?
-    - **A)** It provides safety guarantees like worst-case analysis.
-    - **B)** It helps establish the lower bounds of algorithms.
-    - **C)** It assumes the most favorable input scenario.
-    - **D)** An algorithm with a great best-case can still have a terrible worst-case.
+- **A)** It provides safety guarantees like worst-case analysis.
+- **B)** It helps establish the lower bounds of algorithms.
+- **C)** It assumes the most favorable input scenario.
+- **D)** An algorithm with a great best-case can still have a terrible worst-case.
 
 ### Answer Key & Explanations
 1. **B)** Best-case analysis determines the minimum running time an algorithm can take for an input of size n.

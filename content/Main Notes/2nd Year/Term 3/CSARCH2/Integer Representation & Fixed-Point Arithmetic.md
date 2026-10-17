@@ -226,34 +226,34 @@ Address  | Little Endian (LSB First) | Big Endian (MSB First)
 ## Multiple Choice Questions
 
 1. In an 8-bit system, what is the 2's complement representation of decimal integer $-43$?
-    - **A)** `11010101`
-    - **B)** `11010100`
-    - **C)** `10101011`
-    - **D)** `11010111`
+- **A)** `11010101`
+- **B)** `11010100`
+- **C)** `10101011`
+- **D)** `11010111`
 
 2. A 32-bit integer stored at memory address `0x0040` contains the bytes `0x78`, `0x56`, `0x34`, `0x12` at addresses `0x0040`, `0x0041`, `0x0042`, and `0x0043` respectively. What is the hexadecimal integer value if the architecture is Little Endian?
-    - **A)** `0x78563412`
-    - **B)** `0x12345678`
-    - **C)** `0x34127856`
-    - **D)** `0x21436587`
+- **A)** `0x78563412`
+- **B)** `0x12345678`
+- **C)** `0x34127856`
+- **D)** `0x21436587`
 
 3. What is the valid representation range for an 8-bit signed integer in 1's complement versus 2's complement?
-    - **A)** 1's comp: $[-128, +127]$; 2's comp: $[-127, +127]$
-    - **B)** 1's comp: $[-127, +127]$; 2's comp: $[-128, +127]$
-    - **C)** 1's comp: $[-127, +128]$; 2's comp: $[-128, +127]$
-    - **D)** 1's comp: $[-255, +255]$; 2's comp: $[-256, +255]$
+- **A)** 1's comp: $[-128, +127]$; 2's comp: $[-127, +127]$
+- **B)** 1's comp: $[-127, +127]$; 2's comp: $[-128, +127]$
+- **C)** 1's comp: $[-127, +128]$; 2's comp: $[-128, +127]$
+- **D)** 1's comp: $[-255, +255]$; 2's comp: $[-256, +255]$
 
 4. How many decimal digits can be compressed into 10 bits using Densely Packed BCD (DPD)?
-    - **A)** 2 decimal digits
-    - **B)** 3 decimal digits
-    - **C)** 4 decimal digits
-    - **D)** 5 decimal digits
+- **A)** 2 decimal digits
+- **B)** 3 decimal digits
+- **C)** 4 decimal digits
+- **D)** 5 decimal digits
 
 5. Which Unicode transformation format is always backward-compatible with 7-bit ASCII without modifying byte values?
-    - **A)** UTF-32
-    - **B)** UTF-16 Big Endian
-    - **C)** UTF-8
-    - **D)** UTF-16 Little Endian
+- **A)** UTF-32
+- **B)** UTF-16 Big Endian
+- **C)** UTF-8
+- **D)** UTF-16 Little Endian
 
 ### Answer Key & Explanations
 

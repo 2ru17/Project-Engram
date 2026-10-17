@@ -66,22 +66,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. How is the matrix difference $A - B$ formally defined using addition and scalar multiplication?
-    - **A)** $A + B^{-1}$
-    - **B)** $A + (1/B)$
-    - **C)** $A + (-1)B$
-    - **D)** $(-1)A + B$
+- **A)** $A + B^{-1}$
+- **B)** $A + (1/B)$
+- **C)** $A + (-1)B$
+- **D)** $(-1)A + B$
 
 2. What strict size requirement must be met to subtract matrix $B$ from matrix $A$?
-    - **A)** Matrices $A$ and $B$ must have the exact same dimensions ($m \times n$).
-    - **B)** Matrix $B$ must have fewer rows than matrix $A$.
-    - **C)** Both matrices must be square matrices.
-    - **D)** The number of columns in $A$ must match the number of rows in $B$.
+- **A)** Matrices $A$ and $B$ must have the exact same dimensions ($m \times n$).
+- **B)** Matrix $B$ must have fewer rows than matrix $A$.
+- **C)** Both matrices must be square matrices.
+- **D)** The number of columns in $A$ must match the number of rows in $B$.
 
 3. Is the operation of matrix subtraction commutative?
-    - **A)** Yes, $A - B$ always equals $B - A$.
-    - **B)** Yes, but only for square matrices.
-    - **C)** No, in general $A - B \neq B - A$.
-    - **D)** No, but it is associative.
+- **A)** Yes, $A - B$ always equals $B - A$.
+- **B)** Yes, but only for square matrices.
+- **C)** No, in general $A - B \neq B - A$.
+- **D)** No, but it is associative.
 
 ### Answer Key & Explanations
 1. **C)** The difference $A - B$ is formally defined by adding $A$ to the scalar multiple of $-1$ times $B$, i.e., $A + (-1)B$.

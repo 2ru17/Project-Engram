@@ -129,64 +129,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: ""Bad news travels slow" _____ increase causes Count-to-Infinity)."?
-    - **A)** Protocol
-    - **B)** Cost
-    - **C)** Network
-    - **D)** Router
+- **A)** Protocol
+- **B)** Cost
+- **C)** Network
+- **D)** Router
 
 2. Which word completes the following sentence from the text: "Forgetting the Count-to-Infinity problem when link costs **increase** — "bad news travels slow." Applying the _____ equation incorrectly: $D_x(y) = \min_v\{c(x,v) + D_v(y)\}$ minimizes over **neighbors** $v$, not all nodes."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** BellmanFord
+- **A)** Router
+- **B)** Network
+- **C)** Protocol
+- **D)** BellmanFord
 
 3. Which word completes the following sentence from the text: "Concept Overview: Distance Vector (DV)  _____  Distance Vector routing is decentralized."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Definition
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** Definition
+- **D)** Network
 
 4. Which word completes the following sentence from the text: "**Correct Answer:** **Count to Infinity problem**  ## Summary of Logic (Cheat Sheet)  _____               |                           |                              | | ------------- | ------------------------- | ---------------------------- | | **State**     | **Knowledge Scope**       | **Values for Non-Neighbors** | | **Initial**   | Local (Direct Links only) | Infinity ($\infty$ or 'x')   | | **Converged** | Global (Best Paths)       | True Shortest Distance       |  Key Phrase:  "Good news travels fast" (Cost decrease propagates quickly)."?
-    - **A)** 
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** Router
+- **A)** 
+- **B)** Protocol
+- **C)** Network
+- **D)** Router
 
 5. Which word completes the following sentence from the text: "If a neighbor finds a cheaper path _____ that information, it updates its own vector."?
-    - **A)** using
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** using
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 6. Which word completes the following sentence from the text: "They keep adding +1 to the _____ until it hits a predefined "Infinity"."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** Router
-    - **D)** cost
+- **A)** Protocol
+- **B)** Network
+- **C)** Router
+- **D)** cost
 
 7. Which word completes the following sentence from the text: "_Example:_ A thinks best path is _____ B thinks best path is A."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** B
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** B
 
 8. Which word completes the following sentence from the text: "--- id: Bellman-Ford-Distance-Vector-Algorithm type: note course: CSNETWK topic: status: completed ---  # Bellman Ford Distance Vector Algorithm  > [!info] Document Metadata > - **Course:** `=this.course` > - _____ `=this.topic` > - **Status:** `=this.status`  **🏷️ Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]  ---  ## Overview  > Distance Vector routing is decentralized."?
-    - **A)** Topic
-    - **B)** Network
-    - **C)** Router
-    - **D)** Protocol
+- **A)** Topic
+- **B)** Network
+- **C)** Router
+- **D)** Protocol
 
 9. Which word completes the following sentence from the text: "They only know:  ## Key Concepts  Target _____ Nodes  ## Details / Theory  ## 1."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** Router
+- **D)** Network
 
 10. Which word completes the following sentence from the text: "The "Tell Your Neighbors" Rule  Each router periodically _____ its own best-path estimates (vector) to its neighbors."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** sends
-    - **D)** Protocol
+- **A)** Network
+- **B)** Router
+- **C)** sends
+- **D)** Protocol
 
 
 ### Answer Key & Explanations

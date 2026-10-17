@@ -82,22 +82,22 @@ The template in the next set of slides include firstname, which is a variable en
 ## Multiple Choice Questions
 
 1. In Handlebars, what syntax is used to denote a basic expression that will be replaced by a variable's value?
-    - **A)** `[[ variable ]]`
-    - **B)** `{{ variable }}`
-    - **C)** `<%= variable %>`
-    - **D)** `${ variable }`
+- **A)** `[[ variable ]]`
+- **B)** `{{ variable }}`
+- **C)** `<%= variable %>`
+- **D)** `${ variable }`
 
 2. When setting up an Express application to use Handlebars, what does `app.set("view engine", "hbs");` accomplish?
-    - **A)** It tells the browser to interpret all JavaScript as Handlebars syntax.
-    - **B)** It configures Express to use Handlebars (`hbs`) as the default template engine for rendering views.
-    - **C)** It compiles all static assets into a single Handlebars file.
-    - **D)** It establishes a database connection for storing Handlebars partials.
+- **A)** It tells the browser to interpret all JavaScript as Handlebars syntax.
+- **B)** It configures Express to use Handlebars (`hbs`) as the default template engine for rendering views.
+- **C)** It compiles all static assets into a single Handlebars file.
+- **D)** It establishes a database connection for storing Handlebars partials.
 
 3. In a typical Handlebars project structure (e.g., `main.hbs`), what is the purpose of `{{{ body }}}`?
-    - **A)** It automatically includes the `footer.hbs` partial.
-    - **B)** It renders the raw HTML content of the specific view being requested into the default layout container.
-    - **C)** It escapes all HTML characters to prevent cross-site scripting attacks.
-    - **D)** It links the external CSS files from the public folder.
+- **A)** It automatically includes the `footer.hbs` partial.
+- **B)** It renders the raw HTML content of the specific view being requested into the default layout container.
+- **C)** It escapes all HTML characters to prevent cross-site scripting attacks.
+- **D)** It links the external CSS files from the public folder.
 
 ### Answer Key & Explanations
 1. **B)** Handlebars expressions are content(s) enclosed by double curly braces `{{}}`.

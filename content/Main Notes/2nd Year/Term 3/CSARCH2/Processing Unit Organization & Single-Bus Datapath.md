@@ -176,34 +176,34 @@ Cycle 6: MDR_out, EAX_in, END                      ; Gate memory data into EAX; 
 ## Multiple Choice Questions
 
 1. In a single-bus CPU datapath, what is the maximum number of registers that may assert their output gating signal ($R_{\text{out}}$) onto the internal bus simultaneously during a single clock cycle?
-    - **A)** Exactly zero
-    - **B)** Exactly one
-    - **C)** Exactly two
-    - **D)** Any number of registers
+- **A)** Exactly zero
+- **B)** Exactly one
+- **C)** Exactly two
+- **D)** Any number of registers
 
 2. Why is Temporary Register $Y$ necessary in a single-bus CPU datapath?
-    - **A)** To store the Program Counter during interrupt handling
-    - **B)** To hold one ALU input operand because the single shared bus cannot supply two operands simultaneously
-    - **C)** To buffer data coming from the external hard disk
-    - **D)** To translate virtual addresses into physical addresses
+- **A)** To store the Program Counter during interrupt handling
+- **B)** To hold one ALU input operand because the single shared bus cannot supply two operands simultaneously
+- **C)** To buffer data coming from the external hard disk
+- **D)** To translate virtual addresses into physical addresses
 
 3. What micro-operations occur during Cycle 1 of the universal instruction fetch phase?
-    - **A)** $MDR_{\text{out}}, IR_{\text{in}}$
-    - **B)** $Z_{\text{out}}, PC_{\text{in}}, \text{WMFC}$
-    - **C)** $PC_{\text{out}}, MAR_{\text{in}}, \text{Read}, \text{Select4}, \text{ADD}, Z_{\text{in}}$
-    - **D)** $IR_{\text{out}}, MAR_{\text{in}}$
+- **A)** $MDR_{\text{out}}, IR_{\text{in}}$
+- **B)** $Z_{\text{out}}, PC_{\text{in}}, \text{WMFC}$
+- **C)** $PC_{\text{out}}, MAR_{\text{in}}, \text{Read}, \text{Select4}, \text{ADD}, Z_{\text{in}}$
+- **D)** $IR_{\text{out}}, MAR_{\text{in}}$
 
 4. What is the role of the `WMFC` control signal?
-    - **A)** Write Memory Frequency Control
-    - **B)** Wait for Memory Function Complete, pausing the sequencer until memory asserts that data is ready
-    - **C)** Wide-Memory Fast Cache enable
-    - **D)** Word-Mask Functional Clear
+- **A)** Write Memory Frequency Control
+- **B)** Wait for Memory Function Complete, pausing the sequencer until memory asserts that data is ready
+- **C)** Wide-Memory Fast Cache enable
+- **D)** Word-Mask Functional Clear
 
 5. How many clock cycles does a two-operand register addition ($R_3 \leftarrow R_1 + R_2$) require in a Three-Bus CPU datapath compared to a Single-Bus datapath (execution phase only)?
-    - **A)** Three-bus: 1 cycle; Single-bus: 3 cycles
-    - **B)** Three-bus: 3 cycles; Single-bus: 1 cycle
-    - **C)** Three-bus: 2 cycles; Single-bus: 4 cycles
-    - **D)** Three-bus: 4 cycles; Single-bus: 2 cycles
+- **A)** Three-bus: 1 cycle; Single-bus: 3 cycles
+- **B)** Three-bus: 3 cycles; Single-bus: 1 cycle
+- **C)** Three-bus: 2 cycles; Single-bus: 4 cycles
+- **D)** Three-bus: 4 cycles; Single-bus: 2 cycles
 
 ### Answer Key & Explanations
 

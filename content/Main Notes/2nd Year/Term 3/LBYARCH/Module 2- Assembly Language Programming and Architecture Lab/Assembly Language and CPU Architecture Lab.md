@@ -190,64 +190,64 @@ graph TD
 ## Multiple Choice Questions
 
 1. What is the primary function of the Instruction Pointer (EIP/RIP) register?
-    - **A)** To store intermediate arithmetic results
-    - **B)** To hold the address of the next instruction to be executed
-    - **C)** To point to the top of the stack
-    - **D)** To handle system call numbers
+- **A)** To store intermediate arithmetic results
+- **B)** To hold the address of the next instruction to be executed
+- **C)** To point to the top of the stack
+- **D)** To handle system call numbers
 
 2. Which assembly instruction is used to copy data from one location to another?
-    - **A)** COPY
-    - **B)** MOV
-    - **C)** LD
-    - **D)** SWAP
+- **A)** COPY
+- **B)** MOV
+- **C)** LD
+- **D)** SWAP
 
 3. What happens during the "Decode" phase of the instruction cycle?
-    - **A)** The instruction is fetched from memory.
-    - **B)** The control unit interprets the opcode to determine the required actions.
-    - **C)** The ALU performs an arithmetic operation.
-    - **D)** Data is written back to memory.
+- **A)** The instruction is fetched from memory.
+- **B)** The control unit interprets the opcode to determine the required actions.
+- **C)** The ALU performs an arithmetic operation.
+- **D)** Data is written back to memory.
 
 4. Which flag is set when an arithmetic operation results in a zero?
-    - **A)** Carry Flag
-    - **B)** Sign Flag
-    - **C)** Overflow Flag
-    - **D)** Zero Flag
+- **A)** Carry Flag
+- **B)** Sign Flag
+- **C)** Overflow Flag
+- **D)** Zero Flag
 
 5. What does the `PUSH` instruction do?
-    - **A)** Removes a value from the stack and stores it in a register.
-    - **B)** Places a value onto the top of the stack.
-    - **C)** Multiplies two registers.
-    - **D)** Jumps to a specific label.
+- **A)** Removes a value from the stack and stores it in a register.
+- **B)** Places a value onto the top of the stack.
+- **C)** Multiplies two registers.
+- **D)** Jumps to a specific label.
 
 6. In x86 assembly, what is the role of the ECX register in loop instructions?
-    - **A)** It stores the return address.
-    - **B)** It acts as an accumulator for arithmetic.
-    - **C)** It serves as a loop counter.
-    - **D)** It points to the base of the current stack frame.
+- **A)** It stores the return address.
+- **B)** It acts as an accumulator for arithmetic.
+- **C)** It serves as a loop counter.
+- **D)** It points to the base of the current stack frame.
 
 7. Which instruction alters the control flow unconditionally?
-    - **A)** JMP
-    - **B)** JE
-    - **C)** JNE
-    - **D)** CMP
+- **A)** JMP
+- **B)** JE
+- **C)** JNE
+- **D)** CMP
 
 8. The instruction `CMP EAX, EBX` works by performing which internal operation?
-    - **A)** Addition
-    - **B)** Subtraction
-    - **C)** Bitwise AND
-    - **D)** Bitwise XOR
+- **A)** Addition
+- **B)** Subtraction
+- **C)** Bitwise AND
+- **D)** Bitwise XOR
 
 9. What does the `RET` instruction do in assembly?
-    - **A)** Returns 0 to the operating system.
-    - **B)** Pops the return address from the stack and jumps to it.
-    - **C)** Pushes the current instruction pointer to the stack.
-    - **D)** Restarts the program.
+- **A)** Returns 0 to the operating system.
+- **B)** Pops the return address from the stack and jumps to it.
+- **C)** Pushes the current instruction pointer to the stack.
+- **D)** Restarts the program.
 
 10. Which addressing mode specifies the operand as a constant value directly in the instruction?
-    - **A)** Direct Addressing
-    - **B)** Register Addressing
-    - **C)** Immediate Addressing
-    - **D)** Indirect Addressing
+- **A)** Direct Addressing
+- **B)** Register Addressing
+- **C)** Immediate Addressing
+- **D)** Indirect Addressing
 
 ### Answer Key & Explanations
 

@@ -90,20 +90,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. Which operator can be used to determine the total memory size in bytes occupied by an array?
-    - **A)** `lengthof`
-    - **B)** `sizeof`
-    - **C)** `count`
-    - **D)** `size`
+- **A)** `lengthof`
+- **B)** `sizeof`
+- **C)** `count`
+- **D)** `size`
 2. How can you calculate the number of elements in a locally declared array `arr`?
-    - **A)** `sizeof(arr) * sizeof(arr[0])`
-    - **B)** `sizeof(arr) / sizeof(arr[0])`
-    - **C)** `arr.length`
-    - **D)** `count(arr)`
+- **A)** `sizeof(arr) * sizeof(arr[0])`
+- **B)** `sizeof(arr) / sizeof(arr[0])`
+- **C)** `arr.length`
+- **D)** `count(arr)`
 3. What is a strict requirement regarding the size of a standard array during its declaration in C89?
-    - **A)** It must be a floating-point number
-    - **B)** It must be evaluated dynamically at runtime
-    - **C)** It must be a positive integer constant expression
-    - **D)** It must be a negative number
+- **A)** It must be a floating-point number
+- **B)** It must be evaluated dynamically at runtime
+- **C)** It must be a positive integer constant expression
+- **D)** It must be a negative number
 
 ### Answer Key & Explanations
 1. **B)** The `sizeof` operator natively evaluates the memory footprint of objects during compilation.

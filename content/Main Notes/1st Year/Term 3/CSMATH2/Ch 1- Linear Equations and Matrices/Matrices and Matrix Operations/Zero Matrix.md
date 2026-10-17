@@ -66,64 +66,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What strictly defines a zero matrix (or null matrix)?
-    - **A)** A matrix where the determinant is zero.
-    - **B)** A matrix in which every single entry is strictly $0$.
-    - **C)** A matrix with an equal number of rows and columns.
-    - **D)** A matrix with zeros only on the main diagonal.
+- **A)** A matrix where the determinant is zero.
+- **B)** A matrix in which every single entry is strictly $0$.
+- **C)** A matrix with an equal number of rows and columns.
+- **D)** A matrix with zeros only on the main diagonal.
 
 2. What role does the zero matrix $O$ logically play in matrix addition?
-    - **A)** It is the multiplicative inverse.
-    - **B)** It makes any matrix it is added to singular.
-    - **C)** It acts as the additive identity, meaning $A + O = A$.
-    - **D)** It is the additive inverse, meaning $A + O = -A$.
+- **A)** It is the multiplicative inverse.
+- **B)** It makes any matrix it is added to singular.
+- **C)** It acts as the additive identity, meaning $A + O = A$.
+- **D)** It is the additive inverse, meaning $A + O = -A$.
 
 3. If $A$ is a matrix of appropriate dimensions, what is the result of the scalar multiplication $0 \cdot A$?
-    - **A)** The identity matrix $I$
-    - **B)** The matrix $A$ itself
-    - **C)** The scalar number $0$
-    - **D)** The zero matrix $O$
+- **A)** The identity matrix $I$
+- **B)** The matrix $A$ itself
+- **C)** The scalar number $0$
+- **D)** The zero matrix $O$
 
 4. Is it possible for a zero matrix to have rectangular dimensions (e.g., $m \times n$ where $m \neq n$)?
-    - **A)** Yes, a zero matrix can be of any size $m \times n$.
-    - **B)** No, a zero matrix must always be a square matrix.
-    - **C)** No, it must always be a column vector.
-    - **D)** Yes, but only if $m > n$.
+- **A)** Yes, a zero matrix can be of any size $m \times n$.
+- **B)** No, a zero matrix must always be a square matrix.
+- **C)** No, it must always be a column vector.
+- **D)** Yes, but only if $m > n$.
 
 5. If the matrix product $AB$ equals the zero matrix $O$, what can be confidently concluded about $A$ and $B$?
-    - **A)** Both $A$ and $B$ must be the zero matrix.
-    - **B)** At least one of the matrices, $A$ or $B$, must be the zero matrix.
-    - **C)** It does not necessarily imply that either $A = O$ or $B = O$.
-    - **D)** Matrix $A$ is the inverse of matrix $B$.
+- **A)** Both $A$ and $B$ must be the zero matrix.
+- **B)** At least one of the matrices, $A$ or $B$, must be the zero matrix.
+- **C)** It does not necessarily imply that either $A = O$ or $B = O$.
+- **D)** Matrix $A$ is the inverse of matrix $B$.
 
 6. How is the additive inverse of a matrix $A$ related to the zero matrix?
-    - **A)** $A + A^T = O$
-    - **B)** $A + A^{-1} = O$
-    - **C)** $A - I = O$
-    - **D)** $A + (-A) = O$
+- **A)** $A + A^T = O$
+- **B)** $A + A^{-1} = O$
+- **C)** $A - I = O$
+- **D)** $A + (-A) = O$
 
 7. What is considered a common pitfall involving the zero matrix and matrix multiplication?
-    - **A)** Assuming $AB = O$ implies $A = O$ or $B = O$, similar to real number arithmetic.
-    - **B)** Believing the zero matrix cannot be added to a negative matrix.
-    - **C)** Thinking that $O^T$ does not equal $O$.
-    - **D)** Multiplying a zero matrix by a scalar.
+- **A)** Assuming $AB = O$ implies $A = O$ or $B = O$, similar to real number arithmetic.
+- **B)** Believing the zero matrix cannot be added to a negative matrix.
+- **C)** Thinking that $O^T$ does not equal $O$.
+- **D)** Multiplying a zero matrix by a scalar.
 
 8. Which of the following operations involving a zero matrix is true, assuming compatible dimensions?
-    - **A)** $A \cdot O = A$
-    - **B)** $A \cdot O = O$
-    - **C)** $A + O = O$
-    - **D)** $O \cdot A = A$
+- **A)** $A \cdot O = A$
+- **B)** $A \cdot O = O$
+- **C)** $A + O = O$
+- **D)** $O \cdot A = A$
 
 9. What specifically differentiates the zero matrix $O$ from the scalar number zero?
-    - **A)** The scalar zero has dimensions, while the zero matrix does not.
-    - **B)** The zero matrix has specific dimensions (size), while the scalar zero does not.
-    - **C)** The scalar zero can only be added to identity matrices.
-    - **D)** There is no mathematical difference between them.
+- **A)** The scalar zero has dimensions, while the zero matrix does not.
+- **B)** The zero matrix has specific dimensions (size), while the scalar zero does not.
+- **C)** The scalar zero can only be added to identity matrices.
+- **D)** There is no mathematical difference between them.
 
 10. If $A$ is a non-zero $2 \times 2$ matrix, what is the result of the product $O_{2 \times 2} \cdot A$?
-    - **A)** The matrix $A$
-    - **B)** The identity matrix $I_{2 \times 2}$
-    - **C)** The scalar $0$
-    - **D)** The $2 \times 2$ zero matrix $O$
+- **A)** The matrix $A$
+- **B)** The identity matrix $I_{2 \times 2}$
+- **C)** The scalar $0$
+- **D)** The $2 \times 2$ zero matrix $O$
 
 ### Answer Key & Explanations
 1. **B)** A zero matrix (or null matrix) is strictly defined as a matrix in which every entry is $0$.

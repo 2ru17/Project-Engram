@@ -131,64 +131,64 @@ _Please contact me through discord or my the university email for any problems r
 ## Multiple Choice Questions
 
 1. What defines a Zero-Sum Game in the context of adversarial games?
-    - **A)** The game ends in a draw for all players.
-    - **B)** One player's gain is exactly equal to the other player's loss.
-    - **C)** Neither player can maximize their utility.
-    - **D)** Both players receive zero utility at the terminal state.
+- **A)** The game ends in a draw for all players.
+- **B)** One player's gain is exactly equal to the other player's loss.
+- **C)** Neither player can maximize their utility.
+- **D)** Both players receive zero utility at the terminal state.
 
 2. In a game tree, what does a terminal state represent?
-    - **A)** The initial state before any moves are made.
-    - **B)** A node where the Minimax algorithm prunes a branch.
-    - **C)** A state where the game ends, such as a win, loss, or draw.
-    - **D)** The state with the maximum branching factor.
+- **A)** The initial state before any moves are made.
+- **B)** A node where the Minimax algorithm prunes a branch.
+- **C)** A state where the game ends, such as a win, loss, or draw.
+- **D)** The state with the maximum branching factor.
 
 3. What is the primary goal of the MAX player in a game tree?
-    - **A)** To minimize the utility value for the opponent.
-    - **B)** To minimize the time complexity of the algorithm.
-    - **C)** To maximize the utility value at the terminal state.
-    - **D)** To maximize the number of terminal states generated.
+- **A)** To minimize the utility value for the opponent.
+- **B)** To minimize the time complexity of the algorithm.
+- **C)** To maximize the utility value at the terminal state.
+- **D)** To maximize the number of terminal states generated.
 
 4. How does the Minimax algorithm determine the value of a non-terminal MAX node?
-    - **A)** By choosing the minimum value among its children.
-    - **B)** By calculating the average value of all its children.
-    - **C)** By choosing the maximum value among its children.
-    - **D)** By summing the utility values of all terminal states below it.
+- **A)** By choosing the minimum value among its children.
+- **B)** By calculating the average value of all its children.
+- **C)** By choosing the maximum value among its children.
+- **D)** By summing the utility values of all terminal states below it.
 
 5. What is the time complexity of the standard Minimax algorithm where $b$ is the branching factor and $m$ is the maximum depth?
-    - **A)** $O(bm)$
-    - **B)** $O(b^m)$
-    - **C)** $O(b/m)$
-    - **D)** $O(m^b)$
+- **A)** $O(bm)$
+- **B)** $O(b^m)$
+- **C)** $O(b/m)$
+- **D)** $O(m^b)$
 
 6. What is the main purpose of Alpha-Beta pruning in the Minimax algorithm?
-    - **A)** To change the final optimal decision to a better outcome.
-    - **B)** To explore every possible branch more efficiently.
-    - **C)** To eliminate branches that cannot affect the final decision.
-    - **D)** To increase the overall time complexity of the search.
+- **A)** To change the final optimal decision to a better outcome.
+- **B)** To explore every possible branch more efficiently.
+- **C)** To eliminate branches that cannot affect the final decision.
+- **D)** To increase the overall time complexity of the search.
 
 7. In Alpha-Beta pruning, what does the $\alpha$ (Alpha) parameter represent?
-    - **A)** The best (lowest) value found so far for MIN along the path.
-    - **B)** The best (highest) value found so far for MAX along the path.
-    - **C)** The total number of pruned branches.
-    - **D)** The depth limit of the search tree.
+- **A)** The best (lowest) value found so far for MIN along the path.
+- **B)** The best (highest) value found so far for MAX along the path.
+- **C)** The total number of pruned branches.
+- **D)** The depth limit of the search tree.
 
 8. When does Alpha-Beta pruning dictate that a node's remaining children should be pruned?
-    - **A)** When $\alpha \le \beta$
-    - **B)** When $\beta > \alpha$
-    - **C)** When $\alpha \ge \beta$
-    - **D)** When $\alpha$ and $\beta$ are equal to zero
+- **A)** When $\alpha \le \beta$
+- **B)** When $\beta > \alpha$
+- **C)** When $\alpha \ge \beta$
+- **D)** When $\alpha$ and $\beta$ are equal to zero
 
 9. If a MIN node updates its value during Alpha-Beta pruning, which parameter is modified?
-    - **A)** $\alpha$ (Alpha)
-    - **B)** The branching factor $b$
-    - **C)** $\beta$ (Beta)
-    - **D)** The depth limit $m$
+- **A)** $\alpha$ (Alpha)
+- **B)** The branching factor $b$
+- **C)** $\beta$ (Beta)
+- **D)** The depth limit $m$
 
 10. Which of the following is a common pitfall when thinking about Minimax with Alpha-Beta pruning?
-    - **A)** Assuming that Alpha-Beta pruning changes the final result compared to standard Minimax.
-    - **B)** Initializing $\alpha$ to $-\infty$ and $\beta$ to $+\infty$.
-    - **C)** Remembering that MAX and MIN layers alternate.
-    - **D)** Using a utility function for terminal states.
+- **A)** Assuming that Alpha-Beta pruning changes the final result compared to standard Minimax.
+- **B)** Initializing $\alpha$ to $-\infty$ and $\beta$ to $+\infty$.
+- **C)** Remembering that MAX and MIN layers alternate.
+- **D)** Using a utility function for terminal states.
 
 ### Answer Key & Explanations
 1. **B)** A zero-sum game is defined as one where the total utility sum is constant, meaning one player's gain is another's loss.

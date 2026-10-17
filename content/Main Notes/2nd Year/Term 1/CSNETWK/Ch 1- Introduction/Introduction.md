@@ -52,64 +52,64 @@ $$ d_{trans} = \frac{10 \times 10^3 \text{ bits}}{100 \times 10^6 \text{ bps}} =
 ## Multiple Choice Questions
 
 1. What term refers to the computing devices connected at the "edge" of the network?
-    - **A)** Core switches
-    - **B)** Packet switches
-    - **C)** Hosts (or end systems)
-    - **D)** Regional ISPs
+- **A)** Core switches
+- **B)** Packet switches
+- **C)** Hosts (or end systems)
+- **D)** Regional ISPs
 
 2. Which organization is responsible for publishing Internet standards via Requests for Comments (RFCs)?
-    - **A)** IEEE
-    - **B)** W3C
-    - **C)** ICANN
-    - **D)** IETF
+- **A)** IEEE
+- **B)** W3C
+- **C)** ICANN
+- **D)** IETF
 
 3. What type of multiplexing is used by Cable-based Access networks to transmit data and TV at different frequencies?
-    - **A)** Time Division Multiplexing (TDM)
-    - **B)** Frequency Division Multiplexing (FDM)
-    - **C)** Code Division Multiplexing (CDM)
-    - **D)** Spatial Division Multiplexing (SDM)
+- **A)** Time Division Multiplexing (TDM)
+- **B)** Frequency Division Multiplexing (FDM)
+- **C)** Code Division Multiplexing (CDM)
+- **D)** Spatial Division Multiplexing (SDM)
 
 4. Which access network technology uses existing telephone lines to connect to a DSLAM in the central office?
-    - **A)** Cable broadband
-    - **B)** Digital Subscriber Line (DSL)
-    - **C)** Fiber to the Home (FTTH)
-    - **D)** 4G Cellular
+- **A)** Cable broadband
+- **B)** Digital Subscriber Line (DSL)
+- **C)** Fiber to the Home (FTTH)
+- **D)** 4G Cellular
 
 5. What is an example of an unguided physical medium?
-    - **A)** Twisted pair copper wire
-    - **B)** Coaxial cable
-    - **C)** Fiber optic cable
-    - **D)** Electromagnetic signals (wireless radio)
+- **A)** Twisted pair copper wire
+- **B)** Coaxial cable
+- **C)** Fiber optic cable
+- **D)** Electromagnetic signals (wireless radio)
 
 6. In a packet-switched network, what happens if the packet arrival rate exceeds a router's link transmission rate and its buffer is full?
-    - **A)** Packets are compressed
-    - **B)** Packets are dropped (lost)
-    - **C)** Packets are rerouted instantly
-    - **D)** Packets are sent back to the sender
+- **A)** Packets are compressed
+- **B)** Packets are dropped (lost)
+- **C)** Packets are rerouted instantly
+- **D)** Packets are sent back to the sender
 
 7. What is the difference between routing and forwarding in a network core?
-    - **A)** Routing is a local action; forwarding is a global action
-    - **B)** Routing determines the end-to-end path; forwarding moves a packet to the output link
-    - **C)** Routing uses physical addresses; forwarding uses IP addresses
-    - **D)** Routing is done by hosts; forwarding is done by routers
+- **A)** Routing is a local action; forwarding is a global action
+- **B)** Routing determines the end-to-end path; forwarding moves a packet to the output link
+- **C)** Routing uses physical addresses; forwarding uses IP addresses
+- **D)** Routing is done by hosts; forwarding is done by routers
 
 8. How does circuit switching differ from packet switching?
-    - **A)** Circuit switching allocates resources on-demand without reservations
-    - **B)** Circuit switching reserves resources end-to-end for a call
-    - **C)** Circuit switching handles bursty data more efficiently
-    - **D)** Circuit switching does not provide guaranteed performance
+- **A)** Circuit switching allocates resources on-demand without reservations
+- **B)** Circuit switching reserves resources end-to-end for a call
+- **C)** Circuit switching handles bursty data more efficiently
+- **D)** Circuit switching does not provide guaranteed performance
 
 9. If a packet size is 10 Kbits and the link transmission rate is 100 Mbps, what is the single-hop transmission delay?
-    - **A)** 1 msec
-    - **B)** 0.1 msec
-    - **C)** 10 msec
-    - **D)** 0.01 msec
+- **A)** 1 msec
+- **B)** 0.1 msec
+- **C)** 10 msec
+- **D)** 0.01 msec
 
 10. Why is a hierarchical structure used for the Internet rather than connecting all access ISPs directly?
-    - **A)** To increase the transmission delay for security
-    - **B)** Direct connections scale at O(N^2), which is not feasible
-    - **C)** To prevent regional ISPs from competing with tier 1 ISPs
-    - **D)** Direct connections require circuit switching
+- **A)** To increase the transmission delay for security
+- **B)** Direct connections scale at O(N^2), which is not feasible
+- **C)** To prevent regional ISPs from competing with tier 1 ISPs
+- **D)** Direct connections require circuit switching
 
 ### Answer Key & Explanations
 1. **C)** Hosts or end systems are located at the network's edge.

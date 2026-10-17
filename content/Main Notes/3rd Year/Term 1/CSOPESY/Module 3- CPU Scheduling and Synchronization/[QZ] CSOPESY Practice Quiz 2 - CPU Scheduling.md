@@ -35,108 +35,108 @@ This quiz covers CPU Scheduling algorithms and Process Synchronization from Week
 
 **1. Which CPU scheduling algorithm is provably optimal for minimizing average waiting time among all non-preemptive algorithms?**
 
-    - **A)** First-Come First-Served (FCFS)
-    - **B)** Non-preemptive Priority Scheduling
-    - **C)** Round Robin
-    - **D)** Shortest Job First (SJF)
+- **A)** First-Come First-Served (FCFS)
+- **B)** Non-preemptive Priority Scheduling
+- **C)** Round Robin
+- **D)** Shortest Job First (SJF)
 
 **2. A CPU scheduler uses the exponential average formula $\tau_{n+1} = \alpha t_n + (1-\alpha)\tau_n$ to predict future CPU burst lengths. If $\alpha = 0$, what is the behavior of this predictor?**
 
-    - **A)** The prediction equals exactly the most recent burst
-    - **B)** The prediction is always the same constant and never changes regardless of actual burst history
-    - **C)** The prediction oscillates between the maximum and minimum observed bursts
-    - **D)** The prediction is always zero, effectively running the CPU idle
+- **A)** The prediction equals exactly the most recent burst
+- **B)** The prediction is always the same constant and never changes regardless of actual burst history
+- **C)** The prediction oscillates between the maximum and minimum observed bursts
+- **D)** The prediction is always zero, effectively running the CPU idle
 
 **3. Process P1 (burst = 10ms) is currently running. At time t=5, Process P2 arrives with a burst of 3ms. Under the Shortest Remaining Time First (SRTF) algorithm, what happens?**
 
-    - **A)** P1 continues running because it arrived first
-    - **B)** P1 is preempted immediately; P2 takes the CPU because 3ms < 5ms (P1's remaining time)
-    - **C)** P2 waits in the ready queue until P1 completes its full 10ms burst
-    - **D)** The OS terminates P2 because it cannot interrupt a running process
+- **A)** P1 continues running because it arrived first
+- **B)** P1 is preempted immediately; P2 takes the CPU because 3ms < 5ms (P1's remaining time)
+- **C)** P2 waits in the ready queue until P1 completes its full 10ms burst
+- **D)** The OS terminates P2 because it cannot interrupt a running process
 
 **4. Which of the following is the primary drawback of FCFS scheduling in a mixed-workload environment?**
 
-    - **A)** It requires knowledge of future burst times to function correctly
-    - **B)** It can cause starvation of high-priority processes
-    - **C)** The Convoy Effect causes short I/O-bound jobs to wait behind long CPU-bound jobs
-    - **D)** Its time quantum must be carefully tuned to avoid excessive context switching
+- **A)** It requires knowledge of future burst times to function correctly
+- **B)** It can cause starvation of high-priority processes
+- **C)** The Convoy Effect causes short I/O-bound jobs to wait behind long CPU-bound jobs
+- **D)** Its time quantum must be carefully tuned to avoid excessive context switching
 
 **5. In Priority Scheduling, a low-priority process has been waiting in the ready queue for an extremely long time and has never received the CPU. What technique prevents this indefinite starvation?**
 
-    - **A)** Preemption
-    - **B)** Aging (gradually increasing a process's priority the longer it waits)
-    - **C)** Reducing the time quantum
-    - **D)** Switching from preemptive to non-preemptive mode
+- **A)** Preemption
+- **B)** Aging (gradually increasing a process's priority the longer it waits)
+- **C)** Reducing the time quantum
+- **D)** Switching from preemptive to non-preemptive mode
 
 **6. Round Robin with a very large time quantum (approaching infinity) behaves like which other scheduling algorithm?**
 
-    - **A)** SJF
-    - **B)** SRTF
-    - **C)** FCFS
-    - **D)** Priority Scheduling
+- **A)** SJF
+- **B)** SRTF
+- **C)** FCFS
+- **D)** Priority Scheduling
 
 **7. The time it takes for the OS to stop the current process, save its state, load the next process's state, and hand control to it is called:**
 
-    - **A)** Response Time
-    - **B)** Turnaround Time
-    - **C)** Dispatch Latency
-    - **D)** Scheduling Overhead Index
+- **A)** Response Time
+- **B)** Turnaround Time
+- **C)** Dispatch Latency
+- **D)** Scheduling Overhead Index
 
 **8. Two threads access a shared counter variable without synchronization. Thread A reads the value (5), Thread B reads the value (5), Thread A increments and writes (6), Thread B increments and writes (6). The final value is 6 instead of the expected 7. What problem does this illustrate?**
 
-    - **A)** Deadlock
-    - **B)** Starvation
-    - **C)** Race Condition
-    - **D)** Priority Inversion
+- **A)** Deadlock
+- **B)** Starvation
+- **C)** Race Condition
+- **D)** Priority Inversion
 
 **9. A correct solution to the Critical Section Problem must satisfy three conditions. Which of the following is NOT one of them?**
 
-    - **A)** Mutual Exclusion
-    - **B)** Progress
-    - **C)** Bounded Waiting
-    - **D)** Preemptive Scheduling
+- **A)** Mutual Exclusion
+- **B)** Progress
+- **C)** Bounded Waiting
+- **D)** Preemptive Scheduling
 
 **10. A `mutex_lock()` call on a mutex that is already held by another thread causes the calling thread to spin in a tight while-loop until the mutex is released. What is this behavior called?**
 
-    - **A)** Semaphore P-operation
-    - **B)** Busy-Waiting / Spinlock
-    - **C)** Asynchronous Deferred Cancellation
-    - **D)** Context Switch on Block
+- **A)** Semaphore P-operation
+- **B)** Busy-Waiting / Spinlock
+- **C)** Asynchronous Deferred Cancellation
+- **D)** Context Switch on Block
 
 **11. A Counting Semaphore is initialized to the value 3. Three threads each call `wait()` (P-operation), acquiring it successfully. A fourth thread calls `wait()`. What happens to the fourth thread?**
 
-    - **A)** It immediately proceeds, because semaphore values wrap around to 0
-    - **B)** It terminates with an error because the semaphore is exhausted
-    - **C)** It blocks (is placed in the semaphore's wait queue) until one of the three holders calls `signal()` (V-operation)
-    - **D)** It decrements the semaphore to -1 and runs anyway
+- **A)** It immediately proceeds, because semaphore values wrap around to 0
+- **B)** It terminates with an error because the semaphore is exhausted
+- **C)** It blocks (is placed in the semaphore's wait queue) until one of the three holders calls `signal()` (V-operation)
+- **D)** It decrements the semaphore to -1 and runs anyway
 
 **12. For a deadlock to occur, which of the following four necessary conditions must ALL be present simultaneously?**
 
-    - **A)** Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait
-    - **B)** Priority Inversion, Starvation, Busy-Waiting, Race Condition
-    - **C)** Mutual Exclusion, Preemption, No Hold-and-Wait, Linear Wait
-    - **D)** Circular Wait, Bounded Waiting, Progress, Mutual Exclusion
+- **A)** Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait
+- **B)** Priority Inversion, Starvation, Busy-Waiting, Race Condition
+- **C)** Mutual Exclusion, Preemption, No Hold-and-Wait, Linear Wait
+- **D)** Circular Wait, Bounded Waiting, Progress, Mutual Exclusion
 
 **13. Process A holds Resource 1 and is waiting for Resource 2. Process B holds Resource 2 and is waiting for Resource 1. Which deadlock condition does this scenario directly demonstrate?**
 
-    - **A)** Hold and Wait
-    - **B)** No Preemption
-    - **C)** Circular Wait
-    - **D)** Mutual Exclusion
+- **A)** Hold and Wait
+- **B)** No Preemption
+- **C)** Circular Wait
+- **D)** Mutual Exclusion
 
 **14. Which of the following scheduling criteria should be MINIMIZED to improve system performance?**
 
-    - **A)** CPU Utilization and Throughput
-    - **B)** Turnaround Time and Waiting Time
-    - **C)** Number of processes in the Ready Queue
-    - **D)** Cache Hit Rate
+- **A)** CPU Utilization and Throughput
+- **B)** Turnaround Time and Waiting Time
+- **C)** Number of processes in the Ready Queue
+- **D)** Cache Hit Rate
 
 **15. A process is currently in the Running state and its time quantum expires. It has not finished its burst. Which state transition occurs next?**
 
-    - **A)** Running → Terminated
-    - **B)** Running → Waiting (Blocked)
-    - **C)** Running → Ready
-    - **D)** Running → New
+- **A)** Running → Terminated
+- **B)** Running → Waiting (Blocked)
+- **C)** Running → Ready
+- **D)** Running → New
 
 ---
 

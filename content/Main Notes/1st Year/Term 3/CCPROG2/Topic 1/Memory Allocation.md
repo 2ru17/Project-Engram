@@ -156,20 +156,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. How is memory allocated for a standard, fixed-size array in C?
-    - **A)** It is fragmented and spread out across the disk
-    - **B)** It is allocated as a single contiguous block
-    - **C)** It is allocated item by item sequentially during runtime
-    - **D)** It relies on a garbage collector
+- **A)** It is fragmented and spread out across the disk
+- **B)** It is allocated as a single contiguous block
+- **C)** It is allocated item by item sequentially during runtime
+- **D)** It relies on a garbage collector
 2. If `int` takes 4 bytes, how much total memory is allocated for `int arr[10];`?
-    - **A)** 10 bytes
-    - **B)** 14 bytes
-    - **C)** 40 bytes
-    - **D)** 20 bytes
+- **A)** 10 bytes
+- **B)** 14 bytes
+- **C)** 40 bytes
+- **D)** 20 bytes
 3. Where is an array stored if it is declared locally inside a function without the `static` keyword?
-    - **A)** The Heap
-    - **B)** The Stack
-    - **C)** The Data Segment
-    - **D)** The Text Segment
+- **A)** The Heap
+- **B)** The Stack
+- **C)** The Data Segment
+- **D)** The Text Segment
 
 ### Answer Key & Explanations
 1. **B)** The compiler reserves one continuous region to house all requested slots adjacently.

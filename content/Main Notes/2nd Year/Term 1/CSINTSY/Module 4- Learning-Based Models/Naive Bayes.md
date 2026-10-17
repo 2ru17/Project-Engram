@@ -51,34 +51,34 @@ Given training data for student grades and study hours predicting a pass/fail ou
 ## Multiple Choice Questions
 
 1. What makes the Naive Bayes algorithm "naive"?
-    - **A)** It assumes all data points belong to the same class initially.
-    - **B)** It assumes that all input features are conditionally independent of each other given the target class.
-    - **C)** It only works on binary classification problems.
-    - **D)** It assumes prior probabilities are always equal.
+- **A)** It assumes all data points belong to the same class initially.
+- **B)** It assumes that all input features are conditionally independent of each other given the target class.
+- **C)** It only works on binary classification problems.
+- **D)** It assumes prior probabilities are always equal.
 
 2. In the Bayes' Theorem framework, what does the "Prior" probability represent?
-    - **A)** The initial probability of a target class occurring, regardless of the features.
-    - **B)** The probability of the observed features occurring given a target class.
-    - **C)** The final computed probability used to make a prediction.
-    - **D)** The overall probability of the features occurring across all classes.
+- **A)** The initial probability of a target class occurring, regardless of the features.
+- **B)** The probability of the observed features occurring given a target class.
+- **C)** The final computed probability used to make a prediction.
+- **D)** The overall probability of the features occurring across all classes.
 
 3. Why is the "Evidence/Marginal" probability ($P(F)$) often ignored during classification using Naive Bayes?
-    - **A)** Because it evaluates to zero for most datasets.
-    - **B)** Because computing it violates the independence assumption.
-    - **C)** Because it requires knowing the test labels beforehand.
-    - **D)** Because it is a constant denominator across all classes being compared, so it doesn't affect which class has the highest score.
+- **A)** Because it evaluates to zero for most datasets.
+- **B)** Because computing it violates the independence assumption.
+- **C)** Because it requires knowing the test labels beforehand.
+- **D)** Because it is a constant denominator across all classes being compared, so it doesn't affect which class has the highest score.
 
 4. How does Gaussian Naive Bayes calculate the likelihood for continuous, numerical features?
-    - **A)** By converting all numerical values into discrete "bins" before calculation.
-    - **B)** By ignoring numerical features and only computing categorical ones.
-    - **C)** By applying a uniform probability distribution.
-    - **D)** By using the probability density function of a normal distribution defined by the feature's mean and standard deviation.
+- **A)** By converting all numerical values into discrete "bins" before calculation.
+- **B)** By ignoring numerical features and only computing categorical ones.
+- **C)** By applying a uniform probability distribution.
+- **D)** By using the probability density function of a normal distribution defined by the feature's mean and standard deviation.
 
 5. When combining multiple feature likelihoods in Naive Bayes, which mathematical operation is primarily used based on the independence assumption?
-    - **A)** Addition
-    - **B)** Multiplication
-    - **C)** Subtraction
-    - **D)** Division
+- **A)** Addition
+- **B)** Multiplication
+- **C)** Subtraction
+- **D)** Division
 
 ### Answer Key & Explanations
 1. **B)** The "naive" assumption is that every feature is completely independent of every other feature, a simplifying assumption rarely true in real life.

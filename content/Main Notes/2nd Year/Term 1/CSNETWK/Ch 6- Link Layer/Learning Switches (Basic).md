@@ -113,64 +113,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "**Switch 2 (Left):** Connects computers _____ and link to Switch 1."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** GL
-    - **D)** Router
+- **A)** Protocol
+- **B)** Network
+- **C)** GL
+- **D)** Router
 
 2. Which word completes the following sentence from the text: "**Listen (Learn):** When a frame arrives on Interface $X$ with Source MAC _____ the switch writes in its table: **(MAC A** $\rightarrow$ **Interface X)**."?
-    - **A)** Protocol
-    - **B)** A
-    - **C)** Network
-    - **D)** Router
+- **A)** Protocol
+- **B)** A
+- **C)** Network
+- **D)** Router
 
 3. Which word completes the following sentence from the text: "**_____ 1 (Right):** Receives flooded frame from Switch 2 (Source K) on Int 7."?
-    - **A)** Switch
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Switch
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 4. Which word completes the following sentence from the text: "**Inter-Switch Rule:** If a packet comes from ano_____r switch, the "Interface" recorded is the link connecting the switches."?
-    - **A)** Protocol
-    - **B)** the
-    - **C)** Network
-    - **D)** Router
+- **A)** Protocol
+- **B)** the
+- **C)** Network
+- **D)** Router
 
 5. Which word completes the following sentence from the text: "**Switch 1 (Right):** Receives from Switch _____ (Source G) on Int 7."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** 2
-    - **D)** Network
+- **A)** Protocol
+- **B)** Router
+- **C)** 2
+- **D)** Network
 
 6. Which word completes the following sentence from the text: "**Table Entries Added:**  Switch 1: **(F, 6)** Switch 2: **(F, 8)**  ### _____ $t=4$: $G \rightarrow B$  **Action:** Node G sends to Node B."?
-    - **A)** Time
-    - **B)** Network
-    - **C)** Router
-    - **D)** Protocol
+- **A)** Time
+- **B)** Network
+- **C)** Router
+- **D)** Protocol
 
 7. Which word completes the following sentence from the text: "**Switch 2 (Left):** Receives from Switch _____ (Source F) on Int 8."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** 1
+- **A)** Network
+- **B)** Protocol
+- **C)** Router
+- **D)** 1
 
 8. Which word completes the following sentence from the text: "**If Unknown:** **Flood** the frame out _____ _all_ interfaces (except the incoming one)."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** to
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** to
 
 9. Which word completes the following sentence from the text: "**Inter-Switch Link:** Switch 1 (Int _____ $\leftrightarrow$ Switch 2 (Int 8)."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** 7
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** 7
 
 10. Which word completes the following sentence from the text: "_(Note: Switch 1 thinks K is "out that way" towards Int 7)._  **Table Entries Added:**  Switch 1: **(K, _____ Switch 2: **(K, 14)**  ### Time $t=2$: $B \rightarrow I$  **Action:** Node B sends to Node I."?
-    - **A)** 7
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** 7
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 
 ### Answer Key & Explanations

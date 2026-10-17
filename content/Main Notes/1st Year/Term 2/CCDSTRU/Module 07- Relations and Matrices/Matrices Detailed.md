@@ -93,34 +93,34 @@ $$
 ## Multiple Choice Questions
 
 1. How is a matrix with $m$ rows and $n$ columns formally described in terms of size?
-    - **A)** An $n \times m$ matrix
-    - **B)** An $m \times n$ matrix
-    - **C)** A square matrix
-    - **D)** A rectangular vector
+- **A)** An $n \times m$ matrix
+- **B)** An $m \times n$ matrix
+- **C)** A square matrix
+- **D)** A rectangular vector
 
 2. What condition must be met to perform matrix addition between two matrices $\mathbf{A}$ and $\mathbf{B}$?
-    - **A)** The number of columns in $\mathbf{A}$ must equal the number of rows in $\mathbf{B}$
-    - **B)** Both matrices must be square matrices
-    - **C)** The matrices must have the exact same dimensions
-    - **D)** The matrices must have non-zero elements
+- **A)** The number of columns in $\mathbf{A}$ must equal the number of rows in $\mathbf{B}$
+- **B)** Both matrices must be square matrices
+- **C)** The matrices must have the exact same dimensions
+- **D)** The matrices must have non-zero elements
 
 3. If $\mathbf{A}$ is a $4 \times 3$ matrix and $\mathbf{B}$ is a $3 \times 2$ matrix, what will be the dimensions of the product $\mathbf{AB}$?
-    - **A)** $4 \times 2$
-    - **B)** $3 \times 3$
-    - **C)** $4 \times 3$
-    - **D)** $2 \times 4$
+- **A)** $4 \times 2$
+- **B)** $3 \times 3$
+- **C)** $4 \times 3$
+- **D)** $2 \times 4$
 
 4. Which of the following statements about matrix multiplication is generally true?
-    - **A)** It is always commutative
-    - **B)** It is commutative only for square matrices
-    - **C)** It is generally not commutative
-    - **D)** It can only be performed if both matrices are identical
+- **A)** It is always commutative
+- **B)** It is commutative only for square matrices
+- **C)** It is generally not commutative
+- **D)** It can only be performed if both matrices are identical
 
 5. How is the element at row $i$ and column $j$ of a matrix product $\mathbf{AB}$ calculated?
-    - **A)** By multiplying the $i$-th element of $\mathbf{A}$ and the $j$-th element of $\mathbf{B}$
-    - **B)** By adding the $i$-th row of $\mathbf{A}$ to the $j$-th column of $\mathbf{B}$
-    - **C)** By computing the dot product of the $i$-th column of $\mathbf{A}$ and the $j$-th row of $\mathbf{B}$
-    - **D)** By computing the dot product of the $i$-th row of $\mathbf{A}$ and the $j$-th column of $\mathbf{B}$
+- **A)** By multiplying the $i$-th element of $\mathbf{A}$ and the $j$-th element of $\mathbf{B}$
+- **B)** By adding the $i$-th row of $\mathbf{A}$ to the $j$-th column of $\mathbf{B}$
+- **C)** By computing the dot product of the $i$-th column of $\mathbf{A}$ and the $j$-th row of $\mathbf{B}$
+- **D)** By computing the dot product of the $i$-th row of $\mathbf{A}$ and the $j$-th column of $\mathbf{B}$
 
 ### Answer Key & Explanations
 1. **B)** A matrix with $m$ rows and $n$ columns is called an $m \times n$ matrix, noting rows first then columns.

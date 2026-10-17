@@ -377,34 +377,34 @@ Assuming standard alphabetical ordering of categories by pandas, what is the exa
 ## Multiple Choice Questions
 
 1. What is the defining characteristic of `Tidy Data`?
-    - **A)** Every column is an observation and every row is a variable
-    - **B)** Every variable forms a column, every observation forms a row, and each type of observational unit forms a table
-    - **C)** The dataset contains no missing values
-    - **D)** Data is stored entirely in wide format
+- **A)** Every column is an observation and every row is a variable
+- **B)** Every variable forms a column, every observation forms a row, and each type of observational unit forms a table
+- **C)** The dataset contains no missing values
+- **D)** Data is stored entirely in wide format
 
 2. In pandas architecture, what is a Series?
-    - **A)** A 2D tabular data structure
-    - **B)** A 1D labeled array capable of holding any data type
-    - **C)** A 3D panel of data
-    - **D)** An index object only
+- **A)** A 2D tabular data structure
+- **B)** A 1D labeled array capable of holding any data type
+- **C)** A 3D panel of data
+- **D)** An index object only
 
 3. Transforming data from `wide` format to `long` format is often called:
-    - **A)** Pivoting
-    - **B)** Melting
-    - **C)** Grouping
-    - **D)** Merging
+- **A)** Pivoting
+- **B)** Melting
+- **C)** Grouping
+- **D)** Merging
 
 4. What is a Data Matrix?
-    - **A)** A matrix where only numerical variables are represented for linear algebra operations
-    - **B)** A list of dictionaries in Python
-    - **C)** A file format similar to CSV
-    - **D)** An unstructured text document
+- **A)** A matrix where only numerical variables are represented for linear algebra operations
+- **B)** A list of dictionaries in Python
+- **C)** A file format similar to CSV
+- **D)** An unstructured text document
 
 5. When would you prefer a long format over a wide format?
-    - **A)** When plotting time series with libraries like Seaborn that expect one variable per column
-    - **B)** When trying to read the data manually as a human
-    - **C)** When running correlation matrices across all distinct time steps
-    - **D)** When performing one-hot encoding
+- **A)** When plotting time series with libraries like Seaborn that expect one variable per column
+- **B)** When trying to read the data manually as a human
+- **C)** When running correlation matrices across all distinct time steps
+- **D)** When performing one-hot encoding
 
 ### Answer Key & Explanations
 1. **B)** This is Hadley Wickhams standard definition of tidy data structure.

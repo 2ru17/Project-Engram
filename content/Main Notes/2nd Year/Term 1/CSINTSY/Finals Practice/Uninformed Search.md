@@ -162,64 +162,64 @@ _Please contact me through discord or my the university email for any problems r
 ## Multiple Choice Questions
 
 1. What is the defining characteristic of Uninformed Search algorithms?
-    - **A)** They use domain-specific heuristic functions.
-    - **B)** They only evaluate the estimated distance to the goal.
-    - **C)** They possess no additional information about states beyond the problem definition.
-    - **D)** They always find the solution in linear time.
+- **A)** They use domain-specific heuristic functions.
+- **B)** They only evaluate the estimated distance to the goal.
+- **C)** They possess no additional information about states beyond the problem definition.
+- **D)** They always find the solution in linear time.
 
 2. Which data structure is used by Breadth-First Search (BFS) to manage its frontier?
-    - **A)** Stack (LIFO)
-    - **B)** Priority Queue (Ordered by cost)
-    - **C)** Queue (FIFO)
-    - **D)** Hash Table
+- **A)** Stack (LIFO)
+- **B)** Priority Queue (Ordered by cost)
+- **C)** Queue (FIFO)
+- **D)** Hash Table
 
 3. Under what condition is Breadth-First Search (BFS) considered optimal?
-    - **A)** When the graph has infinite depth.
-    - **B)** Only if all step costs are equal (e.g., all edges have a cost of 1).
-    - **C)** When it uses a heuristic function.
-    - **D)** BFS is never optimal under any circumstances.
+- **A)** When the graph has infinite depth.
+- **B)** Only if all step costs are equal (e.g., all edges have a cost of 1).
+- **C)** When it uses a heuristic function.
+- **D)** BFS is never optimal under any circumstances.
 
 4. Why is Depth-First Search (DFS) NOT considered complete?
-    - **A)** Because it requires too much memory to run.
-    - **B)** Because it evaluates the highest cost nodes first.
-    - **C)** Because it can get stuck in infinite loops or infinite paths and never find the goal.
-    - **D)** Because it uses a Queue instead of a Stack.
+- **A)** Because it requires too much memory to run.
+- **B)** Because it evaluates the highest cost nodes first.
+- **C)** Because it can get stuck in infinite loops or infinite paths and never find the goal.
+- **D)** Because it uses a Queue instead of a Stack.
 
 5. What is the main advantage of Depth-First Search (DFS) over Breadth-First Search (BFS)?
-    - **A)** DFS is guaranteed to find the shortest path.
-    - **B)** DFS requires significantly less memory (Linear memory space).
-    - **C)** DFS always expands nodes level by level.
-    - **D)** DFS can use heuristic functions to speed up search.
+- **A)** DFS is guaranteed to find the shortest path.
+- **B)** DFS requires significantly less memory (Linear memory space).
+- **C)** DFS always expands nodes level by level.
+- **D)** DFS can use heuristic functions to speed up search.
 
 6. How does Iterative Deepening DFS (ID-DFS) combine the benefits of BFS and DFS?
-    - **A)** It uses a Priority Queue but limits the path cost.
-    - **B)** It calculates a heuristic at each depth limit.
-    - **C)** It runs DFS with progressively increasing depth limits, gaining BFS's completeness while keeping DFS's memory efficiency.
-    - **D)** It alternates between running one step of BFS and one step of DFS.
+- **A)** It uses a Priority Queue but limits the path cost.
+- **B)** It calculates a heuristic at each depth limit.
+- **C)** It runs DFS with progressively increasing depth limits, gaining BFS's completeness while keeping DFS's memory efficiency.
+- **D)** It alternates between running one step of BFS and one step of DFS.
 
 7. Which Uninformed Search algorithm expands the node with the lowest cumulative path cost $g(n)$?
-    - **A)** Depth-First Search (DFS)
-    - **B)** Iterative Deepening DFS (ID-DFS)
-    - **C)** Uniform Cost Search (UCS)
-    - **D)** Breadth-First Search (BFS)
+- **A)** Depth-First Search (DFS)
+- **B)** Iterative Deepening DFS (ID-DFS)
+- **C)** Uniform Cost Search (UCS)
+- **D)** Breadth-First Search (BFS)
 
 8. What data structure is essential for implementing Uniform Cost Search (UCS)?
-    - **A)** Priority Queue (ordered by ascending $g(n)$)
-    - **B)** Standard Queue (FIFO)
-    - **C)** Stack (LIFO)
-    - **D)** Linked List
+- **A)** Priority Queue (ordered by ascending $g(n)$)
+- **B)** Standard Queue (FIFO)
+- **C)** Stack (LIFO)
+- **D)** Linked List
 
 9. In which type of problem is Backtracking Search most commonly used?
-    - **A)** Pathfinding on maps
-    - **B)** Constraint Satisfaction Problems (CSPs) like Sudoku
-    - **C)** Image recognition
-    - **D)** Reinforcement learning environments
+- **A)** Pathfinding on maps
+- **B)** Constraint Satisfaction Problems (CSPs) like Sudoku
+- **C)** Image recognition
+- **D)** Reinforcement learning environments
 
 10. Which is a common pitfall when choosing a search algorithm?
-    - **A)** Thinking ID-DFS uses exponential memory.
-    - **B)** Assuming Uniform Cost Search expands nodes based on depth.
-    - **C)** Using DFS when an optimal (shortest/cheapest) path is strictly required.
-    - **D)** Assuming BFS is complete on infinite graphs with finite branching.
+- **A)** Thinking ID-DFS uses exponential memory.
+- **B)** Assuming Uniform Cost Search expands nodes based on depth.
+- **C)** Using DFS when an optimal (shortest/cheapest) path is strictly required.
+- **D)** Assuming BFS is complete on infinite graphs with finite branching.
 
 ### Answer Key & Explanations
 1. **C)** Uninformed search (blind search) algorithms can only distinguish a goal state from a non-goal state based on the problem definition, lacking heuristics.

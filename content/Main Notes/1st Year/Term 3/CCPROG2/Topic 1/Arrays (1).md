@@ -55,22 +55,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. According to the summary of Topic 1, what are the three main parts covered regarding arrays?
-    - **A)** Pointers, Functions, and Structs
-    - **B)** Definition/operations, Dimensions, and Advantages/Disadvantages
-    - **C)** Memory leaks, Garbage collection, and Abstraction
-    - **D)** Recursion, File handling, and Sorting
+- **A)** Pointers, Functions, and Structs
+- **B)** Definition/operations, Dimensions, and Advantages/Disadvantages
+- **C)** Memory leaks, Garbage collection, and Abstraction
+- **D)** Recursion, File handling, and Sorting
 
 2. Which common pitfall is explicitly mentioned when learning about arrays in this topic?
-    - **A)** Jumping to advanced operations before understanding basic declaration and initialization
-    - **B)** Writing too many comments in the code
-    - **C)** Forgetting to include standard libraries
-    - **D)** Using variable-length arrays exclusively
+- **A)** Jumping to advanced operations before understanding basic declaration and initialization
+- **B)** Writing too many comments in the code
+- **C)** Forgetting to include standard libraries
+- **D)** Using variable-length arrays exclusively
 
 3. What is emphasized regarding the trade-offs in the Advantages and Disadvantages note?
-    - **A)** Knowing when to avoid using arrays is as important as knowing how to use them
-    - **B)** Arrays should always be used over linked lists
-    - **C)** Dynamic allocation eliminates all array disadvantages
-    - **D)** Multidimensional arrays have no trade-offs
+- **A)** Knowing when to avoid using arrays is as important as knowing how to use them
+- **B)** Arrays should always be used over linked lists
+- **C)** Dynamic allocation eliminates all array disadvantages
+- **D)** Multidimensional arrays have no trade-offs
 
 ### Answer Key & Explanations
 1. **B)** The document groups the topic logically into basics, dimensionality, and performance trade-offs.

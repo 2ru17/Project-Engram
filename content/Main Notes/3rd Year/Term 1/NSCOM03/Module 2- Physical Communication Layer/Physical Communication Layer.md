@@ -39,28 +39,28 @@ $$ C = 3000 \log_2(1 + 3162) \approx 3000 \times 11.62 \approx 34860 \text{ bps}
 ## Multiple Choice Questions
 
 1. Which is the lowest layer responsible for the physical connection between devices?
-    - **A)** Network Layer
-    - **B)** Physical Layer
-    - **C)** Data Link Layer
-    - **D)** Application Layer
+- **A)** Network Layer
+- **B)** Physical Layer
+- **C)** Data Link Layer
+- **D)** Application Layer
 
 2. What does the Data Link layer primarily manage alongside error detection?
-    - **A)** Analog and digital signal conversion
-    - **B)** Framing and flow control
-    - **C)** Bandwidth and attenuation
-    - **D)** Network routing
+- **A)** Analog and digital signal conversion
+- **B)** Framing and flow control
+- **C)** Bandwidth and attenuation
+- **D)** Network routing
 
 3. In the provided formula $C = B \log_2(1 + SNR)$, what does '$B$' stand for?
-    - **A)** Bitrate
-    - **B)** Bandwidth
-    - **C)** Base frequency
-    - **D)** Baud rate
+- **A)** Bitrate
+- **B)** Bandwidth
+- **C)** Base frequency
+- **D)** Baud rate
 
 4. What role does the OSI Reference Model play according to the text?
-    - **A)** It strictly defines how analog signals are converted to digital
-    - **B)** It physically connects diverse media
-    - **C)** It standardizes the processes of precise synchronization and structuring
-    - **D)** It calculates the Shannon capacity of a channel
+- **A)** It strictly defines how analog signals are converted to digital
+- **B)** It physically connects diverse media
+- **C)** It standardizes the processes of precise synchronization and structuring
+- **D)** It calculates the Shannon capacity of a channel
 
 ### Answer Key & Explanations
 1. **B)** The text defines the Physical Layer as "The lowest layer responsible for the physical connection between devices."

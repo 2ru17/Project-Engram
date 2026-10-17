@@ -70,64 +70,64 @@ To address complex, real-world problems, the computing industry relies on a spec
 ## Multiple Choice Questions
 
 1. Which ancient device, dating back to circa 3000 BCE, is considered one of the earliest computational aids?
-    - **A)** The Analytical Engine
-    - **B)** The Astrolabe
-    - **C)** The Abacus
-    - **D)** The Mechanical Calculator
+- **A)** The Analytical Engine
+- **B)** The Astrolabe
+- **C)** The Abacus
+- **D)** The Mechanical Calculator
 
 2. What was the primary architectural contribution of the Von Neumann model in the 1940s-1950s?
-    - **A)** Introducing the Graphical User Interface (GUI).
-    - **B)** The concept of storing programs and data electronically.
-    - **C)** Developing the first theoretical Turing Machine.
-    - **D)** Utilizing microprocessors on a single silicon chip.
+- **A)** Introducing the Graphical User Interface (GUI).
+- **B)** The concept of storing programs and data electronically.
+- **C)** Developing the first theoretical Turing Machine.
+- **D)** Utilizing microprocessors on a single silicon chip.
 
 3. Which major technological advancement defined the Second Generation of computers (1950s–1960s)?
-    - **A)** The invention of the transistor to replace vacuum tubes.
-    - **B)** The integration of cloud computing and AI.
-    - **C)** The introduction of integrated circuits on silicon chips.
-    - **D)** The shift to quantum computing paradigms.
+- **A)** The invention of the transistor to replace vacuum tubes.
+- **B)** The integration of cloud computing and AI.
+- **C)** The introduction of integrated circuits on silicon chips.
+- **D)** The shift to quantum computing paradigms.
 
 4. Which computing discipline bridges the gap between physical networking components and software?
-    - **A)** Computer Science
-    - **B)** Information Technology
-    - **C)** Computer Engineering
-    - **D)** Data Science
+- **A)** Computer Science
+- **B)** Information Technology
+- **C)** Computer Engineering
+- **D)** Data Science
 
 5. What does the Internet of Things (IoT) primarily refer to?
-    - **A)** A software architecture for managing global web servers.
-    - **B)** The network of interconnected physical devices that communicate and exchange data.
-    - **C)** Early mechanical computing networks designed by Charles Babbage.
-    - **D)** The theoretical limits of computation defined in the 1930s.
+- **A)** A software architecture for managing global web servers.
+- **B)** The network of interconnected physical devices that communicate and exchange data.
+- **C)** Early mechanical computing networks designed by Charles Babbage.
+- **D)** The theoretical limits of computation defined in the 1930s.
 
 6. According to the text, what is one of the negative effects of the modern hyper-connected digital world?
-    - **A)** Reduced global access to historical archives.
-    - **B)** Overreliance on obsolete mechanical calculation tools.
-    - **C)** An increased prevalence of social isolation, anxiety, and depression.
-    - **D)** Complete automation of the software engineering process.
+- **A)** Reduced global access to historical archives.
+- **B)** Overreliance on obsolete mechanical calculation tools.
+- **C)** An increased prevalence of social isolation, anxiety, and depression.
+- **D)** Complete automation of the software engineering process.
 
 7. The democratization of computing power through Personal Computers (PCs) occurred primarily during which generation?
-    - **A)** First Generation
-    - **B)** Second Generation
-    - **C)** Third Generation
-    - **D)** Fourth Generation
+- **A)** First Generation
+- **B)** Second Generation
+- **C)** Third Generation
+- **D)** Fourth Generation
 
 8. What theoretical mathematical model, introduced in the 1930s, defines the limits of what can be computed?
-    - **A)** Von Neumann Architecture
-    - **B)** Babbage Engine
-    - **C)** Turing Machine
-    - **D)** Quantum State Machine
+- **A)** Von Neumann Architecture
+- **B)** Babbage Engine
+- **C)** Turing Machine
+- **D)** Quantum State Machine
 
 9. Which discipline is focused on the systematic, rigorous development and construction of reliable software artifacts?
-    - **A)** Information Systems
-    - **B)** Cybersecurity
-    - **C)** Data Science
-    - **D)** Software Engineering
+- **A)** Information Systems
+- **B)** Cybersecurity
+- **C)** Data Science
+- **D)** Software Engineering
 
 10. What features heavily characterize the Fifth Generation of computing (1980s–Present)?
-    - **A)** Vacuum tubes and early machine code.
-    - **B)** Extreme connectivity, Artificial Intelligence, and mobile computing.
-    - **C)** The invention of the transistor and basic programming languages.
-    - **D)** Massive mainframe computers using integrated circuits.
+- **A)** Vacuum tubes and early machine code.
+- **B)** Extreme connectivity, Artificial Intelligence, and mobile computing.
+- **C)** The invention of the transistor and basic programming languages.
+- **D)** Massive mainframe computers using integrated circuits.
 
 ### Answer Key & Explanations
 1. **C)** The text explicitly lists the Abacus (circa 3000 BCE) as one of the earliest computing devices.

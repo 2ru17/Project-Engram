@@ -83,20 +83,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. Which of the following is required when declaring a fixed-size array?
-    - **A)** Only the array name
-    - **B)** The data type, array name, and size
-    - **C)** The data type and initial values
-    - **D)** Only the size in square brackets
+- **A)** Only the array name
+- **B)** The data type, array name, and size
+- **C)** The data type and initial values
+- **D)** Only the size in square brackets
 2. What happens if you declare an array without initializing it (e.g., `int arr[5];`) inside a function?
-    - **A)** It is automatically filled with zeros
-    - **B)** It throws a compilation error
-    - **C)** It contains unpredictable garbage values
-    - **D)** It defaults to containing null pointers
+- **A)** It is automatically filled with zeros
+- **B)** It throws a compilation error
+- **C)** It contains unpredictable garbage values
+- **D)** It defaults to containing null pointers
 3. Which declaration is syntactically invalid in standard C89?
-    - **A)** `int n = 5; int arr[n];`
-    - **B)** `#define N 5` followed by `int arr[N];`
-    - **C)** `int arr[10];`
-    - **D)** `char arr[5];`
+- **A)** `int n = 5; int arr[n];`
+- **B)** `#define N 5` followed by `int arr[N];`
+- **C)** `int arr[10];`
+- **D)** `char arr[5];`
 
 ### Answer Key & Explanations
 1. **B)** Full declaration mandates specifying the unified type, identifier, and total size bounds.

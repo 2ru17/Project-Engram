@@ -421,34 +421,34 @@ Calculate the ANOVA $F$-statistic and determine the Bonferroni-adjusted signific
 ## Multiple Choice Questions
 
 1. When estimating a population mean with an unknown standard deviation, which distribution is used?
-    - **A)** Standard Normal (Z) Distribution
-    - **B)** Students t-Distribution
-    - **C)** Chi-Square Distribution
-    - **D)** F-Distribution
+- **A)** Standard Normal (Z) Distribution
+- **B)** Students t-Distribution
+- **C)** Chi-Square Distribution
+- **D)** F-Distribution
 
 2. Which test is appropriate for comparing pre-test and post-test scores of the same individuals?
-    - **A)** Independent Two-Sample t-Test
-    - **B)** ANOVA
-    - **C)** Paired (Dependent) t-Test
-    - **D)** Chi-Square Test
+- **A)** Independent Two-Sample t-Test
+- **B)** ANOVA
+- **C)** Paired (Dependent) t-Test
+- **D)** Chi-Square Test
 
 3. Why is Welchs t-test generally preferred over the standard Students independent t-test?
-    - **A)** It assumes equal population variances
-    - **B)** It does not assume equal population variances
-    - **C)** It only works on paired data
-    - **D)** It handles categorical data
+- **A)** It assumes equal population variances
+- **B)** It does not assume equal population variances
+- **C)** It only works on paired data
+- **D)** It handles categorical data
 
 4. When conducting multiple pairwise t-tests, why is the Bonferroni correction used?
-    - **A)** To increase the statistical power of the tests
-    - **B)** To control for Type I Error inflation
-    - **C)** To correct for small sample sizes
-    - **D)** To convert the data to a normal distribution
+- **A)** To increase the statistical power of the tests
+- **B)** To control for Type I Error inflation
+- **C)** To correct for small sample sizes
+- **D)** To convert the data to a normal distribution
 
 5. What is the correct degrees of freedom formula for a One-Sample t-Test?
-    - **A)** n - 1
-    - **B)** n - 2
-    - **C)** 2n - 1
-    - **D)** min(n1-1, n2-1)
+- **A)** n - 1
+- **B)** n - 2
+- **C)** 2n - 1
+- **D)** min(n1-1, n2-1)
 
 ### Answer Key & Explanations
 1. **B)** The t-distribution accounts for the extra uncertainty introduced by using sample std dev.

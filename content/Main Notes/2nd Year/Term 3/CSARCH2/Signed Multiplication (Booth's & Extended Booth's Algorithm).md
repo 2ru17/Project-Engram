@@ -211,34 +211,34 @@ $$\text{Multiplier Recoded Value } X_i = -2 \cdot Q_{2i+1} + Q_{2i} + Q_{2i-1}$$
 ## Multiple Choice Questions
 
 1. In Radix-2 Booth's algorithm, what hardware action is taken when the bit pair $Q_0 Q_{-1} = 10$?
-    - **A)** Add the multiplicand $M$ to $A$, then perform logical shift right
-    - **B)** Subtract the multiplicand $M$ from $A$, then perform arithmetic shift right
-    - **C)** Shift register $Q$ left by 2 bits
-    - **D)** Invert all bits in register $Q$
+- **A)** Add the multiplicand $M$ to $A$, then perform logical shift right
+- **B)** Subtract the multiplicand $M$ from $A$, then perform arithmetic shift right
+- **C)** Shift register $Q$ left by 2 bits
+- **D)** Invert all bits in register $Q$
 
 2. What is the primary performance advantage of Extended Booth's (Radix-4) multiplication over standard Booth's (Radix-2) multiplication?
-    - **A)** It eliminates the need for an adder circuit completely
-    - **B)** It reduces the required number of addition/subtraction cycles from $n$ to $n/2$
-    - **C)** It allows division and multiplication to share the exact same microcode
-    - **D)** It converts all negative operands to positive numbers before calculation
+- **A)** It eliminates the need for an adder circuit completely
+- **B)** It reduces the required number of addition/subtraction cycles from $n$ to $n/2$
+- **C)** It allows division and multiplication to share the exact same microcode
+- **D)** It converts all negative operands to positive numbers before calculation
 
 3. In Radix-4 Extended Booth's recoding, what operation corresponds to the multiplier bit triplet `011`?
-    - **A)** Add $0$
-    - **B)** Add $+1 \times M$
-    - **C)** Add $+2 \times M$
-    - **D)** Subtract $-2 \times M$
+- **A)** Add $0$
+- **B)** Add $+1 \times M$
+- **C)** Add $+2 \times M$
+- **D)** Subtract $-2 \times M$
 
 4. What is the initial value of the $Q_{-1}$ flip-flop at the start of Booth's algorithm?
-    - **A)** `0`
-    - **B)** `1`
-    - **C)** The MSB of the multiplicand
-    - **D)** The sign bit of the multiplier
+- **A)** `0`
+- **B)** `1`
+- **C)** The MSB of the multiplicand
+- **D)** The sign bit of the multiplier
 
 5. Why does Booth's algorithm perform Arithmetic Shift Right ($ASR$) rather than Logical Shift Right ($LSR$)?
-    - **A)** To clear the accumulator register after each cycle
-    - **B)** To preserve the sign of negative 2's complement intermediate values by sign-extending the MSB
-    - **C)** To double the clock frequency of the sequential state machine
-    - **D)** To prevent the $Q_{-1}$ flip-flop from overflowing
+- **A)** To clear the accumulator register after each cycle
+- **B)** To preserve the sign of negative 2's complement intermediate values by sign-extending the MSB
+- **C)** To double the clock frequency of the sequential state machine
+- **D)** To prevent the $Q_{-1}$ flip-flop from overflowing
 
 ### Answer Key & Explanations
 

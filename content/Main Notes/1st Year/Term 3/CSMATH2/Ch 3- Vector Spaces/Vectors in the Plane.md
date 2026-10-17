@@ -52,22 +52,22 @@ $ A + B = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix} $
 ## Multiple Choice Questions
 
 1. What formula is provided in the document for computing the inverse of a $2 \times 2$ matrix $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$?
-    - **A)** $A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$
-    - **B)** $A^{-1} = \det(A) \begin{pmatrix} d & b \\ c & a \end{pmatrix}$
-    - **C)** $A^{-1} = \begin{pmatrix} a & c \\ b & d \end{pmatrix}$
-    - **D)** $A^{-1} = \frac{1}{ad+bc} \begin{pmatrix} a & -b \\ -c & d \end{pmatrix}$
+- **A)** $A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$
+- **B)** $A^{-1} = \det(A) \begin{pmatrix} d & b \\ c & a \end{pmatrix}$
+- **C)** $A^{-1} = \begin{pmatrix} a & c \\ b & d \end{pmatrix}$
+- **D)** $A^{-1} = \frac{1}{ad+bc} \begin{pmatrix} a & -b \\ -c & d \end{pmatrix}$
 
 2. Based on the worked Example 1, what is the computed determinant of the matrix $A = \begin{pmatrix} 2 & 1 \\ 3 & 4 \end{pmatrix}$?
-    - **A)** $11$
-    - **B)** $-5$
-    - **C)** $5$
-    - **D)** $8$
+- **A)** $11$
+- **B)** $-5$
+- **C)** $5$
+- **D)** $8$
 
 3. According to the provided theoretical framework, analyzing linear equations and their solutions relies heavily on understanding which core concepts?
-    - **A)** Probability and statistical variances.
-    - **B)** Vector spaces, matrices, and their transformations.
-    - **C)** Complex numbers and imaginary roots.
-    - **D)** Differential equations and integrals.
+- **A)** Probability and statistical variances.
+- **B)** Vector spaces, matrices, and their transformations.
+- **C)** Complex numbers and imaginary roots.
+- **D)** Differential equations and integrals.
 
 ### Answer Key & Explanations
 1. **A)** The document explicitly lists the inverse formula for a $2 \times 2$ matrix as $A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$.

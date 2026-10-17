@@ -61,34 +61,34 @@ Inheritance structures create a virtual method table (vtable) for dynamic method
 ## Multiple Choice Questions
 
 1. What is Inheritance in the context of Object-Oriented Programming?
-    - **A)** A mechanism to hide internal implementation details.
-    - **B)** A principle where a new class acquires the properties and behaviors of an existing class.
-    - **C)** The process of grouping related classes into a single package.
-    - **D)** The ability of an object to take on many forms.
+- **A)** A mechanism to hide internal implementation details.
+- **B)** A principle where a new class acquires the properties and behaviors of an existing class.
+- **C)** The process of grouping related classes into a single package.
+- **D)** The ability of an object to take on many forms.
 
 2. Which keyword is used in Java to indicate that a child class method is over-writing its base class method?
-    - **A)** `extends`
-    - **B)** `super`
-    - **C)** `@Override`
-    - **D)** `protected`
+- **A)** `extends`
+- **B)** `super`
+- **C)** `@Override`
+- **D)** `protected`
 
 3. In Java, what is meant by the rule that a class supports "single inheritance of state"?
-    - **A)** A class can only implement one interface.
-    - **B)** A class can only extend one superclass.
-    - **C)** A class can only have one subclass.
-    - **D)** A class can only instantiate one object.
+- **A)** A class can only implement one interface.
+- **B)** A class can only extend one superclass.
+- **C)** A class can only have one subclass.
+- **D)** A class can only instantiate one object.
 
 4. What is the purpose of the `super` keyword in a subclass?
-    - **A)** To refer to the immediate parent class object.
-    - **B)** To define a new method that overrides a parent method.
-    - **C)** To prevent a class from being inherited.
-    - **D)** To access private variables of the parent class from anywhere.
+- **A)** To refer to the immediate parent class object.
+- **B)** To define a new method that overrides a parent method.
+- **C)** To prevent a class from being inherited.
+- **D)** To access private variables of the parent class from anywhere.
 
 5. What potential maintainability issue arises from deep inheritance trees?
-    - **A)** The "yo-yo problem", making code difficult to maintain and trace.
-    - **B)** Excessive garbage collection overhead.
-    - **C)** Inability to use dynamic method dispatch.
-    - **D)** Reduced memory footprint.
+- **A)** The "yo-yo problem", making code difficult to maintain and trace.
+- **B)** Excessive garbage collection overhead.
+- **C)** Inability to use dynamic method dispatch.
+- **D)** Reduced memory footprint.
 
 ### Answer Key & Explanations
 1. **B)** Inheritance allows a subclass to reuse and build upon the fields and methods defined in a superclass.

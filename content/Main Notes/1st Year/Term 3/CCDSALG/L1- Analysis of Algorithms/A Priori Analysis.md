@@ -62,34 +62,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is the primary focus of A Priori Analysis?
-    - **A)** Measuring exact execution time in seconds
-    - **B)** Evaluating the algorithm before implementation
-    - **C)** Benchmarking on specific hardware
-    - **D)** Profiling actual memory usage
+- **A)** Measuring exact execution time in seconds
+- **B)** Evaluating the algorithm before implementation
+- **C)** Benchmarking on specific hardware
+- **D)** Profiling actual memory usage
 
 2. Which of the following does A Priori Analysis NOT depend on?
-    - **A)** The algorithm's structure
-    - **B)** Mathematical expressions for resource usage
-    - **C)** The programming language or specific computer
-    - **D)** Frequency counts or asymptotic notation
+- **A)** The algorithm's structure
+- **B)** Mathematical expressions for resource usage
+- **C)** The programming language or specific computer
+- **D)** Frequency counts or asymptotic notation
 
 3. In A Priori Analysis, what does Worst-Case Analysis provide?
-    - **A)** The expected resources used over all possible inputs
-    - **B)** The minimum resources used for some input
-    - **C)** An upper bound guarantee on maximum resources used
-    - **D)** The exact runtime of the algorithm
+- **A)** The expected resources used over all possible inputs
+- **B)** The minimum resources used for some input
+- **C)** An upper bound guarantee on maximum resources used
+- **D)** The exact runtime of the algorithm
 
 4. Which of the following is a common pitfall when interpreting A Priori Analysis?
-    - **A)** Assuming it gives exact timing in seconds
-    - **B)** Evaluating it before coding
-    - **C)** Using frequency counts for the evaluation
-    - **D)** Considering the algorithm's mathematical structure
+- **A)** Assuming it gives exact timing in seconds
+- **B)** Evaluating it before coding
+- **C)** Using frequency counts for the evaluation
+- **D)** Considering the algorithm's mathematical structure
 
 5. What is Average-Case Analysis?
-    - **A)** The minimum resources used for some input
-    - **B)** Maximum resources used for any input of size n
-    - **C)** Expected resources used over all possible inputs of size n
-    - **D)** Analysis done after the program is compiled
+- **A)** The minimum resources used for some input
+- **B)** Maximum resources used for any input of size n
+- **C)** Expected resources used over all possible inputs of size n
+- **D)** Analysis done after the program is compiled
 
 ### Answer Key & Explanations
 1. **B)** A Priori analysis evaluates an algorithm's efficiency theoretically before it is implemented.

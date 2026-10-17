@@ -148,64 +148,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is the primary purpose of a `struct` in C?
-    - **A)** To store homogeneous data
-    - **B)** To group related variables of different types under a single name
-    - **C)** To execute multiple functions simultaneously
-    - **D)** To allocate memory dynamically
+- **A)** To store homogeneous data
+- **B)** To group related variables of different types under a single name
+- **C)** To execute multiple functions simultaneously
+- **D)** To allocate memory dynamically
 
 2. Which keyword can be used to create an alias for a `struct` to avoid repeating the `struct` keyword?
-    - **A)** `define`
-    - **B)** `alias`
-    - **C)** `typedef`
-    - **D)** `union`
+- **A)** `define`
+- **B)** `alias`
+- **C)** `typedef`
+- **D)** `union`
 
 3. How do you access a member of a `struct` using a direct variable?
-    - **A)** With the arrow operator `->`
-    - **B)** With the dot operator `.`
-    - **C)** With the subscript operator `[]`
-    - **D)** With the address-of operator `&`
+- **A)** With the arrow operator `->`
+- **B)** With the dot operator `.`
+- **C)** With the subscript operator `[]`
+- **D)** With the address-of operator `&`
 
 4. How do you access a member of a `struct` when you have a pointer to the `struct`?
-    - **A)** With the dot operator `.`
-    - **B)** With the arrow operator `->`
-    - **C)** With the asterisk operator `*`
-    - **D)** With the comma operator `,`
+- **A)** With the dot operator `.`
+- **B)** With the arrow operator `->`
+- **C)** With the asterisk operator `*`
+- **D)** With the comma operator `,`
 
 5. What is the correct syntax for C99 designated initializers for a `struct Student`?
-    - **A)** `Student s = {name: "Bob", gpa: 3.5};`
-    - **B)** `Student s = ["Bob", 3.5];`
-    - **C)** `Student s = {.name = "Bob", .gpa = 3.5};`
-    - **D)** `Student s = (name="Bob", gpa=3.5);`
+- **A)** `Student s = {name: "Bob", gpa: 3.5};`
+- **B)** `Student s = ["Bob", 3.5];`
+- **C)** `Student s = {.name = "Bob", .gpa = 3.5};`
+- **D)** `Student s = (name="Bob", gpa=3.5);`
 
 6. Why might the `sizeof` a `struct` be larger than the sum of the sizes of its members?
-    - **A)** The compiler adds padding bytes for alignment
-    - **B)** Structs always allocate extra heap memory
-    - **C)** Structs include hidden pointers for garbage collection
-    - **D)** The standard library automatically doubles struct sizes
+- **A)** The compiler adds padding bytes for alignment
+- **B)** Structs always allocate extra heap memory
+- **C)** Structs include hidden pointers for garbage collection
+- **D)** The standard library automatically doubles struct sizes
 
 7. Which of the following is true about nested structs?
-    - **A)** A struct cannot contain another struct
-    - **B)** A struct can contain another struct as a member
-    - **C)** Nested structs must use identical member names
-    - **D)** Nested structs cannot be initialized
+- **A)** A struct cannot contain another struct
+- **B)** A struct can contain another struct as a member
+- **C)** Nested structs must use identical member names
+- **D)** Nested structs cannot be initialized
 
 8. How should you assign a string to a `char[]` member inside a struct after initialization?
-    - **A)** By using the `=` operator directly
-    - **B)** By using `strcpy()`
-    - **C)** By using the `==` operator
-    - **D)** By using `strassign()`
+- **A)** By using the `=` operator directly
+- **B)** By using `strcpy()`
+- **C)** By using the `==` operator
+- **D)** By using `strassign()`
 
 9. What is a key advantage of passing a struct to a function by pointer instead of by value?
-    - **A)** It prevents the function from accessing struct members
-    - **B)** It is more efficient and allows the function to modify the original struct
-    - **C)** It automatically frees the struct's memory
-    - **D)** It converts the struct to a primitive type
+- **A)** It prevents the function from accessing struct members
+- **B)** It is more efficient and allows the function to modify the original struct
+- **C)** It automatically frees the struct's memory
+- **D)** It converts the struct to a primitive type
 
 10. Which common pitfall should be avoided when comparing two structs?
-    - **A)** Using `==` to compare structs directly instead of comparing member by member
-    - **B)** Using pointers to compare memory addresses
-    - **C)** Passing structs by value to a sorting algorithm
-    - **D)** Using `typedef` before comparison
+- **A)** Using `==` to compare structs directly instead of comparing member by member
+- **B)** Using pointers to compare memory addresses
+- **C)** Passing structs by value to a sorting algorithm
+- **D)** Using `typedef` before comparison
 
 ### Answer Key & Explanations
 1. **B)** Structs define distinct logical groupings organizing fundamentally disparate datatypes collectively.

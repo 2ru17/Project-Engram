@@ -50,22 +50,22 @@ status: completed
 ## Multiple Choice Questions
 
 1. In the Client-Server Architecture, what is the role of the server?
-    - **A)** A machine or program that makes requests through the Web.
-    - **B)** A program that serves the requests of multiple clients.
-    - **C)** A runtime environment embedded specifically inside browsers.
-    - **D)** A collection of prewritten JS code to help build web applications.
+- **A)** A machine or program that makes requests through the Web.
+- **B)** A program that serves the requests of multiple clients.
+- **C)** A runtime environment embedded specifically inside browsers.
+- **D)** A collection of prewritten JS code to help build web applications.
 
 2. What is NodeJS?
-    - **A)** An open-source JavaScript runtime environment that enables JavaScript to be executed outside a browser.
-    - **B)** A front-end CSS framework used for premade design rules.
-    - **C)** A JS Engine developed exclusively to run inside Google Chrome.
-    - **D)** A relational database system commonly used with JavaScript.
+- **A)** An open-source JavaScript runtime environment that enables JavaScript to be executed outside a browser.
+- **B)** A front-end CSS framework used for premade design rules.
+- **C)** A JS Engine developed exclusively to run inside Google Chrome.
+- **D)** A relational database system commonly used with JavaScript.
 
 3. What does a JS Engine do?
-    - **A)** It translates HTML and CSS into visual web pages.
-    - **B)** It manages client-server routing protocols.
-    - **C)** It interprets high-level JavaScript syntax into machine-bytecode.
-    - **D)** It serves static files to clients automatically.
+- **A)** It translates HTML and CSS into visual web pages.
+- **B)** It manages client-server routing protocols.
+- **C)** It interprets high-level JavaScript syntax into machine-bytecode.
+- **D)** It serves static files to clients automatically.
 
 ### Answer Key & Explanations
 1. **B)** The server is a program that serves the requests of multiple clients, whereas the client makes the requests.

@@ -55,64 +55,64 @@ When `traceroute` is run to map a path:
 
 ## Multiple Choice Questions
 1. Which ICMP message type does the ping utility rely on to test connectivity?
-    - **A)** Time Exceeded
-    - **B)** Destination Unreachable
-    - **C)** Echo Request / Echo Reply
-    - **D)** Redirect
+- **A)** Time Exceeded
+- **B)** Destination Unreachable
+- **C)** Echo Request / Echo Reply
+- **D)** Redirect
 
 2. How does the traceroute utility discover the individual router hops along a network path?
-    - **A)** By intentionally expiring the TTL (Time-To-Live) field to trigger ICMP Time Exceeded messages
-    - **B)** By asking the SDN controller for the path
-    - **C)** By analyzing BGP AS-PATH attributes
-    - **D)** By sending OpenFlow match rules
+- **A)** By intentionally expiring the TTL (Time-To-Live) field to trigger ICMP Time Exceeded messages
+- **B)** By asking the SDN controller for the path
+- **C)** By analyzing BGP AS-PATH attributes
+- **D)** By sending OpenFlow match rules
 
 3. What does an ICMP "Destination Unreachable" message indicate?
-    - **A)** The packet successfully arrived but the host is sleeping
-    - **B)** A router along the path did not have a routing table entry for the destination network
-    - **C)** The packet was too large and the router refused to fragment it
-    - **D)** The TTL of the packet reached zero
+- **A)** The packet successfully arrived but the host is sleeping
+- **B)** A router along the path did not have a routing table entry for the destination network
+- **C)** The packet was too large and the router refused to fragment it
+- **D)** The TTL of the packet reached zero
 
 4. In the SNMP architecture, what is the MIB (Management Information Base)?
-    - **A)** The physical server where SNMP runs
-    - **B)** A virtual database of definitions and managed objects (variables) on a device
-    - **C)** The UDP port used for traps
-    - **D)** A routing protocol replacement for OSPF
+- **A)** The physical server where SNMP runs
+- **B)** A virtual database of definitions and managed objects (variables) on a device
+- **C)** The UDP port used for traps
+- **D)** A routing protocol replacement for OSPF
 
 5. Which SNMP message is sent spontaneously by an agent device to alert the manager of a critical event, without waiting to be polled?
-    - **A)** GetRequest
-    - **B)** SetRequest
-    - **C)** Response
-    - **D)** Trap
+- **A)** GetRequest
+- **B)** SetRequest
+- **C)** Response
+- **D)** Trap
 
 6. If a network administrator wants to proactively change the configuration of a router interface remotely using SNMP, which message type is used?
-    - **A)** Trap
-    - **B)** GetRequest
-    - **C)** SetRequest
-    - **D)** Echo Reply
+- **A)** Trap
+- **B)** GetRequest
+- **C)** SetRequest
+- **D)** Echo Reply
 
 7. What transport protocol does SNMP primarily rely upon?
-    - **A)** TCP
-    - **B)** UDP
-    - **C)** ICMP
-    - **D)** IPsec
+- **A)** TCP
+- **B)** UDP
+- **C)** ICMP
+- **D)** IPsec
 
 8. What port is typically used by the SNMP Manager to receive Traps?
-    - **A)** 161
-    - **B)** 162
-    - **C)** 179
-    - **D)** 520
+- **A)** 161
+- **B)** 162
+- **C)** 179
+- **D)** 520
 
 9. Which ICMP message is sent back when a packet cannot be forwarded because it exceeds the MTU and the DF (Don't Fragment) bit is set?
-    - **A)** Fragmentation Needed and DF set (Type 3)
-    - **B)** Source Quench
-    - **C)** Time Exceeded
-    - **D)** Redirect
+- **A)** Fragmentation Needed and DF set (Type 3)
+- **B)** Source Quench
+- **C)** Time Exceeded
+- **D)** Redirect
 
 10. What is the role of an SNMP Agent?
-    - **A)** To poll all devices in the network
-    - **B)** To run on the managed device, collecting data and interfacing with the MIB
-    - **C)** To route ICMP traffic
-    - **D)** To generate BGP updates
+- **A)** To poll all devices in the network
+- **B)** To run on the managed device, collecting data and interfacing with the MIB
+- **C)** To route ICMP traffic
+- **D)** To generate BGP updates
 
 ### Answer Key & Explanations
 1. **C** - Ping specifically uses ICMP Echo Requests and expects Echo Replies.

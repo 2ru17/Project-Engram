@@ -179,55 +179,55 @@ _To be added._
 
 ## Multiple Choice Questions
 1. What is the definition of recursion in C programming?
-    - **A)** A loop that runs infinitely
-    - **B)** A function that calls itself directly or indirectly
-    - **C)** A variable that points to itself
-    - **D)** A method for compiling code faster
+- **A)** A loop that runs infinitely
+- **B)** A function that calls itself directly or indirectly
+- **C)** A variable that points to itself
+- **D)** A method for compiling code faster
 2. What is the essential component of a recursive function that prevents it from running infinitely?
-    - **A)** The recursive call
-    - **B)** A global variable
-    - **C)** The base case
-    - **D)** A pointer
+- **A)** The recursive call
+- **B)** A global variable
+- **C)** The base case
+- **D)** A pointer
 3. What happens if a recursive function lacks a properly defined base case?
-    - **A)** The program runs faster
-    - **B)** The compiler automatically generates one
-    - **C)** The program throws a Stack Overflow error due to infinite recursion
-    - **D)** It defaults to a return value of 0
+- **A)** The program runs faster
+- **B)** The compiler automatically generates one
+- **C)** The program throws a Stack Overflow error due to infinite recursion
+- **D)** It defaults to a return value of 0
 4. Which memory region is heavily utilized during recursive function calls?
-    - **A)** The Heap
-    - **B)** The Stack
-    - **C)** The Data Segment
-    - **D)** The BSS Segment
+- **A)** The Heap
+- **B)** The Stack
+- **C)** The Data Segment
+- **D)** The BSS Segment
 5. How does recursion compare to iteration in terms of memory efficiency?
-    - **A)** Recursion is always more memory efficient
-    - **B)** Iteration generally uses less memory because it doesn't add frames to the call stack
-    - **C)** They use exactly the same amount of memory
-    - **D)** Recursion uses zero memory overhead
+- **A)** Recursion is always more memory efficient
+- **B)** Iteration generally uses less memory because it doesn't add frames to the call stack
+- **C)** They use exactly the same amount of memory
+- **D)** Recursion uses zero memory overhead
 6. What is the 'recursive step'?
-    - **A)** The part of the function that returns a constant value
-    - **B)** The logic that breaks the problem down and makes the self-call
-    - **C)** The initial call made from the main function
-    - **D)** The termination condition
+- **A)** The part of the function that returns a constant value
+- **B)** The logic that breaks the problem down and makes the self-call
+- **C)** The initial call made from the main function
+- **D)** The termination condition
 7. Which of the following problems is naturally suited for a recursive solution?
-    - **A)** Calculating the factorial of a number
-    - **B)** Opening a file
-    - **C)** Assigning a variable
-    - **D)** Printing a single string
+- **A)** Calculating the factorial of a number
+- **B)** Opening a file
+- **C)** Assigning a variable
+- **D)** Printing a single string
 8. In the context of recursion, what is 'unwinding'?
-    - **A)** The process of resolving the return values as the stack frames pop off
-    - **B)** Breaking out of an infinite loop
-    - **C)** Compiling the recursive code
-    - **D)** Converting recursion into iteration
+- **A)** The process of resolving the return values as the stack frames pop off
+- **B)** Breaking out of an infinite loop
+- **C)** Compiling the recursive code
+- **D)** Converting recursion into iteration
 9. What is 'tail recursion'?
-    - **A)** When the recursive call is the very first statement
-    - **B)** When the recursive call is the very last operation performed in the function
-    - **C)** When a function calls two different functions
-    - **D)** When recursion fails
+- **A)** When the recursive call is the very first statement
+- **B)** When the recursive call is the very last operation performed in the function
+- **C)** When a function calls two different functions
+- **D)** When recursion fails
 10. Why might a compiler optimize tail recursion?
-    - **A)** To execute slower for debugging
-    - **B)** To automatically convert it into a loop, saving stack space
-    - **C)** To increase memory usage
-    - **D)** To prevent variables from being updated
+- **A)** To execute slower for debugging
+- **B)** To automatically convert it into a loop, saving stack space
+- **C)** To increase memory usage
+- **D)** To prevent variables from being updated
 
 ### Answer Key & Explanations
 1. **B)** Recursion occurs when logic dictates a procedure invoke itself to solve sub-problems.

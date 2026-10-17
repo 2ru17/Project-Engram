@@ -119,64 +119,64 @@ _Please contact me through discord or my the university email for any problems r
 ## Multiple Choice Questions
 
 1. What is the fundamental assumption of the Markov Property?
-    - **A)** Future states depend heavily on the entire history of past actions.
-    - **B)** The future is independent of the past given the present state and action.
-    - **C)** All actions yield deterministic outcomes.
-    - **D)** The discount factor determines the randomness of the environment.
+- **A)** Future states depend heavily on the entire history of past actions.
+- **B)** The future is independent of the past given the present state and action.
+- **C)** All actions yield deterministic outcomes.
+- **D)** The discount factor determines the randomness of the environment.
 
 2. Which component of an MDP models the probability of reaching a new state after taking a specific action?
-    - **A)** The Reward Function
-    - **B)** The Discount Factor
-    - **C)** The Policy
-    - **D)** The Transition Function
+- **A)** The Reward Function
+- **B)** The Discount Factor
+- **C)** The Policy
+- **D)** The Transition Function
 
 3. What does a Discount Factor ($\gamma$) close to 0 imply about an agent's behavior?
-    - **A)** The agent is farsighted and values long-term rewards.
-    - **B)** The agent values all future rewards equally without discounting.
-    - **C)** The agent is myopic and cares primarily about immediate rewards.
-    - **D)** The agent completely stops exploring the environment.
+- **A)** The agent is farsighted and values long-term rewards.
+- **B)** The agent values all future rewards equally without discounting.
+- **C)** The agent is myopic and cares primarily about immediate rewards.
+- **D)** The agent completely stops exploring the environment.
 
 4. In the context of an MDP, what is a Policy ($\pi$)?
-    - **A)** A history of all states previously visited by the agent.
-    - **B)** A rule that maps each state to an action the agent should take.
-    - **C)** The cumulative reward received over an episode.
-    - **D)** The mathematical probability of winning a game.
+- **A)** A history of all states previously visited by the agent.
+- **B)** A rule that maps each state to an action the agent should take.
+- **C)** The cumulative reward received over an episode.
+- **D)** The mathematical probability of winning a game.
 
 5. What does the Value Function $V(s)$ represent?
-    - **A)** The maximum immediate reward obtainable in state $s$.
-    - **B)** The expected cumulative reward starting from state $s$ and following a specific policy.
-    - **C)** The transition probability of returning to state $s$.
-    - **D)** The highest possible discount factor for the MDP.
+- **A)** The maximum immediate reward obtainable in state $s$.
+- **B)** The expected cumulative reward starting from state $s$ and following a specific policy.
+- **C)** The transition probability of returning to state $s$.
+- **D)** The highest possible discount factor for the MDP.
 
 6. What is the primary purpose of the Bellman Equation in MDPs?
-    - **A)** To calculate the precise computational complexity of an action.
-    - **B)** To decompose the value of a state into immediate reward plus the discounted value of the next state.
-    - **C)** To eliminate the need for a transition function.
-    - **D)** To strictly define which states are terminal.
+- **A)** To calculate the precise computational complexity of an action.
+- **B)** To decompose the value of a state into immediate reward plus the discounted value of the next state.
+- **C)** To eliminate the need for a transition function.
+- **D)** To strictly define which states are terminal.
 
 7. How does the Bellman equation handle uncertainty in the environment?
-    - **A)** By ignoring states with probabilistic outcomes.
-    - **B)** By calculating the sum of values multiplied by their transition probabilities over all possible next states.
-    - **C)** By setting the discount factor to zero whenever randomness occurs.
-    - **D)** By assuming the highest reward is always achieved.
+- **A)** By ignoring states with probabilistic outcomes.
+- **B)** By calculating the sum of values multiplied by their transition probabilities over all possible next states.
+- **C)** By setting the discount factor to zero whenever randomness occurs.
+- **D)** By assuming the highest reward is always achieved.
 
 8. When updating the value of a state using the Bellman Equation, how is the optimal action chosen?
-    - **A)** By picking the action that results in the state with the lowest value.
-    - **B)** By averaging the expected values of all available actions.
-    - **C)** By picking the action that maximizes the sum of expected immediate and future rewards.
-    - **D)** By selecting an action randomly to encourage exploration.
+- **A)** By picking the action that results in the state with the lowest value.
+- **B)** By averaging the expected values of all available actions.
+- **C)** By picking the action that maximizes the sum of expected immediate and future rewards.
+- **D)** By selecting an action randomly to encourage exploration.
 
 9. What is a common pitfall regarding the transition function and reward function in MDPs?
-    - **A)** Believing the transition function is deterministic.
-    - **B)** Confusing the probability of reaching a state with the reward received for reaching it.
-    - **C)** Assuming the transition function always depends on the discount factor.
-    - **D)** Defining the reward function recursively.
+- **A)** Believing the transition function is deterministic.
+- **B)** Confusing the probability of reaching a state with the reward received for reaching it.
+- **C)** Assuming the transition function always depends on the discount factor.
+- **D)** Defining the reward function recursively.
 
 10. Why is one pass of the Bellman equation update generally insufficient to find the true value estimates?
-    - **A)** Because the transition probabilities continuously change.
-    - **B)** Because the discount factor shrinks after every pass.
-    - **C)** Because the values rely recursively on neighboring state values, requiring iteration to converge.
-    - **D)** Because the rewards are only generated randomly during the first pass.
+- **A)** Because the transition probabilities continuously change.
+- **B)** Because the discount factor shrinks after every pass.
+- **C)** Because the values rely recursively on neighboring state values, requiring iteration to converge.
+- **D)** Because the rewards are only generated randomly during the first pass.
 
 ### Answer Key & Explanations
 1. **B)** The Markov Property states that the next state depends only on the current state and action, independent of the sequence of events that preceded it.

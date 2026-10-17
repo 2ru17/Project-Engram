@@ -116,64 +116,64 @@ _Please contact me through discord or my the university email for any problems r
 ## Multiple Choice Questions
 
 1. Why is the Naive Bayes classifier called "Naive"?
-    - **A)** It assumes that all prior probabilities are equal.
-    - **B)** It assumes that features are completely independent of each other given the class.
-    - **C)** It can only handle numerical features and ignores text.
-    - **D)** It doesn't require any training data to function.
+- **A)** It assumes that all prior probabilities are equal.
+- **B)** It assumes that features are completely independent of each other given the class.
+- **C)** It can only handle numerical features and ignores text.
+- **D)** It doesn't require any training data to function.
 
 2. In Bayes' Theorem, what does the term $P(C|X)$ represent?
-    - **A)** The Prior Probability
-    - **B)** The Likelihood
-    - **C)** The Evidence
-    - **D)** The Posterior Probability
+- **A)** The Prior Probability
+- **B)** The Likelihood
+- **C)** The Evidence
+- **D)** The Posterior Probability
 
 3. Which term in Bayes' Theorem describes the probability of observing the features given a specific class, $P(X|C)$?
-    - **A)** Prior
-    - **B)** Posterior
-    - **C)** Likelihood
-    - **D)** Evidence
+- **A)** Prior
+- **B)** Posterior
+- **C)** Likelihood
+- **D)** Evidence
 
 4. When computing probabilities for different classes, why is the Evidence term $P(X)$ often ignored?
-    - **A)** Because it evaluates to zero for most datasets.
-    - **B)** Because it is constant across all classes and doesn't affect the comparison.
-    - **C)** Because it requires computing the prior first.
-    - **D)** Because Laplace smoothing eliminates the need for it.
+- **A)** Because it evaluates to zero for most datasets.
+- **B)** Because it is constant across all classes and doesn't affect the comparison.
+- **C)** Because it requires computing the prior first.
+- **D)** Because Laplace smoothing eliminates the need for it.
 
 5. How does Naive Bayes mathematically represent its independence assumption?
-    - **A)** $P(X|C) = P(x_1|C) \times P(x_2|C) \times \dots \times P(x_n|C)$
-    - **B)** $P(X|C) = P(x_1|C) + P(x_2|C) + \dots + P(x_n|C)$
-    - **C)** $P(X|C) = P(C) / P(X)$
-    - **D)** $P(X|C) = 1 - P(C)$
+- **A)** $P(X|C) = P(x_1|C) \times P(x_2|C) \times \dots \times P(x_n|C)$
+- **B)** $P(X|C) = P(x_1|C) + P(x_2|C) + \dots + P(x_n|C)$
+- **C)** $P(X|C) = P(C) / P(X)$
+- **D)** $P(X|C) = 1 - P(C)$
 
 6. How does a Naive Bayes classifier finally determine the predicted class for a new instance?
-    - **A)** It selects the class with the lowest posterior probability.
-    - **B)** It randomly picks a class weighted by the prior probabilities.
-    - **C)** It calculates the score $P(C) \prod P(x_i|C)$ for each class and picks the maximum.
-    - **D)** It averages the likelihoods of all features.
+- **A)** It selects the class with the lowest posterior probability.
+- **B)** It randomly picks a class weighted by the prior probabilities.
+- **C)** It calculates the score $P(C) \prod P(x_i|C)$ for each class and picks the maximum.
+- **D)** It averages the likelihoods of all features.
 
 7. What problem arises if a word in a test instance never appeared in the training data for a specific class?
-    - **A)** The prior probability becomes zero.
-    - **B)** The probability $P(word|Class)$ becomes 0, making the entire product for that class 0.
-    - **C)** The denominator of Bayes' theorem becomes infinite.
-    - **D)** The algorithm crashes due to a division by zero error.
+- **A)** The prior probability becomes zero.
+- **B)** The probability $P(word|Class)$ becomes 0, making the entire product for that class 0.
+- **C)** The denominator of Bayes' theorem becomes infinite.
+- **D)** The algorithm crashes due to a division by zero error.
 
 8. What technique is used to solve the zero-probability problem in Naive Bayes?
-    - **A)** Cross-validation
-    - **B)** Dimensionality reduction
-    - **C)** Laplace Smoothing (Add-One Smoothing)
-    - **D)** Term Frequency scaling
+- **A)** Cross-validation
+- **B)** Dimensionality reduction
+- **C)** Laplace Smoothing (Add-One Smoothing)
+- **D)** Term Frequency scaling
 
 9. In the context of Laplace smoothing, what does the variable $V$ represent in the formula?
-    - **A)** The variance of the training data
-    - **B)** The total number of instances in the dataset
-    - **C)** The total vocabulary size (number of unique words)
-    - **D)** The value of the highest frequency word
+- **A)** The variance of the training data
+- **B)** The total number of instances in the dataset
+- **C)** The total vocabulary size (number of unique words)
+- **D)** The value of the highest frequency word
 
 10. If an email classification dataset has 10 Spam messages and 40 Ham messages, what is the Prior Probability of Spam, $P(Spam)$?
-    - **A)** 0.10
-    - **B)** 0.20
-    - **C)** 0.40
-    - **D)** 0.25
+- **A)** 0.10
+- **B)** 0.20
+- **C)** 0.40
+- **D)** 0.25
 
 ### Answer Key & Explanations
 1. **B)** It makes a "naive" or strong assumption that all features (e.g., words in a text) are independent of each other given the class.

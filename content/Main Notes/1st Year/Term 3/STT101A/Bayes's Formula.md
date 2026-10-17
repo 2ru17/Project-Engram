@@ -100,64 +100,64 @@ This counterintuitive result is known as the **Base Rate Fallacy**: because beni
 ## Multiple Choice Questions
 
 1. In Bayes' Theorem, what does the term $P(A \mid B)$ represent?
-    - **A)** The posterior probability of $B$ given $A$.
-    - **B)** The likelihood of observing evidence $A$ given that hypothesis $B$ is true.
-    - **C)** The marginal prior probability of $A$.
-    - **D)** The joint probability of $A$ and $B$ being independent.
+- **A)** The posterior probability of $B$ given $A$.
+- **B)** The likelihood of observing evidence $A$ given that hypothesis $B$ is true.
+- **C)** The marginal prior probability of $A$.
+- **D)** The joint probability of $A$ and $B$ being independent.
 
 2. What role does the Law of Total Probability play in Bayes' Formula?
-    - **A)** It computes the prior probability of the hypothesis.
-    - **B)** It computes the normalizer in the denominator (marginal probability of the evidence $P(A)$).
-    - **C)** It guarantees that all events are independent.
-    - **D)** It eliminates false positive errors.
+- **A)** It computes the prior probability of the hypothesis.
+- **B)** It computes the normalizer in the denominator (marginal probability of the evidence $P(A)$).
+- **C)** It guarantees that all events are independent.
+- **D)** It eliminates false positive errors.
 
 3. Why does the Base Rate Fallacy occur in medical screening or intrusion detection?
-    - **A)** Because the test has zero specificity.
-    - **B)** Because when a condition is extremely rare in a population, even a low false positive rate produces more false alarms in absolute terms than true detections.
-    - **C)** Because Bayes' Theorem is only valid when priors are uniformly distributed ($50/50$).
-    - **D)** Because probabilities cannot be updated conditionally.
+- **A)** Because the test has zero specificity.
+- **B)** Because when a condition is extremely rare in a population, even a low false positive rate produces more false alarms in absolute terms than true detections.
+- **C)** Because Bayes' Theorem is only valid when priors are uniformly distributed ($50/50$).
+- **D)** Because probabilities cannot be updated conditionally.
 
 4. If events $B_1, B_2, B_3$ form a partition of sample space $S$, which condition must strictly hold?
-    - **A)** $P(B_1) = P(B_2) = P(B_3) = 1/3$.
-    - **B)** The events are pairwise disjoint ($B_i \cap B_j = \emptyset$ for $i \ne j$) and their union equals $S$ ($\sum P(B_i) = 1$).
-    - **C)** $B_1 \cup B_2 \cup B_3 = \emptyset$.
-    - **D)** Each event is independent of any test $A$.
+- **A)** $P(B_1) = P(B_2) = P(B_3) = 1/3$.
+- **B)** The events are pairwise disjoint ($B_i \cap B_j = \emptyset$ for $i \ne j$) and their union equals $S$ ($\sum P(B_i) = 1$).
+- **C)** $B_1 \cup B_2 \cup B_3 = \emptyset$.
+- **D)** Each event is independent of any test $A$.
 
 5. In our IDS example, what was the probability that a randomly chosen flow triggered an alarm ($P(+)$)?
-    - **A)** $0.99$
-    - **B)** $0.005$
-    - **C)** $0.02485$
-    - **D)** $0.1992$
+- **A)** $0.99$
+- **B)** $0.005$
+- **C)** $0.02485$
+- **D)** $0.1992$
 
 6. If the prior probability of hypothesis $B$ is $0.10$, likelihood $P(A \mid B) = 0.80$, and total evidence probability $P(A) = 0.20$, what is the posterior $P(B \mid A)$?
-    - **A)** $0.08$
-    - **B)** $0.40$
-    - **C)** $0.16$
-    - **D)** $0.50$
+- **A)** $0.08$
+- **B)** $0.40$
+- **C)** $0.16$
+- **D)** $0.50$
 
 7. What happens to the posterior probability $P(B \mid A)$ if the prior probability $P(B) \to 0$ while likelihood and evidence remain non-zero?
-    - **A)** The posterior probability approaches $1$.
-    - **B)** The posterior probability approaches $0$.
-    - **C)** The posterior probability approaches $0.5$.
-    - **D)** The posterior probability becomes undefined.
+- **A)** The posterior probability approaches $1$.
+- **B)** The posterior probability approaches $0$.
+- **C)** The posterior probability approaches $0.5$.
+- **D)** The posterior probability becomes undefined.
 
 8. In Bayesian statistics, how is sequential updating performed when a second independent piece of evidence $A_2$ arrives?
-    - **A)** The initial prior $P(B)$ is discarded and replaced with $1$.
-    - **B)** The posterior probability after $A_1$, $P(B \mid A_1)$, becomes the new prior probability for evaluating $A_2$.
-    - **C)** The experiment must be restarted from scratch.
-    - **D)** The probabilities are subtracted from 1.
+- **A)** The initial prior $P(B)$ is discarded and replaced with $1$.
+- **B)** The posterior probability after $A_1$, $P(B \mid A_1)$, becomes the new prior probability for evaluating $A_2$.
+- **C)** The experiment must be restarted from scratch.
+- **D)** The probabilities are subtracted from 1.
 
 9. What does a likelihood ratio of $P(A \mid B) / P(A \mid B^c) > 1$ indicate?
-    - **A)** Evidence $A$ is more likely under hypothesis $B$ than under its negation, increasing the posterior probability of $B$ relative to its prior.
-    - **B)** Hypothesis $B$ is impossible.
-    - **C)** The evidence decreases confidence in hypothesis $B$.
-    - **D)** The test is completely uninformative.
+- **A)** Evidence $A$ is more likely under hypothesis $B$ than under its negation, increasing the posterior probability of $B$ relative to its prior.
+- **B)** Hypothesis $B$ is impossible.
+- **C)** The evidence decreases confidence in hypothesis $B$.
+- **D)** The test is completely uninformative.
 
 10. Which branch of artificial intelligence directly implements Bayes' Formula with conditional independence assumptions between features?
-    - **A)** Convolutional Neural Networks
-    - **B)** Naïve Bayes Classifier
-    - **C)** K-Means Clustering
-    - **D)** Breadth-First Search
+- **A)** Convolutional Neural Networks
+- **B)** Naïve Bayes Classifier
+- **C)** K-Means Clustering
+- **D)** Breadth-First Search
 
 ---
 

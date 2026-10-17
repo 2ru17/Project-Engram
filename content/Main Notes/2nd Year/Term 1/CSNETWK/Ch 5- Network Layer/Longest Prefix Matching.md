@@ -132,64 +132,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "**Conclusion:** Even though _____ starts with `0`, it strictly doesn't match `00`, `000`, or `010`."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** it
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** it
 
 2. Which word completes the following sentence from the text: "Problem Analysis  ### Question 1  **Suppose a datagram _____ at the router, with destination address `11001101`."?
-    - **A)** Router
-    - **B)** arrives
-    - **C)** Protocol
-    - **D)** Network
+- **A)** Router
+- **B)** arrives
+- **C)** Protocol
+- **D)** Network
 
 3. Which word completes the following sentence from the text: "--- id: Longest-Prefix-Matching type: note course: CSNETWK topic: status: completed ---  # Longest Prefix Matching  > [!info] Document Metadata > - **Course:** `=this.course` > - **Topic:** `=this.topic` > - **Status:** `=this.status`  **🏷️ _____ #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]  ---  ## Overview  > Longest Prefix Matching is the algorithm used by routers to select the correct output interface for a packet."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Tags
+- **A)** Router
+- **B)** Network
+- **C)** Protocol
+- **D)** Tags
 
 4. Which word completes the following sentence from the text: "**Compare against Table:** Does _____ start with `00`?"?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** it
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** it
 
 5. Which word completes the following sentence from the text: "When multiple prefixes match, the longest (most specific) one _____ if none match, the default "Otherwise" route is used."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** wins
+- **A)** Network
+- **B)** Router
+- **C)** Protocol
+- **D)** wins
 
 6. Which word completes the following sentence from the text: "**Step 3:** Mark _every_ row that _____ the start of the address."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** matches
+- **A)** Network
+- **B)** Protocol
+- **C)** Router
+- **D)** matches
 
 7. Which word completes the following sentence from the text: "It compares this address against a _____ of "Prefixes" in its forwarding table."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** list
+- **A)** Network
+- **B)** Router
+- **C)** Protocol
+- **D)** list
 
 8. Which word completes the following sentence from the text: "**Correct Answer:** **Interface 6**  ### Question 2  **Suppose a _____ arrives at the router, with destination address `01110000`."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** datagram
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** datagram
+- **D)** Network
 
 9. Which word completes the following sentence from the text: "To which interface will this datagram be _____ using longest-prefix matching?**  **Analytical Breakdown:**  1."?
-    - **A)** Router
-    - **B)** forwarded
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Router
+- **B)** forwarded
+- **C)** Network
+- **D)** Protocol
 
 10. Which word completes the following sentence from the text: "**Interface 6** is the _____ or default gateway."?
-    - **A)** Network
-    - **B)** catchall
-    - **C)** Router
-    - **D)** Protocol
+- **A)** Network
+- **B)** catchall
+- **C)** Router
+- **D)** Protocol
 
 
 ### Answer Key & Explanations

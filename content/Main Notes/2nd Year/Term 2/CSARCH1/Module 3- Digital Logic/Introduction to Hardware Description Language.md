@@ -129,64 +129,64 @@ endmodule
 ## Multiple Choice Questions
 
 1. Which organization approved Verilog and VHDL as standard HDLs?
-    - **A)** ANSI
-    - **B)** ISO
-    - **C)** IEEE
-    - **D)** W3C
+- **A)** ANSI
+- **B)** ISO
+- **C)** IEEE
+- **D)** W3C
 
 2. What serves as the fundamental building block for Verilog models?
-    - **A)** function
-    - **B)** module
-    - **C)** primitive
-    - **D)** architecture
+- **A)** function
+- **B)** module
+- **C)** primitive
+- **D)** architecture
 
 3. In Verilog, what does the state 'Z' represent?
-    - **A)** Zero
-    - **B)** Unknown
-    - **C)** High impedance state (open circuit)
-    - **D)** Undefined variable
+- **A)** Zero
+- **B)** Unknown
+- **C)** High impedance state (open circuit)
+- **D)** Undefined variable
 
 4. Which modeling method describes a circuit by specifying its gates and how they are connected?
-    - **A)** Gate-level modeling
-    - **B)** Dataflow modeling
-    - **C)** Behavioral modeling
-    - **D)** Switch-level modeling
+- **A)** Gate-level modeling
+- **B)** Dataflow modeling
+- **C)** Behavioral modeling
+- **D)** Switch-level modeling
 
 5. What is the purpose of the 'wire' data type in Verilog gate-level modeling?
-    - **A)** To define an input port
-    - **B)** To hold a state value in sequential logic
-    - **C)** To define the output of one gate that serves as input to another
-    - **D)** To terminate the module
+- **A)** To define an input port
+- **B)** To hold a state value in sequential logic
+- **C)** To define the output of one gate that serves as input to another
+- **D)** To terminate the module
 
 6. In a Verilog testbench, what data type is typically used for signals applied as inputs to the design module?
-    - **A)** wire
-    - **B)** reg
-    - **C)** output
-    - **D)** integer
+- **A)** wire
+- **B)** reg
+- **C)** output
+- **D)** integer
 
 7. How do you create User-Defined Primitives (UDPs) in Verilog?
-    - **A)** By describing them using algorithmic always blocks
-    - **B)** By defining them in tabular form (truth table) using primitive/endprimitive keywords
-    - **C)** By grouping multiple pre-defined gates into a module
-    - **D)** By importing a C library
+- **A)** By describing them using algorithmic always blocks
+- **B)** By defining them in tabular form (truth table) using primitive/endprimitive keywords
+- **C)** By grouping multiple pre-defined gates into a module
+- **D)** By importing a C library
 
 8. Which keyword is primarily used in Dataflow modeling to assign values?
-    - **A)** always
-    - **B)** initial
-    - **C)** assign
-    - **D)** module
+- **A)** always
+- **B)** initial
+- **C)** assign
+- **D)** module
 
 9. In Verilog, what is the result of the bitwise OR operation (1010) | (0000)?
-    - **A)** 0000
-    - **B)** 1010
-    - **C)** 1
-    - **D)** 0
+- **A)** 0000
+- **B)** 1010
+- **C)** 1
+- **D)** 0
 
 10. Which statement block is used in Behavioral modeling to execute procedural assignments when variables change?
-    - **A)** initial
-    - **B)** assign
-    - **C)** always
-    - **D)** wire
+- **A)** initial
+- **B)** assign
+- **C)** always
+- **D)** wire
 
 ### Answer Key & Explanations
 1. **C)** The IEEE (Institute of Electronics and Electrical Engineers) approved both Verilog and VHDL as standards.

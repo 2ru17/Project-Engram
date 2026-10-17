@@ -51,34 +51,34 @@ An agent must navigate a slippery grid from start to goal without falling into h
 ## Multiple Choice Questions
 
 1. Why is Q-Learning used instead of standard Markov Decision Processes (MDPs) in certain environments?
-    - **A)** Because the agent does not know the transition probabilities or reward distribution beforehand.
-    - **B)** Because Q-Learning completely ignores expected future rewards.
-    - **C)** Because Q-Learning relies on supervised labeled data.
-    - **D)** Because Q-Learning models the environment deterministically.
+- **A)** Because the agent does not know the transition probabilities or reward distribution beforehand.
+- **B)** Because Q-Learning completely ignores expected future rewards.
+- **C)** Because Q-Learning relies on supervised labeled data.
+- **D)** Because Q-Learning models the environment deterministically.
 
 2. In Q-Learning, what does a Q-value stored in the lookup table (Q-table) represent?
-    - **A)** The exact number of steps required to reach the goal from the current state.
-    - **B)** The expected total cumulative reward of taking a specific action from a specific state and acting optimally thereafter.
-    - **C)** The probability of an action successfully transitioning to the desired state.
-    - **D)** The mathematical variance of the rewards in the current state.
+- **A)** The exact number of steps required to reach the goal from the current state.
+- **B)** The expected total cumulative reward of taking a specific action from a specific state and acting optimally thereafter.
+- **C)** The probability of an action successfully transitioning to the desired state.
+- **D)** The mathematical variance of the rewards in the current state.
 
 3. What does "Exploitation" refer to during the training of a Q-Learning agent?
-    - **A)** Taking random actions to map out unknown areas of the environment.
-    - **B)** Choosing the best-known action based on current Q-values to maximize reward.
-    - **C)** Resetting the Q-table to zeros to prevent overfitting.
-    - **D)** Increasing the learning rate to process data faster.
+- **A)** Taking random actions to map out unknown areas of the environment.
+- **B)** Choosing the best-known action based on current Q-values to maximize reward.
+- **C)** Resetting the Q-table to zeros to prevent overfitting.
+- **D)** Increasing the learning rate to process data faster.
 
 4. When is Deep Q-Learning typically implemented?
-    - **A)** When the environment is entirely deterministic.
-    - **B)** When the agent possesses perfect knowledge of the transition distribution.
-    - **C)** When the environment has a vast or continuous state space, making a standard Q-table impossible to maintain.
-    - **D)** When the discount factor $\gamma$ is set to exactly 1.0.
+- **A)** When the environment is entirely deterministic.
+- **B)** When the agent possesses perfect knowledge of the transition distribution.
+- **C)** When the environment has a vast or continuous state space, making a standard Q-table impossible to maintain.
+- **D)** When the discount factor $\gamma$ is set to exactly 1.0.
 
 5. In the Q-Learning Update Rule, what is the role of the parameter $\alpha$?
-    - **A)** It represents the discount factor weighting future rewards.
-    - **B)** It represents the maximum expected reward from the next state.
-    - **C)** It is the immediate reward received from the environment.
-    - **D)** It is the learning rate, determining how much the newly acquired information overrides the old Q-value.
+- **A)** It represents the discount factor weighting future rewards.
+- **B)** It represents the maximum expected reward from the next state.
+- **C)** It is the immediate reward received from the environment.
+- **D)** It is the learning rate, determining how much the newly acquired information overrides the old Q-value.
 
 ### Answer Key & Explanations
 1. **A)** Q-Learning is a model-free algorithm, meaning the agent has to interact with the environment to learn about it, whereas MDPs assume the agent is provided with the transition model and rewards.

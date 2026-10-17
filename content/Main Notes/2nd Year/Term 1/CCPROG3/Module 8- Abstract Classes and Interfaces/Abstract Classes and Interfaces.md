@@ -78,34 +78,34 @@ Abstract classes and interfaces do not inherently change runtime complexity, but
 ## Multiple Choice Questions
 
 1. What is a key characteristic of an Abstract Class?
-    - **A)** It can only contain abstract methods.
-    - **B)** It cannot be instantiated and is used as a base class.
-    - **C)** It supports multiple inheritance of state.
-    - **D)** All its methods must have empty bodies.
+- **A)** It can only contain abstract methods.
+- **B)** It cannot be instantiated and is used as a base class.
+- **C)** It supports multiple inheritance of state.
+- **D)** All its methods must have empty bodies.
 
 2. How does an Interface differ from an Abstract Class in terms of inheritance?
-    - **A)** A class can only implement one Interface, but extend multiple Abstract Classes.
-    - **B)** Interfaces can hold state (fields), while Abstract Classes cannot.
-    - **C)** A class can implement multiple Interfaces, enabling multiple inheritance of type.
-    - **D)** Interfaces can have constructors, while Abstract Classes cannot.
+- **A)** A class can only implement one Interface, but extend multiple Abstract Classes.
+- **B)** Interfaces can hold state (fields), while Abstract Classes cannot.
+- **C)** A class can implement multiple Interfaces, enabling multiple inheritance of type.
+- **D)** Interfaces can have constructors, while Abstract Classes cannot.
 
 3. Which keyword is used by a class to guarantee it fulfills the contract of an Interface?
-    - **A)** `extends`
-    - **B)** `implements`
-    - **C)** `abstract`
-    - **D)** `inherits`
+- **A)** `extends`
+- **B)** `implements`
+- **C)** `abstract`
+- **D)** `inherits`
 
 4. In the provided code, why does the `Animal` class have a constructor if it cannot be instantiated?
-    - **A)** To allow external classes to create Animal objects directly.
-    - **B)** To initialize state (like `name`) that subclasses can use.
-    - **C)** Because all classes in Java must have a public constructor.
-    - **D)** To prevent subclasses from having their own constructors.
+- **A)** To allow external classes to create Animal objects directly.
+- **B)** To initialize state (like `name`) that subclasses can use.
+- **C)** Because all classes in Java must have a public constructor.
+- **D)** To prevent subclasses from having their own constructors.
 
 5. How do abstract classes and interfaces affect the complexity of a program?
-    - **A)** They increase architectural flexibility but may require more classes to define behaviors.
-    - **B)** They drastically reduce runtime overhead by avoiding virtual method tables.
-    - **C)** They eliminate the need for polymorphism.
-    - **D)** They make the program run faster by skipping compile-time checks.
+- **A)** They increase architectural flexibility but may require more classes to define behaviors.
+- **B)** They drastically reduce runtime overhead by avoiding virtual method tables.
+- **C)** They eliminate the need for polymorphism.
+- **D)** They make the program run faster by skipping compile-time checks.
 
 ### Answer Key & Explanations
 1. **B)** Abstract classes serve as structural templates for subclasses but are incomplete themselves, forbidding direct instantiation via `new`.

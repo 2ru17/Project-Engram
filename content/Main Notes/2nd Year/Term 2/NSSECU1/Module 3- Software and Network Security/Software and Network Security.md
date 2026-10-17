@@ -56,64 +56,64 @@ This module bridges the gap between securing software applications and protectin
 
 ## Multiple Choice Questions
 1. Which layer of the OSI model does a traditional packet-filtering firewall operate at?
-    - **A)** Layer 2
-    - **B)** Layer 3 and 4
-    - **C)** Layer 7
-    - **D)** Layer 1
+- **A)** Layer 2
+- **B)** Layer 3 and 4
+- **C)** Layer 7
+- **D)** Layer 1
 
 2. What is the primary purpose of a DMZ?
-    - **A)** To store internal databases securely
-    - **B)** To host external-facing services separated from the internal network
-    - **C)** To encrypt all network traffic
-    - **D)** To provide remote employee access
+- **A)** To store internal databases securely
+- **B)** To host external-facing services separated from the internal network
+- **C)** To encrypt all network traffic
+- **D)** To provide remote employee access
 
 3. In the TCP three-way handshake, what is the second packet sent?
-    - **A)** SYN
-    - **B)** ACK
-    - **C)** SYN-ACK
-    - **D)** FIN
+- **A)** SYN
+- **B)** ACK
+- **C)** SYN-ACK
+- **D)** FIN
 
 4. Which attack is mitigated by using SYN Cookies?
-    - **A)** SQL Injection
-    - **B)** Cross-Site Scripting
-    - **C)** SYN Flood
-    - **D)** DNS Spoofing
+- **A)** SQL Injection
+- **B)** Cross-Site Scripting
+- **C)** SYN Flood
+- **D)** DNS Spoofing
 
 5. What does SAST stand for in software security?
-    - **A)** Static Application Security Testing
-    - **B)** System Architecture Security Tool
-    - **C)** Standard Application Security Test
-    - **D)** Secure Architecture and Software Testing
+- **A)** Static Application Security Testing
+- **B)** System Architecture Security Tool
+- **C)** Standard Application Security Test
+- **D)** Secure Architecture and Software Testing
 
 6. Which vulnerability involves an attacker executing malicious scripts in the victim's browser?
-    - **A)** SQL Injection
-    - **B)** Cross-Site Scripting (XSS)
-    - **C)** Buffer Overflow
-    - **D)** Path Traversal
+- **A)** SQL Injection
+- **B)** Cross-Site Scripting (XSS)
+- **C)** Buffer Overflow
+- **D)** Path Traversal
 
 7. How is SQL Injection best prevented?
-    - **A)** Encrypting the database
-    - **B)** Using Parameterized Queries / Prepared Statements
-    - **C)** Using complex passwords
-    - **D)** Installing an IPS
+- **A)** Encrypting the database
+- **B)** Using Parameterized Queries / Prepared Statements
+- **C)** Using complex passwords
+- **D)** Installing an IPS
 
 8. A buffer overflow attack primarily targets which system component?
-    - **A)** Hard drive storage
-    - **B)** Network bandwidth
-    - **C)** System memory (RAM)
-    - **D)** CPU caches
+- **A)** Hard drive storage
+- **B)** Network bandwidth
+- **C)** System memory (RAM)
+- **D)** CPU caches
 
 9. Which tool is used to monitor network traffic for suspicious activity without blocking it?
-    - **A)** Firewall
-    - **B)** IPS
-    - **C)** IDS
-    - **D)** WAF
+- **A)** Firewall
+- **B)** IPS
+- **C)** IDS
+- **D)** WAF
 
 10. Which protocol is typically used to create a secure VPN tunnel over the internet?
-    - **A)** HTTP
-    - **B)** FTP
-    - **C)** IPsec
-    - **D)** Telnet
+- **A)** HTTP
+- **B)** FTP
+- **C)** IPsec
+- **D)** Telnet
 
 ### Answer Key & Explanations
 1. **B.** Traditional packet filters inspect IP addresses (Layer 3) and ports (Layer 4).

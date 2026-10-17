@@ -66,34 +66,34 @@ Walking takes 1 min deterministically (cost -1). Taking a tram takes 2 mins (cos
 ## Multiple Choice Questions
 
 1. How does a Markov Decision Process (MDP) differ from standard state-based models like A* search?
-    - **A)** MDPs rely entirely on heuristic functions to guide search.
-    - **B)** MDPs assume that actions deterministically lead to a single specific state.
-    - **C)** MDPs account for uncertainty by using probabilities that an action might lead to various different states.
-    - **D)** MDPs do not require an initial or start state.
+- **A)** MDPs rely entirely on heuristic functions to guide search.
+- **B)** MDPs assume that actions deterministically lead to a single specific state.
+- **C)** MDPs account for uncertainty by using probabilities that an action might lead to various different states.
+- **D)** MDPs do not require an initial or start state.
 
 2. What is the primary objective when solving a Markov Decision Process?
-    - **A)** Finding the single shortest path to the goal with the lowest computational time.
-    - **B)** Finding an Optimal Policy ($\pi_{opt}$) that dictates the best action to take in every state to maximize expected cumulative reward.
-    - **C)** Calculating the exact heuristic value for every state in the space.
-    - **D)** Eliminating all uncertainty in the transition distribution.
+- **A)** Finding the single shortest path to the goal with the lowest computational time.
+- **B)** Finding an Optimal Policy ($\pi_{opt}$) that dictates the best action to take in every state to maximize expected cumulative reward.
+- **C)** Calculating the exact heuristic value for every state in the space.
+- **D)** Eliminating all uncertainty in the transition distribution.
 
 3. What role does the Discount Factor ($\gamma$) play in an MDP?
-    - **A)** It determines the probability of successfully transitioning to the next state.
-    - **B)** It scales the immediate reward down to ensure the algorithm terminates.
-    - **C)** It determines how much future rewards are valued compared to immediate rewards.
-    - **D)** It acts as the learning rate during the value iteration process.
+- **A)** It determines the probability of successfully transitioning to the next state.
+- **B)** It scales the immediate reward down to ensure the algorithm terminates.
+- **C)** It determines how much future rewards are valued compared to immediate rewards.
+- **D)** It acts as the learning rate during the value iteration process.
 
 4. In the formula for the Optimal Value Function ($V_{opt}$), what happens when the current state $s$ is a goal/end state?
-    - **A)** The value function returns an infinite penalty.
-    - **B)** The value function returns $0$.
-    - **C)** The value function defaults to the discount factor $\gamma$.
-    - **D)** The algorithm enters an infinite loop.
+- **A)** The value function returns an infinite penalty.
+- **B)** The value function returns $0$.
+- **C)** The value function defaults to the discount factor $\gamma$.
+- **D)** The algorithm enters an infinite loop.
 
 5. During Value Iteration (Bellman Equation), how does the algorithm determine when to stop iterating?
-    - **A)** It stops after exactly 100 iterations.
-    - **B)** It stops when every state has a value greater than $1$.
-    - **C)** It stops when the agent finally reaches the goal state.
-    - **D)** It stops when the change in optimal values between iterations falls below a specific threshold (convergence).
+- **A)** It stops after exactly 100 iterations.
+- **B)** It stops when every state has a value greater than $1$.
+- **C)** It stops when the agent finally reaches the goal state.
+- **D)** It stops when the change in optimal values between iterations falls below a specific threshold (convergence).
 
 ### Answer Key & Explanations
 1. **C)** The core distinction of an MDP is handling stochastic (probabilistic) environments where an action (like moving forward) might result in multiple possible next states.

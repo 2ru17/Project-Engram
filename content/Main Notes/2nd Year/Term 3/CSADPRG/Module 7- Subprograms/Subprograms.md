@@ -101,64 +101,64 @@ search.send("You've found Waldo!")
 ## Multiple Choice Questions
 
 1. What is the fundamental form of process abstraction in programming languages that allow the reuse of code?
-    - **A)** Variables
-    - **B)** Subprograms
-    - **C)** Compilers
-    - **D)** Pointers
+- **A)** Variables
+- **B)** Subprograms
+- **C)** Compilers
+- **D)** Pointers
 
 2. Which part of a subprogram provides the protocol but not the body?
-    - **A)** Subprogram Declaration
-    - **B)** Subprogram Header
-    - **C)** Subprogram Definition
-    - **D)** Parameter Profile
+- **A)** Subprogram Declaration
+- **B)** Subprogram Header
+- **C)** Subprogram Definition
+- **D)** Parameter Profile
 
 3. What is the term for dummy variables listed in the subprogram header?
-    - **A)** Actual Parameters
-    - **B)** Closure
-    - **C)** Local Variables
-    - **D)** Formal Parameters
+- **A)** Actual Parameters
+- **B)** Closure
+- **C)** Local Variables
+- **D)** Formal Parameters
 
 4. Which category of subprograms is modeled after mathematical functions and returns values?
-    - **A)** Procedures
-    - **B)** Coroutines
-    - **C)** Closures
-    - **D)** Functions
+- **A)** Procedures
+- **B)** Coroutines
+- **C)** Closures
+- **D)** Functions
 
 5. Which parameter passing method initializes the formal parameter with the actual parameter's value and is normally implemented by copying?
-    - **A)** Pass by Reference
-    - **B)** Pass by Value
-    - **C)** Pass by Name
-    - **D)** Pass by Result
+- **A)** Pass by Reference
+- **B)** Pass by Value
+- **C)** Pass by Name
+- **D)** Pass by Result
 
 6. What type of local variable allows history-sensitive subprograms but does not support recursion?
-    - **A)** Stack-dynamic
-    - **B)** Coroutines
-    - **C)** Static
-    - **D)** Shallow
+- **A)** Stack-dynamic
+- **B)** Coroutines
+- **C)** Static
+- **D)** Shallow
 
 7. In the context of passing subprograms as parameters, which binding rule uses the environment of the subprogram that declared it?
-    - **A)** Shallow binding
-    - **B)** Ad hoc binding
-    - **C)** Deep binding
-    - **D)** Dynamic binding
+- **A)** Shallow binding
+- **B)** Ad hoc binding
+- **C)** Deep binding
+- **D)** Dynamic binding
 
 8. What type of polymorphism is implemented via overloaded subprograms with the same name but different protocols?
-    - **A)** Subtype polymorphism
-    - **B)** Ad hoc polymorphism
-    - **C)** Parametric polymorphism
-    - **D)** Deep polymorphism
+- **A)** Subtype polymorphism
+- **B)** Ad hoc polymorphism
+- **C)** Parametric polymorphism
+- **D)** Deep polymorphism
 
 9. What is a closure?
-    - **A)** A subprogram that modifies its actual parameters
-    - **B)** A nested subprogram and its referencing environment
-    - **C)** A subprogram with multiple entry points
-    - **D)** A parameter passing method
+- **A)** A subprogram that modifies its actual parameters
+- **B)** A nested subprogram and its referencing environment
+- **C)** A subprogram with multiple entry points
+- **D)** A parameter passing method
 
 10. A subprogram with multiple entry points controlled by the subprograms themselves is called a:
-    - **A)** Procedure
-    - **B)** Function
-    - **C)** Coroutine
-    - **D)** Prototype
+- **A)** Procedure
+- **B)** Function
+- **C)** Coroutine
+- **D)** Prototype
 
 ### Answer Key & Explanations
 

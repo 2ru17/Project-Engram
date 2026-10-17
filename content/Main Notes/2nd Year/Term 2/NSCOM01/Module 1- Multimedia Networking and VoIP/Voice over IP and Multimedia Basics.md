@@ -71,64 +71,64 @@ Given an audio encoding rate of 64 kbps and a packetization interval of 20 ms.
 
 ## Multiple Choice Questions
 1. What is the maximum recommended end-to-end delay for a seamless VoIP conversation?
-    - **A)** 50 ms
-    - **B)** 150 ms
-    - **C)** 400 ms
-    - **D)** 1000 ms
+- **A)** 50 ms
+- **B)** 150 ms
+- **C)** 400 ms
+- **D)** 1000 ms
 
 2. A packet that arrives after its scheduled playout time in VoIP is:
-    - **A)** Buffered until the next talk spurt
-    - **B)** Sent back to the sender
-    - **C)** Considered as delay loss and discarded
-    - **D)** Played immediately, causing an audio glitch
+- **A)** Buffered until the next talk spurt
+- **B)** Sent back to the sender
+- **C)** Considered as delay loss and discarded
+- **D)** Played immediately, causing an audio glitch
 
 3. Which of the following is NOT a component of network delay?
-    - **A)** Transmission delay
-    - **B)** Propagation delay
-    - **C)** Queueing delay
-    - **D)** Packetization delay
+- **A)** Transmission delay
+- **B)** Propagation delay
+- **C)** Queueing delay
+- **D)** Packetization delay
 
 4. If an audio stream is encoded at 64 kbps and packetized every 20 msec, how many bytes of audio data are in each chunk?
-    - **A)** 64 bytes
-    - **B)** 128 bytes
-    - **C)** 160 bytes
-    - **D)** 320 bytes
+- **A)** 64 bytes
+- **B)** 128 bytes
+- **C)** 160 bytes
+- **D)** 320 bytes
 
 5. The variation in end-to-end delays of consecutive packets is known as:
-    - **A)** Packet drop
-    - **B)** Jitter
-    - **C)** Interleaving
-    - **D)** Playout delay
+- **A)** Packet drop
+- **B)** Jitter
+- **C)** Interleaving
+- **D)** Playout delay
 
 6. How does a larger playout buffer (larger $q$) affect the VoIP stream?
-    - **A)** It reduces packet loss but worsens interactivity.
-    - **B)** It improves interactivity but increases packet loss.
-    - **C)** It eliminates network congestion.
-    - **D)** It decreases the size of the IP header.
+- **A)** It reduces packet loss but worsens interactivity.
+- **B)** It improves interactivity but increases packet loss.
+- **C)** It eliminates network congestion.
+- **D)** It decreases the size of the IP header.
 
 7. What is the primary benefit of the interleaving technique?
-    - **A)** It reduces the required bandwidth.
-    - **B)** It eliminates all network delays.
-    - **C)** It conceals packet loss without adding redundancy overhead.
-    - **D)** It converts UDP packets to TCP packets.
+- **A)** It reduces the required bandwidth.
+- **B)** It eliminates all network delays.
+- **C)** It conceals packet loss without adding redundancy overhead.
+- **D)** It converts UDP packets to TCP packets.
 
 8. What is the main drawback of interleaving?
-    - **A)** It doubles the bandwidth usage.
-    - **B)** It increases the playout delay.
-    - **C)** It requires specialized router hardware.
-    - **D)** It cannot be used during silent periods.
+- **A)** It doubles the bandwidth usage.
+- **B)** It increases the playout delay.
+- **C)** It requires specialized router hardware.
+- **D)** It cannot be used during silent periods.
 
 9. VoIP systems can typically tolerate what percentage of packet loss?
-    - **A)** 0%
-    - **B)** 1% to 10%
-    - **C)** 15% to 25%
-    - **D)** 30% to 50%
+- **A)** 0%
+- **B)** 1% to 10%
+- **C)** 15% to 25%
+- **D)** 30% to 50%
 
 10. In VoIP, data is typically encapsulated in which transport layer protocol to minimize overhead and delay?
-    - **A)** TCP
-    - **B)** UDP
-    - **C)** HTTP
-    - **D)** FTP
+- **A)** TCP
+- **B)** UDP
+- **C)** HTTP
+- **D)** FTP
 
 ### Answer Key & Explanations
 1. **B** - End-to-end delay must be < 150 ms for seamless conversation.

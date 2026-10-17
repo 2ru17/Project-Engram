@@ -120,64 +120,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "If node $A$ is $B$’s predecessor, then _____ \to B) = D(B) - D(A)$."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** textcostA
-    - **D)** Protocol
+- **A)** Router
+- **B)** Network
+- **C)** textcostA
+- **D)** Protocol
 
 2. Which word completes the following sentence from the text: "**Conclusion:** The table shows that the shortest path to W is direct _____ X) and the shortest path to Y is direct (via X)."?
-    - **A)** Protocol
-    - **B)** Network
-    - **C)** Router
-    - **D)** via
+- **A)** Protocol
+- **B)** Network
+- **C)** Router
+- **D)** via
 
 3. Which word completes the following sentence from the text: "Since the actual cost to _____ is 3, this is impossible."?
-    - **A)** W
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** Network
+- **A)** W
+- **B)** Protocol
+- **C)** Router
+- **D)** Network
 
 4. Which word completes the following sentence from the text: "**Analyze the Table (Row Z):** **Destination:** Z _____ Distance:** 9 **Previous Node:** Y  3."?
-    - **A)** Shortest
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** Network
+- **A)** Shortest
+- **B)** Protocol
+- **C)** Router
+- **D)** Network
 
 5. Which word completes the following sentence from the text: "**Correct Answer:** **2**  ## Summary of Logic (Cheat Sheet)  Reverse Engineering Formula:  $$\text{Cost}(\text{Link } A \rightarrow _____ = D(B) - D(A)$$  (This only applies if A is the "Previous Node" for B)."?
-    - **A)** B
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** Network
+- **A)** B
+- **B)** Router
+- **C)** Protocol
+- **D)** Network
 
 6. Which word completes the following sentence from the text: "--- id: Dijkstra's-Algorithm-(Advanced) type: note course: CSNETWK topic: status: completed ---  # Dijkstra's Algorithm (Advanced)  > [!info] Document Metadata > - **Course:** `=this.course` > - **Topic:** `=this.topic` > - **Status:** `=this.status`  **🏷️ Tags:** #[[CSNETWK]] #[[Computer _____ #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]  ---  ## Overview  > In advanced problems, you may be given the result (the forwarding table) and asked to deduce the missing properties of the network (link costs)."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Science
+- **A)** Router
+- **B)** Network
+- **C)** Protocol
+- **D)** Science
 
 7. Which word completes the following sentence from the text: "If we went X $\rightarrow$ W $\rightarrow$ _____ cost would be $3 + \text{cost}(x)$."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Y
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** Y
+- **D)** Network
 
 8. Which word completes the following sentence from the text: "Links unused in any shortest _____ may have unknown exact costs."?
-    - **A)** Router
-    - **B)** path
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Router
+- **B)** path
+- **C)** Network
+- **D)** Protocol
 
 9. Which word completes the following sentence from the text: "Mathematically: $D(Z) = D(Y) + c(Y,Z)$  Substitute values from table: $9 = _____ + c(Y,Z)$  Solve for $c(Y,Z)$: $9 - 7 = 2$  4."?
-    - **A)** 7
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** 7
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 10. Which word completes the following sentence from the text: "If we went X $\rightarrow$ Y $\rightarrow$ _____ cost would be $7 + \text{cost}(x)$."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** W
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** W
 
 
 ### Answer Key & Explanations

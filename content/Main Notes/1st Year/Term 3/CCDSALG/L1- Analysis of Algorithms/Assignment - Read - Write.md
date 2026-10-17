@@ -84,38 +84,38 @@ _To be added._
 ## Multiple Choice Questions
 
 1. In frequency counting, what is the generally accepted count for a single assignment statement?
-    - **A)** 0
-    - **B)** 1
-    - **C)** It depends on the size of the variable
-    - **D)** It depends on the complexity of the expression
+- **A)** 0
+- **B)** 1
+- **C)** It depends on the size of the variable
+- **D)** It depends on the complexity of the expression
 
 2. Why are assignments, reads, and writes counted as exactly 1 operation?
-    - **A)** Because they require a single clock cycle on all machines
-    - **B)** Based on the RAM model assumption that each basic instruction takes constant time
-    - **C)** Because they are executed concurrently
-    - **D)** Because memory is infinitely fast
+- **A)** Because they require a single clock cycle on all machines
+- **B)** Based on the RAM model assumption that each basic instruction takes constant time
+- **C)** Because they are executed concurrently
+- **D)** Because memory is infinitely fast
 
 3. Given the code:
 a = 15
 b = a * 5
 c = (b + 3) / 2 % a * b
 What is the total frequency count for these operations?
-    - **A)** 1
-    - **B)** 3
-    - **C)** 5
-    - **D)** 7
+- **A)** 1
+- **B)** 3
+- **C)** 5
+- **D)** 7
 
 4. How are output operations, such as `print(y)`, counted in frequency analysis?
-    - **A)** 0, because they don't affect variables
-    - **B)** 1, as a distinct write operation
-    - **C)** Based on the number of characters printed
-    - **D)** They are ignored in the RAM model
+- **A)** 0, because they don't affect variables
+- **B)** 1, as a distinct write operation
+- **C)** Based on the number of characters printed
+- **D)** They are ignored in the RAM model
 
 5. Which of the following is a common pitfall in frequency counting for assignments?
-    - **A)** Counting an assignment as multiple operations if it contains a compound expression
-    - **B)** Forgetting to count assignment operations completely
-    - **C)** Counting print statements as multiple read operations
-    - **D)** Assuming assignments take non-constant time
+- **A)** Counting an assignment as multiple operations if it contains a compound expression
+- **B)** Forgetting to count assignment operations completely
+- **C)** Counting print statements as multiple read operations
+- **D)** Assuming assignments take non-constant time
 
 ### Answer Key & Explanations
 1. **B)** Each individual assignment, read, or write statement is counted as 1 unit.

@@ -69,64 +69,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What strictly defines a matrix as an upper triangular matrix?
-    - **A)** All entries on the main diagonal are zero.
-    - **B)** All entries strictly below the main diagonal are zero.
-    - **C)** All entries strictly above the main diagonal are zero.
-    - **D)** All non-zero entries are positive.
+- **A)** All entries on the main diagonal are zero.
+- **B)** All entries strictly below the main diagonal are zero.
+- **C)** All entries strictly above the main diagonal are zero.
+- **D)** All non-zero entries are positive.
 
 2. For an upper triangular matrix $U = [a_{ij}]$, what is the formal index condition for the zero entries?
-    - **A)** $a_{ij} = 0$ for all $i < j$
-    - **B)** $a_{ij} = 0$ for all $i = j$
-    - **C)** $a_{ij} = 0$ for all $i > j$
-    - **D)** $a_{ij} \neq 0$ for all $i > j$
+- **A)** $a_{ij} = 0$ for all $i < j$
+- **B)** $a_{ij} = 0$ for all $i = j$
+- **C)** $a_{ij} = 0$ for all $i > j$
+- **D)** $a_{ij} \neq 0$ for all $i > j$
 
 3. In an upper triangular matrix, what is the rule regarding the entries on or above the main diagonal?
-    - **A)** They must all be exactly one.
-    - **B)** They must all be strictly non-zero.
-    - **C)** They can be either zero or nonzero.
-    - **D)** They must be negative.
+- **A)** They must all be exactly one.
+- **B)** They must all be strictly non-zero.
+- **C)** They can be either zero or nonzero.
+- **D)** They must be negative.
 
 4. What is the resulting matrix type when multiplying two upper triangular matrices together?
-    - **A)** A lower triangular matrix.
-    - **B)** A diagonal matrix.
-    - **C)** An identity matrix.
-    - **D)** An upper triangular matrix.
+- **A)** A lower triangular matrix.
+- **B)** A diagonal matrix.
+- **C)** An identity matrix.
+- **D)** An upper triangular matrix.
 
 5. How do you easily calculate the determinant of an upper triangular matrix?
-    - **A)** By calculating the sum of the main diagonal entries.
-    - **B)** By calculating the trace of the matrix.
-    - **C)** By multiplying all the entries on its main diagonal.
-    - **D)** The determinant is always zero.
+- **A)** By calculating the sum of the main diagonal entries.
+- **B)** By calculating the trace of the matrix.
+- **C)** By multiplying all the entries on its main diagonal.
+- **D)** The determinant is always zero.
 
 6. Taking the transpose of an upper triangular matrix yields what kind of matrix?
-    - **A)** A lower triangular matrix.
-    - **B)** A diagonal matrix.
-    - **C)** A symmetric matrix.
-    - **D)** Another upper triangular matrix.
+- **A)** A lower triangular matrix.
+- **B)** A diagonal matrix.
+- **C)** A symmetric matrix.
+- **D)** Another upper triangular matrix.
 
 7. Gaussian elimination transforms a matrix into an upper triangular form to simplify solving equations. What is another common name for this resulting upper triangular form?
-    - **A)** Reduced Column Echelon Form
-    - **B)** Row Echelon Form
-    - **C)** Normal Form
-    - **D)** Diagonal Form
+- **A)** Reduced Column Echelon Form
+- **B)** Row Echelon Form
+- **C)** Normal Form
+- **D)** Diagonal Form
 
 8. If an upper triangular matrix contains a zero on its main diagonal, what must be mathematically true about the matrix?
-    - **A)** It is an identity matrix.
-    - **B)** It is an invertible matrix.
-    - **C)** It is a singular (non-invertible) matrix.
-    - **D)** It is a skew-symmetric matrix.
+- **A)** It is an identity matrix.
+- **B)** It is an invertible matrix.
+- **C)** It is a singular (non-invertible) matrix.
+- **D)** It is a skew-symmetric matrix.
 
 9. Which of the following operations preserves the upper triangular property of matrices?
-    - **A)** Matrix addition of two upper triangular matrices.
-    - **B)** Taking the transpose of the matrix.
-    - **C)** Multiplying by a lower triangular matrix.
-    - **D)** Swapping the first two rows.
+- **A)** Matrix addition of two upper triangular matrices.
+- **B)** Taking the transpose of the matrix.
+- **C)** Multiplying by a lower triangular matrix.
+- **D)** Swapping the first two rows.
 
 10. What is a common pitfall when identifying an upper triangular matrix?
-    - **A)** Mistakenly thinking that "upper" means the zeros are located above the diagonal.
-    - **B)** Assuming it must be a non-square matrix.
-    - **C)** Thinking the determinant cannot be computed.
-    - **D)** Believing all diagonal entries must be non-zero.
+- **A)** Mistakenly thinking that "upper" means the zeros are located above the diagonal.
+- **B)** Assuming it must be a non-square matrix.
+- **C)** Thinking the determinant cannot be computed.
+- **D)** Believing all diagonal entries must be non-zero.
 
 ### Answer Key & Explanations
 1. **B)** An upper triangular matrix is defined as a square matrix where all entries below the main diagonal are zero.

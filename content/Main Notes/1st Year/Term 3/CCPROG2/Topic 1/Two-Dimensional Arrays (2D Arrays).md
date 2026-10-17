@@ -121,20 +121,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. How is a two-dimensional array typically conceptualized?
-    - **A)** As a line of points
-    - **B)** As a 3D cube
-    - **C)** As a table with rows and columns
-    - **D)** As a linked list
+- **A)** As a line of points
+- **B)** As a 3D cube
+- **C)** As a table with rows and columns
+- **D)** As a linked list
 2. In the declaration `int matrix[4][5];`, how many total elements can the array hold?
-    - **A)** 9
-    - **B)** 20
-    - **C)** 4
-    - **D)** 5
+- **A)** 9
+- **B)** 20
+- **C)** 4
+- **D)** 5
 3. What is the correct way to initialize a 2D array?
-    - **A)** `int arr[2][2] = {1, 2, 3, 4};`
-    - **B)** `int arr[2][2] = {{1, 2}, {3, 4}};`
-    - **C)** Both A and B are valid
-    - **D)** `int arr[2][2] = (1, 2) (3, 4);`
+- **A)** `int arr[2][2] = {1, 2, 3, 4};`
+- **B)** `int arr[2][2] = {{1, 2}, {3, 4}};`
+- **C)** Both A and B are valid
+- **D)** `int arr[2][2] = (1, 2) (3, 4);`
 
 ### Answer Key & Explanations
 1. **C)** The dual indices naturally map to horizontal rows and vertical columns creating a grid.

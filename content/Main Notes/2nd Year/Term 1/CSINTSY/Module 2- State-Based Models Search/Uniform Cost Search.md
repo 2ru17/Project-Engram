@@ -56,34 +56,34 @@ When finding a route from QC to Taguig where edge weights represent traffic, UCS
 ## Multiple Choice Questions
 
 1. Which issue found in basic search algorithms does Uniform Cost Search (UCS) address by applying Dynamic Programming?
-    - **A)** The inability to handle negative edge costs.
-    - **B)** The generation of finite state spaces.
-    - **C)** Inefficiencies caused by exploring the same states multiple times (backtracking overlap).
-    - **D)** The calculation of heuristic estimates.
+- **A)** The inability to handle negative edge costs.
+- **B)** The generation of finite state spaces.
+- **C)** Inefficiencies caused by exploring the same states multiple times (backtracking overlap).
+- **D)** The calculation of heuristic estimates.
 
 2. What is a key limitation of Uniform Cost Search (UCS)?
-    - **A)** It cannot handle negative edge costs.
-    - **B)** It is incomplete even if the state space is finite.
-    - **C)** It relies purely on the depth of the search tree.
-    - **D)** It does not guarantee an optimal path.
+- **A)** It cannot handle negative edge costs.
+- **B)** It is incomplete even if the state space is finite.
+- **C)** It relies purely on the depth of the search tree.
+- **D)** It does not guarantee an optimal path.
 
 3. In the Dynamic Programming Minimum Cost formula for UCS, what is the value of $\text{MinCost}(s)$ if $s$ is a goal state ($\text{IsEnd}(s)$ is true)?
-    - **A)** Infinity
-    - **B)** $1$
-    - **C)** $0$
-    - **D)** The sum of all previous action costs
+- **A)** Infinity
+- **B)** $1$
+- **C)** $0$
+- **D)** The sum of all previous action costs
 
 4. How does UCS determine which state to explore next from the FRONTIER?
-    - **A)** It selects the state that was added most recently.
-    - **B)** It selects the state with the lowest cumulative cost (priority $p$).
-    - **C)** It randomly selects a state to ensure uniform exploration.
-    - **D)** It selects the state with the most available actions.
+- **A)** It selects the state that was added most recently.
+- **B)** It selects the state with the lowest cumulative cost (priority $p$).
+- **C)** It randomly selects a state to ensure uniform exploration.
+- **D)** It selects the state with the most available actions.
 
 5. When a new successor $s'$ is generated and is not yet in the EXPLORED set, how is its priority calculated before being added to the FRONTIER?
-    - **A)** Priority is set to $0$.
-    - **B)** Priority is simply $\text{Cost}(s, a)$.
-    - **C)** Priority is calculated as $p + \text{Cost}(s, a)$, where $p$ is the current state's priority.
-    - **D)** Priority is derived from a heuristic function predicting the distance to the goal.
+- **A)** Priority is set to $0$.
+- **B)** Priority is simply $\text{Cost}(s, a)$.
+- **C)** Priority is calculated as $p + \text{Cost}(s, a)$, where $p$ is the current state's priority.
+- **D)** Priority is derived from a heuristic function predicting the distance to the goal.
 
 ### Answer Key & Explanations
 1. **C)** UCS uses elements of dynamic programming (caching explored states) to avoid exploring the same states multiple times.

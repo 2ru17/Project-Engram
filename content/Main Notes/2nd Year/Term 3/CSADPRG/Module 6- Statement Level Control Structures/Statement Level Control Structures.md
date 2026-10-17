@@ -123,64 +123,64 @@ od
 ## Multiple Choice Questions
 
 1. What do a control statement and the statements it governs form together?
-    - **A)** Iterative Statement
-    - **B)** Guarded Command
-    - **C)** Control Structure
-    - **D)** Selection Statement
+- **A)** Iterative Statement
+- **B)** Guarded Command
+- **C)** Control Structure
+- **D)** Selection Statement
 
 2. Which statement provides a means of choosing between two or more execution paths?
-    - **A)** Iterative Statement
-    - **B)** Control Structure
-    - **C)** Guarded Command
-    - **D)** Selection Statement
+- **A)** Iterative Statement
+- **B)** Control Structure
+- **C)** Guarded Command
+- **D)** Selection Statement
 
 3. What design issue is typically addressed by using block braces or specific end markers like `end` or `fi` in two-way selection?
-    - **A)** The dangling else problem
-    - **B)** Non-determinism
-    - **C)** Automatic exit
-    - **D)** Multiple-selection representation
+- **A)** The dangling else problem
+- **B)** Non-determinism
+- **C)** Automatic exit
+- **D)** Multiple-selection representation
 
 4. In multiple-selection statements, how does C differ from C# regarding flow restriction?
-    - **A)** C requires automatic exit, while C# requires `break`
-    - **B)** C requires `break` to exit a segment, while C# provides automatic exit
-    - **C)** C does not allow multiple selection, while C# does
-    - **D)** C# raises a runtime exception, while C defaults to the next case
+- **A)** C requires automatic exit, while C# requires `break`
+- **B)** C requires `break` to exit a segment, while C# provides automatic exit
+- **C)** C does not allow multiple selection, while C# does
+- **D)** C# raises a runtime exception, while C defaults to the next case
 
 5. Which iteration control mechanism evaluates the loop completion condition *after* the body is executed?
-    - **A)** Pretest
-    - **B)** Logical
-    - **C)** Counting
-    - **D)** Posttest
+- **A)** Pretest
+- **B)** Logical
+- **C)** Counting
+- **D)** Posttest
 
 6. How is iteration implemented in pure functional languages?
-    - **A)** Using `for` loops
-    - **B)** Using `do...while` loops
-    - **C)** Using iterators
-    - **D)** Using recursion
+- **A)** Using `for` loops
+- **B)** Using `do...while` loops
+- **C)** Using iterators
+- **D)** Using recursion
 
 7. Which control structure was proposed by Edsger Dijkstra in 1975?
-    - **A)** Selection Commands
-    - **B)** Guarded Commands
-    - **C)** Two-way Iterations
-    - **D)** Unconditional Branches
+- **A)** Selection Commands
+- **B)** Guarded Commands
+- **C)** Two-way Iterations
+- **D)** Unconditional Branches
 
 8. What happens in a Guarded Command if none of the guards are true?
-    - **A)** It defaults to the first guard
-    - **B)** It raises a runtime exception
-    - **C)** It loops infinitely
-    - **D)** It chooses non-deterministically
+- **A)** It defaults to the first guard
+- **B)** It raises a runtime exception
+- **C)** It loops infinitely
+- **D)** It chooses non-deterministically
 
 9. Why is the unrestricted `goto` statement generally considered dangerous?
-    - **A)** Because it requires block braces
-    - **B)** Because it evaluates boolean expressions randomly
-    - **C)** Because unrestricted use makes programs extremely difficult to read
-    - **D)** Because it only supports pure functional languages
+- **A)** Because it requires block braces
+- **B)** Because it evaluates boolean expressions randomly
+- **C)** Because unrestricted use makes programs extremely difficult to read
+- **D)** Because it only supports pure functional languages
 
 10. Which iteration mechanism is typically controlled by traversing elements until none remain?
-    - **A)** Counting iteration
-    - **B)** Iteration based on Data Structures
-    - **C)** User-located iteration
-    - **D)** Guarded Iteration
+- **A)** Counting iteration
+- **B)** Iteration based on Data Structures
+- **C)** User-located iteration
+- **D)** Guarded Iteration
 
 ### Answer Key & Explanations
 1. **C** - A control structure is defined as a control statement combined with the collection of statements whose execution it controls.

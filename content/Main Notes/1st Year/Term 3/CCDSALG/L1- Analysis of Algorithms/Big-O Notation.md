@@ -57,22 +57,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What does the notation $f(n) = O(g(n))$ mean?
-    - **A)** $f(n)$ grows exactly at the same rate as $g(n)$
-    - **B)** $f(n)$ grows no faster than $g(n)$
-    - **C)** $f(n)$ grows at least as fast as $g(n)$
-    - **D)** $f(n)$ is independent of $g(n)$
+- **A)** $f(n)$ grows exactly at the same rate as $g(n)$
+- **B)** $f(n)$ grows no faster than $g(n)$
+- **C)** $f(n)$ grows at least as fast as $g(n)$
+- **D)** $f(n)$ is independent of $g(n)$
 
 2. Which of the following correctly describes Big-O notation?
-    - **A)** It represents the best-case lower bound of an algorithm.
-    - **B)** It gives an asymptotic tight bound.
-    - **C)** It represents an asymptotic upper bound.
-    - **D)** It measures the space complexity only.
+- **A)** It represents the best-case lower bound of an algorithm.
+- **B)** It gives an asymptotic tight bound.
+- **C)** It represents an asymptotic upper bound.
+- **D)** It measures the space complexity only.
 
 3. Is the function $6n^3 + 2n^2 + 3n + 8$ considered $O(n^4)$?
-    - **A)** Yes, because it grows no faster than $n^4$.
-    - **B)** No, because $O(n^3)$ is the only valid Big-O notation for it.
-    - **C)** Yes, but only for $n < 0$.
-    - **D)** No, because it grows faster than $n^4$.
+- **A)** Yes, because it grows no faster than $n^4$.
+- **B)** No, because $O(n^3)$ is the only valid Big-O notation for it.
+- **C)** Yes, but only for $n < 0$.
+- **D)** No, because it grows faster than $n^4$.
 
 ### Answer Key & Explanations
 1. **B)** Big-O notation means $f(n)$ grows no faster than $g(n)$, acting as an asymptotic upper bound.

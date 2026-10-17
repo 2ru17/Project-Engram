@@ -71,64 +71,64 @@ $m = 17^{29} \pmod{35} = 12$
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "*Cons:* Requires a secure way _____ establish the shared key beforehand."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** to
-    - **D)** Protocol
+- **A)** Router
+- **B)** Network
+- **C)** to
+- **D)** Protocol
 
 2. Which word completes the following sentence from the text: "The sender must encrypt the _____ to prove they are live."?
-    - **A)** nonce
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** Router
+- **A)** nonce
+- **B)** Protocol
+- **C)** Network
+- **D)** Router
 
 3. Which word completes the following sentence from the text: "To send a confidential message, the sender _____ it using the receiver's public key."?
-    - **A)** encrypts
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** encrypts
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 4. Which word completes the following sentence from the text: "The CA issues a certificate containing the entity's public _____ digitally signed by the CA's own private key."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** key
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** key
+- **D)** Network
 
 5. Which word completes the following sentence from the text: "(Wait, the notes used $d=29$ because $29 \times _____ = 145 = 6 \times 24 + 1$)."?
-    - **A)** 5
-    - **B)** Network
-    - **C)** Router
-    - **D)** Protocol
+- **A)** 5
+- **B)** Network
+- **C)** Router
+- **D)** Protocol
 
 6. Which word completes the following sentence from the text: "**RSA Decryption:**   $$ m = c^d _____ n $$  **Modular Arithmetic Properties:**   $$ (a \pmod n \times b \pmod n) \pmod n = (a \times b) \pmod n $$   $$ (m^e \pmod n)^d \pmod n = m^{ed} \pmod n = m $$  ## Worked Examples  **Example 1: RSA Key Generation and Encryption** 1."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** pmod
+- **A)** Network
+- **B)** Router
+- **C)** Protocol
+- **D)** pmod
 
 7. Which word completes the following sentence from the text: "**Access and Availability:** Services must _____ accessible to legitimate users."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** be
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** be
 
 8. Which word completes the following sentence from the text: "**Public Key Cryp_____graphy:** The receiver has a public key (known to everyone) and a private key (known only to them)."?
-    - **A)** to
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** to
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 9. Which word completes the following sentence from the text: "**Symmetric Key Cryptography:** Both sender and _____ share the same secret key."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** receiver
-    - **D)** Router
+- **A)** Network
+- **B)** Protocol
+- **C)** receiver
+- **D)** Router
 
 10. Which word completes the following sentence from the text: "A sender signs a document by _____ it with their *private* key."?
-    - **A)** encrypting
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** Network
+- **A)** encrypting
+- **B)** Router
+- **C)** Protocol
+- **D)** Network
 
 
 ### Answer Key & Explanations

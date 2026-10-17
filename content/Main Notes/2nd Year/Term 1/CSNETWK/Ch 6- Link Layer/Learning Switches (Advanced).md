@@ -98,64 +98,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "Cross-switch traffic updates both switches; _____ traffic updates only one."?
-    - **A)** sameswitch
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** Router
+- **A)** sameswitch
+- **B)** Protocol
+- **C)** Network
+- **D)** Router
 
 2. Which word completes the following sentence from the text: "_Hypothesis for this Problem:_ The problem likely assumes a simple _____ where TTL represents "Time Step" or the order of events."?
-    - **A)** counter
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** Network
+- **A)** counter
+- **B)** Router
+- **C)** Protocol
+- **D)** Network
 
 3. Which word completes the following sentence from the text: "However, the solution says _____ was C $\rightarrow$ L"."?
-    - **A)** Router
-    - **B)** Transmission
-    - **C)** Protocol
-    - **D)** Network
+- **A)** Router
+- **B)** Transmission
+- **C)** Protocol
+- **D)** Network
 
 4. Which word completes the following sentence from the text: "**Check for Replies:** Remember that every transmission $A _____ B$ is immediately followed by $B \rightarrow A$."?
-    - **A)** rightarrow
-    - **B)** Router
-    - **C)** Network
-    - **D)** Protocol
+- **A)** rightarrow
+- **B)** Router
+- **C)** Network
+- **D)** Protocol
 
 5. Which word completes the following sentence from the text: "When an entry is created or refreshed (seen again), the _____ is reset to the max value (e.g., 60 minutes)."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** TTL
-    - **D)** Protocol
+- **A)** Network
+- **B)** Router
+- **C)** TTL
+- **D)** Protocol
 
 6. Which word completes the following sentence from the text: "Since both are on the same switch, traffic G $\rightarrow$ H _____ local to Switch 2 _if_ Switch 2 already knows H."?
-    - **A)** stays
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** Network
+- **A)** stays
+- **B)** Protocol
+- **C)** Router
+- **D)** Network
 
 7. Which word completes the following sentence from the text: "If the table provided shows _different_ TTL values, _____ implies the entries were created at different times."?
-    - **A)** Protocol
-    - **B)** it
-    - **C)** Router
-    - **D)** Network
+- **A)** Protocol
+- **B)** it
+- **C)** Router
+- **D)** Network
 
 8. Which word completes the following sentence from the text: "_Example:_ If the question asks about $t=4$, look for entries _____ have a value indicating they were touched at step 4."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Protocol
-    - **D)** that
+- **A)** Network
+- **B)** Router
+- **C)** Protocol
+- **D)** that
 
 9. Which word completes the following sentence from the text: "This means **C** would be added to Switch _____ (Int 3) and Switch 2 (Int 8)."?
-    - **A)** 1
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** 1
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 10. Which word completes the following sentence from the text: "In learning switch problems, we typically track the **Source** _____ that is who gets added to the table."?
-    - **A)** because
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** because
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 
 ### Answer Key & Explanations

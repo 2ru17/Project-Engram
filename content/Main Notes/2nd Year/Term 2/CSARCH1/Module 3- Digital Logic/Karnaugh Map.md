@@ -56,64 +56,64 @@ A Karnaugh Map (K-map) is represented by $2^m$ squares where $m$ is the number o
 ## Multiple Choice Questions
 
 1. In a Karnaugh Map, the number of squares is given by 2^m. What does 'm' represent?
-    - **A)** The number of minterms
-    - **B)** The number of maxterms
-    - **C)** The number of variables
-    - **D)** The number of rows in the table
+- **A)** The number of minterms
+- **B)** The number of maxterms
+- **C)** The number of variables
+- **D)** The number of rows in the table
 
 2. When grouping cells in a K-map, the number of cells in a group must be a factor of:
-    - **A)** 2^n
-    - **B)** n^2
-    - **C)** 2n
-    - **D)** n!
+- **A)** 2^n
+- **B)** n^2
+- **C)** 2n
+- **D)** n!
 
 3. What is the shape or direction of valid groupings in a K-map?
-    - **A)** Diagonal only
-    - **B)** Horizontal or vertical only
-    - **C)** Any connected adjacent squares including diagonals
-    - **D)** Only square blocks, no straight lines
+- **A)** Diagonal only
+- **B)** Horizontal or vertical only
+- **C)** Any connected adjacent squares including diagonals
+- **D)** Only square blocks, no straight lines
 
 4. Why is it beneficial to cover as many 1s (or 0s) as possible in a single K-map group?
-    - **A)** It increases the number of variables in the term
-    - **B)** It minimizes the number of literals in the final expression
-    - **C)** It prevents overlapping groups
-    - **D)** It eliminates the need for maxterms
+- **A)** It increases the number of variables in the term
+- **B)** It minimizes the number of literals in the final expression
+- **C)** It prevents overlapping groups
+- **D)** It eliminates the need for maxterms
 
 5. When is a group in a K-map considered "redundant"?
-    - **A)** When it contains an odd number of 1s
-    - **B)** When all its entries are already covered by other groups
-    - **C)** When it uses don't-care conditions
-    - **D)** When it wraps around the edges of the map
+- **A)** When it contains an odd number of 1s
+- **B)** When all its entries are already covered by other groups
+- **C)** When it uses don't-care conditions
+- **D)** When it wraps around the edges of the map
 
 6. Can a single minterm or maxterm be used more than once in K-map groupings?
-    - **A)** Yes, if it helps make a group bigger
-    - **B)** Yes, but only in 5-variable maps
-    - **C)** No, each must belong to exactly one group
-    - **D)** No, reusing terms invalidates the Boolean expression
+- **A)** Yes, if it helps make a group bigger
+- **B)** Yes, but only in 5-variable maps
+- **C)** No, each must belong to exactly one group
+- **D)** No, reusing terms invalidates the Boolean expression
 
 7. For a 3-variable K-map representing F(x,y,z), what are the column headers typically labeled as if using gray code?
-    - **A)** 00, 01, 10, 11
-    - **B)** 00, 01, 11, 10
-    - **C)** 0, 1, 2, 3
-    - **D)** 11, 10, 01, 00
+- **A)** 00, 01, 10, 11
+- **B)** 00, 01, 11, 10
+- **C)** 0, 1, 2, 3
+- **D)** 11, 10, 01, 00
 
 8. What is the primary purpose of a "don't care" condition in a K-map?
-    - **A)** To act as a mandatory 0
-    - **B)** To act as a mandatory 1
-    - **C)** To be included in groups only if it helps make the group bigger and further simplifies the expression
-    - **D)** To indicate an error in the circuit logic
+- **A)** To act as a mandatory 0
+- **B)** To act as a mandatory 1
+- **C)** To be included in groups only if it helps make the group bigger and further simplifies the expression
+- **D)** To indicate an error in the circuit logic
 
 9. In a 4-variable K-map, how many cells does the map contain?
-    - **A)** 8
-    - **B)** 16
-    - **C)** 32
-    - **D)** 64
+- **A)** 8
+- **B)** 16
+- **C)** 32
+- **D)** 64
 
 10. Which of the following is NOT a valid grouping size in a K-map?
-    - **A)** 2
-    - **B)** 4
-    - **C)** 6
-    - **D)** 8
+- **A)** 2
+- **B)** 4
+- **C)** 6
+- **D)** 8
 
 ### Answer Key & Explanations
 1. **C)** The term 'm' specifies the number of Boolean variables involved in the function.

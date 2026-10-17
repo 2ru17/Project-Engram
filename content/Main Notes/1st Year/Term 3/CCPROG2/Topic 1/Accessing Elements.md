@@ -80,64 +80,64 @@ In this scenario, `arr[10]` attempts to read memory far past the end of `arr`. D
 ## Multiple Choice Questions
 
 1. What is the fundamental indexing system used for arrays in C?
-    - **A)** One-based indexing
-    - **B)** Zero-based indexing
-    - **C)** Arbitrary indexing
-    - **D)** Negative indexing
+- **A)** One-based indexing
+- **B)** Zero-based indexing
+- **C)** Arbitrary indexing
+- **D)** Negative indexing
 
 2. Which operator is used to access an array element at a specific index?
-    - **A)** Subscript operator `[]`
-    - **B)** Dereference operator `*`
-    - **C)** Address-of operator `&`
-    - **D)** Arrow operator `->`
+- **A)** Subscript operator `[]`
+- **B)** Dereference operator `*`
+- **C)** Address-of operator `&`
+- **D)** Arrow operator `->`
 
 3. How is the expression `arr[i]` evaluated by the C compiler under the hood?
-    - **A)** `arr + i`
-    - **B)** `*(arr + i)`
-    - **C)** `&arr[i]`
-    - **D)** `arr * i`
+- **A)** `arr + i`
+- **B)** `*(arr + i)`
+- **C)** `&arr[i]`
+- **D)** `arr * i`
 
 4. What happens when a programmer accesses an array index outside its allocated bounds in C?
-    - **A)** The compiler throws a syntax error
-    - **B)** The program automatically resizes the array
-    - **C)** It results in undefined behavior
-    - **D)** It always returns null
+- **A)** The compiler throws a syntax error
+- **B)** The program automatically resizes the array
+- **C)** It results in undefined behavior
+- **D)** It always returns null
 
 5. In an array declared as `int scores[5]`, what is the maximum valid index?
-    - **A)** 5
-    - **B)** 4
-    - **C)** 6
-    - **D)** 0
+- **A)** 5
+- **B)** 4
+- **C)** 6
+- **D)** 0
 
 6. What concept forms the underlying mechanism for array indexing in C?
-    - **A)** Dynamic memory allocation
-    - **B)** Pointer arithmetic
-    - **C)** Object-oriented encapsulation
-    - **D)** Garbage collection
+- **A)** Dynamic memory allocation
+- **B)** Pointer arithmetic
+- **C)** Object-oriented encapsulation
+- **D)** Garbage collection
 
 7. Which of the following is NOT a consequence of out-of-bounds access in C?
-    - **A)** Reading garbage values
-    - **B)** Buffer overflow
-    - **C)** Segmentation fault
-    - **D)** Automatic bounds correction by the compiler
+- **A)** Reading garbage values
+- **B)** Buffer overflow
+- **C)** Segmentation fault
+- **D)** Automatic bounds correction by the compiler
 
 8. If `arr` is an integer array, what does `arr` decay into when used in an expression?
-    - **A)** A pointer to its first element
-    - **B)** A copy of the entire array
-    - **C)** A boolean value indicating success
-    - **D)** An integer representing its size
+- **A)** A pointer to its first element
+- **B)** A copy of the entire array
+- **C)** A boolean value indicating success
+- **D)** An integer representing its size
 
 9. How do you modify the third element of an array `scores`?
-    - **A)** `scores[3] = value;`
-    - **B)** `scores(2) = value;`
-    - **C)** `scores[2] = value;`
-    - **D)** `scores->3 = value;`
+- **A)** `scores[3] = value;`
+- **B)** `scores(2) = value;`
+- **C)** `scores[2] = value;`
+- **D)** `scores->3 = value;`
 
 10. Why must programmers manually ensure they do not exceed array bounds in C?
-    - **A)** C lacks built-in bounds checking
-    - **B)** The standard library overrides bounds checks
-    - **C)** Compilers are unable to perform pointer arithmetic
-    - **D)** Bounds checking reduces array size
+- **A)** C lacks built-in bounds checking
+- **B)** The standard library overrides bounds checks
+- **C)** Compilers are unable to perform pointer arithmetic
+- **D)** Bounds checking reduces array size
 
 ### Answer Key & Explanations
 1. **B)** C conventions utilize zero-based indexing for locating the first element.

@@ -64,64 +64,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What defines an $n \times n$ square matrix $A$ as nonsingular or invertible?
-    - **A)** Its determinant is exactly zero.
-    - **B)** The existence of an $n \times n$ matrix $B$ such that $AB = BA = I_n$.
-    - **C)** It contains at least one row entirely of zeros.
-    - **D)** It can be factored into two singular matrices.
+- **A)** Its determinant is exactly zero.
+- **B)** The existence of an $n \times n$ matrix $B$ such that $AB = BA = I_n$.
+- **C)** It contains at least one row entirely of zeros.
+- **D)** It can be factored into two singular matrices.
 
 2. If a matrix does not have an inverse, what is the appropriate mathematical term for it?
-    - **A)** Nonsingular
-    - **B)** Identity matrix
-    - **C)** Singular or noninvertible matrix
-    - **D)** Transposed matrix
+- **A)** Nonsingular
+- **B)** Identity matrix
+- **C)** Singular or noninvertible matrix
+- **D)** Transposed matrix
 
 3. Which of the following statements about the uniqueness of a matrix inverse is true?
-    - **A)** A matrix can have infinitely many inverses.
-    - **B)** A matrix typically has two inverses, a left and a right inverse.
-    - **C)** If a matrix has an inverse, its inverse is unique.
-    - **D)** The inverse of a matrix depends on the method used to find it.
+- **A)** A matrix can have infinitely many inverses.
+- **B)** A matrix typically has two inverses, a left and a right inverse.
+- **C)** If a matrix has an inverse, its inverse is unique.
+- **D)** The inverse of a matrix depends on the method used to find it.
 
 4. According to the properties of inverses, what is the inverse of the matrix product $(AB)^{-1}$?
-    - **A)** $A^{-1}B^{-1}$
-    - **B)** $B^{-1}A^{-1}$
-    - **C)** $(BA)^{-1}$
-    - **D)** $AB$
+- **A)** $A^{-1}B^{-1}$
+- **B)** $B^{-1}A^{-1}$
+- **C)** $(BA)^{-1}$
+- **D)** $AB$
 
 5. For an invertible matrix $A$ and a non-zero scalar $k$, what is the expression for the inverse $(kA)^{-1}$?
-    - **A)** $k A^{-1}$
-    - **B)** $-k A^{-1}$
-    - **C)** $\frac{1}{k} A^{-1}$
-    - **D)** $A^{-1} / k^2$
+- **A)** $k A^{-1}$
+- **B)** $-k A^{-1}$
+- **C)** $\frac{1}{k} A^{-1}$
+- **D)** $A^{-1} / k^2$
 
 6. How does the matrix inverse interact with the transpose operation?
-    - **A)** $(A^T)^{-1} = (A^{-1})^T$
-    - **B)** $(A^T)^{-1} = A^{-1}$
-    - **C)** $(A^T)^{-1} = -A^T$
-    - **D)** Transposing a matrix makes it singular.
+- **A)** $(A^T)^{-1} = (A^{-1})^T$
+- **B)** $(A^T)^{-1} = A^{-1}$
+- **C)** $(A^T)^{-1} = -A^T$
+- **D)** Transposing a matrix makes it singular.
 
 7. For a $2 \times 2$ matrix $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, under what condition does the inverse exist?
-    - **A)** The determinant $ad - bc$ is equal to zero.
-    - **B)** The trace $a + d$ is not equal to zero.
-    - **C)** The determinant $ad - bc$ is not equal to zero.
-    - **D)** All entries $a, b, c, d$ are non-zero.
+- **A)** The determinant $ad - bc$ is equal to zero.
+- **B)** The trace $a + d$ is not equal to zero.
+- **C)** The determinant $ad - bc$ is not equal to zero.
+- **D)** All entries $a, b, c, d$ are non-zero.
 
 8. What is the value of the determinant for a square matrix that contains a row or column entirely of zeros?
-    - **A)** 1
-    - **B)** 0, meaning the matrix is singular.
-    - **C)** It depends on the size of the matrix.
-    - **D)** -1
+- **A)** 1
+- **B)** 0, meaning the matrix is singular.
+- **C)** It depends on the size of the matrix.
+- **D)** -1
 
 9. In a linear system represented by the equation $A\mathbf{x} = \mathbf{b}$, what does having a nonsingular matrix $A$ guarantee?
-    - **A)** A unique solution for $\mathbf{x}$ for every possible vector $\mathbf{b}$.
-    - **B)** Infinitely many solutions for $\mathbf{x}$.
-    - **C)** No solutions for $\mathbf{x}$.
-    - **D)** That $\mathbf{b}$ must be the zero vector.
+- **A)** A unique solution for $\mathbf{x}$ for every possible vector $\mathbf{b}$.
+- **B)** Infinitely many solutions for $\mathbf{x}$.
+- **C)** No solutions for $\mathbf{x}$.
+- **D)** That $\mathbf{b}$ must be the zero vector.
 
 10. What is a common synonymous term used interchangeably with "nonsingular" in linear algebra?
-    - **A)** Symmetric
-    - **B)** Singular
-    - **C)** Invertible
-    - **D)** Orthogonal
+- **A)** Symmetric
+- **B)** Singular
+- **C)** Invertible
+- **D)** Orthogonal
 
 ### Answer Key & Explanations
 1. **B)** A matrix is nonsingular (invertible) if there exists a matrix $B$ such that multiplying them in either order yields the identity matrix $I_n$.

@@ -208,34 +208,34 @@ Calculate total memory traffic (in bytes transferred across the system bus) for 
 ## Multiple Choice Questions
 
 1. Which addressing mode computes the effective address as $EA = [\text{Base Register}] + [\text{Index Register}] \times \text{Scale} + \text{Displacement}$?
-    - **A)** Register Indirect Addressing
-    - **B)** Scaled Index Base Displacement Addressing
-    - **C)** PC-Relative Addressing
-    - **D)** Autodecrement Addressing
+- **A)** Register Indirect Addressing
+- **B)** Scaled Index Base Displacement Addressing
+- **C)** PC-Relative Addressing
+- **D)** Autodecrement Addressing
 
 2. What is the fundamental characteristic of a pure RISC (Reduced Instruction Set Computer) architecture?
-    - **A)** Variable-length instructions ranging from 1 to 15 bytes
-    - **B)** Arithmetic operations can directly read from and write to arbitrary memory locations
-    - **C)** Strict Load/Store architecture where ALU operations operate exclusively on registers
-    - **D)** Microcoded control store execution for complex multi-cycle instructions
+- **A)** Variable-length instructions ranging from 1 to 15 bytes
+- **B)** Arithmetic operations can directly read from and write to arbitrary memory locations
+- **C)** Strict Load/Store architecture where ALU operations operate exclusively on registers
+- **D)** Microcoded control store execution for complex multi-cycle instructions
 
 3. In a 0-Address Stack architecture, how is the operation $X = A + B$ executed?
-    - **A)** `ADD X, A, B`
-    - **B)** `LOAD A; ADD B; STORE X`
-    - **C)** `PUSH A; PUSH B; ADD; POP X`
-    - **D)** `MOV EAX, A; ADD EAX, B; MOV X, EAX`
+- **A)** `ADD X, A, B`
+- **B)** `LOAD A; ADD B; STORE X`
+- **C)** `PUSH A; PUSH B; ADD; POP X`
+- **D)** `MOV EAX, A; ADD EAX, B; MOV X, EAX`
 
 4. Why is PC-Relative addressing essential for compiling shared dynamic libraries (.so / .dll)?
-    - **A)** It eliminates the need for branch prediction hardware
-    - **B)** It enables Position-Independent Code (PIC) so code can execute at any memory location without relocation patching
-    - **C)** It allows the ALU to bypass the register file during multiplication
-    - **D)** It halves the size of the instruction opcode field
+- **A)** It eliminates the need for branch prediction hardware
+- **B)** It enables Position-Independent Code (PIC) so code can execute at any memory location without relocation patching
+- **C)** It allows the ALU to bypass the register file during multiplication
+- **D)** It halves the size of the instruction opcode field
 
 5. If register `R1 = 0x3000` and the system uses 32-bit words (4 bytes), what is the effective address and the updated value of `R1` after executing an Autoincrement load instruction `LOAD R2, [R1]+`?
-    - **A)** $EA = \text{0x3000}$; updated $R1 = \text{0x3001}$
-    - **B)** $EA = \text{0x3004}$; updated $R1 = \text{0x3004}$
-    - **C)** $EA = \text{0x3000}$; updated $R1 = \text{0x3004}$
-    - **D)** $EA = \text{0x3004}$; updated $R1 = \text{0x3000}$
+- **A)** $EA = \text{0x3000}$; updated $R1 = \text{0x3001}$
+- **B)** $EA = \text{0x3004}$; updated $R1 = \text{0x3004}$
+- **C)** $EA = \text{0x3000}$; updated $R1 = \text{0x3004}$
+- **D)** $EA = \text{0x3004}$; updated $R1 = \text{0x3000}$
 
 ### Answer Key & Explanations
 

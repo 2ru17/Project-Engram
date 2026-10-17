@@ -311,64 +311,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is a defining characteristic of an Array?
-    - **A)** It uses non-contiguous memory.
-    - **B)** Elements are stored in contiguous memory and can be accessed in constant time $O(1)$ using an index.
-    - **C)** It grows dynamically infinitely.
-    - **D)** It only supports binary search.
+- **A)** It uses non-contiguous memory.
+- **B)** Elements are stored in contiguous memory and can be accessed in constant time $O(1)$ using an index.
+- **C)** It grows dynamically infinitely.
+- **D)** It only supports binary search.
 
 2. What is the average case time complexity for Linear Search?
-    - **A)** $O(1)$
-    - **B)** $O(\log n)$
-    - **C)** $O(n)$
-    - **D)** $O(n^2)$
+- **A)** $O(1)$
+- **B)** $O(\log n)$
+- **C)** $O(n)$
+- **D)** $O(n^2)$
 
 3. What prerequisite condition must be met before using Binary Search on an array?
-    - **A)** The array must contain only positive numbers.
-    - **B)** The array must be sorted.
-    - **C)** The array must have an even number of elements.
-    - **D)** The array must be partitioned.
+- **A)** The array must contain only positive numbers.
+- **B)** The array must be sorted.
+- **C)** The array must have an even number of elements.
+- **D)** The array must be partitioned.
 
 4. What is the worst-case time complexity of Binary Search?
-    - **A)** $O(n)$
-    - **B)** $O(\log n)$
-    - **C)** $O(n \log n)$
-    - **D)** $O(1)$
+- **A)** $O(n)$
+- **B)** $O(\log n)$
+- **C)** $O(n \log n)$
+- **D)** $O(1)$
 
 5. In an Optimized Bubble Sort with an early-termination flag, what is the best-case time complexity?
-    - **A)** $O(1)$
-    - **B)** $O(\log n)$
-    - **C)** $O(n)$
-    - **D)** $O(n^2)$
+- **A)** $O(1)$
+- **B)** $O(\log n)$
+- **C)** $O(n)$
+- **D)** $O(n^2)$
 
 6. Which sorting algorithm builds the sorted array one element at a time by placing an element in the correct position in the sorted portion?
-    - **A)** Selection Sort
-    - **B)** Insertion Sort
-    - **C)** Merge Sort
-    - **D)** Quick Sort
+- **A)** Selection Sort
+- **B)** Insertion Sort
+- **C)** Merge Sort
+- **D)** Quick Sort
 
 7. What is the worst-case time complexity of Merge Sort?
-    - **A)** $O(n \log n)$
-    - **B)** $O(n^2)$
-    - **C)** $O(n)$
-    - **D)** $O(\log n)$
+- **A)** $O(n \log n)$
+- **B)** $O(n^2)$
+- **C)** $O(n)$
+- **D)** $O(\log n)$
 
 8. What scenario triggers the $O(n^2)$ worst-case time complexity for Quick Sort?
-    - **A)** When the array is already sorted and a naive pivot (like the last element) is chosen.
-    - **B)** When the array is completely reversed.
-    - **C)** When the array contains no duplicates.
-    - **D)** When the pivot is the median element.
+- **A)** When the array is already sorted and a naive pivot (like the last element) is chosen.
+- **B)** When the array is completely reversed.
+- **C)** When the array contains no duplicates.
+- **D)** When the pivot is the median element.
 
 9. Which of the following sorting algorithms is NOT stable?
-    - **A)** Bubble Sort
-    - **B)** Insertion Sort
-    - **C)** Merge Sort
-    - **D)** Selection Sort
+- **A)** Bubble Sort
+- **B)** Insertion Sort
+- **C)** Merge Sort
+- **D)** Selection Sort
 
 10. What is a common off-by-one error when implementing Binary Search?
-    - **A)** Using `low < high` instead of `low <= high` in the while loop condition.
-    - **B)** Starting the array index at 1.
-    - **C)** Returning `mid` instead of `-1`.
-    - **D)** Updating `mid` to `mid * 2`.
+- **A)** Using `low < high` instead of `low <= high` in the while loop condition.
+- **B)** Starting the array index at 1.
+- **C)** Returning `mid` instead of `-1`.
+- **D)** Updating `mid` to `mid * 2`.
 
 ### Answer Key & Explanations
 1. **B)** Because an array is one continuous block of RAM, the computer can instantly jump to any index in exactly $O(1)$ time.

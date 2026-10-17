@@ -65,34 +65,34 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which of the following is NOT one of the main sections of Lesson 1?
-    - **A)** Core Concepts
-    - **B)** Advanced & Related Topics
-    - **C)** Hardware Architecture
-    - **D)** Context & Relationships
+- **A)** Core Concepts
+- **B)** Advanced & Related Topics
+- **C)** Hardware Architecture
+- **D)** Context & Relationships
 
 2. What is a major pitfall when studying this lesson?
-    - **A)** Reading the topics sequentially
-    - **B)** Skipping Core Concepts and jumping straight to advanced topics
-    - **C)** Taking notes on asymptotic notation
-    - **D)** Understanding the relationships between concepts
+- **A)** Reading the topics sequentially
+- **B)** Skipping Core Concepts and jumping straight to advanced topics
+- **C)** Taking notes on asymptotic notation
+- **D)** Understanding the relationships between concepts
 
 3. What does the "Context & Relationships" section primarily explain?
-    - **A)** The exact mathematical formulas for every algorithm
-    - **B)** How the various core and advanced concepts interconnect
-    - **C)** The history of computer science
-    - **D)** How to write code in specific programming languages
+- **A)** The exact mathematical formulas for every algorithm
+- **B)** How the various core and advanced concepts interconnect
+- **C)** The history of computer science
+- **D)** How to write code in specific programming languages
 
 4. Which of the following topics belongs under "Core Concepts"?
-    - **A)** Amortized Analysis
-    - **B)** Lower Bounds
-    - **C)** Probabilistic Analysis
-    - **D)** Frequency Count
+- **A)** Amortized Analysis
+- **B)** Lower Bounds
+- **C)** Probabilistic Analysis
+- **D)** Frequency Count
 
 5. Why is studying the topics in isolation considered a pitfall?
-    - **A)** Because they are inherently contradictory.
-    - **B)** Because the three sub-sections are designed to be read together for a complete picture.
-    - **C)** Because each topic requires a different textbook.
-    - **D)** Because only one topic will appear on the exam.
+- **A)** Because they are inherently contradictory.
+- **B)** Because the three sub-sections are designed to be read together for a complete picture.
+- **C)** Because each topic requires a different textbook.
+- **D)** Because only one topic will appear on the exam.
 
 ### Answer Key & Explanations
 1. **C)** Hardware Architecture is not a designated section of Lesson 1; the sections focus on the theoretical analysis of algorithms.

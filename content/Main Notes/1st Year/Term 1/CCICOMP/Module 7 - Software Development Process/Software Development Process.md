@@ -60,64 +60,64 @@ Strive for continuous improvement in both the software and the team processes.
 ## Multiple Choice Questions
 
 1. What is the Software Development Process (SDLC)?
-    - **A)** The physical manufacturing of computer hardware.
-    - **B)** A structured approach to developing software applications efficiently to meet user needs reliably.
-    - **C)** A methodology strictly used for marketing software products.
-    - **D)** The random, unstructured coding of algorithms by individuals.
+- **A)** The physical manufacturing of computer hardware.
+- **B)** A structured approach to developing software applications efficiently to meet user needs reliably.
+- **C)** A methodology strictly used for marketing software products.
+- **D)** The random, unstructured coding of algorithms by individuals.
 
 2. Which document is created during the requirements gathering phase to define functionality and constraints?
-    - **A)** High-Level Design (HLD)
-    - **B)** Software Requirements Specification (SRS)
-    - **C)** End-User License Agreement (EULA)
-    - **D)** Unit Testing Blueprint
+- **A)** High-Level Design (HLD)
+- **B)** Software Requirements Specification (SRS)
+- **C)** End-User License Agreement (EULA)
+- **D)** Unit Testing Blueprint
 
 3. What does "Technical Debt" refer to in software development?
-    - **A)** The financial cost of purchasing software licenses.
-    - **B)** The implied cost of additional rework caused by choosing a fast, easy solution over a better, long-term approach.
-    - **C)** The money owed to freelance software developers.
-    - **D)** The hardware maintenance fees for server hosting.
+- **A)** The financial cost of purchasing software licenses.
+- **B)** The implied cost of additional rework caused by choosing a fast, easy solution over a better, long-term approach.
+- **C)** The money owed to freelance software developers.
+- **D)** The hardware maintenance fees for server hosting.
 
 4. Which phase of the SDLC involves writing code based on design blueprints?
-    - **A)** Deployment
-    - **B)** Requirements Gathering
-    - **C)** Testing
-    - **D)** Development
+- **A)** Deployment
+- **B)** Requirements Gathering
+- **C)** Testing
+- **D)** Development
 
 5. What is the goal of the Testing phase?
-    - **A)** To write the initial source code.
-    - **B)** To interview stakeholders for business requirements.
-    - **C)** To verify and validate that the software functions correctly and is free of major bugs.
-    - **D)** To deploy the live software to end-users.
+- **A)** To write the initial source code.
+- **B)** To interview stakeholders for business requirements.
+- **C)** To verify and validate that the software functions correctly and is free of major bugs.
+- **D)** To deploy the live software to end-users.
 
 6. Which methodology is characterized by a linear, sequential approach where each phase must be completed before the next?
-    - **A)** Agile
-    - **B)** DevOps
-    - **C)** Waterfall Model
-    - **D)** Lean
+- **A)** Agile
+- **B)** DevOps
+- **C)** Waterfall Model
+- **D)** Lean
 
 7. What is the defining characteristic of the Agile methodology?
-    - **A)** It is a highly rigid process with fixed requirements.
-    - **B)** It is an iterative, adaptable approach that promotes flexibility and continuous feedback.
-    - **C)** It requires completing all testing before any development begins.
-    - **D)** It focuses entirely on IT operations rather than development.
+- **A)** It is a highly rigid process with fixed requirements.
+- **B)** It is an iterative, adaptable approach that promotes flexibility and continuous feedback.
+- **C)** It requires completing all testing before any development begins.
+- **D)** It focuses entirely on IT operations rather than development.
 
 8. What methodology combines software development and IT operations to enable continuous integration and continuous delivery (CI/CD)?
-    - **A)** Lean
-    - **B)** Waterfall
-    - **C)** DevOps
-    - **D)** Kanban
+- **A)** Lean
+- **B)** Waterfall
+- **C)** DevOps
+- **D)** Kanban
 
 9. What is a High-Level Design (HLD)?
-    - **A)** The overarching architecture and structure of the proposed software system.
-    - **B)** The detailed algorithms used in a single code module.
-    - **C)** The final executable machine code file.
-    - **D)** The marketing plan for the software release.
+- **A)** The overarching architecture and structure of the proposed software system.
+- **B)** The detailed algorithms used in a single code module.
+- **C)** The final executable machine code file.
+- **D)** The marketing plan for the software release.
 
 10. Which type of maintenance involves adding feature improvements after deployment?
-    - **A)** Corrective
-    - **B)** Preventive
-    - **C)** Adaptive
-    - **D)** Perfective
+- **A)** Corrective
+- **B)** Preventive
+- **C)** Adaptive
+- **D)** Perfective
 
 ### Answer Key & Explanations
 1. **B)** The SDLC is the structured approach to developing software efficiently and reliably.

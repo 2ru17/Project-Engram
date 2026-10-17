@@ -79,64 +79,64 @@ WHERE name = 'John Doe';
 ## Multiple Choice Questions
 
 1. What is a Database Management System (DBMS)?
-    - **A)** The physical hard drive where data is stored.
-    - **B)** Software that interacts with users and applications to capture, analyze, and manage structured data.
-    - **C)** A hardware firewall protecting stored data.
-    - **D)** A single table of rows and columns.
+- **A)** The physical hard drive where data is stored.
+- **B)** Software that interacts with users and applications to capture, analyze, and manage structured data.
+- **C)** A hardware firewall protecting stored data.
+- **D)** A single table of rows and columns.
 
 2. Which language is the standard used for managing and manipulating relational databases?
-    - **A)** Python
-    - **B)** C++
-    - **C)** SQL (Structured Query Language)
-    - **D)** HTML
+- **A)** Python
+- **B)** C++
+- **C)** SQL (Structured Query Language)
+- **D)** HTML
 
 3. Which subset of SQL commands is used to define and modify the structure of the database (e.g., CREATE, ALTER)?
-    - **A)** Data Manipulation Language (DML)
-    - **B)** Data Definition Language (DDL)
-    - **C)** Extensible Markup Language (XML)
-    - **D)** Object-Oriented Programming (OOP)
+- **A)** Data Manipulation Language (DML)
+- **B)** Data Definition Language (DDL)
+- **C)** Extensible Markup Language (XML)
+- **D)** Object-Oriented Programming (OOP)
 
 4. In database components, what is a Database Schema?
-    - **A)** The component that executes database queries.
-    - **B)** The blueprint or structure of the database, including tables, fields, and relationships.
-    - **C)** The actual information being stored.
-    - **D)** The indexing algorithm for rapid data retrieval.
+- **A)** The component that executes database queries.
+- **B)** The blueprint or structure of the database, including tables, fields, and relationships.
+- **C)** The actual information being stored.
+- **D)** The indexing algorithm for rapid data retrieval.
 
 5. Which type of database stores data in tables of rows and columns, using Primary and Foreign Keys to maintain relationships?
-    - **A)** Hierarchical Database
-    - **B)** Object-Oriented Database
-    - **C)** NoSQL Database
-    - **D)** Relational Database
+- **A)** Hierarchical Database
+- **B)** Object-Oriented Database
+- **C)** NoSQL Database
+- **D)** Relational Database
 
 6. What characterizes a NoSQL database compared to a relational one?
-    - **A)** It relies heavily on strict Primary Key relationships.
-    - **B)** It lacks strict structure, allowing for rapid processing of large data volumes and high horizontal scalability.
-    - **C)** It organizes data in a strict parent-child tree structure.
-    - **D)** It can only be used for small, local desktop applications.
+- **A)** It relies heavily on strict Primary Key relationships.
+- **B)** It lacks strict structure, allowing for rapid processing of large data volumes and high horizontal scalability.
+- **C)** It organizes data in a strict parent-child tree structure.
+- **D)** It can only be used for small, local desktop applications.
 
 7. Which SQL command is part of the Data Manipulation Language (DML) used to add new records to a table?
-    - **A)** CREATE
-    - **B)** INSERT
-    - **C)** DROP
-    - **D)** ALTER
+- **A)** CREATE
+- **B)** INSERT
+- **C)** DROP
+- **D)** ALTER
 
 8. What are Indexes used for in a database?
-    - **A)** Data structures that improve the speed of data retrieval operations.
-    - **B)** Scripts that automatically back up the database.
-    - **C)** Rules that prevent unauthorized user access.
-    - **D)** Relationships between foreign and primary keys.
+- **A)** Data structures that improve the speed of data retrieval operations.
+- **B)** Scripts that automatically back up the database.
+- **C)** Rules that prevent unauthorized user access.
+- **D)** Relationships between foreign and primary keys.
 
 9. What type of database organizes data in a tree-like structure with 1-to-many parent-child relationships?
-    - **A)** Network Database
-    - **B)** Hierarchical Database
-    - **C)** Relational Database
-    - **D)** Object-Oriented Database
+- **A)** Network Database
+- **B)** Hierarchical Database
+- **C)** Relational Database
+- **D)** Object-Oriented Database
 
 10. Which SQL clause is typically used with the SELECT command to filter the queried data based on specific conditions?
-    - **A)** SET
-    - **B)** VALUES
-    - **C)** WHERE
-    - **D)** UPDATE
+- **A)** SET
+- **B)** VALUES
+- **C)** WHERE
+- **D)** UPDATE
 
 ### Answer Key & Explanations
 1. **B)** A DBMS is software that enables users to define, create, maintain, and control access to data.

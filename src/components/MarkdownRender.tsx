@@ -333,12 +333,29 @@ function parseMCQSection(content: string): { articleContent: string; mcqItems: M
   return { articleContent, mcqItems };
 }
 
+// Helper to normalize indented list items outside fenced code blocks so CommonMark doesn't turn them into code blocks
+function normalizeIndentedLists(text: string): string {
+  const parts = text.split(/(```[\s\S]*?```)/g);
+  return parts
+    .map((part, index) => {
+      // Even indices are outside fenced code blocks
+      if (index % 2 === 0) {
+        return part.replace(/^([ \t]{4,}|\t+)([-*+]|\d+\.) /gm, '$2 ');
+      }
+      return part;
+    })
+    .join('');
+}
+
 export default function MarkdownRender({ content }: { content: string }) {
   const { cleanContent, mcqItems } = useMemo(() => {
     // Strip Document Metadata block
     let cleaned = content.replace(/> \[!info\] Document Metadata[\s\S]*?(?=\n\n[^>]|$)/i, "");
     // Strip YAML frontmatter
     cleaned = cleaned.replace(/^---\n[\s\S]*?\n---\n/, "");
+
+    // Normalize indented lists outside code blocks
+    cleaned = normalizeIndentedLists(cleaned);
 
     const { articleContent, mcqItems } = parseMCQSection(cleaned);
     return { cleanContent: articleContent, mcqItems };

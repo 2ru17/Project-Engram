@@ -52,20 +52,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. What defines an array as a data structure in C?
-    - **A)** A structure storing random types in non-sequential memory
-    - **B)** A derived data type storing a fixed-size sequential collection of elements of the same type
-    - **C)** A primitive type for text
-    - **D)** A flexible list that resizes automatically
+- **A)** A structure storing random types in non-sequential memory
+- **B)** A derived data type storing a fixed-size sequential collection of elements of the same type
+- **C)** A primitive type for text
+- **D)** A flexible list that resizes automatically
 2. Why are arrays considered derived data types?
-    - **A)** Because they are inherited from structs
-    - **B)** Because they are composed of primary/primitive data types
-    - **C)** Because they are imported from a library
-    - **D)** Because they do not exist in the C standard
+- **A)** Because they are inherited from structs
+- **B)** Because they are composed of primary/primitive data types
+- **C)** Because they are imported from a library
+- **D)** Because they do not exist in the C standard
 3. Which of the following is NOT an attribute of an array?
-    - **A)** Contiguous memory allocation
-    - **B)** Homogeneity
-    - **C)** Fixed size
-    - **D)** Dynamic resizing
+- **A)** Contiguous memory allocation
+- **B)** Homogeneity
+- **C)** Fixed size
+- **D)** Dynamic resizing
 
 ### Answer Key & Explanations
 1. **B)** The core definition emphasizes rigid size limits, unified element typing, and sequential layout.

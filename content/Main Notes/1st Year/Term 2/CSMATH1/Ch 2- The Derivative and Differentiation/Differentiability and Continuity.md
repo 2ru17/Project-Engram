@@ -51,64 +51,64 @@ Because the limits from the left and right are different, the derivative at $x =
 ## Multiple Choice Questions
 
 1. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 2. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 3. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 4. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 5. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 6. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 7. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 8. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 9. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 10. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-    - **A)** It illustrates the fundamental behavior described in the theorem.
-    - **B)** It only applies to discrete points on a graph.
-    - **C)** It is a static property without rate of change.
-    - **D)** It invalidates the continuity of the function.
+- **A)** It illustrates the fundamental behavior described in the theorem.
+- **B)** It only applies to discrete points on a graph.
+- **C)** It is a static property without rate of change.
+- **D)** It invalidates the continuity of the function.
 
 ### Answer Key & Explanations
 1. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.

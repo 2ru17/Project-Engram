@@ -91,64 +91,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is passed to a function when a 1D array is provided as an argument in C?
-    - **A)** A deep copy of the array
-    - **B)** A pointer to the first element
-    - **C)** The exact size of the array
-    - **D)** The last element of the array
+- **A)** A deep copy of the array
+- **B)** A pointer to the first element
+- **C)** The exact size of the array
+- **D)** The last element of the array
 
 2. How should you properly declare a function that takes a 1D array as a parameter?
-    - **A)** `void func(int arr);`
-    - **B)** `void func(int arr[], int size);`
-    - **C)** `void func(int *arr[]);`
-    - **D)** `void func(int arr[100]);`
+- **A)** `void func(int arr);`
+- **B)** `void func(int arr[], int size);`
+- **C)** `void func(int *arr[]);`
+- **D)** `void func(int arr[100]);`
 
 3. What happens if a function modifies an array passed to it as an argument?
-    - **A)** The modifications affect a local copy only
-    - **B)** The compiler throws a warning
-    - **C)** The original array is modified
-    - **D)** The program crashes
+- **A)** The modifications affect a local copy only
+- **B)** The compiler throws a warning
+- **C)** The original array is modified
+- **D)** The program crashes
 
 4. When passing a 2D array to a function, which dimensions must be specified in the parameter?
-    - **A)** Only the first dimension
-    - **B)** All dimensions except the first
-    - **C)** No dimensions need to be specified
-    - **D)** All dimensions must be explicitly specified
+- **A)** Only the first dimension
+- **B)** All dimensions except the first
+- **C)** No dimensions need to be specified
+- **D)** All dimensions must be explicitly specified
 
 5. Why is it necessary to pass the size of an array alongside it to a function?
-    - **A)** To avoid memory errors, since arrays decay to pointers
-    - **B)** Because the C standard library requires it for compilation
-    - **C)** To allocate more memory inside the function
-    - **D)** To enable the use of the `sizeof` operator
+- **A)** To avoid memory errors, since arrays decay to pointers
+- **B)** Because the C standard library requires it for compilation
+- **C)** To allocate more memory inside the function
+- **D)** To enable the use of the `sizeof` operator
 
 6. What will `sizeof(arr)` return inside a function where `arr` is passed as an array parameter?
-    - **A)** The total size of the array in bytes
-    - **B)** The number of elements in the array
-    - **C)** The size of the pointer pointing to the array
-    - **D)** Zero
+- **A)** The total size of the array in bytes
+- **B)** The number of elements in the array
+- **C)** The size of the pointer pointing to the array
+- **D)** Zero
 
 7. Which of the following is a valid function parameter declaration for a 2D array?
-    - **A)** `void f(int arr[][]);`
-    - **B)** `void f(int arr[][COLS], int numRows);`
-    - **C)** `void f(int **arr);`
-    - **D)** `void f(int arr, int rows, int cols);`
+- **A)** `void f(int arr[][]);`
+- **B)** `void f(int arr[][COLS], int numRows);`
+- **C)** `void f(int **arr);`
+- **D)** `void f(int arr, int rows, int cols);`
 
 8. Why does `sizeof(arr)/sizeof(arr[0])` fail to find the array length inside a function?
-    - **A)** It only works in the scope where the array was originally declared
-    - **B)** It causes a division by zero error
-    - **C)** The array elements are nullified during the function call
-    - **D)** The macro expands incorrectly
+- **A)** It only works in the scope where the array was originally declared
+- **B)** It causes a division by zero error
+- **C)** The array elements are nullified during the function call
+- **D)** The macro expands incorrectly
 
 9. Which syntax allows for more flexibility when dealing with 2D arrays in functions?
-    - **A)** Using pointers or flattening the array
-    - **B)** Hardcoding all dimensions
-    - **C)** Passing the array by value
-    - **D)** Ignoring column sizes
+- **A)** Using pointers or flattening the array
+- **B)** Hardcoding all dimensions
+- **C)** Passing the array by value
+- **D)** Ignoring column sizes
 
 10. What is a key reason that passing an array does not create a copy?
-    - **A)** Arrays natively decay to pointers to improve efficiency and save memory
-    - **B)** Compilers cannot copy contiguous memory
-    - **C)** C lacks an assignment operator
-    - **D)** It allows the array to be dynamically resized
+- **A)** Arrays natively decay to pointers to improve efficiency and save memory
+- **B)** Compilers cannot copy contiguous memory
+- **C)** C lacks an assignment operator
+- **D)** It allows the array to be dynamically resized
 
 ### Answer Key & Explanations
 1. **B)** Passing arrays simply passes a pointer rather than duplicating large data structures.

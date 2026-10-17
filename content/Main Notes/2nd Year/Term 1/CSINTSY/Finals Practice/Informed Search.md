@@ -152,64 +152,64 @@ _Please contact me through discord or my the university email for any problems r
 ## Multiple Choice Questions
 
 1. What primary characteristic distinguishes informed search algorithms from uninformed search algorithms?
-    - **A)** They explore every possible node in the state space.
-    - **B)** They use problem-specific knowledge to estimate the distance to the goal.
-    - **C)** They always guarantee finding the optimal path regardless of the heuristic.
-    - **D)** They evaluate nodes based purely on the cost of the path taken so far.
+- **A)** They explore every possible node in the state space.
+- **B)** They use problem-specific knowledge to estimate the distance to the goal.
+- **C)** They always guarantee finding the optimal path regardless of the heuristic.
+- **D)** They evaluate nodes based purely on the cost of the path taken so far.
 
 2. In the context of heuristic search, what does the function $h(n)$ represent?
-    - **A)** The actual cost to reach node $n$ from the start node.
-    - **B)** The total estimated cost of the path through node $n$ to the goal.
-    - **C)** The estimated cost of the cheapest path from node $n$ to a goal node.
-    - **D)** The exact shortest path distance from the start node to the goal.
+- **A)** The actual cost to reach node $n$ from the start node.
+- **B)** The total estimated cost of the path through node $n$ to the goal.
+- **C)** The estimated cost of the cheapest path from node $n$ to a goal node.
+- **D)** The exact shortest path distance from the start node to the goal.
 
 3. For a heuristic to be considered admissible, what condition must it satisfy?
-    - **A)** It must always overestimate the true cost to reach the goal.
-    - **B)** It must never overestimate the true cost to reach the goal.
-    - **C)** It must be exactly equal to the true cost to reach the goal.
-    - **D)** It must increase monotonically as the search goes deeper.
+- **A)** It must always overestimate the true cost to reach the goal.
+- **B)** It must never overestimate the true cost to reach the goal.
+- **C)** It must be exactly equal to the true cost to reach the goal.
+- **D)** It must increase monotonically as the search goes deeper.
 
 4. Why is admissibility an important property for a heuristic in A* search?
-    - **A)** It ensures that the algorithm runs in constant time.
-    - **B)** It guarantees that A* search will find the optimal (lowest cost) path.
-    - **C)** It prevents the algorithm from keeping track of the visited nodes.
-    - **D)** It makes the total estimated cost decrease monotonically.
+- **A)** It ensures that the algorithm runs in constant time.
+- **B)** It guarantees that A* search will find the optimal (lowest cost) path.
+- **C)** It prevents the algorithm from keeping track of the visited nodes.
+- **D)** It makes the total estimated cost decrease monotonically.
 
 5. What does it mean for a heuristic to be consistent (monotonic)?
-    - **A)** The estimated cost to the goal never changes.
-    - **B)** The heuristic value of any node is less than its children's heuristic values.
-    - **C)** The estimated cost from $n$ to the goal is no greater than the step cost to a successor plus the estimated cost from the successor to the goal.
-    - **D)** The heuristic perfectly matches the actual cost for all nodes in the state space.
+- **A)** The estimated cost to the goal never changes.
+- **B)** The heuristic value of any node is less than its children's heuristic values.
+- **C)** The estimated cost from $n$ to the goal is no greater than the step cost to a successor plus the estimated cost from the successor to the goal.
+- **D)** The heuristic perfectly matches the actual cost for all nodes in the state space.
 
 6. Which function does Greedy Best-First Search (GBFS) use to evaluate which node to expand next?
-    - **A)** $f(n) = g(n) + h(n)$
-    - **B)** $f(n) = g(n)$
-    - **C)** $f(n) = h(n)$
-    - **D)** $f(n) = c(n, a, n')$
+- **A)** $f(n) = g(n) + h(n)$
+- **B)** $f(n) = g(n)$
+- **C)** $f(n) = h(n)$
+- **D)** $f(n) = c(n, a, n')$
 
 7. Which of the following is a major drawback of Greedy Best-First Search?
-    - **A)** It relies too heavily on the path cost $g(n)$.
-    - **B)** It calculates $f(n)$ much slower than A* search.
-    - **C)** It is neither complete nor optimal.
-    - **D)** It expands nodes uniformly in all directions.
+- **A)** It relies too heavily on the path cost $g(n)$.
+- **B)** It calculates $f(n)$ much slower than A* search.
+- **C)** It is neither complete nor optimal.
+- **D)** It expands nodes uniformly in all directions.
 
 8. How does A* search evaluate the cost of a node?
-    - **A)** It uses only the heuristic cost $h(n)$.
-    - **B)** It balances the actual path cost from the start $g(n)$ and the estimated cost to the goal $h(n)$.
-    - **C)** It ignores both $g(n)$ and $h(n)$ and chooses randomly.
-    - **D)** It uses the average of the step costs between nodes.
+- **A)** It uses only the heuristic cost $h(n)$.
+- **B)** It balances the actual path cost from the start $g(n)$ and the estimated cost to the goal $h(n)$.
+- **C)** It ignores both $g(n)$ and $h(n)$ and chooses randomly.
+- **D)** It uses the average of the step costs between nodes.
 
 9. In A* search, what happens if a node is generated that is already in the priority queue, but with a lower total cost?
-    - **A)** The new node is ignored.
-    - **B)** The priority queue is emptied and search restarts.
-    - **C)** The algorithm immediately terminates and returns the path.
-    - **D)** The node in the priority queue is updated with the new, lower cost.
+- **A)** The new node is ignored.
+- **B)** The priority queue is emptied and search restarts.
+- **C)** The algorithm immediately terminates and returns the path.
+- **D)** The node in the priority queue is updated with the new, lower cost.
 
 10. If an A* search uses an inadmissible heuristic, what is the most likely consequence?
-    - **A)** It will never find the goal state.
-    - **B)** It may return a path that is not the optimal (lowest cost) path.
-    - **C)** It turns into a Depth-First Search.
-    - **D)** It will crash due to infinite looping.
+- **A)** It will never find the goal state.
+- **B)** It may return a path that is not the optimal (lowest cost) path.
+- **C)** It turns into a Depth-First Search.
+- **D)** It will crash due to infinite looping.
 
 ### Answer Key & Explanations
 1. **B)** Informed search uses a heuristic function, which incorporates problem-specific knowledge to estimate how close a state is to the goal.

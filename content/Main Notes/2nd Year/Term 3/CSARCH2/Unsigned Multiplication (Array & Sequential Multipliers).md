@@ -190,34 +190,34 @@ Calculate the total multiplication latency for both implementations.
 ## Multiple Choice Questions
 
 1. In an $n$-bit sequential unsigned multiplier, what is the size of the final product and where is it stored?
-    - **A)** $n$ bits, stored in register $A$
-    - **B)** $n$ bits, stored in register $Q$
-    - **C)** $2n$ bits, stored in combined register $[A, Q]$
-    - **D)** $2n$ bits, stored in memory via DMA
+- **A)** $n$ bits, stored in register $A$
+- **B)** $n$ bits, stored in register $Q$
+- **C)** $2n$ bits, stored in combined register $[A, Q]$
+- **D)** $2n$ bits, stored in memory via DMA
 
 2. How many 2-input AND gates are required to construct an $n \times n$ combinational array multiplier?
-    - **A)** $n$
-    - **B)** $2n$
-    - **C)** $n(n - 1)$
-    - **D)** $n^2$
+- **A)** $n$
+- **B)** $2n$
+- **C)** $n(n - 1)$
+- **D)** $n^2$
 
 3. During cycle $k$ of an unsigned sequential multiplication, the multiplier bit $Q_0 = 0$. What action does the hardware datapath perform?
-    - **A)** Inverts the multiplicand register $M$
-    - **B)** Performs $A \leftarrow A + M$ followed by logical shift right
-    - **C)** Skips the addition and performs logical shift right on $[C, A, Q]$
-    - **D)** Resets the iteration counter to zero immediately
+- **A)** Inverts the multiplicand register $M$
+- **B)** Performs $A \leftarrow A + M$ followed by logical shift right
+- **C)** Skips the addition and performs logical shift right on $[C, A, Q]$
+- **D)** Resets the iteration counter to zero immediately
 
 4. Why can an unsigned sequential multiplier not be used directly on negative 2's complement integers?
-    - **A)** The carry flip-flop $C$ cannot store negative voltage
-    - **B)** The sign bit of 2's complement numbers carries a negative positional weight ($-2^{n-1}$), which is treated as $+2^{n-1}$ by unsigned logic
-    - **C)** The shift registers only support left shifts
-    - **D)** Full Adders cannot compute subtraction operations
+- **A)** The carry flip-flop $C$ cannot store negative voltage
+- **B)** The sign bit of 2's complement numbers carries a negative positional weight ($-2^{n-1}$), which is treated as $+2^{n-1}$ by unsigned logic
+- **C)** The shift registers only support left shifts
+- **D)** Full Adders cannot compute subtraction operations
 
 5. If an 8-bit sequential multiplier operates at a clock frequency of $500\text{ MHz}$, how long does it take to compute an 8-bit $\times$ 8-bit multiplication?
-    - **A)** $2\text{ ns}$
-    - **B)** $8\text{ ns}$
-    - **C)** $16\text{ ns}$
-    - **D)** $32\text{ ns}$
+- **A)** $2\text{ ns}$
+- **B)** $8\text{ ns}$
+- **C)** $16\text{ ns}$
+- **D)** $32\text{ ns}$
 
 ### Answer Key & Explanations
 

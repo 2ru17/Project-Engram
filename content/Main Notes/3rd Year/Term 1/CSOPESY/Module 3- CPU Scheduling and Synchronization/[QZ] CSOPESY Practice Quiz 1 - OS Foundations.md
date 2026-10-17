@@ -37,59 +37,59 @@ This quiz covers the conceptual foundations of CSOPESY from Weeks 1 through 5: O
 
 **1. A large factory automation system runs with no keyboard, mouse, or display. Its operating system must run silently, managing sensors and actuators without human interaction. From which OS perspective does this best exemplify?**
 
-    - **A)** User View — maximizing ease of use
-    - **B)** System View — acting as a resource allocator
-    - **C)** User View — designed for embedded, headless operation
-    - **D)** System View — acting as a control program for interactive sessions
+- **A)** User View — maximizing ease of use
+- **B)** System View — acting as a resource allocator
+- **C)** User View — designed for embedded, headless operation
+- **D)** System View — acting as a control program for interactive sessions
 
 **2. A hardware device has finished an operation and needs to notify the CPU. It asserts an electrical signal on the system bus. The CPU immediately suspends its current task, saves its context, and jumps to a handler routine. What is the table of function pointers that maps signal numbers to these handler routines called?**
 
-    - **A)** Process Control Block (PCB)
-    - **B)** Interrupt Vector Table
-    - **C)** Page Table
-    - **D)** System Call Interface
+- **A)** Process Control Block (PCB)
+- **B)** Interrupt Vector Table
+- **C)** Page Table
+- **D)** System Call Interface
 
 **3. A system has a cache access time of $T_c = 2$ ns and a main memory access time of $T_m = 100$ ns. Under the sequential access model (cache is checked first, memory accessed only on a miss), what is the Effective Access Time (EAT) when the cache hit ratio $H = 0.90$?**
 
-    - **A)** 11.8 ns
-    - **B)** 12.0 ns
-    - **C)** 92.0 ns
-    - **D)** 10.0 ns
+- **A)** 11.8 ns
+- **B)** 12.0 ns
+- **C)** 92.0 ns
+- **D)** 10.0 ns
 
 **4. Which of the following represents a Non-Maskable Interrupt (NMI)?**
 
-    - **A)** A keystroke from the user keyboard
-    - **B)** A network packet arriving at the NIC
-    - **C)** A hardware memory parity error signaling data corruption
-    - **D)** A printer completing a print job
+- **A)** A keystroke from the user keyboard
+- **B)** A network packet arriving at the NIC
+- **C)** A hardware memory parity error signaling data corruption
+- **D)** A printer completing a print job
 
 **5. A developer wants to call a function that requires full hardware privileges — for example, modifying the CPU's memory management registers. Under Dual-Mode Operation, what must happen for this to execute safely?**
 
-    - **A)** The application can call it directly because all code runs in the same mode
-    - **B)** The CPU must be in User Mode (mode bit = 1) to allow privileged operations
-    - **C)** The application triggers a system call (software interrupt), switching the CPU to Kernel Mode (mode bit = 0), where the OS executes the privileged instruction
-    - **D)** The compiler automatically inserts mode-switching instructions during compilation
+- **A)** The application can call it directly because all code runs in the same mode
+- **B)** The CPU must be in User Mode (mode bit = 1) to allow privileged operations
+- **C)** The application triggers a system call (software interrupt), switching the CPU to Kernel Mode (mode bit = 0), where the OS executes the privileged instruction
+- **D)** The compiler automatically inserts mode-switching instructions during compilation
 
 **6. Which OS architectural design runs all kernel services — including device drivers, file systems, and memory management — in a single large binary sharing one address space?**
 
-    - **A)** Microkernel
-    - **B)** Layered Architecture
-    - **C)** Monolithic Kernel
-    - **D)** Loadable Kernel Modules
+- **A)** Microkernel
+- **B)** Layered Architecture
+- **C)** Monolithic Kernel
+- **D)** Loadable Kernel Modules
 
 **7. A device driver crashes on a microkernel-based operating system. What is the most likely outcome, and why?**
 
-    - **A)** The entire OS crashes, because all services share one kernel address space
-    - **B)** Only the driver process crashes; the kernel remains stable because drivers run in user space
-    - **C)** The CPU enters an infinite loop because there is no interrupt handler available
-    - **D)** The OS automatically reloads the monolithic kernel from disk
+- **A)** The entire OS crashes, because all services share one kernel address space
+- **B)** Only the driver process crashes; the kernel remains stable because drivers run in user space
+- **C)** The CPU enters an infinite loop because there is no interrupt handler available
+- **D)** The OS automatically reloads the monolithic kernel from disk
 
 **8. A programmer writes `printf("Hello")` in C. This never directly invokes a system call. Instead, it calls a function in the C Standard Library, which eventually triggers a kernel trap. What is the name for the layer between the programmer's API call and the raw kernel system call?**
 
-    - **A)** Dynamic Linker
-    - **B)** Run-Time Environment (RTE) / Standard Library
-    - **C)** Bootstrap Program
-    - **D)** Interrupt Service Routine
+- **A)** Dynamic Linker
+- **B)** Run-Time Environment (RTE) / Standard Library
+- **C)** Bootstrap Program
+- **D)** Interrupt Service Routine
 
 ---
 
@@ -97,31 +97,31 @@ This quiz covers the conceptual foundations of CSOPESY from Weeks 1 through 5: O
 
 **9. A disk controller needs to transfer 512 KB of data into RAM. Using Interrupt-Driven I/O with one interrupt per byte and a context-switch cost of 50 CPU cycles per interrupt, how many total CPU cycles are consumed in interrupt overhead?**
 
-    - **A)** 50 cycles
-    - **B)** 512 cycles
-    - **C)** 26,214,400 cycles
-    - **D)** 1,024 cycles
+- **A)** 50 cycles
+- **B)** 512 cycles
+- **C)** 26,214,400 cycles
+- **D)** 1,024 cycles
 
 **10. An application calls `read()` on a network socket. The call returns immediately with the error `EWOULDBLOCK` because no data has arrived yet. The application proceeds to render a UI frame and then polls the socket again. Which I/O model is this?**
 
-    - **A)** Synchronous Blocking I/O
-    - **B)** Asynchronous I/O with callbacks
-    - **C)** Synchronous Non-Blocking I/O
-    - **D)** Direct Memory Access I/O
+- **A)** Synchronous Blocking I/O
+- **B)** Asynchronous I/O with callbacks
+- **C)** Synchronous Non-Blocking I/O
+- **D)** Direct Memory Access I/O
 
 **11. Which I/O subsystem service is responsible for managing an exclusive device (e.g., a printer) that cannot handle interleaved data streams, by queuing jobs on disk and feeding them sequentially?**
 
-    - **A)** Buffering
-    - **B)** Caching
-    - **C)** Scheduling
-    - **D)** Spooling
+- **A)** Buffering
+- **B)** Caching
+- **C)** Scheduling
+- **D)** Spooling
 
 **12. A USB mouse is connected to the system. The OS classifies it as what type of device, and why?**
 
-    - **A)** Block Device — because mouse events are transferred in fixed-size blocks
-    - **B)** Character Device — because mouse events are processed as a sequential byte stream
-    - **C)** Network Device — because USB uses packet-switching protocols
-    - **D)** Memory-Mapped File — because mouse state is directly written into RAM
+- **A)** Block Device — because mouse events are transferred in fixed-size blocks
+- **B)** Character Device — because mouse events are processed as a sequential byte stream
+- **C)** Network Device — because USB uses packet-switching protocols
+- **D)** Memory-Mapped File — because mouse state is directly written into RAM
 
 ---
 
@@ -129,38 +129,38 @@ This quiz covers the conceptual foundations of CSOPESY from Weeks 1 through 5: O
 
 **13. In a standard process memory layout, which two regions grow towards each other and can cause an error if they collide?**
 
-    - **A)** Text section and Data section
-    - **B)** Stack (grows downward) and Heap (grows upward)
-    - **C)** Kernel space and Text section
-    - **D)** BSS segment and Data segment
+- **A)** Text section and Data section
+- **B)** Stack (grows downward) and Heap (grows upward)
+- **C)** Kernel space and Text section
+- **D)** BSS segment and Data segment
 
 **14. A process has called `exit()`. Its resources have been partially cleaned up, but its parent process has not yet called `wait()` to collect the exit status. What state is this process in?**
 
-    - **A)** Blocked / Waiting
-    - **B)** Orphan
-    - **C)** Terminated (Zombie)
-    - **D)** Ready
+- **A)** Blocked / Waiting
+- **B)** Orphan
+- **C)** Terminated (Zombie)
+- **D)** Ready
 
 **15. The OS needs to transfer CPU control from Process A (currently running) to Process B (in the Ready state). What sequence of operations occurs?**
 
-    - **A)** The OS saves Process A's PCB, loads Process B's PCB, and resumes Process B
-    - **B)** The OS directly overwrites Process A's registers with Process B's data
-    - **C)** Process A voluntarily calls `fork()` to spawn Process B as its child
-    - **D)** The Loader copies Process B's binary into Process A's memory address space
+- **A)** The OS saves Process A's PCB, loads Process B's PCB, and resumes Process B
+- **B)** The OS directly overwrites Process A's registers with Process B's data
+- **C)** Process A voluntarily calls `fork()` to spawn Process B as its child
+- **D)** The Loader copies Process B's binary into Process A's memory address space
 
 **16. A web server process uses a strategy where each incoming request is handled by a separate worker — but instead of creating a new process with `fork()` each time (which is expensive), each worker shares the same code and data sections while only getting its own stack and registers. What construct is being described?**
 
-    - **A)** Separate child processes communicating via Shared Memory IPC
-    - **B)** Threads within the same process
-    - **C)** Separate processes communicating via Message Passing
-    - **D)** Daemon processes managed by `systemd`
+- **A)** Separate child processes communicating via Shared Memory IPC
+- **B)** Threads within the same process
+- **C)** Separate processes communicating via Message Passing
+- **D)** Daemon processes managed by `systemd`
 
 **17. Which type of scheduler operates most frequently (potentially hundreds of times per second) and is responsible for selecting which process in the Ready Queue gets the CPU next?**
 
-    - **A)** Long-Term Scheduler (Job Scheduler)
-    - **B)** Medium-Term Scheduler
-    - **C)** Short-Term Scheduler (CPU Scheduler)
-    - **D)** I/O Scheduler
+- **A)** Long-Term Scheduler (Job Scheduler)
+- **B)** Medium-Term Scheduler
+- **C)** Short-Term Scheduler (CPU Scheduler)
+- **D)** I/O Scheduler
 
 ---
 
@@ -170,24 +170,24 @@ This quiz covers the conceptual foundations of CSOPESY from Weeks 1 through 5: O
 
 $$Speedup \le \frac{1}{S + \frac{1-S}{N}}$$
 
-    - **A)** 1.67x
-    - **B)** 2.50x
-    - **C)** 4.00x
-    - **D)** Infinite
+- **A)** 1.67x
+- **B)** 2.50x
+- **C)** 4.00x
+- **D)** Infinite
 
 **19. In the Many-to-One threading model, all user-level threads map to a single kernel thread. What is the critical failure mode of this model?**
 
-    - **A)** Creating too many threads overloads the kernel thread table
-    - **B)** If one user thread makes a blocking system call, the entire process blocks because the single kernel thread is occupied
-    - **C)** True parallelism is only possible on single-core systems
-    - **D)** The kernel cannot perform context switches between user threads
+- **A)** Creating too many threads overloads the kernel thread table
+- **B)** If one user thread makes a blocking system call, the entire process blocks because the single kernel thread is occupied
+- **C)** True parallelism is only possible on single-core systems
+- **D)** The kernel cannot perform context switches between user threads
 
 **20. A developer uses `#pragma omp parallel for` in a C program, and the compiler automatically splits a for-loop across all available CPU cores without the developer manually creating threads. What threading paradigm is this an example of?**
 
-    - **A)** Explicit threading with POSIX Pthreads
-    - **B)** Many-to-Many threading model implementation
-    - **C)** Implicit Threading using a compiler directive (OpenMP)
-    - **D)** Asynchronous Deferred Thread Cancellation
+- **A)** Explicit threading with POSIX Pthreads
+- **B)** Many-to-Many threading model implementation
+- **C)** Implicit Threading using a compiler directive (OpenMP)
+- **D)** Asynchronous Deferred Thread Cancellation
 
 ---
 

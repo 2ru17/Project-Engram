@@ -48,20 +48,20 @@ _To be added._
 
 ## Multiple Choice Questions
 1. How would you declare a 3-dimensional array of integers with dimensions 2, 3, and 4?
-    - **A)** `int array(2, 3, 4);`
-    - **B)** `int array[2][3][4];`
-    - **C)** `int array[24];`
-    - **D)** `int array[2 * 3 * 4];`
+- **A)** `int array(2, 3, 4);`
+- **B)** `int array[2][3][4];`
+- **C)** `int array[24];`
+- **D)** `int array[2 * 3 * 4];`
 2. Conceptually, how can a 3D array be visualized?
-    - **A)** As a straight line
-    - **B)** As a flat grid
-    - **C)** As an array of 2D grids (a cube of data)
-    - **D)** As a circle
+- **A)** As a straight line
+- **B)** As a flat grid
+- **C)** As an array of 2D grids (a cube of data)
+- **D)** As a circle
 3. How are multidimensional arrays stored in memory under the hood?
-    - **A)** As overlapping matrices
-    - **B)** As a single flattened contiguous 1D array
-    - **C)** As a linked list of arrays
-    - **D)** As independent dynamic blocks
+- **A)** As overlapping matrices
+- **B)** As a single flattened contiguous 1D array
+- **C)** As a linked list of arrays
+- **D)** As independent dynamic blocks
 
 ### Answer Key & Explanations
 1. **B)** Multidimensional arrays chain bracket pairs for each distinct dimensional depth.

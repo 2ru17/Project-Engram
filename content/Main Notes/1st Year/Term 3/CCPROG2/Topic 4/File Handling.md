@@ -149,64 +149,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which library is required for file handling in C?
-    - **A)** `<stdlib.h>`
-    - **B)** `<math.h>`
-    - **C)** `<stdio.h>`
-    - **D)** `<file.h>`
+- **A)** `<stdlib.h>`
+- **B)** `<math.h>`
+- **C)** `<stdio.h>`
+- **D)** `<file.h>`
 
 2. What type of pointer is used to represent an open file stream in C?
-    - **A)** `STREAM *`
-    - **B)** `FILE *`
-    - **C)** `void *`
-    - **D)** `char *`
+- **A)** `STREAM *`
+- **B)** `FILE *`
+- **C)** `void *`
+- **D)** `char *`
 
 3. What is the result of using the `"w"` mode with `fopen()` on an existing file?
-    - **A)** The file is opened for reading only
-    - **B)** Data is appended to the end of the file
-    - **C)** The file is overwritten, destroying previous contents
-    - **D)** An error is returned
+- **A)** The file is opened for reading only
+- **B)** Data is appended to the end of the file
+- **C)** The file is overwritten, destroying previous contents
+- **D)** An error is returned
 
 4. Which function must always be called when you are finished using an open file?
-    - **A)** `fstop()`
-    - **B)** `fclose()`
-    - **C)** `fflush()`
-    - **D)** `fexit()`
+- **A)** `fstop()`
+- **B)** `fclose()`
+- **C)** `fflush()`
+- **D)** `fexit()`
 
 5. What does `fopen()` return if it fails to open a file?
-    - **A)** `-1`
-    - **B)** `0`
-    - **C)** `NULL`
-    - **D)** `EOF`
+- **A)** `-1`
+- **B)** `0`
+- **C)** `NULL`
+- **D)** `EOF`
 
 6. Which function is specifically used for structured reading of text files, similar to reading from standard input?
-    - **A)** `fgets()`
-    - **B)** `fputs()`
-    - **C)** `fscanf()`
-    - **D)** `fread()`
+- **A)** `fgets()`
+- **B)** `fputs()`
+- **C)** `fscanf()`
+- **D)** `fread()`
 
 7. Which functions are primarily used for reading and writing binary files in C?
-    - **A)** `fscanf` and `fprintf`
-    - **B)** `fgets` and `fputs`
-    - **C)** `fread` and `fwrite`
-    - **D)** `fgetc` and `fputc`
+- **A)** `fscanf` and `fprintf`
+- **B)** `fgets` and `fputs`
+- **C)** `fread` and `fwrite`
+- **D)** `fgetc` and `fputc`
 
 8. What does the `ftell(fp)` function return?
-    - **A)** The total size of the file in bytes
-    - **B)** The current position in the file in bytes
-    - **C)** The remaining number of lines
-    - **D)** A boolean indicating if the file is open
+- **A)** The total size of the file in bytes
+- **B)** The current position in the file in bytes
+- **C)** The remaining number of lines
+- **D)** A boolean indicating if the file is open
 
 9. Why is using `feof()` directly as a loop condition generally discouraged?
-    - **A)** It can cause an infinite loop
-    - **B)** It may read one extra iteration because EOF is only set after a failed read
-    - **C)** It automatically closes the file
-    - **D)** It only works for binary files
+- **A)** It can cause an infinite loop
+- **B)** It may read one extra iteration because EOF is only set after a failed read
+- **C)** It automatically closes the file
+- **D)** It only works for binary files
 
 10. What origin constant is used with `fseek()` to move relative to the beginning of the file?
-    - **A)** `SEEK_CUR`
-    - **B)** `SEEK_END`
-    - **C)** `SEEK_SET`
-    - **D)** `SEEK_START`
+- **A)** `SEEK_CUR`
+- **B)** `SEEK_END`
+- **C)** `SEEK_SET`
+- **D)** `SEEK_START`
 
 ### Answer Key & Explanations
 1. **C)** Standard inputs/outputs operations encompass disc storage manipulation bridging directly from the `stdio.h` suite.

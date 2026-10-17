@@ -77,22 +77,22 @@ src – specifies the URI of an external script file
 ## Multiple Choice Questions
 
 1. Where should scripts be placed if you want them to be processed *before* the page loads?
-    - **A)** In the `<body>` section.
-    - **B)** In the `<head>` section.
-    - **C)** At the very bottom of the HTML document.
-    - **D)** Inside an inline CSS `<style>` block.
+- **A)** In the `<body>` section.
+- **B)** In the `<head>` section.
+- **C)** At the very bottom of the HTML document.
+- **D)** Inside an inline CSS `<style>` block.
 
 2. Which of the following is an advantage of using an External JavaScript file over inline scripts?
-    - **A)** It restricts the JavaScript from running on mobile devices.
-    - **B)** It is best used to control multiple web pages efficiently.
-    - **C)** It automatically transpiles older JavaScript into modern syntax.
-    - **D)** It forces the HTML document to render instantly without styling.
+- **A)** It restricts the JavaScript from running on mobile devices.
+- **B)** It is best used to control multiple web pages efficiently.
+- **C)** It automatically transpiles older JavaScript into modern syntax.
+- **D)** It forces the HTML document to render instantly without styling.
 
 3. Which HTML attribute is used within a `<script>` tag to specify the URI of an external script file?
-    - **A)** `href`
-    - **B)** `link`
-    - **C)** `type`
-    - **D)** `src`
+- **A)** `href`
+- **B)** `link`
+- **C)** `type`
+- **D)** `src`
 
 ### Answer Key & Explanations
 1. **B)** Scripts in the `<head>` section are processed first before the page loads.

@@ -51,10 +51,10 @@ Therefore, the domain is all real numbers except $x = 3$. In interval notation: 
 ## Multiple Choice Questions
 
 1. What is the fundamental definition of a function $f$ from a set $A$ to a set $B$?
-    - **A)** It maps each element in $A$ to exactly one element in $B$.
-    - **B)** It maps each element in $B$ to exactly one element in $A$.
-    - **C)** It maps each element in $A$ to multiple elements in $B$.
-    - **D)** It maps multiple elements in $B$ to one element in $A$.
+- **A)** It maps each element in $A$ to exactly one element in $B$.
+- **B)** It maps each element in $B$ to exactly one element in $A$.
+- **C)** It maps each element in $A$ to multiple elements in $B$.
+- **D)** It maps multiple elements in $B$ to one element in $A$.
 
 ### Answer Key & Explanations
 1. **A)** A function must assign exactly one output for each input in its domain, mapping $A$ to $B$.

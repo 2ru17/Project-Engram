@@ -84,64 +84,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What do growth rates describe in algorithm analysis?
-    - **A)** The absolute time in seconds an algorithm takes to run
-    - **B)** How an algorithm's resource usage increases as the input size $n$ grows
-    - **C)** The amount of physical disk space a program requires
-    - **D)** The number of variables declared in the code
+- **A)** The absolute time in seconds an algorithm takes to run
+- **B)** How an algorithm's resource usage increases as the input size $n$ grows
+- **C)** The amount of physical disk space a program requires
+- **D)** The number of variables declared in the code
 
 2. Which of the following growth rates is the slowest (best)?
-    - **A)** $\Theta(n)$
-    - **B)** $\Theta(\log n)$
-    - **C)** $\Theta(1)$
-    - **D)** $\Theta(n \log n)$
+- **A)** $\Theta(n)$
+- **B)** $\Theta(\log n)$
+- **C)** $\Theta(1)$
+- **D)** $\Theta(n \log n)$
 
 3. Which of the following growth rates is the fastest (worst)?
-    - **A)** $\Theta(n^2)$
-    - **B)** $\Theta(2^n)$
-    - **C)** $\Theta(n!)$
-    - **D)** $\Theta(n^3)$
+- **A)** $\Theta(n^2)$
+- **B)** $\Theta(2^n)$
+- **C)** $\Theta(n!)$
+- **D)** $\Theta(n^3)$
 
 4. What is a classic example of an algorithm with a logarithmic ($\Theta(\log n)$) growth rate?
-    - **A)** Linear Search
-    - **B)** Binary Search
-    - **C)** Bubble Sort
-    - **D)** Merge Sort
+- **A)** Linear Search
+- **B)** Binary Search
+- **C)** Bubble Sort
+- **D)** Merge Sort
 
 5. Merge Sort and Heap Sort are examples of algorithms with which growth rate?
-    - **A)** Linear
-    - **B)** Quadratic
-    - **C)** Linearithmic ($\Theta(n \log n)$)
-    - **D)** Exponential
+- **A)** Linear
+- **B)** Quadratic
+- **C)** Linearithmic ($\Theta(n \log n)$)
+- **D)** Exponential
 
 6. In terms of practical impact for $n = 1,000,000$, roughly how many operations does an $O(n^2)$ algorithm perform?
-    - **A)** 1,000,000
-    - **B)** 20,000,000
-    - **C)** 1,000,000,000,000 (infeasible)
-    - **D)** ~20
+- **A)** 1,000,000
+- **B)** 20,000,000
+- **C)** 1,000,000,000,000 (infeasible)
+- **D)** ~20
 
 7. What does asymptotic dominance ($f(n)$ dominates $g(n)$) mean mathematically?
-    - **A)** The limit of $g(n)/f(n)$ as $n \to \infty$ is $0$.
-    - **B)** $f(n)$ and $g(n)$ grow at the same rate.
-    - **C)** $f(n)$ is always smaller than $g(n)$ for all $n$.
-    - **D)** The limit of $f(n)/g(n)$ as $n \to \infty$ is $0$.
+- **A)** The limit of $g(n)/f(n)$ as $n \to \infty$ is $0$.
+- **B)** $f(n)$ and $g(n)$ grow at the same rate.
+- **C)** $f(n)$ is always smaller than $g(n)$ for all $n$.
+- **D)** The limit of $f(n)/g(n)$ as $n \to \infty$ is $0$.
 
 8. Why does an $O(n \log n)$ algorithm eventually beat an $O(n^2)$ algorithm?
-    - **A)** Because logarithmic functions have smaller constant factors.
-    - **B)** Because $n \log n$ dominates $n^2$ as $n$ approaches infinity, regardless of constant factors.
-    - **C)** Because $O(n^2)$ algorithms cannot run on modern hardware.
-    - **D)** Because $O(n \log n)$ is a tighter bound.
+- **A)** Because logarithmic functions have smaller constant factors.
+- **B)** Because $n \log n$ dominates $n^2$ as $n$ approaches infinity, regardless of constant factors.
+- **C)** Because $O(n^2)$ algorithms cannot run on modern hardware.
+- **D)** Because $O(n \log n)$ is a tighter bound.
 
 9. What is a common pitfall when comparing algorithm growth rates?
-    - **A)** Assuming exponential growth is infeasible
-    - **B)** Assuming a "faster" growth rate algorithm is always faster for small $n$, ignoring constant factors
-    - **C)** Using asymptotic notation to compare them
-    - **D)** Understanding that $O(n \log n)$ is worse than $O(n)$
+- **A)** Assuming exponential growth is infeasible
+- **B)** Assuming a "faster" growth rate algorithm is always faster for small $n$, ignoring constant factors
+- **C)** Using asymptotic notation to compare them
+- **D)** Understanding that $O(n \log n)$ is worse than $O(n)$
 
 10. Which of the following correctly orders growth rates from slowest to fastest?
-    - **A)** $1 \prec n \prec \log n \prec n^2$
-    - **B)** $1 \prec \log n \prec n \prec n \log n \prec n^2$
-    - **C)** $n \prec n \log n \prec n^2 \prec \log n$
-    - **D)** $\log n \prec 1 \prec n \prec n^2 \prec 2^n$
+- **A)** $1 \prec n \prec \log n \prec n^2$
+- **B)** $1 \prec \log n \prec n \prec n \log n \prec n^2$
+- **C)** $n \prec n \log n \prec n^2 \prec \log n$
+- **D)** $\log n \prec 1 \prec n \prec n^2 \prec 2^n$
 
 ### Answer Key & Explanations
 1. **B)** Growth rates measure the scalability of an algorithm by observing how rapidly time or space requirements increase relative to the input size $n$.

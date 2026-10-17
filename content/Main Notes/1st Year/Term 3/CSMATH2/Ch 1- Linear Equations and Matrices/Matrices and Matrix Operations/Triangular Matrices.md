@@ -50,22 +50,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What strictly defines an upper triangular matrix?
-    - **A)** All entries above the main diagonal are zero.
-    - **B)** All entries exactly on the main diagonal are zero.
-    - **C)** All entries strictly below the main diagonal are zero.
-    - **D)** The matrix is shaped like a triangle.
+- **A)** All entries above the main diagonal are zero.
+- **B)** All entries exactly on the main diagonal are zero.
+- **C)** All entries strictly below the main diagonal are zero.
+- **D)** The matrix is shaped like a triangle.
 
 2. What strictly defines a lower triangular matrix?
-    - **A)** All entries strictly above the main diagonal are zero.
-    - **B)** All entries strictly below the main diagonal are zero.
-    - **C)** All non-zero entries are negative.
-    - **D)** The determinant is zero.
+- **A)** All entries strictly above the main diagonal are zero.
+- **B)** All entries strictly below the main diagonal are zero.
+- **C)** All non-zero entries are negative.
+- **D)** The determinant is zero.
 
 3. If a square matrix is simultaneously both an upper triangular matrix and a lower triangular matrix, what is it officially called?
-    - **A)** An Identity Matrix
-    - **B)** A Diagonal Matrix
-    - **C)** A Zero Matrix
-    - **D)** A Symmetric Matrix
+- **A)** An Identity Matrix
+- **B)** A Diagonal Matrix
+- **C)** A Zero Matrix
+- **D)** A Symmetric Matrix
 
 ### Answer Key & Explanations
 1. **C)** An upper triangular matrix has non-zero entries on and above the main diagonal, meaning all entries below it must be zero.

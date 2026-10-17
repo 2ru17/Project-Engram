@@ -48,64 +48,64 @@ Reading from bottom to top: $15\text{F}_{16}$.
 ## Multiple Choice Questions
 
 1. What does the base (or radix) of a number system determine?
-    - **A)** The physical size of the memory block needed to store it.
-    - **B)** The speed at which a processor can evaluate the number.
-    - **C)** The number of symbols used to represent digits.
-    - **D)** Whether the number system can support fractional values.
+- **A)** The physical size of the memory block needed to store it.
+- **B)** The speed at which a processor can evaluate the number.
+- **C)** The number of symbols used to represent digits.
+- **D)** Whether the number system can support fractional values.
 
 2. Which number system does a computer natively operate on exclusively?
-    - **A)** Decimal (Base 10)
-    - **B)** Hexadecimal (Base 16)
-    - **C)** Binary (Base 2)
-    - **D)** Octal (Base 8)
+- **A)** Decimal (Base 10)
+- **B)** Hexadecimal (Base 16)
+- **C)** Binary (Base 2)
+- **D)** Octal (Base 8)
 
 3. How many unique symbols are used in the Hexadecimal (Base 16) number system?
-    - **A)** 10
-    - **B)** 12
-    - **C)** 16
-    - **D)** 20
+- **A)** 10
+- **B)** 12
+- **C)** 16
+- **D)** 20
 
 4. What is the general rule for converting a number from any base to decimal?
-    - **A)** Divide the number continuously by 10 and record the remainders.
-    - **B)** Multiply each digit by the base raised to the power of its positional index and sum them up.
-    - **C)** Group the digits into sets of 4 and translate via ASCII.
-    - **D)** Invert the digits and add 1.
+- **A)** Divide the number continuously by 10 and record the remainders.
+- **B)** Multiply each digit by the base raised to the power of its positional index and sum them up.
+- **C)** Group the digits into sets of 4 and translate via ASCII.
+- **D)** Invert the digits and add 1.
 
 5. When converting a decimal number to binary using continuous division, how are the new digits determined?
-    - **A)** By reading the whole number quotients from top to bottom.
-    - **B)** By reading the remainders from bottom to top (last remainder to first).
-    - **C)** By summing all the remainders together.
-    - **D)** By translating each decimal digit directly into a 4-bit binary group.
+- **A)** By reading the whole number quotients from top to bottom.
+- **B)** By reading the remainders from bottom to top (last remainder to first).
+- **C)** By summing all the remainders together.
+- **D)** By translating each decimal digit directly into a 4-bit binary group.
 
 6. How do you convert a binary number to octal?
-    - **A)** Group the binary digits into sets of 3 starting from the right and convert each group.
-    - **B)** Multiply the binary string by 8 continuously.
-    - **C)** Group the binary digits into sets of 4 starting from the left.
-    - **D)** Convert the binary string to decimal, then subtract 8 iteratively.
+- **A)** Group the binary digits into sets of 3 starting from the right and convert each group.
+- **B)** Multiply the binary string by 8 continuously.
+- **C)** Group the binary digits into sets of 4 starting from the left.
+- **D)** Convert the binary string to decimal, then subtract 8 iteratively.
 
 7. What is the decimal value of the hexadecimal symbol 'C'?
-    - **A)** 10
-    - **B)** 11
-    - **C)** 12
-    - **D)** 14
+- **A)** 10
+- **B)** 11
+- **C)** 12
+- **D)** 14
 
 8. To convert a binary number to hexadecimal, how many bits should be grouped together?
-    - **A)** 2
-    - **B)** 3
-    - **C)** 4
-    - **D)** 8
+- **A)** 2
+- **B)** 3
+- **C)** 4
+- **D)** 8
 
 9. Why do humans often use octal and hexadecimal systems when working with computers?
-    - **A)** Because modern CPUs process hexadecimal faster than binary.
-    - **B)** To more conveniently represent and manipulate binary computer data.
-    - **C)** Because they are the only formats compatible with floating-point math.
-    - **D)** Because network protocols strictly require Base 8 formats.
+- **A)** Because modern CPUs process hexadecimal faster than binary.
+- **B)** To more conveniently represent and manipulate binary computer data.
+- **C)** Because they are the only formats compatible with floating-point math.
+- **D)** Because network protocols strictly require Base 8 formats.
 
 10. When grouping binary digits for conversion and the leftmost group is incomplete, what is the proper procedure?
-    - **A)** Discard the incomplete group entirely.
-    - **B)** Pad the leftmost group with 1s.
-    - **C)** Pad the leftmost group with 0s.
-    - **D)** Shift the entire binary string to the right until it aligns.
+- **A)** Discard the incomplete group entirely.
+- **B)** Pad the leftmost group with 1s.
+- **C)** Pad the leftmost group with 0s.
+- **D)** Shift the entire binary string to the right until it aligns.
 
 ### Answer Key & Explanations
 1. **C)** The base or radix determines the number of symbols used to represent digits.

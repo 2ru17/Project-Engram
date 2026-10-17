@@ -74,64 +74,64 @@ $= 0.25 + 0.125 + 0.0625 + 0.015625 = 0.453125_{10}$.
 ## Multiple Choice Questions
 
 1. Why is a fixed-point binary representation generally impractical for real numbers?
-    - **A)** It cannot be processed by modern CPUs.
-    - **B)** It lacks the necessary range for very large numbers and precision for very small numbers.
-    - **C)** It requires double the memory of floating-point formats.
-    - **D)** It inherently prevents negative number representation.
+- **A)** It cannot be processed by modern CPUs.
+- **B)** It lacks the necessary range for very large numbers and precision for very small numbers.
+- **C)** It requires double the memory of floating-point formats.
+- **D)** It inherently prevents negative number representation.
 
 2. Which standard heavily defines the floating-point representations used in modern computer systems?
-    - **A)** ISO 9001
-    - **B)** IEEE 802.11
-    - **C)** ASCII 128
-    - **D)** IEEE 754
+- **A)** ISO 9001
+- **B)** IEEE 802.11
+- **C)** ASCII 128
+- **D)** IEEE 754
 
 3. In floating-point notation, what does a truncation operation result in?
-    - **A)** An overflow error that crashes the system.
-    - **B)** A perfect representation of infinite repeating decimals.
-    - **C)** Precision loss, leading to close approximations rather than exact numbers.
-    - **D)** The conversion of the value to an unsigned integer.
+- **A)** An overflow error that crashes the system.
+- **B)** A perfect representation of infinite repeating decimals.
+- **C)** Precision loss, leading to close approximations rather than exact numbers.
+- **D)** The conversion of the value to an unsigned integer.
 
 4. What is the positional weight of the first bit to the right of the radix point in a fractional binary number?
-    - **A)** 2^1 or 2
-    - **B)** 2^-1 or 0.5
-    - **C)** 2^-2 or 0.25
-    - **D)** 2^0 or 1
+- **A)** 2^1 or 2
+- **B)** 2^-1 or 0.5
+- **C)** 2^-2 or 0.25
+- **D)** 2^0 or 1
 
 5. How many total bits does an IEEE 754 Single Precision (binary32) format utilize?
-    - **A)** 16 bits
-    - **B)** 32 bits
-    - **C)** 64 bits
-    - **D)** 128 bits
+- **A)** 16 bits
+- **B)** 32 bits
+- **C)** 64 bits
+- **D)** 128 bits
 
 6. What are the three parts into which a floating-point number is encoded?
-    - **A)** Byte, Nibble, and Bit
-    - **B)** Mantissa, Register, and Index
-    - **C)** Sign bit, Exponent, and Mantissa
-    - **D)** Radix, Floating Point, and Denominator
+- **A)** Byte, Nibble, and Bit
+- **B)** Mantissa, Register, and Index
+- **C)** Sign bit, Exponent, and Mantissa
+- **D)** Radix, Floating Point, and Denominator
 
 7. Under what condition does floating-point overflow occur?
-    - **A)** When the mantissa has fewer significant digits than required.
-    - **B)** When a value is too large and its normalized exponent exceeds the maximum possible bits.
-    - **C)** When a very small value normalizes to a negative exponent.
-    - **D)** When attempting to divide a floating-point number by zero.
+- **A)** When the mantissa has fewer significant digits than required.
+- **B)** When a value is too large and its normalized exponent exceeds the maximum possible bits.
+- **C)** When a very small value normalizes to a negative exponent.
+- **D)** When attempting to divide a floating-point number by zero.
 
 8. What is the bias value used for the exponent in IEEE 754 Single Precision?
-    - **A)** 1023
-    - **B)** 127
-    - **C)** 255
-    - **D)** 0
+- **A)** 1023
+- **B)** 127
+- **C)** 255
+- **D)** 0
 
 9. How is the mantissa (M) typically adjusted when normalizing a binary number into scientific notation?
-    - **A)** It is converted entirely to 1s.
-    - **B)** The implicit leading 1 is dropped and the rest is padded with zeros.
-    - **C)** It is multiplied by the bias value.
-    - **D)** The decimal radix is shifted to the far right.
+- **A)** It is converted entirely to 1s.
+- **B)** The implicit leading 1 is dropped and the rest is padded with zeros.
+- **C)** It is multiplied by the bias value.
+- **D)** The decimal radix is shifted to the far right.
 
 10. What defines floating-point underflow?
-    - **A)** When a very small value normalizes to an exponent smaller than the minimum possible bound.
-    - **B)** When the system clock speed drops below operational thresholds.
-    - **C)** When memory capacity is insufficient to store a double precision number.
-    - **D)** When the truncation process discards the sign bit entirely.
+- **A)** When a very small value normalizes to an exponent smaller than the minimum possible bound.
+- **B)** When the system clock speed drops below operational thresholds.
+- **C)** When memory capacity is insufficient to store a double precision number.
+- **D)** When the truncation process discards the sign bit entirely.
 
 ### Answer Key & Explanations
 1. **B)** Fixed-point binary lacks the range to represent very large numbers and precision for very small numbers.

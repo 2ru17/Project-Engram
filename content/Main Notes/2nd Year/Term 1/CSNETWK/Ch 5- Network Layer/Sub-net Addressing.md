@@ -147,64 +147,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "The goal is to minimize wasted IP _____ while accommodating the required number of hosts."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** addresses
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** addresses
 
 2. Which word completes the following sentence from the text: "What is the broadcast address of subnet B?**  **Analysis:** _____ `.192` + 32 addresses - 1 = `.223`."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** Start
-    - **D)** Protocol
+- **A)** Network
+- **B)** Router
+- **C)** Start
+- **D)** Protocol
 
 3. Which word completes the following sentence from the text: "The Golden Rule of VLSM (Variable Length Subnet Masking)  When assigning subnets to groups of _____ sizes, always assign the largest group first, then the next largest, and so on."?
-    - **A)** Protocol
-    - **B)** different
-    - **C)** Network
-    - **D)** Router
+- **A)** Protocol
+- **B)** different
+- **C)** Network
+- **D)** Router
 
 4. Which word completes the following sentence from the text: "**Correct Answer:** **172.30.172.222**  ### _____ C (37 Hosts)  **11."?
-    - **A)** Protocol
-    - **B)** Subnet
-    - **C)** Router
-    - **D)** Network
+- **A)** Protocol
+- **B)** Subnet
+- **C)** Router
+- **D)** Network
 
 5. Which word completes the following sentence from the text: "**Network Address:** The very first _____ (all host bits 0)."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** IP
+- **A)** Network
+- **B)** Protocol
+- **C)** Router
+- **D)** IP
 
 6. Which word completes the following sentence from the text: "Concept Overview: VLSM  Definition  Subnetting allows a network administra_____r to break a large network into smaller, efficient sub-networks."?
-    - **A)** to
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** Router
+- **A)** to
+- **B)** Network
+- **C)** Protocol
+- **D)** Router
 
 7. Which word completes the following sentence from the text: "**Broadcast Address:** The very last _____ (all host bits 1)."?
-    - **A)** Router
-    - **B)** IP
-    - **C)** Protocol
-    - **D)** Network
+- **A)** Router
+- **B)** IP
+- **C)** Protocol
+- **D)** Network
 
 8. Which word completes the following sentence from the text: "What is the ending address of _____ C?**  **Analysis:** Broadcast (`.191`) - 1."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** subnet
+- **A)** Router
+- **B)** Network
+- **C)** Protocol
+- **D)** subnet
 
 9. Which word completes the following sentence from the text: "What is the starting address of _____ A?**  **Analysis:** Subnet ID + 1."?
-    - **A)** Router
-    - **B)** subnet
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Router
+- **B)** subnet
+- **C)** Network
+- **D)** Protocol
 
 10. Which word completes the following sentence from the text: "**Correct Answer:** **172.30.172.190**  ## Summary _____ Logic (Cheat Sheet)  1."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** of
-    - **D)** Protocol
+- **A)** Network
+- **B)** Router
+- **C)** of
+- **D)** Protocol
 
 
 ### Answer Key & Explanations

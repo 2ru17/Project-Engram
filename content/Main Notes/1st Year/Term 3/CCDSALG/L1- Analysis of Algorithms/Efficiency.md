@@ -68,64 +68,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What are the two primary dimensions of algorithm efficiency?
-    - **A)** Big-O and Big-Theta
-    - **B)** Time efficiency and Space efficiency
-    - **C)** Iterative efficiency and Recursive efficiency
-    - **D)** Compilation speed and Execution speed
+- **A)** Big-O and Big-Theta
+- **B)** Time efficiency and Space efficiency
+- **C)** Iterative efficiency and Recursive efficiency
+- **D)** Compilation speed and Execution speed
 
 2. Which concept describes the scenario where improving time efficiency requires using more space?
-    - **A)** Time-space tradeoff
-    - **B)** Asymptotic growth
-    - **C)** Amortized cost
-    - **D)** In-place optimization
+- **A)** Time-space tradeoff
+- **B)** Asymptotic growth
+- **C)** Amortized cost
+- **D)** In-place optimization
 
 3. How do Hash tables exemplify the time-space tradeoff?
-    - **A)** They use no extra space but take $O(n)$ time.
-    - **B)** They use $O(n)$ extra space to achieve $O(1)$ average-time lookups.
-    - **C)** They use $O(1)$ space and $O(1)$ time in the worst case.
-    - **D)** They are completely inefficient in both time and space.
+- **A)** They use no extra space but take $O(n)$ time.
+- **B)** They use $O(n)$ extra space to achieve $O(1)$ average-time lookups.
+- **C)** They use $O(1)$ space and $O(1)$ time in the worst case.
+- **D)** They are completely inefficient in both time and space.
 
 4. What characterizes an "in-place" algorithm like Insertion Sort?
-    - **A)** It uses $O(n^2)$ extra space.
-    - **B)** It relies heavily on memoization.
-    - **C)** It uses $O(1)$ extra space but may be slower.
-    - **D)** It cannot be analyzed asymptotically.
+- **A)** It uses $O(n^2)$ extra space.
+- **B)** It relies heavily on memoization.
+- **C)** It uses $O(1)$ extra space but may be slower.
+- **D)** It cannot be analyzed asymptotically.
 
 5. In algorithmic theory, what running time is generally considered "efficient"?
-    - **A)** Exponential time
-    - **B)** Factorial time
-    - **C)** Polynomial time
-    - **D)** Infinite time
+- **A)** Exponential time
+- **B)** Factorial time
+- **C)** Polynomial time
+- **D)** Infinite time
 
 6. When comparing algorithms, if their asymptotic time complexity is identical, what should generally be compared next?
-    - **A)** The variable names used
-    - **B)** The space complexity
-    - **C)** The programming language used
-    - **D)** The number of comments in the code
+- **A)** The variable names used
+- **B)** The space complexity
+- **C)** The programming language used
+- **D)** The number of comments in the code
 
 7. What is meant by "premature optimization"?
-    - **A)** Failing to write an algorithm completely before analyzing it
-    - **B)** Over-optimizing code that isn’t a bottleneck
-    - **C)** Using Big-O notation too early in the design phase
-    - **D)** Allocating too much memory at startup
+- **A)** Failing to write an algorithm completely before analyzing it
+- **B)** Over-optimizing code that isn’t a bottleneck
+- **C)** Using Big-O notation too early in the design phase
+- **D)** Allocating too much memory at startup
 
 8. What is a common pitfall when evaluating algorithm efficiency?
-    - **A)** Considering both time and space constraints
-    - **B)** Assuming asymptotic efficiency always perfectly translates to practical speed, ignoring constant factors
-    - **C)** Comparing space complexity when time complexity is equal
-    - **D)** Using asymptotic notation
+- **A)** Considering both time and space constraints
+- **B)** Assuming asymptotic efficiency always perfectly translates to practical speed, ignoring constant factors
+- **C)** Comparing space complexity when time complexity is equal
+- **D)** Using asymptotic notation
 
 9. What does memoization do?
-    - **A)** It increases time complexity significantly.
-    - **B)** It caches results to avoid recomputation, typically using more space.
-    - **C)** It reduces space usage to $O(1)$ at the cost of execution time.
-    - **D)** It turns polynomial time into exponential time.
+- **A)** It increases time complexity significantly.
+- **B)** It caches results to avoid recomputation, typically using more space.
+- **C)** It reduces space usage to $O(1)$ at the cost of execution time.
+- **D)** It turns polynomial time into exponential time.
 
 10. Alongside correctness, what is the other primary design goal of an algorithm?
-    - **A)** Using nested loops
-    - **B)** Efficiency
-    - **C)** Dynamic typing
-    - **D)** Object orientation
+- **A)** Using nested loops
+- **B)** Efficiency
+- **C)** Dynamic typing
+- **D)** Object orientation
 
 ### Answer Key & Explanations
 1. **B)** Efficiency fundamentally measures how well an algorithm leverages execution time and memory space.

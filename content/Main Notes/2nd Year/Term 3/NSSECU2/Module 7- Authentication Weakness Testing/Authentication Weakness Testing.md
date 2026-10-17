@@ -204,52 +204,52 @@ Safe Proof:          Logged in using verified credentials; captured administrati
 ## Multiple Choice Questions
 
 1. How does a Password Spraying attack successfully circumvent account lockout policies?
-    - **A)** By attempting thousands of different passwords against a single administrator account within 5 seconds
-    - **B)** By attempting a single common password across many different user accounts, ensuring the threshold of failed attempts per user is never reached
-    - **C)** By disabling the target server's Active Directory database
-    - **D)** By decrypting the private SSH server key
+- **A)** By attempting thousands of different passwords against a single administrator account within 5 seconds
+- **B)** By attempting a single common password across many different user accounts, ensuring the threshold of failed attempts per user is never reached
+- **C)** By disabling the target server's Active Directory database
+- **D)** By decrypting the private SSH server key
 
 2. An application displays the error `"Password incorrect for user jsmith"` when a bad password is submitted for `jsmith`, but displays `"User not found"` when `invaliduser` is tested. What vulnerability does this introduce?
-    - **A)** Remote Buffer Overflow
-    - **B)** Username Enumeration
-    - **C)** Cross-Site Scripting (XSS)
-    - **D)** Local File Inclusion (LFI)
+- **A)** Remote Buffer Overflow
+- **B)** Username Enumeration
+- **C)** Cross-Site Scripting (XSS)
+- **D)** Local File Inclusion (LFI)
 
 3. What protection is provided to a web session cookie by the `HttpOnly` attribute flag?
-    - **A)** The cookie is encrypted using RSA-4096 before transmission.
-    - **B)** The cookie cannot be accessed or read by client-side JavaScript, preventing session hijacking via XSS.
-    - **C)** The cookie expires automatically after 5 milliseconds.
-    - **D)** The cookie can only be accessed by search engine web crawlers.
+- **A)** The cookie is encrypted using RSA-4096 before transmission.
+- **B)** The cookie cannot be accessed or read by client-side JavaScript, preventing session hijacking via XSS.
+- **C)** The cookie expires automatically after 5 milliseconds.
+- **D)** The cookie can only be accessed by search engine web crawlers.
 
 4. Which tool is specifically designed to spider a target organization's website and extract unique vocabulary to build customized brute-force wordlists?
-    - **A)** `cewl`
-    - **B)** `nmap`
-    - **C)** `nikto`
-    - **D)** `wireshark`
+- **A)** `cewl`
+- **B)** `nmap`
+- **C)** `nikto`
+- **D)** `wireshark`
 
 5. An analyst captures an NTLM password hash from a Windows workstation. Which Hashcat mode (`-m`) should be specified to crack this hash?
-    - **A)** `-m 0`
-    - **B)** `-m 1000`
-    - **C)** `-m 1800`
-    - **D)** `-m 22000`
+- **A)** `-m 0`
+- **B)** `-m 1000`
+- **C)** `-m 1800`
+- **D)** `-m 22000`
 
 6. What is the fundamental difference between Authentication and Authorization?
-    - **A)** Authentication verifies the identity of the user, while Authorization determines the resources and actions the user is allowed to access.
-    - **B)** Authentication is performed only by web servers, while Authorization is performed by routers.
-    - **C)** Authentication encrypts files, while Authorization decrypts files.
-    - **D)** There is no difference; they are interchangeable terms.
+- **A)** Authentication verifies the identity of the user, while Authorization determines the resources and actions the user is allowed to access.
+- **B)** Authentication is performed only by web servers, while Authorization is performed by routers.
+- **C)** Authentication encrypts files, while Authorization decrypts files.
+- **D)** There is no difference; they are interchangeable terms.
 
 7. Why is performing online brute-force attacks against SSH or web logins considered higher risk than offline hash cracking during an enterprise engagement?
-    - **A)** Online attacks can trigger account lockouts, degrade service performance, and create massive operational disruptions for real employees.
-    - **B)** Online attacks are illegal even with a signed RoE.
-    - **C)** Offline hash cracking requires 10 gigabytes of network bandwidth.
-    - **D)** Online attacks automatically format the penetration tester's hard drive.
+- **A)** Online attacks can trigger account lockouts, degrade service performance, and create massive operational disruptions for real employees.
+- **B)** Online attacks are illegal even with a signed RoE.
+- **C)** Offline hash cracking requires 10 gigabytes of network bandwidth.
+- **D)** Online attacks automatically format the penetration tester's hard drive.
 
 8. Which modern cryptographic algorithm is recommended for securely storing user passwords in databases due to its resistance against GPU/ASIC acceleration?
-    - **A)** MD5
-    - **B)** SHA-1
-    - **C)** Argon2id
-    - **D)** Base64
+- **A)** MD5
+- **B)** SHA-1
+- **C)** Argon2id
+- **D)** Base64
 
 ### Answer Key & Explanations
 

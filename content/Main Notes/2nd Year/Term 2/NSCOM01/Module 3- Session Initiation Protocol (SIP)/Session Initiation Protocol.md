@@ -106,64 +106,64 @@ sequenceDiagram
 
 ## Multiple Choice Questions
 1. What RFC formally defines the Session Initiation Protocol (SIP)?
-    - **A)** RFC 3550
-    - **B)** RFC 3261
-    - **C)** RFC 1918
-    - **D)** RFC 802
+- **A)** RFC 3550
+- **B)** RFC 3261
+- **C)** RFC 1918
+- **D)** RFC 802
 
 2. What is the primary function of SIP?
-    - **A)** To carry the actual audio data over the network
-    - **B)** To provide VCR controls for streaming video
-    - **C)** To establish, modify, and terminate multimedia sessions
-    - **D)** To encrypt VoIP traffic
+- **A)** To carry the actual audio data over the network
+- **B)** To provide VCR controls for streaming video
+- **C)** To establish, modify, and terminate multimedia sessions
+- **D)** To encrypt VoIP traffic
 
 3. Which of the following is NOT a core service provided by SIP?
-    - **A)** Name translation and user location
-    - **B)** Call setup and codec negotiation
-    - **C)** Call management and mid-session modifications
-    - **D)** Routing of physical packets at the network layer
+- **A)** Name translation and user location
+- **B)** Call setup and codec negotiation
+- **C)** Call management and mid-session modifications
+- **D)** Routing of physical packets at the network layer
 
 4. Which server acts similarly to a local DNS server by routing INVITE messages to locate a callee?
-    - **A)** Registrar Server
-    - **B)** Proxy Server
-    - **C)** Media Server
-    - **D)** Tracker Server
+- **A)** Registrar Server
+- **B)** Proxy Server
+- **C)** Media Server
+- **D)** Tracker Server
 
 5. What does a SIP client do when it first powers on to ensure it can receive calls?
-    - **A)** Sends an INVITE to the Proxy Server
-    - **B)** Sends a REGISTER message to the Registrar Server
-    - **C)** Sends an ACK to all contacts
-    - **D)** Opens an RTSP out-of-band connection
+- **A)** Sends an INVITE to the Proxy Server
+- **B)** Sends a REGISTER message to the Registrar Server
+- **C)** Sends an ACK to all contacts
+- **D)** Opens an RTSP out-of-band connection
 
 6. What is the default port number used for SIP messages?
-    - **A)** 80
-    - **B)** 443
-    - **C)** 5060
-    - **D)** 8080
+- **A)** 80
+- **B)** 443
+- **C)** 5060
+- **D)** 8080
 
 7. What message does Alice send to Bob to initiate a SIP call?
-    - **A)** SETUP
-    - **B)** SYN
-    - **C)** INVITE
-    - **D)** HELLO
+- **A)** SETUP
+- **B)** SYN
+- **C)** INVITE
+- **D)** HELLO
 
 8. If Bob receives a call setup request but does not support the requested audio codec, what SIP response might he send?
-    - **A)** 200 OK
-    - **B)** 404 Not Found
-    - **C)** 500 Server Error
-    - **D)** 606 Not Acceptable
+- **A)** 200 OK
+- **B)** 404 Not Found
+- **C)** 500 Server Error
+- **D)** 606 Not Acceptable
 
 9. After SIP negotiation is complete (INVITE, OK, ACK), how does the actual audio data travel?
-    - **A)** Encapsulated inside SIP messages
-    - **B)** Via HTTP requests
-    - **C)** Over a separate RTP connection
-    - **D)** Over a direct TCP connection via the Proxy Server
+- **A)** Encapsulated inside SIP messages
+- **B)** Via HTTP requests
+- **C)** Over a separate RTP connection
+- **D)** Over a direct TCP connection via the Proxy Server
 
 10. Which protocol is typically used to format the payload of a SIP INVITE message to describe IP addresses, ports, and codecs?
-    - **A)** HTML
-    - **B)** SDP (Session Description Protocol)
-    - **C)** XML
-    - **D)** JSON
+- **A)** HTML
+- **B)** SDP (Session Description Protocol)
+- **C)** XML
+- **D)** JSON
 
 ### Answer Key & Explanations
 1. **B** - SIP is defined in RFC 3261.

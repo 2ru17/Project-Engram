@@ -95,64 +95,64 @@ If a misconfiguration sends this route back to AS 100, the edge router at AS 100
 
 ## Multiple Choice Questions
 1. Which protocol is strictly classified as an Interdomain routing protocol?
-    - **A)** OSPF
-    - **B)** EIGRP
-    - **C)** RIP
-    - **D)** BGP
+- **A)** OSPF
+- **B)** EIGRP
+- **C)** RIP
+- **D)** BGP
 
 2. What category of routing protocol does BGP fall under?
-    - **A)** Distance-Vector
-    - **B)** Link-State
-    - **C)** Path-Vector
-    - **D)** Autonomous-Vector
+- **A)** Distance-Vector
+- **B)** Link-State
+- **C)** Path-Vector
+- **D)** Autonomous-Vector
 
 3. Which BGP message type is used to establish the initial connection and authenticate the peer?
-    - **A)** UPDATE
-    - **B)** OPEN
-    - **C)** NOTIFICATION
-    - **D)** KEEPALIVE
+- **A)** UPDATE
+- **B)** OPEN
+- **C)** NOTIFICATION
+- **D)** KEEPALIVE
 
 4. What transport protocol and port does BGP use to establish peer connections?
-    - **A)** UDP 520
-    - **B)** TCP 179
-    - **C)** TCP 443
-    - **D)** UDP 161
+- **A)** UDP 520
+- **B)** TCP 179
+- **C)** TCP 443
+- **D)** UDP 161
 
 5. Which of the following best defines an eBGP session?
-    - **A)** A session between two routers in the same Autonomous System
-    - **B)** A session between two routers in different Autonomous Systems
-    - **C)** A session that uses OSPF as a backup
-    - **D)** A session that requires no authentication
+- **A)** A session between two routers in the same Autonomous System
+- **B)** A session between two routers in different Autonomous Systems
+- **C)** A session that uses OSPF as a backup
+- **D)** A session that requires no authentication
 
 6. What is the primary function of the BGP AS-PATH attribute?
-    - **A)** To determine the internal cost to reach a gateway
-    - **B)** To act as a loop-prevention mechanism by recording every AS the route passes through
-    - **C)** To list the MAC addresses of all traversed routers
-    - **D)** To assign an IP address to the next-hop router
+- **A)** To determine the internal cost to reach a gateway
+- **B)** To act as a loop-prevention mechanism by recording every AS the route passes through
+- **C)** To list the MAC addresses of all traversed routers
+- **D)** To assign an IP address to the next-hop router
 
 7. Hot potato routing refers to a network's attempt to do what?
-    - **A)** Pass the packet through as many ASes as possible
-    - **B)** Drop packets when the CPU is overloaded
-    - **C)** Hand off the packet to the nearest exit point to minimize internal transit costs
-    - **D)** Maximize the inter-domain cost of a route
+- **A)** Pass the packet through as many ASes as possible
+- **B)** Drop packets when the CPU is overloaded
+- **C)** Hand off the packet to the nearest exit point to minimize internal transit costs
+- **D)** Maximize the inter-domain cost of a route
 
 8. What action does a BGP router take immediately after sending a NOTIFICATION message?
-    - **A)** It recalculates the shortest path
-    - **B)** It closes the BGP TCP connection
-    - **C)** It requests a new routing table
-    - **D)** It retransmits the previous UPDATE message
+- **A)** It recalculates the shortest path
+- **B)** It closes the BGP TCP connection
+- **C)** It requests a new routing table
+- **D)** It retransmits the previous UPDATE message
 
 9. How does a BGP router handle a received route if it sees its own AS number inside the AS-PATH attribute?
-    - **A)** It prefers the route and installs it in the routing table
-    - **B)** It modifies the AS number and forwards it
-    - **C)** It drops the route because it indicates a routing loop
-    - **D)** It places the route in a hold-down state
+- **A)** It prefers the route and installs it in the routing table
+- **B)** It modifies the AS number and forwards it
+- **C)** It drops the route because it indicates a routing loop
+- **D)** It places the route in a hold-down state
 
 10. The LOCAL-PREF attribute is used to influence which of the following?
-    - **A)** The best entry path into your Autonomous System
-    - **B)** The best exit path out of your Autonomous System
-    - **C)** The intra-domain OSPF cost
-    - **D)** The MTU size of the data plane
+- **A)** The best entry path into your Autonomous System
+- **B)** The best exit path out of your Autonomous System
+- **C)** The intra-domain OSPF cost
+- **D)** The MTU size of the data plane
 
 ### Answer Key & Explanations
 1. **D** - BGP connects different Autonomous Systems (Interdomain).

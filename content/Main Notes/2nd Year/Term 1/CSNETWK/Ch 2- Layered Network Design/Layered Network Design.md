@@ -65,64 +65,64 @@ Decapsulation occurs at the destination, stripping the respective headers layer 
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "Defines specific user-oriented services (e.g., _____ for web, SMTP for email)."?
-    - **A)** HTTP
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** Network
+- **A)** HTTP
+- **B)** Protocol
+- **C)** Router
+- **D)** Network
 
 2. Which word completes the following sentence from the text: "**Network Layer (Layer 3):** Handles end-to-end routing and _____ between heterogeneous networks using logical addressing (e.g., IP)."?
-    - **A)** Router
-    - **B)** switching
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Router
+- **B)** switching
+- **C)** Network
+- **D)** Protocol
 
 3. Which word completes the following sentence from the text: "**Physical Layer (Layer 1):** Transmits raw bit streams over a _____ medium, translating bits into signals over wires, connectors, etc."?
-    - **A)** Protocol
-    - **B)** Router
-    - **C)** Network
-    - **D)** physical
+- **A)** Protocol
+- **B)** Router
+- **C)** Network
+- **D)** physical
 
 4. Which word completes the following sentence from the text: "**Application Layer (Layer 7):** _____ with end-user applications."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** Interfaces
+- **A)** Router
+- **B)** Protocol
+- **C)** Network
+- **D)** Interfaces
 
 5. Which word completes the following sentence from the text: "**Data Link Layer (Layer 2):** Transfers data across a _____ link, handling error detection, framing, and flow control."?
-    - **A)** Protocol
-    - **B)** physical
-    - **C)** Network
-    - **D)** Router
+- **A)** Protocol
+- **B)** physical
+- **C)** Network
+- **D)** Router
 
 6. Which word completes the following sentence from the text: "It is comprised of 7 layers, offering clear advantages: functional _____ simpler design, and independent technology updates without affecting other layers."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** isolation
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** isolation
+- **D)** Network
 
 7. Which word completes the following sentence from the text: "**Network Layer:** Encapsulates the segment with a _____ header ($H_n$) to create a **Datagram**."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** network
-    - **D)** Protocol
+- **A)** Router
+- **B)** Network
+- **C)** network
+- **D)** Protocol
 
 8. Which word completes the following sentence from the text: "**Transport Layer (Layer 4):** Ensures error-free _____ complete delivery of data end-to-end."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** and
-    - **D)** Protocol
+- **A)** Network
+- **B)** Router
+- **C)** and
+- **D)** Protocol
 
 9. Which word completes the following sentence from the text: "Decapsulation occurs at the destination, stripping the respective _____ layer by layer as data moves upward."?
-    - **A)** Router
-    - **B)** headers
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Router
+- **B)** headers
+- **C)** Network
+- **D)** Protocol
 
 10. Which word completes the following sentence from the text: "**Application Layer:** Creates _____ core data/message ($M$)."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** the
-    - **D)** Protocol
+- **A)** Router
+- **B)** Network
+- **C)** the
+- **D)** Protocol
 
 
 ### Answer Key & Explanations

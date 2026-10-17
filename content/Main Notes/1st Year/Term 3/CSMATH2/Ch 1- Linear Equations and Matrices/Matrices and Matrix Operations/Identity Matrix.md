@@ -48,22 +48,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which definition correctly describes an identity matrix?
-    - **A)** A scalar matrix where all non-diagonal entries are 1.
-    - **B)** A diagonal matrix where all main diagonal entries are equal to 0.
-    - **C)** A scalar matrix whose main diagonal entries are all equal to 1.
-    - **D)** Any square matrix that is invertible.
+- **A)** A scalar matrix where all non-diagonal entries are 1.
+- **B)** A diagonal matrix where all main diagonal entries are equal to 0.
+- **C)** A scalar matrix whose main diagonal entries are all equal to 1.
+- **D)** Any square matrix that is invertible.
 
 2. If $A$ is an $m \times n$ matrix, which of the following properties holds regarding the multiplicative identity?
-    - **A)** $A I_m = A$ and $I_n A = A$
-    - **B)** $A I_n = A$ and $I_m A = A$
-    - **C)** $A I_n = I_m$ and $I_m A = I_n$
-    - **D)** $A I_n = 1$ and $I_m A = 1$
+- **A)** $A I_m = A$ and $I_n A = A$
+- **B)** $A I_n = A$ and $I_m A = A$
+- **C)** $A I_n = I_m$ and $I_m A = I_n$
+- **D)** $A I_n = 1$ and $I_m A = 1$
 
 3. Which of the following is a strict requirement for an identity matrix?
-    - **A)** It must be a square matrix.
-    - **B)** It can have rectangular dimensions as long as the diagonal has 1s.
-    - **C)** Its columns must add up to zero.
-    - **D)** It must have a determinant of zero.
+- **A)** It must be a square matrix.
+- **B)** It can have rectangular dimensions as long as the diagonal has 1s.
+- **C)** Its columns must add up to zero.
+- **D)** It must have a determinant of zero.
 
 ### Answer Key & Explanations
 1. **C)** The identity matrix is defined as an $n \times n$ scalar matrix whose main diagonal entries are all equal to 1.

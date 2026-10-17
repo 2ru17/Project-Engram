@@ -55,64 +55,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. What is a recurrence in the context of algorithm analysis?
-    - **A)** An iterative loop that repeats infinitely.
-    - **B)** An equation describing a function in terms of its value on smaller inputs.
-    - **C)** A bug that causes an algorithm to crash repeatedly.
-    - **D)** A memory leak in a recursive function.
+- **A)** An iterative loop that repeats infinitely.
+- **B)** An equation describing a function in terms of its value on smaller inputs.
+- **C)** A bug that causes an algorithm to crash repeatedly.
+- **D)** A memory leak in a recursive function.
 
 2. What two primary components define the structure of a recurrence?
-    - **A)** The inner loop and outer loop.
-    - **B)** The base case(s) and recursive case(s).
-    - **C)** The initialization and the update check.
-    - **D)** The Master Theorem and the Substitution Method.
+- **A)** The inner loop and outer loop.
+- **B)** The base case(s) and recursive case(s).
+- **C)** The initialization and the update check.
+- **D)** The Master Theorem and the Substitution Method.
 
 3. In the recurrence $T(n) = 2T(n/2) + \Theta(n)$, what does the $\Theta(n)$ represent?
-    - **A)** The cost of the base case.
-    - **B)** The number of recursive calls.
-    - **C)** The cost of dividing the problem and combining the results.
-    - **D)** The input size.
+- **A)** The cost of the base case.
+- **B)** The number of recursive calls.
+- **C)** The cost of dividing the problem and combining the results.
+- **D)** The input size.
 
 4. Which algorithm generates the recurrence $T(n) = T(n/2) + \Theta(1)$?
-    - **A)** Merge Sort
-    - **B)** Binary Search
-    - **C)** Factorial
-    - **D)** Linear Search
+- **A)** Merge Sort
+- **B)** Binary Search
+- **C)** Factorial
+- **D)** Linear Search
 
 5. What is the closed-form solution to the Merge Sort recurrence $T(n) = 2T(n/2) + \Theta(n)$?
-    - **A)** $\Theta(n)$
-    - **B)** $\Theta(\log n)$
-    - **C)** $\Theta(n \log n)$
-    - **D)** $\Theta(n^2)$
+- **A)** $\Theta(n)$
+- **B)** $\Theta(\log n)$
+- **C)** $\Theta(n \log n)$
+- **D)** $\Theta(n^2)$
 
 6. Which method for solving recurrences involves guessing the form of the solution and using mathematical induction to prove it?
-    - **A)** The Master Theorem
-    - **B)** The Recursion Tree Method
-    - **C)** The Substitution Method
-    - **D)** The Iteration Method
+- **A)** The Master Theorem
+- **B)** The Recursion Tree Method
+- **C)** The Substitution Method
+- **D)** The Iteration Method
 
 7. What is the Recursion Tree Method primarily useful for?
-    - **A)** Writing the algorithm's code automatically.
-    - **B)** Visualizing the recursion to sum costs at each level, often generating a guess for the substitution method.
-    - **C)** Solving non-recursive loops.
-    - **D)** Proving algorithms correct.
+- **A)** Writing the algorithm's code automatically.
+- **B)** Visualizing the recursion to sum costs at each level, often generating a guess for the substitution method.
+- **C)** Solving non-recursive loops.
+- **D)** Proving algorithms correct.
 
 8. What does the Master Theorem provide?
-    - **A)** A step-by-step induction proof for every recurrence.
-    - **B)** A cookbook solution for recurrences of the specific form $T(n) = aT(n/b) + f(n)$.
-    - **C)** A way to transform recursive functions into `while` loops.
-    - **D)** An exact millisecond running time.
+- **A)** A step-by-step induction proof for every recurrence.
+- **B)** A cookbook solution for recurrences of the specific form $T(n) = aT(n/b) + f(n)$.
+- **C)** A way to transform recursive functions into `while` loops.
+- **D)** An exact millisecond running time.
 
 9. What is a common pitfall when setting up a recurrence?
-    - **A)** Forgetting to define the base case.
-    - **B)** Using $n/2$ instead of $n-1$.
-    - **C)** Applying the Master Theorem to the form $T(n) = 2T(n/2) + n$.
-    - **D)** Using asymptotic notation in the recursive case.
+- **A)** Forgetting to define the base case.
+- **B)** Using $n/2$ instead of $n-1$.
+- **C)** Applying the Master Theorem to the form $T(n) = 2T(n/2) + n$.
+- **D)** Using asymptotic notation in the recursive case.
 
 10. Can the Master Theorem be applied to the recurrence $T(n) = T(n-1) + n$?
-    - **A)** Yes, it is Case 1.
-    - **B)** Yes, it is Case 2.
-    - **C)** Yes, it is Case 3.
-    - **D)** No, it is a non-standard form (subtractive, not divide).
+- **A)** Yes, it is Case 1.
+- **B)** Yes, it is Case 2.
+- **C)** Yes, it is Case 3.
+- **D)** No, it is a non-standard form (subtractive, not divide).
 
 ### Answer Key & Explanations
 1. **B)** Recurrences (or recurrence relations) express the total running time $T(n)$ by calling $T$ again on a fraction or subtraction of $n$.

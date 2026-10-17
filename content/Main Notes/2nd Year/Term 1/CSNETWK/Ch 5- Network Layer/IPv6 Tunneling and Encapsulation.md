@@ -100,64 +100,64 @@ _To be added._
 ## Multiple Choice Questions
 
 1. Which word completes the following sentence from the text: "IPv4 or IPv6?**  **Analysis:** We are traversing _____ IPv4-only network (Routers c and d)."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** the
-    - **D)** Protocol
+- **A)** Router
+- **B)** Network
+- **C)** the
+- **D)** Protocol
 
 2. Which word completes the following sentence from the text: "What is inside?**  **Analysis (The "Passenger"):** Inside _____ IPv4 payload sits the original IPv6 packet."?
-    - **A)** Router
-    - **B)** the
-    - **C)** Network
-    - **D)** Protocol
+- **A)** Router
+- **B)** the
+- **C)** Network
+- **D)** Protocol
 
 3. Which word completes the following sentence from the text: "**The Path:** To _____ intermediate routers, the packet looks like normal IPv4 traffic."?
-    - **A)** the
-    - **B)** Protocol
-    - **C)** Network
-    - **D)** Router
+- **A)** the
+- **B)** Protocol
+- **C)** Network
+- **D)** Router
 
 4. Which word completes the following sentence from the text: "What are the Source and Destination addresses?**  **Analysis (The _____ The "Vehicle" is the IPv4 packet carrying the data."?
-    - **A)** Vehicle
-    - **B)** Network
-    - **C)** Router
-    - **D)** Protocol
+- **A)** Vehicle
+- **B)** Network
+- **C)** Router
+- **D)** Protocol
 
 5. Which word completes the following sentence from the text: "Confusing the tunnel endpoints (dual-stack routers) _____ regular IPv4-only routers in the middle."?
-    - **A)** with
-    - **B)** Network
-    - **C)** Router
-    - **D)** Protocol
+- **A)** with
+- **B)** Network
+- **C)** Router
+- **D)** Protocol
 
 6. Which word completes the following sentence from the text: "They only care about the IPv4 _____ and ignore the IPv6 payload inside."?
-    - **A)** Network
-    - **B)** Router
-    - **C)** headers
-    - **D)** Protocol
+- **A)** Network
+- **B)** Router
+- **C)** headers
+- **D)** Protocol
 
 7. Which word completes the following sentence from the text: "IPv4 or IPv6?**  **Analys_____:** Router E receives the IPv4 packet, sees that it is the destination, strips off the IPv4 header (decapsulation), and reveals the IPv6 packet."?
-    - **A)** is
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** Network
+- **A)** is
+- **B)** Protocol
+- **C)** Router
+- **D)** Network
 
 8. Which word completes the following sentence from the text: "Concept Overview: Tunneling  Definition  Tunneling is a technique used when two IPv6 _____ need to communicate but are separated by an older IPv4 network."?
-    - **A)** Network
-    - **B)** Protocol
-    - **C)** Router
-    - **D)** networks
+- **A)** Network
+- **B)** Protocol
+- **C)** Router
+- **D)** networks
 
 9. Which word completes the following sentence from the text: "**Destination:** The router _ending_ _____ tunnel (Router E)."?
-    - **A)** Router
-    - **B)** Network
-    - **C)** Protocol
-    - **D)** the
+- **A)** Router
+- **B)** Network
+- **C)** Protocol
+- **D)** the
 
 10. Which word completes the following sentence from the text: "Problem Analysis  ### Phase 1: Inside the Tunnel _____ $\rightarrow$ c $\rightarrow$ d $\rightarrow$ E)  **1."?
-    - **A)** Router
-    - **B)** Protocol
-    - **C)** B
-    - **D)** Network
+- **A)** Router
+- **B)** Protocol
+- **C)** B
+- **D)** Network
 
 
 ### Answer Key & Explanations

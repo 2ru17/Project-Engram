@@ -52,22 +52,22 @@ _To be added._
 ## Multiple Choice Questions
 
 1. How is the transpose of an $m \times n$ matrix $A$, denoted $A^T$, obtained?
-    - **A)** By negating all the entries of $A$.
-    - **B)** By interchanging the rows and columns to form an $n \times m$ matrix.
-    - **C)** By calculating the inverse of $A$.
-    - **D)** By shifting all rows down by one position.
+- **A)** By negating all the entries of $A$.
+- **B)** By interchanging the rows and columns to form an $n \times m$ matrix.
+- **C)** By calculating the inverse of $A$.
+- **D)** By shifting all rows down by one position.
 
 2. If matrix $A$ has an entry $a_{ij}$, where will that exact numerical entry be located in the transposed matrix $A^T$?
-    - **A)** At the position $a'_{ij}$
-    - **B)** At the position $a'_{ji}$
-    - **C)** At the position $a'_{i+1, j+1}$
-    - **D)** It is removed from the matrix.
+- **A)** At the position $a'_{ij}$
+- **B)** At the position $a'_{ji}$
+- **C)** At the position $a'_{i+1, j+1}$
+- **D)** It is removed from the matrix.
 
 3. What is the correct property for computing the transpose of a matrix product, $(AB)^T$?
-    - **A)** $A^T B^T$
-    - **B)** $(BA)^T$
-    - **C)** $B^T A^T$
-    - **D)** $A B^T$
+- **A)** $A^T B^T$
+- **B)** $(BA)^T$
+- **C)** $B^T A^T$
+- **D)** $A B^T$
 
 ### Answer Key & Explanations
 1. **B)** The transpose is obtained by interchanging the rows and columns, turning an $m \times n$ matrix into an $n \times m$ matrix.

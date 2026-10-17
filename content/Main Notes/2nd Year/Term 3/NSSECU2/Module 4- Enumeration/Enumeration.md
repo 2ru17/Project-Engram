@@ -183,52 +183,52 @@ Content-Type: text/html; charset=UTF-8
 ## Multiple Choice Questions
 
 1. What is the fundamental difference between network scanning and enumeration?
-    - **A)** Scanning modifies database tables, while enumeration only reads text files.
-    - **B)** Scanning identifies active hosts and open ports, while enumeration actively queries open services for detailed configuration, user, and version data.
-    - **C)** Scanning is exclusively passive, while enumeration is completely undetectable.
-    - **D)** Enumeration is only performed on wireless networks.
+- **A)** Scanning modifies database tables, while enumeration only reads text files.
+- **B)** Scanning identifies active hosts and open ports, while enumeration actively queries open services for detailed configuration, user, and version data.
+- **C)** Scanning is exclusively passive, while enumeration is completely undetectable.
+- **D)** Enumeration is only performed on wireless networks.
 
 2. A security tester runs `curl -I http://target.com` and observes `X-Powered-By: PHP/7.4.3`. What type of finding does this represent?
-    - **A)** Zero-day Remote Code Execution
-    - **B)** Technology and Information Disclosure via HTTP response headers
-    - **C)** SQL Injection in the URL parameter
-    - **D)** Hardware buffer overflow
+- **A)** Zero-day Remote Code Execution
+- **B)** Technology and Information Disclosure via HTTP response headers
+- **C)** SQL Injection in the URL parameter
+- **D)** Hardware buffer overflow
 
 3. When running `gobuster dir`, what is the purpose of the `-x php,txt,bak` command flag?
-    - **A)** To exclude PHP, TXT, and BAK files from the scan
-    - **B)** To append `.php`, `.txt`, and `.bak` file extensions to every word in the dictionary
-    - **C)** To automatically execute discovered scripts on the remote host
-    - **D)** To encrypt all outgoing HTTP traffic
+- **A)** To exclude PHP, TXT, and BAK files from the scan
+- **B)** To append `.php`, `.txt`, and `.bak` file extensions to every word in the dictionary
+- **C)** To automatically execute discovered scripts on the remote host
+- **D)** To encrypt all outgoing HTTP traffic
 
 4. An HTTP response status code of `403 Forbidden` indicates which of the following?
-    - **A)** The web server crashed due to high memory usage.
-    - **B)** The requested resource exists on the server, but access is restricted based on current client permissions or configuration.
-    - **C)** The client successfully downloaded an administrative backup file.
-    - **D)** The DNS server failed to resolve the domain name.
+- **A)** The web server crashed due to high memory usage.
+- **B)** The requested resource exists on the server, but access is restricted based on current client permissions or configuration.
+- **C)** The client successfully downloaded an administrative backup file.
+- **D)** The DNS server failed to resolve the domain name.
 
 5. What critical security vulnerability occurs when developers accidentally leave the `.git/` folder accessible in the public web root?
-    - **A)** It allows clients to query DNS zone transfers.
-    - **B)** It enables complete extraction of application source code, commit history, and potential hardcoded credentials.
-    - **C)** It triggers a physical reboot of the server motherboard.
-    - **D)** It converts the web server into a Bitcoin miner.
+- **A)** It allows clients to query DNS zone transfers.
+- **B)** It enables complete extraction of application source code, commit history, and potential hardcoded credentials.
+- **C)** It triggers a physical reboot of the server motherboard.
+- **D)** It converts the web server into a Bitcoin miner.
 
 6. Which tool and option allows an analyst to enumerate SMB shares anonymously without providing a password?
-    - **A)** `smbclient -L //target/ -N`
-    - **B)** `nmap -sS target -p 22`
-    - **C)** `gobuster dir -u http://target/ -w wordlist.txt`
-    - **D)** `nc -vn target 80`
+- **A)** `smbclient -L //target/ -N`
+- **B)** `nmap -sS target -p 22`
+- **C)** `gobuster dir -u http://target/ -w wordlist.txt`
+- **D)** `nc -vn target 80`
 
 7. While fuzzing with `ffuf`, every single request returns HTTP `200 OK` with a byte size of `1542`, even for nonexistent random paths. How should the tester filter out these false positives?
-    - **A)** Increase the number of concurrent threads to 500
-    - **B)** Use the `-fs 1542` flag to filter out responses of exactly 1542 bytes
-    - **C)** Disconnect from the network and restart Kali Linux
-    - **D)** Change the target IP address to localhost
+- **A)** Increase the number of concurrent threads to 500
+- **B)** Use the `-fs 1542` flag to filter out responses of exactly 1542 bytes
+- **C)** Disconnect from the network and restart Kali Linux
+- **D)** Change the target IP address to localhost
 
 8. How can system administrators prevent sensitive internal routes from being indexed by search engines without revealing their existence to attackers who inspect `robots.txt`?
-    - **A)** Put all administrator passwords directly inside `robots.txt`
-    - **B)** Rely on proper server-side authentication and authorization controls rather than relying on `robots.txt` for obscurity
-    - **C)** Delete the entire web server operating system
-    - **D)** Rename `robots.txt` to `admin.txt`
+- **A)** Put all administrator passwords directly inside `robots.txt`
+- **B)** Rely on proper server-side authentication and authorization controls rather than relying on `robots.txt` for obscurity
+- **C)** Delete the entire web server operating system
+- **D)** Rename `robots.txt` to `admin.txt`
 
 ### Answer Key & Explanations
 

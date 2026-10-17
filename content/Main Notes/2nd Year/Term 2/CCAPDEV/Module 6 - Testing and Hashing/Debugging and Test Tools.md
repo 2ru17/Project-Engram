@@ -83,22 +83,22 @@ https://jestjs.io/docs/expect#methods
 ## Multiple Choice Questions
 
 1. When writing test scripts with Jest, what is the purpose of the `expect` function?
-    - **A)** To halt the server if an error occurs.
-    - **B)** To automatically transpile ES6 syntax into ES5 syntax.
-    - **C)** To provide access to "matcher" functions that compare the actual output with the expected output.
-    - **D)** To group related tests together under a single block.
+- **A)** To halt the server if an error occurs.
+- **B)** To automatically transpile ES6 syntax into ES5 syntax.
+- **C)** To provide access to "matcher" functions that compare the actual output with the expected output.
+- **D)** To group related tests together under a single block.
 
 2. In Jest, what is the difference between the matcher functions `toBe()` and `toEqual()`?
-    - **A)** `toBe()` checks referential equality (like `==`), while `toEqual()` checks value equality (like `===`).
-    - **B)** `toBe()` is only used for Strings, while `toEqual()` is only used for Numbers.
-    - **C)** `toBe()` is used to assert errors, while `toEqual()` asserts successful execution.
-    - **D)** There is no difference; they are aliases of the same function.
+- **A)** `toBe()` checks referential equality (like `==`), while `toEqual()` checks value equality (like `===`).
+- **B)** `toBe()` is only used for Strings, while `toEqual()` is only used for Numbers.
+- **C)** `toBe()` is used to assert errors, while `toEqual()` asserts successful execution.
+- **D)** There is no difference; they are aliases of the same function.
 
 3. Why might you need to install Babel (`babel-jest`, `@babel/preset-env`) when working with Jest?
-    - **A)** To encrypt source code files before deploying them.
-    - **B)** Because Jest does not natively support some modern ES6+ JavaScript syntax, and Babel transcompiles it to a format Jest understands.
-    - **C)** Because Babel provides the database connection logic needed for testing models.
-    - **D)** Because Jest requires a separate web server to render HTML test results.
+- **A)** To encrypt source code files before deploying them.
+- **B)** Because Jest does not natively support some modern ES6+ JavaScript syntax, and Babel transcompiles it to a format Jest understands.
+- **C)** Because Babel provides the database connection logic needed for testing models.
+- **D)** Because Jest requires a separate web server to render HTML test results.
 
 ### Answer Key & Explanations
 1. **C)** `expect` provides access to "matchers" which are used to define which results pass the test case by comparing values.
