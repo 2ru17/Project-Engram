@@ -293,41 +293,41 @@ Calculate:
 ## Multiple Choice Questions
 
 1. In a classic 5-stage RISC pipeline, what are the five sequential stages in order of execution?
-- **A)** Fetch, Decode, Memory, Execute, Write-Back
-- **B)** Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), Write-Back (WB)
-- **C)** Decode, Fetch, ALU, Store, Clear
-- **D)** Load, Translate, Branch, Execute, Halt
+    - **A)** Fetch, Decode, Memory, Execute, Write-Back
+    - **B)** Instruction Fetch (IF), Instruction Decode (ID), Execute (EX), Memory Access (MEM), Write-Back (WB)
+    - **C)** Decode, Fetch, ALU, Store, Clear
+    - **D)** Load, Translate, Branch, Execute, Halt
 
 2. What hazard occurs when an instruction attempts to use the data loaded by an immediately preceding `LOAD` instruction?
-- **A)** Structural Hazard
-- **B)** Load-Use Data Hazard
-- **C)** Write-After-Write Hazard
-- **D)** Page Fault Hazard
+    - **A)** Load-Use Data Hazard
+    - **B)** Structural Hazard
+    - **C)** Write-After-Write Hazard
+    - **D)** Page Fault Hazard
 
 3. How does Hardware Data Forwarding (Bypassing) resolve a Read-After-Write (RAW) hazard between consecutive ALU instructions?
-- **A)** By pausing the processor for 3 clock cycles
-- **B)** By routing the computed result directly from the EX/MEM pipeline register back into the ALU input multiplexer before the result is written to the register file
-- **C)** By spilling all registers to the external hard drive
-- **D)** By executing both instructions in parallel using two separate ALUs
+    - **A)** By pausing the processor for 3 clock cycles
+    - **B)** By spilling all registers to the external hard drive
+    - **C)** By routing the computed result directly from the EX/MEM pipeline register back into the ALU input multiplexer before the result is written to the register file
+    - **D)** By executing both instructions in parallel using two separate ALUs
 
 4. What is the ideal theoretical speedup of an instruction pipeline with $k$ balanced stages as the number of instructions $n \to \infty$?
-- **A)** $1\times$
-- **B)** $k / 2$
-- **C)** $k\times$
-- **D)** $k^2$
+    - **A)** $1\times$
+    - **B)** $k / 2$
+    - **C)** $k^2$
+    - **D)** $k\times$
 
 5. Why does a 2-bit saturating dynamic branch predictor perform better on loop exit boundaries than a 1-bit predictor?
-- **A)** It uses floating-point hardware to predict addresses
-- **B)** It requires two consecutive mispredictions to change its prediction state, preventing an isolated loop termination from flipping the predictor to Not-Taken
-- **C)** It stores the entire loop body inside the instruction register
-- **D)** It eliminates the need for an Instruction Fetch stage
+    - **A)** It uses floating-point hardware to predict addresses
+    - **B)** It requires two consecutive mispredictions to change its prediction state, preventing an isolated loop termination from flipping the predictor to Not-Taken
+    - **C)** It stores the entire loop body inside the instruction register
+    - **D)** It eliminates the need for an Instruction Fetch stage
 
 ### Answer Key & Explanations
 
 1. **B**. The canonical 5-stage RISC pipeline order is: Instruction Fetch (IF), Instruction Decode & Register Read (ID), Execute / ALU (EX), Memory Access (MEM), and Write-Back (WB).
-2. **B**. A Load-Use hazard occurs because loaded memory data only becomes available at the end of the MEM stage (Stage 4), while the subsequent instruction requires the operand at the beginning of the EX stage (Stage 3), necessitating a 1-cycle stall.
-3. **B**. Data forwarding bypasses the slow write-back to the register file by routing the newly computed ALU value directly from the `EX/MEM` or `MEM/WB` intermediate pipeline registers back to the ALU input MUX.
-4. **C**. As the number of instructions $n$ becomes very large, the speedup formula $S_k = \frac{n \cdot k}{k + n - 1}$ asymptotically approaches $k\times$.
+2. **A**. A Load-Use hazard occurs because loaded memory data only becomes available at the end of the MEM stage (Stage 4), while the subsequent instruction requires the operand at the beginning of the EX stage (Stage 3), necessitating a 1-cycle stall.
+3. **C**. Data forwarding bypasses the slow write-back to the register file by routing the newly computed ALU value directly from the `EX/MEM` or `MEM/WB` intermediate pipeline registers back to the ALU input MUX.
+4. **D**. As the number of instructions $n$ becomes very large, the speedup formula $S_k = \frac{n \cdot k}{k + n - 1}$ asymptotically approaches $k\times$.
 5. **B**. A 1-bit predictor flips immediately upon a single loop exit, causing a guaranteed misprediction on the very next iteration. The 2-bit counter has hysteresis and requires two consecutive mispredictions before switching states.
 
 ## References & Navigation

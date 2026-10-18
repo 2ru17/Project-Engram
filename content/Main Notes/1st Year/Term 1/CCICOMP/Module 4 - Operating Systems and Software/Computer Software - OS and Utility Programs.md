@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Operating Systems]] #[[Utility Programs]] #[[M4]]
+**Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Operating Systems]] #[[Utility Programs]] #[[M4]]
 
 ---
 
@@ -53,76 +53,77 @@ Utility programs perform specialized tasks related to the management, maintenanc
 ## Multiple Choice Questions
 
 1. What is the primary role of an Operating System (OS)?
-- **A)** To compile high-level source code into machine instructions.
-- **B)** To physically interconnect the CPU and memory.
-- **C)** To manage hardware and software resources and act as the interface between the hardware and user applications.
-- **D)** To provide media editing capabilities for end users.
+    - **A)** To compile high-level source code into machine instructions.
+    - **B)** To physically interconnect the CPU and memory.
+    - **C)** To manage hardware and software resources and act as the interface between the hardware and user applications.
+    - **D)** To provide media editing capabilities for end users.
 
 2. What occurs during the Boot Up Process?
-- **A)** The software performs a virus scan on all secondary storage.
-- **B)** The initial sequence of loading the BIOS, performing a POST, loading the OS, and applying configurations.
-- **C)** The OS compiles user applications in the background.
-- **D)** The hypervisor creates a new virtual machine.
+    - **A)** The software performs a virus scan on all secondary storage.
+    - **B)** The initial sequence of loading the BIOS, performing a POST, loading the OS, and applying configurations.
+    - **C)** The OS compiles user applications in the background.
+    - **D)** The hypervisor creates a new virtual machine.
 
 3. Which function of an OS involves allocating secondary storage to temporarily hold program pages not in active use?
-- **A)** Device Configuration
-- **B)** Task Coordination
-- **C)** Virtual Memory Management
-- **D)** Graphic Interface Rendering
+    - **A)** Device Configuration
+    - **B)** Task Coordination
+    - **C)** Virtual Memory Management
+    - **D)** Graphic Interface Rendering
 
 4. What characterizes a Real-Time Operating System (RTOS)?
-- **A)** It provides advanced graphical animations for desktop users.
-- **B)** It is designed to respond very quickly and predictably to external events, with strict time constraints.
-- **C)** It is tailored exclusively for smartphone touch interfaces.
-- **D)** It manages file compression and disk defragmentation.
+    - **A)** It provides advanced graphical animations for desktop users.
+    - **B)** It is designed to respond very quickly and predictably to external events, with strict time constraints.
+    - **C)** It is tailored exclusively for smartphone touch interfaces.
+    - **D)** It manages file compression and disk defragmentation.
 
 5. In the computer system architecture layers, what sits directly between the Hardware and the Application Software?
-- **A)** Secondary Storage
-- **B)** The Internet
-- **C)** System Software
-- **D)** The Motherboard
+    - **A)** Secondary Storage
+    - **B)** The Internet
+    - **C)** System Software
+    - **D)** The Motherboard
 
 6. Which core OS function manages hardware devices through drivers?
-- **A)** User Interface (UI)
-- **B)** Memory Management
-- **C)** Task Coordination
-- **D)** Device Configuration and Control
+    - **A)** User Interface (UI)
+    - **B)** Memory Management
+    - **C)** Task Coordination
+    - **D)** Device Configuration and Control
 
 7. What type of OS is Windows Server or UNIX?
-- **A)** Desktop OS
-- **B)** Mobile OS
-- **C)** Server OS
-- **D)** Real-Time OS
+    - **A)** Desktop OS
+    - **B)** Mobile OS
+    - **C)** Server OS
+    - **D)** Real-Time OS
 
 8. Which utility program is used to safeguard data by creating copies for potential recovery?
-- **A)** Display Utilities
-- **B)** Backup and Restore
-- **C)** Application Management
-- **D)** Power Management
+    - **A)** Display Utilities
+    - **B)** Backup and Restore
+    - **C)** Application Management
+    - **D)** Power Management
 
 9. What is the purpose of file compression utilities?
-- **A)** To calibrate display color and resolution.
-- **B)** To permanently delete sensitive information.
-- **C)** To reduce file sizes for more efficient storage or transmission.
-- **D)** To convert source code into executable files.
+    - **A)** To calibrate display color and resolution.
+    - **B)** To permanently delete sensitive information.
+    - **C)** To reduce file sizes for more efficient storage or transmission.
+    - **D)** To convert source code into executable files.
 
 10. Which core function ensures fair CPU time allocation among concurrent processes?
-- **A)** Virtual Memory Management
-- **B)** Task Coordination
-- **C)** Device Driver Mapping
-- **D)** Post-Boot Initialization
+    - **A)** Virtual Memory Management
+    - **B)** Task Coordination
+    - **C)** Device Driver Mapping
+    - **D)** Post-Boot Initialization
 
 ### Answer Key & Explanations
-1. **C)** An OS manages hardware/software resources and acts as the interface between hardware and applications.
-2. **B)** The Boot Up process involves loading the BIOS, a POST, loading the OS, and applying configurations.
-3. **C)** Virtual Memory Management uses secondary storage (swap space) to hold inactive program pages.
-4. **B)** An RTOS is designed to respond very quickly/predictably to external events for critical systems.
-5. **C)** System Software sits directly between Hardware and Application Software in the architecture hierarchy.
-6. **D)** Device Configuration and Control manages hardware devices through drivers for seamless communication.
-7. **C)** Windows Server and UNIX are Server operating systems, optimized to manage network resources for multiple clients.
-8. **B)** Backup and Restore safeguards data by creating copies for potential recovery.
-9. **C)** File compression reduces file sizes for efficient storage or transmission.
-10. **B)** Task Coordination manages the execution of concurrent processes, ensuring fair CPU time allocation.
+
+1. **C**. An OS manages hardware/software resources and acts as the interface between hardware and applications.
+2. **B**. The Boot Up process involves loading the BIOS, a POST, loading the OS, and applying configurations.
+3. **C**. Virtual Memory Management uses secondary storage (swap space) to hold inactive program pages.
+4. **B**. An RTOS is designed to respond very quickly/predictably to external events for critical systems.
+5. **C**. System Software sits directly between Hardware and Application Software in the architecture hierarchy.
+6. **D**. Device Configuration and Control manages hardware devices through drivers for seamless communication.
+7. **C**. Windows Server and UNIX are Server operating systems, optimized to manage network resources for multiple clients.
+8. **B**. Backup and Restore safeguards data by creating copies for potential recovery.
+9. **C**. File compression reduces file sizes for efficient storage or transmission.
+10. **B**. Task Coordination manages the execution of concurrent processes, ensuring fair CPU time allocation.
 
 ## References & Navigation
 

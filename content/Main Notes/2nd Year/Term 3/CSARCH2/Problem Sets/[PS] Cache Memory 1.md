@@ -12,13 +12,13 @@ status: completed
 > - **Status:** `=this.status`
 > - **Subject Area:** [[Computer Architecture]], [[Memory Hierarchy]], [[Cache Organization]]
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Cache Memory]] #[[Computer Architecture]] #[[Direct Mapping]] #[[Fully Associative Mapping]] #[[Set Associative Mapping]] #[[LRU Replacement]] #[[MRU Replacement]] #[[AMAT]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Cache Memory]] #[[Computer Architecture]] #[[Direct Mapping]] #[[Fully Associative Mapping]] #[[Set Associative Mapping]] #[[LRU Replacement]] #[[MRU Replacement]] #[[AMAT]]
 
 ---
 
 # Problem Set: Cache Memory 1
 
-## 📚 Architectural Foundations & Formula Reference
+## Architectural Foundations & Formula Reference
 
 ### 1. Memory Hierarchy & Locality Principles
 Cache memory serves as a high-speed buffer positioned between the processor core and main memory ($\text{DRAM}$). Its effectiveness relies upon two fundamental properties of program execution:
@@ -100,7 +100,7 @@ $$\text{Total Cache Storage (Bits)} = C \times \left( B \times \text{Bits per Un
 
 ---
 
-## 📝 Problem 0a: Sizing & Address Format Analysis
+## Problem 0a: Sizing & Address Format Analysis
 
 ### Problem Statement
 A cache contains $4\text{ blocks}$. Main memory contains $16\text{ blocks}$. Each block contains $2\text{ words}$. Each word is $16\text{ bits}$. Assume a word-addressable memory architecture.
@@ -242,7 +242,7 @@ $$\mathbf{\text{Memory Address 9 maps to Cache Set 0}}$$
 
 ---
 
-## 📝 Problem 0b: Access Traces & Replacement Algorithms
+## Problem 0b: Access Traces & Replacement Algorithms
 
 ### Problem Statement
 Using the cache parameters from Problem 0a ($4\text{ cache blocks}$, $16\text{ MM blocks}$, $2\text{ words/block}$, $16\text{ bits/word}$, $t_{\text{cache}} = 1\text{ ns}$, $t_{\text{mem}} = 10\text{ ns}$), evaluate the following main memory block reference sequence:
@@ -410,7 +410,7 @@ Number of Sets = 2. On miss in a full set, evict the set's Most Recently Used bl
 
 ---
 
-## 📝 Problem 1: Sizing a 64-Block Direct-Mapped Cache
+## Problem 1: Sizing a 64-Block Direct-Mapped Cache
 
 ### Problem Statement
 A **direct-mapped cache** consists of $64\text{ blocks}$. Main memory contains $4096\text{ blocks}$, each consisting of $128\text{ words}$. Each word is $16\text{ bits}$.
@@ -488,7 +488,7 @@ $$\mathbf{\text{Memory Address 1000 maps to Cache Block 7}}$$
 
 ---
 
-## 📝 Problem 2: Sizing a 64-Block Fully Associative Cache
+## Problem 2: Sizing a 64-Block Fully Associative Cache
 
 ### Problem Statement
 An **associative cache** consists of $64\text{ blocks}$. Main memory contains $4096\text{ blocks}$, each of $128\text{ words}$, with $16\text{ bits}$ per word.
@@ -534,7 +534,7 @@ Memory Address 1000 belongs to MM Block 7 ($\lfloor 1000/128 \rfloor = 7$). It c
 
 ---
 
-## 📝 Problem 3: Sizing a 4-Way Set Associative Cache
+## Problem 3: Sizing a 4-Way Set Associative Cache
 
 ### Problem Statement
 A **4-way block set associative cache** consists of $64\text{ blocks}$ total ($K = 4$). Main memory contains $4096\text{ blocks}$, each of $128\text{ words}$, with $16\text{ bits}$ per word.
@@ -597,7 +597,7 @@ $$\mathbf{\text{Memory Address 1000 maps to Cache Set 7 (within any of its 4 lin
 
 ---
 
-## 📝 Problem 4: Byte-Addressable Cache Reference Traces
+## Problem 4: Byte-Addressable Cache Reference Traces
 
 ### Problem Statement
 A **byte-addressable computer** has a data cache of $32\text{ bytes}$. Each cache block is $4\text{ bytes}$.
@@ -739,7 +739,7 @@ For each byte address $A$, Block Number $B = \lfloor A / 4 \rfloor = A \gg 2$:
 
 ---
 
-## 📝 Problem 5: Non-Load-Through Read Policy Benchmark
+## Problem 5: Non-Load-Through Read Policy Benchmark
 
 ### Problem Statement
 Given:
@@ -869,7 +869,7 @@ Given:
 
 ---
 
-## 💡 Key Architectural Takeaways
+## Key Architectural Takeaways
 
 1. **Mapping Trade-offs**:
    - **Direct Mapping** offers minimal hardware complexity ($1\text{ comparator}$) and fastest hit time, but suffers from conflict misses when multiple active blocks map to the same line index.

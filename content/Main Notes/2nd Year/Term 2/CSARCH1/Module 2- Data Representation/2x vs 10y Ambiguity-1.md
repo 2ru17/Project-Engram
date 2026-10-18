@@ -7,7 +7,7 @@ status: completed
 ---
 
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Computer Architecture]] #[[Data Representation]] #[[2x vs 10y Ambiguity-1]]
+**Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Computer Architecture]] #[[Data Representation]] #[[2x vs 10y Ambiguity-1]]
 
 ---
 
@@ -36,76 +36,77 @@ This module discusses the prefix ambiguity between $2^x$ and $10^y$. The objecti
 ## Multiple Choice Questions
 
 1. What does the prefix "kilo" represent in the SI definition?
-- **A)** 1000
-- **B)** 1024
-- **C)** 10000
-- **D)** 128
+    - **A)** 1024
+    - **B)** 1000
+    - **C)** 10000
+    - **D)** 128
 
 2. Which standard organization established the binary prefix "kibi" in 1998?
-- **A)** IEEE
-- **B)** International Electrotechnical Commission (IEC)
-- **C)** ANSI
-- **D)** ISO
+    - **A)** International Electrotechnical Commission (IEC)
+    - **B)** IEEE
+    - **C)** ANSI
+    - **D)** ISO
 
 3. What is the value of 1 kibibyte (KiB) in bytes?
-- **A)** 1000 bytes
-- **B)** 1024 bytes
-- **C)** 1048 bytes
-- **D)** 2048 bytes
+    - **A)** 1000 bytes
+    - **B)** 1048 bytes
+    - **C)** 1024 bytes
+    - **D)** 2048 bytes
 
 4. If a hard disk has a capacity of 4TB, what does the "TB" typically represent?
-- **A)** 4 x 2^40 bytes
-- **B)** 4 x 10^12 bytes
-- **C)** 4 x 10^9 bytes
-- **D)** 4 x 2^30 bytes
+    - **A)** 4 x 2^40 bytes
+    - **B)** 4 x 2^30 bytes
+    - **C)** 4 x 10^9 bytes
+    - **D)** 4 x 10^12 bytes
 
 5. Which type of prefixes are generally used to specify memory capacity?
-- **A)** Decimal prefixes
-- **B)** SI prefixes
-- **C)** Binary prefixes
-- **D)** Base-10 prefixes
+    - **A)** Decimal prefixes
+    - **B)** Binary prefixes
+    - **C)** SI prefixes
+    - **D)** Base-10 prefixes
 
 6. How is 1 Gibibyte (GiB) mathematically represented in bytes?
-- **A)** 2^10 bytes
-- **B)** 2^20 bytes
-- **C)** 2^30 bytes
-- **D)** 2^40 bytes
+    - **A)** 2^10 bytes
+    - **B)** 2^20 bytes
+    - **C)** 2^30 bytes
+    - **D)** 2^40 bytes
 
 7. In data transfer rates like 100Mbps, what does the "M" signify?
-- **A)** 2^20
-- **B)** 1,000,000 (10^6)
-- **C)** 1,048,576
-- **D)** 10,000
+    - **A)** 1,000,000 (10^6)
+    - **B)** 2^20
+    - **C)** 1,048,576
+    - **D)** 10,000
 
 8. What is the value of the binary prefix 2^20?
-- **A)** 1,024
-- **B)** 1,048,576
-- **C)** 1,073,741,824
-- **D)** 1,099,511,627,776
+    - **A)** 1,024
+    - **B)** 1,099,511,627,776
+    - **C)** 1,073,741,824
+    - **D)** 1,048,576
 
 9. Why was the "kibi" prefix introduced?
-- **A)** To replace the decimal system completely
-- **B)** To differentiate 1024 from the SI prefix kilo (1000)
-- **C)** To measure data transfer rates accurately
-- **D)** To reduce the memory consumption of computers
+    - **A)** To replace the decimal system completely
+    - **B)** To measure data transfer rates accurately
+    - **C)** To differentiate 1024 from the SI prefix kilo (1000)
+    - **D)** To reduce the memory consumption of computers
 
 10. If a laptop specifies 8GB of main memory, how many bytes does it actually have?
-- **A)** 8,000,000,000 bytes
-- **B)** 8,589,934,592 bytes
-- **C)** 8,192,000,000 bytes
-- **D)** 8,048,576,000 bytes
+    - **A)** 8,589,934,592 bytes
+    - **B)** 8,000,000,000 bytes
+    - **C)** 8,192,000,000 bytes
+    - **D)** 8,048,576,000 bytes
 
 ### Answer Key & Explanations
-1. **A)** The SI prefix kilo traditionally means 10^3 or 1000.
-2. **B)** The IEC established the binary prefix kibi to remove ambiguity.
-3. **B)** 1 kibibyte (KiB) is strictly defined as 1024 (2^10) bytes.
-4. **B)** SI prefixes are used for storage spaces like hard disks, meaning 4 x 10^12 bytes.
-5. **C)** Binary prefixes are mainly used to refer to memory capacity.
-6. **C)** A Gibibyte is equivalent to 2^30 bytes.
-7. **B)** In data transfer rates, SI prefixes are used, so M means 10^6.
-8. **B)** 2^20 corresponds to 1,048,576.
-9. **B)** It was introduced to differentiate binary 1024 from the standard SI kilo.
-10. **B)** Memory capacity implies binary prefixes; thus 8 GiB = 8 * 2^30 = 8,589,934,592 bytes.
+
+1. **B**. The SI prefix kilo traditionally means 10^3 or 1000.
+2. **A**. The IEC established the binary prefix kibi to remove ambiguity.
+3. **C**. 1 kibibyte (KiB) is strictly defined as 1024 (2^10) bytes.
+4. **D**. SI prefixes are used for storage spaces like hard disks, meaning 4 x 10^12 bytes.
+5. **B**. Binary prefixes are mainly used to refer to memory capacity.
+6. **C**. A Gibibyte is equivalent to 2^30 bytes.
+7. **A**. In data transfer rates, SI prefixes are used, so M means 10^6.
+8. **D**. 2^20 corresponds to 1,048,576.
+9. **C**. It was introduced to differentiate binary 1024 from the standard SI kilo.
+10. **A**. Memory capacity implies binary prefixes; thus 8 GiB = 8 * 2^30 = 8,589,934,592 bytes.
 
 ## References & Navigation
 

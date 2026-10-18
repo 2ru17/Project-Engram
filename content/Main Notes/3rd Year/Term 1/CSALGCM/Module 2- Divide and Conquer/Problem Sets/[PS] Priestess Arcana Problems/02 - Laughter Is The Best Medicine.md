@@ -14,7 +14,7 @@ hackerrank_domain: Divide and Conquer
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Merge Sort]] #[[Inversion Count]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Merge Sort]] #[[Inversion Count]]
 
 ---
 
@@ -42,14 +42,14 @@ Output consists of one line containing "H" (without the quotes), if the $K$-th c
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > A string sequence is built recursively where each string = previous-previous + previous. Given a huge string index `n` and a character position `k`, find which character ('H' or 'A') is at that position — without building the string.
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > Actually build `L(0)`, `L(1)`, ..., `L(n)` by concatenation, then index into it.
 > **Impossible** — L(50) has 12.5 billion characters. You'd run out of RAM at L(40).
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > Use the Fibonacci-length structure to *navigate* which half of the string the character falls in, cutting the problem in half each step — like binary search on a tree.
 > **O(n)** to build the length table, **O(n)** descent steps — handles any n up to 10^18.
 
@@ -155,7 +155,7 @@ flowchart TD
     N2["n=2, k=1\nfib[0]=1"] --> Check6
     Check6{"1 < 1?"}
     Check6 -->|"NO\nk = 1-1 = 0\ngo to L(1)"| N1
-    N1["n=1, k=0\nBase case! L(1)='A'"] --> Result["Return 'A' ✓"]
+    N1["n=1, k=0\nBase case! L(1)='A'"] --> Result["Return 'A' "]
 ```
 
 ---
@@ -209,13 +209,13 @@ char solve(int n, unsigned long long int k) {
 
 | Step | n | k | lenFirst = fib[n-2] | k < lenFirst? | Action |
 |---|---|---|---|---|---|
-| 1 | 10 | 4 | fib[8] = 34 | 4 < 34 ✓ | n = 8 |
-| 2 | 8 | 4 | fib[6] = 13 | 4 < 13 ✓ | n = 6 |
-| 3 | 6 | 4 | fib[4] = 5 | 4 < 5 ✓ | n = 4 |
-| 4 | 4 | 4 | fib[2] = 2 | 4 < 2 ✗ | k = 4−2 = 2, n = 3 |
-| 5 | 3 | 2 | fib[1] = 1 | 2 < 1 ✗ | k = 2−1 = 1, n = 2 |
-| 6 | 2 | 1 | fib[0] = 1 | 1 < 1 ✗ | k = 1−1 = 0, n = 1 |
-| — | 1 | 0 | — | n=1, exit loop | **return 'A'** ✓ |
+| 1 | 10 | 4 | fib[8] = 34 | 4 < 34  | n = 8 |
+| 2 | 8 | 4 | fib[6] = 13 | 4 < 13  | n = 6 |
+| 3 | 6 | 4 | fib[4] = 5 | 4 < 5  | n = 4 |
+| 4 | 4 | 4 | fib[2] = 2 | 4 < 2  | k = 4−2 = 2, n = 3 |
+| 5 | 3 | 2 | fib[1] = 1 | 2 < 1  | k = 2−1 = 1, n = 2 |
+| 6 | 2 | 1 | fib[0] = 1 | 1 < 1  | k = 1−1 = 0, n = 1 |
+| — | 1 | 0 | — | n=1, exit loop | **return 'A'**  |
 
 ## Complexity Analysis
 | | Complexity |
@@ -279,7 +279,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

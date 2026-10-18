@@ -75,50 +75,45 @@ sequenceDiagram
 
 ---
 
-## 4. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. In CSS specificity calculation, which of the following selectors has the highest specificity?
-   - A) `div.card p.text`
-   - B) `#sidebar ul.nav li`
-   - C) `body header nav a`
-   - D) `.modal .btn.primary`
+    - **A)** `div.card p.text`
+    - **B)** `#sidebar ul.nav li`
+    - **C)** `body header nav a`
+    - **D)** `.modal .btn.primary`
 
 2. In an Express.js middleware function, what must be invoked to pass control to the subsequent middleware handler in the stack?
-   - A) `res.continue()`
-   - B) `next()`
-   - C) `return true`
-   - D) `app.next()`
+    - **A)** `next()`
+    - **B)** `res.continue()`
+    - **C)** `return true`
+    - **D)** `app.next()`
 
 3. Why should session identifier cookies always be configured with the `httpOnly: true` attribute?
-   - A) To force the cookie to transmit exclusively over HTTPS
-   - B) To prevent client-side JavaScript from accessing `document.cookie`, mitigating XSS credential theft
-   - C) To automatically delete the cookie when the browser closes
-   - D) To compress the cookie header payload
+    - **A)** To force the cookie to transmit exclusively over HTTPS
+    - **B)** To automatically delete the cookie when the browser closes
+    - **C)** To prevent client-side JavaScript from accessing `document.cookie`, mitigating XSS credential theft
+    - **D)** To compress the cookie header payload
 
 4. What is the return value of `await bcrypt.compare(submittedPassword, storedHash)` when the submitted password matches?
-   - A) The decrypted plaintext password
-   - B) A new hash string
-   - C) A boolean `true`
-   - D) The user document `_id`
+    - **A)** The decrypted plaintext password
+    - **B)** A new hash string
+    - **C)** The user document `_id`
+    - **D)** A boolean `true`
 
 5. In Mongoose, which method atomically updates an existing document and returns the newly modified document when `{ new: true }` is passed?
-   - A) `User.save()`
-   - B) `User.findOneAndUpdate()`
-   - C) `User.insertMany()`
-   - D) `User.replaceOne()`
-
----
+    - **A)** `User.save()`
+    - **B)** `User.findOneAndUpdate()`
+    - **C)** `User.insertMany()`
+    - **D)** `User.replaceOne()`
 
 ### Answer Key & Explanations
 
-1. **B) `#sidebar ul.nav li`** — Specificity breakdown: 1 ID (`#sidebar` = 100), 1 Class (`.nav` = 10), 2 Elements (`ul`, `li` = 2) $\to$ Total specificity (0, 1, 1, 2) = 112. Option A is (0, 0, 2, 2) = 22; Option C is (0, 0, 0, 4) = 4; Option D is (0, 0, 3, 0) = 30.
-2. **B) `next()`** — Express middleware receives `(req, res, next)`. Invoking `next()` informs Express that the current handler has completed its task and yields execution to the next middleware in the queue.
-3. **B) To prevent client-side JavaScript from accessing `document.cookie`, mitigating XSS credential theft** — When `httpOnly` is enabled, malicious injected JavaScript cannot read the session cookie via `document.cookie`.
-4. **C) A boolean `true`** — `bcrypt.compare()` hashes the plaintext candidate using the salt embedded inside the stored hash and compares the results in constant time, resolving to `true` on match and `false` on mismatch.
-5. **B) `User.findOneAndUpdate()`** — `Model.findOneAndUpdate(query, update, { new: true })` finds a matching document, applies updates atomically in MongoDB, and returns the updated document instead of the original pre-update document.
-
-
----
+1. **B**. Specificity breakdown: 1 ID (`#sidebar` = 100), 1 Class (`.nav` = 10), 2 Elements (`ul`, `li` = 2) $\to$ Total specificity (0, 1, 1, 2) = 112. Option A is (0, 0, 2, 2) = 22; Option C is (0, 0, 0, 4) = 4; Option D is (0, 0, 3, 0) = 30.
+2. **A**. Express middleware receives `(req, res, next)`. Invoking `next()` informs Express that the current handler has completed its task and yields execution to the next middleware in the queue.
+3. **C**. When `httpOnly` is enabled, malicious injected JavaScript cannot read the session cookie via `document.cookie`.
+4. **D**. `bcrypt.compare()` hashes the plaintext candidate using the salt embedded inside the stored hash and compares the results in constant time, resolving to `true` on match and `false` on mismatch.
+5. **B**. `Model.findOneAndUpdate(query, update, { new: true })` finds a matching document, applies updates atomically in MongoDB, and returns the updated document instead of the original pre-update document.
 
 ## References & Navigation
 

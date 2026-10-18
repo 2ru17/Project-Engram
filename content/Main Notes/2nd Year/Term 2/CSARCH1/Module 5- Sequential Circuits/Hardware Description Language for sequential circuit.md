@@ -351,76 +351,77 @@ endmodule
 ## Multiple Choice Questions
 
 1. What keyword introduces a procedural assignment block in behavioral modeling?
-- **A)** initial
-- **B)** assign
-- **C)** always
-- **D)** wire
+    - **A)** initial
+    - **B)** always
+    - **C)** assign
+    - **D)** wire
 
 2. What data type must the output of a procedural assignment statement be within an always block?
-- **A)** wire
-- **B)** reg
-- **C)** logic
-- **D)** parameter
+    - **A)** reg
+    - **B)** wire
+    - **C)** logic
+    - **D)** parameter
 
 3. Which keyword is used to specify a positive edge-triggered clock in Verilog?
-- **A)** posedgetrig
-- **B)** posedge
-- **C)** positive
-- **D)** rising_edge
+    - **A)** posedgetrig
+    - **B)** positive
+    - **C)** posedge
+    - **D)** rising_edge
 
 4. What is the primary difference between blocking and nonblocking statements?
-- **A)** Blocking statements are for constants, nonblocking for variables.
-- **B)** Blocking statements execute concurrently, nonblocking sequentially.
-- **C)** Blocking statements execute sequentially, nonblocking concurrently.
-- **D)** Blocking statements are used in testbenches, nonblocking in modules.
+    - **A)** Blocking statements are for constants, nonblocking for variables.
+    - **B)** Blocking statements execute concurrently, nonblocking sequentially.
+    - **C)** Blocking statements are used in testbenches, nonblocking in modules.
+    - **D)** Blocking statements execute sequentially, nonblocking concurrently.
 
 5. When modeling latched behavior or flip-flops, which type of assignment is recommended?
-- **A)** Blocking assignment
-- **B)** Nonblocking assignment
-- **C)** Continuous assignment
-- **D)** Wire assignment
+    - **A)** Blocking assignment
+    - **B)** Nonblocking assignment
+    - **C)** Continuous assignment
+    - **D)** Wire assignment
 
 6. How does one typically generate a continuous clock pulse in a Verilog testbench?
-- **A)** By using an always block without delays
-- **B)** By using an initial block with a forever loop and a delay
-- **C)** By using a generate block
-- **D)** By assigning it to a random number generator
+    - **A)** By using an always block without delays
+    - **B)** By using a generate block
+    - **C)** By using an initial block with a forever loop and a delay
+    - **D)** By assigning it to a random number generator
 
 7. What system task is used to terminate a simulation at a specific time?
-- **A)** $stop
-- **B)** $finish
-- **C)** $exit
-- **D)** $end
+    - **A)** $finish
+    - **B)** $stop
+    - **C)** $exit
+    - **D)** $end
 
 8. In a state diagram based Verilog model, what construct is typically used inside an always block to define state transitions?
-- **A)** if-else chains
-- **B)** case-endcase statements
-- **C)** for loops
-- **D)** while loops
+    - **A)** if-else chains
+    - **B)** while loops
+    - **C)** for loops
+    - **D)** case-endcase statements
 
 9. What is the general rule for using blocking assignments?
-- **A)** Use them when modeling edge-sensitive behavior
-- **B)** Use them when modeling concurrent execution
-- **C)** Use them when sequential ordering is imperative and in level-sensitive behavior
-- **D)** Use them strictly for clock generation
+    - **A)** Use them when modeling edge-sensitive behavior
+    - **B)** Use them when modeling concurrent execution
+    - **C)** Use them when sequential ordering is imperative and in level-sensitive behavior
+    - **D)** Use them strictly for clock generation
 
 10. In a structural model of a sequential circuit, how are memory elements like D Flip-Flops handled?
-- **A)** They are modeled implicitly using continuous assignments
-- **B)** They are instantiated as separate modules
-- **C)** They are created using delay operators
-- **D)** They are ignored and handled by the synthesizer
+    - **A)** They are instantiated as separate modules
+    - **B)** They are modeled implicitly using continuous assignments
+    - **C)** They are created using delay operators
+    - **D)** They are ignored and handled by the synthesizer
 
 ### Answer Key & Explanations
-1. **C)** The always block is used to describe procedural behavior.
-2. **B)** Any signal assigned a value inside an always block must be declared as a reg data type.
-3. **B)** The posedge keyword is specifically used for positive edge triggering on a clock or signal.
-4. **C)** Blocking statements (=) are executed sequentially in order, while nonblocking (<=) are executed concurrently.
-5. **B)** Nonblocking assignments (<=) are the rule for modeling concurrent, edge-sensitive, or latched behavior like flip-flops.
-6. **B)** Testbenches often generate clocks using `initial begin clk=0; forever #5 clk=~clk; end`.
-7. **B)** `$finish` is used in an initial block to end the simulation after a certain delay.
-8. **B)** case statements perfectly map states to their respective next-state logic.
-9. **C)** Blocking assignments are used for sequential ordering in combinational logic (level sensitive).
-10. **B)** In a structural model, flip-flops are defined in their own modules and instantiated into the top-level block.
+
+1. **B**. The always block is used to describe procedural behavior.
+2. **A**. Any signal assigned a value inside an always block must be declared as a reg data type.
+3. **C**. The posedge keyword is specifically used for positive edge triggering on a clock or signal.
+4. **D**. Blocking statements (=) are executed sequentially in order, while nonblocking (<=) are executed concurrently.
+5. **B**. Nonblocking assignments (<=) are the rule for modeling concurrent, edge-sensitive, or latched behavior like flip-flops.
+6. **C**. Testbenches often generate clocks using `initial begin clk=0; forever #5 clk=~clk; end`.
+7. **A**. `$finish` is used in an initial block to end the simulation after a certain delay.
+8. **D**. case statements perfectly map states to their respective next-state logic.
+9. **C**. Blocking assignments are used for sequential ordering in combinational logic (level sensitive).
+10. **A**. In a structural model, flip-flops are defined in their own modules and instantiated into the top-level block.
 
 ## References & Navigation
 

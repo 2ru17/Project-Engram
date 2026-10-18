@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Problem Solving]] #[[M2]]
+**Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Problem Solving]] #[[M2]]
 
 ---
 
@@ -81,76 +81,77 @@ To convert between two non-power-of-two bases (e.g., Base-7 to Base-5), you must
 ## Multiple Choice Questions
 
 1. When converting a decimal fraction to another base, which arithmetic operation is successively used?
-- **A)** Division by the target base
-- **B)** Subtraction of the target base
-- **C)** Multiplication by the target base
-- **D)** Addition of the target base
+    - **A)** Division by the target base
+    - **B)** Subtraction of the target base
+    - **C)** Multiplication by the target base
+    - **D)** Addition of the target base
 
 2. What is the binary equivalent of the decimal number 6?
-- **A)** 101
-- **B)** 110
-- **C)** 111
-- **D)** 100
+    - **A)** 101
+    - **B)** 110
+    - **C)** 111
+    - **D)** 100
 
 3. What is the hexadecimal equivalent of the decimal number 314?
-- **A)** 13A
-- **B)** 19A
-- **C)** 314
-- **D)** 1A3
+    - **A)** 13A
+    - **B)** 19A
+    - **C)** 314
+    - **D)** 1A3
 
 4. How many binary digits are required to represent a single octal digit?
-- **A)** 2
-- **B)** 3
-- **C)** 4
-- **D)** 8
+    - **A)** 2
+    - **B)** 3
+    - **C)** 4
+    - **D)** 8
 
 5. What is the octal equivalent of the binary number 011 101 001?
-- **A)** 351
-- **B)** 153
-- **C)** 721
-- **D)** 341
+    - **A)** 351
+    - **B)** 153
+    - **C)** 721
+    - **D)** 341
 
 6. How many binary digits are required to represent a single hexadecimal digit?
-- **A)** 2
-- **B)** 3
-- **C)** 4
-- **D)** 16
+    - **A)** 2
+    - **B)** 3
+    - **C)** 4
+    - **D)** 16
 
 7. What is the hexadecimal equivalent of the binary number 0111 0101 1001.1011?
-- **A)** 759.B
-- **B)** 759.A
-- **C)** 859.C
-- **D)** 649.B
+    - **A)** 759.B
+    - **B)** 759.A
+    - **C)** 859.C
+    - **D)** 649.B
 
 8. What is the octal equivalent of the hexadecimal number 829.A?
-- **A)** 4051.50
-- **B)** 2051.25
-- **C)** 1024.50
-- **D)** 829.10
+    - **A)** 4051.50
+    - **B)** 2051.25
+    - **C)** 1024.50
+    - **D)** 829.10
 
 9. When converting from decimal to another base, how do you read the integer result after successive division?
-- **A)** From top to bottom
-- **B)** From left to right
-- **C)** From bottom going up
-- **D)** Only the last quotient is used
+    - **A)** From top to bottom
+    - **B)** From left to right
+    - **C)** From bottom going up
+    - **D)** Only the last quotient is used
 
 10. What is the decimal fraction 0.625 represented in hexadecimal?
-- **A)** 0.5
-- **B)** 0.A
-- **C)** 0.B
-- **D)** 0.C
+    - **A)** 0.5
+    - **B)** 0.A
+    - **C)** 0.B
+    - **D)** 0.C
 
 ### Answer Key & Explanations
-1. **C)** The fractional portion requires repeatedly multiplying by the target base and observing the integer overflow.
-2. **B)** 6 divided by 2 gives 3 rem 0; 3 div 2 gives 1 rem 1; 1 div 2 gives 0 rem 1. Reading upwards: 110.
-3. **A)** 314 / 16 = 19 (rem 10 -> A); 19 / 16 = 1 (rem 3); 1 / 16 = 0 (rem 1). Result: 13A.
-4. **B)** An octal digit maxes out at 7, which corresponds to 111 in binary, demanding 3 bits.
-5. **A)** Directly grouping the bits into 3s: 011=3, 101=5, 001=1 gives 351 in octal.
-6. **C)** Hexadecimal goes up to 15 (F), which spans precisely 4 binary bits (1111).
-7. **A)** Breaking down 4-bit groups: 0111=7, 0101=5, 1001=9, 1011=B.
-8. **A)** Hex -> Binary -> Octal. 829.A16 is 1000 0010 1001.1010 in binary, regrouping to 3s yields 4051.50 in octal.
-9. **C)** Successive division remainders construct the final number when read from the final division up to the first.
-10. **B)** 0.625 * 16 = 10.000. In hexadecimal, 10 maps to the letter A.
+
+1. **C**. The fractional portion requires repeatedly multiplying by the target base and observing the integer overflow.
+2. **B**. 6 divided by 2 gives 3 rem 0; 3 div 2 gives 1 rem 1; 1 div 2 gives 0 rem 1. Reading upwards: 110.
+3. **A**. 314 / 16 = 19 (rem 10 -> A); 19 / 16 = 1 (rem 3); 1 / 16 = 0 (rem 1). Result: 13A.
+4. **B**. An octal digit maxes out at 7, which corresponds to 111 in binary, demanding 3 bits.
+5. **A**. Directly grouping the bits into 3s: 011=3, 101=5, 001=1 gives 351 in octal.
+6. **C**. Hexadecimal goes up to 15 (F), which spans precisely 4 binary bits (1111).
+7. **A**. Breaking down 4-bit groups: 0111=7, 0101=5, 1001=9, 1011=B.
+8. **A**. Hex -> Binary -> Octal. 829.A16 is 1000 0010 1001.1010 in binary, regrouping to 3s yields 4051.50 in octal.
+9. **C**. Successive division remainders construct the final number when read from the final division up to the first.
+10. **B**. 0.625 * 16 = 10.000. In hexadecimal, 10 maps to the letter A.
 
 ## References & Navigation
 

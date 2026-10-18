@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Control Unit Design & Microprogramming]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Control Unit Design & Microprogramming]]
 
 ---
 
@@ -247,34 +247,34 @@ Calculate:
 ## Multiple Choice Questions
 
 1. What is the fundamental difference between Horizontal and Vertical microprogramming?
-- **A)** Horizontal microinstructions are unencoded and wide, while Vertical microinstructions use encoded fields requiring decoders
-- **B)** Horizontal microcode executes only on RISC processors, while Vertical executes on CISC
-- **C)** Horizontal microinstructions can only execute additions, while Vertical executes multiplications
-- **D)** Horizontal microprogramming uses magnetic core memory, while Vertical uses SRAM
+    - **A)** Horizontal microinstructions are unencoded and wide, while Vertical microinstructions use encoded fields requiring decoders
+    - **B)** Horizontal microcode executes only on RISC processors, while Vertical executes on CISC
+    - **C)** Horizontal microinstructions can only execute additions, while Vertical executes multiplications
+    - **D)** Horizontal microprogramming uses magnetic core memory, while Vertical uses SRAM
 
 2. In the universal single-bus instruction fetch routine, what micro-operation transfers the instruction from the Memory Data Register into the Instruction Register?
-- **A)** `PC_out, MAR_in`
-- **B)** `Z_out, PC_in`
-- **C)** `MDR_out, IR_in`
-- **D)** `IRAF_out, PC_in`
+    - **A)** `PC_out, MAR_in`
+    - **B)** `Z_out, PC_in`
+    - **C)** `MDR_out, IR_in`
+    - **D)** `IRAF_out, PC_in`
 
 3. In a microprogrammed CPU, where are the binary microinstruction control words physically stored?
-- **A)** In the Level 1 Data Cache
-- **B)** In the Control Store (ROM / SRAM)
-- **C)** In the Translation Lookaside Buffer (TLB)
-- **D)** In the General Purpose Register File
+    - **A)** In the Level 1 Data Cache
+    - **B)** In the Control Store (ROM / SRAM)
+    - **C)** In the Translation Lookaside Buffer (TLB)
+    - **D)** In the General Purpose Register File
 
 4. How many clock cycles are required to execute the instruction `MOV EAX, [ALPHA]` on a single-bus CPU (including the 3-cycle fetch phase)?
-- **A)** 4 cycles
-- **B)** 5 cycles
-- **C)** 6 cycles
-- **D)** 8 cycles
+    - **A)** 4 cycles
+    - **B)** 5 cycles
+    - **C)** 6 cycles
+    - **D)** 8 cycles
 
 5. What micro-operation sequence correctly implements a subroutine return instruction (`RET`) in a single-bus CPU?
-- **A)** `RSP_out, MAR_in, Read; WMFC; MDR_out, PC_in, END`
-- **B)** `PC_out, RSP_in, Write; WMFC; END`
-- **C)** `IRAF_out, PC_in, END`
-- **D)** `EBX_out, EAX_in, END`
+    - **A)** `RSP_out, MAR_in, Read; WMFC; MDR_out, PC_in, END`
+    - **B)** `PC_out, RSP_in, Write; WMFC; END`
+    - **C)** `IRAF_out, PC_in, END`
+    - **D)** `EBX_out, EAX_in, END`
 
 ### Answer Key & Explanations
 

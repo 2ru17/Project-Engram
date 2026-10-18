@@ -11,111 +11,68 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Combinations]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Combinations]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Combinations**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+A **Combination** is a selection of $r$ objects from a set of $n$ distinct objects **without regard to order** (and without replacement). While permutations treat $(A, B)$ and $(B, A)$ as distinct arrangements, combinations treat $\{A, B\}$ as a single subset.
 
 ## Key Definitions
-- **Combinations**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Combinations** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Binomial Coefficient ($\binom{n}{r}$ or $_nC_r$):** The number of $r$-element subsets chosen from $n$ distinct elements:
+  $$\binom{n}{r} = \frac{P(n, r)}{r!} = \frac{n!}{r!(n - r)!}, \quad 0 \le r \le n$$
+- **Symmetry Identity:** $\binom{n}{r} = \binom{n}{n - r}$ (choosing $r$ items to include is equivalent to choosing $n - r$ items to leave behind).
+- **Pascal's Identity:** $\binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r}$.
+- **Total Subsets Identity:** $\sum_{r=0}^n \binom{n}{r} = 2^n$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Combinations**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** From a pool of $8$ cybersecurity engineers and $6$ network administrators, how many ways can a $5$-person incident response committee be formed if it must contain **exactly $3$** cybersecurity engineers and **$2$** network administrators?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Combinations** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+$$\binom{8}{3} \times \binom{6}{2} = \frac{8 \times 7 \times 6}{3 \times 2 \times 1} \times \frac{6 \times 5}{2 \times 1} = 56 \times 15 = 840$$
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Why do we divide the permutation count $P(n, r) = \frac{n!}{(n-r)!}$ by $r!$ to obtain the combination formula $\binom{n}{r}$?
+    - **A)** Because $r!$ objects are removed from the pool.
+    - **B)** Because every unordered subset of size $r$ can be ordered internally in $r!$ distinct ways that are all equivalent when order does not matter.
+    - **C)** Because sampling is done with replacement.
+    - **D)** Because $n!$ is always divisible by $r$.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. What is the value of $\binom{10}{3}$?
+    - **A)** $720$
+    - **B)** $120$
+    - **C)** $30$
+    - **D)** $240$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Which combinatorics identity explains why $\binom{100}{98} = \binom{100}{2} = 4950$?
+    - **A)** Vandermonde's Identity
+    - **B)** Symmetry Identity: $\binom{n}{r} = \binom{n}{n-r}$
+    - **C)** Stirling's Approximation
+    - **D)** De Morgan's Law
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. A standard deck has $52$ cards ($4$ suits of $13$ ranks each). How many distinct $5$-card poker hands contain **all $4$ Aces**?
+    - **A)** $48$
+    - **B)** $52$
+    - **C)** $\binom{52}{4}$
+    - **D)** $4! \times 48$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. What does the sum $\sum_{k=0}^{n} \binom{n}{k}$ equal for any non-negative integer $n$?
+    - **A)** $n!$
+    - **B)** $n^2$
+    - **C)** $2^n$
+    - **D)** $2^{n-1}$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. In ordered permutations $P(n, r)$, each $r$-element subset appears $r!$ times (once for each internal permutation of its $r$ elements). Dividing by $r!$ collapses those $r!$ orderings into a single unordered combination.
+2. **B**. $\binom{10}{3} = \frac{10 \times 9 \times 8}{3 \times 2 \times 1} = \frac{720}{6} = 120$.
+3. **B**. By symmetry, selecting $r = 98$ items to keep is in one-to-one correspondence with selecting $n - r = 2$ items to omit: $\binom{100}{98} = \binom{100}{2} = \frac{100 \times 99}{2} = 4950$.
+4. **A**. Choosing all $4$ Aces can be done in $\binom{4}{4} = 1$ way, and the remaining $1$ card in the $5$-card hand can be chosen from the other $48$ non-Ace cards in $\binom{48}{1} = 48$ ways ($1 \times 48 = 48$).
+5. **C**. By the Binomial Theorem with $x=1, y=1$, $(1+1)^n = \sum_{k=0}^n \binom{n}{k} = 2^n$, which counts all possible subsets of an $n$-element set.
 
 ## References & Navigation
 

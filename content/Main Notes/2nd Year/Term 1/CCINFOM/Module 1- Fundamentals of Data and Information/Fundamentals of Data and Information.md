@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Conceptual]] #[[CCINFOM]] #[[Data]] #[[Information]] #[[Information Systems]] #[[M1]]
+**Tags:** #[[Conceptual]] #[[CCINFOM]] #[[Data]] #[[Information]] #[[Information Systems]] #[[M1]]
 
 ---
 
@@ -54,77 +54,77 @@ A fundamental database application functions by taking input data and outputting
 ## Multiple Choice Questions
 
 1. What is the fundamental difference between data and information?
-- **A)** Data is processed facts, while information is raw figures.
-- **B)** Data consists of raw facts without context, while information is data that has been processed to have meaning.
-- **C)** Data and information are interchangeable terms in computer science.
-- **D)** Information refers to hardware components, while data refers to software.
+    - **A)** Data is processed facts, while information is raw figures.
+    - **B)** Data consists of raw facts without context, while information is data that has been processed to have meaning.
+    - **C)** Data and information are interchangeable terms in computer science.
+    - **D)** Information refers to hardware components, while data refers to software.
 
 2. Which component is NOT traditionally considered a core part of an Information System ecosystem?
-- **A)** Hardware
-- **B)** People
-- **C)** Processes
-- **D)** Marketing
+    - **A)** Hardware
+    - **B)** People
+    - **C)** Processes
+    - **D)** Marketing
 
 3. In the Processing Cycle of an Information System, which step immediately follows "Store"?
-- **A)** Process
-- **B)** Present
-- **C)** Distribute
-- **D)** Collect
+    - **A)** Process
+    - **B)** Present
+    - **C)** Distribute
+    - **D)** Collect
 
 4. Which type of Information System is primarily used for day-to-day operational decisions?
-- **A)** Executive Information Systems (EIS)
-- **B)** Transaction Processing Systems (TPS)
-- **C)** Decision Support Systems (DSS)
-- **D)** Expert Systems
+    - **A)** Executive Information Systems (EIS)
+    - **B)** Transaction Processing Systems (TPS)
+    - **C)** Decision Support Systems (DSS)
+    - **D)** Expert Systems
 
 5. In a 3-Tier Architecture, what does the middle tier typically represent?
-- **A)** The user interface or client side
-- **B)** The primary database server
-- **C)** The business or application logic
-- **D)** The physical hardware layer
+    - **A)** The user interface or client side
+    - **B)** The primary database server
+    - **C)** The business or application logic
+    - **D)** The physical hardware layer
 
 6. Which characteristic of information quality dictates that the value derived from the information must exceed the cost of producing it?
-- **A)** Relevant
-- **B)** Accurate
-- **C)** Economical
-- **D)** Flexible
+    - **A)** Relevant
+    - **B)** Accurate
+    - **C)** Economical
+    - **D)** Flexible
 
 7. When raw data is analyzed to identify long-term patterns and strategic value, it is being transformed into:
-- **A)** Information
-- **B)** Software
-- **C)** Knowledge
-- **D)** Networks
+    - **A)** Information
+    - **B)** Software
+    - **C)** Knowledge
+    - **D)** Networks
 
 8. Which architecture combines input, output, computation, and storage into a single cohesive application?
-- **A)** Monolithic Architecture
-- **B)** 2-Tier Architecture
-- **C)** Client-Server Architecture
-- **D)** Distributed Architecture
+    - **A)** Monolithic Architecture
+    - **B)** 2-Tier Architecture
+    - **C)** Client-Server Architecture
+    - **D)** Distributed Architecture
 
 9. Which attribute of high-quality information ensures that the data is available and up-to-date exactly when a decision-maker needs it?
-- **A)** Timely
-- **B)** Secure
-- **C)** Verifiable
-- **D)** Simple
+    - **A)** Timely
+    - **B)** Secure
+    - **C)** Verifiable
+    - **D)** Simple
 
 10. A mid-level manager needing to evaluate monthly performance metrics would most likely rely on which system?
-- **A)** Transaction Processing System
-- **B)** Management Information System
-- **C)** Executive Information System
-- **D)** Office Support System
+    - **A)** Transaction Processing System
+    - **B)** Management Information System
+    - **C)** Executive Information System
+    - **D)** Office Support System
 
 ### Answer Key & Explanations
 
-1. **B** - Data represents raw facts and figures, whereas information is data that has been processed and given context to make it useful.
-2. **D** - The core components of an IS include hardware, software, data, processes, networks, and people; marketing is outside this core technical definition.
-3. **A** - According to the standard processing cycle, data is stored before it undergoes the processing step, which is then followed by presentation.
-4. **B** - TPS handles routine operational tasks, unlike DSS or EIS which deal with tactical and strategic decisions respectively.
-5. **C** - The 3-Tier architecture introduces a middle layer specifically for processing business logic, separating it from the client interface and the database.
-6. **C** - The economical dimension of information quality states that the production and maintenance cost of information should not outweigh its practical value.
-7. **C** - Knowledge is derived from information by synthesizing it to find overarching patterns, relevance, and value.
-8. **A** - Monolithic architectures encapsulate all elements of application logic and storage into one unified system.
-9. **A** - Timeliness ensures that information is provided within the necessary timeframe to be useful for immediate decision-making.
-10. **B** - Tactical decisions, such as monitoring monthly performance, are typically supported by Management Information Systems (MIS).
+1. **B**. Data represents raw facts and figures, whereas information is data that has been processed and given context to make it useful.
+2. **D**. The core components of an IS include hardware, software, data, processes, networks, and people; marketing is outside this core technical definition.
+3. **A**. According to the standard processing cycle, data is stored before it undergoes the processing step, which is then followed by presentation.
+4. **B**. TPS handles routine operational tasks, unlike DSS or EIS which deal with tactical and strategic decisions respectively.
+5. **C**. The 3-Tier architecture introduces a middle layer specifically for processing business logic, separating it from the client interface and the database.
+6. **C**. The economical dimension of information quality states that the production and maintenance cost of information should not outweigh its practical value.
+7. **C**. Knowledge is derived from information by synthesizing it to find overarching patterns, relevance, and value.
+8. **A**. Monolithic architectures encapsulate all elements of application logic and storage into one unified system.
+9. **A**. Timeliness ensures that information is provided within the necessary timeframe to be useful for immediate decision-making.
+10. **B**. Tactical decisions, such as monitoring monthly performance, are typically supported by Management Information Systems (MIS).
 
 ## References & Navigation
 

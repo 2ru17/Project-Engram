@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
+**Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
 
 ---
 
@@ -137,87 +137,48 @@ Block 3 starts at `.0 + Block 1 + Block 2`.
 
 > TL;DR — VLSM partitions a network into variable-size subnets. Allocate largest-first, compute host bits with $2^h - 2 \ge \text{needed hosts}$, and track subnet/broadcast addresses carefully.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Pasted image 20251121092345.png]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "The goal is to minimize wasted IP _____ while accommodating the required number of hosts."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** addresses
+1. In **CIDR (Classless Inter-Domain Routing)** notation `a.b.c.d/x`, what does the prefix length `/x` specify?
+    - **A)** The number of routers in the subnet.
+    - **B)** That the **most significant (leftmost) $x$ bits** of the 32-bit IPv4 address identify the **network/subnet prefix**, while the remaining **$32 - x$ bits** identify the **host interface** within that subnet.
+    - **C)** The maximum TCP port number allowed on the subnet.
+    - **D)** The number of bits in the MAC address.
 
-2. Which word completes the following sentence from the text: "What is the broadcast address of subnet B?**  **Analysis:** _____ `.192` + 32 addresses - 1 = `.223`."?
-- **A)** Network
-- **B)** Router
-- **C)** Start
-- **D)** Protocol
+2. Given a `/26` IPv4 subnet (e.g., `192.168.10.64/26`), what is its dotted-decimal subnet mask, and how many **usable host IP addresses** does it provide?
+    - **A)** Mask `255.255.255.0`; $254$ usable hosts
+    - **B)** Mask `255.255.255.192`; $2^{32-26} - 2 = 2^6 - 2 = 64 - 2 = \mathbf{62}$ usable hosts
+    - **C)** Mask `255.255.255.128`; $126$ usable hosts
+    - **D)** Mask `255.255.255.224`; $30$ usable hosts
 
-3. Which word completes the following sentence from the text: "The Golden Rule of VLSM (Variable Length Subnet Masking)  When assigning subnets to groups of _____ sizes, always assign the largest group first, then the next largest, and so on."?
-- **A)** Protocol
-- **B)** different
-- **C)** Network
-- **D)** Router
+3. For the subnet `192.168.1.128/26`, what are the **Network Address**, the **First Usable Host IP**, the **Last Usable Host IP**, and the **Directed Broadcast Address**?
+    - **A)** Network: `192.168.1.128`, First: `192.168.1.129`, Last: `192.168.1.190`, Broadcast: `192.168.1.191`
+    - **B)** Network: `192.168.1.128`, First: `192.168.1.128`, Last: `192.168.1.191`, Broadcast: `192.168.1.192`
+    - **C)** Network: `192.168.1.0`, First: `192.168.1.1`, Last: `192.168.1.254`, Broadcast: `192.168.1.255`
+    - **D)** Network: `192.168.1.128`, First: `192.168.1.130`, Last: `192.168.1.254`, Broadcast: `192.168.1.255`
 
-4. Which word completes the following sentence from the text: "**Correct Answer:** **172.30.172.222**  ### _____ C (37 Hosts)  **11."?
-- **A)** Protocol
-- **B)** Subnet
-- **C)** Router
-- **D)** Network
+4. Why do we subtract $2$ from $2^{32-x}$ when computing the number of assignable host addresses on a standard IPv4 subnet?
+    - **A)** Because two addresses are reserved: the **all-$0$s host bits** address represents the **Subnet/Network Identifier** itself, and the **all-$1$s host bits** address represents the **Subnet Directed Broadcast Address**.
+    - **B)** Because two addresses are always reserved for DNS servers.
+    - **C)** Because IPv4 cannot use odd numbers.
+    - **D)** Because the first two bits of every IPv4 address are always `11`.
 
-5. Which word completes the following sentence from the text: "**Network Address:** The very first _____ (all host bits 0)."?
-- **A)** Network
-- **B)** Protocol
-- **C)** Router
-- **D)** IP
-
-6. Which word completes the following sentence from the text: "Concept Overview: VLSM  Definition  Subnetting allows a network administra_____r to break a large network into smaller, efficient sub-networks."?
-- **A)** to
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
-
-7. Which word completes the following sentence from the text: "**Broadcast Address:** The very last _____ (all host bits 1)."?
-- **A)** Router
-- **B)** IP
-- **C)** Protocol
-- **D)** Network
-
-8. Which word completes the following sentence from the text: "What is the ending address of _____ C?**  **Analysis:** Broadcast (`.191`) - 1."?
-- **A)** Router
-- **B)** Network
-- **C)** Protocol
-- **D)** subnet
-
-9. Which word completes the following sentence from the text: "What is the starting address of _____ A?**  **Analysis:** Subnet ID + 1."?
-- **A)** Router
-- **B)** subnet
-- **C)** Network
-- **D)** Protocol
-
-10. Which word completes the following sentence from the text: "**Correct Answer:** **172.30.172.190**  ## Summary _____ Logic (Cheat Sheet)  1."?
-- **A)** Network
-- **B)** Router
-- **C)** of
-- **D)** Protocol
-
+5. How does **Route Aggregation (Supernetting)** allow an ISP that owns four contiguous `/22` blocks (`200.23.16.0/22`, `200.23.20.0/22`, `200.23.24.0/22`, and `200.23.28.0/22`) to advertise all four blocks to the global BGP routing table using a **single** prefix?
+    - **A)** By advertising `200.23.0.0/16`.
+    - **B)** Since the third octets `16` (`00010000`), `20` (`00010100`), `24` (`00011000`), and `28` (`00011100`) share the first 4 bits `0001` ($8 + 8 + 4 = 20$ common leading bits), all four `/22` blocks aggregate cleanly into the single summary prefix **`200.23.16.0/20`**.
+    - **C)** By advertising `200.23.16.0/24`.
+    - **D)** Contiguous blocks cannot be aggregated in CIDR.
 
 ### Answer Key & Explanations
-1. **D)** addresses completes the sentence: The goal is to minimize wasted IP addresses while ...
-2. **C)** Start completes the sentence: What is the broadcast address of subnet B?**  **An...
-3. **B)** different completes the sentence: The Golden Rule of VLSM (Variable Length Subnet Ma...
-4. **B)** Subnet completes the sentence: **Correct Answer:** **172.30.172.222**  ### Subnet...
-5. **D)** IP completes the sentence: **Network Address:** The very first IP (all host b...
-6. **A)** to completes the sentence: Concept Overview: VLSM  Definition  Subnetting all...
-7. **B)** IP completes the sentence: **Broadcast Address:** The very last IP (all host ...
-8. **D)** subnet completes the sentence: What is the ending address of subnet C?**  **Analy...
-9. **B)** subnet completes the sentence: What is the starting address of subnet A?**  **Ana...
-10. **C)** of completes the sentence: **Correct Answer:** **172.30.172.190**  ## Summary...
+
+1. **B**. In CIDR `a.b.c.d/x`, the first $x$ bits form the network prefix (mask of $x$ leading $1$s followed by $32-x$ trailing $0$s), and the remaining $32-x$ bits identify hosts within that subnet.
+2. **B**. `/26` has $26$ leading $1$s: `11111111.11111111.11111111.11000000` $= 255.255.255.192$, leaving $32 - 26 = 6$ host bits ($2^6 - 2 = 62$ usable hosts).
+3. **A**. A `/26` block has size $2^6 = 64$, so the block starting at `.128` spans `.128` through `.191`. `.128` is the network ID, `.129`–`.190` are the $62$ usable hosts, and `.191` (all host bits $= 1$) is the directed broadcast address.
+4. **A**. Host portion all-zeros (`00...0`) is the subnet address, and host portion all-ones (`11...1`) is the subnet broadcast address; neither may be assigned to a standard host interface.
+5. **B**. Combining $4 = 2^2$ contiguous `/22` blocks shortens the prefix length by $2$ bits ($22 - 2 = 20$), yielding the single aggregate prefix `200.23.16.0/20`.
 
 ## References & Navigation
 

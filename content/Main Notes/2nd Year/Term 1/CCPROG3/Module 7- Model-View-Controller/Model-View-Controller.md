@@ -222,41 +222,42 @@ public class MainApp {
 ## Multiple Choice Questions
 
 1. What is the Model-View-Controller (MVC) pattern?
-- **A)** A network protocol for transferring data.
-- **B)** A software architectural pattern that separates an application into three main logical components.
-- **C)** A specific Java framework for database management.
-- **D)** A design principle focused solely on object instantiation.
+    - **A)** A network protocol for transferring data.
+    - **B)** A software architectural pattern that separates an application into three main logical components.
+    - **C)** A specific Java framework for database management.
+    - **D)** A design principle focused solely on object instantiation.
 
 2. In the MVC architecture, what is the primary responsibility of the Model?
-- **A)** To handle user requests and route them appropriately.
-- **B)** To display data to the user through the UI.
-- **C)** To represent the underlying, logical structure of data and manage rules.
-- **D)** To define the graphical layout of the application.
+    - **A)** To handle user requests and route them appropriately.
+    - **B)** To display data to the user through the UI.
+    - **C)** To represent the underlying, logical structure of data and manage rules.
+    - **D)** To define the graphical layout of the application.
 
 3. Which component directly receives user commands and raises appropriate URL requests?
-- **A)** The Model
-- **B)** The View
-- **C)** The Controller
-- **D)** The Database
+    - **A)** The Model
+    - **B)** The View
+    - **C)** The Controller
+    - **D)** The Database
 
 4. In a Simple Counter App using MVC, what does the Controller do when the '+' button is clicked?
-- **A)** It directly draws the new number on the screen.
-- **B)** It creates a new instance of the Model.
-- **C)** It calls `model.increment()` and updates the view.
-- **D)** It ignores the click unless the Model requests it.
+    - **A)** It directly draws the new number on the screen.
+    - **B)** It creates a new instance of the Model.
+    - **C)** It calls `model.increment()` and updates the view.
+    - **D)** It ignores the click unless the Model requests it.
 
 5. What is the typical flow of data in the MVC pattern after a user action?
-- **A)** User Action -> Model -> Controller -> View -> Updated UI
-- **B)** User Action -> View -> Controller -> Updates Model -> Notifies View -> Updated UI
-- **C)** User Action -> Controller -> View -> Updates Model -> Updated UI
-- **D)** User Action -> Model -> View -> Controller -> Updated UI
+    - **A)** User Action -> Model -> Controller -> View -> Updated UI
+    - **B)** User Action -> View -> Controller -> Updates Model -> Notifies View -> Updated UI
+    - **C)** User Action -> Controller -> View -> Updates Model -> Updated UI
+    - **D)** User Action -> Model -> View -> Controller -> Updated UI
 
 ### Answer Key & Explanations
-1. **B)** MVC is a structural blueprint that decouples data management, interface rendering, and user input handling into distinct components.
-2. **C)** The Model isolates the core business logic, maintaining data integrity and enforcing application rules independently of the interface.
-3. **B)** The View acts as the initial interaction point, capturing user input before forwarding it to the Controller for processing.
-4. **C)** The Controller acts as the middleman, processing the click event by mutating the Model's state and subsequently commanding the View to reflect the new state.
-5. **B)** The flow starts at the View (action), routes through the Controller (logic), alters the Model (data), and finally reflects back on the View.
+
+1. **B**. MVC is a structural blueprint that decouples data management, interface rendering, and user input handling into distinct components.
+2. **C**. The Model isolates the core business logic, maintaining data integrity and enforcing application rules independently of the interface.
+3. **B**. The View acts as the initial interaction point, capturing user input before forwarding it to the Controller for processing.
+4. **C**. The Controller acts as the middleman, processing the click event by mutating the Model's state and subsequently commanding the View to reflect the new state.
+5. **B**. The flow starts at the View (action), routes through the Controller (logic), alters the Model (data), and finally reflects back on the View.
 
 ## References & Navigation
 

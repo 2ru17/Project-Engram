@@ -162,36 +162,37 @@ int main() {
 ## Multiple Choice Questions
 
 1. Which of the following best describes the primary function of the Operating System's Kernel?
-A) It is the firmware that initiates the boot process.
-B) It is a framework that provides multimedia services for developers.
-C) It is the core program that runs at all times, acting as the central controller and resource allocator.
-D) It is an application program that manages user interfaces.
+    - **A)** It is the firmware that initiates the boot process.
+    - **B)** It is a framework that provides multimedia services for developers.
+    - **C)** It is the core program that runs at all times, acting as the central controller and resource allocator.
+    - **D)** It is an application program that manages user interfaces.
 
 2. A device controller has finished transferring a block of data directly into main memory without utilizing the CPU. What mechanism has just been employed?
-A) Direct Memory Access (DMA)
-B) Interrupt-Driven I/O
-C) Programmed Polling
-D) Maskable Interruption
+    - **A)** Direct Memory Access (DMA)
+    - **B)** Interrupt-Driven I/O
+    - **C)** Programmed Polling
+    - **D)** Maskable Interruption
 
 3. Which of the following hardware features is absolutely essential to prevent a malicious user program from executing privileged instructions (e.g., halting the processor)?
-A) Caching
-B) Direct Memory Access
-C) Dual-Mode Operation (Mode Bit)
-D) Non-volatile Memory
+    - **A)** Caching
+    - **B)** Direct Memory Access
+    - **C)** Dual-Mode Operation (Mode Bit)
+    - **D)** Non-volatile Memory
 
 4. In a multitasking environment, how does the OS keep track of a suspended process's state (e.g., program counter, CPU registers) so it can be resumed later?
-A) By storing it in the Interrupt Vector Table.
-B) By using a Process Control Block (PCB).
-C) By saving it to the bootstrap firmware.
-D) By writing it sequentially to a character device.
+    - **A)** By storing it in the Interrupt Vector Table.
+    - **B)** By using a Process Control Block (PCB).
+    - **C)** By saving it to the bootstrap firmware.
+    - **D)** By writing it sequentially to a character device.
 
 5. A system has an L1 cache access time of 2ns and a main memory access time of 100ns. If the cache hit rate is 90% (and we assume sequential access on a miss), what is the Effective Access Time (EAT)?
-A) 11.8 ns
-B) 12.0 ns
-C) 92.0 ns
-D) 20.0 ns
+    - **A)** 11.8 ns
+    - **B)** 12.0 ns
+    - **C)** 92.0 ns
+    - **D)** 20.0 ns
 
 ### Answer Key & Explanations
+
 1. **C**. The kernel is the foundational software running constantly, managing CPU, memory, and devices. (A) is the bootstrap program (BIOS/UEFI), and (B) describes middleware.
 2. **A**. Direct Memory Access (DMA) allows the device controller to move data directly to/from memory, freeing the CPU from byte-by-byte transfer overhead.
 3. **C**. Dual-Mode Operation distinguishes between User mode and Kernel mode, ensuring that unprivileged user programs cannot execute critical (privileged) machine instructions.

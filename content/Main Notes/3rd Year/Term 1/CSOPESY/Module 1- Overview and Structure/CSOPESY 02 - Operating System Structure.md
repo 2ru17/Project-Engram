@@ -178,36 +178,37 @@ INT 0x80           ; Trigger Software Interrupt (Trap to Kernel Mode)
 ## Multiple Choice Questions
 
 1. Which of the following is an example of an Operating System service geared towards **system efficiency** rather than user convenience?
-A) File-System Manipulation
-B) Error Detection
-C) Accounting and Resource Allocation
-D) Command-Line Interface execution
+    - **A)** File-System Manipulation
+    - **B)** Error Detection
+    - **C)** Accounting and Resource Allocation
+    - **D)** Command-Line Interface execution
 
 2. When invoking a system call that requires 15 separate parameters, which parameter passing technique is the OS most likely to utilize?
-A) Passing all parameters directly in CPU registers.
-B) Storing the parameters in a block in main memory and passing the block's address in a register.
-C) Hardcoding the parameters directly into the device driver.
-D) Using Dynamic Linking to map the parameters.
+    - **A)** Passing all parameters directly in CPU registers.
+    - **B)** Storing the parameters in a block in main memory and passing the block's address in a register.
+    - **C)** Hardcoding the parameters directly into the device driver.
+    - **D)** Using Dynamic Linking to map the parameters.
 
 3. The primary advantage of a Microkernel architecture over a Monolithic architecture is:
-A) Faster execution of system calls due to reduced context switching.
-B) Smaller overall memory footprint requiring no virtual memory mapping.
-C) Improved system reliability and security by moving non-essential components to user space.
-D) The ability to dynamically link executable files at runtime.
+    - **A)** Faster execution of system calls due to reduced context switching.
+    - **B)** Smaller overall memory footprint requiring no virtual memory mapping.
+    - **C)** Improved system reliability and security by moving non-essential components to user space.
+    - **D)** The ability to dynamically link executable files at runtime.
 
 4. A developer compiles a program on a Linux machine using x86 architecture. Which of the following explains why this exact compiled binary cannot natively run on a Windows machine with the same x86 architecture?
-A) The CPUs have different instruction sets.
-B) The Operating Systems use different binary formats (e.g., ELF vs. PE) and have entirely different sets of underlying system calls.
-C) The hardware bus structures are configured differently.
-D) Windows does not support Graphical User Interfaces (GUI).
+    - **A)** The CPUs have different instruction sets.
+    - **B)** The Operating Systems use different binary formats (e.g., ELF vs. PE) and have entirely different sets of underlying system calls.
+    - **C)** The hardware bus structures are configured differently.
+    - **D)** Windows does not support Graphical User Interfaces (GUI).
 
 5. What is the specific role of the **Linker** in the program compilation and execution pipeline?
-A) To translate source code instructions into assembly language.
-B) To load the program into physical RAM and allocate a Process Control Block.
-C) To resolve cross-file references and combine multiple relocatable object files and libraries into a single binary executable.
-D) To dynamically change the physical addresses of running code.
+    - **A)** To translate source code instructions into assembly language.
+    - **B)** To load the program into physical RAM and allocate a Process Control Block.
+    - **C)** To resolve cross-file references and combine multiple relocatable object files and libraries into a single binary executable.
+    - **D)** To dynamically change the physical addresses of running code.
 
 ### Answer Key & Explanations
+
 1. **C**. Resource allocation and accounting ensure the hardware is utilized properly and fairly among users, maximizing system efficiency. The others directly aid the user in executing tasks.
 2. **B**. Registers are extremely limited in number (typically 4 to 8 general-purpose). For large parameter sets, placing them in a memory block/table or pushing them onto the stack is required.
 3. **C**. Microkernels move device drivers, file systems, etc., into user space. If a user-space driver crashes, it doesn't crash the entire kernel, resulting in high reliability and security (at the cost of performance).

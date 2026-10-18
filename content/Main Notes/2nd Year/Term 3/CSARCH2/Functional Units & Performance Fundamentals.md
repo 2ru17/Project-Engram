@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Functional Units & Performance Fundamentals]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Functional Units & Performance Fundamentals]]
 
 ---
 
@@ -229,41 +229,41 @@ Calculate:
 ## Multiple Choice Questions
 
 1. A benchmark program's execution time on a $3.0\text{ GHz}$ CPU is 12 seconds with an average CPI of 1.8. What is the total instruction count of the program?
-- **A)** $1.5 \times 10^{10}$ instructions
-- **B)** $2.0 \times 10^{10}$ instructions
-- **C)** $3.6 \times 10^{10}$ instructions
-- **D)** $6.48 \times 10^{10}$ instructions
+    - **A)** $1.5 \times 10^{10}$ instructions
+    - **B)** $2.0 \times 10^{10}$ instructions
+    - **C)** $3.6 \times 10^{10}$ instructions
+    - **D)** $6.48 \times 10^{10}$ instructions
 
 2. If an architectural enhancement accelerates database search operations by $4\times$, and search operations consume $60\%$ of total execution time, what is the overall system speedup according to Amdahl's Law?
-- **A)** $1.82\times$
-- **B)** $2.00\times$
-- **C)** $2.35\times$
-- **D)** $2.86\times$
+    - **A)** $1.82\times$
+    - **B)** $2.00\times$
+    - **C)** $2.35\times$
+    - **D)** $2.86\times$
 
 3. Why is MFLOPS a more reliable metric than MIPS when benchmarking scientific computation engines?
-- **A)** Floating-point operations always execute in exactly one clock cycle
-- **B)** It normalizes performance by counting standard arithmetic floating-point operations rather than arbitrary instruction counts
-- **C)** It includes branch prediction accuracy within the formula
-- **D)** It directly measures semiconductor transistor switching latency
+    - **A)** Floating-point operations always execute in exactly one clock cycle
+    - **B)** It normalizes performance by counting standard arithmetic floating-point operations rather than arbitrary instruction counts
+    - **C)** It includes branch prediction accuracy within the formula
+    - **D)** It directly measures semiconductor transistor switching latency
 
 4. A 32-bit wide memory bus operates at $200\text{ MHz}$. What is the theoretical peak data bandwidth of this bus?
-- **A)** $400\text{ MB/s}$
-- **B)** $600\text{ MB/s}$
-- **C)** $800\text{ MB/s}$
-- **D)** $1600\text{ MB/s}$
+    - **A)** $400\text{ MB/s}$
+    - **B)** $600\text{ MB/s}$
+    - **C)** $800\text{ MB/s}$
+    - **D)** $1600\text{ MB/s}$
 
 5. Under the CPU performance equation, which variable is primarily determined by compiler optimization and algorithm design?
-- **A)** Clock cycle time ($T$)
-- **B)** Clock frequency ($f$)
-- **C)** Instruction Count ($I$)
-- **D)** Transistor gate delay
+    - **A)** Clock cycle time ($T$)
+    - **B)** Clock frequency ($f$)
+    - **C)** Instruction Count ($I$)
+    - **D)** Transistor gate delay
 
 ### Answer Key & Explanations
 
 1. **B**. From $CPU\text{ Time} = \frac{I \times CPI}{f}$, we rearrange for $I$:
-   $$I = \frac{CPU\text{ Time} \times f}{CPI} = \frac{12\text{ s} \times 3.0 \times 10^9\text{ Hz}}{1.8} = \frac{36 \times 10^9}{1.8} = 2.0 \times 10^{10}\text{ instructions}$$
+$$I = \frac{CPU\text{ Time} \times f}{CPI} = \frac{12\text{ s} \times 3.0 \times 10^9\text{ Hz}}{1.8} = \frac{36 \times 10^9}{1.8} = 2.0 \times 10^{10}\text{ instructions}$$
 2. **A**. Using Amdahl's Law with $F = 0.60$ and $k = 4$:
-   $$S = \frac{1}{(1 - 0.60) + \frac{0.60}{4}} = \frac{1}{0.40 + 0.15} = \frac{1}{0.55} \approx 1.818\times \approx 1.82\times$$
+$$S = \frac{1}{(1 - 0.60) + \frac{0.60}{4}} = \frac{1}{0.40 + 0.15} = \frac{1}{0.55} \approx 1.818\times \approx 1.82\times$$
 3. **B**. MFLOPS measures the throughput of standardized arithmetic operations (additions, multiplications of real numbers) necessary to solve a mathematical problem, avoiding the instruction-set composition disparities that invalidate MIPS.
 4. **C**. A 32-bit bus transfers $\frac{32}{8} = 4\text{ bytes}$ per clock cycle. Peak bandwidth $= 4\text{ bytes} \times 200 \times 10^6\text{ cycles/s} = 800\text{ MB/s}$.
 5. **C**. The total number of instructions executed ($I$) is directly determined by the algorithmic implementation and the compiler's code generation/optimization strategies. Clock parameters ($f, T$) are determined by circuit design and semiconductor technology.

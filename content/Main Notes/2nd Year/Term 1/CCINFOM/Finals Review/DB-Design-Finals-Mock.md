@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
+**Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
 
 ---
 
@@ -100,10 +100,6 @@ _Constraint:_ A Person can be both a Staff member and a Patient (Overlapping).
 ## Summary
 
 > TL;DR — Four ERD design problems (library, employee/project, e-commerce, hospital EER). Practice entity identification, cardinality, weak entities, and EER supertype/subtype modeling.
-
-## Review Questions
-
-_To be added._
 
 ## Links
  **Related:** **Source / Reference:**

@@ -75,50 +75,45 @@ sequenceDiagram
 
 ---
 
-## 4. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. Which block cipher mode of operation is vulnerable to visual pattern leakage because identical plaintext blocks encrypt to identical ciphertext blocks?
-   - A) Cipher Block Chaining (CBC)
-   - B) Electronic Codebook (ECB)
-   - C) Counter (CTR)
-   - D) Galois/Counter Mode (GCM)
+    - **A)** Cipher Block Chaining (CBC)
+    - **B)** Electronic Codebook (ECB)
+    - **C)** Counter (CTR)
+    - **D)** Galois/Counter Mode (GCM)
 
 2. In asymmetric public-key cryptography, how does Alice digitally sign a message sent to Bob to prove authenticity and non-repudiation?
-   - A) Alice encrypts the message hash using Bob's public key.
-   - B) Alice encrypts the message hash using Alice's private key.
-   - C) Alice encrypts the message hash using Alice's public key.
-   - D) Alice encrypts the message hash using Bob's private key.
+    - **A)** Alice encrypts the message hash using Alice's private key.
+    - **B)** Alice encrypts the message hash using Bob's public key.
+    - **C)** Alice encrypts the message hash using Alice's public key.
+    - **D)** Alice encrypts the message hash using Bob's private key.
 
 3. The Diffie-Hellman key exchange protocol allows two parties to establish a shared secret over an insecure channel, but is vulnerable to which attack if unauthenticated?
-   - A) Frequency Analysis
-   - B) Birthday Attack
-   - C) Man-in-the-Middle (MitM) Attack
-   - D) Buffer Overflow
+    - **A)** Frequency Analysis
+    - **B)** Birthday Attack
+    - **C)** Man-in-the-Middle (MitM) Attack
+    - **D)** Buffer Overflow
 
 4. What is the primary purpose of a Salt when hashing user passwords?
-   - A) To encrypt the password with symmetric AES
-   - B) To defend against precomputed Rainbow Table attacks and ensure identical passwords yield distinct hashes
-   - C) To speed up hash verification on the server
-   - D) To compress the password length
+    - **A)** To encrypt the password with symmetric AES
+    - **B)** To compress the password length
+    - **C)** To speed up hash verification on the server
+    - **D)** To defend against precomputed Rainbow Table attacks and ensure identical passwords yield distinct hashes
 
 5. What authentication ticket does a client present to the Ticket Granting Server (TGS) in a Kerberos environment to obtain a service ticket?
-   - A) PAC (Privilege Attribute Certificate)
-   - B) TGT (Ticket Granting Ticket)
-   - C) X.509 Certificate
-   - D) SAML Token
-
----
+    - **A)** PAC (Privilege Attribute Certificate)
+    - **B)** TGT (Ticket Granting Ticket)
+    - **C)** X.509 Certificate
+    - **D)** SAML Token
 
 ### Answer Key & Explanations
 
-1. **B) Electronic Codebook (ECB)** — ECB encrypts each 128-bit block independently with the same key without an Initialization Vector (IV), preserving structural patterns across identical data blocks.
-2. **B) Alice encrypts the message hash using Alice's private key** — Only Alice possesses her private key. Anyone can verify the signature by decrypting the hash using Alice's public key and comparing it to the computed message hash, guaranteeing authentication and non-repudiation.
-3. **C) Man-in-the-Middle (MitM) Attack** — Classical Diffie-Hellman provides no identity authentication. An active adversary can intercept the public parameters, negotiate two separate shared secrets with Alice and Bob, and transparently decrypt/tamper with traffic.
-4. **B) To defend against precomputed Rainbow Table attacks and ensure identical passwords yield distinct hashes** — A salt is a unique random nonce appended to each password before hashing, rendering global rainbow tables useless.
-5. **B) TGT (Ticket Granting Ticket)** — The client authenticates to the Authentication Server (AS) to receive a TGT encrypted with the TGS secret key, which is subsequently presented to the TGS to obtain service tickets.
-
-
----
+1. **B**. ECB encrypts each 128-bit block independently with the same key without an Initialization Vector (IV), preserving structural patterns across identical data blocks.
+2. **A**. Only Alice possesses her private key. Anyone can verify the signature by decrypting the hash using Alice's public key and comparing it to the computed message hash, guaranteeing authentication and non-repudiation.
+3. **C**. Classical Diffie-Hellman provides no identity authentication. An active adversary can intercept the public parameters, negotiate two separate shared secrets with Alice and Bob, and transparently decrypt/tamper with traffic.
+4. **D**. A salt is a unique random nonce appended to each password before hashing, rendering global rainbow tables useless.
+5. **B**. The client authenticates to the Authentication Server (AS) to receive a TGT encrypted with the TGS secret key, which is subsequently presented to the TGS to obtain service tickets.
 
 ## References & Navigation
 

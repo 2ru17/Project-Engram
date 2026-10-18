@@ -10,7 +10,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSCOM01]] #[[Conceptual]] #[[RTP]] #[[RTCP]] #[[RTSP]]
+**Tags:** #[[Computer Science]] #[[NSCOM01]] #[[Conceptual]] #[[RTP]] #[[RTCP]] #[[RTSP]]
 
 ---
 
@@ -71,77 +71,79 @@ RTSP acts as a network remote control for media servers, enabling "Internet VCR"
 - RTSP operates out-of-band to provide VCR-like controls for streaming media servers.
 
 ## Multiple Choice Questions
+
 1. Which protocol is responsible for actually carrying the audio and video payload in VoIP?
-- **A)** RTCP
-- **B)** RTSP
-- **C)** RTP
-- **D)** HTTP
+    - **A)** RTCP
+    - **B)** RTSP
+    - **C)** RTP
+    - **D)** HTTP
 
 2. Does RTP provide Quality of Service (QoS) guarantees to ensure timely delivery?
-- **A)** Yes, by prioritizing its packets at the router level.
-- **B)** Yes, by using TCP retransmissions.
-- **C)** No, routers treat RTP packets as standard best-effort traffic.
-- **D)** No, but it reserves bandwidth using RSVP.
+    - **A)** Yes, by prioritizing its packets at the router level.
+    - **B)** Yes, by using TCP retransmissions.
+    - **C)** No, routers treat RTP packets as standard best-effort traffic.
+    - **D)** No, but it reserves bandwidth using RSVP.
 
 3. Which RTP header field allows the receiver to detect packet loss?
-- **A)** Payload Type
-- **B)** SSRC
-- **C)** Time Stamp
-- **D)** Sequence Number
+    - **A)** Payload Type
+    - **B)** SSRC
+    - **C)** Time Stamp
+    - **D)** Sequence Number
 
 4. What is the purpose of the RTP Time Stamp?
-- **A)** To identify the user's email address
-- **B)** To synchronize the playout and manage delay jitter
-- **C)** To define the media encoding being used
-- **D)** To record when the packet arrived at the receiver
+    - **A)** To identify the user's email address
+    - **B)** To synchronize the playout and manage delay jitter
+    - **C)** To define the media encoding being used
+    - **D)** To record when the packet arrived at the receiver
 
 5. Which RTCP packet type details the fraction of packets lost and average jitter?
-- **A)** Sender Reports
-- **B)** Receiver Reports
-- **C)** Source Description
-- **D)** Stream Synchronization
+    - **A)** Sender Reports
+    - **B)** Receiver Reports
+    - **C)** Source Description
+    - **D)** Stream Synchronization
 
 6. How does RTCP enable the synchronization of separate audio and video streams?
-- **A)** By interleaving audio and video into the same RTP packet
-- **B)** By mapping relative RTP timestamps to absolute "wall-clock" time
-- **C)** By adjusting the router queueing delays
-- **D)** By increasing the total session bandwidth
+    - **A)** By interleaving audio and video into the same RTP packet
+    - **B)** By mapping relative RTP timestamps to absolute "wall-clock" time
+    - **C)** By adjusting the router queueing delays
+    - **D)** By increasing the total session bandwidth
 
 7. What percentage of the total session bandwidth is RTCP control traffic limited to?
-- **A)** 1%
-- **B)** 5%
-- **C)** 10%
-- **D)** 25%
+    - **A)** 1%
+    - **B)** 5%
+    - **C)** 10%
+    - **D)** 25%
 
 8. What is the primary function of RTSP?
-- **A)** To provide QoS for live streams
-- **B)** To encapsulate video data for transmission
-- **C)** To provide VCR-like remote controls (pause, play) for streaming media
-- **D)** To map mnemonic user identifiers to IP addresses
+    - **A)** To provide QoS for live streams
+    - **B)** To encapsulate video data for transmission
+    - **C)** To provide VCR-like remote controls (pause, play) for streaming media
+    - **D)** To map mnemonic user identifiers to IP addresses
 
 9. How are RTSP control messages and the actual media streams separated?
-- **A)** They use the same TCP connection.
-- **B)** RTSP uses an out-of-band control connection, while media flows over a separate RTP connection.
-- **C)** RTSP is sent via UDP, and media via HTTP.
-- **D)** They are both handled entirely by the web server.
+    - **A)** They use the same TCP connection.
+    - **B)** RTSP uses an out-of-band control connection, while media flows over a separate RTP connection.
+    - **C)** RTSP is sent via UDP, and media via HTTP.
+    - **D)** They are both handled entirely by the web server.
 
 10. Which of the following is a valid RTSP method?
-- **A)** GET
-- **B)** INVITE
-- **C)** TEARDOWN
-- **D)** ACK
+    - **A)** GET
+    - **B)** INVITE
+    - **C)** TEARDOWN
+    - **D)** ACK
 
 ### Answer Key & Explanations
-1. **C** - RTP (Real-Time Transport Protocol) specifies the packet structure for carrying the actual media data.
-2. **C** - RTP runs on the end systems and is encapsulated in UDP; routers do not give it special priority.
-3. **D** - The sequence number increments by one for each packet, allowing detection of missing packets.
-4. **B** - The time stamp indicates the exact sampling instant, enabling the receiver to play back the media smoothly.
-5. **B** - Receiver Reports give feedback to the sender regarding the quality of the received stream (loss, jitter).
-6. **B** - RTCP ties the independent relative timestamps of the audio and video streams to a common wall-clock time so they can be synced.
-7. **B** - RTCP scales its bandwidth usage, capping it at 5% of the total session bandwidth to avoid network congestion.
-8. **C** - RTSP was designed to support Video-on-Demand by allowing users to send commands like play, pause, and rewind.
-9. **B** - RTSP maintains an out-of-band connection strictly for control commands, separating control traffic from the heavy media payload.
-10. **C** - TEARDOWN is an RTSP method used to close the streaming session and free resources.
+
+1. **C**. RTP (Real-Time Transport Protocol) specifies the packet structure for carrying the actual media data.
+2. **C**. RTP runs on the end systems and is encapsulated in UDP; routers do not give it special priority.
+3. **D**. The sequence number increments by one for each packet, allowing detection of missing packets.
+4. **B**. The time stamp indicates the exact sampling instant, enabling the receiver to play back the media smoothly.
+5. **B**. Receiver Reports give feedback to the sender regarding the quality of the received stream (loss, jitter).
+6. **B**. RTCP ties the independent relative timestamps of the audio and video streams to a common wall-clock time so they can be synced.
+7. **B**. RTCP scales its bandwidth usage, capping it at 5% of the total session bandwidth to avoid network congestion.
+8. **C**. RTSP was designed to support Video-on-Demand by allowing users to send commands like play, pause, and rewind.
+9. **B**. RTSP maintains an out-of-band connection strictly for control commands, separating control traffic from the heavy media payload.
+10. **C**. TEARDOWN is an RTSP method used to close the streaming session and free resources.
 
 ## References & Navigation
 

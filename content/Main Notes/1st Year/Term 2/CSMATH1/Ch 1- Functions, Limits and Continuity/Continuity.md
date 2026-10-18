@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Conceptual]] #[[Continuity]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Conceptual]] #[[Continuity]]
 
 ---
 
@@ -61,77 +61,43 @@ The limit evaluates to 1, demonstrating continuous behavior at this composite ju
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. Which three conditions must ALL hold for a function $f(x)$ to be continuous at $x = c$?
+    - **A)** $f(c) > 0$, $\lim_{x \to c} f(x) > 0$, and $f'(c)$ exists
+    - **B)** $f(c)$ is defined, $\lim_{x \to c} f(x)$ exists, and $\lim_{x \to c} f(x) = f(c)$
+    - **C)** $f(x)$ is defined for all real numbers, is monotonic, and has no roots
+    - **D)** $\lim_{x \to c^-} f(x) = 0$ and $\lim_{x \to c^+} f(x) = 0$
 
-2. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. For $f(x) = \frac{x^2 - 4}{x - 2}$ when $x \ne 2$, what value must be assigned to $f(2)$ to remove the discontinuity at $x = 2$?
+    - **A)** $4$
+    - **B)** $2$
+    - **C)** $0$
+    - **D)** The discontinuity is essential and cannot be removed
 
-3. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. What type of discontinuity occurs at $x = c$ when $\lim_{x \to c^-} f(x) = 2$ and $\lim_{x \to c^+} f(x) = 7$?
+    - **A)** Removable discontinuity
+    - **B)** Infinite discontinuity
+    - **C)** Jump (essential) discontinuity
+    - **D)** Oscillating discontinuity
 
-4. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. According to the Intermediate Value Theorem (IVT), if $f$ is continuous on the closed interval $[a, b]$ and $N$ is any number strictly between $f(a)$ and $f(b)$, then:
+    - **A)** $f(x)$ must be differentiable on $(a, b)$
+    - **B)** $N$ must be the average value $\frac{f(a) + f(b)}{2}$
+    - **C)** $f(x)$ is strictly increasing on $[a, b]$
+    - **D)** There exists at least one number $c \in (a, b)$ such that $f(c) = N$
 
-5. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. Which value of the constant $k$ makes the piecewise function $f(x) = \begin{cases} kx^2, & x \le 2 \\ 2x + k, & x > 2 \end{cases}$ continuous at $x = 2$?
+    - **A)** $k = 1$
+    - **B)** $k = \frac{4}{3}$
+    - **C)** $k = 2$
+    - **D)** $k = 4$
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Continuity without relying on rote computation.
+
+1. **B**. Continuity at $x = c$ requires that there is no hole or jump: the point $f(c)$ exists, the two-sided limit $\lim_{x \to c} f(x)$ exists, and the limit equals the function value.
+2. **A**. Since $\lim_{x \to 2} \frac{(x-2)(x+2)}{x-2} = \lim_{x \to 2} (x + 2) = 4$, defining $f(2) = 4$ makes $\lim_{x \to 2} f(x) = f(2)$, patching the removable hole.
+3. **C**. When both one-sided limits exist and are finite but unequal ($\lim_{x \to c^-} f(x) \ne \lim_{x \to c^+} f(x)$), the graph jumps vertically at $x = c$, which is a non-removable jump discontinuity.
+4. **D**. Because a continuous curve on $[a, b]$ has no breaks, it cannot pass from height $f(a)$ to height $f(b)$ without crossing every intermediate horizontal line $y = N$ at some $c \in (a, b)$.
+5. **B**. For continuity at $x = 2$, set the left-hand limit equal to the right-hand limit: $\lim_{x \to 2^-} kx^2 = 4k$ and $\lim_{x \to 2^+} (2x + k) = 4 + k$. Solving $4k = 4 + k$ gives $3k = 4 \implies k = \frac{4}{3}$.
 
 ## References & Navigation
 

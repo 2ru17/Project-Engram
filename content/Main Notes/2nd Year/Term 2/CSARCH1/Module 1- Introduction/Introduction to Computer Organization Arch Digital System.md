@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Conceptual]] #[[M1]]
+**Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Conceptual]] #[[M1]]
 
 ---
 
@@ -70,77 +70,77 @@ A digital system might interpret a voltage of `0.0V to 0.8V` as a binary `0` (Lo
 ## Multiple Choice Questions
 
 1. Which of the following is primarily considered an architectural attribute rather than an organizational attribute?
-- **A)** The design of the cache memory subsystem
-- **B)** The presence of a hardware multiplier circuit
-- **C)** The choice between hardwired or microprogrammed control
-- **D)** The specific addressing modes supported by the instruction set
+    - **A)** The design of the cache memory subsystem
+    - **B)** The presence of a hardware multiplier circuit
+    - **C)** The choice between hardwired or microprogrammed control
+    - **D)** The specific addressing modes supported by the instruction set
 
 2. What is the fundamental characteristic of the Von Neumann Architecture?
-- **A)** Separate memory modules for data and instructions
-- **B)** Parallel execution of multiple program threads
-- **C)** Storing both programs and data in the same main memory
-- **D)** Processing signals in an analog continuous format
+    - **A)** Separate memory modules for data and instructions
+    - **B)** Parallel execution of multiple program threads
+    - **C)** Storing both programs and data in the same main memory
+    - **D)** Processing signals in an analog continuous format
 
 3. How does Computer Organization differ from Computer Architecture?
-- **A)** Organization defines the programmer's view; Architecture defines the hardware layout
-- **B)** Organization focuses on implementation details; Architecture focuses on the instruction set and logic capabilities
-- **C)** Organization is only concerned with software; Architecture is only concerned with hardware
-- **D)** There is no difference; the terms are perfectly synonymous
+    - **A)** Organization defines the programmer's view; Architecture defines the hardware layout
+    - **B)** Organization focuses on implementation details; Architecture focuses on the instruction set and logic capabilities
+    - **C)** Organization is only concerned with software; Architecture is only concerned with hardware
+    - **D)** There is no difference; the terms are perfectly synonymous
 
 4. Which of the following best describes an analog system?
-- **A)** It relies on discrete voltage levels to represent logic states
-- **B)** It produces exact, counted results based on finite numbers
-- **C)** It processes continuous signals that vary at a continuous rate
-- **D)** It is immune to electronic noise and degradation
+    - **A)** It relies on discrete voltage levels to represent logic states
+    - **B)** It produces exact, counted results based on finite numbers
+    - **C)** It processes continuous signals that vary at a continuous rate
+    - **D)** It is immune to electronic noise and degradation
 
 5. In the context of Instruction Set Architecture (ISA), what does it serve as?
-- **A)** The physical cooling mechanism of the CPU
-- **B)** The boundary interface between software and hardware
-- **C)** The layout of transistors on the silicon die
-- **D)** The power regulation standard for the motherboard
+    - **A)** The physical cooling mechanism of the CPU
+    - **B)** The boundary interface between software and hardware
+    - **C)** The layout of transistors on the silicon die
+    - **D)** The power regulation standard for the motherboard
 
 6. If a system abstracts data into "Low" and "High" states, what type of system is it?
-- **A)** Continuous System
-- **B)** Analog System
-- **C)** Digital System
-- **D)** Quantum System
+    - **A)** Continuous System
+    - **B)** Analog System
+    - **C)** Digital System
+    - **D)** Quantum System
 
 7. Which of the following is an example of an organizational decision?
-- **A)** Deciding whether an integer is 32-bit or 64-bit
-- **B)** Deciding to use a sequential circuit adder for multiplication to save space
-- **C)** Deciding to include a square root instruction in the ISA
-- **D)** Deciding to use Big Endian or Little Endian data representation
+    - **A)** Deciding whether an integer is 32-bit or 64-bit
+    - **B)** Deciding to use a sequential circuit adder for multiplication to save space
+    - **C)** Deciding to include a square root instruction in the ISA
+    - **D)** Deciding to use Big Endian or Little Endian data representation
 
 8. What happens during the execution cycle in a Von Neumann Architecture?
-- **A)** Instructions are simultaneously fetched from multiple I/O devices
-- **B)** Instructions are fetched, decoded, and executed sequentially
-- **C)** The CPU generates its own instructions dynamically without memory
-- **D)** Data is executed while instructions are stored in the CPU cache
+    - **A)** Instructions are simultaneously fetched from multiple I/O devices
+    - **B)** Instructions are fetched, decoded, and executed sequentially
+    - **C)** The CPU generates its own instructions dynamically without memory
+    - **D)** Data is executed while instructions are stored in the CPU cache
 
 9. Why are digital systems preferred for data computation over analog systems?
-- **A)** Because digital signals can carry a continuous range of information
-- **B)** Because digital systems provide exact results and abstract variables into discrete values
-- **C)** Because analog systems can only handle binary operations
-- **D)** Because digital systems do not require electrical power
+    - **A)** Because digital signals can carry a continuous range of information
+    - **B)** Because digital systems provide exact results and abstract variables into discrete values
+    - **C)** Because analog systems can only handle binary operations
+    - **D)** Because digital systems do not require electrical power
 
 10. Which aspect of computer design encompasses both ISA, organization, and hardware implementation?
-- **A)** Software Engineering
-- **B)** Computer Architecture (broadly defined)
-- **C)** Operating Systems
-- **D)** Peripheral Interfacing
+    - **A)** Software Engineering
+    - **B)** Computer Architecture (broadly defined)
+    - **C)** Operating Systems
+    - **D)** Peripheral Interfacing
 
 ### Answer Key & Explanations
 
-1. **D** - Addressing modes are part of the ISA, defining how software can access memory, which is an architectural attribute.
-2. **C** - The Von Neumann Architecture's defining feature is the stored-program concept, keeping both instructions and data in unified memory.
-3. **B** - Architecture is what the system does (the abstract capabilities and ISA), while Organization is how it is built (the microarchitecture and hardware implementation).
-4. **C** - Analog systems use continuous signals (like sine waves) that vary at a continuous rate, unlike digital systems which use discrete steps.
-5. **B** - The ISA acts as the conceptual boundary and contract between the hardware executing the instructions and the software issuing them.
-6. **C** - Digital systems rely on discrete binary states, commonly abstracted as Low/High, True/False, or 0/1.
-7. **B** - Deciding *how* to implement a multiplication operation (using an adder sequentially vs. a dedicated multiplier) is an organizational, microarchitectural decision.
-8. **B** - A core principle of Von Neumann is that instructions are fetched from memory, decoded, and executed in a sequential manner.
-9. **B** - Digital systems count discrete states rather than measuring continuous variations, resulting in "exact" and reproducible computations.
-10. **B** - Computer Architecture in the broad sense involves designing the instruction set, the microarchitecture (organization), and the specific hardware implementation.
+1. **D**. Addressing modes are part of the ISA, defining how software can access memory, which is an architectural attribute.
+2. **C**. The Von Neumann Architecture's defining feature is the stored-program concept, keeping both instructions and data in unified memory.
+3. **B**. Architecture is what the system does (the abstract capabilities and ISA), while Organization is how it is built (the microarchitecture and hardware implementation).
+4. **C**. Analog systems use continuous signals (like sine waves) that vary at a continuous rate, unlike digital systems which use discrete steps.
+5. **B**. The ISA acts as the conceptual boundary and contract between the hardware executing the instructions and the software issuing them.
+6. **C**. Digital systems rely on discrete binary states, commonly abstracted as Low/High, True/False, or 0/1.
+7. **B**. Deciding *how* to implement a multiplication operation (using an adder sequentially vs. a dedicated multiplier) is an organizational, microarchitectural decision.
+8. **B**. A core principle of Von Neumann is that instructions are fetched from memory, decoded, and executed in a sequential manner.
+9. **B**. Digital systems count discrete states rather than measuring continuous variations, resulting in "exact" and reproducible computations.
+10. **B**. Computer Architecture in the broad sense involves designing the instruction set, the microarchitecture (organization), and the specific hardware implementation.
 
 ## References & Navigation
 

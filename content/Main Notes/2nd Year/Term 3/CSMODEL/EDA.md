@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[EDA]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[EDA]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 06: Exploratory Data Analysis
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### 1. Introduction to Exploratory Data Analysis (EDA)
 Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often using visual methods and summary statistics. It allows data scientists to get a first look at the data, understand its structure, detect anomalies/outliers, test assumptions, and form hypotheses for inferential or predictive modeling.
@@ -139,7 +139,7 @@ Grouping collapses data across categorical factors using a split-apply-combine s
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. `pandas.DataFrame.describe()`
 Generates summary statistics of numeric columns in a DataFrame (count, mean, std, min, 25%, 50%, 75%, max). **Parameters**: `include='all'` (includes categorical columns), `percentiles=[.25, .5, .75]`. **Returns**: DataFrame containing summary statistics.
@@ -284,7 +284,7 @@ plt.show()
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 ### Central Tendency **Sample Mean ($\bar{x}$)**:
   $$\bar{x} = \frac{\sum x_i}{n}$$ **Trimmed Mean ($k$ observations trimmed from each end)**:
@@ -306,7 +306,7 @@ plt.show()
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
 1. **Mean vs. Median in Skewed Distributions**:
 In a **positively skewed (right-skewed)** distribution, the mean is pulled towards the high values in the right tail: $\text{Mean} > \text{Median} > \text{Mode}$.
@@ -337,7 +337,7 @@ When running `df.groupby('type_1').agg({'attack': ['mean', 'std']})`, the column
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 **Q1.** A dataset contains the following 10 values of Pokemon height (in meters): `[0.3, 0.5, 0.6, 0.6, 1.0, 1.1, 1.5, 2.0, 3.0, 19.4]`. What are the median and the interquartile range (IQR) of this dataset? A) Median = 1.05, IQR = 1.40 B) Median = 1.05, IQR = 1.20 C) Median = 1.10, IQR = 1.40 D) Median = 0.85, IQR = 0.90
 
@@ -411,41 +411,42 @@ Categorical group comparisons are best visualized using a Bar plot (specifically
 ## Multiple Choice Questions
 
 1. Which measure of central tendency is most robust to extreme outliers?
-- **A)** Mean
-- **B)** Median
-- **C)** Mode
-- **D)** Range
+    - **A)** Mean
+    - **B)** Median
+    - **C)** Mode
+    - **D)** Range
 
 2. What does positive skewness indicate about a distribution?
-- **A)** The tail on the right side is longer or fatter than the left side
-- **B)** The tail on the left side is longer or fatter than the right side
-- **C)** The distribution is perfectly symmetrical
-- **D)** The distribution has a high peak (leptokurtic)
+    - **A)** The tail on the right side is longer or fatter than the left side
+    - **B)** The tail on the left side is longer or fatter than the right side
+    - **C)** The distribution is perfectly symmetrical
+    - **D)** The distribution has a high peak (leptokurtic)
 
 3. Kurtosis measures:
-- **A)** The asymmetry of the distribution
-- **B)** The peakedness and the heaviness of the tails of a distribution
-- **C)** The average distance from the mean
-- **D)** The linear correlation between two variables
+    - **A)** The asymmetry of the distribution
+    - **B)** The peakedness and the heaviness of the tails of a distribution
+    - **C)** The average distance from the mean
+    - **D)** The linear correlation between two variables
 
 4. A Pearson correlation coefficient of -0.9 implies:
-- **A)** A weak negative linear relationship
-- **B)** A strong negative linear relationship
-- **C)** A strong non-linear relationship
-- **D)** No relationship
+    - **A)** A weak negative linear relationship
+    - **B)** A strong negative linear relationship
+    - **C)** A strong non-linear relationship
+    - **D)** No relationship
 
 5. In descriptive statistics, standard deviation represents:
-- **A)** The difference between the max and min values
-- **B)** The square of the variance
-- **C)** The average amount of dispersion or deviation from the mean
-- **D)** The most frequently occurring value
+    - **A)** The difference between the max and min values
+    - **B)** The square of the variance
+    - **C)** The average amount of dispersion or deviation from the mean
+    - **D)** The most frequently occurring value
 
 ### Answer Key & Explanations
-1. **B)** The median is resistant to outliers, unlike the mean.
-2. **A)** Positive (right) skew means the bulk of data is on the left, with a long right tail.
-3. **B)** Kurtosis identifies if data has heavy tails or is sharply peaked.
-4. **B)** -0.9 is close to -1, indicating a very strong inverse linear relationship.
-5. **C)** Standard deviation quantifies the amount of variation or dispersion.
+
+1. **B**. The median is resistant to outliers, unlike the mean.
+2. **A**. Positive (right) skew means the bulk of data is on the left, with a long right tail.
+3. **B**. Kurtosis identifies if data has heavy tails or is sharply peaked.
+4. **B**. 0.9 is close to -1, indicating a very strong inverse linear relationship.
+5. **C**. Standard deviation quantifies the amount of variation or dispersion.
 
 ## References & Navigation
 

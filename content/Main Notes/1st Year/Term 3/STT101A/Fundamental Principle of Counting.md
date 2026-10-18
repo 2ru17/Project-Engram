@@ -11,111 +11,66 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Fundamental Principle of Counting]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Fundamental Principle of Counting]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Fundamental Principle of Counting**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Fundamental Principle of Counting** (Basic Multiplication Principle / Rule of Product) states that if a sequential process consists of $k$ stages where Stage 1 has $n_1$ possible outcomes, and for each outcome of the preceding stages Stage $i$ has $n_i$ possible outcomes, then the total number of distinct composite outcomes is the product:
+$$N = n_1 \times n_2 \times \cdots \times n_k$$
 
 ## Key Definitions
-- **Fundamental Principle of Counting**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Fundamental Principle of Counting** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Two-Stage Rule of Product:** If task $A$ can be performed in $m$ ways and for each of those ways task $B$ can be performed in $n$ ways, the sequence $(A, B)$ can be performed in $m \times n$ ways.
+- **Cartesian Product Interpretation:** For finite sets $A_1, A_2, \dots, A_k$, $|A_1 \times A_2 \times \cdots \times A_k| = |A_1| \cdot |A_2| \cdots |A_k|$.
+- **Tree Diagram Uniformity:** Every node at depth $i-1$ must have the same branching factor $n_i$ (even if the *specific set* of options changes, as in sampling without replacement where $n_1 = n, n_2 = n-1, \dots$).
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Fundamental Principle of Counting**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
-
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Fundamental Principle of Counting** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Problem:** Philippine license plates in a certain format consist of $3$ uppercase English letters ($26$ possibilities each) followed by $4$ digits ($0$–$9$, $10$ possibilities each).
+1. If repetition of letters and digits is allowed: $26^3 \times 10^4 = 17,576 \times 10,000 = 175,760,000$.
+2. If no letter or digit may be repeated: $(26 \times 25 \times 24) \times (10 \times 9 \times 8 \times 7) = 15,600 \times 5,040 = 78,624,000$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. A cloud deployment configuration requires choosing $1$ of $4$ regions, $1$ of $3$ instance sizes, and $1$ of $5$ operating system images. How many distinct deployment configurations exist?
+    - **A)** $4 + 3 + 5 = 12$
+    - **B)** $4 \times 3 \times 5 = 60$
+    - **C)** $4! \times 3! \times 5!$
+    - **D)** $5^4 \times 3$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. For the Fundamental Principle of Counting ($n_1 \times n_2$) to apply directly without splitting into cases, what must be true about $n_2$?
+    - **A)** The *number* of available options $n_2$ at Stage 2 must be the same for every choice made at Stage 1 (even if the specific items available at Stage 2 depend on Stage 1).
+    - **B)** The *set* of available options at Stage 2 must be identical regardless of the Stage 1 choice.
+    - **C)** $n_2$ must equal $n_1$.
+    - **D)** Stage 1 and Stage 2 must be mutually exclusive.
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. A multiple-choice quiz has $10$ questions, each with $4$ options ($A, B, C, D$). In how many ways can a student answer all $10$ questions?
+    - **A)** $10^4 = 10,000$
+    - **B)** $4 \times 10 = 40$
+    - **C)** $4^{10} = 1,048,576$
+    - **D)** $P(10, 4) = 5,040$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. How many positive divisors does the integer $360 = 2^3 \times 3^2 \times 5^1$ have, using the Fundamental Principle of Counting on the prime exponents?
+    - **A)** $3 \times 2 \times 1 = 6$
+    - **B)** $2^3 + 3^2 + 5^1 = 22$
+    - **C)** $3 + 2 + 1 = 6$
+    - **D)** $(3 + 1)(2 + 1)(1 + 1) = 4 \times 3 \times 2 = 24$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Why does the number of subsets of an $n$-element set equal $2^n$ by the Fundamental Principle of Counting?
+    - **A)** Because we only choose subsets of size $2$.
+    - **B)** Because constructing a subset is an $n$-stage decision process where each of the $n$ elements independently has $2$ choices (either include it or exclude it): $2 \times 2 \times \cdots \times 2 = 2^n$.
+    - **C)** Because $n + n = 2^n$.
+    - **D)** Because order matters in a subset.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. By the Fundamental Principle of Counting, a 3-stage choice with $4$, $3$, and $5$ options per stage yields $4 \times 3 \times 5 = 60$ composite configurations.
+2. **A**. The Multiplication Principle requires a uniform branching factor $n_2$ across all branches of Stage 1. For example, when drawing 2 cards without replacement, the *specific* 51 remaining cards depend on the first card drawn, but the *count* $n_2 = 51$ is constant ($52 \times 51$).
+3. **C**. There are $10$ stages (questions), each with $4$ choices, giving $4 \times 4 \times \cdots \times 4 = 4^{10} = 1,048,576$ answer sheets.
+4. **D**. Any divisor of $2^3 \cdot 3^2 \cdot 5^1$ has the form $2^a 3^b 5^c$ where $a \in \{0,1,2,3\}$ ($4$ choices), $b \in \{0,1,2\}$ ($3$ choices), and $c \in \{0,1\}$ ($2$ choices), giving $4 \times 3 \times 2 = 24$ divisors.
+5. **B**. Each of the $n$ elements has $2$ binary states (in the subset vs. not in the subset); multiplying $2$ across $n$ stages yields $2^n$ subsets.
 
 ## References & Navigation
 

@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
+**Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
 
 ---
 
@@ -199,10 +199,6 @@ _Scenario:_ "Find the Range of $L(x, y) = (x+y, x-y, 0)$."
 ## Summary
 
 > TL;DR — Key pointers: **Span** = all linear combinations; **linear independence** = check via RREF (no free variables); **basis** = linearly independent spanning set; **dimension** = basis size. For transformations: **kernel** = $T(\mathbf{x}) = \mathbf{0}$ (nullity), **range** = column space of the matrix (rank). Always verify with **rank-nullity**: $\text{rank} + \text{nullity} = n$.
-
-## Review Questions
-
-_To be added._
 
 ## Links
  **Related:** **Source / Reference:**

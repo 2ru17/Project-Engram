@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** [[Decimal Floating-Point]], [[IEEE 754]], [[Decimal32]], [[Decimal64]], [[Densely Packed Decimal]], [[Binary Integer Decimal]]
 > - **Status:** Completed
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Floating Point]] #[[Decimal Floating Point]] #[[IEEE 754]] #[[DPD]] #[[BCD]] #[[Number Systems]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Floating Point]] #[[Decimal Floating Point]] #[[IEEE 754]] #[[DPD]] #[[BCD]] #[[Number Systems]]
 
 ---
 

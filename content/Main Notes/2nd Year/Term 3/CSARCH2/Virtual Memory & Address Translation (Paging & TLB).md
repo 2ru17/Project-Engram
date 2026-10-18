@@ -185,34 +185,34 @@ $$\text{Translation Time on TLB Miss (No Fault)} = t_{\text{TLB}} + (2 \times t_
 ## Multiple Choice Questions
 
 1. In a virtual memory system with 32-bit virtual addresses and a $4\text{ KiB}$ page size, how many bits are used for the Virtual Page Number (VPN) and the Page Offset?
-- **A)** VPN: 10 bits, Offset: 22 bits
-- **B)** VPN: 20 bits, Offset: 12 bits
-- **C)** VPN: 16 bits, Offset: 16 bits
-- **D)** VPN: 24 bits, Offset: 8 bits
+    - **A)** VPN: 10 bits, Offset: 22 bits
+    - **B)** VPN: 20 bits, Offset: 12 bits
+    - **C)** VPN: 16 bits, Offset: 16 bits
+    - **D)** VPN: 24 bits, Offset: 8 bits
 
 2. What hardware component within the CPU is responsible for translating virtual addresses into physical memory addresses?
-- **A)** Arithmetic Logic Unit (ALU)
-- **B)** Control Store ROM
-- **C)** Memory Management Unit (MMU)
-- **D)** Direct Memory Access Controller (DMAC)
+    - **A)** Arithmetic Logic Unit (ALU)
+    - **B)** Control Store ROM
+    - **C)** Memory Management Unit (MMU)
+    - **D)** Direct Memory Access Controller (DMAC)
 
 3. What condition triggers a hardware Page Fault exception?
-- **A)** The TLB experiences a parity check error
-- **B)** The CPU attempts to access a virtual page whose Page Table Entry has its Valid bit set to `0` ($V=0$)
-- **C)** The Program Counter increments past the 32-bit address boundary
-- **D)** Two threads write to the same cache block simultaneously
+    - **A)** The TLB experiences a parity check error
+    - **B)** The CPU attempts to access a virtual page whose Page Table Entry has its Valid bit set to `0` ($V=0$)
+    - **C)** The Program Counter increments past the 32-bit address boundary
+    - **D)** Two threads write to the same cache block simultaneously
 
 4. Why are Multi-Level Page Tables used in modern 64-bit operating systems?
-- **A)** To make virtual memory access faster than L1 cache
-- **B)** To drastically reduce the memory footprint required to store page tables for sparse virtual address spaces
-- **C)** To eliminate the need for a Translation Lookaside Buffer
-- **D)** To convert Little Endian data into Big Endian format
+    - **A)** To make virtual memory access faster than L1 cache
+    - **B)** To drastically reduce the memory footprint required to store page tables for sparse virtual address spaces
+    - **C)** To eliminate the need for a Translation Lookaside Buffer
+    - **D)** To convert Little Endian data into Big Endian format
 
 5. If the Translation Lookaside Buffer (TLB) achieves a hit, how many main memory DRAM accesses are required to perform the address translation itself?
-- **A)** 0 DRAM accesses (Translation is performed entirely on-chip in 1 clock cycle)
-- **B)** 1 DRAM access
-- **C)** 2 DRAM accesses
-- **D)** 4 DRAM accesses
+    - **A)** 0 DRAM accesses (Translation is performed entirely on-chip in 1 clock cycle)
+    - **B)** 1 DRAM access
+    - **C)** 2 DRAM accesses
+    - **D)** 4 DRAM accesses
 
 ### Answer Key & Explanations
 

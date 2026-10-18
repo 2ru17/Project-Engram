@@ -12,13 +12,13 @@ status: completed
 > - **Status:** `=this.status`
 > - **Subject Area:** [[Computer Architecture]], [[Memory Hierarchy]], [[Cache Organization]], [[Program Performance Optimization]]
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Cache Memory]] #[[Computer Architecture]] #[[Set Associative Mapping]] #[[Direct Mapping]] #[[Loop Optimization]] #[[Cache Thrashing]] #[[AMAT]] #[[LRU Replacement]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Cache Memory]] #[[Computer Architecture]] #[[Set Associative Mapping]] #[[Direct Mapping]] #[[Loop Optimization]] #[[Cache Thrashing]] #[[AMAT]] #[[LRU Replacement]]
 
 ---
 
 # Problem Set: Cache Memory 2
 
-## 📚 Architectural Foundations & Program Execution Analysis
+## Architectural Foundations & Program Execution Analysis
 
 ### 1. Instruction Stream Locality & Block Fetch Dynamics
 During sequential and iterative program execution, processor memory references exhibit intense [[Spatial Locality|spatial]] and [[Temporal Locality|temporal locality]]:
@@ -61,7 +61,7 @@ $$\text{Set Index} = \text{Block Number} \pmod S$$
 
 ---
 
-## 📝 Problem 6: Set-Associative Execution Trace under Sequential Looping
+## Problem 6: Set-Associative Execution Trace under Sequential Looping
 
 ### Problem Statement
 A system has a main memory consisting of $1\text{ Mwords}$ ($2^{20}\text{ words}$). It possesses a $4\text{K-word}$ cache ($4096\text{ words}$) organized in a **block-set-associative** manner with $4\text{ blocks per set}$ ($K = 4$) and $64\text{ words per block}$ ($B = 64$).
@@ -208,7 +208,7 @@ $$\text{Speedup over No Cache} = \frac{435,200\text{ ns}}{46,000\text{ ns}} \app
 
 ---
 
-## 📝 Problem 7: Direct-Mapped Cache with Nested Looping Architecture
+## Problem 7: Direct-Mapped Cache with Nested Looping Architecture
 
 ### Problem Statement
 A program consists of two nested loops executed on a computer with a **direct-mapped cache**.
@@ -411,7 +411,7 @@ $$\text{AMAT} = \frac{60,844\text{ ns}}{60,544} \approx \mathbf{1.004955\text{ n
 
 ---
 
-## 💡 Key Architectural Insights & Performance Analysis
+## Key Architectural Insights & Performance Analysis
 
 1. **The Role of Spatial Locality in Loop Structures**:
    - Even when block hit rates are around $93.66\%$, the word hit rate exceeds **$99.95\%$** because a single 128-word block fetch provides 127 consecutive cache hits.

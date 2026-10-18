@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Problem Sets]] #[[Number Systems]] #[[Base Conversion]] #[[Data Representation]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Problem Sets]] #[[Number Systems]] #[[Base Conversion]] #[[Data Representation]]
 
 ---
 

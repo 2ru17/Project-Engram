@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Data Representation]] #[[Unicode]] #[[Character Encoding]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Data Representation]] #[[Unicode]] #[[Character Encoding]]
 
 ---
 
@@ -294,8 +294,6 @@ $$\text{UTF-32} = 0\text{x000FCAFE}$$
 > 2. **Illegal Surrogate Code Points in UTF-8/UTF-32:** The surrogate range $\text{U+D800} \dots \text{U+DFFF}$ is designated strictly for UTF-16 surrogate pairs. Direct encoding of individual surrogate halves into UTF-8 or UTF-32 is strictly prohibited by RFC 3629 / Unicode Standard.
 > 3. **Endianness Confusion in UTF-16:** UTF-16 code units require endianness specification when transmitted over byte streams. `0xDBF2 0xDEFE` in UTF-16BE becomes `F2 DB FE DE` in UTF-16LE. Missing BOM markers can lead to inverted character interpretation.
 > 4. **Surrogate Math Off-by-One:** Forgetting to subtract $0\text{x10000}$ before splitting into 10-bit chunks yields an invalid surrogate range exceeding $0\text{xDBFF}$.
-
----
 
 
 ## References & Navigation

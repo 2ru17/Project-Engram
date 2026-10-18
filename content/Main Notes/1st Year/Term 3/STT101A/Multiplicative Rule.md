@@ -11,111 +11,69 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Multiplicative Rule]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Multiplicative Rule]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Multiplicative Rule**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+In probability theory, the **Multiplicative Rule of Probability** determines the probability of the intersection of two or more events, $P(A \cap B)$. It comes in two forms: the **General Multiplicative Rule** (for any events, using conditional probability) and the **Special Multiplicative Rule** (for independent events).
 
 ## Key Definitions
-- **Multiplicative Rule**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Multiplicative Rule** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **General Multiplicative Rule (Dependent or Independent Events):**
+  $$P(A \cap B) = P(A) P(B \mid A) = P(B) P(A \mid B)$$
+- **Special Multiplicative Rule (Independent Events Only):** If and only if $A$ and $B$ are independent:
+  $$P(A \cap B) = P(A) P(B)$$
+- **Extension to $k$ Independent Events:** If $A_1, A_2, \dots, A_k$ are mutually independent, $P(A_1 \cap A_2 \cap \cdots \cap A_k) = \prod_{i=1}^k P(A_i)$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Multiplicative Rule**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** Contrast drawing $2$ Aces from a $52$-card deck (a) **with replacement** vs. (b) **without replacement**.
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Multiplicative Rule** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- **(a) With Replacement (Independent):** Special Multiplicative Rule applies: $P(A_1 \cap A_2) = P(A_1)P(A_2) = \frac{4}{52} \times \frac{4}{52} = \frac{1}{169} \approx 0.00592$.
+- **(b) Without Replacement (Dependent):** General Multiplicative Rule applies: $P(A_1 \cap A_2) = P(A_1)P(A_2 \mid A_1) = \frac{4}{52} \times \frac{3}{51} = \frac{1}{221} \approx 0.00452$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. When is it valid to use the Special Multiplicative Rule $P(A \cap B) = P(A)P(B)$ instead of $P(A \cap B) = P(A)P(B \mid A)$?
+    - **A)** Whenever $A$ and $B$ are mutually exclusive.
+    - **B)** If and only if $A$ and $B$ are statistically independent (so $P(B \mid A) = P(B)$).
+    - **C)** Whenever $P(A) + P(B) = 1$.
+    - **D)** Only when sampling without replacement.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. A box contains $6$ working cables and $4$ broken cables. Two cables are selected **without replacement**. What is the probability that both cables are broken?
+    - **A)** $\frac{4}{10} \times \frac{4}{10} = \frac{4}{25} = 0.16$
+    - **B)** $\frac{4}{10} \times \frac{3}{9} = \frac{12}{90} = \frac{2}{15} \approx 0.1333$
+    - **C)** $\frac{4}{10} + \frac{3}{9}$
+    - **D)** $\frac{6}{10} \times \frac{4}{9}$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Using the same box ($6$ working, $4$ broken, drawn without replacement), what is the probability that the **first is working** and the **second is broken**?
+    - **A)** $\frac{6}{10} \times \frac{4}{9} = \frac{24}{90} = \frac{4}{15}$
+    - **B)** $\frac{6}{10} \times \frac{4}{10} = \frac{6}{25}$
+    - **C)** $\frac{6}{10} \times \frac{5}{9} = \frac{1}{3}$
+    - **D)** $\frac{8}{15}$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Three independent components in a series system have reliability probabilities $0.90, 0.90,$ and $0.80$. Because the system functions only if **all three** components function, what is the system reliability?
+    - **A)** $0.90 + 0.90 + 0.80 = 2.60$
+    - **B)** $0.90 \times 0.90 \times 0.80 = 0.648$
+    - **C)** $1 - (0.10)(0.10)(0.20) = 0.998$
+    - **D)** $0.80$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Why does a parallel redundant system of those same three independent components fail only with probability $(0.10)(0.10)(0.20) = 0.002$?
+    - **A)** Because a parallel system fails if and only if Component 1 fails **AND** Component 2 fails **AND** Component 3 fails, and by independence $P(F_1 \cap F_2 \cap F_3) = P(F_1)P(F_2)P(F_3)$.
+    - **B)** Because parallel components are mutually exclusive.
+    - **C)** Because the Additive Rule multiplies failure probabilities.
+    - **D)** Because $0.90 - 0.80 = 0.10$.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. The general rule $P(A \cap B) = P(A)P(B \mid A)$ reduces to $P(A)P(B)$ if and only if $P(B \mid A) = P(B)$, which is the definition of statistical independence.
+2. **B**. By the General Multiplicative Rule without replacement: $P(B_1 \cap B_2) = P(B_1)P(B_2 \mid B_1) = \frac{4}{10} \times \frac{3}{9} = \frac{2}{15}$.
+3. **A**. $P(W_1 \cap B_2) = P(W_1)P(B_2 \mid W_1) = \frac{6}{10} \times \frac{4}{9} = \frac{24}{90} = \frac{4}{15}$.
+4. **B**. In a series system, all three independent components must succeed simultaneously: $P(C_1 \cap C_2 \cap C_3) = (0.90)(0.90)(0.80) = 0.648$.
+5. **A**. Independence of $C_1, C_2, C_3$ implies independence of their complements $F_1, F_2, F_3$, so the joint failure probability is $(1-0.9)(1-0.9)(1-0.8) = (0.1)(0.1)(0.2) = 0.002$.
 
 ## References & Navigation
 

@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Data Representation]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Data Representation]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 03: Data Representation
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### 1. Real-World Data to Data Structure Representation
 Real-world data (raw text, sensor readings, logs, physical measurements) cannot be directly processed by machine learning algorithms or statistical models. It must first be transformed into a structured representation—most commonly a **Data Matrix** or **Tabular Dataset**.
@@ -94,7 +94,7 @@ From dataset inspection techniques demonstrated in the module labs (e.g., Pokemo
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. Data Type Inspection & Conversion (`df.dtypes`, `df.astype()`)
 ```python
@@ -158,7 +158,7 @@ long_df = pd.melt(
 
 print(long_df)
 # Output:
-#    Student_ID   Course  Grade
+# Student_ID   Course  Grade
 # 0           1  CCPROG1    3.5
 # 1           2  CCPROG1    2.0
 # 2           1  CCPROG2    4.0
@@ -200,7 +200,7 @@ df_ohe = pd.get_dummies(df, columns=['type_1'], prefix='type1', drop_first=True,
 
 print(df_ohe)
 # Output:
-#     Pokemon  type1_Fire  type1_Water
+# Pokemon  type1_Fire  type1_Water
 # 0   Pikachu           0            0
 # 1  Charmander           1            0
 # 2   Squirtle           0            1
@@ -247,7 +247,7 @@ df['defense'] = df['defense'].fillna(-1)
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 ### 1. One-Hot Encoding Dimensionality & Matrix Transformation
 For a dataset with $N$ observations and a nominal categorical column $X$ containing $K$ unique categories:
@@ -274,7 +274,7 @@ $$f: S \to \{0, 1, \dots, K-1\}, \quad f(s_i) = i$$
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
 1. **Series Index Label Alignment vs. Positional Indexing**:
 **Trap**: Assuming `s1 + s2` performs positional addition like standard lists or NumPy arrays.
@@ -302,7 +302,7 @@ $$f: S \to \{0, 1, \dots, K-1\}, \quad f(s_i) = i$$
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 **Q1.** Which of the following statements strictly adheres to Hadley Wickham's **Tidy Data** principles? A) Each row represents a variable, each column represents an observation, and each table represents a data type. B) Each variable forms a column, each observation forms a row, and each type of observational unit forms a table. C) Wide format datasets are tidy because they minimize the total number of rows. D) Numerical features must be label encoded, and categorical features must be stored as separate tables.
 
@@ -377,41 +377,42 @@ Assuming standard alphabetical ordering of categories by pandas, what is the exa
 ## Multiple Choice Questions
 
 1. What is the defining characteristic of `Tidy Data`?
-- **A)** Every column is an observation and every row is a variable
-- **B)** Every variable forms a column, every observation forms a row, and each type of observational unit forms a table
-- **C)** The dataset contains no missing values
-- **D)** Data is stored entirely in wide format
+    - **A)** Every column is an observation and every row is a variable
+    - **B)** Every variable forms a column, every observation forms a row, and each type of observational unit forms a table
+    - **C)** The dataset contains no missing values
+    - **D)** Data is stored entirely in wide format
 
 2. In pandas architecture, what is a Series?
-- **A)** A 2D tabular data structure
-- **B)** A 1D labeled array capable of holding any data type
-- **C)** A 3D panel of data
-- **D)** An index object only
+    - **A)** A 2D tabular data structure
+    - **B)** A 1D labeled array capable of holding any data type
+    - **C)** A 3D panel of data
+    - **D)** An index object only
 
 3. Transforming data from `wide` format to `long` format is often called:
-- **A)** Pivoting
-- **B)** Melting
-- **C)** Grouping
-- **D)** Merging
+    - **A)** Pivoting
+    - **B)** Melting
+    - **C)** Grouping
+    - **D)** Merging
 
 4. What is a Data Matrix?
-- **A)** A matrix where only numerical variables are represented for linear algebra operations
-- **B)** A list of dictionaries in Python
-- **C)** A file format similar to CSV
-- **D)** An unstructured text document
+    - **A)** A matrix where only numerical variables are represented for linear algebra operations
+    - **B)** A list of dictionaries in Python
+    - **C)** A file format similar to CSV
+    - **D)** An unstructured text document
 
 5. When would you prefer a long format over a wide format?
-- **A)** When plotting time series with libraries like Seaborn that expect one variable per column
-- **B)** When trying to read the data manually as a human
-- **C)** When running correlation matrices across all distinct time steps
-- **D)** When performing one-hot encoding
+    - **A)** When plotting time series with libraries like Seaborn that expect one variable per column
+    - **B)** When trying to read the data manually as a human
+    - **C)** When running correlation matrices across all distinct time steps
+    - **D)** When performing one-hot encoding
 
 ### Answer Key & Explanations
-1. **B)** This is Hadley Wickhams standard definition of tidy data structure.
-2. **B)** A Series is a single column/1D array with an index.
-3. **B)** `melt` in pandas converts wide formats into long format.
-4. **A)** Data matrices (often X) contain numeric features for modeling.
-5. **A)** Many visualization tools and mixed-effects models expect long format where a single column holds the value and another holds the variable type.
+
+1. **B**. This is Hadley Wickhams standard definition of tidy data structure.
+2. **B**. A Series is a single column/1D array with an index.
+3. **B**. `melt` in pandas converts wide formats into long format.
+4. **A**. Data matrices (often X) contain numeric features for modeling.
+5. **A**. Many visualization tools and mixed-effects models expect long format where a single column holds the value and another holds the variable type.
 
 ## References & Navigation
 

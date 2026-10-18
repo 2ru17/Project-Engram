@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Conceptual]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Conceptual]]
 
 ---
 
@@ -33,77 +33,43 @@ The fundamental derivatives of trigonometric functions are: $\frac{d}{dx} (\sin 
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. What is the derivative $\frac{d}{dx}[\sec(x)]$?
+    - **A)** $-\csc(x)\cot(x)$
+    - **B)** $\sec^2(x)$
+    - **C)** $\sec(x)\tan(x)$
+    - **D)** $-\sin(x)$
 
-2. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. If $f(x) = \sin(x)$, what is the 4th derivative $f^{(4)}(x)$?
+    - **A)** $\cos(x)$
+    - **B)** $-\sin(x)$
+    - **C)** $-\cos(x)$
+    - **D)** $\sin(x)$
 
-3. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. Evaluate the fundamental trigonometric limit $\lim_{x \to 0} \frac{\sin(5x)}{2x}$.
+    - **A)** $1$
+    - **B)** $0$
+    - **C)** $\frac{5}{2}$
+    - **D)** $\frac{2}{5}$
 
-4. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. If the position of an object at time $t$ is $s(t) = t^3 - 6t^2 + 9t$, at what time $t$ is its **acceleration** $a(t) = s''(t)$ equal to zero?
+    - **A)** $t = 1$
+    - **B)** $t = 2$
+    - **C)** $t = 3$
+    - **D)** $t = 0$
 
-5. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Higher Order Derivatives and Derivative of Trigonometric Functions?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. Using the Chain Rule, find $\frac{d}{dx}[\cos(x^3)]$.
+    - **A)** $-\sin(3x^2)$
+    - **B)** $3x^2 \sin(x^3)$
+    - **C)** $-3x^2 \sin(x^3)$
+    - **D)** $-\sin(x^3)$
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Higher Order Derivatives and Derivative of Trigonometric Functions without relying on rote computation.
+
+1. **C**. Writing $\sec(x) = (\cos x)^{-1}$ and applying the Chain Rule gives $-(\cos x)^{-2}(-\sin x) = \frac{1}{\cos x}\cdot\frac{\sin x}{\cos x} = \sec(x)\tan(x)$.
+2. **D**. Differentiating $\sin(x)$ cycling four times gives: $f'(x) = \cos(x)$, $f''(x) = -\sin(x)$, $f'''(x) = -\cos(x)$, and $f^{(4)}(x) = \sin(x)$. The derivatives of $\sin(x)$ and $\cos(x)$ repeat every 4 orders.
+3. **C**. Rewrite as $\frac{5}{2} \lim_{x \to 0} \frac{\sin(5x)}{5x}$. Since $\lim_{u \to 0} \frac{\sin u}{u} = 1$ with $u = 5x$, the limit evaluates to $\frac{5}{2}(1) = \frac{5}{2}$.
+4. **B**. Velocity is $v(t) = s'(t) = 3t^2 - 12t + 9$, and acceleration is $a(t) = s''(t) = 6t - 12$. Setting $6t - 12 = 0$ gives $t = 2$.
+5. **C**. The derivative of the outer function $\cos(u)$ is $-\sin(u)$, multiplied by the derivative of the inner function $u = x^3$ ($u' = 3x^2$), yielding $-3x^2 \sin(x^3)$.
 
 ## References & Navigation
 

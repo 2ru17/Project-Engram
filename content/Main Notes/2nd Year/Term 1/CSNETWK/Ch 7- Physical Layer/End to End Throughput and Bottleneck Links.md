@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
+**Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
 
 ---
 
@@ -147,87 +147,48 @@ Total Flow = $4 \times 10 = 40$ Mbps.
 
 > TL;DR — End-to-end throughput equals $\min(R_s, R_c, R/N)$ where $R_s$ is server link rate, $R_c$ is client link rate, and $R/N$ is the shared backbone divided among $N$ flows. The bottleneck link limits overall performance.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Pasted image 20251121094535.png]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "$$\text{Throughput} = \min(R_s, R_c, \frac{R}{N})$$  $R_s$: Rate of Server Link $R_c$: Rate of _____ Link $R$: Rate of Shared Link $N$: Number of concurrent flows  ## 2."?
-- **A)** Client
-- **B)** Router
-- **C)** Network
-- **D)** Protocol
+1. Suppose a server sends a large file to a client across a 2-link path with no other competing traffic: the server's access link has transmission rate $R_s$, and the client's access link has transmission rate $R_c$. What is the instantaneous **end-to-end throughput**?
+    - **A)** $R_s + R_c$
+    - **B)** $\min(R_s, R_c)$, the rate of the **bottleneck link** along the path
+    - **C)** $\max(R_s, R_c)$
+    - **D)** $\frac{R_s + R_c}{2}$
 
-2. Which word completes the following sentence from the text: "Confusing link capacity with actual per-flow throughput _____ $\min(R_s, R_c, R/N)$ is the correct formula."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** 
+2. A server has an uplink rate $R_s = 100\text{ Mbps}$, a client has a downlink rate $R_c = 15\text{ Mbps}$, and they communicate across a shared core backbone link of capacity $R = 1\text{ Gbps}$ ($1000\text{ Mbps}$) shared equally among $N = 10$ simultaneous downloads. What is the per-connection end-to-end throughput, and which link is the bottleneck?
+    - **A)** $15\text{ Mbps}$ (since $\min(R_s, R_c, R/N) = \min(100, 15, 1000/10) = \min(100, 15, 100) = 15\text{ Mbps}$; the client's access link $R_c$ is the bottleneck)
+    - **B)** $100\text{ Mbps}$ (server uplink is the bottleneck)
+    - **C)** $1000\text{ Mbps}$ (backbone link is the bottleneck)
+    - **D)** $1.5\text{ Mbps}$
 
-3. Which word completes the following sentence from the text: "**Correct Answer:** **1**  ### Question 4  **Assuming that the servers are sending at the maximum _____ possible, what are the link utilizations for the client links (Rc)?**  **Analytical Breakdown:**  1."?
-- **A)** rate
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
+3. Using the same network from Question 2 ($R_s = 100\text{ Mbps}$, $R_c = 15\text{ Mbps}$, shared backbone $R = 1000\text{ Mbps}$), suppose the number of simultaneous connections sharing the backbone increases to $N = 100$. What is the new per-connection throughput, and where is the bottleneck now?
+    - **A)** $15\text{ Mbps}$ (client access link)
+    - **B)** $100\text{ Mbps}$ (server uplink)
+    - **C)** $10\text{ Mbps}$ (since $R / N = 1000 / 100 = 10\text{ Mbps}$, so $\min(100, 15, 10) = 10\text{ Mbps}$; the shared core backbone is now the bottleneck)
+    - **D)** $1\text{ Mbps}$
 
-4. Which word completes the following sentence from the text: "**Link Capacity:** The total capacity of _____ shared link $R$ is **400 Mbps**."?
-- **A)** Network
-- **B)** Protocol
-- **C)** the
-- **D)** Router
+4. If a file of size $F = 30\text{ Megabits}$ ($30 \times 10^6\text{ bits}$) is transferred across an end-to-end path whose bottleneck throughput is $15\text{ Mbps}$ ($15 \times 10^6\text{ bits/sec}$), approximately how long does the file transfer take (ignoring protocol header overhead and propagation delay)?
+    - **A)** $0.5\text{ seconds}$
+    - **B)** $450.0\text{ seconds}$
+    - **C)** $15.0\text{ seconds}$
+    - **D)** $2.0\text{ seconds}$
 
-5. Which word completes the following sentence from the text: "If $R_c$ is small (e.g., weak _____ the client is the bottleneck."?
-- **A)** Router
-- **B)** Protocol
-- **C)** WiFi
-- **D)** Network
-
-6. Which word completes the following sentence from the text: "**Actual Flow:** There are **4** _____ each sending **10 Mbps**."?
-- **A)** Network
-- **B)** Protocol
-- **C)** Router
-- **D)** pairs
-
-7. Which word completes the following sentence from the text: "The Network Topology  **Scenario Data** ![[Pasted image 20251121094535.png]]  _____ 4 Servers sending to 4 Clients (4 pairs)."?
-- **A)** Network
-- **B)** Topology
-- **C)** Protocol
-- **D)** Router
-
-8. Which word completes the following sentence from the text: "The entire path cannot be _____ than this single link."?
-- **A)** faster
-- **B)** Protocol
-- **C)** Network
-- **D)** Router
-
-9. Which word completes the following sentence from the text: "**Compare Capacities:** $R_s = 10$ Mbps Shared Share _____ = 100 Mbps $R_c = 90$ Mbps  2."?
-- **A)** R4
-- **B)** Router
-- **C)** Protocol
-- **D)** Network
-
-10. Which word completes the following sentence from the text: "**Correct Answer:** **Rs**  ### Question 3  **Assuming that the servers are sending at the maximum _____ possible, what are the link utilizations for the server links (Rs)?**  **Analytical Breakdown:**  1."?
-- **A)** Router
-- **B)** Network
-- **C)** Protocol
-- **D)** rate
-
+5. What is the fundamental difference between **Transmission Delay ($d_{\text{trans}} = L / R$)** and **Propagation Delay ($d_{\text{prop}} = d / s$)** on a single physical link?
+    - **A)** They are two names for the exact same delay.
+    - **B)** **Transmission delay** $L / R$ is the time required for the router's NIC to push all $L$ bits of the packet onto the link at bit rate $R$ (independent of link length $d$); **Propagation delay** $d / s$ is the time required for a single electromagnetic bit to travel the physical distance $d$ along the medium at wave propagation speed $s \approx 2 \times 10^8\text{ m/s}$ (independent of packet size $L$ and bit rate $R$).
+    - **C)** Transmission delay depends on cable length $d$, while propagation delay depends on packet size $L$.
+    - **D)** Upgrading a link from $10\text{ Mbps}$ to $10\text{ Gbps}$ reduces propagation delay by a factor of $1000$.
 
 ### Answer Key & Explanations
-1. **A)** Client completes the sentence: $$\text{Throughput} = \min(R_s, R_c, \frac{R}{N})$...
-2. **D)**  completes the sentence: Confusing link capacity with actual per-flow throu...
-3. **A)** rate completes the sentence: **Correct Answer:** **1**  ### Question 4  **Assum...
-4. **C)** the completes the sentence: **Link Capacity:** The total capacity of the share...
-5. **C)** WiFi completes the sentence: If $R_c$ is small (e.g., weak Wi-Fi), the client i...
-6. **D)** pairs completes the sentence: **Actual Flow:** There are **4** pairs, each sendi...
-7. **B)** Topology completes the sentence: The Network Topology  **Scenario Data** ![[Pasted ...
-8. **A)** faster completes the sentence: The entire path cannot be faster than this single ...
-9. **A)** R4 completes the sentence: **Compare Capacities:** $R_s = 10$ Mbps Shared Sha...
-10. **D)** rate completes the sentence: **Correct Answer:** **Rs**  ### Question 3  **Assu...
+
+1. **B**. Fluid-flow conservation dictates that steady-state end-to-end throughput cannot exceed the capacity of the slowest link along the path: $\text{Throughput} = \min(R_1, R_2, \dots, R_k)$.
+2. **A**. Each of the $10$ flows gets at most $R/10 = 1000/10 = 100\text{ Mbps}$ in the core, so the end-to-end throughput is $\min(100, 15, 100) = 15\text{ Mbps}$, constrained by the client access link $R_c$.
+3. **C**. With $N = 100$ flows sharing the $1000\text{ Mbps}$ backbone, each flow's fair share of the core drops to $1000/100 = 10\text{ Mbps} < 15\text{ Mbps}$, shifting the bottleneck from the edge to the core.
+4. **D**. Transfer time $= \frac{F}{\text{Throughput}} = \frac{30\text{ Mbits}}{15\text{ Mbps}} = 2.0\text{ seconds}$.
+5. **B**. $d_{\text{trans}} = L/R$ is serialization time onto the wire; $d_{\text{prop}} = d/s$ is speed-of-light travel time across distance $d$.
 
 ## References & Navigation
 

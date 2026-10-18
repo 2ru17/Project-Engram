@@ -14,7 +14,7 @@ hackerrank_domain: Sorting & Searching
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
 
 ---
 
@@ -76,14 +76,14 @@ $1 \le H_j \le 10^5$ for all $1 \le i \le H$
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > Each knight has an ATK stat and 4 attack scalings. Compute the best single-hit damage for each knight (floor of ATK × best_scaling%). Count how many hillichurls each can one-shot. Rank knights by kills descending, ties broken lexicographically.
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > For each knight, loop through ALL hillichurls and check if damage ≥ HP.
 > **O(K × H)** — with K = H = 100,000 that's **10 billion ops** → TLE.
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > Sort hillichurls by HP once. For each knight, binary search (`bisect_right`) to count how many have HP ≤ damage.
 > **O(H log H + K log H)** — fast.
 
@@ -137,9 +137,9 @@ flowchart TD
 **Step 3 — Sort results:** Fischl(2) & Kaeya(2) tied → alphabetical → Fischl first.
 
 ```
-Fischl 2  ✓
-Kaeya 2   ✓
-Amber 1   ✓
+Fischl 2  
+Kaeya 2   
+Amber 1   
 ```
 
 ---
@@ -215,7 +215,6 @@ if __name__ == "__main__":
     main()
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

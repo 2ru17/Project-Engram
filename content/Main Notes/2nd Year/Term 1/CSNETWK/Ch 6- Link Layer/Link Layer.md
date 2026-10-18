@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Link Layer]] #[[Conceptual]]
+**Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Link Layer]] #[[Conceptual]]
 
 ---
 
@@ -57,78 +57,43 @@ When Host A wants to send a datagram to Host B on a different subnet through Rou
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "--- id: link_layer type: note course: CSNETWK topic: Link Layer status: completed ---  # Link Layer  > [!info] Document Metadata > - **Course:** `=this.course` > - **Topic:** `=this.topic` > - **Status:** `=this.status`  **🏷️ Tags:** _____ Science]] #[[CSNETWK]] #[[Link Layer]] #[[Conceptual]]  ---  ## Overview  The Link Layer is responsible for transferring a datagram from one node (host or router) to an adjacent node over a specific link (wired, wireless, LAN)."?
-- **A)** Router
-- **B)** Network
-- **C)** Protocol
-- **D)** Computer
+1. What are the core services provided by the **Data Link Layer (Layer 2)**?
+    - **A)** End-to-end process-to-process congestion control and DNS resolution
+    - **B)** **Framing** (encapsulating network-layer datagrams into link-layer frames), **Link Access / Medium Access Control (MAC)** (coordinating frame transmission over shared or point-to-point media), local hop-to-hop delivery via MAC addressing, and **Error Detection** (e.g., CRC).
+    - **C)** Global BGP path selection across autonomous systems
+    - **D)** HTML rendering and TLS certificate validation
 
-2. Which word completes the following sentence from the text: "**Flow Control:** Pacing the transmission rate _____ adjacent sending and receiving nodes."?
-- **A)** between
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
+2. Where in a host computer is the Link Layer primarily implemented?
+    - **A)** primarily in hardware/firmware on the **Network Interface Card (NIC / Network Adapter)** attached to the system bus, with high-level link signaling glue in OS device drivers.
+    - **B)** Entirely inside the web browser JavaScript engine
+    - **C)** Inside the CPU's floating-point unit (FPU)
+    - **D)** On the remote DNS server
 
-3. Which word completes the following sentence from the text: "If an IP isn't in the table, the node broadcasts an ARP Query frame _____ the special MAC address `FF-FF-FF-FF-FF-FF`, and the target node replies with its MAC address."?
-- **A)** Router
-- **B)** Protocol
-- **C)** to
-- **D)** Network
+3. In **Cyclic Redundancy Check (CRC)** error detection using a degree-$r$ generator polynomial $G$ (having $r + 1$ bits), how does the sender compute the $r$-bit CRC remainder $R$ for a data bitstring $D$, and how does the receiver verify it?
+    - **A)** The sender adds $D + G$ in base 10; the receiver subtracts $G$.
+    - **B)** The sender counts the number of $1$s in $D$ and appends a single parity bit.
+    - **C)** The sender appends $r$ zero bits to $D$ (forming $D \cdot 2^r$) and divides by $G$ using **modulo-2 (XOR) arithmetic without carry/borrow** to get the $r$-bit remainder $R$; the sender transmits $\langle D, R \rangle$, and the receiver divides $\langle D, R \rangle$ by $G$ in modulo-2 arithmetic—if the remainder is **non-zero**, a bit error occurred.
+    - **D)** The sender encrypts $D$ with $G$ using RSA.
 
-4. Which word completes the following sentence from the text: "**Reliable Delivery:** Ensures frames are _____ correctly between adjacent nodes."?
-- **A)** Router
-- **B)** Protocol
-- **C)** Network
-- **D)** delivered
+4. Which class of Multiple Access Control (MAC) protocol do **CSMA/CD (Ethernet)** and **CSMA/CA (802.11 Wi-Fi)** belong to, and how do they differ from **Channel Partitioning (TDMA/FDMA)** and **Taking Turns (Token Passing / Polling)**?
+    - **A)** They are Channel Partitioning protocols that divide bandwidth equally even when only 1 node is active.
+    - **B)** They never experience collisions under any load.
+    - **C)** They require a central master controller to poll every laptop in round-robin order.
+    - **D)** They are **Random Access Protocols**: an active node transmits at the full channel data rate $R$ without prior slot reservation, listening to the carrier before transmitting (**Carrier Sense**); CSMA/CD detects collisions while transmitting on wired links and aborts + backs off exponentially, whereas CSMA/CA avoids collisions on wireless links (where collision detection is impractical due to hidden terminals and signal fading) using random backoff timers, ACKs, and optional RTS/CTS.
 
-5. Which word completes the following sentence from the text: "(Often used for wireless links _____ to high error rates)."?
-- **A)** due
-- **B)** Protocol
-- **C)** Router
-- **D)** Network
-
-6. Which word completes the following sentence from the text: "**Type:** Indicates the higher-layer protocol _____ IP) to demultiplex the payload."?
-- **A)** Network
-- **B)** Router
-- **C)** Protocol
-- **D)** mostly
-
-7. Which word completes the following sentence from the text: "Each IP node keeps an **ARP Table** mapping IP _____ to MAC addresses with a Time To Live (TTL)."?
-- **A)** addresses
-- **B)** Protocol
-- **C)** Network
-- **D)** Router
-
-8. Which word completes the following sentence from the text: "**Error Detection & Correction:** Receiver detects errors (e.g., via cyclic redundancy _____ CRC) and either requests retransmission or corrects the bit errors directly."?
-- **A)** Protocol
-- **B)** Network
-- **C)** check
-- **D)** Router
-
-9. Which word completes the following sentence from the text: "The frame's destination MAC _____ is Router R's MAC."?
-- **A)** Router
-- **B)** Network
-- **C)** address
-- **D)** Protocol
-
-10. Which word completes the following sentence from the text: "It uniquely identifies an _____ locally on a LAN."?
-- **A)** interface
-- **B)** Router
-- **C)** Network
-- **D)** Protocol
-
+5. In Ethernet's **Binary Exponential Backoff** algorithm after a frame experiences its $m$-th consecutive collision (for $m \le 10$), from what discrete set does the NIC choose the random number of $512$-bit-time slot delays $K$ to wait before re-attempting transmission?
+    - **A)** $\{0, 1\}$ for all $m$
+    - **B)** $\{0, 1, 2, \dots, 2^m - 1\}$ (doubling the contention window size after each collision so the adapter adapts dynamically to the number of colliding stations)
+    - **C)** $\{1, 2, \dots, m\}$
+    - **D)** $\{2^m\}$ deterministically (so both colliding nodes always pick the exact same wait time and collide again)
 
 ### Answer Key & Explanations
-1. **D)** Computer completes the sentence: --- id: link_layer type: note course: CSNETWK topi...
-2. **A)** between completes the sentence: **Flow Control:** Pacing the transmission rate bet...
-3. **C)** to completes the sentence: If an IP isn't in the table, the node broadcasts a...
-4. **D)** delivered completes the sentence: **Reliable Delivery:** Ensures frames are delivere...
-5. **A)** due completes the sentence: (Often used for wireless links due to high error r...
-6. **D)** mostly completes the sentence: **Type:** Indicates the higher-layer protocol (mos...
-7. **A)** addresses completes the sentence: Each IP node keeps an **ARP Table** mapping IP add...
-8. **C)** check completes the sentence: **Error Detection & Correction:** Receiver detects...
-9. **C)** address completes the sentence: The frame's destination MAC address is Router R's ...
-10. **A)** interface completes the sentence: It uniquely identifies an interface locally on a L...
+
+1. **B**. Layer 2 handles single-hop node-to-adjacent-node transfer over a physical link: framing, MAC channel access, hardware addressing, and hardware CRC error detection.
+2. **A**. The NIC controller chip implements framing, MAC protocol timing, and CRC calculation in dedicated hardware, interfacing with host memory via DMA and interrupts.
+3. **C**. CRC treats bitstrings as polynomials over $\text{GF}(2)$ (XOR addition/subtraction); appending $R = \text{rem}(D \cdot 2^r / G)$ ensures that $D \cdot 2^r \oplus R$ is an exact multiple of $G$.
+4. **D**. Random access protocols give a single active node the full channel rate $R$ and resolve contention probabilistically via Carrier Sense + Collision Detection (wired 802.3) or Collision Avoidance (wireless 802.11).
+5. **B**. Sampling $K$ uniformly from $\{0, 1, \dots, 2^m - 1\}$ keeps retransmission delay tiny when contention is light ($m=1 \implies \{0, 1\}$) while rapidly spreading out transmissions when many nodes collide.
 
 ## References & Navigation
 

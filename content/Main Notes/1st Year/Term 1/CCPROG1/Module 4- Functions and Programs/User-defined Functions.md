@@ -216,76 +216,77 @@ int divide_with_remainder(int dividend, int divisor, int *quotient, int *remaind
 ## Multiple Choice Questions
 
 1. What is a user-defined function?
-- **A)** A built-in function like `printf()`
-- **B)** A customized block of code created by the programmer to perform a specific task
-- **C)** A hardware-level instruction
-- **D)** A function that never returns a value
+    - **A)** A built-in function like `printf()`
+    - **B)** A customized block of code created by the programmer to perform a specific task
+    - **C)** A hardware-level instruction
+    - **D)** A function that never returns a value
 
 2. What does a function prototype provide to the compiler?
-- **A)** The actual logic of the function
-- **B)** The name, return type, and parameters of the function before it is called
-- **C)** The memory address of the variables
-- **D)** The output of the function
+    - **A)** The actual logic of the function
+    - **B)** The name, return type, and parameters of the function before it is called
+    - **C)** The memory address of the variables
+    - **D)** The output of the function
 
 3. Which term describes the actual values passed to a function when it is called?
-- **A)** Prototypes
-- **B)** Definitions
-- **C)** Arguments
-- **D)** Return types
+    - **A)** Prototypes
+    - **B)** Definitions
+    - **C)** Arguments
+    - **D)** Return types
 
 4. In C, what happens if you modify a parameter's value inside a standard function?
-- **A)** The original variable passed by the caller is also changed
-- **B)** A compilation error occurs
-- **C)** The original variable remains unchanged because C uses pass-by-value
-- **D)** The program crashes
+    - **A)** The original variable passed by the caller is also changed
+    - **B)** A compilation error occurs
+    - **C)** The original variable remains unchanged because C uses pass-by-value
+    - **D)** The program crashes
 
 5. What keyword is used to send a value back from a function to its caller?
-- **A)** `send`
-- **B)** `output`
-- **C)** `export`
-- **D)** `return`
+    - **A)** `send`
+    - **B)** `output`
+    - **C)** `export`
+    - **D)** `return`
 
 6. If a function does not need to return a value, what should its return type be?
-- **A)** `int`
-- **B)** `null`
-- **C)** `void`
-- **D)** `empty`
+    - **A)** `int`
+    - **B)** `null`
+    - **C)** `void`
+    - **D)** `empty`
 
 7. What is a function definition?
-- **A)** Just the name of the function
-- **B)** The block containing the actual code and logic to be executed
-- **C)** The values passed to the function
-- **D)** A library containing multiple functions
+    - **A)** Just the name of the function
+    - **B)** The block containing the actual code and logic to be executed
+    - **C)** The values passed to the function
+    - **D)** A library containing multiple functions
 
 8. Where should a function prototype typically be placed in a C program?
-- **A)** At the very end of the file
-- **B)** Inside the `main()` function
-- **C)** Near the top, after preprocessor directives and before `main()`
-- **D)** Inside the function definition
+    - **A)** At the very end of the file
+    - **B)** Inside the `main()` function
+    - **C)** Near the top, after preprocessor directives and before `main()`
+    - **D)** Inside the function definition
 
 9. In `int calculateArea(int width, int height);`, what are `int width` and `int height`?
-- **A)** Return values
-- **B)** Prototypes
-- **C)** Parameters
-- **D)** Local calls
+    - **A)** Return values
+    - **B)** Prototypes
+    - **C)** Parameters
+    - **D)** Local calls
 
 10. What is a common pitfall when writing user-defined functions?
-- **A)** Defining the prototype before `main()`
-- **B)** Using the `return` keyword
-- **C)** Expecting a function to modify original variables when passing by value
-- **D)** Reusing the function multiple times
+    - **A)** Defining the prototype before `main()`
+    - **B)** Using the `return` keyword
+    - **C)** Expecting a function to modify original variables when passing by value
+    - **D)** Reusing the function multiple times
 
 ### Answer Key & Explanations
-1. **B** - They are written by the developer for specific, non-standard tasks.
-2. **B** - Prototypes act as advance notice to the compiler regarding the function's signature.
-3. **C** - The terms "arguments" and "parameters" are often used interchangeably, but arguments specifically refer to the actual data values passed during the call.
-4. **C** - Pass-by-value creates a local copy; modifying the copy does not affect the original variable in the calling function.
-5. **D** - The `return` statement exits the function and delivers a specific value back to the call origin.
-6. **C** - `void` signifies the absence of a return value.
-7. **B** - The definition includes the function header and the curly braces containing the executable code.
-8. **C** - Placing prototypes at the top ensures the compiler reads them before scanning `main()`, preventing undeclared function errors.
-9. **C** - They define the parameters (type and name) that the function expects to receive upon being called.
-10. **C** - New programmers often mistakenly believe that changing a parameter inside the function alters the original variable in `main()`.
+
+1. **B**. They are written by the developer for specific, non-standard tasks.
+2. **B**. Prototypes act as advance notice to the compiler regarding the function's signature.
+3. **C**. The terms "arguments" and "parameters" are often used interchangeably, but arguments specifically refer to the actual data values passed during the call.
+4. **C**. Pass-by-value creates a local copy; modifying the copy does not affect the original variable in the calling function.
+5. **D**. The `return` statement exits the function and delivers a specific value back to the call origin.
+6. **C**. `void` signifies the absence of a return value.
+7. **B**. The definition includes the function header and the curly braces containing the executable code.
+8. **C**. Placing prototypes at the top ensures the compiler reads them before scanning `main()`, preventing undeclared function errors.
+9. **C**. They define the parameters (type and name) that the function expects to receive upon being called.
+10. **C**. New programmers often mistakenly believe that changing a parameter inside the function alters the original variable in `main()`.
 
 ## References & Navigation
 

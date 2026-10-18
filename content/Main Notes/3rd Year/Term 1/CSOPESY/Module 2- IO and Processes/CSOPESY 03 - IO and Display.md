@@ -161,36 +161,37 @@ void read_examples() {
 ## Multiple Choice Questions
 
 1. Which data transfer technique is specifically designed to alleviate the CPU from the burden of copying large blocks of data byte-by-byte from a device controller to main memory?
-A) Memory-Mapped I/O
-B) Polling
-C) Direct Memory Access (DMA)
-D) Interrupt-Driven character streaming
+    - **A)** Memory-Mapped I/O
+    - **B)** Polling
+    - **C)** Direct Memory Access (DMA)
+    - **D)** Interrupt-Driven character streaming
 
 2. An application issues a system call to read data from a network socket. The system call returns immediately with an error code `EWOULDBLOCK` because the packet hasn't arrived over the wire yet. The application proceeds to execute a UI update and checks the socket again later. What type of I/O model is this?
-A) Synchronous Blocking I/O
-B) Synchronous Non-blocking I/O
-C) Asynchronous Event-driven I/O
-D) Direct Memory Access I/O
+    - **A)** Synchronous Blocking I/O
+    - **B)** Synchronous Non-blocking I/O
+    - **C)** Asynchronous Event-driven I/O
+    - **D)** Direct Memory Access I/O
 
 3. Why is polling (busy-waiting) sometimes preferred over interrupt-driven I/O in extremely specific, high-performance scenarios?
-A) Polling completely eliminates the context switch overhead required by interrupts.
-B) Polling consumes less overall electrical power than interrupts.
-C) Polling allows multiple devices to share the exact same physical wire.
-D) Polling forces the CPU into sleep mode, preserving CPU cycles.
+    - **A)** Polling completely eliminates the context switch overhead required by interrupts.
+    - **B)** Polling consumes less overall electrical power than interrupts.
+    - **C)** Polling allows multiple devices to share the exact same physical wire.
+    - **D)** Polling forces the CPU into sleep mode, preserving CPU cycles.
 
 4. A printer can only process one document at a time. If three users try to print simultaneously, the OS intercepts the data streams, saves them to a temporary disk directory, and feeds them to the printer one by one. Which Kernel I/O subsystem service is being utilized?
-A) Caching
-B) Buffering
-C) Spooling
-D) Scheduling
+    - **A)** Caching
+    - **B)** Buffering
+    - **C)** Spooling
+    - **D)** Scheduling
 
 5. The OS categorizes a standard keyboard as which type of device?
-A) Block Device, because keys are sent in 4KB chunks.
-B) Character Device, because keystrokes are processed as a sequential stream of bytes.
-C) Network Device, because it utilizes packet switching.
-D) Memory-Mapped File, because keystrokes alter RAM directly.
+    - **A)** Block Device, because keys are sent in 4KB chunks.
+    - **B)** Character Device, because keystrokes are processed as a sequential stream of bytes.
+    - **C)** Network Device, because it utilizes packet switching.
+    - **D)** Memory-Mapped File, because keystrokes alter RAM directly.
 
 ### Answer Key & Explanations
+
 1. **C**. Direct Memory Access (DMA) offloads bulk memory transfers to a specialized controller, requiring only one CPU interrupt per block rather than one per byte.
 2. **B**. This is Non-blocking I/O. The call returned immediately without sleeping the process, but the application still has to actively poll/check for completion (unlike Asynchronous I/O which uses callbacks).
 3. **A**. If a device is incredibly fast (e.g., ready in 2 microseconds), the time taken to save CPU state and jump to an interrupt handler (e.g., 5 microseconds) is slower than just letting the CPU spin in a fast `while` loop for 2 microseconds.

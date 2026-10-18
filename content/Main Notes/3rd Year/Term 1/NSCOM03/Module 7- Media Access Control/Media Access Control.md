@@ -77,34 +77,35 @@ $$ C = 3000 \log_2(1 + 3162) \approx 3000 \times 11.62 \approx 34860 \text{ bps}
 ## Multiple Choice Questions
 
 1. Which of the following issues does the Physical layer address?
-- **A)** Framing and error correction
-- **B)** Bandwidth and noise
-- **C)** Flow control and logical addressing
-- **D)** Data encapsulation
+    - **A)** Framing and error correction
+    - **B)** Bandwidth and noise
+    - **C)** Flow control and logical addressing
+    - **D)** Data encapsulation
 
 2. What forms the backbone of local and wide area networks according to the text?
-- **A)** Precise encoding and decoding algorithms
-- **B)** The Shannon capacity formula
-- **C)** The Physical and Data Link layers
-- **D)** Network Layer routing protocols
+    - **A)** Precise encoding and decoding algorithms
+    - **B)** The Shannon capacity formula
+    - **C)** The Physical and Data Link layers
+    - **D)** Network Layer routing protocols
 
 3. How is Data Communications defined in the module?
-- **A)** The physical interconnection of devices
-- **B)** The exchange of digital data between two or more nodes
-- **C)** The conversion of analog signals to digital data
-- **D)** The structuring of OSI reference models
+    - **A)** The physical interconnection of devices
+    - **B)** The exchange of digital data between two or more nodes
+    - **C)** The conversion of analog signals to digital data
+    - **D)** The structuring of OSI reference models
 
 4. What does the calculation $C = B \log_2(1 + SNR)$ determine?
-- **A)** Attenuation loss
-- **B)** Flow control rate
-- **C)** Shannon capacity
-- **D)** Error detection probability
+    - **A)** Attenuation loss
+    - **B)** Flow control rate
+    - **C)** Shannon capacity
+    - **D)** Error detection probability
 
 ### Answer Key & Explanations
-1. **B)** The text states that "The Physical layer deals with analog/digital signals, bandwidth, attenuation, and noise."
-2. **C)** The summary section concludes that "The Physical and Data Link layers form the backbone of local and wide area networks."
-3. **B)** The Key Definitions section specifies "Data Communications: The exchange of digital data between two or more nodes."
-4. **C)** The example clearly identifies $C = B \log_2(1 + SNR)$ as the calculation for "Shannon capacity".
+
+1. **B**. The text states that "The Physical layer deals with analog/digital signals, bandwidth, attenuation, and noise."
+2. **C**. The summary section concludes that "The Physical and Data Link layers form the backbone of local and wide area networks."
+3. **B**. The Key Definitions section specifies "Data Communications: The exchange of digital data between two or more nodes."
+4. **C**. The example clearly identifies $C = B \log_2(1 + SNR)$ as the calculation for "Shannon capacity".
 
 ## References & Navigation
 

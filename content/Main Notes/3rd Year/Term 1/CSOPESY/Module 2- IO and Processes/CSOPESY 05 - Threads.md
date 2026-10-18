@@ -155,62 +155,63 @@ int main() {
 ## Multiple Choice Questions
 
 1. Which of the following resources is typically uniquely owned by a thread rather than shared across all threads in a process?
-    A. Global Variables (Data Section)
-    B. Memory Heap
-    C. Open Files
-    D. Stack and CPU Registers
+    - **A)** Global Variables (Data Section)
+    - **B)** Memory Heap
+    - **C)** Open Files
+    - **D)** Stack and CPU Registers
 
 2. According to Amdahl’s Law, if an application consists of 50% purely sequential code, what is the maximum theoretical speedup achievable with an infinite number of processors?
-    A. 1.5x
-    B. 2x
-    C. 4x
-    D. Infinite
+    - **A)** 1.5x
+    - **B)** 2x
+    - **C)** 4x
+    - **D)** Infinite
 
 3. Which threading model suffers heavily from the limitation that if one thread makes a blocking system call, all other threads in the process are blocked as well?
-    A. One-to-One
-    B. Many-to-Many
-    C. Many-to-One
-    D. System-Contention Scope
+    - **A)** One-to-One
+    - **B)** Many-to-Many
+    - **C)** Many-to-One
+    - **D)** System-Contention Scope
 
 4. What is the primary purpose of a Thread Pool?
-    A. To map user threads to kernel threads securely.
-    B. To reduce the performance overhead of repeatedly creating and destroying threads.
-    C. To provide a garbage collection mechanism for orphaned threads.
-    D. To assign threads automatically across distributed computer networks.
+    - **A)** To map user threads to kernel threads securely.
+    - **B)** To reduce the performance overhead of repeatedly creating and destroying threads.
+    - **C)** To provide a garbage collection mechanism for orphaned threads.
+    - **D)** To assign threads automatically across distributed computer networks.
 
 5. What is the difference between asynchronous and deferred thread cancellation?
-    A. Asynchronous waits for the thread to finish; deferred kills it instantly.
-    B. Asynchronous kills the thread instantly; deferred allows the thread to periodically check a flag to exit gracefully.
-    C. Asynchronous is handled by the user library; deferred is handled by the OS kernel.
-    D. There is no difference; they are aliases for the same POSIX command.
+    - **A)** Asynchronous waits for the thread to finish; deferred kills it instantly.
+    - **B)** Asynchronous kills the thread instantly; deferred allows the thread to periodically check a flag to exit gracefully.
+    - **C)** Asynchronous is handled by the user library; deferred is handled by the OS kernel.
+    - **D)** There is no difference; they are aliases for the same POSIX command.
 
 6. Distributing portions of the exact same array across 4 cores to sum them up independently is an example of:
-    A. Task Parallelism
-    B. Asymmetric Multiprocessing
-    C. Implicit Threading
-    D. Data Parallelism
+    - **A)** Task Parallelism
+    - **B)** Asymmetric Multiprocessing
+    - **C)** Implicit Threading
+    - **D)** Data Parallelism
 
 7. In a multithreaded architecture, what is Thread-Local Storage (TLS) used for?
-    A. Storing the process's main executable code.
-    B. Storing variables that are globally accessible but read-only.
-    C. Storing data specific to an individual thread, separate from the shared data section.
-    D. Replacing the CPU cache for kernel threads.
+    - **A)** Storing the process's main executable code.
+    - **B)** Storing variables that are globally accessible but read-only.
+    - **C)** Storing data specific to an individual thread, separate from the shared data section.
+    - **D)** Replacing the CPU cache for kernel threads.
 
 8. True or False: Linux primarily uses a separate, distinct thread implementation rather than standard processes to handle multithreading.
-    A. True, Linux uses POSIX standard thread isolation.
-    B. False, Linux kernel does not distinguish between threads and processes, referring to both as "tasks" created via `clone()`.
-    C. True, Linux maps threads into a Many-to-One model for efficiency.
-    D. False, Linux does not support multithreading natively.
+    - **A)** True, Linux uses POSIX standard thread isolation.
+    - **B)** False, Linux kernel does not distinguish between threads and processes, referring to both as "tasks" created via `clone()`.
+    - **C)** True, Linux maps threads into a Many-to-One model for efficiency.
+    - **D)** False, Linux does not support multithreading natively.
 
 ### Answer Key & Explanations
-1. **D. Stack and CPU Registers** - Each thread needs its own stack for function calls and its own registers to keep track of its specific execution state, while the heap, data, and code are shared.
-2. **B. 2x** - With $S = 0.5$, the formula becomes $1 / (0.5 + 0) = 1 / 0.5 = 2$.
-3. **C. Many-to-One** - Because multiple user threads share a single kernel thread, if the kernel thread gets blocked by one user thread, none of the others can execute.
-4. **B. To reduce the performance overhead of repeatedly creating and destroying threads.** - Thread creation is computationally expensive. Pools initialize them beforehand.
-5. **B. Asynchronous kills the thread instantly; deferred allows the thread to periodically check a flag to exit gracefully.** - Deferred cancellation is much safer because it prevents data corruption that might occur if a thread is killed midway through a memory write.
-6. **D. Data Parallelism** - Applying the same operation simultaneously to different chunks of data is data parallelism.
-7. **C. Storing data specific to an individual thread, separate from the shared data section.** - While threads share the data section, TLS offers a structured way to maintain thread-specific "global" variables.
-8. **B. False, Linux kernel does not distinguish between threads and processes, referring to both as "tasks" created via `clone()`.** - Linux fundamentally relies on `clone()` to share address spaces, blurring the line between processes and threads.
+
+1. **D**. Each thread needs its own stack for function calls and its own registers to keep track of its specific execution state, while the heap, data, and code are shared.
+2. **B**. With $S = 0.5$, the formula becomes $1 / (0.5 + 0) = 1 / 0.5 = 2$.
+3. **C**. Because multiple user threads share a single kernel thread, if the kernel thread gets blocked by one user thread, none of the others can execute.
+4. **B**. Thread creation is computationally expensive. Pools initialize them beforehand.
+5. **B**. Deferred cancellation is much safer because it prevents data corruption that might occur if a thread is killed midway through a memory write.
+6. **D**. Applying the same operation simultaneously to different chunks of data is data parallelism.
+7. **C**. While threads share the data section, TLS offers a structured way to maintain thread-specific "global" variables.
+8. **B**. Linux fundamentally relies on `clone()` to share address spaces, blurring the line between processes and threads.
 
 ## References & Navigation
 

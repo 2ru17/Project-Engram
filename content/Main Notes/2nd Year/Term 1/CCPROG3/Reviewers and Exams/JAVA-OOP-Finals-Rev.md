@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCPROG3]] #[[Object-Oriented Concepts]] #[[Programming]] #[[Computer Science]] #[[Java]] #[[Object-Oriented Programming]] #[[Software Engineering Principles]] #[[Algorithms]]
+**Tags:** #[[CCPROG3]] #[[Object-Oriented Concepts]] #[[Programming]] #[[Computer Science]] #[[Java]] #[[Object-Oriented Programming]] #[[Software Engineering Principles]] #[[Algorithms]]
 
 ---
 
@@ -142,10 +142,10 @@ The practice of wrapping data (variables) and code (methods) together as a singl
 
   | Modifier                 | Class | Package | Subclass | World |
   | :----------------------- | :---: | :-----: | :------: | :---: |
-  | **public**               |  ✅   |   ✅    |    ✅    |  ✅   |
-  | **protected**            |  ✅   |   ✅    |    ✅    |  ❌   |
-  | **default** (no keyword) |  ✅   |   ✅    |    ❌    |  ❌   |
-  | **private**              |  ✅   |   ❌    |    ❌    |  ❌   |
+  | **public**               |     |       |        |     |
+  | **protected**            |     |       |        |     |
+  | **default** (no keyword) |     |       |        |     |
+  | **private**              |     |       |        |     |
  **Constructors:**
 **Purpose:** Initialize the object's state.
 **Rules:** 1. Name must match Class name exactly. 2. **NO** return type (not even `void`). 3. Called automatically upon instantiation (`new`).
@@ -567,10 +567,6 @@ btn.addActionListener(new ActionListener() {
 ## Summary
 
 > TL;DR — Comprehensive Java OOP reviewer: fundamentals (memory, static/final, String pool), encapsulation (access modifiers, constructors), relationships (association/aggregation/composition), Collections, inheritance/polymorphism, abstraction (abstract classes vs. interfaces), exception handling, and MVC/Swing.
-
-## Review Questions
-
-_To be added._
 
 ## Links
  **Related:** **Source / Reference:**

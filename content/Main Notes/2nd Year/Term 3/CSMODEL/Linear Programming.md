@@ -182,7 +182,7 @@ Subject to:
 
 ### `scipy.optimize.linprog` — Overview
 
-> ⚠ **CRITICAL:** `linprog` **MINIMIZES** by default. To **maximize**, you must **negate** the objective function coefficients AND negate `result.fun` to get the true maximum.
+>  **CRITICAL:** `linprog` **MINIMIZES** by default. To **maximize**, you must **negate** the objective function coefficients AND negate `result.fun` to get the true maximum.
 
 ```python
 from scipy.optimize import linprog
@@ -485,7 +485,7 @@ Choose corner giving **max Z** (maximization) or **min Z** (minimization).
 
 ---
 
-## ⚠ Common Exam Traps
+## Common Exam Traps
  **Forgetting to negate `c` for maximization** — `linprog` always minimizes. If you forget to negate, you solve the wrong problem.
  **Forgetting to negate `result.fun`** — after negating `c` for maximization, `result.fun` will be negative. You MUST compute `-result.fun` to get the true maximum.
  **Converting >= constraints incorrectly** — to use `A_ub` (≤ only), multiply BOTH sides of >= by -1: `ax >= b` → `-ax <= -b`. Put `-b` in `b_ub`.
@@ -625,41 +625,42 @@ Only non-zero for BINDING constraints.
 ## Multiple Choice Questions
 
 1. In Linear Programming, what must be true about the objective function and constraints?
-- **A)** They can include quadratic terms
-- **B)** They must be entirely linear
-- **C)** They must involve integer variables only
-- **D)** They can only represent maximization problems
+    - **A)** They can include quadratic terms
+    - **B)** They must be entirely linear
+    - **C)** They must involve integer variables only
+    - **D)** They can only represent maximization problems
 
 2. The optimal solution to an LP problem always occurs at:
-- **A)** The origin
-- **B)** The exact center of the feasible region
-- **C)** A corner point (vertex) of the feasible region
-- **D)** An arbitrary point outside the feasible region
+    - **A)** A corner point (vertex) of the feasible region
+    - **B)** The exact center of the feasible region
+    - **C)** The origin
+    - **D)** An arbitrary point outside the feasible region
 
 3. What does a slack variable represent in a standard form LP?
-- **A)** The amount of a resource that is overused
-- **B)** The unused capacity or leftover amount of a resource in a <= constraint
-- **C)** A negative decision variable
-- **D)** The marginal cost of production
+    - **A)** The amount of a resource that is overused
+    - **B)** A negative decision variable
+    - **C)** The unused capacity or leftover amount of a resource in a <= constraint
+    - **D)** The marginal cost of production
 
 4. If a constraint has a shadow price of 0, what does this indicate?
-- **A)** The constraint is binding and fully consumed
-- **B)** The constraint is non-binding (there is unused capacity)
-- **C)** The problem is infeasible
-- **D)** The objective function cannot be maximized
+    - **A)** The constraint is binding and fully consumed
+    - **B)** The objective function cannot be maximized
+    - **C)** The problem is infeasible
+    - **D)** The constraint is non-binding (there is unused capacity)
 
 5. By default, `scipy.optimize.linprog` solves which type of problem?
-- **A)** Maximization
-- **B)** Minimization
-- **C)** Mixed-Integer Programming
-- **D)** Non-linear optimization
+    - **A)** Maximization
+    - **B)** Minimization
+    - **C)** Mixed-Integer Programming
+    - **D)** Non-linear optimization
 
 ### Answer Key & Explanations
-1. **B)** LP requires all relationships (objective and constraints) to be strictly linear.
-2. **C)** The Fundamental Theorem of LP states the optimal is at an extreme point (corner).
-3. **B)** Slack variables convert <= inequalities to equalities by taking up the slack (unused resource).
-4. **B)** If a constraint is not fully used (slack > 0), adding more of that resource has no value, hence shadow price = 0.
-5. **B)** `linprog` minimizes by default; maximization requires negating the objective coefficients.
+
+1. **B**. LP requires all relationships (objective and constraints) to be strictly linear.
+2. **A**. The Fundamental Theorem of LP states the optimal is at an extreme point (corner).
+3. **C**. Slack variables convert <= inequalities to equalities by taking up the slack (unused resource).
+4. **D**. If a constraint is not fully used (slack > 0), adding more of that resource has no value, hence shadow price = 0.
+5. **B**. `linprog` minimizes by default; maximization requires negating the objective coefficients.
 
 ## References & Navigation
 

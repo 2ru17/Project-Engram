@@ -14,7 +14,7 @@ hackerrank_domain: Binary Search
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
 
 ---
 
@@ -53,14 +53,14 @@ $1 \le f_i, m_j \le 10^9$
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > Given K transmission frequencies and N participants, for each participant with metacognitive frequency `m`, count how many transmissions have frequency `f_i ≤ m`.
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > For each participant, scan all K frequencies and count.
 > **O(N × K)** — with N = K = 300,000 that's **90 billion ops** → TLE.
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > Sort frequencies once. For each participant, binary search (`bisect_right`) to count how many are ≤ m.
 > **O(K log K + N log K)** — fast.
 
@@ -85,7 +85,7 @@ fs = sorted([int(input()) for i in range(k)])
 
 | Participant | m | bisect_right([2,4,15], m) | Explanation |
 |---|---|---|---|
-| 1 | 11 | **2** | 2 ≤ 11 ✓, 4 ≤ 11 ✓, 15 ≤ 11 ✗ |
+| 1 | 11 | **2** | 2 ≤ 11 , 4 ≤ 11 , 15 ≤ 11  |
 | 2 | 15 | **3** | All ≤ 15 |
 | 3 | 11 | **2** | Same as participant 1 |
 
@@ -179,7 +179,6 @@ if __name__ == "__main__":
     main()
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

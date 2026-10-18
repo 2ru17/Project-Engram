@@ -11,111 +11,68 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Partition of  Sample Space]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Partition of  Sample Space]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Partition of  Sample Space**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+A **Partition of a Sample Space** $S$ is a collection of non-empty events $\{B_1, B_2, \dots, B_k\}$ that divides $S$ into non-overlapping regions covering the entire space. Every elementary outcome $\omega \in S$ belongs to **one and only one** event $B_i$ in the partition.
 
 ## Key Definitions
-- **Partition of  Sample Space**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Partition of  Sample Space** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+A collection of events $\{B_1, B_2, \dots, B_k\}$ forms a partition of $S$ if and only if it satisfies two conditions simultaneously:
+1. **Pairwise Mutually Exclusive (Disjoint):** $B_i \cap B_j = \emptyset$ for all $i \ne j$.
+2. **Collectively Exhaustive:** $\bigcup_{i=1}^k B_i = B_1 \cup B_2 \cup \cdots \cup B_k = S$ (which implies $\sum_{i=1}^k P(B_i) = 1$).
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+- **Decomposition of Any Event $A$:** Any event $A \subseteq S$ is partitioned into $k$ disjoint pieces $A = (A \cap B_1) \cup (A \cap B_2) \cup \cdots \cup (A \cap B_k)$, which is the foundation of the **Law of Total Probability** and **Bayes' Theorem**.
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Partition of  Sample Space**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+## Worked Example
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Partition of  Sample Space** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Problem:** For rolling a six-sided die with $S = \{1, 2, 3, 4, 5, 6\}$, verify which of the following collections is a valid partition of $S$:
+- $\mathcal{P}_1 = \{\{1, 2\}, \{3, 4\}, \{5, 6\}\}$: **Valid** (disjoint and union is $S$).
+- $\mathcal{P}_2 = \{\{1, 2, 3\}, \{3, 4, 5, 6\}\}$: **Invalid** (not disjoint, since $3$ is in both).
+- $\mathcal{P}_3 = \{\{1, 2\}, \{4, 5\}\}$: **Invalid** (not exhaustive, since $3$ and $6$ are missing).
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Which two conditions are jointly required for a collection of events $\{B_1, B_2, \dots, B_k\}$ to form a **partition** of sample space $S$?
+    - **A)** Statistically independent and equally likely
+    - **B)** Pairwise mutually exclusive ($B_i \cap B_j = \emptyset$ for $i \ne j$) and collectively exhaustive ($\bigcup_{i=1}^k B_i = S$)
+    - **C)** Overlapping and summing to $0.5$
+    - **D)** Each $B_i$ must equal $S$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. For any event $B \subseteq S$ (with $B \ne \emptyset$ and $B \ne S$), what is the simplest two-set partition of $S$ generated by $B$?
+    - **A)** $\{B, B^c\}$
+    - **B)** $\{B, S\}$
+    - **C)** $\{B, \emptyset\}$
+    - **D)** $\{B^c, S\}$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. If $\{B_1, B_2, B_3\}$ is a partition of $S$ with $P(B_1) = 0.25$ and $P(B_2) = 0.45$, what must $P(B_3)$ equal?
+    - **A)** $0.70$
+    - **B)** $0.1125$
+    - **C)** $0.30$
+    - **D)** Cannot be determined without knowing independence
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Why does a partition $\{B_1, \dots, B_k\}$ allow us to write $P(A) = \sum_{i=1}^k P(A \cap B_i)$ for any event $A \subseteq S$?
+    - **A)** Because $A = S$.
+    - **B)** Because $A$ is independent of every $B_i$.
+    - **C)** Because $P(A \cap B_i) = P(A) + P(B_i)$.
+    - **D)** Because the intersections $(A \cap B_1), \dots, (A \cap B_k)$ are pairwise disjoint and their union is $A \cap \left(\bigcup_{i=1}^k B_i\right) = A \cap S = A$, so Kolmogorov's additivity axiom applies directly.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Let $S = \{1, 2, 3, 4, 5, 6\}$. Why does the collection $C = \{\{1, 3, 5\}, \{2, 4\}\}$ fail to be a partition of $S$?
+    - **A)** The sets overlap.
+    - **B)** Although the sets are mutually exclusive, they are not collectively exhaustive because outcome $6 \notin \{1, 3, 5\} \cup \{2, 4\}$.
+    - **C)** A partition cannot have sets of different sizes.
+    - **D)** Odd and even numbers cannot be separated.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. By definition, a partition divides $S$ into non-overlapping (pairwise disjoint) subsets whose union covers the entire sample space (collectively exhaustive).
+2. **A**. Any event $B$ and its complement $B^c$ satisfy $B \cap B^c = \emptyset$ and $B \cup B^c = S$, forming the fundamental binary partition of $S$.
+3. **C**. Because $\{B_1, B_2, B_3\}$ partitions $S$, $\sum_{i=1}^3 P(B_i) = P(S) = 1$, so $P(B_3) = 1 - (0.25 + 0.45) = 0.30$.
+4. **D**. By the distributive law of sets, $A = A \cap S = A \cap (\bigcup B_i) = \bigcup (A \cap B_i)$, where $(A \cap B_i) \cap (A \cap B_j) \subseteq B_i \cap B_j = \emptyset$. Additivity of disjoint sets yields $P(A) = \sum P(A \cap B_i)$.
+5. **B**. Their union is $\{1, 2, 3, 4, 5\} \ne S$ (missing $6$), so they fail the collective exhaustiveness condition.
 
 ## References & Navigation
 

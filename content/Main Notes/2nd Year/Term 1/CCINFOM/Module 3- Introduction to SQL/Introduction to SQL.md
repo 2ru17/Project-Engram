@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Code Snippets]] #[[CCINFOM]] #[[SQL]] #[[DDL]] #[[DML]] #[[Database]] #[[M3]]
+**Tags:** #[[Code Snippets]] #[[CCINFOM]] #[[SQL]] #[[DDL]] #[[DML]] #[[Database]] #[[M3]]
 
 ---
 
@@ -131,77 +131,77 @@ ORDER BY STATE;
 ## Multiple Choice Questions
 
 1. Which SQL subset is strictly responsible for modifying the structural blueprint of the database?
-- **A)** Data Control Language (DCL)
-- **B)** Data Definition Language (DDL)
-- **C)** Data Manipulation Language (DML)
-- **D)** Database Processing Language (DPL)
+    - **A)** Data Control Language (DCL)
+    - **B)** Data Definition Language (DDL)
+    - **C)** Data Manipulation Language (DML)
+    - **D)** Database Processing Language (DPL)
 
 2. Which command is used to permanently remove an entire table structure from a database?
-- **A)** DELETE TABLE
-- **B)** REMOVE TABLE
-- **C)** DROP TABLE
-- **D)** TRUNCATE TABLE
+    - **A)** DELETE TABLE
+    - **B)** REMOVE TABLE
+    - **C)** DROP TABLE
+    - **D)** TRUNCATE TABLE
 
 3. When a query contains a GROUP BY clause, which clause is used to apply conditions specifically to the aggregated groups?
-- **A)** WHERE
-- **B)** FILTER
-- **C)** SORT
-- **D)** HAVING
+    - **A)** WHERE
+    - **B)** FILTER
+    - **C)** SORT
+    - **D)** HAVING
 
 4. What is the primary purpose of a SQL View?
-- **A)** To physically duplicate data for backup purposes.
-- **B)** To speed up hardware read times across the disk.
-- **C)** To create a virtual table for controlled data access and query simplification.
-- **D)** To assign primary keys automatically.
+    - **A)** To physically duplicate data for backup purposes.
+    - **B)** To speed up hardware read times across the disk.
+    - **C)** To create a virtual table for controlled data access and query simplification.
+    - **D)** To assign primary keys automatically.
 
 5. What happens when you execute the command `DELETE FROM CUSTOMER_T;`?
-- **A)** The table structure is removed permanently.
-- **B)** The table is renamed to a null state.
-- **C)** All records are removed, but the table structure remains intact.
-- **D)** An error occurs because no WHERE clause is provided.
+    - **A)** The table structure is removed permanently.
+    - **B)** The table is renamed to a null state.
+    - **C)** All records are removed, but the table structure remains intact.
+    - **D)** An error occurs because no WHERE clause is provided.
 
 6. Which DML command modifies existing records already stored in a database?
-- **A)** ALTER
-- **B)** INSERT
-- **C)** MODIFY
-- **D)** UPDATE
+    - **A)** ALTER
+    - **B)** INSERT
+    - **C)** MODIFY
+    - **D)** UPDATE
 
 7. What is the first clause processed logically by the DBMS when executing a SELECT query?
-- **A)** SELECT
-- **B)** FROM
-- **C)** WHERE
-- **D)** ORDER BY
+    - **A)** SELECT
+    - **B)** FROM
+    - **C)** WHERE
+    - **D)** ORDER BY
 
 8. Which SQL component manages user access privileges and administration?
-- **A)** DML
-- **B)** DDL
-- **C)** DCL
-- **D)** SQL-Admin
+    - **A)** DML
+    - **B)** DDL
+    - **C)** DCL
+    - **D)** SQL-Admin
 
 9. In a `CREATE TABLE` statement, what does the `DEFAULT` keyword achieve?
-- **A)** It forces the user to input a specific value or the command fails.
-- **B)** It automatically drops the table if data is missing.
-- **C)** It automatically inserts a pre-defined value if no specific value is provided during data insertion.
-- **D)** It sets the column as a primary key.
+    - **A)** It forces the user to input a specific value or the command fails.
+    - **B)** It automatically drops the table if data is missing.
+    - **C)** It automatically inserts a pre-defined value if no specific value is provided during data insertion.
+    - **D)** It sets the column as a primary key.
 
 10. The `ALTER TABLE` command falls under which category of SQL?
-- **A)** Data Definition Language (DDL)
-- **B)** Data Manipulation Language (DML)
-- **C)** Data Control Language (DCL)
-- **D)** Relational Query Language (RQL)
+    - **A)** Data Definition Language (DDL)
+    - **B)** Data Manipulation Language (DML)
+    - **C)** Data Control Language (DCL)
+    - **D)** Relational Query Language (RQL)
 
 ### Answer Key & Explanations
 
-1. **B** - DDL (Data Definition Language) handles the schema structure (creating, altering, dropping tables).
-2. **C** - `DROP TABLE` is the correct DDL command used to completely eradicate a table and its structural metadata.
-3. **D** - While the `WHERE` clause filters individual rows before aggregation, the `HAVING` clause is specifically designed to filter aggregated groups.
-4. **C** - A view is a stored query that acts as a virtual table, often used to restrict access to certain columns or simplify complex multi-table joins for the end-user.
-5. **C** - Running a `DELETE` statement without a `WHERE` clause flushes all data from the table, but as a DML command, it does not destroy the DDL structure.
-6. **D** - `UPDATE` is the designated DML command used to change the values of existing records. `ALTER` is DDL and changes structure, not data.
-7. **B** - The internal logical processing order of SQL begins with the `FROM` clause to identify the initial data source before any filtering or selecting occurs.
-8. **C** - Data Control Language (DCL), which includes `GRANT` and `REVOKE`, is used for database security and access control.
-9. **C** - The `DEFAULT` constraint ensures that if a row is inserted without specifying a value for that column, the predetermined default value will be utilized.
-10. **A** - `ALTER TABLE` modifies the schema blueprint, meaning it is definitively a Data Definition Language (DDL) command.
+1. **B**. DDL (Data Definition Language) handles the schema structure (creating, altering, dropping tables).
+2. **C**. `DROP TABLE` is the correct DDL command used to completely eradicate a table and its structural metadata.
+3. **D**. While the `WHERE` clause filters individual rows before aggregation, the `HAVING` clause is specifically designed to filter aggregated groups.
+4. **C**. A view is a stored query that acts as a virtual table, often used to restrict access to certain columns or simplify complex multi-table joins for the end-user.
+5. **C**. Running a `DELETE` statement without a `WHERE` clause flushes all data from the table, but as a DML command, it does not destroy the DDL structure.
+6. **D**. `UPDATE` is the designated DML command used to change the values of existing records. `ALTER` is DDL and changes structure, not data.
+7. **B**. The internal logical processing order of SQL begins with the `FROM` clause to identify the initial data source before any filtering or selecting occurs.
+8. **C**. Data Control Language (DCL), which includes `GRANT` and `REVOKE`, is used for database security and access control.
+9. **C**. The `DEFAULT` constraint ensures that if a row is inserted without specifying a value for that column, the predetermined default value will be utilized.
+10. **A**. `ALTER TABLE` modifies the schema blueprint, meaning it is definitively a Data Definition Language (DDL) command.
 
 ## References & Navigation
 

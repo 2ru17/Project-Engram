@@ -14,7 +14,7 @@ hackerrank_domain: Linked Lists
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Linked Lists]] #[[Floyd's Algorithm]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Linked Lists]] #[[Floyd's Algorithm]]
 
 ---
 
@@ -341,7 +341,6 @@ int main()
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Problems, Problem Types, and Algorithms]]

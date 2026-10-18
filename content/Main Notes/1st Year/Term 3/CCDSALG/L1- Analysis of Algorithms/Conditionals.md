@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
+**Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
 
 ---
 
@@ -147,86 +147,83 @@ _The count for the `else` on line [6] itself is not explicitly 1; rather, the st
 
 > TL;DR — For **if-else** frequency counting: count the condition as 1 operation, then take the **maximum** of the if-block and else-block counts. For **else-if** chains, count each condition check and take the max across all branches. Nested conditionals inside loops multiply accordingly.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Loops]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. What is the general formula for frequency counting an `if-else` statement?
-- **A)** Count(condition) + Count(if-block) + Count(else-block)
-- **B)** Count(condition) + min(Count(if-block), Count(else-block))
-- **C)** Count(condition) * max(Count(if-block), Count(else-block))
-- **D)** Count(condition) + max(Count(if-block), Count(else-block))
+    - **A)** Count(condition) + Count(if-block) + Count(else-block)
+    - **B)** Count(condition) + min(Count(if-block), Count(else-block))
+    - **C)** Count(condition) * max(Count(if-block), Count(else-block))
+    - **D)** Count(condition) + max(Count(if-block), Count(else-block))
 
 2. How much is the evaluation of the condition in an `if` statement counted?
-- **A)** 0
-- **B)** 1
-- **C)** 2
-- **D)** It depends on the size of the variables
+    - **A)** 0
+    - **B)** 1
+    - **C)** 2
+    - **D)** It depends on the size of the variables
 
 3. Why is the maximum of the `if-block` and `else-block` counts taken?
-- **A)** Because both blocks are always executed
-- **B)** To find the best-case execution path
-- **C)** Because in any single execution, only one of the blocks (or neither) will be executed, giving the worst-case
-- **D)** Because the RAM model requires maximum values
+    - **A)** Because both blocks are always executed
+    - **B)** To find the best-case execution path
+    - **C)** Because in any single execution, only one of the blocks (or neither) will be executed, giving the worst-case
+    - **D)** Because the RAM model requires maximum values
 
 4. If there is no `else` block, what is its frequency count considered to be?
-- **A)** -1
-- **B)** 0
-- **C)** 1
-- **D)** Infinity
+    - **A)** -1
+    - **B)** 0
+    - **C)** 1
+    - **D)** Infinity
 
 5. In frequency counting, how should an `else if` structure be treated?
-- **A)** As a single block with a count of 1
-- **B)** As nested `if-else` statements
-- **C)** It is ignored since it is a secondary condition
-- **D)** By adding the counts of all branches together
+    - **A)** As a single block with a count of 1
+    - **B)** As nested `if-else` statements
+    - **C)** It is ignored since it is a secondary condition
+    - **D)** By adding the counts of all branches together
 
 6. In Example 1, the condition `choice == "S"` has a count of 1, the if-block has a count of 2, and the else-block has a count of 3. What is the total frequency count?
-- **A)** 6
-- **B)** 5
-- **C)** 4
-- **D)** 3
+    - **A)** 6
+    - **B)** 5
+    - **C)** 4
+    - **D)** 3
 
 7. What is a common pitfall when counting frequency for conditional statements?
-- **A)** Adding if-block and else-block counts instead of taking the maximum
-- **B)** Taking the maximum instead of adding all counts
-- **C)** Assuming the condition check takes 2 operations
-- **D)** Counting the else-block when an else-if is present
+    - **A)** Adding if-block and else-block counts instead of taking the maximum
+    - **B)** Taking the maximum instead of adding all counts
+    - **C)** Assuming the condition check takes 2 operations
+    - **D)** Counting the else-block when an else-if is present
 
 8. How does an `else if` chain affect the total frequency count?
-- **A)** Each condition check adds 1 to the count, and you take the max across all branches.
-- **B)** Only the first condition check is counted.
-- **C)** The counts of all conditions are multiplied together.
-- **D)** The conditions are ignored; only the branches are counted.
+    - **A)** Each condition check adds 1 to the count, and you take the max across all branches.
+    - **B)** Only the first condition check is counted.
+    - **C)** The counts of all conditions are multiplied together.
+    - **D)** The conditions are ignored; only the branches are counted.
 
 9. What happens when a conditional statement is nested inside a loop?
-- **A)** The conditional's maximum count gets multiplied by the loop's iteration count.
-- **B)** The conditional statement is only counted once, regardless of the loop.
-- **C)** The loop count is added to the conditional's max count.
-- **D)** The conditional count is divided by the loop's iteration count.
+    - **A)** The conditional's maximum count gets multiplied by the loop's iteration count.
+    - **B)** The conditional statement is only counted once, regardless of the loop.
+    - **C)** The loop count is added to the conditional's max count.
+    - **D)** The conditional count is divided by the loop's iteration count.
 
 10. Which block is used when determining the `max` count in worst-case analysis?
-- **A)** The block that executes the fastest
-- **B)** The block with the most variables
-- **C)** The costliest path (highest count)
-- **D)** Always the `if-block`
+    - **A)** The block that executes the fastest
+    - **B)** The block with the most variables
+    - **C)** The costliest path (highest count)
+    - **D)** Always the `if-block`
 
 ### Answer Key & Explanations
-1. **D)** The formula is Count(condition) + max(Count(if-block), Count(else-block)).
-2. **B)** Evaluating the condition in the `if` statement counts as exactly 1 operation.
-3. **C)** During execution, only one branch is taken; worst-case analysis demands evaluating the path that takes the maximum number of operations.
-4. **B)** If there is no else-block, its count is essentially 0.
-5. **B)** `Else if` statements are logically evaluated as nested `if-else` structures.
-6. **C)** The total count is 1 + max(2, 3) = 1 + 3 = 4.
-7. **A)** A common mistake is adding the branches together, instead of correctly recognizing that only one executes, hence taking the maximum.
-8. **A)** Each individual condition must be evaluated (costing 1 each time it's reached), and the maximum across the entire chain determines the worst-case.
-9. **A)** The worst-case cost of the conditional gets multiplied by how many times the loop iterates.
-10. **C)** You select the block with the highest operation count because it represents the worst-case performance scenario.
+
+1. **D**. The formula is Count(condition) + max(Count(if-block), Count(else-block)).
+2. **B**. Evaluating the condition in the `if` statement counts as exactly 1 operation.
+3. **C**. During execution, only one branch is taken; worst-case analysis demands evaluating the path that takes the maximum number of operations.
+4. **B**. If there is no else-block, its count is essentially 0.
+5. **B**. `Else if` statements are logically evaluated as nested `if-else` structures.
+6. **C**. The total count is 1 + max(2, 3) = 1 + 3 = 4.
+7. **A**. A common mistake is adding the branches together, instead of correctly recognizing that only one executes, hence taking the maximum.
+8. **A**. Each individual condition must be evaluated (costing 1 each time it's reached), and the maximum across the entire chain determines the worst-case.
+9. **A**. The worst-case cost of the conditional gets multiplied by how many times the loop iterates.
+10. **C**. You select the block with the highest operation count because it represents the worst-case performance scenario.
 
 ## References & Navigation
 

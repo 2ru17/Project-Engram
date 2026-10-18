@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSSECU2]] #[[Cybersecurity]] #[[Reviewer]] #[[Exam Practice]] #[[VAPT]] #[[Offensive Security]] #[[Penetration Testing]]
+**Tags:** #[[Computer Science]] #[[NSSECU2]] #[[Cybersecurity]] #[[Reviewer]] #[[Exam Practice]] #[[VAPT]] #[[Offensive Security]] #[[Penetration Testing]]
 
 ---
 
@@ -170,9 +170,7 @@ whoami /priv
 winPEASx64.exe quiet cmd fast
 ```
 
-## 30-Question Comprehensive Practice Examination
-
-1. What is the fundamental ethical and legal boundary separating White Hat penetration testers from Gray Hat and Black Hat actors?
+## Multiple Choice Questions1. What is the fundamental ethical and legal boundary separating White Hat penetration testers from Gray Hat and Black Hat actors?
 - **A)** The technical programming languages used during exploitation
 - **B)** Explicit, written authorization and a legally binding Rules of Engagement (RoE) contract
 - **C)** The brand of operating system installed on the tester's machine

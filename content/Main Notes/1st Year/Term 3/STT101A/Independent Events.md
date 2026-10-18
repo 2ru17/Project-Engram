@@ -11,111 +11,69 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Independent Events]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Independent Events]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Independent Events**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+Two events $A$ and $B$ are **statistically independent** if the occurrence (or non-occurrence) of one provides zero information about the probability of the other. Formally, $A$ and $B$ are independent if and only if their joint probability equals the product of their marginal probabilities:
+$$P(A \cap B) = P(A) \cdot P(B)$$
 
 ## Key Definitions
-- **Independent Events**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Independent Events** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Product Criterion for Independence:** $P(A \cap B) = P(A)P(B)$ (valid even if $P(A)=0$ or $P(B)=0$).
+- **Conditional Criterion:** When $P(B) > 0$, $P(A \mid B) = P(A)$; when $P(A) > 0$, $P(B \mid A) = P(B)$.
+- **Complement Preservation:** If $A$ and $B$ are independent, then $(A, B^c)$, $(A^c, B)$, and $(A^c, B^c)$ are also independent pairs.
+- **Mutual Independence ($3$ Events):** $A, B, C$ are mutually independent iff all pairwise products hold **AND** $P(A \cap B \cap C) = P(A)P(B)P(C)$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Independent Events**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** Two independent servers $S_1$ and $S_2$ have uptime probabilities $P(S_1) = 0.90$ and $P(S_2) = 0.95$. Find (a) the probability that both are up, and (b) the probability that at least one is up.
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Independent Events** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- (a) $P(S_1 \cap S_2) = P(S_1)P(S_2) = 0.90 \times 0.95 = 0.855$.
+- (b) $P(S_1 \cup S_2) = 1 - P(S_1^c \cap S_2^c) = 1 - P(S_1^c)P(S_2^c) = 1 - (0.10)(0.05) = 1 - 0.005 = 0.995$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Which equation is the universal definition of statistical independence for two events $A$ and $B$?
+    - **A)** $P(A \cap B) = 0$
+    - **B)** $P(A \cap B) = P(A) \cdot P(B)$
+    - **C)** $P(A \cup B) = P(A) + P(B)$
+    - **D)** $P(A \mid B) = P(B \mid A)$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Suppose $P(A) = 0.40$ and $P(B) = 0.50$. If $A$ and $B$ are **independent**, what is $P(A \cup B)$?
+    - **A)** $0.70$
+    - **B)** $0.90$
+    - **C)** $0.20$
+    - **D)** $0.10$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Can two events $A$ and $B$ with $P(A) > 0$ and $P(B) > 0$ be **both** mutually exclusive and statistically independent?
+    - **A)** Yes, mutually exclusive events are always independent.
+    - **B)** Yes, whenever $P(A) + P(B) = 1$.
+    - **C)** No; if $A$ and $B$ are mutually exclusive, $P(A \cap B) = 0$, whereas independence requires $P(A \cap B) = P(A)P(B) > 0$, a contradiction (knowing $B$ occurred forces $P(A \mid B) = 0 \ne P(A)$).
+    - **D)** Only when $P(A) = P(B) = 0.5$.
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. If $A$ and $B$ are independent events with $P(A) = 0.30$ and $P(B) = 0.60$, what is $P(A^c \cap B^c)$?
+    - **A)** $0.10$
+    - **B)** $0.82$
+    - **C)** $0.18$
+    - **D)** $0.28$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Does **pairwise independence** of three events $A, B, C$ automatically guarantee **mutual independence** of $A, B, C$?
+    - **A)** Yes, pairwise independence always implies mutual independence.
+    - **B)** No; three events can satisfy $P(A \cap B)=P(A)P(B)$, $P(A \cap C)=P(A)P(C)$, and $P(B \cap C)=P(B)P(C)$ while still failing $P(A \cap B \cap C) = P(A)P(B)P(C)$ (e.g., Bernstein's coin-toss counterexample).
+    - **C)** Only when $P(A) = P(B) = P(C) = 1/3$.
+    - **D)** Pairwise independence is stronger than mutual independence.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Two events are independent by definition if and only if $P(A \cap B) = P(A)P(B)$.
+2. **A**. Since $A$ and $B$ are independent, $P(A \cap B) = (0.40)(0.50) = 0.20$. Then $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.40 + 0.50 - 0.20 = 0.70$.
+3. **C**. Disjoint events with positive probability have maximal negative dependence: if one occurs, the other is impossible ($P(A \mid B) = 0 \ne P(A)$).
+4. **D**. Independence of $A$ and $B$ implies independence of $A^c$ and $B^c$, so $P(A^c \cap B^c) = P(A^c)P(B^c) = (1 - 0.30)(1 - 0.60) = (0.70)(0.40) = 0.28$.
+5. **B**. Mutual independence of 3 events requires 4 equations (3 pairwise products plus the triple product $P(A \cap B \cap C) = P(A)P(B)P(C)$). Pairwise independence alone does not imply the triple product.
 
 ## References & Navigation
 

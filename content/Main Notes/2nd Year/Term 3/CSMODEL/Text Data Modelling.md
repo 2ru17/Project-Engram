@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Text Data Modelling]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Text Data Modelling]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 15: Text Data Modelling
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### 1. Introduction to Natural Language Processing (NLP) & Text Data Modelling **Natural Language Processing (NLP)**: A specialized branch of Computer Science and Artificial Intelligence that deals with the interaction between computers and human (natural) languages. **Goal of Text Data Modelling**: Human language is inherently unstructured. To perform tasks like sentiment analysis, document classification, or machine translation, we must convert raw text into structured numerical representations (vectors/matrices) that machine learning algorithms can process.
 
@@ -123,7 +123,7 @@ Predicts document categories ($y$) by calculating class probabilities $P(y \mid 
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. NLTK Text Pre-Processing
 Demonstrates tokenization, stop word removal, stemming, and lemmatization.
@@ -301,7 +301,7 @@ for i, doc in enumerate(X_test_text):
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 ### 1. Cosine Similarity (Word Vector & Document Similarity)
 Measures the cosine of the angle between two multi-dimensional vectors $\vec{u}$ and $\vec{v}$:
@@ -362,7 +362,7 @@ where: $P(C_k)$ is the prior probability of class $C_k$. $P(x_i \mid C_k)$ is th
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
 1. **Stemming vs. Lemmatization Output Trap**:
 *Trap*: Assuming stemming always yields valid English words.
@@ -390,7 +390,7 @@ where: $P(C_k)$ is the prior probability of class $C_k$. $P(x_i \mid C_k)$ is th
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 **Q1.** What is the primary operational difference between Stemming and Lemmatization? A) Stemming uses a dictionary lookup; Lemmatization applies heuristic chopping rules. B) Stemming is rule-based and may output non-words; Lemmatization is dictionary-based and outputs valid base words. C) Stemming is computationally slower than Lemmatization because it parses grammatical context. D) Stemming requires Part-Of-Speech (POS) tags, while Lemmatization does not.
 
@@ -445,47 +445,48 @@ Why is `Line X` flawed for an exam or production machine learning evaluation? A)
 
 ---
 
-### 💡 Answer Key
+### Answer Key
  **Q1: B** — Stemming relies on rule-based heuristics that chop off affixes (often yielding non-words like `'troubl'`), whereas Lemmatization uses dictionary morphing (e.g., WordNet) to return valid canonical base words (lemmas). **Q2: A** — Scikit-Learn sorts feature names alphabetically: `['cat', 'dog', 'fish']`. In Doc 1 (`"cat dog cat"`), counts are `cat=2`, `dog=1`, `fish=0` $\rightarrow$ `[2, 1, 0]`. In Doc 2 (`"dog dog fish"`), counts are `cat=0`, `dog=2`, `fish=1` $\rightarrow$ `[0, 2, 1]`. **Q3: A** — Calculate TF: $TF = \frac{5}{100} = 0.05$. Calculate IDF: $IDF = \log_{10}\left(\frac{100}{10}\right) = \log_{10}(10) = 1.0$. Compute TF-IDF: $TF \times IDF = 0.05 \times 1.0 = 0.05$. **Q4: B** — Calling `fit_transform(test_data)` on test data re-fits the vocabulary based solely on `test_data` rather than projecting test samples onto the learned training vocabulary. The correct method for test data is `tfidf.transform(test_data)`. **Q5: B** — CBOW takes multiple surrounding context words as input to predict the missing central target word. Skip-Gram takes a single central target word as input to predict its surrounding context words.
 
 ## Multiple Choice Questions
 
 1. What is the primary difference between Stemming and Lemmatization?
-- **A)** Stemming uses a dictionary, Lemmatization uses heuristic rules
-- **B)** Stemming often outputs non-words by chopping suffixes; Lemmatization outputs valid dictionary base words
-- **C)** Stemming is much slower than Lemmatization
-- **D)** Lemmatization does not require POS tags
+    - **A)** Stemming uses a dictionary, Lemmatization uses heuristic rules
+    - **B)** Stemming often outputs non-words by chopping suffixes; Lemmatization outputs valid dictionary base words
+    - **C)** Stemming is much slower than Lemmatization
+    - **D)** Lemmatization does not require POS tags
 
 2. In the TF-IDF calculation, what happens to the IDF weight if a word appears in every single document?
-- **A)** The IDF weight becomes negative
-- **B)** The IDF weight is maximized
-- **C)** The IDF weight becomes zero
-- **D)** It is unaffected
+    - **A)** The IDF weight becomes negative
+    - **B)** The IDF weight is maximized
+    - **C)** The IDF weight becomes zero
+    - **D)** It is unaffected
 
 3. In a Bag of Words (`CountVectorizer`) model, what information is lost?
-- **A)** The frequency of words
-- **B)** The length of the document
-- **C)** Word order and grammatical structure
-- **D)** The exact vocabulary used
+    - **A)** The frequency of words
+    - **B)** The length of the document
+    - **C)** Word order and grammatical structure
+    - **D)** The exact vocabulary used
 
 4. Which Word2Vec architecture predicts a target word based on its surrounding context words?
-- **A)** Skip-Gram
-- **B)** TF-IDF
-- **C)** Continuous Bag of Words (CBOW)
-- **D)** N-Grams
+    - **A)** Skip-Gram
+    - **B)** TF-IDF
+    - **C)** Continuous Bag of Words (CBOW)
+    - **D)** N-Grams
 
 5. Why should `fit_transform()` only be used on training data, and not on test data?
-- **A)** It causes the test data to be deleted
-- **B)** It rebuilds a new vocabulary for the test set, leading to mismatched feature spaces and data leakage
-- **C)** It prevents the model from calculating TF-IDF scores
-- **D)** It makes the algorithm run infinitely
+    - **A)** It causes the test data to be deleted
+    - **B)** It rebuilds a new vocabulary for the test set, leading to mismatched feature spaces and data leakage
+    - **C)** It prevents the model from calculating TF-IDF scores
+    - **D)** It makes the algorithm run infinitely
 
 ### Answer Key & Explanations
-1. **B)** Stemming uses crude rules (e.g. chopping ing), while Lemmatization maps words to their canonical lemma.
-2. **C)** IDF = log(N/df). If a word is in all N documents, df=N, log(1) = 0.
-3. **C)** BoW treats documents as unordered collections of term frequencies, ignoring syntax.
-4. **C)** CBOW uses context to predict the target, whereas Skip-Gram uses the target to predict context.
-5. **B)** The test set must be transformed using the exact vocabulary features learned from the training set.
+
+1. **B**. Stemming uses crude rules (e.g. chopping ing), while Lemmatization maps words to their canonical lemma.
+2. **C**. IDF = log(N/df). If a word is in all N documents, df=N, log(1) = 0.
+3. **C**. BoW treats documents as unordered collections of term frequencies, ignoring syntax.
+4. **C**. CBOW uses context to predict the target, whereas Skip-Gram uses the target to predict context.
+5. **B**. The test set must be transformed using the exact vocabulary features learned from the training set.
 
 ## References & Navigation
 

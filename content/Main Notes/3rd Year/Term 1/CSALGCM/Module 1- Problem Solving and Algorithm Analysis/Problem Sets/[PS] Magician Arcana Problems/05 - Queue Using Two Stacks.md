@@ -14,7 +14,7 @@ hackerrank_domain: Queues
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Queues]] #[[Stacks]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Queues]] #[[Stacks]]
 
 ---
 
@@ -161,7 +161,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Problems, Problem Types, and Algorithms]]

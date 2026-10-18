@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Web Development]] #[[CCAPDEV]] #[[NodeJS]] #[[Code Snippets]] #[[M4]]
+**Tags:** #[[Web Development]] #[[CCAPDEV]] #[[NodeJS]] #[[Code Snippets]] #[[M4]]
 
 ---
 
@@ -35,9 +35,9 @@ Creating a Server
 To create a server, you need to include the http module
 A common way to include modules is as follows:
 const varName = require('modulename');
-➥ varName
+ varName
 constant variable to hold your module
-➥ modulename
+ modulename
 the name of the module to include
 ```
 
@@ -46,9 +46,9 @@ Creating a Server
 To create a server, you need to include the http module
 A common way to include modules is as follows:
 const http = require(‘http');
-➥ varName
+ varName
 constant variable to hold your module
-➥ modulename
+ modulename
 the name of the module to include
 ```
 
@@ -56,9 +56,9 @@ the name of the module to include
 Creating a Server
 After including the http module, let’s use the http variable to create a server
 http.createServer([requestListener]);
-➥ .createServer()
+ .createServer()
 method that return the http.Server object
-➥ [requestListener]
+ [requestListener]
 listens to a port and executes a functioneach time a request is made to the server
 ```
 
@@ -66,10 +66,10 @@ listens to a port and executes a functioneach time a request is made to the ser
 The Request Listener
 The requestListener handles requests and responses from the client and back to the client respectively
 function (req, res) { }
-➥ req
+ req
 represents an IncomingMessage object containing
 details about the client request
-➥ res
+ res
 represents a ServerResponse object, responsible for
 the response stream back to the client
 ```
@@ -79,11 +79,11 @@ Creating a Server
 To activate the server, we have to make it listen to a port.
 This can be done using server.listen
 server.listen([port], [host], [callback]);
-➥ port
+ port
 the port to bind the server into
-➥ host
+ host
 the IP address to bind the server
-➥ callback
+ callback
 the function executed after the server has been
 bounded
 ```
@@ -97,27 +97,28 @@ bounded
 ## Multiple Choice Questions
 
 1. Which Node.js module must be required to create a basic web server manually?
-- **A)** `express`
-- **B)** `fs`
-- **C)** `http`
-- **D)** `path`
+    - **A)** `express`
+    - **B)** `fs`
+    - **C)** `http`
+    - **D)** `path`
 
 2. What does the `req` parameter represent in the request listener function `function (req, res) { }`?
-- **A)** A ServerResponse object responsible for the stream back to the client.
-- **B)** An IncomingMessage object containing details about the client request.
-- **C)** A configuration file for the server's active port.
-- **D)** The HTTP status code of the incoming connection.
+    - **A)** A ServerResponse object responsible for the stream back to the client.
+    - **B)** An IncomingMessage object containing details about the client request.
+    - **C)** A configuration file for the server's active port.
+    - **D)** The HTTP status code of the incoming connection.
 
 3. How do you make a Node.js HTTP server start accepting requests?
-- **A)** By invoking `server.start()`
-- **B)** By invoking `http.init()`
-- **C)** By invoking `server.listen([port])`
-- **D)** By invoking `req.accept()`
+    - **A)** By invoking `server.start()`
+    - **B)** By invoking `http.init()`
+    - **C)** By invoking `server.listen([port])`
+    - **D)** By invoking `req.accept()`
 
 ### Answer Key & Explanations
-1. **C)** To create a server, you need to include the core `http` module using `require('http')`.
-2. **B)** The `req` parameter represents an `IncomingMessage` object containing details about the client request.
-3. **C)** To activate the server and make it accept requests, `server.listen([port])` must be called.
+
+1. **C**. To create a server, you need to include the core `http` module using `require('http')`.
+2. **B**. The `req` parameter represents an `IncomingMessage` object containing details about the client request.
+3. **C**. To activate the server and make it accept requests, `server.listen([port])` must be called.
 
 ## References & Navigation
 

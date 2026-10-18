@@ -11,111 +11,69 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Conditional Probability and Multiplicative Rules]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Conditional Probability and Multiplicative Rules]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Conditional Probability and Multiplicative Rules**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+**Conditional Probability** and the **Multiplicative Rule** link the probability of joint intersections $P(A \cap B)$ with sequential conditioning $P(A)P(B \mid A)$. Together, they enable multi-stage probability tree analysis, sampling without replacement, and Bayesian inference.
 
 ## Key Definitions
-- **Conditional Probability and Multiplicative Rules**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Conditional Probability and Multiplicative Rules** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Conditional Probability:** $P(B \mid A) = \frac{P(A \cap B)}{P(A)}$ for $P(A) > 0$.
+- **General Multiplicative Rule:** $P(A \cap B) = P(A)P(B \mid A) = P(B)P(A \mid B)$.
+- **Chain Rule for $n$ Events:** $P(A_1 \cap A_2 \cap \cdots \cap A_n) = P(A_1) P(A_2 \mid A_1) P(A_3 \mid A_1 \cap A_2) \cdots P(A_n \mid A_1 \cap \cdots \cap A_{n-1})$.
+- **Law of Total Probability (2 Branches):** $P(B) = P(A)P(B \mid A) + P(A^c)P(B \mid A^c)$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Conditional Probability and Multiplicative Rules**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** A box of $20$ microprocessors contains $4$ defective units. Two processors are selected at random **without replacement**. Find (a) the probability that both are defective, and (b) the probability that the second is defective given the first was non-defective.
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Conditional Probability and Multiplicative Rules** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- Let $D_1, D_2$ be the events that the 1st and 2nd processors are defective.
+- (a) By the Multiplicative Rule: $P(D_1 \cap D_2) = P(D_1) P(D_2 \mid D_1) = \frac{4}{20} \times \frac{3}{19} = \frac{12}{380} = \frac{3}{95} \approx 0.0316$.
+- (b) Given $D_1^c$ occurred ($1$ good unit removed), $4$ defective units remain among $19$ total units: $P(D_2 \mid D_1^c) = \frac{4}{19} \approx 0.2105$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Which equation correctly states the general Multiplicative Rule for any two events $A$ and $B$ with $P(A) > 0$?
+    - **A)** $P(A \cap B) = P(A) + P(B \mid A)$
+    - **B)** $P(A \cap B) = P(A) \cdot P(B \mid A)$
+    - **C)** $P(A \cap B) = \frac{P(B \mid A)}{P(A)}$
+    - **D)** $P(A \cap B) = P(A \mid B) \cdot P(B \mid A)$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. An urn contains $5$ red balls and $3$ blue balls. Two balls are drawn sequentially **without replacement**. What is the probability that the first ball is red and the second ball is blue, $P(R_1 \cap B_2)$?
+    - **A)** $\frac{15}{56}$
+    - **B)** $\frac{15}{64}$
+    - **C)** $\frac{5}{14}$
+    - **D)** $\frac{3}{8}$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. For a fixed conditioning event $A$ with $P(A) > 0$, what does $P(B \mid A) + P(B^c \mid A)$ equal?
+    - **A)** $P(A)$
+    - **B)** $P(B) + P(B^c) - P(A)$
+    - **C)** $1$
+    - **D)** $0$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Why is $P(B \mid A) + P(B \mid A^c)$ generally NOT equal to $1$?
+    - **A)** Because $P(B)$ is always $0$.
+    - **B)** Because $A$ and $A^c$ overlap.
+    - **C)** Because conditional probabilities can exceed $1$.
+    - **D)** Because $P(B \mid A)$ and $P(B \mid A^c)$ are probabilities evaluated on two different conditioning sample spaces ($A$ vs. $A^c$), not complementary events within the same conditioning space.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Given $P(A) = 0.40$, $P(B \mid A) = 0.50$, and $P(B \mid A^c) = 0.20$, what is the unconditional probability $P(B)$?
+    - **A)** $0.70$
+    - **B)** $0.32$
+    - **C)** $0.20$
+    - **D)** $0.12$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Cross-multiplying the definition $P(B \mid A) = \frac{P(A \cap B)}{P(A)}$ yields the general Multiplicative Rule $P(A \cap B) = P(A) \cdot P(B \mid A)$.
+2. **A**. $P(R_1) = \frac{5}{8}$. Given a red ball was removed first, $3$ blue balls remain out of $7$ total balls, so $P(B_2 \mid R_1) = \frac{3}{7}$. Multiplying gives $\frac{5}{8} \times \frac{3}{7} = \frac{15}{56}$.
+3. **C**. $P(\cdot \mid A)$ is a valid probability measure on the reduced sample space $A$. Since $B$ and $B^c$ partition $A$ into $(A \cap B)$ and $(A \cap B^c)$, $P(B \mid A) + P(B^c \mid A) = \frac{P(A \cap B) + P(A \cap B^c)}{P(A)} = \frac{P(A)}{P(A)} = 1$.
+4. **D**. Complements must share the *same* conditioning event: $P(B \mid A) + P(B^c \mid A) = 1$, whereas $P(B \mid A)$ and $P(B \mid A^c)$ condition on different sets $A$ and $A^c$.
+5. **B**. By the Law of Total Probability and the Multiplicative Rule, $P(B) = P(A)P(B \mid A) + P(A^c)P(B \mid A^c) = (0.40)(0.50) + (0.60)(0.20) = 0.20 + 0.12 = 0.32$.
 
 ## References & Navigation
 

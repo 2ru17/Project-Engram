@@ -10,7 +10,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Multiplexing]]
+**Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Multiplexing]]
 
 ---
 
@@ -39,34 +39,35 @@ $$ C = 3000 \log_2(1 + 3162) \approx 3000 \times 11.62 \approx 34860 \text{ bps}
 ## Multiple Choice Questions
 
 1. What layer is responsible for framing and flow control?
-- **A)** Physical Layer
-- **B)** Data Link Layer
-- **C)** Network Layer
-- **D)** Application Layer
+    - **A)** Physical Layer
+    - **B)** Data Link Layer
+    - **C)** Network Layer
+    - **D)** Application Layer
 
 2. In the Shannon capacity example provided, what is the exact value of SNR used?
-- **A)** 3000
-- **B)** 3162
-- **C)** 11.62
-- **D)** 34860
+    - **A)** 3000
+    - **B)** 3162
+    - **C)** 11.62
+    - **D)** 34860
 
 3. What is exchanged during Data Communications?
-- **A)** Analog frequencies
-- **B)** OSI reference models
-- **C)** Digital data
-- **D)** Channel bandwidth
+    - **A)** Analog frequencies
+    - **B)** OSI reference models
+    - **C)** Digital data
+    - **D)** Channel bandwidth
 
 4. What manages access and transmission over diverse physical media?
-- **A)** The Shannon formula
-- **B)** Protocols
-- **C)** The Physical Layer alone
-- **D)** Bandwidth allocations
+    - **A)** The Shannon formula
+    - **B)** Protocols
+    - **C)** The Physical Layer alone
+    - **D)** Bandwidth allocations
 
 ### Answer Key & Explanations
-1. **B)** The text states that "The Data Link layer deals with framing, flow control, and error detection/correction."
-2. **B)** The example calculation uses an SNR value of 3162.
-3. **C)** Data Communications is defined as "The exchange of digital data between two or more nodes."
-4. **B)** The summary states, "Protocols manage access and transmission over diverse physical media."
+
+1. **B**. The text states that "The Data Link layer deals with framing, flow control, and error detection/correction."
+2. **B**. The example calculation uses an SNR value of 3162.
+3. **C**. Data Communications is defined as "The exchange of digital data between two or more nodes."
+4. **B**. The summary states, "Protocols manage access and transmission over diverse physical media."
 
 ## References & Navigation
 

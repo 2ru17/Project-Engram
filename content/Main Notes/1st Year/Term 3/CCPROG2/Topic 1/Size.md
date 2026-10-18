@@ -3,7 +3,7 @@ id: Size
 type: note
 course: CCPROG2
 topic: C Programming
-status: draft
+status: completed
 ---
 
 # Size
@@ -13,7 +13,7 @@ status: draft
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
+**Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
 
 ---
 
@@ -81,34 +81,32 @@ void printArray(int arr[], int size) {
 
 > TL;DR — Array size is the number of elements, fixed at declaration. Use `sizeof(arr)/sizeof(arr[0])` for element count. Always pass size separately to functions since arrays decay to pointers.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** [[Declaration]] — [[Element Type]] — [[Accessing Elements]] — [[Name]] — [[Arrays and Functions]] **Source / Reference:**
 
 ## Multiple Choice Questions
+
 1. Which operator can be used to determine the total memory size in bytes occupied by an array?
-- **A)** `lengthof`
-- **B)** `sizeof`
-- **C)** `count`
-- **D)** `size`
+    - **A)** `lengthof`
+    - **B)** `sizeof`
+    - **C)** `count`
+    - **D)** `size`
 2. How can you calculate the number of elements in a locally declared array `arr`?
-- **A)** `sizeof(arr) * sizeof(arr[0])`
-- **B)** `sizeof(arr) / sizeof(arr[0])`
-- **C)** `arr.length`
-- **D)** `count(arr)`
+    - **A)** `sizeof(arr) * sizeof(arr[0])`
+    - **B)** `sizeof(arr) / sizeof(arr[0])`
+    - **C)** `arr.length`
+    - **D)** `count(arr)`
 3. What is a strict requirement regarding the size of a standard array during its declaration in C89?
-- **A)** It must be a floating-point number
-- **B)** It must be evaluated dynamically at runtime
-- **C)** It must be a positive integer constant expression
-- **D)** It must be a negative number
+    - **A)** It must be a floating-point number
+    - **B)** It must be evaluated dynamically at runtime
+    - **C)** It must be a positive integer constant expression
+    - **D)** It must be a negative number
 
 ### Answer Key & Explanations
-1. **B)** The `sizeof` operator natively evaluates the memory footprint of objects during compilation.
-2. **B)** Dividing the entire array's byte size by the byte size of a single element yields the item count.
-3. **C)** Older C standards mandate sizes be known strictly at compile-time via constants.
+
+1. **B**. The `sizeof` operator natively evaluates the memory footprint of objects during compilation.
+2. **B**. Dividing the entire array's byte size by the byte size of a single element yields the item count.
+3. **C**. Older C standards mandate sizes be known strictly at compile-time via constants.
 
 ## References & Navigation
 

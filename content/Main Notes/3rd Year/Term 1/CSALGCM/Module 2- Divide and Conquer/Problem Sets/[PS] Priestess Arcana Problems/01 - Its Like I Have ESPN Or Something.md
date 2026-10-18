@@ -14,7 +14,7 @@ hackerrank_domain: Divide and Conquer
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Order Statistics]] #[[Merge Sort Tree]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Order Statistics]] #[[Merge Sort Tree]]
 
 ---
 
@@ -43,15 +43,15 @@ For each query, output one line containing a single integer which denotes the nu
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > Karen can read minds up to distance `e`. Given `n` people scattered on a grid and `q` queries each asking "how many people can Karen sense at energy level e?", answer each query.
 > "Sense" = Manhattan distance ≤ e.
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > For every query, loop through ALL `n` people and check each one's distance.
 > **O(n × q)** — if n = q = 100,000, that's **10 billion ops** → TLE.
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > Compute ALL distances once upfront, sort them. Each query becomes a single binary search (`upper_bound`) to count how many distances ≤ e.
 > **O(n log n + q log n)** — fast enough for any input.
 
@@ -160,9 +160,9 @@ After sort:  [2, 19, 19]
 
 **Step 3 — Queries using upper_bound:**
 ```
-Query e=30: upper_bound([2,19,19], 30) → past last element → index 3. Answer: 3 ✓
-Query e=6:  upper_bound([2,19,19], 6)  → points to first 19  → index 1. Answer: 1 ✓
-Query e=1:  upper_bound([2,19,19], 1)  → points to 2         → index 0. Answer: 0 ✓
+Query e=30: upper_bound([2,19,19], 30) → past last element → index 3. Answer: 3 
+Query e=6:  upper_bound([2,19,19], 6)  → points to first 19  → index 1. Answer: 1 
+Query e=1:  upper_bound([2,19,19], 1)  → points to 2         → index 0. Answer: 0 
 ```
 
 ```mermaid
@@ -248,7 +248,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

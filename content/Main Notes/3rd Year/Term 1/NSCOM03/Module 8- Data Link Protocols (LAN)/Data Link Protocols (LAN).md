@@ -63,34 +63,35 @@ $$ C = 3000 \log_2(1 + 3162) \approx 3000 \times 11.62 \approx 34860 \text{ bps}
 ## Multiple Choice Questions
 
 1. What is the lowest network layer mentioned in the text?
-- **A)** Data Link Layer
-- **B)** Physical Layer
-- **C)** Network Layer
-- **D)** Session Layer
+    - **A)** Data Link Layer
+    - **B)** Physical Layer
+    - **C)** Network Layer
+    - **D)** Session Layer
 
 2. Which of the following is explicitly handled by the Data Link layer?
-- **A)** Analog/digital signals
-- **B)** Attenuation
-- **C)** Error detection/correction
-- **D)** Signal bandwidth
+    - **A)** Analog/digital signals
+    - **B)** Attenuation
+    - **C)** Error detection/correction
+    - **D)** Signal bandwidth
 
 3. If $B = 3000$ Hz and $SNR = 3162$, the calculated Shannon capacity is 34860 in what unit?
-- **A)** Hertz (Hz)
-- **B)** Bits per second (bps)
-- **C)** Bytes per minute
-- **D)** Decibels (dB)
+    - **A)** Hertz (Hz)
+    - **B)** Bits per second (bps)
+    - **C)** Bytes per minute
+    - **D)** Decibels (dB)
 
 4. Which theoretical model is explicitly named as standardizing the precise synchronization and structuring of data?
-- **A)** TCP/IP Model
-- **B)** OSI Reference Model
-- **C)** Shannon-Weaver Model
-- **D)** Data Communications Model
+    - **A)** TCP/IP Model
+    - **B)** OSI Reference Model
+    - **C)** Shannon-Weaver Model
+    - **D)** Data Communications Model
 
 ### Answer Key & Explanations
-1. **B)** The Physical Layer is defined as "The lowest layer responsible for the physical connection between devices."
-2. **C)** The text states that "The Data Link layer deals with framing, flow control, and error detection/correction."
-3. **B)** The final result of the calculation is given as "34860 bps".
-4. **B)** The text states "Theoretical models such as the OSI Reference Model standardize these processes."
+
+1. **B**. The Physical Layer is defined as "The lowest layer responsible for the physical connection between devices."
+2. **C**. The text states that "The Data Link layer deals with framing, flow control, and error detection/correction."
+3. **B**. The final result of the calculation is given as "34860 bps".
+4. **B**. The text states "Theoretical models such as the OSI Reference Model standardize these processes."
 
 ## References & Navigation
 

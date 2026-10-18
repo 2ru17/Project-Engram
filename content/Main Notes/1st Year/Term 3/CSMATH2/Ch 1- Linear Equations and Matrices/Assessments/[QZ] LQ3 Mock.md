@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
+**Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
 
 ---
 
@@ -197,10 +197,6 @@ Find $L(5, -2)$.
 ## Summary
 
 > TL;DR — This mock exam covers **linear independence**, **basis and dimension**, **linear transformations**, **kernel and range**, and the **rank-nullity theorem**. 20 multiple-choice + 5 problem-solving items. Key strategy: row-reduce first, then read off pivot/free columns.
-
-## Review Questions
-
-_To be added._
 
 ## Links
  **Related:** **Source / Reference:**

@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
+**Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
 
 ---
 
@@ -92,87 +92,48 @@ _Context: The final router is delivering the packet to the destination computer.
 
 > TL;DR — The "golden rule": IP addresses remain constant from source to destination, while MAC addresses change at every router hop. Routers use ARP to find the next-hop MAC and rewrite the link-layer header accordingly.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Pasted image 20251121094215.png]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "MAC Addresses**  **Source MAC:** The _____ interface sending the frame."?
-- **A)** Network
-- **B)** Router
-- **C)** Protocol
-- **D)** router
+1. How do **Layer-2 MAC (Link-Layer) addresses** and **Layer-3 IP (Network-Layer) addresses** differ in structure, mutability, and purpose?
+    - **A)** MAC addresses are 32-bit hierarchical addresses that change at every router hop; IP addresses are 48-bit flat addresses burned into the NIC.
+    - **B)** A **MAC address** is a **48-bit (6-byte) flat hardware identifier** (represented in hexadecimal like `1A-2F-BB-76-09-AD`) that stays portable with the NIC, whereas an **IP address** is a **hierarchical topological address** (32-bit IPv4 / 128-bit IPv6) determined by the subnet to which the host is currently attached.
+    - **C)** MAC addresses are used by BGP to route across the global Internet, while IP addresses are used only inside a single Ethernet switch.
+    - **D)** They are identical 64-bit numbers.
 
-2. Which word completes the following sentence from the text: "Problem Analysis  ### Point 6 (Node C $\rightarrow$ First Router)  _Context: The packet is _____ the source computer (C) and heading to its default gateway (the router interface)._  **1/2."?
-- **A)** Router
-- **B)** Network
-- **C)** Protocol
-- **D)** leaving
+2. As an IP datagram travels from Host $A$ (on Subnet 1) through Router $R$ to Host $B$ (on Subnet 2), what happens to the **Source/Destination IP addresses** vs. the **Source/Destination MAC addresses** when the packet passes through Router $R$ (assuming no NAT)?
+    - **A)** The Layer-3 **Source IP ($A$) and Destination IP ($B$) remain unchanged end-to-end**, whereas the Layer-2 **Frame Source MAC and Destination MAC are stripped and rewritten at every router hop** (Hop 1 Frame: $\text{Src MAC} = A, \text{Dst MAC} = R_{\text{in}}$; Hop 2 Frame: $\text{Src MAC} = R_{\text{out}}, \text{Dst MAC} = B$).
+    - **B)** Both the IP addresses and the MAC addresses are rewritten at Router $R$.
+    - **C)** The MAC addresses remain unchanged end-to-end, while the IP addresses change at every hop.
+    - **D)** Neither MAC nor IP addresses ever change.
 
-3. Which word completes the following sentence from the text: "Do the source and destination MAC addresses change at point _____  **Analysis:** Point 4 represents a new physical link (wire)."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** 4
+3. What is the role of the **Address Resolution Protocol (ARP)** when Host $A$ on a LAN knows the target IP address $IP_X$ on the **same subnet** but does not know its Layer-2 MAC address?
+    - **A)** Host $A$ sends a DNS query to the Root DNS server asking for the MAC address.
+    - **B)** Host $A$ sends an ARP Request across 10 routers to the remote subnet.
+    - **C)** Host $A$ broadcasts an **ARP Request** frame to the Layer-2 broadcast MAC address **`FF-FF-FF-FF-FF-FF`** asking *"Who has $IP_X$?"*; all nodes on the LAN receive the broadcast, and only node $X$ replies with a **unicast ARP Reply** frame containing its MAC address $MAC_X$.
+    - **D)** Host $A$ uses DHCP to assign a new MAC address to $X$.
 
-4. Which word completes the following sentence from the text: "Do the source and destination MAC _____ change at point 2?**  **Analysis:** Yes."?
-- **A)** addresses
-- **B)** Router
-- **C)** Network
-- **D)** Protocol
+4. When Host $A$ (`192.168.1.10/24`) wants to send an IP packet to a remote server $B$ (`8.8.8.8`) located on a **different subnet**, which IP address does Host $A$ query via ARP to put in the Ethernet frame's **Destination MAC** field?
+    - **A)** It sends an ARP request for `8.8.8.8` directly.
+    - **B)** It sends the IP packet without an Ethernet frame header.
+    - **C)** It sets the Destination MAC to `00-00-00-00-00-00`.
+    - **D)** It checks its subnet mask, determines that `8.8.8.8` is off-subnet, and uses ARP to resolve the MAC address of its **Default Gateway (first-hop router interface on `192.168.1.0/24`)**; the Ethernet frame is addressed to the router's MAC while the encapsulated IP packet is addressed to `8.8.8.8`.
 
-5. Which word completes the following sentence from the text: "$\rightarrow$ **Router Interface _____ (81-D8...)**  **3/4."?
-- **A)** Protocol
-- **B)** Network
-- **C)** 6
-- **D)** Router
-
-6. Which word completes the following sentence from the text: "The router is now the sender (Link _____ and Node A is the receiver."?
-- **A)** Layer
-- **B)** Router
-- **C)** Protocol
-- **D)** Network
-
-7. Which word completes the following sentence from the text: "**Correct Answer:** **Yes** (The previous MACs were for the _____ link; the new MACs are for the Router-Router link)."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** CRouter
-
-8. Which word completes the following sentence from the text: "**MAC Addresses (Link Layer):** act _____ the "Next Hop" ticket."?
-- **A)** Network
-- **B)** Router
-- **C)** Protocol
-- **D)** like
-
-9. Which word completes the following sentence from the text: "Confusing the source/destination MAC at a _____ hop with the original sender/receiver."?
-- **A)** given
-- **B)** Network
-- **C)** Router
-- **D)** Protocol
-
-10. Which word completes the following sentence from the text: "--- id: Addressing-and-Forwarding type: note course: CSNETWK topic: status: completed ---  # Addressing and Forwarding  > [!info] Document Metadata > - **Course:** `=this.course` > - **Topic:** `=this.topic` > - **Status:** `=this.status`  **🏷️ Tags:** #[[CSNETWK]] _____ Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]  ---  ## Overview  > The Golden Rule of Forwarding  ## Key Concepts  IP Addresses (Network Layer) MAC Addresses (Link Layer) Sender Receiver Path  ## Details / Theory  ## 1."?
-- **A)** Network
-- **B)** Computer
-- **C)** Protocol
-- **D)** Router
-
+5. Why are entries in a host's **ARP Cache (ARP Table)** assigned a Time-To-Live (typically ~20 minutes) rather than being stored permanently?
+    - **A)** Because ARP tables can only hold 1 entry at a time.
+    - **B)** To automatically purge stale IP-to-MAC mappings if a host's NIC is replaced or a DHCP lease reassigns an IP address to a different physical machine on the LAN (plug-and-play self-healing).
+    - **C)** Because MAC addresses increment by 1 every 20 minutes.
+    - **D)** To force the router to reboot every 20 minutes.
 
 ### Answer Key & Explanations
-1. **D)** router completes the sentence: MAC Addresses**  **Source MAC:** The router interf...
-2. **D)** leaving completes the sentence: Problem Analysis  ### Point 6 (Node C $\rightarrow...
-3. **D)** 4 completes the sentence: Do the source and destination MAC addresses change...
-4. **A)** addresses completes the sentence: Do the source and destination MAC addresses change...
-5. **C)** 6 completes the sentence: $\rightarrow$ **Router Interface 6 (81-D8...)**  *...
-6. **A)** Layer completes the sentence: The router is now the sender (Link Layer), and Nod...
-7. **D)** CRouter completes the sentence: **Correct Answer:** **Yes** (The previous MACs wer...
-8. **D)** like completes the sentence: **MAC Addresses (Link Layer):** act like the "Next...
-9. **A)** given completes the sentence: Confusing the source/destination MAC at a given ho...
-10. **B)** Computer completes the sentence: --- id: Addressing-and-Forwarding type: note cours...
+
+1. **B**. MAC addresses are 48-bit flat link-layer identifiers used for local single-hop frame delivery; IP addresses are hierarchical network-layer locators used for multi-hop routing across subnets.
+2. **A**. Without NAT, the IP header's Source IP ($A$) and Destination IP ($B$) stay fixed from source to destination, while each link along the path encapsulates the datagram in a new Layer-2 frame with hop-specific Source and Destination MAC addresses.
+3. **C**. ARP resolves a same-subnet IPv4 address to a 48-bit MAC address by broadcasting the query (`FF-FF-FF-FF-FF-FF`) on the local broadcast domain and receiving a unicast reply from the target owner.
+4. **D**. ARP works only within the local Layer-2 broadcast domain (same subnet). To reach an off-subnet IP (`8.8.8.8`), the sender addresses the Layer-2 Ethernet frame to its local default gateway's MAC address.
+5. **B**. Expiring cached ARP entries after a timeout ensures that dynamic IP reassignments or hardware NIC swaps do not permanently blackhole local LAN traffic.
 
 ## References & Navigation
 

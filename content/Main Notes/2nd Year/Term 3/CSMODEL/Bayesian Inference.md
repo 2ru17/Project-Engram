@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Bayesian Inference]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Bayesian Inference]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 10: Bayesian Inference
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### 1. Frequentist vs. Bayesian Paradigm
 Statistical inference seeks to draw conclusions about population parameters based on sample data. Two main paradigms exist in modern statistics:
@@ -158,7 +158,7 @@ Where $|V|$ is the size of the feature vocabulary.
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. `scipy.stats.beta` — Beta Distribution Operations
 Computes Beta distribution PDF values, exact theoretical mean, variance, and 95% equal-tailed credible intervals.
@@ -331,7 +331,7 @@ print("Probabilities [P(Ham|X), P(Spam|X)]:", np.round(probabilities[0], 4))
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 ### Bayes' Theorem & Core Inference
 $$\text{Bayes' Theorem}: \quad P(\theta \mid D) = \frac{P(D \mid \theta) P(\theta)}{P(D)}$$
@@ -362,7 +362,7 @@ $$\text{MultinomialNB Laplace Smoothing}: \quad P(X_i = t \mid Y = c_k) = \frac{
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
 > [!WARNING]
 > **Trap 1: Confusing 95% Credible Intervals with 95% Confidence Intervals**
@@ -394,7 +394,7 @@ $$\text{MultinomialNB Laplace Smoothing}: \quad P(X_i = t \mid Y = c_k) = \frac{
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 ### Q1. Medical Diagnostic Calculation (Bayes' Theorem)
 A rare disease affects $1\%$ of a population ($P(D) = 0.01$). A diagnostic test for the disease has a sensitivity of $95\%$ ($P(T^+ \mid D) = 0.95$) and a specificity of $90\%$ ($P(T^- \mid \neg D) = 0.90$).
@@ -470,7 +470,7 @@ What will be displayed for `Class Priors` and `Predicted Class for X=6`?
 
 ---
 
-## 🎯 Answer Key & Step-by-Step Solutions
+## Answer Key & Step-by-Step Solutions
 
 ### Q1 Answer: B
 **Step-by-Step Solution:**
@@ -542,41 +542,42 @@ Correct Option is **C**.
 ## Multiple Choice Questions
 
 1. In Bayes theorem, what does the `prior` represent?
-- **A)** The probability of the data given the hypothesis
-- **B)** The initial belief about the hypothesis before seeing data
-- **C)** The updated belief after observing data
-- **D)** The marginal likelihood of the data
+    - **A)** The probability of the data given the hypothesis
+    - **B)** The initial belief about the hypothesis before seeing data
+    - **C)** The updated belief after observing data
+    - **D)** The marginal likelihood of the data
 
 2. Which term describes a prior distribution that, when multiplied by the likelihood, results in a posterior from the same distribution family?
-- **A)** Uniform prior
-- **B)** Objective prior
-- **C)** Conjugate prior
-- **D)** Empirical prior
+    - **A)** Uniform prior
+    - **B)** Objective prior
+    - **C)** Conjugate prior
+    - **D)** Empirical prior
 
 3. What is the fundamental assumption of the Naive Bayes classifier?
-- **A)** Features are mutually exclusive
-- **B)** Features are conditionally independent given the class label
-- **C)** The prior probabilities are equal for all classes
-- **D)** The likelihood function is normally distributed
+    - **A)** Features are mutually exclusive
+    - **B)** Features are conditionally independent given the class label
+    - **C)** The prior probabilities are equal for all classes
+    - **D)** The likelihood function is normally distributed
 
 4. How does the Bayesian approach differ from the Frequentist approach?
-- **A)** Bayesian inference treats parameters as fixed and unknown
-- **B)** Bayesian inference treats parameters as random variables with probability distributions
-- **C)** Frequentist inference incorporates prior beliefs natively
-- **D)** Bayesian inference does not use likelihood functions
+    - **A)** Bayesian inference treats parameters as fixed and unknown
+    - **B)** Bayesian inference treats parameters as random variables with probability distributions
+    - **C)** Frequentist inference incorporates prior beliefs natively
+    - **D)** Bayesian inference does not use likelihood functions
 
 5. The `posterior` probability is proportional to:
-- **A)** Likelihood + Prior
-- **B)** Likelihood / Prior
-- **C)** Likelihood * Prior
-- **D)** Prior - Likelihood
+    - **A)** Likelihood + Prior
+    - **B)** Likelihood / Prior
+    - **C)** Likelihood * Prior
+    - **D)** Prior - Likelihood
 
 ### Answer Key & Explanations
-1. **B)** The prior is the initial probability of the hypothesis.
-2. **C)** A conjugate prior ensures the posterior is in the same family, simplifying calculations.
-3. **B)** Naive Bayes assumes that all features are independent of each other given the class.
-4. **B)** Bayesian treats parameters as distributions, while Frequentists treat them as fixed constants.
-5. **C)** According to Bayes theorem, Posterior is proportional to Likelihood * Prior.
+
+1. **B**. The prior is the initial probability of the hypothesis.
+2. **C**. A conjugate prior ensures the posterior is in the same family, simplifying calculations.
+3. **B**. Naive Bayes assumes that all features are independent of each other given the class.
+4. **B**. Bayesian treats parameters as distributions, while Frequentists treat them as fixed constants.
+5. **C**. According to Bayes theorem, Posterior is proportional to Likelihood * Prior.
 
 ## References & Navigation
 

@@ -11,111 +11,72 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[intersection]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[intersection]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **intersection**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Intersection** of two events $A$ and $B$, denoted $A \cap B$ (or $AB$), is the event consisting of all outcomes $\omega \in S$ that belong to **both** $A$ and $B$ simultaneously (logical `AND`). In words, $A \cap B$ occurs on a trial if and only if both $A$ and $B$ occur on that trial.
 
 ## Key Definitions
-- **intersection**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **intersection** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Set Definition:** $A \cap B = \{\omega \in S : \omega \in A \text{ and } \omega \in B\}$.
+- **Probability Bounds (Fréchet Bounds):** Since $A \cap B \subseteq A$ and $A \cap B \subseteq B$:
+  $$\max(0, P(A) + P(B) - 1) \le P(A \cap B) \le \min(P(A), P(B))$$
+- **Three Ways to Compute $P(A \cap B)$:**
+  1. **From Union (Additive Rule Rearranged):** $P(A \cap B) = P(A) + P(B) - P(A \cup B)$.
+  2. **From Conditional Probability (General Multiplicative Rule):** $P(A \cap B) = P(A)P(B \mid A) = P(B)P(A \mid B)$.
+  3. **Under Independence:** $P(A \cap B) = P(A)P(B)$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **intersection**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** Suppose $P(A) = 0.70$ and $P(B) = 0.60$. Find the tightest possible lower and upper bounds (Fréchet bounds) on $P(A \cap B)$ without knowing how $A$ and $B$ are related.
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **intersection** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- **Upper Bound:** Since $A \cap B \subseteq B$, $P(A \cap B) \le \min(0.70, 0.60) = 0.60$ (achieved when $B \subseteq A$).
+- **Lower Bound (Bonferroni Inequality):** Since $P(A \cup B) \le 1$, $P(A \cap B) = P(A) + P(B) - P(A \cup B) \ge 0.70 + 0.60 - 1.00 = 0.30$.
+- Thus $0.30 \le P(A \cap B) \le 0.60$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. What must occur on a single experimental trial for the intersection event $A \cap B$ to occur?
+    - **A)** Either $A$ occurs or $B$ occurs, but not both.
+    - **B)** **Both** event $A$ and event $B$ must occur simultaneously on that trial (the observed outcome $\omega$ satisfies $\omega \in A$ and $\omega \in B$).
+    - **C)** Neither $A$ nor $B$ occurs.
+    - **D)** Event $A$ occurs on Trial 1 and Event $B$ occurs on Trial 2.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Why must $P(A \cap B) \le \min(P(A), P(B))$ hold for **any** two events $A$ and $B$?
+    - **A)** Because $A \cap B$ is a subset of $A$ ($A \cap B \subseteq A$) and also a subset of $B$ ($A \cap B \subseteq B$), and by monotonicity of probability, a subset cannot have a larger probability than its superset.
+    - **B)** Because $P(A \cap B) = P(A)P(B)$ is always true.
+    - **C)** Because $P(A) + P(B) \le 1$.
+    - **D)** Because intersections are always empty.
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. A student calculates $P(A) = 0.40$, $P(B) = 0.55$, and $P(A \cap B) = 0.45$. How can you immediately tell that this calculation contains an error?
+    - **A)** Because $P(A \cap B) = 0.45$ exceeds $P(A) = 0.40$, violating $P(A \cap B) \le \min(P(A), P(B))$.
+    - **B)** Because $0.40 + 0.55 < 1$.
+    - **C)** Because $0.45$ is an odd decimal.
+    - **D)** The calculation is actually valid.
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. By **Bonferroni's Inequality**, if $P(A) = 0.80$ and $P(B) = 0.75$, what is the **minimum possible** value of $P(A \cap B)$?
+    - **A)** $0.00$
+    - **B)** $0.55$
+    - **C)** $0.60$
+    - **D)** $0.75$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. If $A \subseteq B$, what do $A \cap B$ and $P(A \cap B)$ simplify to?
+    - **A)** $B$ and $P(B)$
+    - **B)** $A$ and $P(A)$
+    - **C)** $\emptyset$ and $0$
+    - **D)** $A^c$ and $1 - P(A)$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. By set definition, $\omega \in A \cap B \iff (\omega \in A) \land (\omega \in B)$, meaning both events occur together on the trial.
+2. **A**. Since $A = (A \cap B) \cup (A \cap B^c)$ is a disjoint union, $P(A) = P(A \cap B) + P(A \cap B^c) \ge P(A \cap B)$, and similarly $P(B) \ge P(A \cap B)$.
+3. **A**. An intersection $A \cap B$ is contained inside $A$, so its probability can never exceed $P(A) = 0.40$ (it would imply $P(A \cap B^c) = 0.40 - 0.45 = -0.05 < 0$, violating Axiom 1).
+4. **B**. Since $P(A \cup B) \le 1$, $P(A \cap B) = P(A) + P(B) - P(A \cup B) \ge 0.80 + 0.75 - 1.00 = 0.55$.
+5. **B**. When every element of $A$ is already inside $B$, their common overlap is all of $A$: $A \cap B = A$ and $P(A \cap B) = P(A)$.
 
 ## References & Navigation
 

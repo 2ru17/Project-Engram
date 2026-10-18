@@ -14,7 +14,7 @@ hackerrank_domain: Graphs
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[BFS]] #[[Graphs]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[BFS]] #[[Graphs]]
 
 ---
 
@@ -354,7 +354,6 @@ vector<string> split(const string &str) {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Problems, Problem Types, and Algorithms]]

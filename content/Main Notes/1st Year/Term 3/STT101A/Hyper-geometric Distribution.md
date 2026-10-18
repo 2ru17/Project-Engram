@@ -11,111 +11,67 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Hyper-geometric Distribution]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Hyper-geometric Distribution]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Hyper-geometric Distribution**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Hypergeometric Distribution** models the number of successes $X$ in a sample of size $n$ drawn **without replacement** from a finite population of size $N$ that contains exactly $K$ successes (and $N - K$ failures). Unlike the Binomial distribution, trials are **dependent** because each draw alters the composition of the remaining population.
 
 ## Key Definitions
-- **Hyper-geometric Distribution**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Hyper-geometric Distribution** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Probability Mass Function (PMF):**
+  $$P(X = x) = \frac{\binom{K}{x} \binom{N - K}{n - x}}{\binom{N}{n}}, \quad \max(0, n - (N - K)) \le x \le \min(n, K)$$
+- **Mean:** $E[X] = n \cdot \frac{K}{N} = np$ (where $p = \frac{K}{N}$).
+- **Variance:** $\text{Var}(X) = n \cdot \frac{K}{N} \left(1 - \frac{K}{N}\right) \left(\frac{N - n}{N - 1}\right)$, where $\frac{N - n}{N - 1}$ is the **Finite Population Correction (FPC)** factor.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Hyper-geometric Distribution**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** A shipment of $N = 10$ routers contains $K = 3$ defective units and $7$ working units. If an inspector tests a random sample of $n = 4$ routers **without replacement**, what is the probability that **exactly $x = 2$** tested routers are defective?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Hyper-geometric Distribution** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+$$P(X = 2) = \frac{\binom{3}{2} \binom{7}{2}}{\binom{10}{4}} = \frac{3 \times 21}{210} = \frac{63}{210} = 0.30$$
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. What is the key structural difference between a **Hypergeometric** experiment and a **Binomial** experiment?
+    - **A)** Hypergeometric sampling is performed **without replacement** from a finite population (making draws dependent), whereas Binomial trials are independent (or sampled **with replacement**).
+    - **B)** Hypergeometric random variables are continuous, whereas Binomial random variables are discrete.
+    - **C)** Hypergeometric experiments have three outcomes per draw instead of two.
+    - **D)** Hypergeometric distributions have no defined mean.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. In the Hypergeometric PMF $P(X = x) = \frac{\binom{K}{x}\binom{N-K}{n-x}}{\binom{N}{n}}$, what does the numerator $\binom{K}{x}\binom{N-K}{n-x}$ count?
+    - **A)** The total number of ordered sequences of length $n$.
+    - **B)** By the Multiplication Principle, the number of ways to choose $x$ successes from the $K$ available successes AND $n - x$ failures from the $N - K$ available failures.
+    - **C)** The sum of all subsets of $N$.
+    - **D)** The probability of drawing with replacement.
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Using the worked example ($N = 10$ routers, $K = 3$ defective, sample size $n = 4$), what is the probability $P(X = 0)$ that **none** of the $4$ inspected routers is defective?
+    - **A)** $\frac{\binom{3}{0}\binom{7}{4}}{\binom{10}{4}} = \frac{1 \times 35}{210} = \frac{1}{6} \approx 0.1667$
+    - **B)** $(0.7)^4 = 0.2401$
+    - **C)** $\frac{3}{10} = 0.30$
+    - **D)** $\frac{7}{10} = 0.70$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. What happens to the Finite Population Correction factor $\frac{N - n}{N - 1}$ in the Hypergeometric variance as the population size $N \to \infty$ (with $\frac{K}{N} = p$ and sample size $n$ held fixed)?
+    - **A)** It approaches $0$.
+    - **B)** It approaches $1$, and the Hypergeometric distribution converges to the $\text{Binomial}(n, p)$ distribution.
+    - **C)** It approaches $\infty$.
+    - **D)** It approaches $n$.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. For $N = 10, K = 3, n = 4$, what is the expected number of defective routers $E[X]$ in the sample?
+    - **A)** $3.0$
+    - **B)** $n \cdot \frac{K}{N} = 4 \times \frac{3}{10} = 1.2$
+    - **C)** $0.3$
+    - **D)** $2.0$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **A**. Sampling without replacement from a finite population changes the success probability on each draw (dependent trials $\implies$ Hypergeometric), whereas constant $p$ with independent trials (or with replacement) yields the Binomial distribution.
+2. **B**. Stage 1 selects $x$ successes out of $K$ in $\binom{K}{x}$ ways; Stage 2 selects the remaining $n - x$ sample items from the $N - K$ failures in $\binom{N-K}{n-x}$ ways.
+3. **A**. $P(X = 0) = \frac{\binom{3}{0}\binom{7}{4}}{\binom{10}{4}} = \frac{1 \times 35}{210} = \frac{1}{6}$.
+4. **B**. When $N \gg n$, removing $n$ items barely changes the composition of the population, so $\frac{N - n}{N - 1} \to 1$ and $\text{Hypergeometric}(N, K, n) \to \text{Binomial}(n, p)$.
+5. **B**. By linearity of expectation over $n$ indicator variables (each with marginal probability $K/N$), $E[X] = n \frac{K}{N} = 4 \times 0.3 = 1.2$.
 
 ## References & Navigation
 

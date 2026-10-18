@@ -14,7 +14,7 @@ hackerrank_domain: Implementation
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
 
 ---
 
@@ -62,14 +62,14 @@ $1 \le Q \le 2 \cdot 10^5$
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > The headache formula is `H(n) = a·sin(n) + a·n`. Given a constant `a` and a threshold `T`, find the maximum non-negative integer `n` such that `H(n) ≤ T`. If `a = 0`, headache is always 0 → unlimited spellcasters.
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > Try n = 0, 1, 2, ... until H(n) > T. Return n−1.
 > **O(T/a)** — if T = 10⁹ and a = 1, that's a billion iterations → TLE.
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > Since sin(n) ∈ [−1, 1], H(n) ≥ a·(n−1). So the maximum possible answer is at most `T/a + 2`. Start from there and scan downward (at most ~3 steps).
 > **O(1) per query** — instant.
 
@@ -97,14 +97,14 @@ Upper bound = 10/1 + 2 = 12
 
 n=12: H = sin(12)+12 = 11.46 > 10 → skip
 n=11: H = sin(11)+11 = 10.00 > 10 → skip  (barely! ~10.000010)
-n=10: H = sin(10)+10 = 9.456 ≤ 10 → answer = 10 ✓
+n=10: H = sin(10)+10 = 9.456 ≤ 10 → answer = 10 
 ```
 
 Only 3 iterations from the upper bound!
 
 ---
 
-## ⚠️ Pitfall: Floating Point Precision
+## Pitfall: Floating Point Precision
 
 At n=11, a=1: `sin(11) + 11 ≈ 10.0000097`, which is BARELY above 10. Double precision has ~15 significant digits, so this is well within safe territory. But if the problem used larger `a` values and marginal thresholds, precision would matter more. Lucky for us, constraints keep things clean.
 
@@ -176,7 +176,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

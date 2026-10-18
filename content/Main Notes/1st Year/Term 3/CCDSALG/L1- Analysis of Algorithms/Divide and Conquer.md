@@ -3,7 +3,7 @@ id: Divide-and-Conquer
 type: note
 course: CCDSALG
 topic: Algorithms
-status: draft
+status: completed
 ---
 
 # Divide and Conquer
@@ -13,7 +13,7 @@ status: draft
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Recursion]] #[[Recursion and Iteration]] #[[Analysis of Algorithms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
+**Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Recursion]] #[[Recursion and Iteration]] #[[Analysis of Algorithms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
 
 ---
 
@@ -64,86 +64,83 @@ This is exactly the form handled by the [[Master Theorem]].
 
 > TL;DR — Divide and Conquer splits a problem into smaller subproblems, solves them recursively, and combines results. It produces recurrences solvable by the Master Theorem and powers algorithms like Merge Sort and Binary Search.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** [[Master Theorem]] — [[Recursion Tree Method]] — [[Substitution Method]] — [[Algorithm]] — [[Recursion]] **Source / Reference:** Handout 01
 
 ## Multiple Choice Questions
 
 1. What are the three standard steps in the Divide and Conquer paradigm?
-- **A)** Iterate, Recurse, Return
-- **B)** Divide, Conquer, Combine
-- **C)** Initialize, Maintain, Terminate
-- **D)** Split, Sort, Search
+    - **A)** Iterate, Recurse, Return
+    - **B)** Divide, Conquer, Combine
+    - **C)** Initialize, Maintain, Terminate
+    - **D)** Split, Sort, Search
 
 2. In the "Conquer" step, how are subproblems solved?
-- **A)** Iteratively using loops
-- **B)** Using dynamic programming
-- **C)** Recursively, or directly if they are small enough (base case)
-- **D)** By combining their solutions
+    - **A)** Iteratively using loops
+    - **B)** Using dynamic programming
+    - **C)** Recursively, or directly if they are small enough (base case)
+    - **D)** By combining their solutions
 
 3. Which recurrence relation represents the Merge Sort algorithm?
-- **A)** $T(n) = T(n/2) + 1$
-- **B)** $T(n) = 2T(n/2) + n$
-- **C)** $T(n) = 7T(n/2) + n^2$
-- **D)** $T(n) = T(n-1) + n$
+    - **A)** $T(n) = T(n/2) + 1$
+    - **B)** $T(n) = 2T(n/2) + n$
+    - **C)** $T(n) = 7T(n/2) + n^2$
+    - **D)** $T(n) = T(n-1) + n$
 
 4. What is the recurrence relation for Binary Search?
-- **A)** $T(n) = 2T(n/2) + n$
-- **B)** $T(n) = T(n/2) + 1$
-- **C)** $T(n) = 2T(n/2) + 1$
-- **D)** $T(n) = T(n-1) + 1$
+    - **A)** $T(n) = 2T(n/2) + n$
+    - **B)** $T(n) = T(n/2) + 1$
+    - **C)** $T(n) = 2T(n/2) + 1$
+    - **D)** $T(n) = T(n-1) + 1$
 
 5. Which of the following is NOT a classic Divide and Conquer algorithm mentioned in the notes?
-- **A)** Merge Sort
-- **B)** Binary Search
-- **C)** Strassen’s Matrix Multiplication
-- **D)** Bubble Sort
+    - **A)** Merge Sort
+    - **B)** Binary Search
+    - **C)** Strassen’s Matrix Multiplication
+    - **D)** Bubble Sort
 
 6. When is Divide and Conquer most appropriate?
-- **A)** When subproblems heavily overlap
-- **B)** When the problem cannot be broken down
-- **C)** When the problem can be naturally broken into independent subproblems
-- **D)** When the combine step takes exponential time
+    - **A)** When subproblems heavily overlap
+    - **B)** When the problem cannot be broken down
+    - **C)** When the problem can be naturally broken into independent subproblems
+    - **D)** When the combine step takes exponential time
 
 7. What is a known disadvantage of Divide and Conquer algorithms?
-- **A)** They can never be run in parallel.
-- **B)** They always have a time complexity of $O(n^2)$.
-- **C)** The recursive overhead due to the function call stack.
-- **D)** They do not use recurrences.
+    - **A)** They can never be run in parallel.
+    - **B)** They always have a time complexity of $O(n^2)$.
+    - **C)** The recursive overhead due to the function call stack.
+    - **D)** They do not use recurrences.
 
 8. If subproblems overlap significantly, which paradigm is more appropriate than Divide and Conquer?
-- **A)** Greedy Algorithms
-- **B)** Brute Force
-- **C)** Dynamic Programming
-- **D)** Amortized Analysis
+    - **A)** Greedy Algorithms
+    - **B)** Brute Force
+    - **C)** Dynamic Programming
+    - **D)** Amortized Analysis
 
 9. What is a common pitfall when implementing a divide and conquer algorithm?
-- **A)** Using the Master Theorem for analysis
-- **B)** Forgetting the base case, leading to infinite recursion
-- **C)** Dividing the problem into constant fractions
-- **D)** Making the subproblems independent
+    - **A)** Using the Master Theorem for analysis
+    - **B)** Forgetting the base case, leading to infinite recursion
+    - **C)** Dividing the problem into constant fractions
+    - **D)** Making the subproblems independent
 
 10. Which mathematical tool is commonly used to analyze the running time of Divide and Conquer algorithms?
-- **A)** The Master Theorem
-- **B)** The Accounting Method
-- **C)** Loop Invariants
-- **D)** Probability Distributions
+    - **A)** The Master Theorem
+    - **B)** The Accounting Method
+    - **C)** Loop Invariants
+    - **D)** Probability Distributions
 
 ### Answer Key & Explanations
-1. **B)** The paradigm formally consists of Dividing the problem, Conquering the subproblems, and Combining the results.
-2. **C)** The conquer step solves the independent subproblems recursively, resolving them directly only when they reach the base case size.
-3. **B)** Merge sort divides the array in half twice ($2T(n/2)$) and takes $O(n)$ time to combine the halves ($+n$).
-4. **B)** Binary search checks one half ($T(n/2)$) and performs constant work ($+1$) to determine which half to check.
-5. **D)** Bubble sort is a simple iterative sorting algorithm, not a divide and conquer algorithm.
-6. **C)** Divide and conquer thrives when the problem can be split into distinct, non-overlapping (independent) subproblems.
-7. **C)** A primary drawback is the overhead created by many recursive function calls placed on the system's call stack.
-8. **C)** Dynamic Programming is explicitly designed to handle overlapping subproblems by caching their results.
-9. **B)** Missing a base case causes the recursion to continuously split the problem without ever stopping, crashing the program.
-10. **A)** The Master Theorem provides a direct method for solving recurrences of the form $T(n) = aT(n/b) + f(n)$, which define divide and conquer algorithms.
+
+1. **B**. The paradigm formally consists of Dividing the problem, Conquering the subproblems, and Combining the results.
+2. **C**. The conquer step solves the independent subproblems recursively, resolving them directly only when they reach the base case size.
+3. **B**. Merge sort divides the array in half twice ($2T(n/2)$) and takes $O(n)$ time to combine the halves ($+n$).
+4. **B**. Binary search checks one half ($T(n/2)$) and performs constant work ($+1$) to determine which half to check.
+5. **D**. Bubble sort is a simple iterative sorting algorithm, not a divide and conquer algorithm.
+6. **C**. Divide and conquer thrives when the problem can be split into distinct, non-overlapping (independent) subproblems.
+7. **C**. A primary drawback is the overhead created by many recursive function calls placed on the system's call stack.
+8. **C**. Dynamic Programming is explicitly designed to handle overlapping subproblems by caching their results.
+9. **B**. Missing a base case causes the recursion to continuously split the problem without ever stopping, crashing the program.
+10. **A**. The Master Theorem provides a direct method for solving recurrences of the form $T(n) = aT(n/b) + f(n)$, which define divide and conquer algorithms.
 
 ## References & Navigation
 

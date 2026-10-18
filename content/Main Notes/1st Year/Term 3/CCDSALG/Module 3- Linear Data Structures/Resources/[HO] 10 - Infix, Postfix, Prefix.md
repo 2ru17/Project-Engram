@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Infix, Postfix, Prefix]] #[[Conceptual]] #[[M3]]
+**Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Infix, Postfix, Prefix]] #[[Conceptual]] #[[M3]]
 
 ---
 

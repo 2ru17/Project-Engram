@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
+**Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
 
 ---
 
@@ -122,87 +122,53 @@ Does it start with `010`? **YES.** The first three bits are an exact match.
 
 > TL;DR — Longest prefix matching forwards packets to the interface whose forwarding table prefix matches the most bits of the destination address. When multiple prefixes match, the longest (most specific) one wins; if none match, the default "Otherwise" route is used.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "**Conclusion:** Even though _____ starts with `0`, it strictly doesn't match `00`, `000`, or `010`."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** it
+1. Why do IP routers use the **Longest Prefix Matching (LPM)** rule when looking up a packet's destination IP address in a CIDR forwarding table?
+    - **A)** Because IP addresses have variable total bit lengths between 8 and 64 bits.
+    - **B)** Because hierarchical route aggregation allows a forwarding table to contain overlapping prefixes (e.g., `/16` for a large ISP block and `/24` for a specific customer subnet carved out of that block); matching the **longest (most specific) prefix** ensures traffic for the carved-out subnet goes to its specific next hop while all other addresses use the aggregate route.
+    - **C)** Because shorter prefixes take longer to transmit on fiber-optic links.
+    - **D)** Because Longest Prefix Matching chooses the route with the highest hop count.
 
-2. Which word completes the following sentence from the text: "Problem Analysis  ### Question 1  **Suppose a datagram _____ at the router, with destination address `11001101`."?
-- **A)** Router
-- **B)** arrives
-- **C)** Protocol
-- **D)** Network
+2. Suppose a router's forwarding table has three entries:
+   - Entry 1: `11001000 00010111 00010*** ********` (`/21`) $\to$ Interface 0
+   - Entry 2: `11001000 00010111 00011000 ********` (`/24`) $\to$ Interface 1
+   - Entry 3: `11001000 00010111 00011*** ********` (`/21`) $\to$ Interface 2
+   - Entry 4: `otherwise` (`/0` default route) $\to$ Interface 3
+   To which interface will a packet with destination IP `11001000 00010111 00011000 10101010` be forwarded?
+    - **A)** Interface 1 (matches both Entry 2 of length `/24` and Entry 3 of length `/21`; `/24` is the longest matching prefix)
+    - **B)** Interface 0
+    - **C)** Interface 2
+    - **D)** Interface 3
 
-3. Which word completes the following sentence from the text: "--- id: Longest-Prefix-Matching type: note course: CSNETWK topic: status: completed ---  # Longest Prefix Matching  > [!info] Document Metadata > - **Course:** `=this.course` > - **Topic:** `=this.topic` > - **Status:** `=this.status`  **🏷️ _____ #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]  ---  ## Overview  > Longest Prefix Matching is the algorithm used by routers to select the correct output interface for a packet."?
-- **A)** Router
-- **B)** Network
-- **C)** Protocol
-- **D)** Tags
+3. Using the same forwarding table in Question 2, to which interface will a packet with destination IP `11001000 00010111 00011001 00000001` be forwarded?
+    - **A)** Interface 0
+    - **B)** Interface 1
+    - **C)** Interface 2 (fails Entry 2 at the 24th bit `1 != 0`, but matches all 21 prefix bits of Entry 3)
+    - **D)** Interface 3
 
-4. Which word completes the following sentence from the text: "**Compare against Table:** Does _____ start with `00`?"?
-- **A)** Router
-- **B)** Protocol
-- **C)** Network
-- **D)** it
+4. What does the default route `0.0.0.0/0` represent in Longest Prefix Matching?
+    - **A)** An invalid address that drops all packets.
+    - **B)** A Layer-2 broadcast address.
+    - **C)** A `/32` host route to localhost.
+    - **D)** A prefix of length $0$ bits that matches **every** 32-bit IPv4 address, serving as the catch-all fallback route whenever no longer prefix (`/1` through `/32`) matches.
 
-5. Which word completes the following sentence from the text: "When multiple prefixes match, the longest (most specific) one _____ if none match, the default "Otherwise" route is used."?
-- **A)** Network
-- **B)** Router
-- **C)** Protocol
-- **D)** wins
-
-6. Which word completes the following sentence from the text: "**Step 3:** Mark _every_ row that _____ the start of the address."?
-- **A)** Network
-- **B)** Protocol
-- **C)** Router
-- **D)** matches
-
-7. Which word completes the following sentence from the text: "It compares this address against a _____ of "Prefixes" in its forwarding table."?
-- **A)** Network
-- **B)** Router
-- **C)** Protocol
-- **D)** list
-
-8. Which word completes the following sentence from the text: "**Correct Answer:** **Interface 6**  ### Question 2  **Suppose a _____ arrives at the router, with destination address `01110000`."?
-- **A)** Router
-- **B)** Protocol
-- **C)** datagram
-- **D)** Network
-
-9. Which word completes the following sentence from the text: "To which interface will this datagram be _____ using longest-prefix matching?**  **Analytical Breakdown:**  1."?
-- **A)** Router
-- **B)** forwarded
-- **C)** Network
-- **D)** Protocol
-
-10. Which word completes the following sentence from the text: "**Interface 6** is the _____ or default gateway."?
-- **A)** Network
-- **B)** catchall
-- **C)** Router
-- **D)** Protocol
-
+5. What hardware memory technology is commonly used in high-speed core routers to perform Longest Prefix Matching across hundreds of thousands of prefixes in a **single clock cycle** ($O(1)$ lookup time)?
+    - **A)** Magnetic tape storage
+    - **B)** **TCAM (Ternary Content-Addressable Memory)**, which stores `0`, `1`, and `X` ("don't care" mask bits) and compares the destination IP against all prefix entries in parallel.
+    - **C)** Standard rotational HDDs
+    - **D)** Sequential linked-list traversal in swap space
 
 ### Answer Key & Explanations
-1. **D)** it completes the sentence: **Conclusion:** Even though it starts with `0`, it...
-2. **B)** arrives completes the sentence: Problem Analysis  ### Question 1  **Suppose a data...
-3. **D)** Tags completes the sentence: --- id: Longest-Prefix-Matching type: note course:...
-4. **D)** it completes the sentence: **Compare against Table:** Does it start with `00`...
-5. **D)** wins completes the sentence: When multiple prefixes match, the longest (most sp...
-6. **D)** matches completes the sentence: **Step 3:** Mark _every_ row that matches the star...
-7. **D)** list completes the sentence: It compares this address against a list of "Prefix...
-8. **C)** datagram completes the sentence: **Correct Answer:** **Interface 6**  ### Question ...
-9. **B)** forwarded completes the sentence: To which interface will this datagram be forwarded...
-10. **B)** catchall completes the sentence: **Interface 6** is the "catch-all" or default gate...
+
+1. **B**. CIDR prefix hierarchy relies on Longest Prefix Matching so that specific sub-allocations (e.g., `/24`) override broader summary announcements (e.g., `/16`).
+2. **A**. The packet's first 24 bits are `11001000 00010111 00011000`, which matches Entry 2 (24 bits), Entry 3 (21 bits), and Entry 4 (0 bits). By LPM, the 24-bit match wins $\to$ Interface 1.
+3. **C**. The third octet is `00011001`, which differs from Entry 2 (`00011000`) at bit 24, but matches Entry 3 (`00011***`) across all 21 prefix bits $\to$ Interface 2.
+4. **D**. A `/0` prefix compares $0$ leading bits, so every IP address matches it with match length $0$; it is selected only if no entry with prefix length $\ge 1$ matches.
+5. **B**. TCAM allows each bit cell to hold `0`, `1`, or `X` (wildcard), performing parallel associative lookup across all CIDR prefixes simultaneously in hardware.
 
 ## References & Navigation
 

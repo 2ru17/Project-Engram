@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
+**Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
 
 ---
 
@@ -39,34 +39,32 @@ Same memory layout rules and function-passing rules apply.
 
 > TL;DR — **3D+ arrays** extend 2D arrays with additional indices: `int arr[X][Y][Z]`. Same rules apply: row-major storage, all dimensions except the first must be specified in function parameters. Use sparingly — flattened 1D arrays are often simpler and more efficient.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
+
 1. How would you declare a 3-dimensional array of integers with dimensions 2, 3, and 4?
-- **A)** `int array(2, 3, 4);`
-- **B)** `int array[2][3][4];`
-- **C)** `int array[24];`
-- **D)** `int array[2 * 3 * 4];`
+    - **A)** `int array(2, 3, 4);`
+    - **B)** `int array[2][3][4];`
+    - **C)** `int array[24];`
+    - **D)** `int array[2 * 3 * 4];`
 2. Conceptually, how can a 3D array be visualized?
-- **A)** As a straight line
-- **B)** As a flat grid
-- **C)** As an array of 2D grids (a cube of data)
-- **D)** As a circle
+    - **A)** As a straight line
+    - **B)** As a flat grid
+    - **C)** As an array of 2D grids (a cube of data)
+    - **D)** As a circle
 3. How are multidimensional arrays stored in memory under the hood?
-- **A)** As overlapping matrices
-- **B)** As a single flattened contiguous 1D array
-- **C)** As a linked list of arrays
-- **D)** As independent dynamic blocks
+    - **A)** As overlapping matrices
+    - **B)** As a single flattened contiguous 1D array
+    - **C)** As a linked list of arrays
+    - **D)** As independent dynamic blocks
 
 ### Answer Key & Explanations
-1. **B)** Multidimensional arrays chain bracket pairs for each distinct dimensional depth.
-2. **C)** The first index selects a specific 2D matrix from a larger containing volume.
-3. **B)** Regardless of dimension count, memory is strictly linear; offsets are calculated mathematically.
+
+1. **B**. Multidimensional arrays chain bracket pairs for each distinct dimensional depth.
+2. **C**. The first index selects a specific 2D matrix from a larger containing volume.
+3. **B**. Regardless of dimension count, memory is strictly linear; offsets are calculated mathematically.
 
 ## References & Navigation
 

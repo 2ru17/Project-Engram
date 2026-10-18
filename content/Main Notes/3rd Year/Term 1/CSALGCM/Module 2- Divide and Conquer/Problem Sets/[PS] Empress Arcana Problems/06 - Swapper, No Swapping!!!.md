@@ -14,7 +14,7 @@ hackerrank_domain: Merge Sort (Inversion Count)
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
 
 ---
 
@@ -82,14 +82,14 @@ $0 \le B_i \le 10^7$
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > Swapper can swap adjacent books to sort them. The minimum swaps to sort = number of **inversions**. Find the fewest swaps to sort either ascending OR descending (whichever is faster). Butz fires `ceil(S / min_swaps)` blasts per second. If already sorted → "Butz loses!"
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > Count inversions with nested loops: for each pair (i,j) where i<j, check if arr[i]>arr[j].
 > **O(N²)** — with N = 200,000 that's **40 billion comparisons** → TLE.
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > Count inversions using **merge sort** — during the merge step, every time a right element is placed before remaining left elements, that's exactly the number of inversions it resolves.
 > **O(N log N)** — fast.
 
@@ -181,7 +181,7 @@ blasts = ceil(3 / 2) = ceil(1.5) = 2
 
 Why: Swapper needs 2 seconds to sort. In 2 seconds at 1 blast/sec,
 Swapper takes 2 blasts but can survive 3. At 2 blasts/sec, Swapper
-takes 4 blasts > 3 → banished before finishing! ✓
+takes 4 blasts > 3 → banished before finishing! 
 ```
 
 ---
@@ -190,9 +190,9 @@ takes 4 blasts > 3 → banished before finishing! ✓
 
 | Books | S | asc_inv | desc_inv | min_swaps | blasts/sec |
 |---|---|---|---|---|---|
-| [4,1,3,2] | 3 | 4 | 2 | 2 | ceil(3/2) = **2** ✓ |
-| [2,4,0,3,1] | 3 | 6 | 4 | 4 | ceil(3/4) = **1** ✓ |
-| [5,0,1,2,4,3] | 5 | 6 | 9 | 6 | ceil(5/6) = **1** ✓ |
+| [4,1,3,2] | 3 | 4 | 2 | 2 | ceil(3/2) = **2**  |
+| [2,4,0,3,1] | 3 | 6 | 4 | 4 | ceil(3/4) = **1**  |
+| [5,0,1,2,4,3] | 5 | 6 | 9 | 6 | ceil(5/6) = **1**  |
 
 ---
 
@@ -279,7 +279,6 @@ if __name__ == "__main__":
     main()
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

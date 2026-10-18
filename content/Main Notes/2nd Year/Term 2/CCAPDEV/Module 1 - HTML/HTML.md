@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCAPDEV]] #[[Conceptual]] #[[HTML]]
+**Tags:** #[[Computer Science]] #[[CCAPDEV]] #[[Conceptual]] #[[HTML]]
 
 ---
 
@@ -79,77 +79,77 @@ In modern web development, particularly for mobile devices, maximizing available
 ## Multiple Choice Questions
 
 1. What does HTML stand for?
-- **A)** Hypertext Markup Language
-- **B)** Hypertext Machine Language
-- **C)** Hyperlink and Text Markup Language
-- **D)** Home Tool Markup Language
+    - **A)** Hypertext Markup Language
+    - **B)** Hypertext Machine Language
+    - **C)** Hyperlink and Text Markup Language
+    - **D)** Home Tool Markup Language
 
 2. Which of the following is considered a markup language?
-- **A)** Java
-- **B)** Python
-- **C)** XML
-- **D)** C++
+    - **A)** Java
+    - **B)** Python
+    - **C)** XML
+    - **D)** C++
 
 3. What is the primary purpose of a markup language like HTML?
-- **A)** To execute logical calculations
-- **B)** To annotate documents for presentation and structure
-- **C)** To compile source code into machine language
-- **D)** To manage database connections
+    - **A)** To execute logical calculations
+    - **B)** To annotate documents for presentation and structure
+    - **C)** To compile source code into machine language
+    - **D)** To manage database connections
 
 4. Which HTML tag represents the root element of an HTML page?
-- **A)** `<head>`
-- **B)** `<body>`
-- **C)** `<html>`
-- **D)** `<!DOCTYPE html>`
+    - **A)** `<head>`
+    - **B)** `<body>`
+    - **C)** `<html>`
+    - **D)** `<!DOCTYPE html>`
 
 5. What is the function of the `<!DOCTYPE html>` declaration?
-- **A)** It links the HTML document to a CSS stylesheet.
-- **B)** It specifies that the document is to be read as an HTML5 document.
-- **C)** It executes JavaScript code.
-- **D)** It acts as the main container for visible page content.
+    - **A)** It links the HTML document to a CSS stylesheet.
+    - **B)** It specifies that the document is to be read as an HTML5 document.
+    - **C)** It executes JavaScript code.
+    - **D)** It acts as the main container for visible page content.
 
 6. How does a markup language differ from a programming language?
-- **A)** Markup languages are compiled, while programming languages are interpreted.
-- **B)** Markup languages contain logical instructions, while programming languages do not.
-- **C)** Markup languages focus on document presentation and structure, while programming languages execute logical operations.
-- **D)** There is no difference between the two.
+    - **A)** Markup languages are compiled, while programming languages are interpreted.
+    - **B)** Markup languages contain logical instructions, while programming languages do not.
+    - **C)** Markup languages focus on document presentation and structure, while programming languages execute logical operations.
+    - **D)** There is no difference between the two.
 
 7. Which element is used to define the metadata and title of the HTML document?
-- **A)** `<body>`
-- **B)** `<footer>`
-- **C)** `<head>`
-- **D)** `<h1>`
+    - **A)** `<body>`
+    - **B)** `<footer>`
+    - **C)** `<head>`
+    - **D)** `<h1>`
 
 8. Why is setting the correct input type (e.g., `type="email"`) important in HTML?
-- **A)** It changes the color of the text field.
-- **B)** It allows the server to compile the code faster.
-- **C)** It triggers the appropriate virtual keyboard on mobile devices, enhancing user experience.
-- **D)** It prevents hackers from accessing the form.
+    - **A)** It changes the color of the text field.
+    - **B)** It allows the server to compile the code faster.
+    - **C)** It triggers the appropriate virtual keyboard on mobile devices, enhancing user experience.
+    - **D)** It prevents hackers from accessing the form.
 
 9. Which of the following is an example of a programming language mentioned in the text?
-- **A)** XML
-- **B)** CityGML
-- **C)** XHTML
-- **D)** C++
+    - **A)** XML
+    - **B)** CityGML
+    - **C)** XHTML
+    - **D)** C++
 
 10. Who interprets an HTML document to display the web page?
-- **A)** A compiler
-- **B)** The web browser
-- **C)** A database server
-- **D)** The operating system's kernel
+    - **A)** A compiler
+    - **B)** The web browser
+    - **C)** A database server
+    - **D)** The operating system's kernel
 
 ### Answer Key & Explanations
 
-1. **A** - HTML stands for Hypertext Markup Language, the standard for creating web pages.
-2. **C** - XML is a markup language, whereas Java, Python, and C++ are programming languages.
-3. **B** - Markup languages are designed to annotate text to describe its structure and presentation.
-4. **C** - The `<html>` tag encapsulates all the content on the page and serves as the root element.
-5. **B** - The document type declaration tells the browser the specific version of HTML (typically HTML5) being used.
-6. **C** - Markup languages structure content, while programming languages execute step-by-step logical instructions.
-7. **C** - The `<head>` tag contains meta-information and links necessary for the document but not displayed directly in the content area.
-8. **C** - On mobile devices, input types tell the browser which virtual keyboard layout (like adding an '@' sign for emails) to show.
-9. **D** - C++ is a programming language used for logic execution, unlike the others which are markup languages.
-10. **B** - Web browsers read HTML documents and interpret the tags to render the visible web page.
+1. **A**. HTML stands for Hypertext Markup Language, the standard for creating web pages.
+2. **C**. XML is a markup language, whereas Java, Python, and C++ are programming languages.
+3. **B**. Markup languages are designed to annotate text to describe its structure and presentation.
+4. **C**. The `<html>` tag encapsulates all the content on the page and serves as the root element.
+5. **B**. The document type declaration tells the browser the specific version of HTML (typically HTML5) being used.
+6. **C**. Markup languages structure content, while programming languages execute step-by-step logical instructions.
+7. **C**. The `<head>` tag contains meta-information and links necessary for the document but not displayed directly in the content area.
+8. **C**. On mobile devices, input types tell the browser which virtual keyboard layout (like adding an '@' sign for emails) to show.
+9. **D**. C++ is a programming language used for logic execution, unlike the others which are markup languages.
+10. **B**. Web browsers read HTML documents and interpret the tags to render the visible web page.
 
 ## References & Navigation
 

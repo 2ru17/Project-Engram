@@ -256,41 +256,41 @@ $$\text{Total Hardware Bits} = N \times \left( (B \times 8) + t + 1_{\text{Valid
 ## Multiple Choice Questions
 
 1. A 32-bit byte-addressable system uses a Direct-Mapped cache with 512 lines and a block size of 32 bytes. What is the bit configuration of the address fields?
-- **A)** Tag: 18 bits, Line: 9 bits, Offset: 5 bits
-- **B)** Tag: 16 bits, Line: 10 bits, Offset: 6 bits
-- **C)** Tag: 20 bits, Line: 7 bits, Offset: 5 bits
-- **D)** Tag: 15 bits, Line: 9 bits, Offset: 8 bits
+    - **A)** Tag: 16 bits, Line: 10 bits, Offset: 6 bits
+    - **B)** Tag: 18 bits, Line: 9 bits, Offset: 5 bits
+    - **C)** Tag: 20 bits, Line: 7 bits, Offset: 5 bits
+    - **D)** Tag: 15 bits, Line: 9 bits, Offset: 8 bits
 
 2. How many tag comparators operate in parallel during a cache lookup in an 8-Way Set-Associative cache?
-- **A)** 1 comparator
-- **B)** 8 comparators
-- **C)** Total number of sets comparators
-- **D)** Total number of cache lines comparators
+    - **A)** 8 comparators
+    - **B)** 1 comparator
+    - **C)** Total number of sets comparators
+    - **D)** Total number of cache lines comparators
 
 3. What is the primary advantage of Fully Associative cache mapping over Direct Mapping?
-- **A)** Requires zero comparator circuits
-- **B)** Completely eliminates conflict misses by allowing any memory block to occupy any cache frame
-- **C)** Halves the memory bus cycle latency
-- **D)** Uses fewer tag bits per cache entry
+    - **A)** Requires zero comparator circuits
+    - **B)** Halves the memory bus cycle latency
+    - **C)** Completely eliminates conflict misses by allowing any memory block to occupy any cache frame
+    - **D)** Uses fewer tag bits per cache entry
 
 4. In a $k$-Way Set-Associative cache with 2,048 total lines and $k = 4$, how many bits are required for the SET index field?
-- **A)** 8 bits
-- **B)** 9 bits
-- **C)** 10 bits
-- **D)** 11 bits
+    - **A)** 8 bits
+    - **B)** 11 bits
+    - **C)** 10 bits
+    - **D)** 9 bits
 
 5. What is the function of the Valid bit ($V$) in each cache line?
-- **A)** Indicates whether the CPU is in supervisor kernel mode
-- **B)** Indicates whether the line contains valid initialized memory data
-- **C)** Indicates whether the line must be written back to DRAM
-- **D)** Controls the tri-state output buffer gating
+    - **A)** Indicates whether the CPU is in supervisor kernel mode
+    - **B)** Indicates whether the line contains valid initialized memory data
+    - **C)** Indicates whether the line must be written back to DRAM
+    - **D)** Controls the tri-state output buffer gating
 
 ### Answer Key & Explanations
 
-1. **A**. Block size $32\text{ bytes} \implies w = \log_2(32) = 5\text{ bits}$. Cache lines $512 \implies k = \log_2(512) = 9\text{ bits}$. Tag bits $t = 32 - 9 - 5 = 18\text{ bits}$.
-2. **B**. In an $k$-way set-associative cache, the hardware simultaneously compares the incoming tag against the tags of all $k$ lines inside the selected set. For $k=8$, exactly 8 comparators run in parallel.
-3. **B**. Fully Associative caches allow a memory block to reside in any line frame, preventing conflict misses where multiple active blocks compete for a single rigid line index.
-4. **B**. Total sets $S = \frac{\text{Total Lines}}{k} = \frac{2048}{4} = 512\text{ sets}$. Set index bits $s = \log_2(512) = 9\text{ bits}$.
+1. **B**. Block size $32\text{ bytes} \implies w = \log_2(32) = 5\text{ bits}$. Cache lines $512 \implies k = \log_2(512) = 9\text{ bits}$. Tag bits $t = 32 - 9 - 5 = 18\text{ bits}$.
+2. **A**. In an $k$-way set-associative cache, the hardware simultaneously compares the incoming tag against the tags of all $k$ lines inside the selected set. For $k=8$, exactly 8 comparators run in parallel.
+3. **C**. Fully Associative caches allow a memory block to reside in any line frame, preventing conflict misses where multiple active blocks compete for a single rigid line index.
+4. **D**. Total sets $S = \frac{\text{Total Lines}}{k} = \frac{2048}{4} = 512\text{ sets}$. Set index bits $s = \log_2(512) = 9\text{ bits}$.
 5. **B**. The valid bit differentiates populated, valid cache data ($V=1$) from uninitialized startup/garbage data ($V=0$) upon system reset.
 
 ## References & Navigation

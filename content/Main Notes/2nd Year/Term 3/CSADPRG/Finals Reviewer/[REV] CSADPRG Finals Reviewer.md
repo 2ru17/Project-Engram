@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Finals Review]]
+**Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Finals Review]]
 
 ---
 

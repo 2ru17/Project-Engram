@@ -100,50 +100,45 @@ sequenceDiagram
 
 ---
 
-## 5. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. What is the output of `printf("%d", 14 / 4 * 4 + 14 % 4);` in C?
-   - A) 14
-   - B) 12
-   - C) 16
-   - D) 14.5
+    - **A)** 14
+    - **B)** 12
+    - **C)** 16
+    - **D)** 14.5
 
 2. Given `int x = 5, y = 10;`, what is the value of `x` after `if (x > 3 || ++y < 12)` executes?
-   - A) 5, and y is 10
-   - B) 5, and y is 11
-   - C) 6, and y is 10
-   - D) 6, and y is 11
+    - **A)** 5, and y is 10
+    - **B)** 5, and y is 11
+    - **C)** 6, and y is 10
+    - **D)** 6, and y is 11
 
 3. What happens if a non-void function in C finishes execution without an explicit `return` statement?
-   - A) The program will always crash immediately at runtime.
-   - B) The function returns undefined garbage data to the caller.
-   - C) The compiler replaces it with `return 0;`.
-   - D) The function implicitly restarts from line 1.
+    - **A)** The program will always crash immediately at runtime.
+    - **B)** The function returns undefined garbage data to the caller.
+    - **C)** The compiler replaces it with `return 0;`.
+    - **D)** The function implicitly restarts from line 1.
 
 4. Which loop structure is guaranteed to execute its loop body at least once?
-   - A) `for` loop
-   - B) `while` loop
-   - C) `do-while` loop
-   - D) Nested `while` loop
+    - **A)** `for` loop
+    - **B)** `while` loop
+    - **C)** `do-while` loop
+    - **D)** Nested `while` loop
 
 5. In C, what is the effect of writing `while (x = 0)` instead of `while (x == 0)`?
-   - A) The loop executes infinitely because 0 is assigned.
-   - B) The assignment yields 0, which evaluates to false, terminating immediately.
-   - C) A syntax error is raised by the compiler.
-   - D) It checks if `x` is non-zero.
-
----
+    - **A)** The loop executes infinitely because 0 is assigned.
+    - **B)** The assignment yields 0, which evaluates to false, terminating immediately.
+    - **C)** A syntax error is raised by the compiler.
+    - **D)** It checks if `x` is non-zero.
 
 ### Answer Key & Explanations
 
-1. **A) 14** — Operator precedence is left-to-right for `*`, `/`, `%`. `14 / 4 = 3` (integer division). Then `3 * 4 = 12`. Then `14 % 4 = 2`. Finally `12 + 2 = 14`.
-2. **A) 5, and y is 10** — Due to short-circuit evaluation in logical OR (`||`), because `x > 3` (5 > 3) is true, the right-hand operand `++y < 12` is never evaluated. Thus, `y` remains 10.
-3. **B) The function returns undefined garbage data to the caller** — Flowing off the end of a non-void function in C leads to undefined behavior; the caller reads whatever residual bits happen to remain in the return register (e.g., `EAX/RAX`).
-4. **C) `do-while` loop** — The test expression is evaluated at the bottom of the loop body, guaranteeing at least one execution pass.
-5. **B) The assignment yields 0, which evaluates to false, terminating immediately** — In C, `=` is an assignment operator. The expression `x = 0` assigns 0 to `x` and evaluates to the value `0`. In C conditionals, 0 is false, so the loop never executes its body.
-
-
----
+1. **A**. Operator precedence is left-to-right for `*`, `/`, `%`. `14 / 4 = 3` (integer division). Then `3 * 4 = 12`. Then `14 % 4 = 2`. Finally `12 + 2 = 14`.
+2. **A**. Due to short-circuit evaluation in logical OR (`||`), because `x > 3` (5 > 3) is true, the right-hand operand `++y < 12` is never evaluated. Thus, `y` remains 10.
+3. **B**. Flowing off the end of a non-void function in C leads to undefined behavior; the caller reads whatever residual bits happen to remain in the return register (e.g., `EAX/RAX`).
+4. **C**. The test expression is evaluated at the bottom of the loop body, guaranteeing at least one execution pass.
+5. **B**. In C, `=` is an assignment operator. The expression `x = 0` assigns 0 to `x` and evaluates to the value `0`. In C conditionals, 0 is false, so the loop never executes its body.
 
 ## References & Navigation
 

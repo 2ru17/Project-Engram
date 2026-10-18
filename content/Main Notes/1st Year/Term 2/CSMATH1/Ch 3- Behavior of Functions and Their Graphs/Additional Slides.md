@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Conceptual]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Conceptual]]
 
 ---
 
@@ -36,77 +36,43 @@ These topics form the core applications of differential calculus:
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. According to Rolle's Theorem, if $f$ is continuous on $[a, b]$, differentiable on $(a, b)$, and $f(a) = f(b)$, then there exists at least one $c \in (a, b)$ such that:
+    - **A)** $f(c) = 0$
+    - **B)** $f'(c) = 0$
+    - **C)** $f''(c) = 0$
+    - **D)** $f'(c) = f(b) - f(a)$
 
-2. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. What equation does the Mean Value Theorem (MVT) guarantee for at least one $c \in (a, b)$ when $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$?
+    - **A)** $f'(c) = \frac{f(b) - f(a)}{b - a}$
+    - **B)** $f'(c) = \frac{f(a) + f(b)}{2}$
+    - **C)** $f(c) = \frac{f(b) - f(a)}{b - a}$
+    - **D)** $f''(c) = 0$
 
-3. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. Find the value $c \in (0, 2)$ that satisfies the Mean Value Theorem for $f(x) = x^2 + 2x$ on $[0, 2]$.
+    - **A)** $c = \frac{1}{2}$
+    - **B)** $c = \sqrt{2}$
+    - **C)** $c = 1$
+    - **D)** $c = \frac{3}{2}$
 
-4. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. When is L'Hopital's Rule $\lim_{x \to c} \frac{f(x)}{g(x)} = \lim_{x \to c} \frac{f'(x)}{g'(x)}$ directly applicable?
+    - **A)** To any quotient of two differentiable functions
+    - **B)** By applying the Quotient Rule to $\frac{f(x)}{g(x)}$
+    - **C)** Whenever the denominator approaches $0$ and the numerator approaches $5$
+    - **D)** Only when the quotient produces an indeterminate form $\frac{0}{0}$ or $\frac{\pm\infty}{\pm\infty}$
 
-5. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Additional Slides?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. In an optimization problem to maximize the area $A = xy$ of a rectangular pen using $100\text{ m}$ of fencing along 4 sides ($2x + 2y = 100$), what are the dimensions that yield the maximum area?
+    - **A)** $x = 10\text{ m}, y = 40\text{ m}$
+    - **B)** $x = 25\text{ m}, y = 25\text{ m}$ (a square)
+    - **C)** $x = 20\text{ m}, y = 30\text{ m}$
+    - **D)** $x = 50\text{ m}, y = 0\text{ m}$
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Additional Slides without relying on rote computation.
+
+1. **B**. Rolle's Theorem states that if a smooth curve starts and ends at the same height ($f(a) = f(b)$), it must have a horizontal tangent ($f'(c) = 0$) somewhere strictly between $a$ and $b$.
+2. **A**. Geometrically, the Mean Value Theorem guarantees at least one point $c \in (a, b)$ where the instantaneous tangent slope $f'(c)$ equals the secant slope $\frac{f(b) - f(a)}{b - a}$ across the interval.
+3. **C**. Here $\frac{f(2) - f(0)}{2 - 0} = \frac{(4 + 4) - 0}{2} = 4$. Setting $f'(c) = 2c + 2 = 4$ gives $2c = 2 \implies c = 1 \in (0, 2)$.
+4. **D**. L'Hopital's Rule only applies to the indeterminate forms $0/0$ or $\pm\infty/\pm\infty$, and differentiates the numerator and denominator separately ($f'(x)/g'(x)$), not via the Quotient Rule.
+5. **B**. From $2x + 2y = 100$, $y = 50 - x$, so $A(x) = x(50 - x) = 50x - x^2$. Setting $A'(x) = 50 - 2x = 0$ gives $x = 25\text{ m}$ and $y = 25\text{ m}$, which is a square by the Second Derivative Test ($A''(x) = -2 < 0$).
 
 ## References & Navigation
 

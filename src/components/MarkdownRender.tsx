@@ -98,9 +98,35 @@ function CodeBlockPre({ children, ...props }: any) {
   const langMatch = child?.props?.className?.match(/language-(\w+)/);
   let lang = langMatch ? langMatch[1].toUpperCase() : "";
 
+  // Detect 2-line CPU scheduling Gantt chart:
+  // Line 1: | P1 | P2 | P3 |
+  // Line 2: 0    6    10   18
+  const ganttData = (() => {
+    const trimmedLines = rawCode
+      .trim()
+      .split(/\r?\n/)
+      .map((l) => l.trim())
+      .filter(Boolean);
+    if (trimmedLines.length !== 2) return null;
+    if (!trimmedLines[0].startsWith("|") || !trimmedLines[0].endsWith("|")) return null;
+    const segments = trimmedLines[0]
+      .split("|")
+      .map((s) => s.trim())
+      .filter(Boolean);
+    const times = trimmedLines[1].split(/\s+/).filter(Boolean);
+    if (
+      segments.length >= 2 &&
+      times.length === segments.length + 1 &&
+      times.every((t) => /^-?\d+(\.\d+)?$/.test(t))
+    ) {
+      return { segments, times };
+    }
+    return null;
+  })();
+
   if (!lang) {
-    if (rawCode.includes("|") && /\d+[\s\d]+/.test(rawCode)) {
-      lang = "TIMELINE";
+    if (ganttData || (rawCode.includes("|") && /\d+[\s\d]+/.test(rawCode))) {
+      lang = "TIMELINE // GANTT";
     } else {
       lang = "TEXT";
     }
@@ -135,11 +161,60 @@ function CodeBlockPre({ children, ...props }: any) {
         </button>
       </div>
 
-      <pre className="p-5 font-mono text-xs sm:text-sm overflow-x-auto text-[var(--zen-frost)] leading-relaxed bg-[var(--zen-void)]/80 whitespace-pre" {...props}>
-        <code className="block w-full bg-transparent border-0 p-0 text-inherit font-mono leading-relaxed whitespace-pre">
-          {rawCode}
-        </code>
-      </pre>
+      {ganttData ? (
+        <div className="p-5 sm:p-6 overflow-x-auto bg-[var(--zen-void)]/80">
+          <div className="flex items-stretch min-w-max w-full pt-1 pb-6 px-2">
+            {ganttData.segments.map((seg, i) => {
+              const start = Number(ganttData.times[i]);
+              const end = Number(ganttData.times[i + 1]);
+              const duration = Math.max(end - start, 1);
+              const isLast = i === ganttData.segments.length - 1;
+              return (
+                <div
+                  key={`${seg}-${i}`}
+                  style={{ flexGrow: duration, flexBasis: 0 }}
+                  className="min-w-[44px] relative flex flex-col"
+                >
+                  <div
+                    className={`h-12 border-y border-l ${
+                      isLast ? "border-r" : ""
+                    } border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/[0.06] hover:bg-[var(--zen-cyan)]/[0.14] transition-colors flex flex-col items-center justify-center px-2`}
+                  >
+                    <span className="font-mono text-xs sm:text-sm font-semibold text-[var(--zen-cyan)] tracking-wider">
+                      {seg}
+                    </span>
+                    <span className="font-mono text-[10px] text-[var(--zen-ink-muted)] leading-none mt-1">
+                      {end - start}ms
+                    </span>
+                  </div>
+                  {/* Start Timestamp Tick */}
+                  <div className="absolute -bottom-5 left-0 -translate-x-1/2 flex flex-col items-center">
+                    <span className="w-px h-1.5 bg-[var(--zen-cyan)]/50 mb-0.5" />
+                    <span className="font-mono text-[11px] text-[var(--zen-frost)] font-medium">
+                      {ganttData.times[i]}
+                    </span>
+                  </div>
+                  {/* Final End Timestamp Tick */}
+                  {isLast && (
+                    <div className="absolute -bottom-5 right-0 translate-x-1/2 flex flex-col items-center">
+                      <span className="w-px h-1.5 bg-[var(--zen-cyan)]/50 mb-0.5" />
+                      <span className="font-mono text-[11px] text-[var(--zen-frost)] font-medium">
+                        {ganttData.times[i + 1]}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ) : (
+        <pre className="p-5 font-mono text-xs sm:text-sm overflow-x-auto text-[var(--zen-frost)] leading-relaxed bg-[var(--zen-void)]/80 whitespace-pre" {...props}>
+          <code className="block w-full bg-transparent border-0 p-0 text-inherit font-mono leading-relaxed whitespace-pre">
+            {rawCode}
+          </code>
+        </pre>
+      )}
     </div>
   );
 }
@@ -365,14 +440,14 @@ function parseMCQSection(content: string): { articleContent: string; mcqItems: M
   const questionsRaw = parts[0] || "";
   const answersRaw = parts[1] || "";
 
-  // Parse answer explanations
+  // Parse answer explanations (supports both 1. **A**. and 1. **A)**)
   const answersMap: Record<number, { key: string; explanation: string }> = {};
-  const answerRegex = /(\d+)\.\s*\*\*([A-D])\*\*\.?\s*([\s\S]*?)(?=(?:\n\d+\.\s*\*\*)|$)/g;
+  const answerRegex = /(\d+)\.\s*\*\*([A-D])\)?\*\*[.:)]?\s*([\s\S]*?)(?=(?:\n\s*\d+\.\s*\*\*)|$)/g;
   let ansMatch;
   while ((ansMatch = answerRegex.exec(answersRaw)) !== null) {
     const qNum = parseInt(ansMatch[1], 10);
     const key = ansMatch[2].toUpperCase();
-    const explanation = ansMatch[3].trim().replace(/\n+/g, " ");
+    const explanation = ansMatch[3].trim();
     answersMap[qNum] = { key, explanation };
   }
 
@@ -381,14 +456,15 @@ function parseMCQSection(content: string): { articleContent: string; mcqItems: M
   const questionBlocks = questionsRaw.split(/\n(?=\d+\.\s+)/);
 
   for (const block of questionBlocks) {
-    const qMatch = block.match(/^(\d+)\.\s+([\s\S]*?)(?=\n\s*-\s*\*\*A\))/);
+    const qMatch = block.match(/^(\d+)\.\s+([\s\S]*?)(?=\n\s*-\s*\*\*A[.)]?\*\*)/);
     if (!qMatch) continue;
 
     const id = parseInt(qMatch[1], 10);
-    const question = qMatch[2].trim().replace(/\n+/g, " ");
+    // Preserve newlines so embedded Markdown tables, math blocks, or code blocks remain intact
+    const question = qMatch[2].trim();
 
     const options: { key: string; text: string }[] = [];
-    const optRegex = /-\s*\*\*([A-D])\)\*\*\s*([^\n]+)/g;
+    const optRegex = /-\s*\*\*([A-D])[.)]?\*\*\s*([^\n]+)/g;
     let optMatch;
     while ((optMatch = optRegex.exec(block)) !== null) {
       options.push({
@@ -412,19 +488,102 @@ function parseMCQSection(content: string): { articleContent: string; mcqItems: M
   return { articleContent, mcqItems };
 }
 
-// Helper to normalize indented list items outside fenced code blocks so CommonMark doesn't turn them into code blocks
-function normalizeIndentedLists(text: string): string {
+// Helper to normalize indented list items and repair common LaTeX/table edge cases outside fenced code blocks
+function normalizeContentAndMath(text: string): string {
   const parts = text.split(/(```[\s\S]*?```)/g);
   return parts
     .map((part, index) => {
-      // Even indices are outside fenced code blocks
-      if (index % 2 === 0) {
-        return part.replace(/^([ \t]{4,}|\t+)([-*+]|\d+\.) /gm, '$2 ');
-      }
-      return part;
+      // Odd indices are inside fenced code blocks
+      if (index % 2 === 1) return part;
+
+      // 1. Collapse multiline $$...$$ display math blocks (that have no blank lines) into single lines
+      //    so CommonMark list markers (+ / -) or indentation never break \begin{array}/\begin{aligned} blocks
+      let out = part.replace(/\$\$([\s\S]*?)\$\$/g, (match, inner) => {
+        if (inner.includes("\n") && !/\n\s*\n/.test(inner)) {
+          return `$$${inner.replace(/\r?\n\s*/g, " ").trim()}$$`;
+        }
+        return match;
+      });
+
+      // 2. Normalize indented list items so CommonMark doesn't turn them into code blocks
+      out = out.replace(/^([ \t]{4,}|\t+)([-*+]|\d+\.) /gm, "$2 ");
+
+      // 3. Repair control-char corrupted LaTeX commands (\t -> tab, \n -> newline, \f -> formfeed/newline, \a -> \x07)
+      out = out
+        .replace(/\times\b/g, "\\times")
+        .replace(/\to\b/g, "\\to")
+        .replace(/\text\{/g, "\\text{")
+        .replace(/\theta\b/g, "\\theta")
+        .replace(/\tau\b/g, "\\tau")
+        .replace(/\$i\r?\neq j\$/g, "$i \\neq j$")
+        .replace(/[\x0c\r\n]+rac\{/g, " \\frac{")
+        .replace(/\x07pprox\b/g, "\\approx")
+        .replace(/\\text\{¢\}/g, "\\text{ cents}")
+        .replace(/matrix \$C=\[\.\.\./g, "matrix $C=[c_{ij}]$")
+        .replace(/\[\[(QZ|REV|PS|EX|HO|ANS)\]\s+([^\n\]]+)\](?!\])/g, "[[[$1] $2]]");
+
+      // 4. Wrap unbackticked Verilog system tasks ($display, $write, $strobe, $monitor, $finish, $stop, $time, etc.) and jQuery $(...) in inline code
+      out = out.replace(
+        /(?<!`)\$(display|write|strobe|monitor(?:on|off)?|stop|finish|s?time|realtime|random|exit|end)\b(?!`)/g,
+        (m) => `\`${m}\``
+      );
+      out = out.replace(
+        /(?<!`)\$\((?:document|[“"'][^”"'\n]+[”"'])\)(?:\.text\([“"'][^”"'\n]*[”"']\);?)?(?!`)/g,
+        (m) => `\`${m}\``
+      );
+
+      // 5. Clean up stray HackerRank PDF copy-paste $ artifacts
+      out = out
+        .replace(/[]\s*(?:Download problem statement|Download all test cases|Suggest Edits|View discussions|View top submissions)\$?/g, "")
+        .replace(/(?:RATE THIS CHALLENGE|Copy Download)\$/g, "")
+        .replace(/(?:•\s*\$)+/g, "")
+        .replace(/query of type \.\$/g, "query of type 3.")
+        .replace(/^\s*\.?\$\s*$/gm, "");
+
+      // 6. Replace $\$100$ with \$100 and \$ inside inline math ($...\$...$) with \char"24
+      out = out.replace(/\$\\\$(\d[\d,.]*)\$/g, (_m, num) => `\\$${num}`);
+      out = out.replace(/(?<!\$)\$((?:\\\$|[^$\n])+)\$(?!\$)/g, (match, inner) => {
+        if (inner.includes("\\$")) {
+          return `$${inner.replace(/\\\$/g, '\\char"24 ')}$`;
+        }
+        return match;
+      });
+
+      // 7. On Markdown table rows, replace unescaped | inside inline math $...$ with \vert so remark-gfm doesn't split cells
+      out = out
+        .split("\n")
+        .map((line) => {
+          if (/^\s*\|.*\|\s*$/.test(line) && line.includes("$")) {
+            return line.replace(/(?<!\$)\$((?:\\\$|[^$\n])+)\$(?!\$)/g, (_m, inner) => {
+              const safeInner = inner.replace(/(?<!\\)\|/g, " \\vert ");
+              return `$${safeInner}$`;
+            });
+          }
+          return line;
+        })
+        .join("\n");
+
+      return out;
     })
-    .join('');
+    .join("");
 }
+
+const mcqBlockComponents = {
+  ...components,
+  p: (props: any) => <p className="mb-3 last:mb-0 text-[var(--zen-snow)] leading-relaxed" {...props} />,
+  table: ({ children, className, ...props }: any) => (
+    <div className="my-3 w-full overflow-x-auto rounded-sm border border-[var(--zen-border)] bg-[var(--zen-void)]/70 shadow-md">
+      <table className={`w-full border-collapse text-left text-xs sm:text-sm ${className || ""}`} {...props}>
+        {children}
+      </table>
+    </div>
+  ),
+};
+
+const mcqInlineComponents = {
+  ...components,
+  p: ({ children }: any) => <span>{children}</span>,
+};
 
 export default function MarkdownRender({ content }: { content: string }) {
   const { cleanContent, mcqItems } = useMemo(() => {
@@ -433,8 +592,8 @@ export default function MarkdownRender({ content }: { content: string }) {
     // Strip YAML frontmatter
     cleaned = cleaned.replace(/^---\n[\s\S]*?\n---\n/, "");
 
-    // Normalize indented lists outside code blocks
-    cleaned = normalizeIndentedLists(cleaned);
+    // Normalize indented lists and math/table edge cases outside code blocks
+    cleaned = normalizeContentAndMath(cleaned);
 
     const { articleContent, mcqItems } = parseMCQSection(cleaned);
     return { cleanContent: articleContent, mcqItems };
@@ -461,10 +620,48 @@ export default function MarkdownRender({ content }: { content: string }) {
     return processor.processSync(cleanContent);
   }, [cleanContent]);
 
+  const renderMCQMarkdown = useMemo(() => {
+    const blockProcessor = unified()
+      .use(remarkParse)
+      .use(remarkWikilink)
+      .use(remarkGfm)
+      .use(remarkBreaks)
+      .use(remarkMath)
+      .use(remarkRehype, { allowDangerousHtml: true })
+      .use(rehypeRaw)
+      .use(rehypeKatex)
+      .use(rehypeReact, {
+        Fragment: React.Fragment,
+        jsx: prod.jsx,
+        jsxs: prod.jsxs,
+        components: mcqBlockComponents,
+      } as any);
+
+    const inlineProcessor = unified()
+      .use(remarkParse)
+      .use(remarkWikilink)
+      .use(remarkGfm)
+      .use(remarkMath)
+      .use(remarkRehype, { allowDangerousHtml: true })
+      .use(rehypeRaw)
+      .use(rehypeKatex)
+      .use(rehypeReact, {
+        Fragment: React.Fragment,
+        jsx: prod.jsx,
+        jsxs: prod.jsxs,
+        components: mcqInlineComponents,
+      } as any);
+
+    return (md: string, inline = false) => {
+      const normalized = normalizeContentAndMath(md);
+      return (inline ? inlineProcessor : blockProcessor).processSync(normalized).result;
+    };
+  }, []);
+
   return (
     <article className="max-w-3xl mx-auto w-full">
       <div className="markdown-body leading-relaxed">{file.result}</div>
-      {mcqItems.length > 0 && <MCQSection items={mcqItems} />}
+      {mcqItems.length > 0 && <MCQSection items={mcqItems} renderMarkdown={renderMCQMarkdown} />}
     </article>
   );
 }

@@ -14,7 +14,7 @@ hackerrank_domain: Divide and Conquer
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Bisection Method]] #[[Binary Search]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Bisection Method]] #[[Binary Search]]
 
 ---
 
@@ -42,14 +42,14 @@ There will be $T$ lines of outputs, each line being the lowest starting water le
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > A rice paddy evaporates water at a rate that depends on how full it is, following a sigmoid-shaped formula. Given the target evaporation rate `s` and formula parameters, find the exact starting water level `x ∈ [0,1]` that produces that rate.
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > Try every possible value of x from 0.000000 to 1.000000 in tiny steps (say 0.000001).
 > **O(1,000,000 per query)** — slow and imprecise; you'd need millions of steps for 10⁻⁶ precision.
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > The formula is monotone (always decreasing in x), so use **bisection** — halve the search interval each iteration. After 200 halvings, precision is 2⁻²⁰⁰ ≈ 10⁻⁶⁰ — absurdly more precise than needed.
 > **O(200) per query** — instant.
 
@@ -161,7 +161,7 @@ Iter 3: lo=0.500, hi=0.750, mid=0.625
   g(lo)=+0.038, g(mid)=-0.076 → opposite → hi=0.625
 
 ...200 iterations...
-  lo = hi = 0.697784503037 ← converged ✓
+  lo = hi = 0.697784503037 ← converged 
 ```
 
 Each iteration cuts the interval in half → after 200 steps: width = 1/2²⁰⁰ ≈ 10⁻⁶⁰.
@@ -217,10 +217,10 @@ void solve(double s, double d, double k, double a) {
 
 | s (target) | d | k | a | rate(0) | rate(1) | s in [rate1,rate0]? | Answer |
 |---|---|---|---|---|---|---|---|
-| 0.7119 | -0.1206 | 2.993 | 4.058 | 0.877 | 0.271 | ✅ | 0.697784503037 |
-| 0.9219 | 0.1963 | 2.714 | 4.320 | 1.073 | 0.413 | ✅ | 0.887908531876 |
-| 0.2772 | 0.2253 | 4.255 | 1.939 | 1.212 | 0.421 | ❌ s < rate(1) | Sweet spot! |
-| 0.9411 | -0.1370 | 2.086 | 2.679 | 0.836 | 0.418 | ❌ s > rate(0) | Sweet spot! |
+| 0.7119 | -0.1206 | 2.993 | 4.058 | 0.877 | 0.271 |  | 0.697784503037 |
+| 0.9219 | 0.1963 | 2.714 | 4.320 | 1.073 | 0.413 |  | 0.887908531876 |
+| 0.2772 | 0.2253 | 4.255 | 1.939 | 1.212 | 0.421 |  s < rate(1) | Sweet spot! |
+| 0.9411 | -0.1370 | 2.086 | 2.679 | 0.836 | 0.418 |  s > rate(0) | Sweet spot! |
 
 ## Complexity Analysis
 | | Complexity |
@@ -304,7 +304,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

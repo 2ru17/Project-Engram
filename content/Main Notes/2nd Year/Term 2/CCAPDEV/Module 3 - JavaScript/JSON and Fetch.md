@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Web Development]] #[[CCAPDEV]] #[[JSON and Fetch]] #[[Code Snippets]] #[[M3]]
+**Tags:** #[[Web Development]] #[[CCAPDEV]] #[[JSON and Fetch]] #[[Code Snippets]] #[[M3]]
 
 ---
 
@@ -93,27 +93,28 @@ Strings in JSON must be written in double quotes
 ## Multiple Choice Questions
 
 1. Which of the following is NOT a valid JSON data type?
-- **A)** Boolean
-- **B)** Number
-- **C)** Undefined
-- **D)** Array
+    - **A)** Boolean
+    - **B)** Number
+    - **C)** Undefined
+    - **D)** Array
 
 2. In JSON syntax, how must string values be formatted?
-- **A)** They must be enclosed in double quotes.
-- **B)** They must be enclosed in single quotes.
-- **C)** They can be enclosed in either single or double quotes.
-- **D)** They do not require any quotes.
+    - **A)** They must be enclosed in double quotes.
+    - **B)** They must be enclosed in single quotes.
+    - **C)** They can be enclosed in either single or double quotes.
+    - **D)** They do not require any quotes.
 
 3. When working with forms in JavaScript, what is the purpose of the `FormData` interface?
-- **A)** To style the form elements using CSS dynamically.
-- **B)** To easily retrieve and structure the data from a form element for processing.
-- **C)** To permanently save form inputs to the user's local file system.
-- **D)** To prevent users from submitting empty forms.
+    - **A)** To style the form elements using CSS dynamically.
+    - **B)** To easily retrieve and structure the data from a form element for processing.
+    - **C)** To permanently save form inputs to the user's local file system.
+    - **D)** To prevent users from submitting empty forms.
 
 ### Answer Key & Explanations
-1. **C)** Valid JSON data types include String, Number, JSON object, Array, Boolean, and null. "Undefined" is a JavaScript type but not a valid JSON type.
-2. **A)** Strings in JSON must be written in double quotes.
-3. **B)** The `FormData` interface allows you to easily get data from a form, structured as key-value pairs, by passing `document.forms.myform` to it.
+
+1. **C**. Valid JSON data types include String, Number, JSON object, Array, Boolean, and null. "Undefined" is a JavaScript type but not a valid JSON type.
+2. **A**. Strings in JSON must be written in double quotes.
+3. **B**. The `FormData` interface allows you to easily get data from a form, structured as key-value pairs, by passing `document.forms.myform` to it.
 
 ## References & Navigation
 

@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Microprogramming]] #[[Control Unit]] #[[Single-Bus CPU Architecture]] #[[Register Transfer Language]] #[[Control Words]] #[[x86 Assembly]] #[[Addressing Modes]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Microprogramming]] #[[Control Unit]] #[[Single-Bus CPU Architecture]] #[[Register Transfer Language]] #[[Control Words]] #[[x86 Assembly]] #[[Addressing Modes]]
 
 ---
 
 # Problem Set: Microprogramming & Control Unit Design
 
-## 📖 Overview & Theoretical Framework
+## Overview & Theoretical Framework
 
 In a microprogrammed [[Control Unit]], machine-level assembly instructions are not executed by hardwired combinatorial logic alone. Instead, each machine instruction is interpreted as a sequence of elementary hardware operations known as **micro-operations** (or **RTL** — Register Transfer Language statements). These micro-operations are stored in a high-speed internal read-only or read-mostly memory called the **Control Memory (CM)**.
 
@@ -179,7 +179,7 @@ $$\begin{array}{|c|c|c|c|c|c|c|c|c|c|}
 
 ---
 
-## 🛠️ Problem Set Solutions & Detailed Traces
+## Problem Set Solutions & Detailed Traces
 
 ---
 
@@ -453,7 +453,7 @@ $$\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|c|}
 
 ---
 
-## 💻 Python Simulation & Verification Suite
+## Python Simulation & Verification Suite
 
 To guarantee the mathematical and architectural integrity of the microprogram sequences and binary control words, the following executable Python simulator implements the cycle-accurate single-bus state machine:
 
@@ -590,7 +590,7 @@ if __name__ == "__main__":
 
 ---
 
-## 🎯 Key Takeaways & Synthesis
+## Key Takeaways & Synthesis
 
 ### Comparative Summary Table
 

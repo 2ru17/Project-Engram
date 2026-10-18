@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Problem Solving]] #[[CCINFOM]] #[[Normalization]] #[[Database Design]] #[[Relational Model]] #[[M7]]
+**Tags:** #[[Problem Solving]] #[[CCINFOM]] #[[Normalization]] #[[Database Design]] #[[Relational Model]] #[[M7]]
 
 ---
 
@@ -82,76 +82,77 @@ Resulting 3NF Relations:
 ## Multiple Choice Questions
 
 1. In the relational model, what does the term "Degree" refer to?
-- **A)** The number of tuples (rows) in a relation.
-- **B)** The number of attributes (columns) in a relation.
-- **C)** The allowable values for an attribute.
-- **D)** The number of foreign keys in a table.
+    - **A)** The number of tuples (rows) in a relation.
+    - **B)** The number of attributes (columns) in a relation.
+    - **C)** The allowable values for an attribute.
+    - **D)** The number of foreign keys in a table.
 
 2. Which integrity constraint ensures that no primary key attribute is ever null?
-- **A)** Domain Constraint
-- **B)** Referential Integrity
-- **C)** Entity Integrity
-- **D)** Functional Constraint
+    - **A)** Domain Constraint
+    - **B)** Referential Integrity
+    - **C)** Entity Integrity
+    - **D)** Functional Constraint
 
 3. What anomaly occurs when you cannot add new data without entering redundant information or unrelated data?
-- **A)** Deletion Anomaly
-- **B)** Modification Anomaly
-- **C)** Insertion Anomaly
-- **D)** Functional Anomaly
+    - **A)** Deletion Anomaly
+    - **B)** Modification Anomaly
+    - **C)** Insertion Anomaly
+    - **D)** Functional Anomaly
 
 4. What is a fundamental property of a relation regarding its rows and columns?
-- **A)** The order of columns is strict, but rows can be random.
-- **B)** Both the order of rows and the order of columns are irrelevant.
-- **C)** Rows must be sorted by the primary key.
-- **D)** Multi-valued attributes are allowed if the column is wide enough.
+    - **A)** The order of columns is strict, but rows can be random.
+    - **B)** Both the order of rows and the order of columns are irrelevant.
+    - **C)** Rows must be sorted by the primary key.
+    - **D)** Multi-valued attributes are allowed if the column is wide enough.
 
 5. In order for a table to be in First Normal Form (1NF), what must be true?
-- **A)** It must have no partial dependencies.
-- **B)** Every non-key attribute must depend on the entire primary key.
-- **C)** It must contain no transitive dependencies.
-- **D)** Every attribute value must be atomic and there can be no multi-valued attributes.
+    - **A)** It must have no partial dependencies.
+    - **B)** Every non-key attribute must depend on the entire primary key.
+    - **C)** It must contain no transitive dependencies.
+    - **D)** Every attribute value must be atomic and there can be no multi-valued attributes.
 
 6. Second Normal Form (2NF) specifically addresses and removes which of the following?
-- **A)** Transitive dependencies
-- **B)** Multi-valued attributes
-- **C)** Partial functional dependencies
-- **D)** Domain constraint violations
+    - **A)** Transitive dependencies
+    - **B)** Multi-valued attributes
+    - **C)** Partial functional dependencies
+    - **D)** Domain constraint violations
 
 7. A transitive dependency exists when:
-- **A)** A non-key attribute is functionally determined by another non-key attribute.
-- **B)** A non-key attribute depends only on part of a composite primary key.
-- **C)** The primary key is dependent on a foreign key.
-- **D)** An attribute has multiple values within a single cell.
+    - **A)** A non-key attribute is functionally determined by another non-key attribute.
+    - **B)** A non-key attribute depends only on part of a composite primary key.
+    - **C)** The primary key is dependent on a foreign key.
+    - **D)** An attribute has multiple values within a single cell.
 
 8. When resolving a Referential Integrity constraint during deletion, which rule prevents the deletion of a parent record if a child record exists?
-- **A)** Cascade
-- **B)** Restrict
-- **C)** Set-to-Null
-- **D)** Ignore
+    - **A)** Cascade
+    - **B)** Restrict
+    - **C)** Set-to-Null
+    - **D)** Ignore
 
 9. In the normalization example provided, moving `ClientAddress, ClientEmail, ClientPhone` to a new `Customer` table is done to achieve which normal form?
-- **A)** First Normal Form (1NF)
-- **B)** Second Normal Form (2NF)
-- **C)** Third Normal Form (3NF)
-- **D)** Boyce-Codd Normal Form (BCNF)
+    - **A)** First Normal Form (1NF)
+    - **B)** Second Normal Form (2NF)
+    - **C)** Third Normal Form (3NF)
+    - **D)** Boyce-Codd Normal Form (BCNF)
 
 10. What does the term "Cardinality" mean in the context of a relation's structure?
-- **A)** The total number of columns.
-- **B)** The number of tuples (rows) present in the relation.
-- **C)** The maximum number of tables that can be joined.
-- **D)** The number of dependencies between attributes.
+    - **A)** The total number of columns.
+    - **B)** The number of tuples (rows) present in the relation.
+    - **C)** The maximum number of tables that can be joined.
+    - **D)** The number of dependencies between attributes.
 
 ### Answer Key & Explanations
-1. **B)** The degree of a relation is defined strictly as the number of attributes or columns it contains.
-2. **C)** Entity integrity is the rule stating that primary keys must remain fully populated (no nulls) to ensure row uniqueness.
-3. **C)** An insertion anomaly prevents you from successfully adding new, isolated data into a table due to the table's flawed structure requiring additional unrelated data.
-4. **B)** For a table to qualify as a relation, the sequence and ordering of both its rows and columns are completely irrelevant.
-5. **D)** 1NF's core requirement is that all attributes must hold atomic, single values rather than multi-valued sets.
-6. **C)** 2NF builds upon 1NF by identifying and eliminating partial dependencies, ensuring non-key attributes rely on the entire composite primary key.
-7. **A)** Transitive dependency occurs when one non-key attribute relies on another non-key attribute, rather than directly on the primary key.
-8. **B)** The "Restrict" deletion rule ensures referential integrity by actively blocking the deletion of a parent record if corresponding foreign key records exist in child tables.
-9. **C)** Removing client details that depend on `ClientName` instead of the primary key resolves a transitive dependency, achieving 3NF.
-10. **B)** Cardinality describes the number of instances, which translates to the total number of tuples (or rows) in a given relation.
+
+1. **B**. The degree of a relation is defined strictly as the number of attributes or columns it contains.
+2. **C**. Entity integrity is the rule stating that primary keys must remain fully populated (no nulls) to ensure row uniqueness.
+3. **C**. An insertion anomaly prevents you from successfully adding new, isolated data into a table due to the table's flawed structure requiring additional unrelated data.
+4. **B**. For a table to qualify as a relation, the sequence and ordering of both its rows and columns are completely irrelevant.
+5. **D**. 1NF's core requirement is that all attributes must hold atomic, single values rather than multi-valued sets.
+6. **C**. 2NF builds upon 1NF by identifying and eliminating partial dependencies, ensuring non-key attributes rely on the entire composite primary key.
+7. **A**. Transitive dependency occurs when one non-key attribute relies on another non-key attribute, rather than directly on the primary key.
+8. **B**. The "Restrict" deletion rule ensures referential integrity by actively blocking the deletion of a parent record if corresponding foreign key records exist in child tables.
+9. **C**. Removing client details that depend on `ClientName` instead of the primary key resolves a transitive dependency, achieving 3NF.
+10. **B**. Cardinality describes the number of instances, which translates to the total number of tuples (or rows) in a given relation.
 
 ## References & Navigation
 

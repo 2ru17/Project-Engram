@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCAPDEV]] #[[Conceptual]] #[[CSS Selectors]]
+**Tags:** #[[Computer Science]] #[[CCAPDEV]] #[[Conceptual]] #[[CSS Selectors]]
 
 ---
 
@@ -82,77 +82,77 @@ Using a class to style specific elements without affecting all tags of that type
 ## Multiple Choice Questions
 
 1. Which of the following symbols denotes a CSS Class Selector?
-- **A)** `#`
-- **B)** `.`
-- **C)** `*`
-- **D)** `:`
+    - **A)** `#`
+    - **B)** `.`
+    - **C)** `*`
+    - **D)** `:`
 
 2. What is the primary difference between an ID and a Class selector?
-- **A)** Classes can only be used on `<div>` tags, while IDs can be used anywhere.
-- **B)** IDs are unique and used once per page, while Classes can be reused on multiple elements.
-- **C)** Classes override IDs in specificity.
-- **D)** IDs are denoted by a dot (`.`), while Classes are denoted by a hash (`#`).
+    - **A)** Classes can only be used on `<div>` tags, while IDs can be used anywhere.
+    - **B)** IDs are unique and used once per page, while Classes can be reused on multiple elements.
+    - **C)** Classes override IDs in specificity.
+    - **D)** IDs are denoted by a dot (`.`), while Classes are denoted by a hash (`#`).
 
 3. Which selector targets every instance of a specific HTML tag on a page?
-- **A)** ID Selector
-- **B)** Pseudo-class Selector
-- **C)** Element Selector
-- **D)** Attribute Selector
+    - **A)** ID Selector
+    - **B)** Pseudo-class Selector
+    - **C)** Element Selector
+    - **D)** Attribute Selector
 
 4. If you want to style an element only when the user's mouse pointer is over it, which selector should you use?
-- **A)** Attribute Selector
-- **B)** Combinator
-- **C)** Element Selector
-- **D)** Pseudo-class (e.g., `:hover`)
+    - **A)** Attribute Selector
+    - **B)** Combinator
+    - **C)** Element Selector
+    - **D)** Pseudo-class (e.g., `:hover`)
 
 5. How would you target an HTML element with the ID `main-nav` in CSS?
-- **A)** `.main-nav { }`
-- **B)** `#main-nav { }`
-- **C)** `main-nav { }`
-- **D)** `*main-nav { }`
+    - **A)** `.main-nav { }`
+    - **B)** `#main-nav { }`
+    - **C)** `main-nav { }`
+    - **D)** `*main-nav { }`
 
 6. What do Combinator selectors do?
-- **A)** Target elements based on their relationship with other elements in the DOM.
-- **B)** Combine multiple CSS files into one.
-- **C)** Combine CSS with JavaScript logic.
-- **D)** Randomly select elements to apply styles to.
+    - **A)** Target elements based on their relationship with other elements in the DOM.
+    - **B)** Combine multiple CSS files into one.
+    - **C)** Combine CSS with JavaScript logic.
+    - **D)** Randomly select elements to apply styles to.
 
 7. Which of the following targets an element based on its HTML attributes, such as `type="text"`?
-- **A)** Element Selector
-- **B)** Pseudo-element
-- **C)** Attribute Selector
-- **D)** ID Selector
+    - **A)** Element Selector
+    - **B)** Pseudo-element
+    - **C)** Attribute Selector
+    - **D)** ID Selector
 
 8. Why is it advantageous to use Class selectors over Element selectors?
-- **A)** They make the web page load significantly faster.
-- **B)** They allow for reusable, specific styling without inadvertently affecting all generic elements on the page.
-- **C)** They execute server-side code.
-- **D)** They are the only way to change text color.
+    - **A)** They make the web page load significantly faster.
+    - **B)** They allow for reusable, specific styling without inadvertently affecting all generic elements on the page.
+    - **C)** They execute server-side code.
+    - **D)** They are the only way to change text color.
 
 9. What does the selector `h1 { }` represent?
-- **A)** It targets elements with the class `h1`.
-- **B)** It targets the HTML tag `<h1>`.
-- **C)** It targets elements with the ID `h1`.
-- **D)** It targets any heading element on the page.
+    - **A)** It targets elements with the class `h1`.
+    - **B)** It targets the HTML tag `<h1>`.
+    - **C)** It targets elements with the ID `h1`.
+    - **D)** It targets any heading element on the page.
 
 10. Which selector would you use to style the very first letter of a paragraph differently from the rest of the text?
-- **A)** Combinator
-- **B)** Element Selector
-- **C)** Pseudo-element (e.g., `::first-letter`)
-- **D)** Class Selector
+    - **A)** Combinator
+    - **B)** Element Selector
+    - **C)** Pseudo-element (e.g., `::first-letter`)
+    - **D)** Class Selector
 
 ### Answer Key & Explanations
 
-1. **B** - The dot/period (`.`) is used in CSS to target a class.
-2. **B** - An ID represents a unique element on a page, whereas classes are meant to be applied to multiple elements to share styles.
-3. **C** - Element selectors (like `p` or `h1`) apply rules to every matching HTML tag in the document.
-4. **D** - Pseudo-classes like `:hover` target the state of an element, such as user interaction.
-5. **B** - The hash/pound symbol (`#`) is used to denote an ID selector in CSS.
-6. **A** - Combinators (like descendent or child selectors) define relationships between elements to apply specific styles based on context.
-7. **C** - Attribute selectors look for specific HTML attributes inside the opening tag (e.g., `[type="text"]`).
-8. **B** - Relying only on element selectors causes sweeping changes. Classes provide controlled, reusable precision.
-9. **B** - This is a standard element selector that targets all `<h1>` tags directly.
-10. **C** - Pseudo-elements allow you to style specific structural parts of an element, like `::first-letter` or `::first-line`.
+1. **B**. The dot/period (`.`) is used in CSS to target a class.
+2. **B**. An ID represents a unique element on a page, whereas classes are meant to be applied to multiple elements to share styles.
+3. **C**. Element selectors (like `p` or `h1`) apply rules to every matching HTML tag in the document.
+4. **D**. Pseudo-classes like `:hover` target the state of an element, such as user interaction.
+5. **B**. The hash/pound symbol (`#`) is used to denote an ID selector in CSS.
+6. **A**. Combinators (like descendent or child selectors) define relationships between elements to apply specific styles based on context.
+7. **C**. Attribute selectors look for specific HTML attributes inside the opening tag (e.g., `[type="text"]`).
+8. **B**. Relying only on element selectors causes sweeping changes. Classes provide controlled, reusable precision.
+9. **B**. This is a standard element selector that targets all `<h1>` tags directly.
+10. **C**. Pseudo-elements allow you to style specific structural parts of an element, like `::first-letter` or `::first-line`.
 
 ## References & Navigation
 

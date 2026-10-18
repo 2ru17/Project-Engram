@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSSECU2]] #[[Cybersecurity]] #[[Enumeration]] #[[Banner Grabbing]] #[[Web Enumeration]] #[[Gobuster]] #[[Fuzzing]]
+**Tags:** #[[Computer Science]] #[[NSSECU2]] #[[Cybersecurity]] #[[Enumeration]] #[[Banner Grabbing]] #[[Web Enumeration]] #[[Gobuster]] #[[Fuzzing]]
 
 ---
 
@@ -183,63 +183,63 @@ Content-Type: text/html; charset=UTF-8
 ## Multiple Choice Questions
 
 1. What is the fundamental difference between network scanning and enumeration?
-- **A)** Scanning modifies database tables, while enumeration only reads text files.
-- **B)** Scanning identifies active hosts and open ports, while enumeration actively queries open services for detailed configuration, user, and version data.
-- **C)** Scanning is exclusively passive, while enumeration is completely undetectable.
-- **D)** Enumeration is only performed on wireless networks.
+    - **A)** Scanning modifies database tables, while enumeration only reads text files.
+    - **B)** Scanning identifies active hosts and open ports, while enumeration actively queries open services for detailed configuration, user, and version data.
+    - **C)** Scanning is exclusively passive, while enumeration is completely undetectable.
+    - **D)** Enumeration is only performed on wireless networks.
 
 2. A security tester runs `curl -I http://target.com` and observes `X-Powered-By: PHP/7.4.3`. What type of finding does this represent?
-- **A)** Zero-day Remote Code Execution
-- **B)** Technology and Information Disclosure via HTTP response headers
-- **C)** SQL Injection in the URL parameter
-- **D)** Hardware buffer overflow
+    - **A)** Technology and Information Disclosure via HTTP response headers
+    - **B)** Zero-day Remote Code Execution
+    - **C)** SQL Injection in the URL parameter
+    - **D)** Hardware buffer overflow
 
 3. When running `gobuster dir`, what is the purpose of the `-x php,txt,bak` command flag?
-- **A)** To exclude PHP, TXT, and BAK files from the scan
-- **B)** To append `.php`, `.txt`, and `.bak` file extensions to every word in the dictionary
-- **C)** To automatically execute discovered scripts on the remote host
-- **D)** To encrypt all outgoing HTTP traffic
+    - **A)** To exclude PHP, TXT, and BAK files from the scan
+    - **B)** To automatically execute discovered scripts on the remote host
+    - **C)** To append `.php`, `.txt`, and `.bak` file extensions to every word in the dictionary
+    - **D)** To encrypt all outgoing HTTP traffic
 
 4. An HTTP response status code of `403 Forbidden` indicates which of the following?
-- **A)** The web server crashed due to high memory usage.
-- **B)** The requested resource exists on the server, but access is restricted based on current client permissions or configuration.
-- **C)** The client successfully downloaded an administrative backup file.
-- **D)** The DNS server failed to resolve the domain name.
+    - **A)** The web server crashed due to high memory usage.
+    - **B)** The DNS server failed to resolve the domain name.
+    - **C)** The client successfully downloaded an administrative backup file.
+    - **D)** The requested resource exists on the server, but access is restricted based on current client permissions or configuration.
 
 5. What critical security vulnerability occurs when developers accidentally leave the `.git/` folder accessible in the public web root?
-- **A)** It allows clients to query DNS zone transfers.
-- **B)** It enables complete extraction of application source code, commit history, and potential hardcoded credentials.
-- **C)** It triggers a physical reboot of the server motherboard.
-- **D)** It converts the web server into a Bitcoin miner.
+    - **A)** It allows clients to query DNS zone transfers.
+    - **B)** It enables complete extraction of application source code, commit history, and potential hardcoded credentials.
+    - **C)** It triggers a physical reboot of the server motherboard.
+    - **D)** It converts the web server into a Bitcoin miner.
 
 6. Which tool and option allows an analyst to enumerate SMB shares anonymously without providing a password?
-- **A)** `smbclient -L //target/ -N`
-- **B)** `nmap -sS target -p 22`
-- **C)** `gobuster dir -u http://target/ -w wordlist.txt`
-- **D)** `nc -vn target 80`
+    - **A)** `gobuster dir -u http://target/ -w wordlist.txt`
+    - **B)** `nmap -sS target -p 22`
+    - **C)** `smbclient -L //target/ -N`
+    - **D)** `nc -vn target 80`
 
 7. While fuzzing with `ffuf`, every single request returns HTTP `200 OK` with a byte size of `1542`, even for nonexistent random paths. How should the tester filter out these false positives?
-- **A)** Increase the number of concurrent threads to 500
-- **B)** Use the `-fs 1542` flag to filter out responses of exactly 1542 bytes
-- **C)** Disconnect from the network and restart Kali Linux
-- **D)** Change the target IP address to localhost
+    - **A)** Use the `-fs 1542` flag to filter out responses of exactly 1542 bytes
+    - **B)** Increase the number of concurrent threads to 500
+    - **C)** Disconnect from the network and restart Kali Linux
+    - **D)** Change the target IP address to localhost
 
 8. How can system administrators prevent sensitive internal routes from being indexed by search engines without revealing their existence to attackers who inspect `robots.txt`?
-- **A)** Put all administrator passwords directly inside `robots.txt`
-- **B)** Rely on proper server-side authentication and authorization controls rather than relying on `robots.txt` for obscurity
-- **C)** Delete the entire web server operating system
-- **D)** Rename `robots.txt` to `admin.txt`
+    - **A)** Put all administrator passwords directly inside `robots.txt`
+    - **B)** Rename `robots.txt` to `admin.txt`
+    - **C)** Delete the entire web server operating system
+    - **D)** Rely on proper server-side authentication and authorization controls rather than relying on `robots.txt` for obscurity
 
 ### Answer Key & Explanations
 
 1. **B**. **Network scanning** maps the high-level landscape (open ports and hosts), whereas **enumeration** establishes deeper application-layer dialogues to harvest granular usernames, configurations, and version metadata.
-2. **B**. The **`X-Powered-By`** header discloses underlying framework details (PHP 7.4.3), enabling targeted research into framework-specific vulnerabilities.
-3. **B**. The **`-x`** flag instructs directory bruteforcers to append specified file extensions to each wordlist item (e.g., testing `admin.php`, `admin.txt`, `admin.bak`).
-4. **B**. HTTP **`403 Forbidden`** confirms the physical or logical existence of the endpoint while indicating access control restrictions, prompting further access-control or header-tampering analysis.
+2. **A**. The **`X-Powered-By`** header discloses underlying framework details (PHP 7.4.3), enabling targeted research into framework-specific vulnerabilities.
+3. **C**. The **`-x`** flag instructs directory bruteforcers to append specified file extensions to each wordlist item (e.g., testing `admin.php`, `admin.txt`, `admin.bak`).
+4. **D**. HTTP **`403 Forbidden`** confirms the physical or logical existence of the endpoint while indicating access control restrictions, prompting further access-control or header-tampering analysis.
 5. **B**. An exposed **`.git/` directory** allows adversaries to reconstruct full source code repositories and historical commits using tools like `git-dumper`.
-6. **A**. The **`smbclient -L //<target>/ -N`** command requests the list of accessible SMB shares with the `-N` (no password / null session) flag.
-7. **B**. When web applications return custom 200 OK pages for nonexistent URLs, using **`-fs <size>`** filters out the static response size of the generic page.
-8. **B**. **`robots.txt`** is a publicly readable file; relying on it to hide secrets provides false security. Robust **server-side authentication and authorization** are mandatory to protect restricted assets.
+6. **C**. The **`smbclient -L //<target>/ -N`** command requests the list of accessible SMB shares with the `-N` (no password / null session) flag.
+7. **A**. When web applications return custom 200 OK pages for nonexistent URLs, using **`-fs <size>`** filters out the static response size of the generic page.
+8. **D**. **`robots.txt`** is a publicly readable file; relying on it to hide secrets provides false security. Robust **server-side authentication and authorization** are mandatory to protect restricted assets.
 
 ## References & Navigation
 

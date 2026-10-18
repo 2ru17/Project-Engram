@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Memory System Organization & Hierarchy]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Memory System Organization & Hierarchy]]
 
 ---
 
@@ -178,34 +178,34 @@ for (int j = 0; j < N; j++) {
 ## Multiple Choice Questions
 
 1. Which memory technology stores data bits in cross-coupled transistor inverters without requiring refresh cycles?
-- **A)** Dynamic RAM (DRAM)
-- **B)** Static RAM (SRAM)
-- **C)** NAND Flash
-- **D)** EEPROM
+    - **A)** Dynamic RAM (DRAM)
+    - **B)** Static RAM (SRAM)
+    - **C)** NAND Flash
+    - **D)** EEPROM
 
 2. What is the fundamental principle exploited when a CPU fetches an entire 64-byte cache block upon missing a single 4-byte word?
-- **A)** Temporal Locality
-- **B)** Spatial Locality
-- **C)** Amdahl's Law
-- **D)** Dennard Scaling
+    - **A)** Temporal Locality
+    - **B)** Spatial Locality
+    - **C)** Amdahl's Law
+    - **D)** Dennard Scaling
 
 3. In a modern computer memory hierarchy, which storage tier offers the lowest latency and highest cost per bit?
-- **A)** Main DDR5 DRAM
-- **B)** L1 On-Chip Cache
-- **C)** NVMe Solid-State Drive
-- **D)** Internal CPU Registers
+    - **A)** Main DDR5 DRAM
+    - **B)** L1 On-Chip Cache
+    - **C)** NVMe Solid-State Drive
+    - **D)** Internal CPU Registers
 
 4. Why must Dynamic RAM (DRAM) undergo periodic refresh cycles?
-- **A)** The transistors lose their clock synchronization
-- **B)** The microscopic storage capacitors leak electrical charge over time
-- **C)** The row address decoders overheat
-- **D)** The magnetic polarization decays
+    - **A)** The transistors lose their clock synchronization
+    - **B)** The microscopic storage capacitors leak electrical charge over time
+    - **C)** The row address decoders overheat
+    - **D)** The magnetic polarization decays
 
 5. If an algorithm exhibits high Temporal Locality, how should the memory hierarchy be configured to optimize its performance?
-- **A)** Retain recently accessed blocks in the fastest, nearest cache levels
-- **B)** Increase the block transfer size to 4096 bytes
-- **C)** Bypass the cache and read directly from secondary storage
-- **D)** Disable pipelined instruction decoding
+    - **A)** Retain recently accessed blocks in the fastest, nearest cache levels
+    - **B)** Increase the block transfer size to 4096 bytes
+    - **C)** Bypass the cache and read directly from secondary storage
+    - **D)** Disable pipelined instruction decoding
 
 ### Answer Key & Explanations
 

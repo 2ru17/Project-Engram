@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
 
 ---
 
@@ -57,77 +57,43 @@ Therefore, $(4, 76)$ is the absolute maximum point and $(1, -5)$ is the absolute
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. What are the hypotheses required by the **Extreme Value Theorem (EVT)** to guarantee that $f(x)$ attains both an absolute maximum and an absolute minimum on $[a, b]$?
+    - **A)** $f$ must be differentiable on the open interval $(a, b)$
+    - **B)** $f$ must be continuous on the closed, bounded interval $[a, b]$
+    - **C)** $f$ must be strictly monotonic on $[a, b]$
+    - **D)** $f'(x) \ne 0$ everywhere on $[a, b]$
 
-2. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. How is a **critical number** $c$ of a function $f$ defined?
+    - **A)** Any number $c$ where $f(c) = 0$
+    - **B)** A number $c$ in the domain of $f$ such that either $f'(c) = 0$ or $f'(c)$ does not exist
+    - **C)** Any number $c$ where $f''(c) = 0$
+    - **D)** Any vertical asymptote where $f(c)$ is undefined
 
-3. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. According to the Closed Interval Method, to find the absolute maximum and minimum of a continuous function $f$ on $[a, b]$, where must you evaluate $f(x)$?
+    - **A)** Only at points where $f'(x) = 0$
+    - **B)** Only at the endpoints $x = a$ and $x = b$
+    - **C)** At all critical numbers of $f$ in $(a, b)$ AND at the endpoints $a$ and $b$
+    - **D)** At all inflection points where $f''(x) = 0$
 
-4. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. Find the absolute maximum value of $f(x) = x^3 - 3x + 1$ on the closed interval $[0, 2]$.
+    - **A)** $-1$
+    - **B)** $1$
+    - **C)** $3$
+    - **D)** $2$
 
-5. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Absolute Extremum?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. Does Fermat's Theorem ("if $f$ has a local extremum at $c$ and $f'(c)$ exists, then $f'(c) = 0$") imply that every point with $f'(c) = 0$ is a local extremum?
+    - **A)** Yes, $f'(c) = 0$ always guarantees a local maximum or minimum
+    - **B)** No; for example, $f(x) = x^3$ has $f'(0) = 0$ at $x = 0$, which is a horizontal inflection point rather than a local extremum
+    - **C)** Yes, provided $f(x)$ is a polynomial
+    - **D)** No, because $f'(c) = 0$ only occurs at endpoints
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Absolute Extremum without relying on rote computation.
+
+1. **B**. Both continuity and a closed, bounded interval $[a, b]$ are essential. If the interval is open (like $(0, 1)$) or $f$ has a discontinuity, absolute extrema may fail to exist.
+2. **B**. A critical number must first belong to the domain of $f$, and at that point the derivative must either vanish ($f'(c) = 0$) or fail to exist (such as a corner or cusp).
+3. **C**. Absolute extrema on $[a, b]$ can occur either in the interior (which by Fermat's Theorem must be at a critical number) or at the boundary endpoints $x = a$ and $x = b$.
+4. **C**. Here $f'(x) = 3x^2 - 3 = 3(x - 1)(x + 1) = 0 \implies x = 1$ is the only critical number in $(0, 2)$. Comparing values: $f(0) = 1$, $f(1) = -1$ (abs min), and $f(2) = 8 - 6 + 1 = 3$ (abs max).
+5. **B**. The converse of Fermat's Theorem is false: $f'(c) = 0$ is a necessary condition for a differentiable interior extremum, not a sufficient one. For $f(x) = x^3$, $f'(x) = 3x^2 \ge 0$ does not change sign at $x = 0$.
 
 ## References & Navigation
 

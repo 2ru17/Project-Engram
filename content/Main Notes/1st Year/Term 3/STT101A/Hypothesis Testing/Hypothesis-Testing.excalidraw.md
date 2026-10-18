@@ -11,112 +11,73 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Hypothesis-Testing.excalidraw]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Hypothesis-Testing.excalidraw]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Hypothesis-Testing.excalidraw**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+This visual reference summarizes the **Statistical Hypothesis Testing Decision Framework**: partitioning the sampling distribution of a test statistic into the **Acceptance (Non-Rejection) Region** and the **Critical (Rejection) Region** under the Null Hypothesis $H_0$, along with the trade-off between **Type I Error ($\alpha$)** and **Type II Error ($\beta$)**.
 
 ## Key Definitions
-- **Hypothesis-Testing.excalidraw**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Hypothesis-Testing.excalidraw** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+| Reality \\ Decision | Do Not Reject $H_0$ | Reject $H_0$ |
+| :--- | :---: | :---: |
+| **$H_0$ is True** | Correct Decision ($1 - \alpha$, Confidence Level) | **Type I Error** (False Positive, $P = \alpha$) |
+| **$H_0$ is False ($H_a$ True)** | **Type II Error** (False Negative, $P = \beta$) | Correct Decision ($1 - \beta$, **Statistical Power**) |
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+- **Test Statistic ($Z$ or $T$):** Standardized distance between sample estimate $\bar{X}$ and hypothesized parameter $\mu_0$:
+  $$Z = \frac{\bar{X} - \mu_0}{\sigma / \sqrt{n}}, \qquad T = \frac{\bar{X} - \mu_0}{S / \sqrt{n}} \sim t_{n-1}$$
+- **Decision Rule ($p$-value vs. $\alpha$):** Reject $H_0$ if and only if $p\text{-value} \le \alpha$ (equivalently, if the test statistic falls inside the critical region).
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Hypothesis-Testing.excalidraw**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+## Worked Example
 
-By following these structured steps, errors and common pitfalls can be minimized.
+**Problem:** Test $H_0: \mu = 50$ vs. $H_a: \mu \ne 50$ (two-tailed) at significance level $\alpha = 0.05$ ($z_{\alpha/2} = \pm 1.96$) when a sample of size $n = 36$ with known $\sigma = 12$ yields $\bar{x} = 54.5$.
 
-## Summary & Key Takeaways
-- **Hypothesis-Testing.excalidraw** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- Standard error: $\sigma_{\bar{X}} = \frac{12}{\sqrt{36}} = 2.0$.
+- Test statistic: $z = \frac{54.5 - 50}{2.0} = +2.25$.
+- Since $|z| = 2.25 > 1.96$ (and two-tailed $p\text{-value} = 2(1 - \Phi(2.25)) \approx 0.0244 < 0.05$), **reject $H_0$**.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. What is a **Type I Error** in statistical hypothesis testing, and what symbol denotes its probability?
+    - **A)** Failing to reject a false null hypothesis $H_0$; denoted $\beta$.
+    - **B)** Rejecting the null hypothesis $H_0$ when $H_0$ is actually **true** (a false positive); its probability is the significance level $\alpha = P(\text{Reject } H_0 \mid H_0 \text{ is true})$.
+    - **C)** Correctly rejecting a false null hypothesis $H_0$; denoted $1 - \beta$.
+    - **D)** Computing a negative sample variance.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. What does the **Statistical Power** ($1 - \beta$) of a hypothesis test measure?
+    - **A)** The probability of correctly rejecting $H_0$ when the alternative hypothesis $H_a$ is actually true: $1 - \beta = P(\text{Reject } H_0 \mid H_a \text{ is true})$.
+    - **B)** The probability that $H_0$ is true.
+    - **C)** $1 - \alpha$.
+    - **D)** The sample size $n$ divided by $\sigma$.
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. For a fixed sample size $n$, if a researcher makes the significance level $\alpha$ smaller (e.g., changing from $\alpha = 0.05$ to $\alpha = 0.01$ to reduce Type I errors), what happens to the Type II error rate $\beta$ and power $1 - \beta$?
+    - **A)** $\beta$ decreases and power increases.
+    - **B)** Both $\alpha$ and $\beta$ become $0$.
+    - **C)** The critical region shrinks (moves further into the tails), so it becomes harder to reject $H_0$; consequently, **$\beta$ increases** and **statistical power $1 - \beta$ decreases**.
+    - **D)** $\beta$ always equals $1 - \alpha$.
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. What is the **only** way to simultaneously reduce both Type I error ($\alpha$) and Type II error ($\beta$) for a given effect size?
+    - **A)** Switch from a one-tailed test to a two-tailed test.
+    - **B)** Guess the parameter without sampling.
+    - **C)** Increase the population variance $\sigma^2$.
+    - **D)** **Increase the sample size $n$**, which decreases the standard error $\sigma / \sqrt{n}$ and narrows the sampling distributions under both $H_0$ and $H_a$.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. What is the correct formal interpretation of a **$p$-value** of $0.018$?
+    - **A)** There is a $1.8\%$ probability that the null hypothesis $H_0$ is true.
+    - **B)** Assuming the null hypothesis $H_0$ is **true**, the probability of observing a test statistic at least as extreme as the one actually observed in the sample is $0.018$.
+    - **C)** There is a $98.2\%$ probability that the alternative hypothesis $H_a$ is false.
+    - **D)** The Type II error rate is $\beta = 0.018$.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
 
+1. **B**. A Type I error occurs when we reject a true null hypothesis $H_0$; its maximum probability is controlled by the chosen significance level $\alpha$.
+2. **A**. Since $\beta = P(\text{Fail to reject } H_0 \mid H_a \text{ true})$ is the Type II error rate, its complement $1 - \beta = P(\text{Reject } H_0 \mid H_a \text{ true})$ is the power of the test to detect a true effect.
+3. **C**. Lowering $\alpha$ pushes the critical value $z_\alpha$ further out, expanding the non-rejection region and increasing the probability $\beta$ of missing a true alternative when $n$ is fixed.
+4. **D**. Increasing $n$ shrinks $\sigma/\sqrt{n}$, reducing the overlap between the null and alternative sampling distributions so both $\alpha$ and $\beta$ can be made smaller simultaneously.
+5. **B**. The $p$-value is a conditional probability conditioned on $H_0$ being true ($P(|T| \ge |t_{\text{obs}}| \mid H_0)$), NOT the posterior probability $P(H_0 \mid \text{data})$.
 
 ## References & Navigation
 

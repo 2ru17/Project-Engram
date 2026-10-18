@@ -3,7 +3,7 @@ id: Searching-Algorithms
 type: note
 course: CCDSALG
 topic: Algorithms
-status: draft
+status: completed
 ---
 
 # Searching Algorithms
@@ -13,7 +13,7 @@ status: draft
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Searching]] #[[Data Structures]] #[[Search Efficiency]] #[[Sorting]] #[[Fundamental Data Structures]] #[[Computational Complexity]] #[[Analysis of Algorithms]] #[[Time Complexity]] #[[Space Complexity]]
+**Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Searching]] #[[Data Structures]] #[[Search Efficiency]] #[[Sorting]] #[[Fundamental Data Structures]] #[[Computational Complexity]] #[[Analysis of Algorithms]] #[[Time Complexity]] #[[Space Complexity]]
 
 ---
 
@@ -301,86 +301,83 @@ void quickSort(int arr[], int low, int high) {
 
 > TL;DR — **Searching**: linear search is $O(n)$, binary search is $O(\log n)$ but requires sorted input. **Sorting**: bubble sort $O(n^2)$, selection sort $O(n^2)$, insertion sort $O(n^2)$ worst / $O(n)$ best, merge sort $O(n \log n)$ guaranteed, quick sort $O(n \log n)$ average / $O(n^2)$ worst. Choose based on stability, space, and expected input.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. What is a defining characteristic of an Array?
-- **A)** It uses non-contiguous memory.
-- **B)** Elements are stored in contiguous memory and can be accessed in constant time $O(1)$ using an index.
-- **C)** It grows dynamically infinitely.
-- **D)** It only supports binary search.
+    - **A)** It uses non-contiguous memory.
+    - **B)** Elements are stored in contiguous memory and can be accessed in constant time $O(1)$ using an index.
+    - **C)** It grows dynamically infinitely.
+    - **D)** It only supports binary search.
 
 2. What is the average case time complexity for Linear Search?
-- **A)** $O(1)$
-- **B)** $O(\log n)$
-- **C)** $O(n)$
-- **D)** $O(n^2)$
+    - **A)** $O(1)$
+    - **B)** $O(\log n)$
+    - **C)** $O(n)$
+    - **D)** $O(n^2)$
 
 3. What prerequisite condition must be met before using Binary Search on an array?
-- **A)** The array must contain only positive numbers.
-- **B)** The array must be sorted.
-- **C)** The array must have an even number of elements.
-- **D)** The array must be partitioned.
+    - **A)** The array must contain only positive numbers.
+    - **B)** The array must be sorted.
+    - **C)** The array must have an even number of elements.
+    - **D)** The array must be partitioned.
 
 4. What is the worst-case time complexity of Binary Search?
-- **A)** $O(n)$
-- **B)** $O(\log n)$
-- **C)** $O(n \log n)$
-- **D)** $O(1)$
+    - **A)** $O(n)$
+    - **B)** $O(\log n)$
+    - **C)** $O(n \log n)$
+    - **D)** $O(1)$
 
 5. In an Optimized Bubble Sort with an early-termination flag, what is the best-case time complexity?
-- **A)** $O(1)$
-- **B)** $O(\log n)$
-- **C)** $O(n)$
-- **D)** $O(n^2)$
+    - **A)** $O(1)$
+    - **B)** $O(\log n)$
+    - **C)** $O(n)$
+    - **D)** $O(n^2)$
 
 6. Which sorting algorithm builds the sorted array one element at a time by placing an element in the correct position in the sorted portion?
-- **A)** Selection Sort
-- **B)** Insertion Sort
-- **C)** Merge Sort
-- **D)** Quick Sort
+    - **A)** Selection Sort
+    - **B)** Insertion Sort
+    - **C)** Merge Sort
+    - **D)** Quick Sort
 
 7. What is the worst-case time complexity of Merge Sort?
-- **A)** $O(n \log n)$
-- **B)** $O(n^2)$
-- **C)** $O(n)$
-- **D)** $O(\log n)$
+    - **A)** $O(n \log n)$
+    - **B)** $O(n^2)$
+    - **C)** $O(n)$
+    - **D)** $O(\log n)$
 
 8. What scenario triggers the $O(n^2)$ worst-case time complexity for Quick Sort?
-- **A)** When the array is already sorted and a naive pivot (like the last element) is chosen.
-- **B)** When the array is completely reversed.
-- **C)** When the array contains no duplicates.
-- **D)** When the pivot is the median element.
+    - **A)** When the array is already sorted and a naive pivot (like the last element) is chosen.
+    - **B)** When the array is completely reversed.
+    - **C)** When the array contains no duplicates.
+    - **D)** When the pivot is the median element.
 
 9. Which of the following sorting algorithms is NOT stable?
-- **A)** Bubble Sort
-- **B)** Insertion Sort
-- **C)** Merge Sort
-- **D)** Selection Sort
+    - **A)** Bubble Sort
+    - **B)** Insertion Sort
+    - **C)** Merge Sort
+    - **D)** Selection Sort
 
 10. What is a common off-by-one error when implementing Binary Search?
-- **A)** Using `low < high` instead of `low <= high` in the while loop condition.
-- **B)** Starting the array index at 1.
-- **C)** Returning `mid` instead of `-1`.
-- **D)** Updating `mid` to `mid * 2`.
+    - **A)** Using `low < high` instead of `low <= high` in the while loop condition.
+    - **B)** Starting the array index at 1.
+    - **C)** Returning `mid` instead of `-1`.
+    - **D)** Updating `mid` to `mid * 2`.
 
 ### Answer Key & Explanations
-1. **B)** Because an array is one continuous block of RAM, the computer can instantly jump to any index in exactly $O(1)$ time.
-2. **C)** On average, linear search will have to scan half the array before finding the target, which algebraically simplifies to $O(n)$.
-3. **B)** Binary search exploits the fact that data is ordered; if it is unsorted, cutting the array in half provides no information about where the target resides.
-4. **B)** The algorithm halves the search space iteratively. In the worst case (target not found), it will take exactly $\log_2 n$ steps to exhaust the array.
-5. **C)** If the array is already perfectly sorted, the optimized algorithm runs through the array exactly once, swaps nothing, and terminates early in $O(n)$ time.
-6. **B)** Insertion sort conceptually partitions the array. It takes the first element of the unsorted half and shifts it down into its exact spot in the sorted half.
-7. **A)** Merge Sort rigidly divides the array every single time, meaning its best, average, and worst cases are strictly identically bounded at $O(n \log n)$.
-8. **A)** If you blindly pick the rightmost element as a pivot on a sorted array, the partition separates just 1 element instead of splitting it in half, causing $n$ levels of recursion.
-9. **D)** Selection sort can swap non-adjacent elements across long distances, inadvertently shuffling identically-valued items out of their original relative order.
-10. **A)** If you use strictly `<` instead of `<=`, the loop will prematurely terminate and fail to check the final element when the bounds converge on the same index.
+
+1. **B**. Because an array is one continuous block of RAM, the computer can instantly jump to any index in exactly $O(1)$ time.
+2. **C**. On average, linear search will have to scan half the array before finding the target, which algebraically simplifies to $O(n)$.
+3. **B**. Binary search exploits the fact that data is ordered; if it is unsorted, cutting the array in half provides no information about where the target resides.
+4. **B**. The algorithm halves the search space iteratively. In the worst case (target not found), it will take exactly $\log_2 n$ steps to exhaust the array.
+5. **C**. If the array is already perfectly sorted, the optimized algorithm runs through the array exactly once, swaps nothing, and terminates early in $O(n)$ time.
+6. **B**. Insertion sort conceptually partitions the array. It takes the first element of the unsorted half and shifts it down into its exact spot in the sorted half.
+7. **A**. Merge Sort rigidly divides the array every single time, meaning its best, average, and worst cases are strictly identically bounded at $O(n \log n)$.
+8. **A**. If you blindly pick the rightmost element as a pivot on a sorted array, the partition separates just 1 element instead of splitting it in half, causing $n$ levels of recursion.
+9. **D**. Selection sort can swap non-adjacent elements across long distances, inadvertently shuffling identically-valued items out of their original relative order.
+10. **A**. If you use strictly `<` instead of `<=`, the loop will prematurely terminate and fail to check the final element when the bounds converge on the same index.
 
 ## References & Navigation
 

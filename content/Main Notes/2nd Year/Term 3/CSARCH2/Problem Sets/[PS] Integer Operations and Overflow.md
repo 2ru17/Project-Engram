@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Binary Arithmetic]] #[[Overflow Flag]] #[[Carry Flag]] #[[ALU]] #[[Two's Complement]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Binary Arithmetic]] #[[Overflow Flag]] #[[Carry Flag]] #[[ALU]] #[[Two's Complement]]
 
 ---
 

@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Problem Solving]] #[[Sequences]] #[[Summations]] #[[CCDSTRU]] #[[M4]]
+**Tags:** #[[Problem Solving]] #[[Sequences]] #[[Summations]] #[[CCDSTRU]] #[[M4]]
 
 ---
 

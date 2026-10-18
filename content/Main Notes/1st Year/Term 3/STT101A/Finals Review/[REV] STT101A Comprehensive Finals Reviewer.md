@@ -76,50 +76,45 @@ flowchart TD
 
 ---
 
-## 4. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. A bag contains 4 red and 6 black marbles. If two marbles are drawn without replacement, what is the probability that both are red?
-   - A) $4/25$
-   - B) $2/15$
-   - C) $4/15$
-   - D) $1/3$
+    - **A)** $4/25$
+    - **B)** $2/15$
+    - **C)** $4/15$
+    - **D)** $1/3$
 
 2. Suppose $P(A) = 0.3, P(B) = 0.4$, and $A$ and $B$ are independent events. What is $P(A \cup B)$?
-   - A) 0.70
-   - B) 0.58
-   - C) 0.12
-   - D) 0.82
+    - **A)** 0.70
+    - **B)** 0.58
+    - **C)** 0.12
+    - **D)** 0.82
 
 3. An intrusion detection system flags true attacks 95% of the time ($P(T \mid A) = 0.95$), but has a 2% false alarm rate ($P(T \mid A^c) = 0.02$). If true attacks represent 1% of all traffic ($P(A) = 0.01$), what is the probability that a flagged packet is an actual attack $P(A \mid T)$?
-   - A) 95.0%
-   - B) 32.4%
-   - C) 50.0%
-   - D) 67.8%
+    - **A)** 95.0%
+    - **B)** 32.4%
+    - **C)** 50.0%
+    - **D)** 67.8%
 
 4. A random sample of $n = 64$ items has sample mean $\bar{x} = 52$. If the population standard deviation is $\sigma = 16$, what is the 95% confidence interval for the population mean $\mu$ ($Z_{0.025} = 1.96$)?
-   - A) $52 \pm 3.92$
-   - B) $52 \pm 1.96$
-   - C) $52 \pm 0.49$
-   - D) $52 \pm 7.84$
+    - **A)** $52 \pm 3.92$
+    - **B)** $52 \pm 1.96$
+    - **C)** $52 \pm 0.49$
+    - **D)** $52 \pm 7.84$
 
 5. In hypothesis testing, what is the probability of committing a Type I error?
-   - A) $\beta$
-   - B) $1 - \beta$
-   - C) $\alpha$
-   - D) $1 - \alpha$
-
----
+    - **A)** $\beta$
+    - **B)** $1 - \beta$
+    - **C)** $\alpha$
+    - **D)** $1 - \alpha$
 
 ### Answer Key & Explanations
 
-1. **B) $2/15$** — $P(R_1) = 4/10 = 2/5$. Given the first is red, 3 red remain out of 9: $P(R_2 \mid R_1) = 3/9 = 1/3$. $P(R_1 \cap R_2) = (2/5) \times (1/3) = 2/15$.
-2. **B) 0.58** — For independent events, $P(A \cap B) = P(A)P(B) = 0.3 \times 0.4 = 0.12$. By the additive rule: $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.3 + 0.4 - 0.12 = 0.58$.
-3. **B) 32.4%** — By Bayes' Theorem: $P(A \mid T) = \frac{P(T \mid A) P(A)}{P(T \mid A) P(A) + P(T \mid A^c) P(A^c)} = \frac{0.95 \times 0.01}{(0.95 \times 0.01) + (0.02 \times 0.99)} = \frac{0.0095}{0.0095 + 0.0198} = \frac{0.0095}{0.0293} \approx 0.3242$ (32.4%). (The Base Rate Fallacy!).
-4. **A) $52 \pm 3.92$** — Margin of error is $Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} = 1.96 \times \frac{16}{\sqrt{64}} = 1.96 \times 2 = 3.92$. Interval is $[48.08, 55.92]$.
-5. **C) $\alpha$** — The significance level $\alpha$ is by definition the maximum allowable probability of committing a Type I error (rejecting a true $H_0$).
-
-
----
+1. **B**. $P(R_1) = 4/10 = 2/5$. Given the first is red, 3 red remain out of 9: $P(R_2 \mid R_1) = 3/9 = 1/3$. $P(R_1 \cap R_2) = (2/5) \times (1/3) = 2/15$.
+2. **B**. For independent events, $P(A \cap B) = P(A)P(B) = 0.3 \times 0.4 = 0.12$. By the additive rule: $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.3 + 0.4 - 0.12 = 0.58$.
+3. **B**. By Bayes' Theorem: $P(A \mid T) = \frac{P(T \mid A) P(A)}{P(T \mid A) P(A) + P(T \mid A^c) P(A^c)} = \frac{0.95 \times 0.01}{(0.95 \times 0.01) + (0.02 \times 0.99)} = \frac{0.0095}{0.0095 + 0.0198} = \frac{0.0095}{0.0293} \approx 0.3242$ (32.4%). (The Base Rate Fallacy!).
+4. **A**. Margin of error is $Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} = 1.96 \times \frac{16}{\sqrt{64}} = 1.96 \times 2 = 3.92$. Interval is $[48.08, 55.92]$.
+5. **C**. The significance level $\alpha$ is by definition the maximum allowable probability of committing a Type I error (rejecting a true $H_0$).
 
 ## References & Navigation
 

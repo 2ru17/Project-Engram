@@ -11,111 +11,71 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Contingency Table]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Contingency Table]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Contingency Table**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+A **Contingency Table** (two-way cross-tabulation table) organizes bivariate categorical counts or probabilities across $r$ rows (levels of variable $A$) and $c$ columns (levels of variable $B$). It allows immediate extraction of **joint**, **marginal**, and **conditional** probabilities.
 
 ## Key Definitions
-- **Contingency Table**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Contingency Table** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Joint Probability ($P(A_i \cap B_j)$):** Probability in interior cell $(i, j)$, computed as $\frac{n_{ij}}{N}$ where $N$ is the grand total.
+- **Marginal Probability ($P(A_i)$ or $P(B_j)$):** Row total $\frac{n_{i\cdot}}{N} = \sum_j P(A_i \cap B_j)$ or column total $\frac{n_{\cdot j}}{N} = \sum_i P(A_i \cap B_j)$ along the margins.
+- **Conditional Probability ($P(A_i \mid B_j)$):** Interior cell divided by its corresponding column (or row) marginal total: $P(A_i \mid B_j) = \frac{n_{ij}}{n_{\cdot j}} = \frac{P(A_i \cap B_j)}{P(B_j)}$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Contingency Table**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+| Traffic Type | Flagged ($F$) | Passed ($F^c$) | Row Total |
+| :--- | :---: | :---: | :---: |
+| **Malicious ($M$)** | $90$ | $10$ | $100$ |
+| **Benign ($M^c$)** | $60$ | $840$ | $900$ |
+| **Column Total** | $150$ | $850$ | **$1000$** |
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Contingency Table** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+- **Joint:** $P(M \cap F) = \frac{90}{1000} = 0.09$.
+- **Marginal:** $P(F) = \frac{150}{1000} = 0.15$.
+- **Conditional:** $P(M \mid F) = \frac{90}{150} = 0.60$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. In a contingency table with grand total $N$, how is a **joint probability** $P(A_i \cap B_j)$ calculated?
+    - **A)** Divide the interior cell count $n_{ij}$ by the grand total $N$.
+    - **B)** Divide the interior cell count $n_{ij}$ by the row total $n_{i\cdot}$.
+    - **C)** Divide the row total $n_{i\cdot}$ by the column total $n_{\cdot j}$.
+    - **D)** Add the row total and column total and divide by $N$.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Using the worked example table ($N = 1000$), what is the conditional probability $P(F \mid M^c)$ that a benign packet is flagged?
+    - **A)** $\frac{60}{1000} = 0.06$
+    - **B)** $\frac{60}{150} = 0.40$
+    - **C)** $\frac{60}{900} = \frac{1}{15} \approx 0.0667$
+    - **D)** $\frac{900}{1000} = 0.90$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Why are the row and column totals in a two-way table called **marginal** distributions?
+    - **A)** Because they are written in the outer margins of the table and represent the unconditional distribution of a single variable summed across all levels of the other variable.
+    - **B)** Because their probabilities are negligibly small.
+    - **C)** Because they exclude the intersection cells.
+    - **D)** Because they only apply to independent variables.
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. How can you test whether row event $A_i$ and column event $B_j$ are statistically independent directly from a contingency table of counts?
+    - **A)** Check if $n_{ij} = 0$.
+    - **B)** Check if $n_{i\cdot} = n_{\cdot j}$.
+    - **C)** Check if the cell count equals the expected count under independence: $n_{ij} = \frac{n_{i\cdot} \times n_{\cdot j}}{N}$ (i.e., $P(A_i \cap B_j) = P(A_i)P(B_j)$).
+    - **D)** Check if $n_{ij} = N / 4$.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Using the worked example table ($N = 1000$), what is $P(M \cup F)$?
+    - **A)** $\frac{250}{1000} = 0.25$
+    - **B)** $\frac{100 + 150 - 90}{1000} = \frac{160}{1000} = 0.16$
+    - **C)** $\frac{90}{1000} = 0.09$
+    - **D)** $\frac{840}{1000} = 0.84$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **A**. A joint probability measures the proportion of the entire sample space $N$ that falls simultaneously into row $i$ and column $j$: $P(A_i \cap B_j) = n_{ij} / N$.
+2. **C**. Conditioning on $M^c$ restricts the denominator to the **Benign** row total ($n_{M^c} = 900$). Within that row, $60$ packets are flagged, so $P(F \mid M^c) = 60 / 900 = 1/15 \approx 0.0667$.
+3. **A**. Summing across a row ($\sum_j P(A_i \cap B_j) = P(A_i)$) or down a column ($\sum_i P(A_i \cap B_j) = P(B_j)$) eliminates the other variable and places the single-variable totals in the table margins.
+4. **C**. Independence holds when $P(A_i \cap B_j) = P(A_i)P(B_j) \iff \frac{n_{ij}}{N} = \frac{n_{i\cdot}}{N} \cdot \frac{n_{\cdot j}}{N} \iff n_{ij} = \frac{n_{i\cdot} n_{\cdot j}}{N}$.
+5. **B**. By the Additive Rule, $P(M \cup F) = P(M) + P(F) - P(M \cap F) = \frac{100}{1000} + \frac{150}{1000} - \frac{90}{1000} = \frac{160}{1000} = 0.16$.
 
 ## References & Navigation
 

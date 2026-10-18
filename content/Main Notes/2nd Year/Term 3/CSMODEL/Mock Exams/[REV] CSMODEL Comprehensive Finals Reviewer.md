@@ -66,50 +66,45 @@ flowchart TD
 
 ---
 
-## 4. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. In Association Rule Mining, if 20 out of 100 transactions contain Bread, 30 contain Butter, and 15 contain both Bread and Butter, what is the Confidence of the rule $\{\text{Bread}\} \implies \{\text{Butter}\}$?
-   - A) 15%
-   - B) 50%
-   - C) 75%
-   - D) 25%
+    - **A)** 15%
+    - **B)** 50%
+    - **C)** 75%
+    - **D)** 25%
 
 2. Using the data from Question 1, what is the Lift of the rule $\{\text{Bread}\} \implies \{\text{Butter}\}$?
-   - A) 1.00
-   - B) 1.50
-   - C) 2.50
-   - D) 0.75
+    - **A)** 1.00
+    - **B)** 1.50
+    - **C)** 2.50
+    - **D)** 0.75
 
 3. In graph analysis, which centrality metric measures how often a node falls on the shortest path between all pairs of other nodes in the network?
-   - A) Degree Centrality
-   - B) Closeness Centrality
-   - C) Betweenness Centrality
-   - D) Eigenvector Centrality
+    - **A)** Degree Centrality
+    - **B)** Closeness Centrality
+    - **C)** Betweenness Centrality
+    - **D)** Eigenvector Centrality
 
 4. What is the fundamental assumption of Ordinary Least Squares (OLS) linear regression regarding the residuals (errors)?
-   - A) Residuals are exponentially distributed with variance proportional to $x$.
-   - B) Residuals are normally distributed with zero mean and constant variance (homoscedasticity).
-   - C) Residuals must always equal zero.
-   - D) Residuals must be strictly positive.
+    - **A)** Residuals are exponentially distributed with variance proportional to $x$.
+    - **B)** Residuals are normally distributed with zero mean and constant variance (homoscedasticity).
+    - **C)** Residuals must always equal zero.
+    - **D)** Residuals must be strictly positive.
 
 5. When using the Elbow Method to choose the optimal number of clusters $K$ in K-Means, what metric is plotted against $K$?
-   - A) Silhouette Score
-   - B) Within-Cluster Sum of Squares (Inertia)
-   - C) Lift
-   - D) Adjusted Rand Index
-
----
+    - **A)** Silhouette Score
+    - **B)** Within-Cluster Sum of Squares (Inertia)
+    - **C)** Lift
+    - **D)** Adjusted Rand Index
 
 ### Answer Key & Explanations
 
-1. **C) 75%** — $\text{Confidence}(\text{Bread} \implies \text{Butter}) = \frac{\text{freq}(\text{Bread} \cup \text{Butter})}{\text{freq}(\text{Bread})} = \frac{15}{20} = 0.75$ (75%).
-2. **C) 2.50** — $\text{Lift} = \frac{\text{Support}(\text{Bread} \cup \text{Butter})}{\text{Support}(\text{Bread}) \times \text{Support}(\text{Butter})} = \frac{0.15}{0.20 \times 0.30} = \frac{0.15}{0.06} = 2.50$. Since $\text{Lift} > 1$, Bread and Butter are strongly positively associated.
-3. **C) Betweenness Centrality** — Betweenness centrality quantifies the bridge role of a node by tallying the proportion of all shortest paths passing through that node.
-4. **B) Residuals are normally distributed with zero mean and constant variance (homoscedasticity)** — The Gauss-Markov theorem requires residuals to have zero conditional mean, homoscedasticity, and no autocorrelation for OLS estimators to be BLUE (Best Linear Unbiased Estimator).
-5. **B) Within-Cluster Sum of Squares (Inertia)** — Inertia measures the total squared distance of samples to their closest cluster center. The elbow point marks where adding further clusters yields diminishing reductions in inertia.
-
-
----
+1. **C**. $\text{Confidence}(\text{Bread} \implies \text{Butter}) = \frac{\text{freq}(\text{Bread} \cup \text{Butter})}{\text{freq}(\text{Bread})} = \frac{15}{20} = 0.75$ (75%).
+2. **C**. $\text{Lift} = \frac{\text{Support}(\text{Bread} \cup \text{Butter})}{\text{Support}(\text{Bread}) \times \text{Support}(\text{Butter})} = \frac{0.15}{0.20 \times 0.30} = \frac{0.15}{0.06} = 2.50$. Since $\text{Lift} > 1$, Bread and Butter are strongly positively associated.
+3. **C**. Betweenness centrality quantifies the bridge role of a node by tallying the proportion of all shortest paths passing through that node.
+4. **B**. The Gauss-Markov theorem requires residuals to have zero conditional mean, homoscedasticity, and no autocorrelation for OLS estimators to be BLUE (Best Linear Unbiased Estimator).
+5. **B**. Inertia measures the total squared distance of samples to their closest cluster center. The elbow point marks where adding further clusters yields diminishing reductions in inertia.
 
 ## References & Navigation
 

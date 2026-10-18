@@ -470,41 +470,42 @@ endmodule
 ## Multiple Choice Questions
 
 1. What does structural modeling in Verilog HDL involve?
-- **A)** Describing the algorithm using loops and variables
-- **B)** Combining two or more modules to build a hierarchical description
-- **C)** Using continuous assignment expressions exclusively
-- **D)** Creating a state transition table for logic execution
+    - **A)** Describing the algorithm using loops and variables
+    - **B)** Combining two or more modules to build a hierarchical description
+    - **C)** Using continuous assignment expressions exclusively
+    - **D)** Creating a state transition table for logic execution
 
 2. In a bottom-up design approach for structural modeling, what is the first step?
-- **A)** The top-level block is decomposed into sub-modules.
-- **B)** Building blocks are first identified and then combined.
-- **C)** State assignments are defined.
-- **D)** A testbench is created before writing modules.
+    - **A)** Building blocks are first identified and then combined.
+    - **B)** The top-level block is decomposed into sub-modules.
+    - **C)** State assignments are defined.
+    - **D)** A testbench is created before writing modules.
 
 3. How are individual gates or sub-modules added to a structural model in Verilog?
-- **A)** By using procedural blocks like always
-- **B)** By instantiating them with specific instance names and port connections
-- **C)** By defining them inside the assign statements
-- **D)** By importing them as libraries
+    - **A)** By using procedural blocks like always
+    - **B)** By defining them inside the assign statements
+    - **C)** By instantiating them with specific instance names and port connections
+    - **D)** By importing them as libraries
 
 4. Which keyword is used to declare internal connections between instantiated modules in structural modeling?
-- **A)** reg
-- **B)** wire
-- **C)** logic
-- **D)** connection
+    - **A)** reg
+    - **B)** connection
+    - **C)** logic
+    - **D)** wire
 
 5. In structural modelling, can a testbench instantiate the top-level module?
-- **A)** No, structural modules cannot be tested.
-- **B)** Yes, a testbench acts as a top-level module that instantiates the design under test.
-- **C)** Only if the testbench is written in behavioral modelling.
-- **D)** Yes, but only for combinational circuits, not sequential.
+    - **A)** No, structural modules cannot be tested.
+    - **B)** Yes, a testbench acts as a top-level module that instantiates the design under test.
+    - **C)** Only if the testbench is written in behavioral modelling.
+    - **D)** Yes, but only for combinational circuits, not sequential.
 
 ### Answer Key & Explanations
-1. **B)** Structural modeling consists of combining two or more modules to build a hierarchical design.
-2. **B)** In a bottom-up approach, building blocks are identified first and then combined to form the top-level block.
-3. **B)** Structural modeling relies on instantiating sub-modules (like NAND or NOR gates) with connections to build a circuit.
-4. **B)** Internal signals that connect instantiated modules are declared as wires.
-5. **B)** A testbench is a module itself that instantiates the module to be tested and applies inputs to it.
+
+1. **B**. Structural modeling consists of combining two or more modules to build a hierarchical design.
+2. **A**. In a bottom-up approach, building blocks are identified first and then combined to form the top-level block.
+3. **C**. Structural modeling relies on instantiating sub-modules (like NAND or NOR gates) with connections to build a circuit.
+4. **D**. Internal signals that connect instantiated modules are declared as wires.
+5. **B**. A testbench is a module itself that instantiates the module to be tested and applies inputs to it.
 
 ## References & Navigation
 

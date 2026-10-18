@@ -11,111 +11,67 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Additive Rule]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Additive Rule]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Additive Rule**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Additive Rule of Probability** (also known as the Principle of Inclusion-Exclusion for two events) calculates the probability that at least one of two events $A$ or $B$ occurs, denoted $P(A \cup B)$. Because summing $P(A)$ and $P(B)$ counts outcomes in the overlap $A \cap B$ twice, the intersection probability $P(A \cap B)$ must be subtracted once.
 
 ## Key Definitions
-- **Additive Rule**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Additive Rule** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Union ($A \cup B$):** The event that $A$ occurs, $B$ occurs, or both occur simultaneously.
+- **General Additive Rule:** $P(A \cup B) = P(A) + P(B) - P(A \cap B)$ for any two events $A$ and $B$.
+- **Special Additive Rule (Mutually Exclusive Events):** When $A \cap B = \emptyset$, $P(A \cap B) = 0$, simplifying the rule to $P(A \cup B) = P(A) + P(B)$.
+- **Three-Event Inclusion-Exclusion:** $P(A \cup B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Additive Rule**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** In a university server cluster, $P(\text{High CPU}) = 0.35$, $P(\text{High Memory}) = 0.25$, and the probability of both occurring simultaneously is $P(\text{High CPU} \cap \text{High Memory}) = 0.12$. What is the probability that a server experiences at least one of these resource spikes?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Additive Rule** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+$$P(\text{CPU} \cup \text{Mem}) = 0.35 + 0.25 - 0.12 = 0.48$$
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. For any two events $A$ and $B$ in a sample space $S$, which formula gives the general Additive Rule?
+    - **A)** $P(A \cup B) = P(A) \cdot P(B)$
+    - **B)** $P(A \cup B) = P(A) + P(B) - P(A \cap B)$
+    - **C)** $P(A \cup B) = P(A) + P(B) + P(A \cap B)$
+    - **D)** $P(A \cup B) = P(A \mid B)P(B)$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Why must $P(A \cap B)$ be subtracted in the general Additive Rule?
+    - **A)** Because probabilities cannot exceed $0.5$.
+    - **B)** Because outcomes in $A \cap B$ are included in both $P(A)$ and $P(B)$, so they are double-counted if not subtracted once.
+    - **C)** Because $A$ and $B$ are always mutually exclusive.
+    - **D)** Because $P(A \cap B)$ represents outcomes outside the sample space.
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Given $P(A) = 0.45$, $P(B) = 0.30$, and $P(A \cup B) = 0.60$, what is $P(A \cap B)$?
+    - **A)** $0.75$
+    - **B)** $0.15$
+    - **C)** $0.135$
+    - **D)** $0.00$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Under what condition does $P(A \cup B) = P(A) + P(B)$ hold exactly?
+    - **A)** When $A$ and $B$ are statistically independent with non-zero probabilities.
+    - **B)** When $A$ is a subset of $B$.
+    - **C)** When $A$ and $B$ are mutually exclusive (disjoint), meaning $P(A \cap B) = 0$.
+    - **D)** When $A$ and $B$ are complementary events only.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. In the three-event Additive Rule for $P(A \cup B \cup C)$, why is $+P(A \cap B \cap C)$ added back at the end?
+    - **A)** Because the triple intersection is added 3 times in the single terms and subtracted 3 times in the pairwise intersection terms, leaving it net uncounted ($3 - 3 = 0$).
+    - **B)** Because three events cannot overlap pairwise.
+    - **C)** To ensure the result exceeds $1$.
+    - **D)** Because $P(A \cap B \cap C)$ is always equal to $P(A)P(B)P(C)$.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. The general Additive Rule computes the probability of the union of two events by summing their marginal probabilities and subtracting their intersection once: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
+2. **B**. Every sample point in $A \cap B$ belongs to both $A$ and $B$. Adding $P(A) + P(B)$ counts those shared outcomes twice, so subtracting $P(A \cap B)$ once restores an exact single count.
+3. **B**. Rearranging the Additive Rule gives $P(A \cap B) = P(A) + P(B) - P(A \cup B) = 0.45 + 0.30 - 0.60 = 0.15$.
+4. **C**. The subtraction term $-P(A \cap B)$ vanishes if and only if $P(A \cap B) = 0$, which is true when $A$ and $B$ are mutually exclusive (disjoint).
+5. **A**. Outcomes in $A \cap B \cap C$ are counted $+3$ times in $P(A)+P(B)+P(C)$ and $-3$ times in $-P(A \cap B)-P(A \cap C)-P(B \cap C)$, so $+P(A \cap B \cap C)$ must be added back to count that region once.
 
 ## References & Navigation
 

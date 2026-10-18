@@ -11,111 +11,69 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Discrete Probability Distribution]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Discrete Probability Distribution]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Discrete Probability Distribution**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+A **Discrete Probability Distribution** specifies all possible values in the countable support $R_X = \{x_1, x_2, \dots\}$ of a discrete random variable $X$ together with their probabilities $p(x_i) = P(X = x_i)$. Common parametric families include the **Bernoulli**, **Binomial**, **Geometric**, **Hypergeometric**, and **Poisson** distributions.
 
 ## Key Definitions
-- **Discrete Probability Distribution**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Discrete Probability Distribution** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Validity Conditions:** (1) $p(x_i) \ge 0$ for all $x_i \in R_X$, and (2) $\sum_{x_i \in R_X} p(x_i) = 1$.
+- **Cumulative Distribution Function (CDF):** $F(x) = P(X \le x) = \sum_{t \le x} p(t)$, a right-continuous step function with jumps of height $p(x_i)$ at each support point $x_i$.
+- **Expected Value (Mean) & Variance:**
+  $$\mu = E[X] = \sum_{x} x \, p(x), \qquad \sigma^2 = \text{Var}(X) = \sum_{x} (x - \mu)^2 p(x) = E[X^2] - (E[X])^2$$
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Discrete Probability Distribution**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** Let $X$ have distribution $P(X = 0) = 0.2$, $P(X = 1) = 0.5$, and $P(X = 2) = 0.3$. Compute $E[X]$ and $\text{Var}(X)$.
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Discrete Probability Distribution** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- $E[X] = 0(0.2) + 1(0.5) + 2(0.3) = 0 + 0.5 + 0.6 = 1.1$.
+- $E[X^2] = 0^2(0.2) + 1^2(0.5) + 2^2(0.3) = 0 + 0.5 + 1.2 = 1.7$.
+- $\text{Var}(X) = E[X^2] - (E[X])^2 = 1.7 - (1.1)^2 = 1.7 - 1.21 = 0.49$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Suppose a discrete random variable $X$ takes values $x \in \{1, 2, 3\}$ with $P(X = x) = c \cdot x$. What value of the constant $c$ makes this a valid discrete probability distribution?
+    - **A)** $c = \frac{1}{3}$
+    - **B)** $c = \frac{1}{6}$
+    - **C)** $c = 1$
+    - **D)** $c = \frac{1}{9}$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Using the worked example ($P(X=0)=0.2, P(X=1)=0.5, P(X=2)=0.3$), what is the value of the Cumulative Distribution Function $F(1.5) = P(X \le 1.5)$?
+    - **A)** $0.7$
+    - **B)** $0.5$
+    - **C)** $0.75$
+    - **D)** $1.0$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. For a Binomial random variable $X \sim \text{Binomial}(n, p)$ counting successes in $n$ independent Bernoulli trials, what are $E[X]$ and $\text{Var}(X)$?
+    - **A)** $E[X] = p$ and $\text{Var}(X) = p(1-p)$
+    - **B)** $E[X] = np$ and $\text{Var}(X) = n^2 p^2$
+    - **C)** $E[X] = np$ and $\text{Var}(X) = np(1-p)$
+    - **D)** $E[X] = \frac{1}{p}$ and $\text{Var}(X) = \frac{1-p}{p^2}$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Which computational shortcut identity is equivalent to $\text{Var}(X) = E[(X - \mu)^2]$?
+    - **A)** $\text{Var}(X) = (E[X])^2 - E[X^2]$
+    - **B)** $\text{Var}(X) = \sqrt{E[X^2]}$
+    - **C)** $\text{Var}(X) = E[X^2] + (E[X])^2$
+    - **D)** $\text{Var}(X) = E[X^2] - (E[X])^2$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. If $X$ is an integer-valued discrete random variable with CDF $F(x) = P(X \le x)$, how is $P(a \le X \le b)$ expressed in terms of $F$ for integers $a \le b$?
+    - **A)** $F(b) - F(a)$
+    - **B)** $F(b) - F(a - 1)$
+    - **C)** $F(b + 1) - F(a)$
+    - **D)** $F(b) + F(a)$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Normalization requires $\sum_{x=1}^3 cx = c(1 + 2 + 3) = 6c = 1 \implies c = \frac{1}{6}$, and each $P(X=x) > 0$.
+2. **A**. $F(1.5) = P(X \le 1.5) = P(X = 0) + P(X = 1) = 0.2 + 0.5 = 0.7$.
+3. **C**. A $\text{Binomial}(n, p)$ random variable is the sum of $n$ independent $\text{Bernoulli}(p)$ variables, yielding $E[X] = np$ and $\text{Var}(X) = np(1-p)$.
+4. **D**. Expanding $E[(X - \mu)^2] = E[X^2 - 2\mu X + \mu^2] = E[X^2] - 2\mu E[X] + \mu^2 = E[X^2] - \mu^2 = E[X^2] - (E[X])^2$.
+5. **B**. Because $P(X = a)$ must be included in $P(a \le X \le b)$, subtracting $F(a)$ would mistakenly remove $P(X = a)$. Subtracting $F(a - 1) = P(X \le a - 1)$ retains $X = a$.
 
 ## References & Navigation
 

@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Data Preprocessing]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Data Preprocessing]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 05: Data Preprocessing
 
-## 📚 Key Concepts
+## Key Concepts
 
 Data preprocessing is a critical step in the data science pipeline that involves cleaning, transforming, and organizing raw data into an accurate, efficient, and machine-readable format prior to exploratory data analysis (EDA) or machine learning modeling.
 
@@ -125,7 +125,7 @@ Hyperparameter tuning: Allows optimizing preprocessing parameters together with 
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. Feature Scaling (`MinMaxScaler` & `StandardScaler`)
 
@@ -189,7 +189,7 @@ print("X_test shape:", X_test.shape)
 
 ### 3. The WRONG Way vs. The RIGHT Way (Data Leakage)
 
-#### **❌ THE WRONG WAY (Data Leakage!)**
+#### ** THE WRONG WAY (Data Leakage!)**
 ```python
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
@@ -204,7 +204,7 @@ X_train_bad, X_test_bad, y_train, y_test = train_test_split(
 )
 ```
 
-#### **✅ THE RIGHT WAY (Proper Preprocessing)**
+#### ** THE RIGHT WAY (Proper Preprocessing)**
 ```python
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
@@ -334,7 +334,7 @@ df_clean_rows = df.loc[df.isnull().mean(axis=1) < t]
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 ### 1. Min-Max Normalization
 $$x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}$$
@@ -369,12 +369,12 @@ $$\text{Missing Ratio}_{\text{column } j} = \frac{1}{N}\sum_{i=1}^{N} \mathbb{I}
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
  **Data Leakage Trap**: Calling `.fit_transform()` on the full dataset before `train_test_split()`, or calling `.fit_transform(X_test)` on test data. **Always `fit_transform` on train, `transform` on test!** **Inplace Reassignment Mutation**: Executing `df = df.dropna(inplace=True)` sets `df` to `None` because methods with `inplace=True` return `None`. **Target vs. Feature Encoders**: Using `LabelEncoder` on a 2D feature matrix `X` instead of `OrdinalEncoder`. `LabelEncoder` expects a 1D vector and is intended for target labels $y$. **Nominal Ordinality Trap**: Using `OrdinalEncoder` on unordered nominal features (e.g., `['Red', 'Green', 'Blue']`). This introduces false numeric ordering that degrades linear and distance-based models. **Log Transformation of Zero / Negative Values**: Performing `np.log(x)` when $x \le 0$ results in `-inf` or `NaN`. Use `np.log1p(x)` ($\log(1+x)$) for non-negative data. **MinMaxScaler Sensitivity**: Assuming `MinMaxScaler` is robust to outliers. If $x_{\max}$ is an extreme outlier, all normal data will be compressed into a tiny window near $0$. **Forgetting `stratify=y`**: Splitting imbalanced classification datasets without `stratify=y` can result in test sets with zero instances of minority classes. **Log Distance Distortion**: Forgetting that log transformation distorts absolute distances between data points, even though it preserves rank order.
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 **Q1.** A data scientist scales a feature vector $X = [10, 20, 30, 40, 100]$ using Min-Max Normalization to the range $[0, 1]$. What is the normalized value of $x = 25$? A) $0.15$ B) $0.1667$ C) $0.25$ D) $0.30$
 
@@ -432,41 +432,42 @@ What is the output of `res`? A) `['Small', 'Medium', 'Large']` B) `['Medium', 'L
 ## Multiple Choice Questions
 
 1. What is the main purpose of feature scaling (e.g., Min-Max, Standardization)?
-- **A)** To convert categorical text to numerical formats
-- **B)** To ensure features have a similar scale, preventing features with large values from dominating
-- **C)** To remove missing data
-- **D)** To select the most important features
+    - **A)** To convert categorical text to numerical formats
+    - **B)** To ensure features have a similar scale, preventing features with large values from dominating
+    - **C)** To remove missing data
+    - **D)** To select the most important features
 
 2. What is Data Leakage in machine learning?
-- **A)** When the model is too complex and overfits
-- **B)** When information from outside the training dataset is used to create the model
-- **C)** When missing values are imputed incorrectly
-- **D)** When categorical variables are not encoded
+    - **A)** When information from outside the training dataset is used to create the model
+    - **B)** When the model is too complex and overfits
+    - **C)** When missing values are imputed incorrectly
+    - **D)** When categorical variables are not encoded
 
 3. Standard Scaler transforms data such that:
-- **A)** It scales values between 0 and 1
-- **B)** It has a mean of 0 and a standard deviation of 1
-- **C)** It has a mean of 1 and a standard deviation of 0
-- **D)** It removes all outliers automatically
+    - **A)** It scales values between 0 and 1
+    - **B)** It has a mean of 1 and a standard deviation of 0
+    - **C)** It has a mean of 0 and a standard deviation of 1
+    - **D)** It removes all outliers automatically
 
 4. Why must One-Hot Encoding be used instead of Label Encoding for nominal categorical variables?
-- **A)** Label encoding creates an artificial ordinal relationship between categories
-- **B)** One-Hot encoding uses less memory
-- **C)** Label encoding can only handle numeric inputs
-- **D)** One-Hot encoding handles missing values better
+    - **A)** One-Hot encoding handles missing values better
+    - **B)** One-Hot encoding uses less memory
+    - **C)** Label encoding can only handle numeric inputs
+    - **D)** Label encoding creates an artificial ordinal relationship between categories
 
 5. When performing a train-test split, when should scaling parameters (like min/max or mean) be calculated?
-- **A)** On the entire dataset before splitting
-- **B)** On the training set only, then applied to both train and test
-- **C)** On the test set only
-- **D)** Independently on both train and test sets
+    - **A)** On the entire dataset before splitting
+    - **B)** On the training set only, then applied to both train and test
+    - **C)** On the test set only
+    - **D)** Independently on both train and test sets
 
 ### Answer Key & Explanations
-1. **B)** Feature scaling normalizes the ranges so distance-based and gradient-based algorithms perform correctly.
-2. **B)** Data leakage occurs when future/test info leaks into the training process, causing over-optimistic results.
-3. **B)** Standardization centers data at 0 with a standard deviation of 1.
-4. **A)** Label encoding assigns numbers (0, 1, 2) which algorithms might interpret as having inherent order/magnitude.
-5. **B)** Calculating scaling params on the entire dataset causes data leakage from the test set.
+
+1. **B**. Feature scaling normalizes the ranges so distance-based and gradient-based algorithms perform correctly.
+2. **A**. Data leakage occurs when future/test info leaks into the training process, causing over-optimistic results.
+3. **C**. Standardization centers data at 0 with a standard deviation of 1.
+4. **D**. Label encoding assigns numbers (0, 1, 2) which algorithms might interpret as having inherent order/magnitude.
+5. **B**. Calculating scaling params on the entire dataset causes data leakage from the test set.
 
 ## References & Navigation
 

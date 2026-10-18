@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
 
 ---
 
@@ -50,77 +50,43 @@ Because the limits from the left and right are different, the derivative at $x =
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. Which of the following statements correctly describes the relationship between differentiability and continuity at $x = c$?
+    - **A)** Continuity at $x = c$ guarantees differentiability at $x = c$
+    - **B)** Differentiability at $x = c$ guarantees continuity at $x = c$, but continuity does NOT guarantee differentiability
+    - **C)** Differentiability and continuity are completely independent properties
+    - **D)** A function can be differentiable at a jump discontinuity
 
-2. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. Why does $f(x) = |x|$ fail to be differentiable at $x = 0$, even though it is continuous there?
+    - **A)** Because the left-hand derivative is $-1$ and the right-hand derivative is $+1$, creating a sharp corner at $x = 0$
+    - **B)** Because $f(0)$ is undefined
+    - **C)** Because the tangent line at $x = 0$ is vertical
+    - **D)** Because $|x|$ oscillates infinitely near $0$
 
-3. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. Why is $f(x) = x^{1/3}$ not differentiable at $x = 0$?
+    - **A)** It has a jump discontinuity at $x = 0$
+    - **B)** The left-hand limit and right-hand limit of $f(x)$ disagree at $x = 0$
+    - **C)** Its derivative $f'(x) = \frac{1}{3x^{2/3}} \to +\infty$ as $x \to 0$, meaning the graph has a vertical tangent line at $x = 0$
+    - **D)** Cube roots are not defined for negative numbers
 
-4. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. Which of the following is the contrapositive of the theorem "If $f$ is differentiable at $c$, then $f$ is continuous at $c$"?
+    - **A)** If $f$ is continuous at $c$, then $f$ is differentiable at $c$
+    - **B)** If $f$ is NOT differentiable at $c$, then $f$ is NOT continuous at $c$
+    - **C)** Every continuous function has a derivative everywhere
+    - **D)** If $f$ is NOT continuous at $c$, then $f$ is NOT differentiable at $c$
 
-5. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Differentiability and Continuity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. For the function $f(x) = x^{2/3}$, what geometric feature causes non-differentiability at $x = 0$?
+    - **A)** A horizontal asymptote
+    - **B)** A cusp, where the secant slope approaches $-\infty$ from the left and $+\infty$ from the right
+    - **C)** A removable hole at the origin
+    - **D)** A jump of size $2$
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Differentiability and Continuity without relying on rote computation.
+
+1. **B**. Every differentiable function at $c$ must be continuous at $c$ ($\lim_{x \to c} [f(x) - f(c)] = \lim_{x \to c} \frac{f(x)-f(c)}{x-c}(x-c) = f'(c)\cdot 0 = 0$). However, functions with sharp corners (like $|x|$) are continuous without being differentiable.
+2. **A**. For $x < 0$, $\frac{|x| - 0}{x - 0} = \frac{-x}{x} = -1$; for $x > 0$, $\frac{|x|}{x} = +1$. Since the one-sided derivatives disagree ($-1 \ne +1$), $f'(0)$ does not exist.
+3. **C**. The function $f(x) = x^{1/3}$ is continuous at $0$, but $\lim_{h \to 0} \frac{h^{1/3}}{h} = \lim_{h \to 0} \frac{1}{h^{2/3}} = +\infty$. A vertical tangent line has undefined (infinite) slope, so $f$ is not differentiable at $0$.
+4. **D**. The logical contrapositive of $P \implies Q$ is $\neg Q \implies \neg P$: if $f$ fails to be continuous at $c$, it automatically fails to be differentiable at $c$.
+5. **B**. Since $f'(x) = \frac{2}{3x^{1/3}}$, as $x \to 0^-$ the slope goes to $-\infty$ and as $x \to 0^+$ the slope goes to $+\infty$, forming a sharp cusp at $(0, 0)$.
 
 ## References & Navigation
 

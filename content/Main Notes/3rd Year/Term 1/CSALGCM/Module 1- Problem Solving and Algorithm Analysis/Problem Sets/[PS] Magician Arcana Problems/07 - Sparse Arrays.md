@@ -14,7 +14,7 @@ hackerrank_domain: Strings
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Strings]] #[[Hash Map]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Strings]] #[[Hash Map]]
 
 ---
 
@@ -271,7 +271,6 @@ string rtrim(const string &str) {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Problems, Problem Types, and Algorithms]]

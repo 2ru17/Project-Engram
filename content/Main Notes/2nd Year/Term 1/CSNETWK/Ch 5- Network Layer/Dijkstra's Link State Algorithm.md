@@ -175,87 +175,48 @@ Y $\rightarrow$ Z: Cost is $11 + 8 = 19$. (Old cost 14 is better).
 
 > TL;DR — Dijkstra’s algorithm computes shortest paths from a source by greedily expanding the lowest-cost unvisited node and relaxing its neighbors. It requires non-negative edge weights and runs in $O(n^2)$ or $O(n \log n)$ with a priority queue.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Pasted image 20251121093234.png]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "Forgetting to update (relax) neighbors when a cheaper _____ is found through the newly expanded node."?
-- **A)** Router
-- **B)** Protocol
-- **C)** Network
-- **D)** path
+1. In a **Link-State (LS)** routing protocol such as OSPF, how do all routers in the network acquire the complete global network topology graph $G = (N, E)$ before running Dijkstra's algorithm?
+    - **A)** Each router exchanges its routing table only with its immediate neighbors using Bellman-Ford.
+    - **B)** Each router constructs a Link-State packet containing the identities and costs of its attached links and **broadcasts (floods)** this packet to all other routers in the network (or area).
+    - **C)** Every router pings all possible IPv4 addresses on the Internet.
+    - **D)** Routers query DNS for link costs.
 
-2. Which word completes the following sentence from the text: "The Network Topology  **Scenario Data** ![[Pasted image 20251121093234.png]]  **Source Node:** _____ **Goal:** Find shortest paths to X, V, and Z."?
-- **A)** Protocol
-- **B)** Network
-- **C)** U
-- **D)** Router
+2. In Dijkstra's algorithm initialization at source node $u$, how are the initial distance values $D(v)$ set for all other nodes $v \ne u$?
+    - **A)** $D(v) = c(u, v)$ if $v$ is a direct neighbor of $u$, and $D(v) = \infty$ if $v$ is not directly connected to $u$.
+    - **B)** $D(v) = 0$ for all nodes $v$.
+    - **C)** $D(v) = 1$ for all neighbors and $D(v) = -1$ for non-neighbors.
+    - **D)** $D(v) = \infty$ for all nodes including direct neighbors.
 
-3. Which word completes the following sentence from the text: "It requires non-negative edge weights and runs in _____ or $O(n \log n)$ with a priority queue."?
-- **A)** Router
-- **B)** Network
-- **C)** Protocol
-- **D)** On2
+3. What is the worst-case time complexity of computing shortest paths from a single source across $|N| = n$ nodes using Dijkstra's algorithm: (a) with a simple linear array scan for $\min D(w)$, and (b) with a binary min-heap priority queue?
+    - **A)** (a) $O(n^3)$ and (b) $O(n^2)$
+    - **B)** (a) $O(\log n)$ and (b) $O(1)$
+    - **C)** (a) $O(n^2)$ and (b) $O((n + |E|)\log n)$
+    - **D)** (a) $O(2^n)$ and (b) $O(n!)$
 
-4. Which word completes the following sentence from the text: "Write your answer as _____  **Analytical Breakdown:**  1."?
-- **A)** Router
-- **B)** Protocol
-- **C)** np
-- **D)** Network
+4. Consider a triangle graph with nodes $A, B, C$ and undirected link costs $c(A, B) = 2$, $c(A, C) = 8$, and $c(B, C) = 3$. Running Dijkstra's algorithm from source $A$, what are the final shortest-path cost $D(C)$ and predecessor $p(C)$?
+    - **A)** $D(C) = 8$, $p(C) = A$
+    - **B)** $D(C) = 3$, $p(C) = A$
+    - **C)** $D(C) = 10$, $p(C) = B$
+    - **D)** $D(C) = 5$, $p(C) = B$
 
-5. Which word completes the following sentence from the text: "**Step 4 (Expand W):** W _____ next cheapest (9, via U)."?
-- **A)** is
-- **B)** Protocol
-- **C)** Router
-- **D)** Network
-
-6. Which word completes the following sentence from the text: "**Total Cost:** 14 **Predecessor:** w  **Correct Answer:** **14,w**  ## Summary of Logic (Cheat Sheet)  _____                 |          |                 |              | | --------------- | -------- | --------------- | ------------ | | **Destination** | **Cost** | **Predecessor** | **Path**     | | **X**           | 7        | u               | Direct (u-x) | | **V**           | 6        | u               | Direct (u-v) | | **Z**           | 14       | w               | u-w-z        |  **Algorithm Tip:** Always explore the node with the _lowest current cost_ first."?
-- **A)** Router
-- **B)** Protocol
-- **C)** Network
-- **D)** 
-
-7. Which word completes the following sentence from the text: "**Correct Answer:** **6,u**  ### Question 3  **What is the shortest _____ to node z and what node is its predecessor?"?
-- **A)** Router
-- **B)** Network
-- **C)** distance
-- **D)** Protocol
-
-8. Which word completes the following sentence from the text: "**Distance:** 6 **Predecessor (p):** The _____ immediately before V is **u**."?
-- **A)** Network
-- **B)** node
-- **C)** Router
-- **D)** Protocol
-
-9. Which word completes the following sentence from the text: "Path U _____ V $\rightarrow$ W $\rightarrow$ X?"?
-- **A)** Protocol
-- **B)** rightarrow
-- **C)** Network
-- **D)** Router
-
-10. Which word completes the following sentence from the text: "Any other path (e.g., through X) would start with a cost _____ 7 (U $\rightarrow$ X), which is already higher than 6."?
-- **A)** Protocol
-- **B)** of
-- **C)** Network
-- **D)** Router
-
+5. How many messages are transmitted across the network to broadcast a single link-state change in a network with $n = |N|$ nodes and $|E|$ links?
+    - **A)** $O(1)$ messages
+    - **B)** $O(n \cdot |E|)$ messages across the network to flood link states from all $n$ nodes ($O(|E|)$ per node's link-state broadcast)
+    - **C)** $O(2^n)$ messages
+    - **D)** Zero messages
 
 ### Answer Key & Explanations
-1. **D)** path completes the sentence: Forgetting to update (relax) neighbors when a chea...
-2. **C)** U completes the sentence: The Network Topology  **Scenario Data** ![[Pasted ...
-3. **D)** On2 completes the sentence: It requires non-negative edge weights and runs in ...
-4. **C)** np completes the sentence: Write your answer as n,p**  **Analytical Breakdown...
-5. **A)** is completes the sentence: **Step 4 (Expand W):** W is next cheapest (9, via ...
-6. **D)**  completes the sentence: **Total Cost:** 14 **Predecessor:** w  **Correct A...
-7. **C)** distance completes the sentence: **Correct Answer:** **6,u**  ### Question 3  **Wha...
-8. **B)** node completes the sentence: **Distance:** 6 **Predecessor (p):** The node imme...
-9. **B)** rightarrow completes the sentence: Path U $\rightarrow$ V $\rightarrow$ W $\rightarro...
-10. **B)** of completes the sentence: Any other path (e.g., through X) would start with ...
+
+1. **B**. Link-state routing relies on reliable **link-state flooding** (e.g., OSPF Link-State Advertisements) so every router builds an identical Link-State Database (LSDB) representing the full graph $G = (N, E)$.
+2. **A**. During initialization, $N' = \{u\}$, direct neighbors $v$ receive their direct edge weight $D(v) = c(u, v)$, and non-adjacent nodes start at $D(v) = \infty$.
+3. **C**. Scanning an unsorted array of $O(n)$ unvisited nodes across $n$ iterations takes $\sum_{i=1}^n i = O(n^2)$ comparisons; using a binary min-heap reduces extract-min and decrease-key operations to $O((n + |E|)\log n)$.
+4. **D**. Initially $D(B) = 2, D(C) = 8$. Step 1 adds $B$ to $N'$ and relaxes edge $(B, C)$: $D(C) = \min(8, D(B) + c(B, C)) = \min(8, 2 + 3) = 5$ with predecessor $p(C) = B$.
+5. **B**. Flooding one router's link state traverses each of the $|E|$ links once ($O(|E|)$); for all $n$ routers to broadcast their link states requires $O(n|E|)$ message transmissions.
 
 ## References & Navigation
 

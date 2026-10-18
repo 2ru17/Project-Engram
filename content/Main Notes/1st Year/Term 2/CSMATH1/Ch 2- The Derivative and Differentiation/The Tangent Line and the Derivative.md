@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
 
 ---
 
@@ -64,77 +64,43 @@ $$m_{\text{perp}} = -\frac{1}{m_{\text{tan}}} = -\frac{1}{-4} = \frac{1}{4}$$
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. Which limit expression defines the derivative $f'(x)$ of a function $f$ at $x$?
+    - **A)** $\lim_{h \to \infty} \frac{f(x + h) - f(x)}{h}$
+    - **B)** $\lim_{h \to 0} \frac{f(x + h) - f(x)}{h}$
+    - **C)** $\lim_{h \to 0} \frac{f(x + h) + f(x)}{h}$
+    - **D)** $\lim_{x \to 0} \frac{f(x) - f(0)}{x}$
 
-2. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. Geometrically, what does the difference quotient $\frac{f(a + h) - f(a)}{h}$ represent before taking the limit as $h \to 0$?
+    - **A)** The slope of the secant line passing through $(a, f(a))$ and $(a + h, f(a + h))$
+    - **B)** The slope of the tangent line at $x = a$
+    - **C)** The area under the curve from $a$ to $a + h$
+    - **D)** The $y$-intercept of the curve
 
-3. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. Find the equation of the tangent line to the parabola $f(x) = x^2 + 1$ at the point $(2, 5)$.
+    - **A)** $y = 2x + 1$
+    - **B)** $y = 4x + 5$
+    - **C)** $y = 4x - 3$
+    - **D)** $y = -\frac{1}{4}x + \frac{11}{2}$
 
-4. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. If $s(t)$ gives the position of a particle along a coordinate line at time $t$, what is the physical interpretation of the derivative $s'(t)$?
+    - **A)** The average velocity over $[0, t]$
+    - **B)** The instantaneous acceleration of the particle
+    - **C)** The total distance traveled by the particle
+    - **D)** The instantaneous velocity of the particle at time $t$
 
-5. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes The Tangent Line and the Derivative?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. What is the relationship between the slope of the tangent line $m_T = f'(a)$ (assuming $f'(a) \ne 0$) and the slope of the **normal line** $m_N$ at the same point?
+    - **A)** $m_N = m_T$
+    - **B)** $m_N = -\frac{1}{m_T}$
+    - **C)** $m_N = -m_T$
+    - **D)** $m_N = \frac{1}{m_T}$
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of The Tangent Line and the Derivative without relying on rote computation.
+
+1. **B**. The derivative $f'(x)$ is the limit of the difference quotient $\frac{f(x+h) - f(x)}{h}$ as the step size $h$ approaches $0$.
+2. **A**. For a nonzero increment $h$, the two points $(a, f(a))$ and $(a+h, f(a+h))$ are distinct on the curve, and the ratio $\frac{\Delta y}{\Delta x}$ is the slope of the secant line connecting them.
+3. **C**. Here $f'(x) = 2x$, so at $x = 2$ the tangent slope is $m = f'(2) = 4$. Using point-slope form at $(2, 5)$: $y - 5 = 4(x - 2) \implies y = 4x - 3$.
+4. **D**. Average velocity is $\frac{\Delta s}{\Delta t}$ over a finite interval; taking the limit as $\Delta t \to 0$ gives the derivative $s'(t)$, which is the instantaneous velocity at time $t$.
+5. **B**. The normal line is perpendicular to the tangent line at the point of tangency, so its slope is the negative reciprocal of the tangent slope: $m_N = -1 / f'(a)$.
 
 ## References & Navigation
 

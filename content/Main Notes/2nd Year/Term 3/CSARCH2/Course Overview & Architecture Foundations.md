@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Course Overview & Architecture Foundations]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Course Overview & Architecture Foundations]]
 
 ---
 
@@ -171,34 +171,34 @@ $$N(8\text{ years}) = 4 \times 10^9 \times 2^4 = 4 \times 10^9 \times 16 = 64 \t
 ## Multiple Choice Questions
 
 1. Which of the following architectural features is part of the computer architecture rather than computer organization?
-- **A)** The presence of a 32-entry branch target buffer
-- **B)** The number of pipeline stages in the integer execution unit
-- **C)** The instruction set opcodes and available addressing modes
-- **D)** The cache replacement policy and write-back queue depth
+    - **A)** The presence of a 32-entry branch target buffer
+    - **B)** The number of pipeline stages in the integer execution unit
+    - **C)** The instruction set opcodes and available addressing modes
+    - **D)** The cache replacement policy and write-back queue depth
 
 2. What is the fundamental cause of the Von Neumann bottleneck?
-- **A)** Arithmetic logic units cannot perform multiplication in a single cycle
-- **B)** Instructions and data must share the same physical bus and memory subsystem
-- **C)** Transistor gate leakage increases exponentially at high clock frequencies
-- **D)** Branch instructions introduce bubbles into deep pipelined execution units
+    - **A)** Arithmetic logic units cannot perform multiplication in a single cycle
+    - **B)** Instructions and data must share the same physical bus and memory subsystem
+    - **C)** Transistor gate leakage increases exponentially at high clock frequencies
+    - **D)** Branch instructions introduce bubbles into deep pipelined execution units
 
 3. Why did Dennard Scaling cease to hold true around the mid-2000s?
-- **A)** Integrated circuit lithography reached the physical wavelength of visible light
-- **B)** Microprocessors transitioned from 32-bit to 64-bit address buses
-- **C)** Threshold voltage could not be scaled down further without causing intolerable leakage current
-- **D)** Dynamic random-access memory (DRAM) could no longer refresh capacitors fast enough
+    - **A)** Integrated circuit lithography reached the physical wavelength of visible light
+    - **B)** Microprocessors transitioned from 32-bit to 64-bit address buses
+    - **C)** Threshold voltage could not be scaled down further without causing intolerable leakage current
+    - **D)** Dynamic random-access memory (DRAM) could no longer refresh capacitors fast enough
 
 4. In a pure Harvard architecture, what design feature prevents the Von Neumann bottleneck?
-- **A)** Physically isolated instruction and data memories with dedicated buses for each
-- **B)** Out-of-order instruction scheduling with register renaming
-- **C)** Multi-level unified caches that share a single wide bus to main DRAM
-- **D)** Microcoded control units that horizontalize vertical control words
+    - **A)** Physically isolated instruction and data memories with dedicated buses for each
+    - **B)** Out-of-order instruction scheduling with register renaming
+    - **C)** Multi-level unified caches that share a single wide bus to main DRAM
+    - **D)** Microcoded control units that horizontalize vertical control words
 
 5. If the supply voltage of a microprocessor core is reduced by $20\%$ while maintaining the same clock frequency, what is the approximate percentage reduction in dynamic power?
-- **A)** $20\%$
-- **B)** $36\%$
-- **C)** $40\%$
-- **D)** $64\%$
+    - **A)** $20\%$
+    - **B)** $36\%$
+    - **C)** $40\%$
+    - **D)** $64\%$
 
 ### Answer Key & Explanations
 

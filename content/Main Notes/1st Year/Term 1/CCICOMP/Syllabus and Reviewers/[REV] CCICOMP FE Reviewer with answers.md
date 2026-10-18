@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Reviewer]] #[[Final Exam]]
+**Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Reviewer]] #[[Final Exam]]
 
 ---
 

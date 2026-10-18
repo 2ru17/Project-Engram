@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSSECU2]] #[[Cybersecurity]] #[[Offensive Security]] #[[Penetration Testing]] #[[Kali Linux]] #[[Ethics]]
+**Tags:** #[[Computer Science]] #[[NSSECU2]] #[[Cybersecurity]] #[[Offensive Security]] #[[Penetration Testing]] #[[Kali Linux]] #[[Ethics]]
 
 ---
 
@@ -174,63 +174,63 @@ Technical Analysis: User 101 successfully retrieved admin profile data for User 
 ## Multiple Choice Questions
 
 1. Which element of the CIA triad is primarily compromised when an unauthorized attacker modifies database records to elevate their account balance?
-- **A)** Confidentiality
-- **B)** Integrity
-- **C)** Availability
-- **D)** Non-Repudiation
+    - **A)** Confidentiality
+    - **B)** Integrity
+    - **C)** Availability
+    - **D)** Non-Repudiation
 
 2. What is the fundamental operational difference between a White Hat and a Gray Hat hacker?
-- **A)** White Hat hackers exclusively use automated scanners, whereas Gray Hat hackers write custom binary exploits.
-- **B)** White Hat hackers only perform source code audits, while Gray Hat hackers perform network scanning.
-- **C)** White Hat hackers operate with explicit, formal authorization and legal contracts, whereas Gray Hat hackers test systems without prior authorization.
-- **D)** Gray Hat hackers are legally protected if they disclose flaws within 90 days of discovery.
+    - **A)** White Hat hackers operate with explicit, formal authorization and legal contracts, whereas Gray Hat hackers test systems without prior authorization.
+    - **B)** White Hat hackers only perform source code audits, while Gray Hat hackers perform network scanning.
+    - **C)** White Hat hackers exclusively use automated scanners, whereas Gray Hat hackers write custom binary exploits.
+    - **D)** Gray Hat hackers are legally protected if they disclose flaws within 90 days of discovery.
 
 3. Under the PTES (Penetration Testing Execution Standard) framework, which phase directly follows Threat Modeling?
-- **A)** Pre-engagement Interactions
-- **B)** Vulnerability Analysis
-- **C)** Exploitation
-- **D)** Post-Exploitation
+    - **A)** Pre-engagement Interactions
+    - **B)** Exploitation
+    - **C)** Vulnerability Analysis
+    - **D)** Post-Exploitation
 
 4. In which testing methodology does the penetration tester operate with zero prior knowledge of the internal network architecture or source code?
-- **A)** White-Box Testing
-- **B)** Crystal-Box Testing
-- **C)** Gray-Box Testing
-- **D)** Black-Box Testing
+    - **A)** White-Box Testing
+    - **B)** Crystal-Box Testing
+    - **C)** Gray-Box Testing
+    - **D)** Black-Box Testing
 
 5. Why is it critical for an ethical hacker to review the Rules of Engagement (RoE) before initiating active vulnerability scanning?
-- **A)** To determine which software license keys to apply during exploitation
-- **B)** To identify authorized testing timeframes, emergency communication channels, and strictly excluded targets
-- **C)** To verify that all discovered hashes can be uploaded to public decryption services
-- **D)** To avoid having to write a technical final report
+    - **A)** To determine which software license keys to apply during exploitation
+    - **B)** To identify authorized testing timeframes, emergency communication channels, and strictly excluded targets
+    - **C)** To verify that all discovered hashes can be uploaded to public decryption services
+    - **D)** To avoid having to write a technical final report
 
 6. A penetration tester observes a web server banner reading `Apache/2.4.41 (Ubuntu)`. Which action demonstrates proper investigative discipline?
-- **A)** Immediately declaring a Critical vulnerability and attempting remote code execution
-- **B)** Verifying whether Ubuntu backported security patches before concluding the service is vulnerable
-- **C)** Assuming the banner is fabricated and skipping all web testing
-- **D)** Launching an unthrottled denial-of-service attack to test availability
+    - **A)** Immediately declaring a Critical vulnerability and attempting remote code execution
+    - **B)** Assuming the banner is fabricated and skipping all web testing
+    - **C)** Verifying whether Ubuntu backported security patches before concluding the service is vulnerable
+    - **D)** Launching an unthrottled denial-of-service attack to test availability
 
 7. What is the primary purpose of maintaining a dedicated `evidence/` directory with verbatim command logs and timestamps during an assessment?
-- **A)** To consume disk space and demonstrate high CPU activity
-- **B)** To provide reproducible proof of findings and support defensible client reporting
-- **C)** To bypass local host intrusion detection systems (HIDS)
-- **D)** To automatically upload discovered credentials to public repositories
+    - **A)** To provide reproducible proof of findings and support defensible client reporting
+    - **B)** To consume disk space and demonstrate high CPU activity
+    - **C)** To bypass local host intrusion detection systems (HIDS)
+    - **D)** To automatically upload discovered credentials to public repositories
 
 8. Which actor class is characterized by running automated exploitation scripts without understanding the underlying technical payload or protocol interactions?
-- **A)** Advanced Persistent Threat (APT)
-- **B)** Script Kiddie
-- **C)** White Hat Pentester
-- **D)** Red Team Lead
+    - **A)** Advanced Persistent Threat (APT)
+    - **B)** Red Team Lead
+    - **C)** White Hat Pentester
+    - **D)** Script Kiddie
 
 ### Answer Key & Explanations
 
 1. **B**. Unauthorized modification of system data or financial balances directly violates **Integrity**, which guarantees that information remains accurate and unaltered by unauthorized parties.
-2. **C**. The defining distinction is **authorization**. White Hat hackers have formal, signed legal consent; Gray Hat hackers act without prior permission, which makes their activities illegal regardless of good intentions.
-3. **B**. The standard 7 phases of PTES proceed in order: Pre-engagement $\rightarrow$ Intelligence Gathering $\rightarrow$ Threat Modeling $\rightarrow$ **Vulnerability Analysis** $\rightarrow$ Exploitation $\rightarrow$ Post-Exploitation $\rightarrow$ Reporting.
+2. **A**. The defining distinction is **authorization**. White Hat hackers have formal, signed legal consent; Gray Hat hackers act without prior permission, which makes their activities illegal regardless of good intentions.
+3. **C**. The standard 7 phases of PTES proceed in order: Pre-engagement $\rightarrow$ Intelligence Gathering $\rightarrow$ Threat Modeling $\rightarrow$ **Vulnerability Analysis** $\rightarrow$ Exploitation $\rightarrow$ Post-Exploitation $\rightarrow$ Reporting.
 4. **D**. **Black-Box Testing** simulates an external adversary starting with zero insider knowledge, requiring comprehensive external reconnaissance.
 5. **B**. The **Rules of Engagement (RoE)** define operational boundaries, ensuring testing does not disrupt out-of-scope production assets or occur outside permitted time windows.
-6. **B**. Enterprise Linux distributions (like Ubuntu and Debian) frequently **backport** security fixes to stable software packages without incrementing the base version string, making raw banner matching prone to false positives.
-7. **B**. Maintaining structured, timestamped evidence logs guarantees that every vulnerability finding is **reproducible, auditable, and defensible** when presented to system owners.
-8. **B**. **Script Kiddies** rely on automated pre-packaged tools and exploits without comprehending memory layouts, network protocols, or payload mechanics.
+6. **C**. Enterprise Linux distributions (like Ubuntu and Debian) frequently **backport** security fixes to stable software packages without incrementing the base version string, making raw banner matching prone to false positives.
+7. **A**. Maintaining structured, timestamped evidence logs guarantees that every vulnerability finding is **reproducible, auditable, and defensible** when presented to system owners.
+8. **D**. **Script Kiddies** rely on automated pre-packaged tools and exploits without comprehending memory layouts, network protocols, or payload mechanics.
 
 ## References & Navigation
 

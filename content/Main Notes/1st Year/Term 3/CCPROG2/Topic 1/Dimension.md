@@ -3,7 +3,7 @@ id: Dimension
 type: note
 course: CCPROG2
 topic: C Programming
-status: draft
+status: completed
 ---
 
 # Dimension
@@ -13,7 +13,7 @@ status: draft
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
+**Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
 
 ---
 
@@ -64,34 +64,32 @@ All multi-dimensional arrays are stored as contiguous 1D blocks in **row-major o
 
 > TL;DR — Array dimension = number of indices needed to access an element. C supports 1D, 2D, 3D, and higher-dimensional arrays, all stored contiguously in row-major order.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** [[One-Dimensional Arrays (1D Arrays)]] — [[Two-Dimensional Arrays (2D Arrays)]] — [[Multidimensional Arrays (3D+)]] — [[Memory Allocation]] **Source / Reference:**
 
 ## Multiple Choice Questions
+
 1. What does the term 'dimension' refer to in the context of C arrays?
-- **A)** The physical byte size of the elements
-- **B)** The number of indices required to access a single element
-- **C)** The variable type used for storage
-- **D)** The maximum allowed value for an integer
+    - **A)** The physical byte size of the elements
+    - **B)** The number of indices required to access a single element
+    - **C)** The variable type used for storage
+    - **D)** The maximum allowed value for an integer
 2. How many dimensions does the array `int grid[10][10];` have?
-- **A)** 1
-- **B)** 2
-- **C)** 10
-- **D)** 100
+    - **A)** 1
+    - **B)** 2
+    - **C)** 10
+    - **D)** 100
 3. Which of the following best represents a one-dimensional array conceptually?
-- **A)** A grid
-- **B)** A line or list of items
-- **C)** A cube
-- **D)** A single variable
+    - **A)** A grid
+    - **B)** A line or list of items
+    - **C)** A cube
+    - **D)** A single variable
 
 ### Answer Key & Explanations
-1. **B)** Dimensionality represents the structural depth, matching the count of bracket pairs.
-2. **B)** The two sets of brackets specify rows and columns, making it two-dimensional.
-3. **B)** A 1D array sequences elements linearly like a simple straight list.
+
+1. **B**. Dimensionality represents the structural depth, matching the count of bracket pairs.
+2. **B**. The two sets of brackets specify rows and columns, making it two-dimensional.
+3. **B**. A 1D array sequences elements linearly like a simple straight list.
 
 ## References & Navigation
 

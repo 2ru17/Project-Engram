@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Conceptual]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Conceptual]]
 
 ---
 
@@ -64,77 +64,43 @@ Thus, $\lim_{x \to \infty} \frac{x^3 + 2}{x^2 + x} = +\infty$.
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. Evaluate $\lim_{x \to \infty} \frac{4x^3 - 2x + 1}{2x^3 + 5x^2 - 7}$.
+    - **A)** $0$
+    - **B)** $2$
+    - **C)** $4$
+    - **D)** $+\infty$
 
-2. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. For a rational function $f(x) = \frac{P(x)}{Q(x)}$, what is $\lim_{x \to \infty} f(x)$ when the degree of the numerator $P(x)$ is strictly less than the degree of the denominator $Q(x)$?
+    - **A)** $+\infty$
+    - **B)** The ratio of the leading coefficients
+    - **C)** $0$
+    - **D)** $1$
 
-3. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. Evaluate $\lim_{x \to -\infty} \frac{3x}{\sqrt{x^2 + 1}}$. (Recall that $\sqrt{x^2} = |x| = -x$ for $x < 0$.)
+    - **A)** $3$
+    - **B)** $-3$
+    - **C)** $0$
+    - **D)** $-\infty$
 
-4. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. If $\lim_{x \to \infty} f(x) = -5$, what geometric feature does the graph of $y = f(x)$ possess?
+    - **A)** A vertical asymptote at $x = -5$
+    - **B)** A horizontal asymptote at $y = -5$
+    - **C)** An $x$-intercept at $(-5, 0)$
+    - **D)** A removable discontinuity at $x = -5$
 
-5. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Limit at Infinity?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. Evaluate $\lim_{x \to \infty} \left(\sqrt{x^2 + 6x} - x\right)$.
+    - **A)** $0$
+    - **B)** $6$
+    - **C)** $3$
+    - **D)** $+\infty$
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Limit at Infinity without relying on rote computation.
+
+1. **B**. Divide numerator and denominator by the highest power of $x$ in the denominator ($x^3$): $\lim_{x \to \infty} \frac{4 - 2/x^2 + 1/x^3}{2 + 5/x - 7/x^3} = \frac{4}{2} = 2$.
+2. **C**. When $\deg(P) < \deg(Q)$, dividing top and bottom by $x^{\deg(Q)}$ leaves only terms of the form $c/x^k$ in the numerator (which approach $0$) over a non-zero leading coefficient in the denominator, giving $0$.
+3. **B**. For $x < 0$, $\sqrt{x^2 + 1} = \sqrt{x^2(1 + 1/x^2)} = |x|\sqrt{1 + 1/x^2} = -x\sqrt{1 + 1/x^2}$. Thus $\frac{3x}{-x\sqrt{1 + 1/x^2}} = \frac{-3}{\sqrt{1 + 1/x^2}} \to -3$ as $x \to -\infty$.
+4. **B**. By definition, the line $y = L$ is a horizontal asymptote of $y = f(x)$ if either $\lim_{x \to \infty} f(x) = L$ or $\lim_{x \to -\infty} f(x) = L$.
+5. **C**. Multiply by the conjugate $\frac{\sqrt{x^2+6x} + x}{\sqrt{x^2+6x} + x}$ to get $\frac{(x^2+6x) - x^2}{\sqrt{x^2+6x} + x} = \frac{6x}{x(\sqrt{1 + 6/x} + 1)} = \frac{6}{\sqrt{1 + 6/x} + 1} \to \frac{6}{1 + 1} = 3$.
 
 ## References & Navigation
 

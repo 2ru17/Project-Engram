@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSSECU1]] #[[Conceptual]] #[[CTF]] #[[Applied Security]]
+**Tags:** #[[Computer Science]] #[[NSSECU1]] #[[Conceptual]] #[[CTF]] #[[Applied Security]]
 
 ---
 
@@ -54,77 +54,79 @@ In CTFs, if you know the flag format (e.g., `CTF{`), you can XOR the ciphertext 
 - Mastery of basic command-line tools (Linux, Python) is essential for CTF success.
 
 ## Multiple Choice Questions
+
 1. In a CTF context, what is a "flag"?
-- **A)** A vulnerability in the system
-- **B)** A specific string of text proving a challenge was solved
-- **C)** A network defense mechanism
-- **D)** An automated scanning tool
+    - **A)** A vulnerability in the system
+    - **B)** A specific string of text proving a challenge was solved
+    - **C)** A network defense mechanism
+    - **D)** An automated scanning tool
 
 2. Which type of CTF competition involves teams attacking each other while defending their own servers?
-- **A)** Jeopardy-style
-- **B)** Red Team vs Blue Team
-- **C)** Attack-Defense
-- **D)** King of the Hill
+    - **A)** Jeopardy-style
+    - **B)** Red Team vs Blue Team
+    - **C)** Attack-Defense
+    - **D)** King of the Hill
 
 3. Which CTF category focuses on finding vulnerabilities like SQL Injection and Cross-Site Scripting?
-- **A)** Web Exploitation
-- **B)** Cryptography
-- **C)** Digital Forensics
-- **D)** Reverse Engineering
+    - **A)** Web Exploitation
+    - **B)** Cryptography
+    - **C)** Digital Forensics
+    - **D)** Reverse Engineering
 
 4. Analyzing a compiled `.exe` file to understand its logic and find a hardcoded password falls under which category?
-- **A)** Binary Exploitation
-- **B)** Reverse Engineering
-- **C)** Steganography
-- **D)** OSINT
+    - **A)** Binary Exploitation
+    - **B)** Reverse Engineering
+    - **C)** Steganography
+    - **D)** OSINT
 
 5. The practice of hiding a secret message or file inside an ordinary image or audio file is called:
-- **A)** Cryptography
-- **B)** Obfuscation
-- **C)** Steganography
-- **D)** Hashing
+    - **A)** Cryptography
+    - **B)** Obfuscation
+    - **C)** Steganography
+    - **D)** Hashing
 
 6. Which tool is standard for analyzing network traffic capture files (.pcap) in a forensics challenge?
-- **A)** Nmap
-- **B)** Wireshark
-- **C)** Ghidra
-- **D)** Metasploit
+    - **A)** Nmap
+    - **B)** Wireshark
+    - **C)** Ghidra
+    - **D)** Metasploit
 
 7. What Linux command is commonly used to find readable text embedded within a binary file?
-- **A)** `ls`
-- **B)** `grep`
-- **C)** `strings`
-- **D)** `cat`
+    - **A)** `ls`
+    - **B)** `grep`
+    - **C)** `strings`
+    - **D)** `cat`
 
 8. Binary Exploitation (often called "Pwn" in CTFs) typically involves exploiting which type of vulnerability?
-- **A)** Weak passwords
-- **B)** Misconfigured firewalls
-- **C)** Memory corruption (e.g., Buffer Overflow)
-- **D)** Cross-Site Request Forgery
+    - **A)** Weak passwords
+    - **B)** Misconfigured firewalls
+    - **C)** Memory corruption (e.g., Buffer Overflow)
+    - **D)** Cross-Site Request Forgery
 
 9. If a ciphertext was encrypted using single-byte XOR, and you know the flag starts with "CTF{", how can you find the key?
-- **A)** Brute force all AES keys
-- **B)** XOR the first 4 bytes of ciphertext with "CTF{"
-- **C)** Reverse the MD5 hash
-- **D)** Decompile the binary
+    - **A)** Brute force all AES keys
+    - **B)** XOR the first 4 bytes of ciphertext with "CTF{"
+    - **C)** Reverse the MD5 hash
+    - **D)** Decompile the binary
 
 10. Which category relies heavily on searching public databases, social media, and search engines to gather information?
-- **A)** OSINT
-- **B)** Digital Forensics
-- **C)** Cryptography
-- **D)** Network Exploitation
+    - **A)** OSINT
+    - **B)** Digital Forensics
+    - **C)** Cryptography
+    - **D)** Network Exploitation
 
 ### Answer Key & Explanations
-1. **B.** A flag is the proof of accomplishment hidden within the challenge.
-2. **C.** Attack-Defense CTFs require teams to balance offensive strikes and defensive patching simultaneously.
-3. **A.** Web Exploitation centers on web application vulnerabilities.
-4. **B.** Reverse Engineering involves deconstructing compiled software to understand its source logic.
-5. **C.** Steganography is the art of hiding data within other non-secret data.
-6. **B.** Wireshark is the premier graphical tool for analyzing PCAP network traffic files.
-7. **C.** The `strings` command extracts printable character sequences from binary files.
-8. **C.** "Pwn" challenges focus on exploiting memory management errors like buffer overflows to gain code execution.
-9. **B.** Because XOR is perfectly symmetric, XORing the known plaintext with the ciphertext yields the key.
-10. **A.** Open Source Intelligence (OSINT) involves gathering data from publicly available sources.
+
+1. **B**. A flag is the proof of accomplishment hidden within the challenge.
+2. **C**. Attack-Defense CTFs require teams to balance offensive strikes and defensive patching simultaneously.
+3. **A**. Web Exploitation centers on web application vulnerabilities.
+4. **B**. Reverse Engineering involves deconstructing compiled software to understand its source logic.
+5. **C**. Steganography is the art of hiding data within other non-secret data.
+6. **B**. Wireshark is the premier graphical tool for analyzing PCAP network traffic files.
+7. **C**. The `strings` command extracts printable character sequences from binary files.
+8. **C**. "Pwn" challenges focus on exploiting memory management errors like buffer overflows to gain code execution.
+9. **B**. Because XOR is perfectly symmetric, XORing the known plaintext with the ciphertext yields the key.
+10. **A**. Open Source Intelligence (OSINT) involves gathering data from publicly available sources.
 
 ## References & Navigation
 

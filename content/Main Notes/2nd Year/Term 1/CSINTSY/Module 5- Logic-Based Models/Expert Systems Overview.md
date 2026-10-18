@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSINTSY]] #[[Expert Systems Overview]] #[[Problem Solving]] #[[M5]]
+**Tags:** #[[Computer Science]] #[[CSINTSY]] #[[Expert Systems Overview]] #[[Problem Solving]] #[[M5]]
 
 ---
 
@@ -49,41 +49,42 @@ Expert Systems are a type of traditional, logic-based artificial intelligence sy
 ## Multiple Choice Questions
 
 1. How do Expert Systems primarily solve problems compared to Machine Learning models?
-- **A)** They learn from large unstructured datasets using neural networks.
-- **B)** They reason through a pre-defined body of knowledge explicitly hand-crafted by human experts.
-- **C)** They use trial-and-error reinforcement interactions with an environment.
-- **D)** They perform gradient descent to optimize logical weights.
+    - **A)** They learn from large unstructured datasets using neural networks.
+    - **B)** They reason through a pre-defined body of knowledge explicitly hand-crafted by human experts.
+    - **C)** They use trial-and-error reinforcement interactions with an environment.
+    - **D)** They perform gradient descent to optimize logical weights.
 
 2. Which core component of an Expert System is responsible for processing facts to deduce new conclusions?
-- **A)** The Knowledge Base
-- **B)** The User Interface
-- **C)** The Inference Engine
-- **D)** The Database Management System
+    - **A)** The Knowledge Base
+    - **B)** The User Interface
+    - **C)** The Inference Engine
+    - **D)** The Database Management System
 
 3. What characterizes a "Forward Chaining" inference strategy?
-- **A)** It starts with a target goal and works backward to see if the facts support it.
-- **B)** It starts with known facts and applies rules iteratively to deduce new facts until a goal is reached.
-- **C)** It relies purely on the user inputting the final conclusion manually.
-- **D)** It only operates on quantitative, continuous data points.
+    - **A)** It starts with a target goal and works backward to see if the facts support it.
+    - **B)** It starts with known facts and applies rules iteratively to deduce new facts until a goal is reached.
+    - **C)** It relies purely on the user inputting the final conclusion manually.
+    - **D)** It only operates on quantitative, continuous data points.
 
 4. Which of the following is a significant limitation of Expert Systems?
-- **A)** They are highly unexplainable and act like "black boxes."
-- **B)** They are completely inefficient when operating within a specific, well-defined domain.
-- **C)** Maintaining and updating a large knowledge base of hand-crafted rules is very difficult and costly.
-- **D)** They cannot use propositional or first-order logic.
+    - **A)** They are highly unexplainable and act like "black boxes."
+    - **B)** They are completely inefficient when operating within a specific, well-defined domain.
+    - **C)** Maintaining and updating a large knowledge base of hand-crafted rules is very difficult and costly.
+    - **D)** They cannot use propositional or first-order logic.
 
 5. In First-Order Logic notation, what does the symbol $\forall x$ represent?
-- **A)** Implication (If-Then)
-- **B)** Existential Quantifier (There exists)
-- **C)** Disjunction (OR)
-- **D)** Universal Quantifier (For all)
+    - **A)** Implication (If-Then)
+    - **B)** Existential Quantifier (There exists)
+    - **C)** Disjunction (OR)
+    - **D)** Universal Quantifier (For all)
 
 ### Answer Key & Explanations
-1. **B)** Expert Systems are logic-based; they do not learn from data but apply rigid logical rules provided by domain experts.
-2. **C)** The Inference Engine is the algorithm that takes facts from the Knowledge Base and applies rules to deduce new facts.
-3. **B)** Forward chaining is a data-driven strategy that moves forward from initial facts to a final conclusion.
-4. **C)** Because rules must be manually engineered by domain experts, building and updating them is bottlenecked by human effort, unlike ML models that update via data.
-5. **D)** $\forall x$ is the universal quantifier, meaning a statement applies to all instances of $x$.
+
+1. **B**. Expert Systems are logic-based; they do not learn from data but apply rigid logical rules provided by domain experts.
+2. **C**. The Inference Engine is the algorithm that takes facts from the Knowledge Base and applies rules to deduce new facts.
+3. **B**. Forward chaining is a data-driven strategy that moves forward from initial facts to a final conclusion.
+4. **C**. Because rules must be manually engineered by domain experts, building and updating them is bottlenecked by human effort, unlike ML models that update via data.
+5. **D**. $\forall x$ is the universal quantifier, meaning a statement applies to all instances of $x$.
 
 ## References & Navigation
 

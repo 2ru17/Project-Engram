@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Network Layer]] #[[Problem Solving]]
+**Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Network Layer]] #[[Problem Solving]]
 
 ---
 
@@ -52,78 +52,43 @@ Since Prefix B is a longer match (24 bits vs 21 bits), the router forwards the p
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "It is implemented _____ hardware (nanosecond timeframe)."?
-- **A)** Router
-- **B)** in
-- **C)** Protocol
-- **D)** Network
+1. What is the fundamental architectural distinction between **forwarding** (in the **Data Plane**) and **routing** (in the **Control Plane**) at the Network Layer?
+    - **A)** Forwarding and routing are synonyms for the exact same global algorithm.
+    - **B)** **Forwarding** is the **local, per-packet router action** (taking nanoseconds in hardware) of moving an arriving datagram from an input port to the appropriate output port using a local forwarding table; **Routing** is the **network-wide control process** (taking milliseconds to seconds in software, via OSPF/BGP/RIP) that determines the end-to-end paths and populates those forwarding tables.
+    - **C)** Forwarding happens at the Application layer, while routing happens at the Physical layer.
+    - **D)** Routing moves individual bytes across a switch fabric, while forwarding computes Dijkstra's algorithm.
 
-2. Which word completes the following sentence from the text: "**CIDR (Classless InterDomain Routing):** The format `a.b.c.d/x` where `x` _____ the number of bits in the subnet portion."?
-- **A)** Router
-- **B)** Protocol
-- **C)** Network
-- **D)** is
+2. How is the service model of the Internet's Network Layer (IP) characterized?
+    - **A)** **Best-Effort Service**: connectionless datagram delivery with **no guarantees** on packet delivery (packets may be dropped), **no guarantee** on in-order arrival (packets may take different paths), and **no guarantee** on end-to-end delay or minimum bandwidth.
+    - **B)** Guaranteed bandwidth, zero jitter, in-order reliable delivery
+    - **C)** Circuit-switched TDM reservation end-to-end before any packet is sent
+    - **D)** Broadcast-only delivery to all hosts on the Internet
 
-3. Which word completes the following sentence from the text: "Nodes exchange distance information _____ with their neighbors iteratively."?
-- **A)** Network
-- **B)** Protocol
-- **C)** Router
-- **D)** only
+3. Inside a high-speed router's input/output port architecture, where and why does **queueing (and packet loss / buffer overflow)** occur?
+    - **A)** Only inside the DNS server.
+    - **B)** Inside the fiber-optic glass core where bits wait in queues.
+    - **C)** At **input port buffers** (if the switching fabric is slower than the sum of input line rates or experiences **Head-of-Line (HOL) blocking**) and at **output port buffers** (when the aggregate arrival rate of packets switched to a given output link exceeds that output link's transmission capacity $R_{\text{line}}$).
+    - **D)** Only when the TTL field equals $255$.
 
-4. Which word completes the following sentence from the text: "**Tunneling:** A transition method where an IPv6 datagram is encapsulated as _____ payload within an IPv4 datagram to travel across IPv4 routers."?
-- **A)** the
-- **B)** Router
-- **C)** Network
-- **D)** Protocol
+4. What is the purpose of the 8-bit **Time-To-Live (TTL)** field (called **Hop Limit** in IPv6) in the IP datagram header?
+    - **A)** It records the exact wall-clock timestamp at which the packet was created.
+    - **B)** It counts the number of switches in a single LAN.
+    - **C)** It specifies the TCP window size in kilobytes.
+    - **D)** Every router along the path decrements the TTL field by $1$ before forwarding; if TTL reaches $0$, the router **drops the datagram** and sends an ICMP *Time Exceeded* (Type 11, Code 0) message back to the source, preventing packets caught in transient routing loops from circulating forever.
 
-5. Which word completes the following sentence from the text: "**DHCP (Dynamic Host Configuration Protocol):** Dynamically allocates an IP address (as well as first-hop _____ IP, DNS server IP, and network mask) to a host joining the network."?
-- **A)** Protocol
-- **B)** Router
-- **C)** router
-- **D)** Network
-
-6. Which word completes the following sentence from the text: "Local devices use private IP space, and the NAT _____ changes the source IP and port for outgoing datagrams."?
-- **A)** router
-- **B)** Network
-- **C)** Router
-- **D)** Protocol
-
-7. Which word completes the following sentence from the text: "**Routing (Control Plane):** The network-wide logic that determines the end-to-end _____ packets take from source to destination using routing algorithms."?
-- **A)** path
-- **B)** Router
-- **C)** Network
-- **D)** Protocol
-
-8. Which word completes the following sentence from the text: "Given the destination address: `11001000 00010111 00011000 10101010` _____ Prefix C (first 21 bits are `..."?
-- **A)** Router
-- **B)** Matches
-- **C)** Protocol
-- **D)** Network
-
-9. Which word completes the following sentence from the text: "All routers have the _____ topology and link costs."?
-- **A)** Protocol
-- **B)** Network
-- **C)** Router
-- **D)** complete
-
-10. Which word completes the following sentence from the text: "Does not match Prefix B or C _____ 21st bit is 0, not 1)."?
-- **A)** Protocol
-- **B)** Network
-- **C)** the
-- **D)** Router
-
+5. Among the three internal router **switching fabric** designs—**Switching via Memory**, **Switching via a Shared Bus**, and **Switching via an Interconnection Network (Crossbar)**—which design allows multiple packets to be forwarded in parallel simultaneously?
+    - **A)** Switching via Memory (limited by memory bus bandwidth to 1 packet at a time)
+    - **B)** **Crossbar / Banyan Interconnection Network**, which can transfer multiple packets concurrently across disjoint input-to-output paths as long as they target different output ports.
+    - **C)** Switching via a Shared Bus (limited by bus contention to 1 packet at a time)
+    - **D)** None of them can forward more than 1 bit per second.
 
 ### Answer Key & Explanations
-1. **B)** in completes the sentence: It is implemented in hardware (nanosecond timefram...
-2. **D)** is completes the sentence: **CIDR (Classless InterDomain Routing):** The form...
-3. **D)** only completes the sentence: Nodes exchange distance information only with thei...
-4. **A)** the completes the sentence: **Tunneling:** A transition method where an IPv6 d...
-5. **C)** router completes the sentence: **DHCP (Dynamic Host Configuration Protocol):** Dy...
-6. **A)** router completes the sentence: Local devices use private IP space, and the NAT ro...
-7. **A)** path completes the sentence: **Routing (Control Plane):** The network-wide logi...
-8. **B)** Matches completes the sentence: Given the destination address: `11001000 00010111 ...
-9. **D)** complete completes the sentence: All routers have the complete topology and link co...
-10. **C)** the completes the sentence: Does not match Prefix B or C (the 21st bit is 0, n...
+
+1. **B**. Forwarding is the local data-plane lookup performed on each arriving packet (`Destination IP -> Output Interface`); routing is the distributed control-plane algorithm that computes shortest paths across the network.
+2. **A**. IP provides a minimalist, connectionless "best-effort" datagram service; reliability, congestion control, and in-order byte-stream semantics are delegated to Layer 4 (TCP).
+3. **C**. Packet queues form whenever instantaneous arrival rate exceeds service rate at the switch fabric (input queueing / HOL blocking) or at a contended outgoing link (output port queueing).
+4. **D**. Decrementing TTL by 1 at every Layer-3 router hop bounds the maximum lifetime of a datagram in the network and enables `traceroute` diagnostics.
+5. **B**. A crossbar switch fabric is non-blocking for distinct output ports, enabling parallel multi-packet transfers across multiple crosspoints simultaneously.
 
 ## References & Navigation
 

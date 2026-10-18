@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
 
 ---
 
@@ -39,77 +39,43 @@ $$ \frac{d}{dx}[f(y)] = f'(y) \cdot \frac{dy}{dx} $$
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. When differentiating an equation in $x$ and $y$ implicitly with respect to $x$, what is $\frac{d}{dx}[y^3]$?
+    - **A)** $3y^2$
+    - **B)** $3y^2 \frac{dy}{dx}$
+    - **C)** $y^3 \frac{dy}{dx}$
+    - **D)** $3x^2 \frac{dy}{dx}$
 
-2. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. Find $\frac{dy}{dx}$ for the circle $x^2 + y^2 = 25$.
+    - **A)** $-\frac{x}{y}$
+    - **B)** $\frac{x}{y}$
+    - **C)** $-\frac{y}{x}$
+    - **D)** $25 - 2x$
 
-3. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. When differentiating the product term $x^2 y$ with respect to $x$, which expression is obtained?
+    - **A)** $2x \frac{dy}{dx}$
+    - **B)** $2xy + x^2 \frac{dy}{dx}$
+    - **C)** $2xy$
+    - **D)** $x^2 + 2xy \frac{dy}{dx}$
 
-4. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. Find the slope of the tangent line to the curve $x^2 + xy + y^2 = 7$ at the point $(1, 2)$.
+    - **A)** $-\frac{4}{5}$
+    - **B)** $-\frac{2}{5}$
+    - **C)** $\frac{4}{5}$
+    - **D)** $-1$
 
-5. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Implicit Differentiation?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. Why is implicit differentiation necessary for curves such as the Folium of Descartes ($x^3 + y^3 = 6xy$)?
+    - **A)** Because explicit functions do not have tangent lines
+    - **B)** Because the relation cannot be easily solved for $y$ as a single explicit function $y = f(x)$, yet locally defines $y$ as differentiable functions of $x$
+    - **C)** Because the Power Rule does not apply to cubic polynomials
+    - **D)** Because $\frac{dy}{dx}$ is always constant on implicit curves
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Implicit Differentiation without relying on rote computation.
+
+1. **B**. Because $y$ is an implicit function of $x$ ($y = y(x)$), the Chain Rule requires differentiating the outer power ($3y^2$) and multiplying by the derivative of the inner function ($\frac{dy}{dx}$).
+2. **A**. Differentiating both sides with respect to $x$ gives $2x + 2y\frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}$.
+3. **B**. Both $x^2$ and $y$ depend on $x$, so the Product Rule must be applied: $\frac{d}{dx}(x^2) \cdot y + x^2 \cdot \frac{d}{dx}(y) = 2xy + x^2 \frac{dy}{dx}$.
+4. **A**. Differentiating $x^2 + xy + y^2 = 7$ gives $2x + \left(y + x\frac{dy}{dx}\right) + 2y\frac{dy}{dx} = 0$. Substituting $(x, y) = (1, 2)$ yields $2(1) + 2 + (1 + 4)\frac{dy}{dx} = 0 \implies 4 + 5\frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{4}{5}$.
+5. **B**. Implicit differentiation allows us to find $\frac{dy}{dx}$ directly in terms of $(x, y)$ by differentiating both sides of the relation and solving linearly for $\frac{dy}{dx}$, without needing to isolate $y$ first.
 
 ## References & Navigation
 

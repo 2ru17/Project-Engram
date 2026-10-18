@@ -97,50 +97,45 @@ flowchart LR
 
 ---
 
-## 5. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. Given `int arr[5] = {10, 20, 30, 40, 50}; int *ptr = arr + 2;`, what is the value of `*(ptr - 1)`?
-   - A) 10
-   - B) 20
-   - C) 30
-   - D) 40
+    - **A)** 10
+    - **B)** 20
+    - **C)** 30
+    - **D)** 40
 
 2. Which memory allocation function initializes all allocated bytes to zero?
-   - A) `malloc()`
-   - B) `realloc()`
-   - C) `calloc()`
-   - D) `alloca()`
+    - **A)** `malloc()`
+    - **B)** `realloc()`
+    - **C)** `calloc()`
+    - **D)** `alloca()`
 
 3. Given the declaration `typedef struct { char name[20]; int age; } Person; Person p, *ptr = &p;`, which expression is valid?
-   - A) `ptr.age = 20;`
-   - B) `(*ptr)->age = 20;`
-   - C) `ptr->age = 20;`
-   - D) `&ptr->age = 20;`
+    - **A)** `ptr.age = 20;`
+    - **B)** `(*ptr)->age = 20;`
+    - **C)** `ptr->age = 20;`
+    - **D)** `&ptr->age = 20;`
 
 4. What is the return value of `fread(buf, sizeof(int), 10, fp)` if the file only has 4 integers remaining?
-   - A) 0
-   - B) 4
-   - C) 10
-   - D) -1
+    - **A)** 0
+    - **B)** 4
+    - **C)** 10
+    - **D)** -1
 
 5. What happens when calling `free(p)` on a pointer `p` that is `NULL`?
-   - A) Undefined behavior and system crash
-   - B) Segmentation fault
-   - C) It performs no action safely
-   - D) A compiler warning is raised
-
----
+    - **A)** Undefined behavior and system crash
+    - **B)** Segmentation fault
+    - **C)** It performs no action safely
+    - **D)** A compiler warning is raised
 
 ### Answer Key & Explanations
 
-1. **B) 20** — `arr` points to `arr[0]` (10). `ptr = arr + 2` points to `arr[2]` (30). `ptr - 1` points to `arr[1]`, whose dereferenced value is 20.
-2. **C) `calloc()`** — `calloc(num, size)` allocates contiguous memory and explicitly zeros out every byte. `malloc()` leaves allocated memory uninitialized.
-3. **C) `ptr->age = 20;`** — The arrow operator `->` dereferences the pointer to a structure and accesses the member `age`. Equivalent to `(*ptr).age = 20;`.
-4. **B) 4** — `fread()` returns the number of complete items successfully read, which in this case is 4.
-5. **C) It performs no action safely** — According to the ANSI C standard, if `ptr` is a null pointer, no action occurs.
-
-
----
+1. **B**. `arr` points to `arr[0]` (10). `ptr = arr + 2` points to `arr[2]` (30). `ptr - 1` points to `arr[1]`, whose dereferenced value is 20.
+2. **C**. `calloc(num, size)` allocates contiguous memory and explicitly zeros out every byte. `malloc()` leaves allocated memory uninitialized.
+3. **C**. The arrow operator `->` dereferences the pointer to a structure and accesses the member `age`. Equivalent to `(*ptr).age = 20;`.
+4. **B**. `fread()` returns the number of complete items successfully read, which in this case is 4.
+5. **C**. According to the ANSI C standard, if `ptr` is a null pointer, no action occurs.
 
 ## References & Navigation
 

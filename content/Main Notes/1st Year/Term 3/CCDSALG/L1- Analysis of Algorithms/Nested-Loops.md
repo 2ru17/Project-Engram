@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
+**Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
 
 ---
 
@@ -322,86 +322,83 @@ For example, n³/6 + n²/2 + 3n simplifies to O(n³)
 
 > TL;DR — **Nested loops** require careful frequency counting: standard double loops give $O(n^2)$, triple loops give $O(n^3)$, **triangular (dependent-bound)** loops yield $\frac{n(n-1)}{2} = O(n^2)$, and **logarithmic inner loops** can reduce complexity. Always expand summations for variable-bound loops rather than guessing.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. In a standard double loop where both loops iterate $n$ times, what is the resulting time complexity?
-- **A)** $O(n)$
-- **B)** $O(n \log n)$
-- **C)** $O(n^2)$
-- **D)** $O(n^3)$
+    - **A)** $O(n)$
+    - **B)** $O(n \log n)$
+    - **C)** $O(n^2)$
+    - **D)** $O(n^3)$
 
 2. For a triangular loop pattern where the inner loop bounds depend on the outer loop (e.g., `j <= i`), what is the approximate number of total inner loop body executions?
-- **A)** $n^2$
-- **B)** $n(n+1)/2$
-- **C)** $n(n-1)$
-- **D)** $n$
+    - **A)** $n^2$
+    - **B)** $n(n+1)/2$
+    - **C)** $n(n-1)$
+    - **D)** $n$
 
 3. Does a triangular loop pattern (like `for j = 0 to i`) have a different Big-O time complexity than a standard double loop (`for j = 0 to n`)?
-- **A)** Yes, it is $O(n \log n)$.
-- **B)** Yes, it is $O(n)$.
-- **C)** No, both are $O(n^2)$, but the triangular loop has a smaller constant factor.
-- **D)** No, they execute exactly the same number of operations.
+    - **A)** Yes, it is $O(n \log n)$.
+    - **B)** Yes, it is $O(n)$.
+    - **C)** No, both are $O(n^2)$, but the triangular loop has a smaller constant factor.
+    - **D)** No, they execute exactly the same number of operations.
 
 4. What is the time complexity of a standard triple nested loop where each loop runs $n$ times?
-- **A)** $O(n^2)$
-- **B)** $O(n^3)$
-- **C)** $O(3n)$
-- **D)** $O(n^4)$
+    - **A)** $O(n^2)$
+    - **B)** $O(n^3)$
+    - **C)** $O(3n)$
+    - **D)** $O(n^4)$
 
 5. When working with a logarithmic loop like `for (i = 1; i < n; i *= 2)`, approximately how many times does the loop execute?
-- **A)** $n$
-- **B)** $n/2$
-- **C)** $\log_2(n)$
-- **D)** $2^n$
+    - **A)** $n$
+    - **B)** $n/2$
+    - **C)** $\log_2(n)$
+    - **D)** $2^n$
 
 6. What is the time complexity of a nested logarithmic loop where the outer loop is `i *= 2` and the inner loop is `j < i`?
-- **A)** $O(n)$
-- **B)** $O(n \log n)$
-- **C)** $O(\log n)$
-- **D)** $O(n^2)$
+    - **A)** $O(n)$
+    - **B)** $O(n \log n)$
+    - **C)** $O(\log n)$
+    - **D)** $O(n^2)$
 
 7. What is the recommended strategy for analyzing nested loops?
-- **A)** Multiply all loop bounds by $n$ immediately.
-- **B)** Ignore inner loop overhead and only count the body.
-- **C)** Work from the innermost loop outward, multiplying by each loop's iterations.
-- **D)** Add the iterations of all loops together instead of multiplying.
+    - **A)** Multiply all loop bounds by $n$ immediately.
+    - **B)** Ignore inner loop overhead and only count the body.
+    - **C)** Work from the innermost loop outward, multiplying by each loop's iterations.
+    - **D)** Add the iterations of all loops together instead of multiplying.
 
 8. What mathematical tool should be used to handle variable bounds in nested loops?
-- **A)** Subtraction
-- **B)** Matrix multiplication
-- **C)** Summation formulas
-- **D)** Derivatives
+    - **A)** Subtraction
+    - **B)** Matrix multiplication
+    - **C)** Summation formulas
+    - **D)** Derivatives
 
 9. What is a common pitfall when analyzing variable upper-bound loops?
-- **A)** Expanding the summation instead of multiplying $n \times n$.
-- **B)** Multiplying iteration counts incorrectly (e.g., just $n \times n$) instead of expanding the summation.
-- **C)** Assuming all loops run in constant time.
-- **D)** Counting the initialization separately.
+    - **A)** Expanding the summation instead of multiplying $n \times n$.
+    - **B)** Multiplying iteration counts incorrectly (e.g., just $n \times n$) instead of expanding the summation.
+    - **C)** Assuming all loops run in constant time.
+    - **D)** Counting the initialization separately.
 
 10. In a standard loop frequency count, what is the overhead structure typically composed of?
-- **A)** Initialization (1), condition check (iterations + 1), and update/increment (iterations).
-- **B)** Initialization (1), condition check (1), and update (1).
-- **C)** Initialization (iterations), condition check (iterations), and update (iterations).
-- **D)** Condition check only.
+    - **A)** Initialization (1), condition check (iterations + 1), and update/increment (iterations).
+    - **B)** Initialization (1), condition check (1), and update (1).
+    - **C)** Initialization (iterations), condition check (iterations), and update (iterations).
+    - **D)** Condition check only.
 
 ### Answer Key & Explanations
-1. **C)** A standard double loop multiplies the iterations of the outer loop ($n$) by the inner loop ($n$), resulting in $n^2$ iterations, or $O(n^2)$ time complexity.
-2. **B)** The triangular pattern requires summing the integers from 1 to $n$, which resolves to the standard arithmetic series formula $n(n+1)/2$.
-3. **C)** While $n(n+1)/2$ roughly halves the total number of operations compared to $n^2$, both simplify algebraically to $O(n^2)$ because constant fractions are dropped in Big-O analysis.
-4. **B)** Multiplying three nested loops running $n$ times each results in $n \times n \times n = n^3$, so the time complexity is $O(n^3)$.
-5. **C)** Multiplying the loop counter by 2 at each step repeatedly halves the remaining distance to $n$, which is the mathematical definition of a base-2 logarithm.
-6. **A)** While initially seemingly $O(n \log n)$, expanding the geometric series summation actually resolves the total operation count to $O(n)$.
-7. **C)** Working from the innermost loop outward ensures that the overhead of inner loops is correctly multiplied by the outer loops governing them.
-8. **C)** Variable bounds require calculating a mathematical series (like $\sum i$), which cannot be accurately captured by simple flat multiplication.
-9. **B)** A common mistake is seeing a nested loop and blindly declaring its operations as exactly $n \times n$ without recognizing that the inner loop boundary dynamically changes.
-10. **A)** Standard loop overhead requires setting up the variable once (1), checking the condition one more time than the loop runs (iterations + 1), and incrementing the variable exactly as many times as the loop runs (iterations).
+
+1. **C**. A standard double loop multiplies the iterations of the outer loop ($n$) by the inner loop ($n$), resulting in $n^2$ iterations, or $O(n^2)$ time complexity.
+2. **B**. The triangular pattern requires summing the integers from 1 to $n$, which resolves to the standard arithmetic series formula $n(n+1)/2$.
+3. **C**. While $n(n+1)/2$ roughly halves the total number of operations compared to $n^2$, both simplify algebraically to $O(n^2)$ because constant fractions are dropped in Big-O analysis.
+4. **B**. Multiplying three nested loops running $n$ times each results in $n \times n \times n = n^3$, so the time complexity is $O(n^3)$.
+5. **C**. Multiplying the loop counter by 2 at each step repeatedly halves the remaining distance to $n$, which is the mathematical definition of a base-2 logarithm.
+6. **A**. While initially seemingly $O(n \log n)$, expanding the geometric series summation actually resolves the total operation count to $O(n)$.
+7. **C**. Working from the innermost loop outward ensures that the overhead of inner loops is correctly multiplied by the outer loops governing them.
+8. **C**. Variable bounds require calculating a mathematical series (like $\sum i$), which cannot be accurately captured by simple flat multiplication.
+9. **B**. A common mistake is seeing a nested loop and blindly declaring its operations as exactly $n \times n$ without recognizing that the inner loop boundary dynamically changes.
+10. **A**. Standard loop overhead requires setting up the variable once (1), checking the condition one more time than the loop runs (iterations + 1), and incrementing the variable exactly as many times as the loop runs (iterations).
 
 ## References & Navigation
 

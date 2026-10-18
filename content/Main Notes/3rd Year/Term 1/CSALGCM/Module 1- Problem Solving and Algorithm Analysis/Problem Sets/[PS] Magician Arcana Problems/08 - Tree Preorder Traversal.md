@@ -14,7 +14,7 @@ hackerrank_domain: Trees
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Trees]] #[[Recursion]] #[[DFS]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Trees]] #[[Recursion]] #[[DFS]]
 
 ---
 
@@ -241,7 +241,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Problems, Problem Types, and Algorithms]]

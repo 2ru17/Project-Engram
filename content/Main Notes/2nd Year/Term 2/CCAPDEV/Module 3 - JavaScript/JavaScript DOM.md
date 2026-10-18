@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Web Development]] #[[CCAPDEV]] #[[JavaScript DOM]] #[[Code Snippets]] #[[M3]]
+**Tags:** #[[Web Development]] #[[CCAPDEV]] #[[JavaScript DOM]] #[[Code Snippets]] #[[M3]]
 
 ---
 
@@ -84,27 +84,28 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element
 ## Multiple Choice Questions
 
 1. What does the HTML Document Object Model (DOM) primarily allow scripts to do?
-- **A)** Connect directly to backend SQL databases.
-- **B)** Dynamically access and update the content, structure, and style of an HTML document.
-- **C)** Compile JavaScript code into machine language for faster execution.
-- **D)** Manage routing for single-page applications automatically.
+    - **A)** Connect directly to backend SQL databases.
+    - **B)** Dynamically access and update the content, structure, and style of an HTML document.
+    - **C)** Compile JavaScript code into machine language for faster execution.
+    - **D)** Manage routing for single-page applications automatically.
 
 2. Which DOM method is used to return an array of objects based on a specific HTML tag, such as `<p>`?
-- **A)** `document.getElementById()`
-- **B)** `document.getElementsByClassName()`
-- **C)** `document.querySelector()`
-- **D)** `document.getElementsByTagName()`
+    - **A)** `document.getElementById()`
+    - **B)** `document.getElementsByClassName()`
+    - **C)** `document.querySelector()`
+    - **D)** `document.getElementsByTagName()`
 
 3. How would you change the textual content of an HTML element with the id "p1" using JavaScript?
-- **A)** `document.getElementById("p1").text = "New Text!";`
-- **B)** `document.getElementById("p1").content = "New Text!";`
-- **C)** `document.getElementById("p1").innerHTML = "New Text!";`
-- **D)** `document.getElementById("p1").value = "New Text!";`
+    - **A)** `document.getElementById("p1").text = "New Text!";`
+    - **B)** `document.getElementById("p1").content = "New Text!";`
+    - **C)** `document.getElementById("p1").innerHTML = "New Text!";`
+    - **D)** `document.getElementById("p1").value = "New Text!";`
 
 ### Answer Key & Explanations
-1. **B)** The DOM allows programs and scripts to dynamically access and update the content, structure, and style of a document.
-2. **D)** `document.getElementsByTagName(name)` returns an array of objects of a specific tag.
-3. **C)** The property `.innerHTML` is used to change the content of an HTML element retrieved via its ID.
+
+1. **B**. The DOM allows programs and scripts to dynamically access and update the content, structure, and style of a document.
+2. **D**. `document.getElementsByTagName(name)` returns an array of objects of a specific tag.
+3. **C**. The property `.innerHTML` is used to change the content of an HTML element retrieved via its ID.
 
 ## References & Navigation
 

@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Conceptual]] #[[CCPROG1]] #[[Best Practices]] #[[M8]]
+**Tags:** #[[Conceptual]] #[[CCPROG1]] #[[Best Practices]] #[[M8]]
 
 ---
 
@@ -44,86 +44,43 @@ status: completed
 
 ## Multiple Choice Questions
 
-1. What best describes the role of **Indentation**?
-- **A)** Spaces or tabs used to format code structure visually
-- **B)** When multiple programmers work on the same project, a shared standard ensures...
-- **C)** #[[Conceptual]] #[[CCPROG1]] #[[Best Practices]] #[[M8]]
-- **D)** A software-only abstraction that does not correspond to physical hardware
+1. Why do C coding standards strongly discourage the use of "magic numbers" (unnamed literal constants like `if (status == 42)`) in source code?
+    - **A)** Magic numbers cause the C compiler to generate slower machine code
+    - **B)** Standard C does not allow integer literals inside conditional expressions
+    - **C)** They obscure the semantic meaning of the value and make maintenance error-prone if the constant must be updated in multiple places
+    - **D)** They consume extra stack memory at runtime compared to variables
 
-2. What best describes the role of **Meaningful Names**?
-- **A)** Use `#define` or `const` for raw numbers to give them context (e.g., `#define...
-- **B)** A software-only abstraction that does not correspond to physical hardware
-- **C)** Use descriptive names (`total_sales` instead of `ts`)
-- **D)** Use 4 spaces (or 1 tab) for each level of block nesting
+2. Which of the following identifier pairs follows standard C naming conventions for distinguishing a symbolic constant/macro from a local variable?
+    - **A)** `max_buffer_size` for a constant and `MAX_BUFFER_SIZE` for a local variable
+    - **B)** `MAX_BUFFER_SIZE` for a `#define` constant and `max_buffer_size` (or `maxBufferSize`) for a local variable
+    - **C)** `_MaxBufferSize` for both constants and local variables
+    - **D)** Single-letter names like `m` and `b` for all global and local identifiers
 
-3. What best describes the role of **Avoid Magic Numbers**?
-- **A)** A legacy protocol maintained only for backward compatibility
-- **B)** Use `#define` or `const` for raw numbers to give them context (e.g., `#define...
-- **C)** Rules for naming variables, functions, and files (e.g., camelCase, snake_case)
-- **D)** Spaces or tabs used to format code structure visually
+3. What is the primary purpose of writing function header comments (docstrings) in a C program?
+    - **A)** To instruct the compiler on how to optimize the function's assembly output
+    - **B)** To document the function's purpose, parameters, preconditions, and return value so callers can use and maintain it without reading every line of its implementation
+    - **C)** To restate every line of C syntax in plain English (e.g., `x = x + 1; // add 1 to x`)
+    - **D)** To prevent syntax errors during preprocessing
 
-4. What best describes the role of **Proper Indentation**?
-- **A)** When multiple programmers work on the same project, a shared standard ensures...
-- **B)** An optional component that is only used in enterprise-grade systems
-- **C)** Use 4 spaces (or 1 tab) for each level of block nesting
-- **D)** Use `#define` or `const` for raw numbers to give them context (e.g., `#define...
+4. How does the C compiler treat indentation and whitespace outside of string literals and preprocessor directives?
+    - **A)** Indentation defines block scope, just like in Python
+    - **B)** Incorrect indentation causes a compile-time warning or error by default
+    - **C)** The compiler ignores indentation for block structure (which is determined by `{}` braces); consistent indentation is strictly for human readability and maintainability
+    - **D)** Tabs and spaces alter the execution speed of loops
 
-5. In the sequence described in this topic, what happens during the **Readability:** step?
-- **A)** Clean, well-formatted code is easier to read.
-- **B)** This step is not part of the described process
-- **C)** When multiple programmers work on the same project, a shared standard ensures...
-- **D)** Standardized code is easier to update and debug later.
-
-6. Which step immediately follows **Readability:**?
-- **A)** Maintainability:
-- **B)** There is no subsequent step
-- **C)** Collaboration:
-- **D)** There is no subsequent step
-
-7. According to the material on **Coding Standards**, which statement is correct?
-- **A)** This principle only applies in theoretical models, not practical systems
-- **B)** Coding standards are a set of rules, guidelines, and best practices that developers follow when w...
-- **C)** Coding standards are not a set of rules, guidelines, and best practices that developers follow when w...
-- **D)** The described behavior is considered deprecated in modern implementations
-
-8. According to the material on **Coding Standards**, which statement is correct?
-- **A)** The opposite of the stated principle applies
-- **B)** This principle only applies in theoretical models, not practical systems
-- **C)** `` Proper Indentation: Use 4 spaces (or 1 tab) for each level of block nesting. Comments: Comment...
-- **D)** The described behavior is considered deprecated in modern implementations
-
-9. According to the material on **Coding Standards**, which statement is correct?
-- **A)** 1. Readability: Clean, well-formatted code is easier to read.
-- **B)** The described behavior is considered deprecated in modern implementations
-- **C)** This principle only applies in theoretical models, not practical systems
-- **D)** 1. Readability: Clean, well-formatted code is not easier to read.
-
-10. According to the material on **Coding Standards**, which statement is correct?
-- **A)** The described behavior is considered deprecated in modern implementations
-- **B)** Writing excessively clever or compact code that becomes impossible for others to read. Using inco...
-- **C)** The opposite of the stated principle applies
-- **D)** This principle only applies in theoretical models, not practical systems
+5. Which practice best adheres to modular coding standards when writing functions in C?
+    - **A)** Writing the entire program inside `main()` to avoid function call overhead
+    - **B)** Using global variables to pass data between all functions instead of parameter lists
+    - **C)** Designing each function to perform a single, well-defined task (Single Responsibility) with explicit parameters and return values
+    - **D)** Nesting `if-else` statements 8 levels deep inside a 500-line function
 
 ### Answer Key & Explanations
-1. **A)** **Indentation** is defined in the note as: Spaces or tabs used to format code structure visually.
 
-2. **C)** **Meaningful Names** is defined in the note as: Use descriptive names (`total_sales` instead of `ts`).
-
-3. **B)** **Avoid Magic Numbers** is defined in the note as: Use `#define` or `const` for raw numbers to give them context (e.g., `#define MAX_STUDENTS 50`).
-
-4. **C)** **Proper Indentation** is defined in the note as: Use 4 spaces (or 1 tab) for each level of block nesting.
-
-5. **A)** The Readability: step involves: Clean, well-formatted code is easier to read.
-
-6. **A)** According to the sequence, Maintainability: directly follows Readability:.
-
-7. **B)** The note explicitly states: "Coding standards are a set of rules, guidelines, and best practices that developers follow when w..."
-
-8. **C)** The note explicitly states: "`` Proper Indentation: Use 4 spaces (or 1 tab) for each level of block nesting. Comments: Comment..."
-
-9. **A)** The note explicitly states: "1. Readability: Clean, well-formatted code is easier to read."
-
-10. **B)** The note explicitly states: "Writing excessively clever or compact code that becomes impossible for others to read. Using inco..."
+1. **C**. Replacing a magic number like `0.12` with `#define VAT_RATE 0.12` or `const double VAT_RATE = 0.12;` makes the code self-documenting and ensures that any future rate change only requires editing a single definition.
+2. **B**. By universal C convention, preprocessor macros and symbolic constants use `UPPER_SNAKE_CASE` (`MAX_BUFFER_SIZE`), while variables and functions use `lower_snake_case` or `camelCase`. Identifiers starting with an underscore followed by an uppercase letter (C) are reserved by the C standard.
+3. **B**. Good comments explain the "why" and the interface contract (inputs, outputs, side effects, assumptions), whereas trivial comments that merely repeat obvious syntax (C) add visual noise.
+4. **C**. Unlike Python, C uses curly braces `{}` to define compound statements. Misleading indentation (such as indenting two lines under an `if` without braces) is a notorious source of bugs because humans read the indentation while the compiler reads only the braces.
+5. **C**. Functions with a single, cohesive responsibility and explicit inputs/outputs are easy to read, unit-test, debug, and reuse. Relying on global state (B) creates hidden coupling and side effects across the program.
 
 ## References & Navigation
 

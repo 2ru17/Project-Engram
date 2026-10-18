@@ -11,111 +11,70 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Sample Space]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Sample Space]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Sample Space**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Sample Space** (denoted $S$ or $\Omega$) of a statistical experiment is the set of **all possible elementary outcomes** of that experiment. Every valid sample space must be both **mutually exclusive** (no two elementary outcomes can occur simultaneously on a single trial) and **collectively exhaustive** (every possible result of the experiment is represented by an element $\omega \in S$).
 
 ## Key Definitions
-- **Sample Space**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Sample Space** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Sample Point (Elementary Outcome $\omega$):** A single indivisible element $\omega \in S$.
+- **Finite Sample Space:** Contains a finite number of outcomes $|S| = N < \infty$ (e.g., rolling two dice has $|S| = 36$).
+- **Countably Infinite (Discrete) Sample Space:** Outcomes can be placed in one-to-one correspondence with $\mathbb{N} = \{1, 2, 3, \dots\}$ (e.g., tossing a coin until the first Head appears: $S = \{H, TH, TTH, TTTH, \dots\}$).
+- **Uncountable (Continuous) Sample Space:** Outcomes fill a continuous interval or region of $\mathbb{R}^d$ (e.g., lifetime of a solid-state drive: $S = [0, \infty)$).
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Sample Space**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
-
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Sample Space** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Problem:** Specify the sample space $S$ and its type for three experiments:
+1. **Experiment 1:** Tossing a coin and rolling a 4-sided die:
+   $$S_1 = \{(H,1), (H,2), (H,3), (H,4), (T,1), (T,2), (T,3), (T,4)\} \quad (\text{Finite discrete, } |S_1| = 8)$$
+2. **Experiment 2:** Counting the number of packet retransmissions until a frame is acknowledged:
+   $$S_2 = \{0, 1, 2, 3, \dots\} \quad (\text{Countably infinite discrete})$$
+3. **Experiment 3:** Measuring the voltage across a resistor between $0\text{ V}$ and $5\text{ V}$:
+   $$S_3 = [0, 5] = \{v \in \mathbb{R} : 0 \le v \le 5\} \quad (\text{Uncountable continuous})$$
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. What two properties must the elements of a valid **sample space** $S$ satisfy for any statistical experiment?
+    - **A)** They must be statistically independent and numeric.
+    - **B)** They must be mutually exclusive (only one elementary outcome occurs per trial) and collectively exhaustive (every conceivable outcome of the experiment is included in $S$).
+    - **C)** There must always be a finite number of them, and all must have probability $1/|S|$.
+    - **D)** They must sum to $0$.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. If an experiment consists of tossing a fair coin repeatedly until the **first Head** appears and recording the toss number on which it occurs, what is the sample space $S$ and how is it classified?
+    - **A)** $S = \{1, 2, 3, 4, \dots\} = \mathbb{Z}^+$, countably infinite discrete
+    - **B)** $S = \{1, 2\}$, finite discrete
+    - **C)** $S = [1, \infty)$, uncountable continuous
+    - **D)** $S = \{H, T\}$, finite discrete
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. When rolling two fair six-sided dice and computing probabilities of their sum, why is it better to define the sample space as the $36$ ordered pairs $S = \{(d_1, d_2) : d_1, d_2 \in \{1,\dots,6\}\}$ rather than the $11$ possible sums $\{2, 3, \dots, 12\}$?
+    - **A)** Because $\{2, 3, \dots, 12\}$ is not collectively exhaustive.
+    - **B)** Because $11$ is a prime number.
+    - **C)** Because the $36$ ordered pairs $(d_1, d_2)$ are **equally likely** (each has probability $1/36$), whereas the $11$ sums are NOT equally likely ($P(\text{sum}=7) = 6/36$ while $P(\text{sum}=2) = 1/36$).
+    - **D)** Because sums are continuous.
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. A box contains $4$ distinct microchips labeled $A, B, C, D$. If $2$ microchips are drawn **without replacement** and **order does not matter**, what is the cardinality $|S|$ of the sample space of unordered pairs?
+    - **A)** $16$
+    - **B)** $12$
+    - **C)** $4$
+    - **D)** $\binom{4}{2} = 6$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Which of the following experiments has an **uncountable (continuous)** sample space?
+    - **A)** Recording the number of customers entering a bank in an 8-hour day.
+    - **B)** Measuring the exact waiting time $t \in [0, \infty)$ (in real seconds) until the next customer arrives.
+    - **C)** Drawing 5 cards from a 52-card deck.
+    - **D)** Counting the number of syntax errors in a C program.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. By definition, a sample space $S$ lists all distinct, non-overlapping elementary outcomes (mutually exclusive) such that every trial produces exactly one element $\omega \in S$ (collectively exhaustive).
+2. **A**. The first Head can occur on toss $1, 2, 3, \dots$ with no finite upper bound, forming the countably infinite discrete set $\mathbb{Z}^+$.
+3. **C**. While both sets are valid sample spaces, only the $36$ ordered pairs $(d_1, d_2)$ are symmetric and equiprobable, allowing direct use of the classical formula $P(E) = |E|/36$.
+4. **D**. The unordered pairs are $\{\{A,B\}, \{A,C\}, \{A,D\}, \{B,C\}, \{B,D\}, \{C,D\}\}$, which has cardinality $\binom{4}{2} = 6$.
+5. **B**. Exact waiting time $t \in [0, \infty)$ varies continuously over an uncountable interval of real numbers, whereas customer counts, card hands, and syntax error counts are discrete.
 
 ## References & Navigation
 

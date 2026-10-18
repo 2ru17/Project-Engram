@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
+**Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
 
 ---
 
@@ -201,10 +201,6 @@ Not reading normalization questions carefully — identify **all** functional de
 ## Summary
 
 > TL;DR — 35-item mock exam covering DBMS concepts, relational algebra, EER, normalization, concurrency, and scenario analysis. Practice under timed conditions.
-
-## Review Questions
-
-_To be added._
 
 ## Links
 

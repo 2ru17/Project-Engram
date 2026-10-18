@@ -10,7 +10,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Digital to Analog Transmission]]
+**Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Digital to Analog Transmission]]
 
 ---
 
@@ -39,34 +39,35 @@ $$ C = 3000 \log_2(1 + 3162) \approx 3000 \times 11.62 \approx 34860 \text{ bps}
 ## Multiple Choice Questions
 
 1. Which factors does the Physical layer directly deal with?
-- **A)** Framing and error correction
-- **B)** Analog/digital signals, bandwidth, attenuation, and noise
-- **C)** Flow control and logical routing
-- **D)** Precise encoding and data integrity
+    - **A)** Framing and error correction
+    - **B)** Analog/digital signals, bandwidth, attenuation, and noise
+    - **C)** Flow control and logical routing
+    - **D)** Precise encoding and data integrity
 
 2. What do protocols manage over diverse physical media?
-- **A)** Access and transmission
-- **B)** Analog conversions only
-- **C)** Frequency calculations
-- **D)** Theoretical standardization
+    - **A)** Access and transmission
+    - **B)** Analog conversions only
+    - **C)** Frequency calculations
+    - **D)** Theoretical standardization
 
 3. Which mathematical model is explicitly used to calculate the capacity of a channel in the text?
-- **A)** Nyquist bit rate
-- **B)** OSI Reference Model
-- **C)** Shannon capacity
-- **D)** Signal-to-Noise Ratio formula
+    - **A)** Nyquist bit rate
+    - **B)** OSI Reference Model
+    - **C)** Shannon capacity
+    - **D)** Signal-to-Noise Ratio formula
 
 4. Which two layers form the backbone of local and wide area networks according to the summary?
-- **A)** Application and Network layers
-- **B)** Network and Transport layers
-- **C)** Physical and Data Link layers
-- **D)** Physical and Network layers
+    - **A)** Application and Network layers
+    - **B)** Network and Transport layers
+    - **C)** Physical and Data Link layers
+    - **D)** Physical and Network layers
 
 ### Answer Key & Explanations
-1. **B)** The text explicitly lists that the Physical layer deals with "analog/digital signals, bandwidth, attenuation, and noise."
-2. **A)** The summary notes that "Protocols manage access and transmission over diverse physical media."
-3. **C)** The text provides a worked example calculating the "Shannon capacity" ($C = B \log_2(1 + SNR)$).
-4. **C)** The summary states "The Physical and Data Link layers form the backbone of local and wide area networks."
+
+1. **B**. The text explicitly lists that the Physical layer deals with "analog/digital signals, bandwidth, attenuation, and noise."
+2. **A**. The summary notes that "Protocols manage access and transmission over diverse physical media."
+3. **C**. The text provides a worked example calculating the "Shannon capacity" ($C = B \log_2(1 + SNR)$).
+4. **C**. The summary states "The Physical and Data Link layers form the backbone of local and wide area networks."
 
 ## References & Navigation
 

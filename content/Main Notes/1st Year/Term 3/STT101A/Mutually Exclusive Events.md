@@ -11,111 +11,66 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Mutually Exclusive Events]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Mutually Exclusive Events]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Mutually Exclusive Events**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+Two events $A$ and $B$ are **Mutually Exclusive** (or **Disjoint**) if they share no common outcomes in the sample space: $A \cap B = \emptyset$. Consequently, they **cannot occur simultaneously** on a single trial of an experiment, so $P(A \cap B) = 0$.
 
 ## Key Definitions
-- **Mutually Exclusive Events**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Mutually Exclusive Events** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Disjoint Set Condition:** $A \cap B = \emptyset \implies P(A \cap B) = 0$.
+- **Special Additive Rule:** For mutually exclusive events $A$ and $B$, $P(A \cup B) = P(A) + P(B)$.
+- **Pairwise Mutually Exclusive Collection:** Events $E_1, E_2, \dots, E_k$ are mutually exclusive if $E_i \cap E_j = \emptyset$ for all $i \ne j$, giving $P\left(\bigcup_{i=1}^k E_i\right) = \sum_{i=1}^k P(E_i)$.
+- **Mutually Exclusive vs. Independent:** Mutually exclusive is a **set-theoretic** property ($A \cap B = \emptyset$); independence is a **probabilistic** property ($P(A \cap B) = P(A)P(B)$). For $P(A), P(B) > 0$, they are opposites!
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Mutually Exclusive Events**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
-
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Mutually Exclusive Events** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Problem:** A single card is drawn from a standard $52$-card deck. Let $A$ be drawing a **King** ($4$ cards), $B$ be drawing a **Queen** ($4$ cards), and $C$ be drawing a **Heart** ($13$ cards).
+- $A$ and $B$ are **mutually exclusive** ($A \cap B = \emptyset$), so $P(A \cup B) = \frac{4}{52} + \frac{4}{52} = \frac{8}{52} = \frac{2}{13}$.
+- $A$ and $C$ are **not** mutually exclusive because $A \cap C = \{\text{King of Hearts}\} \ne \emptyset$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. What does it mean geometrically in a Venn diagram for two events $A$ and $B$ to be **mutually exclusive**?
+    - **A)** Circle $A$ is completely inside Circle $B$.
+    - **B)** Circle $A$ and Circle $B$ do not overlap at all ($A \cap B = \emptyset$).
+    - **C)** Circle $A$ and Circle $B$ cover the entire rectangle $S$.
+    - **D)** Circle $A$ and Circle $B$ have equal areas.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. If $A$ and $B$ are mutually exclusive events with $P(A) = 0.35$ and $P(B) = 0.45$, what are $P(A \cap B)$ and $P(A \cup B)$?
+    - **A)** $P(A \cap B) = 0$ and $P(A \cup B) = 0.80$
+    - **B)** $P(A \cap B) = 0.1575$ and $P(A \cup B) = 0.6425$
+    - **C)** $P(A \cap B) = 0.80$ and $P(A \cup B) = 0$
+    - **D)** $P(A \cap B) = 0.10$ and $P(A \cup B) = 0.70$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. If $A$ and $B$ are mutually exclusive with $P(A) = 0.35$ and $P(B) = 0.45$, what is the conditional probability $P(A \mid B)$?
+    - **A)** $0.35$
+    - **B)** $\frac{0.35}{0.45} = \frac{7}{9}$
+    - **C)** $0$
+    - **D)** $0.80$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Why is it impossible for two mutually exclusive events $A$ and $B$ to have $P(A) = 0.65$ and $P(B) = 0.55$?
+    - **A)** It is possible if they are dependent.
+    - **B)** Because $0.65$ and $0.55$ are not equal.
+    - **C)** Because $P(A) \cdot P(B)$ is less than $0.5$.
+    - **D)** Because for mutually exclusive events, $P(A \cup B) = P(A) + P(B) = 1.20$, which violates the consequence of Kolmogorov's axioms that no event probability can exceed $1$.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. On a single roll of a fair six-sided die, which pair of events is **mutually exclusive**?
+    - **A)** Rolling an even number ($\{2,4,6\}$) and rolling a prime number ($\{2,3,5\}$)
+    - **B)** Rolling a number less than $3$ ($\{1,2\}$) and rolling a number greater than $4$ ($\{5,6\}$)
+    - **C)** Rolling an odd number ($\{1,3,5\}$) and rolling a multiple of $3$ ($\{3,6\}$)
+    - **D)** Rolling a factor of $6$ ($\{1,2,3,6\}$) and rolling an even number ($\{2,4,6\}$)
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Disjoint sets share no elements ($A \cap B = \emptyset$), represented in a Venn diagram by non-overlapping regions.
+2. **A**. By mutual exclusivity, $P(A \cap B) = 0$ and $P(A \cup B) = P(A) + P(B) = 0.35 + 0.45 = 0.80$.
+3. **C**. $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{0}{0.45} = 0$: if $B$ occurred, $A$ cannot have occurred.
+4. **D**. Since $A \cup B \subseteq S$, $P(A \cup B) \le P(S) = 1$. For disjoint events this forces $P(A) + P(B) \le 1$.
+5. **B**. $\{1, 2\} \cap \{5, 6\} = \emptyset$, whereas all other pairs share at least one outcome ($2$, $3$, or $2$ and $6$).
 
 ## References & Navigation
 

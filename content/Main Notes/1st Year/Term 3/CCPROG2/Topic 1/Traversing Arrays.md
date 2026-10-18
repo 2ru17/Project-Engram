@@ -3,7 +3,7 @@ id: Traversing-Arrays
 type: note
 course: CCPROG2
 topic: C Programming
-status: draft
+status: completed
 ---
 
 # Traversing Arrays
@@ -13,7 +13,7 @@ status: draft
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Algorithms]] #[[Structured Programming]] #[[Memory Management]]
+**Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Algorithms]] #[[Structured Programming]] #[[Memory Management]]
 
 ---
 
@@ -85,34 +85,32 @@ for (int i = 0; i < 3; i++) {
 
 > TL;DR — Array traversal visits each element using loops or pointer arithmetic. `for` loops are most common. 2D arrays need nested loops. Always respect bounds to avoid undefined behavior.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** [[Accessing Elements]] — [[Size]] — [[Arrays and Pointers]] — [[One-Dimensional Arrays (1D Arrays)]] — [[Two-Dimensional Arrays (2D Arrays)]] **Source / Reference:**
 
 ## Multiple Choice Questions
+
 1. Which of the following best describes an array in C?
-- **A)** A dynamic structure that resizes automatically
-- **B)** A collection of variables of different types
-- **C)** A contiguous block of memory holding elements of the same type
-- **D)** A sequence of distinct nodes linked via pointers
+    - **A)** A dynamic structure that resizes automatically
+    - **B)** A collection of variables of different types
+    - **C)** A contiguous block of memory holding elements of the same type
+    - **D)** A sequence of distinct nodes linked via pointers
 2. Which syntax represents a valid 1D array declaration?
-- **A)** `int array(10);`
-- **B)** `int array[10];`
-- **C)** `array<int> 10;`
-- **D)** `int[10] array;`
+    - **A)** `int array(10);`
+    - **B)** `int array[10];`
+    - **C)** `array<int> 10;`
+    - **D)** `int[10] array;`
 3. What is a key limitation of arrays in standard C?
-- **A)** They cannot hold floating-point numbers
-- **B)** Their size is fixed upon declaration
-- **C)** They do not allow random access
-- **D)** They cannot be passed to functions
+    - **A)** They cannot hold floating-point numbers
+    - **B)** Their size is fixed upon declaration
+    - **C)** They do not allow random access
+    - **D)** They cannot be passed to functions
 
 ### Answer Key & Explanations
-1. **C)** Arrays aggregate multiple identical types sequentially in adjacent memory blocks.
-2. **B)** C uses square brackets following the identifier to specify array size.
-3. **B)** Once declared, the memory block size for standard arrays cannot dynamically change.
+
+1. **C**. Arrays aggregate multiple identical types sequentially in adjacent memory blocks.
+2. **B**. C uses square brackets following the identifier to specify array size.
+3. **B**. Once declared, the memory block size for standard arrays cannot dynamically change.
 
 ## References & Navigation
 

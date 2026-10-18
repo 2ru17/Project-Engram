@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCAPDEV]] #[[Conceptual]] #[[CSS]]
+**Tags:** #[[Computer Science]] #[[CCAPDEV]] #[[Conceptual]] #[[CSS]]
 
 ---
 
@@ -78,77 +78,77 @@ img {
 ## Multiple Choice Questions
 
 1. What does CSS stand for?
-- **A)** Creative Style System
-- **B)** Cascading Style Sheets
-- **C)** Computer Styling System
-- **D)** Colorful Style Sheets
+    - **A)** Creative Style System
+    - **B)** Cascading Style Sheets
+    - **C)** Computer Styling System
+    - **D)** Colorful Style Sheets
 
 2. What is the primary purpose of CSS?
-- **A)** To structure the database
-- **B)** To execute logical scripts on the web server
-- **C)** To style the visual presentation of HTML documents
-- **D)** To compile HTML code
+    - **A)** To structure the database
+    - **B)** To execute logical scripts on the web server
+    - **C)** To style the visual presentation of HTML documents
+    - **D)** To compile HTML code
 
 3. What does the term "Cascading" refer to in CSS?
-- **A)** The speed at which styles are applied
-- **B)** The ability to create dropdown menus
-- **C)** The procedure that determines which style rules apply and how they inherit down to children
-- **D)** The process of linking multiple HTML files
+    - **A)** The speed at which styles are applied
+    - **B)** The ability to create dropdown menus
+    - **C)** The procedure that determines which style rules apply and how they inherit down to children
+    - **D)** The process of linking multiple HTML files
 
 4. In a CSS rule, what dictates which HTML element will be styled?
-- **A)** The Property
-- **B)** The Value
-- **C)** The Declaration block
-- **D)** The Selector
+    - **A)** The Property
+    - **B)** The Value
+    - **C)** The Declaration block
+    - **D)** The Selector
 
 5. Which of the following is an example of a CSS property?
-- **A)** `body`
-- **B)** `background-color`
-- **C)** `#b7d1c4`
-- **D)** `<h1>`
+    - **A)** `body`
+    - **B)** `background-color`
+    - **C)** `#b7d1c4`
+    - **D)** `<h1>`
 
 6. Why is it beneficial that CSS is separate from HTML content?
-- **A)** It avoids repetitive style declarations and makes site-wide updates easier.
-- **B)** It makes the website load faster by compressing the HTML.
-- **C)** It encrypts the code to protect it from hackers.
-- **D)** It allows HTML to perform mathematical operations.
+    - **A)** It avoids repetitive style declarations and makes site-wide updates easier.
+    - **B)** It makes the website load faster by compressing the HTML.
+    - **C)** It encrypts the code to protect it from hackers.
+    - **D)** It allows HTML to perform mathematical operations.
 
 7. Which punctuation mark separates a CSS property from its value?
-- **A)** Semicolon (;)
-- **B)** Comma (,)
-- **C)** Colon (:)
-- **D)** Period (.)
+    - **A)** Semicolon (;)
+    - **B)** Comma (,)
+    - **C)** Colon (:)
+    - **D)** Period (.)
 
 8. In the rule `p { color: blue; }`, what is `blue`?
-- **A)** The Selector
-- **B)** The Property
-- **C)** The Value
-- **D)** The HTML tag
+    - **A)** The Selector
+    - **B)** The Property
+    - **C)** The Value
+    - **D)** The HTML tag
 
 9. What does the CSS property `box-shadow` do?
-- **A)** Creates a physical box around the element
-- **B)** Adds a shadow effect around an element's frame
-- **C)** Darkens the entire background of the page
-- **D)** Hides the element in a shadow
+    - **A)** Creates a physical box around the element
+    - **B)** Adds a shadow effect around an element's frame
+    - **C)** Darkens the entire background of the page
+    - **D)** Hides the element in a shadow
 
 10. What punctuation mark is used to separate multiple declarations within a CSS block?
-- **A)** Semicolon (;)
-- **B)** Colon (:)
-- **C)** Hyphen (-)
-- **D)** Forward slash (/)
+    - **A)** Semicolon (;)
+    - **B)** Colon (:)
+    - **C)** Hyphen (-)
+    - **D)** Forward slash (/)
 
 ### Answer Key & Explanations
 
-1. **B** - CSS stands for Cascading Style Sheets.
-2. **C** - CSS is specifically designed to handle the styling and presentation of documents created with HTML.
-3. **C** - Cascading dictates the hierarchy of styles and how properties are inherited by child elements, preventing conflicts.
-4. **D** - The selector points to the specific HTML tag, class, or ID that you want to apply the styles to.
-5. **B** - `background-color` is a property that can be adjusted. `body` is a selector, and `#b7d1c4` is a value.
-6. **A** - Separating styles into a distinct file allows developers to reuse code and easily update the look of an entire site from one place.
-7. **C** - A colon separates the property name from the assigned value (e.g., `color: red`).
-8. **C** - `blue` is the value being assigned to the `color` property for the `p` selector.
-9. **B** - `box-shadow` is used to add shadow effects to elements, creating depth on the page.
-10. **A** - Semicolons are used at the end of each declaration to separate it from the next one within the same block.
+1. **B**. CSS stands for Cascading Style Sheets.
+2. **C**. CSS is specifically designed to handle the styling and presentation of documents created with HTML.
+3. **C**. Cascading dictates the hierarchy of styles and how properties are inherited by child elements, preventing conflicts.
+4. **D**. The selector points to the specific HTML tag, class, or ID that you want to apply the styles to.
+5. **B**. `background-color` is a property that can be adjusted. `body` is a selector, and `#b7d1c4` is a value.
+6. **A**. Separating styles into a distinct file allows developers to reuse code and easily update the look of an entire site from one place.
+7. **C**. A colon separates the property name from the assigned value (e.g., `color: red`).
+8. **C**. `blue` is the value being assigned to the `color` property for the `p` selector.
+9. **B**. `box-shadow` is used to add shadow effects to elements, creating depth on the page.
+10. **A**. Semicolons are used at the end of each declaration to separate it from the next one within the same block.
 
 ## References & Navigation
 

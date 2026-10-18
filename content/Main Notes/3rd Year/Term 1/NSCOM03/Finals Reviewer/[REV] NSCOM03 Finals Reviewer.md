@@ -10,7 +10,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Finals Review]]
+**Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Finals Review]]
 
 ---
 

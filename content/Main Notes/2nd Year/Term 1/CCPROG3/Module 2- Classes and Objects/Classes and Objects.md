@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCPROG3]] #[[Classes and Objects]] #[[Conceptual]] #[[M2]]
+**Tags:** #[[Computer Science]] #[[CCPROG3]] #[[Classes and Objects]] #[[Conceptual]] #[[M2]]
 
 ---
 
@@ -91,77 +91,77 @@ Here, `myCar` and `yourCar` possess different identities and states, despite bei
 ## Multiple Choice Questions
 
 1. What is the fundamental difference between a Class and an Object?
-- **A)** A class is an instance of an object.
-- **B)** A class is a blueprint, while an object is a concrete instance created from that blueprint.
-- **C)** A class contains only state, while an object contains only behavior.
-- **D)** There is no difference; the terms are interchangeable.
+    - **A)** A class is an instance of an object.
+    - **B)** A class is a blueprint, while an object is a concrete instance created from that blueprint.
+    - **C)** A class contains only state, while an object contains only behavior.
+    - **D)** There is no difference; the terms are interchangeable.
 
 2. Which of the following best describes an object's "State"?
-- **A)** The methods or functions the object can execute.
-- **B)** The unique memory address assigned by the JVM.
-- **C)** The current data held in the object's attributes or fields.
-- **D)** The access modifiers applied to the class.
+    - **A)** The methods or functions the object can execute.
+    - **B)** The unique memory address assigned by the JVM.
+    - **C)** The current data held in the object's attributes or fields.
+    - **D)** The access modifiers applied to the class.
 
 3. How does the Java Virtual Machine (JVM) typically handle an object's "Identity"?
-- **A)** By the object's memory address.
-- **B)** By the names of the attributes in the object.
-- **C)** By the return values of the object's methods.
-- **D)** By the public access modifiers.
+    - **A)** By the object's memory address.
+    - **B)** By the names of the attributes in the object.
+    - **C)** By the return values of the object's methods.
+    - **D)** By the public access modifiers.
 
 4. What is the primary purpose of Encapsulation in class design?
-- **A)** To make code execute faster by the JVM.
-- **B)** To logically group related data and the operations that manipulate it into a single unit.
-- **C)** To allow multiple classes to inherit from a single superclass.
-- **D)** To translate Bytecode into machine code.
+    - **A)** To make code execute faster by the JVM.
+    - **B)** To logically group related data and the operations that manipulate it into a single unit.
+    - **C)** To allow multiple classes to inherit from a single superclass.
+    - **D)** To translate Bytecode into machine code.
 
 5. What does "Data Hiding" achieve in Object-Oriented Programming?
-- **A)** It encrypts the source code to prevent plagiarism.
-- **B)** It restricts access to a class's internal state using access modifiers like `private`.
-- **C)** It deletes temporary variables after a method finishes execution.
-- **D)** It hides the source code from the compiler.
+    - **A)** It encrypts the source code to prevent plagiarism.
+    - **B)** It restricts access to a class's internal state using access modifiers like `private`.
+    - **C)** It deletes temporary variables after a method finishes execution.
+    - **D)** It hides the source code from the compiler.
 
 6. When instantiating an object in Java, which keyword is primarily used?
-- **A)** `create`
-- **B)** `instance`
-- **C)** `new`
-- **D)** `build`
+    - **A)** `create`
+    - **B)** `instance`
+    - **C)** `new`
+    - **D)** `build`
 
 7. In the context of a `Car` class, which of the following represents "Behavior"?
-- **A)** The `color` of the car.
-- **B)** The `accelerate()` method.
-- **C)** The `brand` of the car.
-- **D)** The specific `Car` object created in memory.
+    - **A)** The `color` of the car.
+    - **B)** The `accelerate()` method.
+    - **C)** The `brand` of the car.
+    - **D)** The specific `Car` object created in memory.
 
 8. If you create two `Car` objects, `car1` and `car2`, both with the exact same color and brand, which statement is true?
-- **A)** They share the same identity in memory.
-- **B)** Modifying `car1`'s speed will also modify `car2`'s speed.
-- **C)** They have identical state but distinct, unique identities.
-- **D)** The compiler will throw an error because they are identical.
+    - **A)** They share the same identity in memory.
+    - **B)** Modifying `car1`'s speed will also modify `car2`'s speed.
+    - **C)** They have identical state but distinct, unique identities.
+    - **D)** The compiler will throw an error because they are identical.
 
 9. Why is it generally recommended to make class attributes `private`?
-- **A)** It forces the JVM to optimize the variables.
-- **B)** It prevents external classes from accessing or modifying the variables in invalid or unexpected ways.
-- **C)** It allows the variables to be inherited by subclasses.
-- **D)** It is a strict requirement for the code to compile.
+    - **A)** It forces the JVM to optimize the variables.
+    - **B)** It prevents external classes from accessing or modifying the variables in invalid or unexpected ways.
+    - **C)** It allows the variables to be inherited by subclasses.
+    - **D)** It is a strict requirement for the code to compile.
 
 10. What is the role of a Constructor in a class?
-- **A)** To destroy an object and free up memory.
-- **B)** To define the behavior of the object.
-- **C)** To initialize a newly instantiated object's state.
-- **D)** To compile the class into Bytecode.
+    - **A)** To destroy an object and free up memory.
+    - **B)** To define the behavior of the object.
+    - **C)** To initialize a newly instantiated object's state.
+    - **D)** To compile the class into Bytecode.
 
 ### Answer Key & Explanations
 
-1. **B** - A class is the abstract template defining structure, whereas an object is the tangible realization of that structure in memory.
-2. **C** - State refers strictly to the data attributes/fields of the object at a specific moment in time.
-3. **A** - Even if two objects hold the exact same data, the JVM distinguishes them by their distinct locations (addresses) in memory.
-4. **B** - Encapsulation ensures that the data and the methods acting on that data are strictly bundled together, improving modularity.
-5. **B** - Data hiding protects internal state from outside interference and misuse by utilizing access modifiers to restrict visibility.
-6. **C** - The `new` keyword is responsible for allocating memory and instantiating an object from a class blueprint.
-7. **B** - Behavior refers to the actions or methods that an object can perform, such as accelerating.
-8. **C** - Objects possess a unique identity irrespective of their state; two cars with the same specifications are still two separate physical entities.
-9. **B** - Making attributes `private` enforces strict control over state changes, typically requiring interaction via public getter and setter methods.
-10. **C** - Constructors are special methods automatically invoked upon instantiation specifically to set the initial state of the object.
+1. **B**. A class is the abstract template defining structure, whereas an object is the tangible realization of that structure in memory.
+2. **C**. State refers strictly to the data attributes/fields of the object at a specific moment in time.
+3. **A**. Even if two objects hold the exact same data, the JVM distinguishes them by their distinct locations (addresses) in memory.
+4. **B**. Encapsulation ensures that the data and the methods acting on that data are strictly bundled together, improving modularity.
+5. **B**. Data hiding protects internal state from outside interference and misuse by utilizing access modifiers to restrict visibility.
+6. **C**. The `new` keyword is responsible for allocating memory and instantiating an object from a class blueprint.
+7. **B**. Behavior refers to the actions or methods that an object can perform, such as accelerating.
+8. **C**. Objects possess a unique identity irrespective of their state; two cars with the same specifications are still two separate physical entities.
+9. **B**. Making attributes `private` enforces strict control over state changes, typically requiring interaction via public getter and setter methods.
+10. **C**. Constructors are special methods automatically invoked upon instantiation specifically to set the initial state of the object.
 
 ## References & Navigation
 
