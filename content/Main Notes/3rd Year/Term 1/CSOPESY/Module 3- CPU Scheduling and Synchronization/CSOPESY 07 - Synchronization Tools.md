@@ -260,12 +260,12 @@ sequenceDiagram
     Note over C: Attempts sem_wait(sem_full) -> Blocks (Count is 0)
     P->>Empty: sem_wait(sem_empty) -> Decrements to 4
     P->>Mutex: pthread_mutex_lock() -> Acquired
-    P->>Buf: buffer[in] = item; in = (in + 1) % 5
+    P->>Buf: buffer[in] = item, in = (in + 1) % 5
     P->>Mutex: pthread_mutex_unlock() -> Released
     P->>Full: sem_post(sem_full) -> Increments to 1 (Wakes Consumer)
     Full-->>C: Unblocked!
     C->>Mutex: pthread_mutex_lock() -> Acquired
-    C->>Buf: item = buffer[out]; out = (out + 1) % 5
+    C->>Buf: item = buffer[out], out = (out + 1) % 5
     C->>Mutex: pthread_mutex_unlock() -> Released
     C->>Empty: sem_post(sem_empty) -> Increments to 5
 ```

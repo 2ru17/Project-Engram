@@ -70,12 +70,12 @@ flowchart TD
 
     PC <-->|"PC_out / PC_in"| BusLine
     IR <-->|"IR_out / IR_in"| BusLine
-    MAR <--|"MAR_in"| BusLine
+    BusLine -->|"MAR_in"| MAR
     MAR --> AddrBus
     MDR <-->|"MDR_out / MDR_in"| BusLine
     MDR <--> DataBus
     GPR <-->|"Rn_out / Rn_in"| BusLine
-    RegY <--|"Y_in"| BusLine
+    BusLine -->|"Y_in"| RegY
     RegY -->|"Input A"| Mux
     Mux -->|"Operand A"| ALU
     BusLine -->|"Operand B (Direct from Bus)"| ALU

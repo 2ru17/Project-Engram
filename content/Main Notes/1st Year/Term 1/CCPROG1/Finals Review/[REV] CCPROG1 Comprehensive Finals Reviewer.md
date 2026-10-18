@@ -69,7 +69,7 @@ sequenceDiagram
     participant Main as main() Stack Frame
     participant Callee as square(int x) Stack Frame
     Main->>Callee: Pass value of a (e.g. 5) copied to x
-    Note over Callee: Local x = 5; calculates 5 * 5 = 25
+    Note over Callee: Local x = 5, calculates 5 * 5 = 25
     Callee-->>Main: Return 25 to caller
     Note over Main: Stack frame of square() destroyed
 ```
