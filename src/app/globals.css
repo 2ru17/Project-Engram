@@ -144,6 +144,20 @@
     padding: 0.75rem 1rem;
   }
 
+  pre code {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    color: inherit !important;
+    border-radius: 0 !important;
+    display: block !important;
+    box-shadow: none !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    white-space: pre !important;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
