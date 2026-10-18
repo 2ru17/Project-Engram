@@ -11,111 +11,72 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Types of Event Operations]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Types of Event Operations]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Types of Event Operations**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+Because events are subsets of the sample space $S$, **Event Operations** correspond directly to set-theoretic operations—**Union** ($\cup$), **Intersection** ($\cap$), **Complement** ($^c$), **Set Difference** ($\setminus$), and **Symmetric Difference** ($\triangle$)—as well as propositional logic connectives (`OR`, `AND`, `NOT`, `XOR`).
 
 ## Key Definitions
-- **Types of Event Operations**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Types of Event Operations** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+| Verbal Event Statement | Set Operation | Probability Formula |
+| :--- | :---: | :--- |
+| **At least one of $A$ or $B$** | $A \cup B$ | $P(A) + P(B) - P(A \cap B)$ |
+| **Both $A$ and $B$** | $A \cap B$ | $P(A)P(B \mid A)$ |
+| **Not $A$** | $A^c$ | $1 - P(A)$ |
+| **$A$ occurs, but NOT $B$ ($A$ only)** | $A \setminus B = A \cap B^c$ | $P(A) - P(A \cap B)$ |
+| **Exactly one of $A$ or $B$** | $A \triangle B = (A \cap B^c) \cup (A^c \cap B)$ | $P(A) + P(B) - 2P(A \cap B)$ |
+| **Neither $A$ nor $B$** | $(A \cup B)^c = A^c \cap B^c$ | $1 - P(A \cup B)$ |
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+- **Algebraic Laws:** Commutative, Associative, Distributive ($A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$), and De Morgan's Laws ($(A \cup B)^c = A^c \cap B^c$ and $(A \cap B)^c = A^c \cup B^c$).
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Types of Event Operations**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+## Worked Example
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Types of Event Operations** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Problem:** Given $P(A) = 0.50$, $P(B) = 0.40$, and $P(A \cap B) = 0.15$, find:
+1. $P(\text{A only}) = P(A \cap B^c) = P(A) - P(A \cap B) = 0.50 - 0.15 = 0.35$.
+2. $P(\text{Exactly one of A or B}) = P(A) + P(B) - 2P(A \cap B) = 0.50 + 0.40 - 2(0.15) = 0.60$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Which set expression and probability formula represent the event **"Event $A$ occurs, but Event $B$ does NOT occur"** ($A$ only)?
+    - **A)** $A \cup B^c$; $P(A) + P(B^c)$
+    - **B)** $A \cap B^c = A \setminus B$; $P(A) - P(A \cap B)$
+    - **C)** $(A \cap B)^c$; $1 - P(A \cap B)$
+    - **D)** $A \cap B$; $P(A) - P(B)$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Why is the probability of **exactly one** of $A$ or $B$ occurring ($A \triangle B$) given by $P(A) + P(B) - 2P(A \cap B)$ instead of $P(A) + P(B) - P(A \cap B)$?
+    - **A)** Because in the union $A \cup B$, we want to count the overlap $A \cap B$ once (so we subtract $P(A \cap B)$ once); whereas for *exactly one* ($A \triangle B$), outcomes in the overlap $A \cap B$ must be excluded completely (0 times), so having counted them twice in $P(A) + P(B)$, we must subtract $2P(A \cap B)$.
+    - **B)** Because $P(A \cap B)$ is negative.
+    - **C)** Because $A \triangle B = S$.
+    - **D)** Because $2P(A \cap B)$ always equals $1$.
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Given $P(A) = 0.60$, $P(B) = 0.35$, and $P(A \cap B) = 0.20$, what is the probability that **exactly one** of the events $A$ or $B$ occurs?
+    - **A)** $0.75$
+    - **B)** $0.40$
+    - **C)** $0.55$
+    - **D)** $0.15$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. By the **Distributive Law** of event operations, what is $A \cap (B \cup C)$ equal to?
+    - **A)** $(A \cup B) \cap (A \cup C)$
+    - **B)** $A \cup B \cup C$
+    - **C)** $A \cap B \cap C$
+    - **D)** $(A \cap B) \cup (A \cap C)$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Which two disjoint events partition any event $A$ relative to another event $B$, proving the identity $P(A) = P(A \cap B) + P(A \cap B^c)$?
+    - **A)** $A \cup B$ and $A \cup B^c$
+    - **B)** $(A \cap B)$ and $(A \cap B^c)$
+    - **C)** $A$ and $B$
+    - **D)** $A^c$ and $B^c$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Since $A = (A \cap B) \cup (A \cap B^c)$ is a disjoint union, $P(A) = P(A \cap B) + P(A \cap B^c)$, which rearranges to $P(A \cap B^c) = P(A) - P(A \cap B)$.
+2. **A**. Symmetric difference $A \triangle B = (A \cap B^c) \cup (A^c \cap B)$ is the disjoint union of "$A$ only" ($P(A) - P(A \cap B)$) and "$B$ only" ($P(B) - P(A \cap B)$), whose sum is $P(A) + P(B) - 2P(A \cap B)$.
+3. **C**. $P(A \triangle B) = P(A) + P(B) - 2P(A \cap B) = 0.60 + 0.35 - 2(0.20) = 0.95 - 0.40 = 0.55$.
+4. **D**. Intersection distributes over union: $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+5. **B**. Since $B$ and $B^c$ partition $S$, intersecting with $A$ partitions $A$ into two mutually exclusive subsets $(A \cap B)$ and $(A \cap B^c)$.
 
 ## References & Navigation
 

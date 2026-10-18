@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Problem Solving]] #[[M5]]
+**Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Problem Solving]] #[[M5]]
 
 ---
 
@@ -88,76 +88,77 @@ Design a 3-bit binary counter using T flip-flops.
 ## Multiple Choice Questions
 
 1. What is typically the first step in the design procedure for a synchronous sequential circuit?
-- **A)** Draw the logic diagram
-- **B)** Derive a state diagram from the word description and specifications
-- **C)** Assign binary values to states
-- **D)** Choose the type of flip-flop
+    - **A)** Draw the logic diagram
+    - **B)** Derive a state diagram from the word description and specifications
+    - **C)** Assign binary values to states
+    - **D)** Choose the type of flip-flop
 
 2. After obtaining the state diagram, what is often the next step to optimize the design?
-- **A)** Immediately draw the circuit diagram
-- **B)** Reduce the number of states if necessary
-- **C)** Route the clock signal
-- **D)** Generate the testbench
+    - **A)** Reduce the number of states if necessary
+    - **B)** Immediately draw the circuit diagram
+    - **C)** Route the clock signal
+    - **D)** Generate the testbench
 
 3. What tool is heavily used to find the simplified flip-flop input equations from the excitation table?
-- **A)** Boolean algebraic division
-- **B)** Karnaugh Maps (K-maps)
-- **C)** State reduction table
-- **D)** Truth table inversion
+    - **A)** Boolean algebraic division
+    - **B)** State reduction table
+    - **C)** Karnaugh Maps (K-maps)
+    - **D)** Truth table inversion
 
 4. What is the purpose of an excitation table in sequential circuit design?
-- **A)** It defines the present state values for given outputs.
-- **B)** It specifies what inputs are required at the flip-flops to cause a desired state transition.
-- **C)** It lists the gate delays of the combinational logic.
-- **D)** It maps the clock frequency to the states.
+    - **A)** It defines the present state values for given outputs.
+    - **B)** It maps the clock frequency to the states.
+    - **C)** It lists the gate delays of the combinational logic.
+    - **D)** It specifies what inputs are required at the flip-flops to cause a desired state transition.
 
 5. In an excitation table for a D flip-flop, what must the input D be to transition from Q(t)=0 to Q(t+1)=1?
-- **A)** 0
-- **B)** 1
-- **C)** X (don't care)
-- **D)** Toggle
+    - **A)** 0
+    - **B)** 1
+    - **C)** X (don't care)
+    - **D)** Toggle
 
 6. In an excitation table for a JK flip-flop, if Q(t)=0 and Q(t+1)=0, what are the values of J and K?
-- **A)** J=0, K=0
-- **B)** J=1, K=X
-- **C)** J=0, K=X
-- **D)** J=X, K=0
+    - **A)** J=0, K=0
+    - **B)** J=1, K=X
+    - **C)** J=0, K=X
+    - **D)** J=X, K=0
 
 7. For a T flip-flop, what must the input T be to maintain the current state (Q(t) to Q(t+1) is 1 to 1)?
-- **A)** 1
-- **B)** X
-- **C)** 0
-- **D)** High-Z
+    - **A)** 0
+    - **B)** X
+    - **C)** 1
+    - **D)** High-Z
 
 8. When designing a 3-bit binary counter, how many flip-flops are required?
-- **A)** 2
-- **B)** 3
-- **C)** 4
-- **D)** 8
+    - **A)** 2
+    - **B)** 8
+    - **C)** 4
+    - **D)** 3
 
 9. What is the sequence of steps for sequential design?
-- **A)** Word problem -> State Diagram -> State Table -> Excitation Table -> Equations -> Circuit
-- **B)** Circuit -> Equations -> State Table -> State Diagram -> Word problem
-- **C)** Equations -> State Diagram -> Excitation Table -> Word problem -> Circuit
-- **D)** Word problem -> Circuit -> State Table -> State Diagram -> Equations
+    - **A)** Equations -> State Diagram -> Excitation Table -> Word problem -> Circuit
+    - **B)** Circuit -> Equations -> State Table -> State Diagram -> Word problem
+    - **C)** Word problem -> State Diagram -> State Table -> Excitation Table -> Equations -> Circuit
+    - **D)** Word problem -> Circuit -> State Table -> State Diagram -> Equations
 
 10. During state assignment, what is done?
-- **A)** Clock signals are assigned to gates
-- **B)** Binary values are assigned to the different states
-- **C)** Input variables are minimized
-- **D)** Output logic is eliminated
+    - **A)** Binary values are assigned to the different states
+    - **B)** Clock signals are assigned to gates
+    - **C)** Input variables are minimized
+    - **D)** Output logic is eliminated
 
 ### Answer Key & Explanations
-1. **B)** The design begins by translating the specifications into a visual state diagram.
-2. **B)** State reduction minimizes the number of required states, potentially saving hardware.
-3. **B)** Karnaugh maps are used to derive simplified Boolean expressions from the excitation table.
-4. **B)** It maps the required flip-flop inputs (like J, K, D, or T) to achieve the transition from present state to next state.
-5. **B)** For a D flip-flop, D is identical to the next state Q(t+1).
-6. **C)** To remain at 0, J must be 0, but K can be anything (0 or 1), so K is an X condition.
-7. **C)** T must be 0 to not toggle the state.
-8. **B)** A 3-bit counter has 8 states (000 to 111), which requires 3 flip-flops.
-9. **A)** The standard process starts with the problem and systematically produces the schematic.
-10. **B)** State assignment maps symbolic state names (like S0, S1) to actual binary codes (like 00, 01) required for digital hardware.
+
+1. **B**. The design begins by translating the specifications into a visual state diagram.
+2. **A**. State reduction minimizes the number of required states, potentially saving hardware.
+3. **C**. Karnaugh maps are used to derive simplified Boolean expressions from the excitation table.
+4. **D**. It maps the required flip-flop inputs (like J, K, D, or T) to achieve the transition from present state to next state.
+5. **B**. For a D flip-flop, D is identical to the next state Q(t+1).
+6. **C**. To remain at 0, J must be 0, but K can be anything (0 or 1), so K is an X condition.
+7. **A**. T must be 0 to not toggle the state.
+8. **D**. A 3-bit counter has 8 states (000 to 111), which requires 3 flip-flops.
+9. **C**. The standard process starts with the problem and systematically produces the schematic.
+10. **A**. State assignment maps symbolic state names (like S0, S1) to actual binary codes (like 00, 01) required for digital hardware.
 
 ## References & Navigation
 

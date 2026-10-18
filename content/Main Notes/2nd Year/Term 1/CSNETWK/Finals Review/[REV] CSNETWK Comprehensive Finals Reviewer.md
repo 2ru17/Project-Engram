@@ -94,50 +94,45 @@ sequenceDiagram
 
 ---
 
-## 5. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. In the TCP 3-way handshake, if the client sends a SYN packet with sequence number 500, what sequence and acknowledgment numbers will the server return in its SYN-ACK response?
-   - A) `seq = 501, ack = 500`
-   - B) `seq = y, ack = 501` (where $y$ is the server's initial sequence number)
-   - C) `seq = 500, ack = 501`
-   - D) `seq = y, ack = 500`
+    - **A)** `seq = 501, ack = 500`
+    - **B)** `seq = y, ack = 501` (where $y$ is the server's initial sequence number)
+    - **C)** `seq = 500, ack = 501`
+    - **D)** `seq = y, ack = 500`
 
 2. How many usable host IP addresses are available in the subnet `192.168.10.0/27`?
-   - A) 27
-   - B) 30
-   - C) 32
-   - D) 62
+    - **A)** 27
+    - **B)** 30
+    - **C)** 32
+    - **D)** 62
 
 3. Which protocol is responsible for automatically assigning dynamic IP addresses, default gateways, and DNS servers to network hosts upon bootup?
-   - A) DNS
-   - B) ARP
-   - C) DHCP
-   - D) ICMP
+    - **A)** DNS
+    - **B)** ARP
+    - **C)** DHCP
+    - **D)** ICMP
 
 4. What mechanism triggers TCP Fast Retransmit without waiting for the retransmission timer to expire?
-   - A) Receipt of 3 duplicate ACKs
-   - B) A single NACK packet
-   - C) TCP RST flag set
-   - D) Zero window advertisement
+    - **A)** Receipt of 3 duplicate ACKs
+    - **B)** A single NACK packet
+    - **C)** TCP RST flag set
+    - **D)** Zero window advertisement
 
 5. Which layer of the OSI model is responsible for end-to-end process-to-process communication, port multiplexing, and reliable byte streams?
-   - A) Network Layer
-   - B) Transport Layer
-   - C) Data Link Layer
-   - D) Application Layer
-
----
+    - **A)** Network Layer
+    - **B)** Transport Layer
+    - **C)** Data Link Layer
+    - **D)** Application Layer
 
 ### Answer Key & Explanations
 
-1. **B) `seq = y, ack = 501`** — The server chooses its own independent initial sequence number $y$ and sets the acknowledgment field to `client_seq + 1` ($500 + 1 = 501$) to acknowledge receipt of the client's SYN bit.
-2. **B) 30** — In a $/27$ subnet, host bits $h = 32 - 27 = 5$. Total addresses = $2^5 = 32$. Usable hosts = $2^5 - 2 = 32 - 2 = 30$.
-3. **C) DHCP** — Dynamic Host Configuration Protocol uses a 4-step DORA (Discover, Offer, Request, Acknowledge) exchange over UDP ports 67/68 to assign IP configuration parameters.
-4. **A) Receipt of 3 duplicate ACKs** — When the sender receives 3 duplicate ACKs (4 identical ACKs total for the same sequence number), it deduces that the segment immediately following was lost and retransmits it immediately before timeout expiration.
-5. **B) Transport Layer** — Layer 4 (Transport) provides logical communication between application processes on different hosts using port numbers (e.g., TCP and UDP).
-
-
----
+1. **B**. The server chooses its own independent initial sequence number $y$ and sets the acknowledgment field to `client_seq + 1` ($500 + 1 = 501$) to acknowledge receipt of the client's SYN bit.
+2. **B**. In a $/27$ subnet, host bits $h = 32 - 27 = 5$. Total addresses = $2^5 = 32$. Usable hosts = $2^5 - 2 = 32 - 2 = 30$.
+3. **C**. Dynamic Host Configuration Protocol uses a 4-step DORA (Discover, Offer, Request, Acknowledge) exchange over UDP ports 67/68 to assign IP configuration parameters.
+4. **A**. When the sender receives 3 duplicate ACKs (4 identical ACKs total for the same sequence number), it deduces that the segment immediately following was lost and retransmits it immediately before timeout expiration.
+5. **B**. Layer 4 (Transport) provides logical communication between application processes on different hosts using port numbers (e.g., TCP and UDP).
 
 ## References & Navigation
 

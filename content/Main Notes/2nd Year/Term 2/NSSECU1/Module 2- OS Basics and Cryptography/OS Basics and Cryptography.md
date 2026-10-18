@@ -94,77 +94,79 @@ Permissions: `rwxr-x---`
 - Modern secure communications (like TLS) use asymmetric cryptography for key exchange and symmetric cryptography for data encryption.
 
 ## Multiple Choice Questions
+
 1. In standard CPU privilege rings, which ring is typically reserved for the OS Kernel?
-- **A)** Ring 3
-- **B)** Ring 2
-- **C)** Ring 1
-- **D)** Ring 0
+    - **A)** Ring 3
+    - **B)** Ring 2
+    - **C)** Ring 1
+    - **D)** Ring 0
 
 2. Which encryption algorithm uses the same key for both encryption and decryption?
-- **A)** RSA
-- **B)** ECC
-- **C)** AES
-- **D)** Diffie-Hellman
+    - **A)** RSA
+    - **B)** ECC
+    - **C)** AES
+    - **D)** Diffie-Hellman
 
 3. What is the octal value for Linux permissions `rw-r--r--`?
-- **A)** 644
-- **B)** 755
-- **C)** 777
-- **D)** 600
+    - **A)** 644
+    - **B)** 755
+    - **C)** 777
+    - **D)** 600
 
 4. Which cryptographic function is one-way and cannot be mathematically reversed?
-- **A)** AES-256
-- **B)** RSA-2048
-- **C)** SHA-256
-- **D)** 3DES
+    - **A)** AES-256
+    - **B)** RSA-2048
+    - **C)** SHA-256
+    - **D)** 3DES
 
 5. Digital signatures are created using the sender's:
-- **A)** Public key
-- **B)** Private key
-- **C)** Symmetric key
-- **D)** Hash key
+    - **A)** Public key
+    - **B)** Private key
+    - **C)** Symmetric key
+    - **D)** Hash key
 
 6. What does PKI stand for in cryptography?
-- **A)** Private Key Integration
-- **B)** Public Key Infrastructure
-- **C)** Protocol Key Interchange
-- **D)** Public Key Internet
+    - **A)** Private Key Integration
+    - **B)** Public Key Infrastructure
+    - **C)** Protocol Key Interchange
+    - **D)** Public Key Internet
 
 7. Which of the following is a symmetric block cipher?
-- **A)** RSA
-- **B)** AES
-- **C)** SHA-1
-- **D)** MD5
+    - **A)** RSA
+    - **B)** AES
+    - **C)** SHA-1
+    - **D)** MD5
 
 8. In Windows NTFS, what mechanism allows for fine-grained file permissions?
-- **A)** UGO
-- **B)** ACLs
-- **C)** SELinux
-- **D)** AppArmor
+    - **A)** UGO
+    - **B)** ACLs
+    - **C)** SELinux
+    - **D)** AppArmor
 
 9. The main advantage of asymmetric encryption over symmetric encryption is:
-- **A)** Faster execution speed
-- **B)** Lower computational overhead
-- **C)** Simplified key distribution
-- **D)** Smaller ciphertext sizes
+    - **A)** Faster execution speed
+    - **B)** Lower computational overhead
+    - **C)** Simplified key distribution
+    - **D)** Smaller ciphertext sizes
 
 10. Non-repudiation guarantees that:
-- **A)** Data cannot be read by unauthorized parties
-- **B)** Data has not been altered in transit
-- **C)** The sender of a message cannot deny having sent it
-- **D)** Systems remain available during an attack
+    - **A)** Data cannot be read by unauthorized parties
+    - **B)** Data has not been altered in transit
+    - **C)** The sender of a message cannot deny having sent it
+    - **D)** Systems remain available during an attack
 
 ### Answer Key & Explanations
-1. **D.** Ring 0 is the most privileged level and is where the operating system kernel resides.
-2. **C.** AES (Advanced Encryption Standard) is a symmetric encryption algorithm.
-3. **A.** `rw-` is 6, `r--` is 4, and `r--` is 4, resulting in 644.
-4. **C.** SHA-256 is a cryptographic hash function, which is designed to be one-way and irreversible.
-5. **B.** A digital signature is created by encrypting the message hash with the sender's private key.
-6. **B.** PKI stands for Public Key Infrastructure, which manages digital certificates.
-7. **B.** AES is a symmetric block cipher widely used for securing data.
-8. **B.** Access Control Lists (ACLs) define specific permissions for users and groups in NTFS.
-9. **C.** Asymmetric encryption solves the problem of securely sharing keys over an insecure channel.
-10. **C.** Non-repudiation (usually achieved via digital signatures) prevents a sender from falsely denying they sent a message.
+
+1. **D**. Ring 0 is the most privileged level and is where the operating system kernel resides.
+2. **C**. AES (Advanced Encryption Standard) is a symmetric encryption algorithm.
+3. **A**. `rw-` is 6, `r--` is 4, and `r--` is 4, resulting in 644.
+4. **C**. SHA-256 is a cryptographic hash function, which is designed to be one-way and irreversible.
+5. **B**. A digital signature is created by encrypting the message hash with the sender's private key.
+6. **B**. PKI stands for Public Key Infrastructure, which manages digital certificates.
+7. **B**. AES is a symmetric block cipher widely used for securing data.
+8. **B**. Access Control Lists (ACLs) define specific permissions for users and groups in NTFS.
+9. **C**. Asymmetric encryption solves the problem of securely sharing keys over an insecure channel.
+10. **C**. Non-repudiation (usually achieved via digital signatures) prevents a sender from falsely denying they sent a message.
 
 ## References & Navigation
 

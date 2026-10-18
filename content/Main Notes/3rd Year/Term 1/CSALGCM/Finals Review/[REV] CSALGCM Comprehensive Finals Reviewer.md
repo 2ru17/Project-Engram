@@ -85,50 +85,45 @@ flowchart LR
 
 ---
 
-## 5. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. Using the Master Theorem, what is the asymptotic solution to the recurrence $T(n) = 4 T(n/2) + n^2$?
-   - A) $\Theta(n)$
-   - B) $\Theta(n^2)$
-   - C) $\Theta(n^2 \log n)$
-   - D) $\Theta(n^3)$
+    - **A)** $\Theta(n)$
+    - **B)** $\Theta(n^2 \log n)$
+    - **C)** $\Theta(n^2)$
+    - **D)** $\Theta(n^3)$
 
 2. What property allows a problem to be solved efficiently using Dynamic Programming rather than recalculating subproblems repeatedly?
-   - A) Greedy Choice Property
-   - B) Overlapping Subproblems and Optimal Substructure
-   - C) Disjoint Subproblems
-   - D) NP-Completeness
+    - **A)** Overlapping Subproblems and Optimal Substructure
+    - **B)** Greedy Choice Property
+    - **C)** Disjoint Subproblems
+    - **D)** NP-Completeness
 
 3. Which problem is solvable in polynomial time using a greedy algorithm based on value-to-weight ratio?
-   - A) 0/1 Knapsack Problem
-   - B) Fractional Knapsack Problem
-   - C) Subset Sum Problem
-   - D) Traveling Salesperson Problem
+    - **A)** 0/1 Knapsack Problem
+    - **B)** Subset Sum Problem
+    - **C)** Fractional Knapsack Problem
+    - **D)** Traveling Salesperson Problem
 
 4. To prove that a new decision problem $B$ is NP-Complete, which two steps are required?
-   - A) Prove $B \in \text{P}$, and reduce $B \le_P \text{3-SAT}$.
-   - B) Prove $B \in \text{NP}$, and reduce a known NP-Complete problem $A$ to $B$ in polynomial time ($A \le_P B$).
-   - C) Prove $B \in \text{NP}$, and reduce $B$ to a known polynomial problem $A$.
-   - D) Show that $B$ cannot be solved in less than exponential time.
+    - **A)** Prove $B \in \text{P}$, and reduce $B \le_P \text{3-SAT}$.
+    - **B)** Show that $B$ cannot be solved in less than exponential time.
+    - **C)** Prove $B \in \text{NP}$, and reduce $B$ to a known polynomial problem $A$.
+    - **D)** Prove $B \in \text{NP}$, and reduce a known NP-Complete problem $A$ to $B$ in polynomial time ($A \le_P B$).
 
 5. In Matrix Chain Multiplication of 4 matrices with dimensions $10 \times 100 \times 5 \times 50 \times 1$, what does the entry $m[i, j]$ represent in the DP table?
-   - A) The product of matrices $A_i$ through $A_j$
-   - B) The minimum number of scalar multiplications needed to compute the matrix product $A_i \dots A_j$
-   - C) The optimal number of parentheses splits
-   - D) The rank of the resulting product matrix
-
----
+    - **A)** The product of matrices $A_i$ through $A_j$
+    - **B)** The minimum number of scalar multiplications needed to compute the matrix product $A_i \dots A_j$
+    - **C)** The optimal number of parentheses splits
+    - **D)** The rank of the resulting product matrix
 
 ### Answer Key & Explanations
 
-1. **C) $\Theta(n^2 \log n)$** — Here $a = 4, b = 2$. $c_{\text{crit}} = \log_b(a) = \log_2(4) = 2$. $f(n) = n^2 = \Theta(n^{c_{\text{crit}}} \log^0 n)$. By Master Theorem Case 2 (with $k = 0$), $T(n) = \Theta(n^2 \log n)$.
-2. **B) Overlapping Subproblems and Optimal Substructure** — Dynamic programming caches solutions to overlapping subproblems to ensure each distinct state is evaluated only once, requiring optimal substructure (optimal solution composed of optimal solutions to subproblems).
-3. **B) Fractional Knapsack Problem** — Because items can be divided continuously, greedily selecting items with the highest value-to-weight ratio $v_i / w_i$ guarantees an optimal solution.
-4. **B) Prove $B \in \text{NP}$, and reduce a known NP-Complete problem $A$ to $B$ in polynomial time ($A \le_P B$)** — Showing $B \in \text{NP}$ proves it is verifiable in polynomial time; reducing a known NP-Complete problem $A$ to $B$ proves that $B$ is at least as hard as any problem in NP (NP-Hard).
-5. **B) The minimum number of scalar multiplications needed to compute the matrix product $A_i \dots A_j$** — The DP recurrence table stores the minimized scalar multiplication cost over all possible parenthesization splits $k$ between $i$ and $j$.
-
-
----
+1. **B**. Here $a = 4, b = 2$. $c_{\text{crit}} = \log_b(a) = \log_2(4) = 2$. $f(n) = n^2 = \Theta(n^{c_{\text{crit}}} \log^0 n)$. By Master Theorem Case 2 (with $k = 0$), $T(n) = \Theta(n^2 \log n)$.
+2. **A**. Dynamic programming caches solutions to overlapping subproblems to ensure each distinct state is evaluated only once, requiring optimal substructure (optimal solution composed of optimal solutions to subproblems).
+3. **C**. Because items can be divided continuously, greedily selecting items with the highest value-to-weight ratio $v_i / w_i$ guarantees an optimal solution.
+4. **D**. Showing $B \in \text{NP}$ proves it is verifiable in polynomial time; reducing a known NP-Complete problem $A$ to $B$ proves that $B$ is at least as hard as any problem in NP (NP-Hard).
+5. **B**. The DP recurrence table stores the minimized scalar multiplication cost over all possible parenthesization splits $k$ between $i$ and $j$.
 
 ## References & Navigation
 

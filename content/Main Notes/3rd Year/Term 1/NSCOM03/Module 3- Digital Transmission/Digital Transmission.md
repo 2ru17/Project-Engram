@@ -10,7 +10,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Digital Transmission]]
+**Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Digital Transmission]]
 
 ---
 
@@ -39,34 +39,35 @@ $$ C = 3000 \log_2(1 + 3162) \approx 3000 \times 11.62 \approx 34860 \text{ bps}
 ## Multiple Choice Questions
 
 1. What ensures error-free transmission of data frames between nodes?
-- **A)** The Physical Layer
-- **B)** The OSI Reference Model
-- **C)** The Network Layer
-- **D)** The Data Link Layer
+    - **A)** The Physical Layer
+    - **B)** The OSI Reference Model
+    - **C)** The Network Layer
+    - **D)** The Data Link Layer
 
 2. According to the provided diagram, which layer comes immediately after the Data Link Layer?
-- **A)** Transport Layer
-- **B)** Application Layer
-- **C)** Network Layer
-- **D)** Physical Layer
+    - **A)** Transport Layer
+    - **B)** Application Layer
+    - **C)** Network Layer
+    - **D)** Physical Layer
 
 3. Which of the following does the Physical layer NOT deal with?
-- **A)** Bandwidth
-- **B)** Flow control
-- **C)** Attenuation
-- **D)** Noise
+    - **A)** Bandwidth
+    - **B)** Flow control
+    - **C)** Attenuation
+    - **D)** Noise
 
 4. What is the primary purpose of precise encoding and error detection?
-- **A)** Standardizing the OSI model
-- **B)** Maintaining data integrity
-- **C)** Maximizing channel bandwidth
-- **D)** Removing attenuation
+    - **A)** Standardizing the OSI model
+    - **B)** Maintaining data integrity
+    - **C)** Maximizing channel bandwidth
+    - **D)** Removing attenuation
 
 ### Answer Key & Explanations
-1. **D)** The Data Link Layer is defined by its role to ensure "error-free transmission of data frames between nodes."
-2. **C)** The flowchart diagram shows "Data Link Layer --> Network Layer".
-3. **B)** Flow control is a responsibility of the Data Link layer, whereas bandwidth, attenuation, and noise are handled by the Physical layer.
-4. **B)** The summary states that "Precise encoding and error detection are vital for maintaining data integrity."
+
+1. **D**. The Data Link Layer is defined by its role to ensure "error-free transmission of data frames between nodes."
+2. **C**. The flowchart diagram shows "Data Link Layer --> Network Layer".
+3. **B**. Flow control is a responsibility of the Data Link layer, whereas bandwidth, attenuation, and noise are handled by the Physical layer.
+4. **B**. The summary states that "Precise encoding and error detection are vital for maintaining data integrity."
 
 ## References & Navigation
 

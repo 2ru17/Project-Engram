@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCPROG3]] #[[Graphical User Interfaces and Event Handling]] #[[Code Snippets]] #[[M6]]
+**Tags:** #[[Computer Science]] #[[CCPROG3]] #[[Graphical User Interfaces and Event Handling]] #[[Code Snippets]] #[[M6]]
 
 ---
 ## Key Definitions
@@ -63,41 +63,42 @@ Event-driven applications have complex control flows determined by user interact
 ## Multiple Choice Questions
 
 1. What is the primary function of a GUI (Graphical User Interface)?
-- **A)** To compile source code into machine code.
-- **B)** To allow users to interact with electronic devices through graphical icons and visual indicators.
-- **C)** To handle database connections automatically.
-- **D)** To optimize the time complexity of an application.
+    - **A)** To compile source code into machine code.
+    - **B)** To allow users to interact with electronic devices through graphical icons and visual indicators.
+    - **C)** To handle database connections automatically.
+    - **D)** To optimize the time complexity of an application.
 
 2. In Java, which of the following is a commonly used paradigm for building GUIs?
-- **A)** Procedural programming
-- **B)** Functional programming
-- **C)** Event-driven programming
-- **D)** Logic programming
+    - **A)** Procedural programming
+    - **B)** Functional programming
+    - **C)** Event-driven programming
+    - **D)** Logic programming
 
 3. What role does a Listener (like `ActionListener`) play in event handling?
-- **A)** It generates events when a component is clicked.
-- **B)** It creates the graphical components on the screen.
-- **C)** It waits for events to occur and executes specific code in response.
-- **D)** It defines the size and layout of the main window.
+    - **A)** It generates events when a component is clicked.
+    - **B)** It creates the graphical components on the screen.
+    - **C)** It waits for events to occur and executes specific code in response.
+    - **D)** It defines the size and layout of the main window.
 
 4. In the provided code snippet, what does `JFrame` represent?
-- **A)** A clickable button
-- **B)** The main window of the application
-- **C)** An event listener
-- **D)** A text input field
+    - **A)** A clickable button
+    - **B)** The main window of the application
+    - **C)** An event listener
+    - **D)** A text input field
 
 5. What primarily determines the time complexity for rendering in event-driven applications?
-- **A)** The user-implemented logic inside the listener.
-- **B)** The number of variables declared in the main method.
-- **C)** The UI framework being used.
-- **D)** The size of the compiled bytecode.
+    - **A)** The user-implemented logic inside the listener.
+    - **B)** The number of variables declared in the main method.
+    - **C)** The UI framework being used.
+    - **D)** The size of the compiled bytecode.
 
 ### Answer Key & Explanations
-1. **B)** GUIs provide a visual layer of icons and controls that replaces text-based terminal commands for user interaction.
-2. **C)** GUIs rely on event-driven programming, where the execution flow is determined by user actions like mouse clicks or key presses.
-3. **C)** Listeners are registered to components and passively wait to trigger their response code once the designated event fires.
-4. **B)** `JFrame` is the fundamental Swing container that acts as the top-level window holding all other UI components.
-5. **C)** While application logic depends on user code, the actual rendering speed and complexity are managed by the chosen framework (e.g. Swing or JavaFX).
+
+1. **B**. GUIs provide a visual layer of icons and controls that replaces text-based terminal commands for user interaction.
+2. **C**. GUIs rely on event-driven programming, where the execution flow is determined by user actions like mouse clicks or key presses.
+3. **C**. Listeners are registered to components and passively wait to trigger their response code once the designated event fires.
+4. **B**. `JFrame` is the fundamental Swing container that acts as the top-level window holding all other UI components.
+5. **C**. While application logic depends on user code, the actual rendering speed and complexity are managed by the chosen framework (e.g. Swing or JavaFX).
 
 ## References & Navigation
 

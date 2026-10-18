@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
+**Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
 
 ---
 
@@ -178,10 +178,6 @@ _Implementation:_ Often uses a `TargetType` and `TargetID` column (complex to en
 ## Summary
 
 > TL;DR — DB design reviewer: business rules → ERD (Crow’s Foot) → schema mapping → normalization (UNF→ 3NF walkthrough). Covers advanced design: surrogate keys, polymorphic associations, table inheritance, denormalization, and integrity constraints.
-
-## Review Questions
-
-_To be added._
 
 ## Links
  **Related:** **Source / Reference:**

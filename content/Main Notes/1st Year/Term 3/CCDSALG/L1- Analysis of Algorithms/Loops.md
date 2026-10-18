@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
+**Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
 
 ---
 
@@ -179,10 +179,6 @@ This matches the result from "02.2 - Frequency Count Part 2.pdf" page 45.
 **Summation Formulas:**
  $\sum_{k=1}^{n} 1 = n$ $\sum_{k=1}^{n} c = cn$ (where c is a constant) $\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$ $\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$
 
-## Code Example
-
-_To be added._
-
 ## Complexity
 
 | Operation | Time | Space |
@@ -196,86 +192,83 @@ _To be added._
 
 > TL;DR — Frequency counting for loops: **`for`/`while`** condition checks = $n+1$, body executions = $n$; **`do-while`** body executes at least once. Variable-bound loops require **summation formulas**. Always count initialization, condition checks, increments, and body statements separately.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. In a standard `for` loop `for j = lb to ub`, how many times is the loop control statement checked?
-- **A)** ub - lb
-- **B)** ub - lb + 1
-- **C)** ub - lb + 2
-- **D)** (ub - lb) / 2
+    - **A)** ub - lb
+    - **B)** ub - lb + 1
+    - **C)** ub - lb + 2
+    - **D)** (ub - lb) / 2
 
 2. In the loop `for j = 1 to 4`, what is the total count of the loop control statement?
-- **A)** 4
-- **B)** 5
-- **C)** 6
-- **D)** 3
+    - **A)** 4
+    - **B)** 5
+    - **C)** 6
+    - **D)** 3
 
 3. When analyzing nested loops, how do you determine the total execution count of the inner loop body?
-- **A)** Add the counts of the outer and inner loops.
-- **B)** Multiply the number of times the outer loop body executes by the number of times the inner loop body executes.
-- **C)** Take the maximum of the outer and inner loop counts.
-- **D)** Square the inner loop count.
+    - **A)** Add the counts of the outer and inner loops.
+    - **B)** Multiply the number of times the outer loop body executes by the number of times the inner loop body executes.
+    - **C)** Take the maximum of the outer and inner loop counts.
+    - **D)** Square the inner loop count.
 
 4. For a `while x <= ub` loop (incrementing by 1), how many times does the condition check execute?
-- **A)** ub - lb
-- **B)** ub - lb + 1
-- **C)** ub - lb + 2
-- **D)** 1
+    - **A)** ub - lb
+    - **B)** ub - lb + 1
+    - **C)** ub - lb + 2
+    - **D)** 1
 
 5. For a `while x < ub` loop (strict inequality), how many times does the loop body execute?
-- **A)** ub - lb
-- **B)** ub - lb + 1
-- **C)** ub - lb + 2
-- **D)** 1
+    - **A)** ub - lb
+    - **B)** ub - lb + 1
+    - **C)** ub - lb + 2
+    - **D)** 1
 
 6. What is a defining characteristic of a `do-while` loop in frequency counting?
-- **A)** The loop condition is checked before the body executes.
-- **B)** The condition is never checked.
-- **C)** The body executes at least once, so its minimum body count is 1.
-- **D)** The frequency count is always $O(n^2)$.
+    - **A)** The loop condition is checked before the body executes.
+    - **B)** The condition is never checked.
+    - **C)** The body executes at least once, so its minimum body count is 1.
+    - **D)** The frequency count is always $O(n^2)$.
 
 7. What mathematical tool is required when the bounds of an inner loop depend on the outer loop's variable (e.g., `for j = 1 to i`)?
-- **A)** Recurrence relations
-- **B)** Simple multiplication
-- **C)** Amortized analysis
-- **D)** Summations
+    - **A)** Recurrence relations
+    - **B)** Simple multiplication
+    - **C)** Amortized analysis
+    - **D)** Summations
 
 8. What is a common pitfall when counting the loop control statement?
-- **A)** Forgetting to count the final condition check that fails.
-- **B)** Multiplying it by the loop body.
-- **C)** Using a summation when the bounds are constants.
-- **D)** Counting the initialization twice.
+    - **A)** Forgetting to count the final condition check that fails.
+    - **B)** Multiplying it by the loop body.
+    - **C)** Using a summation when the bounds are constants.
+    - **D)** Counting the initialization twice.
 
 9. If `i` goes from 1 to $n$, what is the sum of `i`?
-- **A)** $n^2$
-- **B)** $n(n+1)/2$
-- **C)** $n(n+1)(2n+1)/6$
-- **D)** $n!$
+    - **A)** $n^2$
+    - **B)** $n(n+1)/2$
+    - **C)** $n(n+1)(2n+1)/6$
+    - **D)** $n!$
 
 10. In the nested dependent loop example where the outer loop is `i = 1 to n` and the inner loop is `j = 1 to i`, what is the frequency count of the statement `print(i, j)`?
-- **A)** $n^2$
-- **B)** $n(n+1)/2$
-- **C)** $n^2/2$
-- **D)** $n$
+    - **A)** $n^2$
+    - **B)** $n(n+1)/2$
+    - **C)** $n^2/2$
+    - **D)** $n$
 
 ### Answer Key & Explanations
-1. **C)** The formula is `ub - lb + 2`, which accounts for the `ub - lb + 1` successful checks plus the 1 final check that terminates the loop.
-2. **B)** Applying the formula `4 - 1 + 2 = 5`. The loop condition evaluates 5 times.
-3. **B)** In nested iterations, the total count of operations in the inner body is derived by multiplying the outer loop's executions by the inner loop's executions.
-4. **C)** Similar to the `for` loop, the inclusive inequality `<=` causes the condition to check exactly `ub - lb + 2` times.
-5. **A)** Because the inequality is strict `<` rather than inclusive `<=`, the body executes exactly `ub - lb` times.
-6. **C)** Unlike `while` and `for` loops, `do-while` forces the body to run before checking the condition, guaranteeing at least 1 execution.
-7. **D)** Because the inner loop changes its iteration count dynamically based on the outer loop, you must construct a summation $\sum$ instead of simple multiplication.
-8. **A)** Many fail to realize that the condition loop must be evaluated one more time (resulting in false) to break the loop, undercounting by 1.
-9. **B)** This is the standard arithmetic series summation formula for the first $n$ natural numbers.
-10. **B)** The statement `print(i, j)` executes $i$ times per loop. Summing $i$ from 1 to $n$ yields the formula $n(n+1)/2$.
+
+1. **C**. The formula is `ub - lb + 2`, which accounts for the `ub - lb + 1` successful checks plus the 1 final check that terminates the loop.
+2. **B**. Applying the formula `4 - 1 + 2 = 5`. The loop condition evaluates 5 times.
+3. **B**. In nested iterations, the total count of operations in the inner body is derived by multiplying the outer loop's executions by the inner loop's executions.
+4. **C**. Similar to the `for` loop, the inclusive inequality `<=` causes the condition to check exactly `ub - lb + 2` times.
+5. **A**. Because the inequality is strict `<` rather than inclusive `<=`, the body executes exactly `ub - lb` times.
+6. **C**. Unlike `while` and `for` loops, `do-while` forces the body to run before checking the condition, guaranteeing at least 1 execution.
+7. **D**. Because the inner loop changes its iteration count dynamically based on the outer loop, you must construct a summation $\sum$ instead of simple multiplication.
+8. **A**. Many fail to realize that the condition loop must be evaluated one more time (resulting in false) to break the loop, undercounting by 1.
+9. **B**. This is the standard arithmetic series summation formula for the first $n$ natural numbers.
+10. **B**. The statement `print(i, j)` executes $i$ times per loop. Summing $i$ from 1 to $n$ yields the formula $n(n+1)/2$.
 
 ## References & Navigation
 

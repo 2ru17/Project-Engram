@@ -11,111 +11,69 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Total Probability Rule]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Total Probability Rule]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Total Probability Rule**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Total Probability Rule (Law of Total Probability)** computes the unconditional (marginal) probability $P(A)$ of a target event $A$ by conditioning on a collection of mutually exclusive and collectively exhaustive scenarios $\{B_1, B_2, \dots, B_k\}$ that form a **partition** of the sample space $S$.
 
 ## Key Definitions
-- **Total Probability Rule**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Total Probability Rule** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **General Formula (for Partition $\{B_1, \dots, B_k\}$):**
+  $$P(A) = \sum_{i=1}^k P(A \cap B_i) = \sum_{i=1}^k P(A \mid B_i) P(B_i)$$
+- **Binary Partition Form ($\{B, B^c\}$):**
+  $$P(A) = P(A \mid B)P(B) + P(A \mid B^c)P(B^c)$$
+- **Role in Bayes' Theorem:** The Law of Total Probability provides the normalizing denominator $P(A)$ in Bayes' Rule: $P(B_j \mid A) = \frac{P(A \mid B_j)P(B_j)}{\sum_{i=1}^k P(A \mid B_i)P(B_i)}$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Total Probability Rule**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** An e-commerce cluster routes $50\%$ of requests to Server $B_1$, $30\%$ to Server $B_2$, and $20\%$ to Server $B_3$. Timeout rates on the three servers are $P(T \mid B_1) = 0.01$, $P(T \mid B_2) = 0.02$, and $P(T \mid B_3) = 0.05$. What is the overall probability $P(T)$ that a randomly arriving request times out?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Total Probability Rule** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+$$P(T) = P(T \mid B_1)P(B_1) + P(T \mid B_2)P(B_2) + P(T \mid B_3)P(B_3)$$
+$$P(T) = (0.01)(0.50) + (0.02)(0.30) + (0.05)(0.20) = 0.005 + 0.006 + 0.010 = 0.021 \quad (2.1\%)$$
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. What condition MUST the events $B_1, B_2, \dots, B_k$ satisfy for the Law of Total Probability $P(A) = \sum_{i=1}^k P(A \mid B_i)P(B_i)$ to hold?
+    - **A)** They must be statistically independent of $A$.
+    - **B)** They must form a **partition** of the sample space $S$ (pairwise mutually exclusive and collectively exhaustive, with $P(B_i) > 0$).
+    - **C)** They must all have equal probability $P(B_i) = 1/k$.
+    - **D)** Their conditional probabilities $P(A \mid B_i)$ must sum to $1$.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Suppose $70\%$ of emails arriving at a gateway are legitimate ($L$) and $30\%$ are spam ($S$). A keyword filter flags $80\%$ of spam emails ($P(F \mid S) = 0.80$) and falsely flags $5\%$ of legitimate emails ($P(F \mid L) = 0.05$). What is the total probability $P(F)$ that an incoming email is flagged?
+    - **A)** $0.850$
+    - **B)** $0.275$
+    - **C)** $0.240$
+    - **D)** $0.425$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. In a probability tree diagram where the first stage branches into $B_1, \dots, B_k$ and the second stage branches into $A$ and $A^c$, how does the Law of Total Probability compute $P(A)$?
+    - **A)** Multiply along each branch leading to $A$ to get $P(B_i)P(A \mid B_i)$, and then **sum** those products across all $k$ disjoint paths ending at $A$.
+    - **B)** Add along each branch and then multiply across the paths.
+    - **C)** Take only the largest branch product.
+    - **D)** Average the conditional probabilities $P(A \mid B_i)$ without weighting by $P(B_i)$.
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Why is $P(A)$ in the Law of Total Probability interpretable as a **weighted average** of the conditional probabilities $P(A \mid B_i)$?
+    - **A)** Because the weights $w_i = P(B_i)$ are non-negative and sum to $1$ ($\sum_{i=1}^k P(B_i) = 1$), so $P(A) = \sum_{i=1}^k w_i P(A \mid B_i)$ always lies between $\min_i P(A \mid B_i)$ and $\max_i P(A \mid B_i)$.
+    - **B)** Because $P(A \mid B_i)$ always equals $0.5$.
+    - **C)** Because $P(A)$ is always the arithmetic mean $\frac{1}{k}\sum P(A \mid B_i)$.
+    - **D)** Because $P(B_i) = P(A \mid B_i)$.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Box 1 has $3$ red and $1$ blue ball; Box 2 has $1$ red and $3$ blue balls. A fair coin is tossed to pick a box ($P(B_1) = P(B_2) = 0.5$), and one ball is drawn. What is the total probability of drawing a red ball?
+    - **A)** $0.75$
+    - **B)** $0.50$
+    - **C)** $0.25$
+    - **D)** $0.375$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. The Law of Total Probability decomposes $A$ into disjoint slices $A \cap B_i$ across a partition $\{B_1, \dots, B_k\}$ of $S$, and then rewrites each $P(A \cap B_i) = P(A \mid B_i)P(B_i)$.
+2. **B**. $P(F) = P(F \mid S)P(S) + P(F \mid L)P(L) = (0.80)(0.30) + (0.05)(0.70) = 0.240 + 0.035 = 0.275$.
+3. **A**. Along a single tree path, the Multiplicative Rule multiplies $P(B_i)P(A \mid B_i) = P(A \cap B_i)$; across different disjoint paths ending in $A$, the Additive Rule sums them.
+4. **A**. Since $P(B_i) \ge 0$ and $\sum P(B_i) = 1$, $\sum P(B_i) P(A \mid B_i)$ is a convex combination (weighted average) of the conditional probabilities.
+5. **B**. $P(R) = P(R \mid B_1)P(B_1) + P(R \mid B_2)P(B_2) = (0.75)(0.50) + (0.25)(0.50) = 0.375 + 0.125 = 0.50$.
 
 ## References & Navigation
 

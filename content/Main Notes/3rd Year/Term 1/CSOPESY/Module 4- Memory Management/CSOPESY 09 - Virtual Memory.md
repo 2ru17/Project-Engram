@@ -132,62 +132,63 @@ print(f"FIFO Faults (3 frames): {fifo_page_replacement(ref_string, 3)}")
 ## Multiple Choice Questions
 
 1. Which of the following is the defining characteristic of Demand Paging?
-A) Entire processes are loaded into memory before execution begins.
-B) Pages are loaded into memory only when an instruction explicitly requires them.
-C) The OS pre-fetches all pages associated with a program's imports.
-D) Pages are swapped to the disk sequentially.
+    - **A)** Entire processes are loaded into memory before execution begins.
+    - **B)** Pages are loaded into memory only when an instruction explicitly requires them.
+    - **C)** The OS pre-fetches all pages associated with a program's imports.
+    - **D)** Pages are swapped to the disk sequentially.
 
 2. What is the primary purpose of the Copy-on-Write (COW) mechanism during a `fork()` system call?
-A) To instantly duplicate all physical memory for the child process.
-B) To allow the child to overwrite the parent's memory safely.
-C) To delay and potentially eliminate the copying of memory pages by sharing them until one of the processes attempts a write operation.
-D) To prevent Belady's Anomaly.
+    - **A)** To instantly duplicate all physical memory for the child process.
+    - **B)** To allow the child to overwrite the parent's memory safely.
+    - **C)** To delay and potentially eliminate the copying of memory pages by sharing them until one of the processes attempts a write operation.
+    - **D)** To prevent Belady's Anomaly.
 
 3. Belady’s Anomaly describes a situation where:
-A) LRU replacement causes more page faults than FIFO.
-B) Increasing the number of physical frames allocated to a process results in an increased number of page faults.
-C) A process spends more time paging than executing.
-D) The working set size exceeds available physical memory.
+    - **A)** LRU replacement causes more page faults than FIFO.
+    - **B)** Increasing the number of physical frames allocated to a process results in an increased number of page faults.
+    - **C)** A process spends more time paging than executing.
+    - **D)** The working set size exceeds available physical memory.
 
 4. Why is the Optimal (OPT) page replacement algorithm rarely used in production operating systems?
-A) It suffers heavily from Belady's Anomaly.
-B) It causes severe internal fragmentation.
-C) It requires knowing the future sequence of memory references, which is impossible.
-D) It takes up too much memory to store the time-of-use counters.
+    - **A)** It suffers heavily from Belady's Anomaly.
+    - **B)** It causes severe internal fragmentation.
+    - **C)** It requires knowing the future sequence of memory references, which is impossible.
+    - **D)** It takes up too much memory to store the time-of-use counters.
 
 5. What optimization allows the Operating System to avoid writing an evicted page back to the disk if its contents haven't changed?
-A) The Valid-Invalid Bit
-B) The Dirty (Modify) Bit
-C) The Working-Set Window
-D) The Translation Look-aside Buffer
+    - **A)** The Valid-Invalid Bit
+    - **B)** The Dirty (Modify) Bit
+    - **C)** The Working-Set Window
+    - **D)** The Translation Look-aside Buffer
 
 6. Thrashing fundamentally occurs when:
-A) The disk drive spins at its maximum speed.
-B) A process does not have enough frames to hold its actively used locality of reference, leading to continuous page faulting.
-C) The CPU overheats due to infinite loops in user code.
-D) Global page replacement is disabled.
+    - **A)** The disk drive spins at its maximum speed.
+    - **B)** A process does not have enough frames to hold its actively used locality of reference, leading to continuous page faulting.
+    - **C)** The CPU overheats due to infinite loops in user code.
+    - **D)** Global page replacement is disabled.
 
 7. In the Working-Set Model, if the total demand for frames ($D$) exceeds the total physical frames ($m$), what action must the OS take to prevent thrashing?
-A) Increase the CPU clock speed.
-B) Decrease the Working-Set Window ($\Delta$).
-C) Suspend (swap out) one or more processes to free up frames.
-D) Allocate more frames to the process with the highest priority.
+    - **A)** Increase the CPU clock speed.
+    - **B)** Decrease the Working-Set Window ($\Delta$).
+    - **C)** Suspend (swap out) one or more processes to free up frames.
+    - **D)** Allocate more frames to the process with the highest priority.
 
 8. If a system has a memory access time of $200\text{ns}$ and a page fault service time of $8,000,000\text{ns}$ ($8\text{ms}$), what happens to the Effective Access Time (EAT) if the page fault rate ($p$) is $10\%$ ($0.1$)?
-A) It increases slightly to $250\text{ns}$.
-B) It remains $200\text{ns}$ due to caching.
-C) It rockets to roughly $800,000\text{ns}$, causing a massive performance bottleneck.
-D) The system crashes.
+    - **A)** It increases slightly to $250\text{ns}$.
+    - **B)** It remains $200\text{ns}$ due to caching.
+    - **C)** It rockets to roughly $800,000\text{ns}$, causing a massive performance bottleneck.
+    - **D)** The system crashes.
 
 ### Answer Key & Explanations
-1. **B)** Demand paging acts as a lazy swapper, loading only the necessary pages when they are referenced (demanded) by the CPU.
-2. **C)** COW avoids the expensive copying of a process's entire memory footprint. Read-only pages can be shared indefinitely; copies are only made when a write occurs.
-3. **B)** Belady's Anomaly is a counter-intuitive phenomenon found in algorithms like FIFO where giving a process more memory actually makes its performance worse for specific reference strings.
-4. **C)** The OPT algorithm requires perfect foreknowledge of the reference string to evict the page that won't be needed for the longest time in the future.
-5. **B)** The Dirty Bit tracks whether a page has been written to. If it is 0 (clean), the page in memory matches the disk, so a write-back is unnecessary.
-6. **B)** When the allocated frames cannot contain a program's active working set, it enters a thrashing cycle of evicting and immediately reloading pages.
-7. **C)** If $D > m$, the system is over-committed. The only way to resolve the frame deficit and restore the required localities is to completely suspend a process.
-8. **C)** $EAT = (0.9 \times 200) + (0.1 \times 8000000) = 180 + 800000 = 800,180\text{ns}$. Even a 10% fault rate absolutely ruins performance because disk I/O is orders of magnitude slower than RAM.
+
+1. **B**. Demand paging acts as a lazy swapper, loading only the necessary pages when they are referenced (demanded) by the CPU.
+2. **C**. COW avoids the expensive copying of a process's entire memory footprint. Read-only pages can be shared indefinitely; copies are only made when a write occurs.
+3. **B**. Belady's Anomaly is a counter-intuitive phenomenon found in algorithms like FIFO where giving a process more memory actually makes its performance worse for specific reference strings.
+4. **C**. The OPT algorithm requires perfect foreknowledge of the reference string to evict the page that won't be needed for the longest time in the future.
+5. **B**. The Dirty Bit tracks whether a page has been written to. If it is 0 (clean), the page in memory matches the disk, so a write-back is unnecessary.
+6. **B**. When the allocated frames cannot contain a program's active working set, it enters a thrashing cycle of evicting and immediately reloading pages.
+7. **C**. If $D > m$, the system is over-committed. The only way to resolve the frame deficit and restore the required localities is to completely suspend a process.
+8. **C**. $EAT = (0.9 \times 200) + (0.1 \times 8000000) = 180 + 800000 = 800,180\text{ns}$. Even a 10% fault rate absolutely ruins performance because disk I/O is orders of magnitude slower than RAM.
 
 ## References & Navigation
 

@@ -84,50 +84,45 @@ All 4 conditions must hold simultaneously for a deadlock to exist:
 
 ---
 
-## 5. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. What system call in POSIX Linux replaces the current process's memory, code, stack, and heap with a new executable program?
-   - A) `fork()`
-   - B) `execvp()`
-   - C) `waitpid()`
-   - D) `pthread_create()`
+    - **A)** `fork()`
+    - **B)** `execvp()`
+    - **C)** `waitpid()`
+    - **D)** `pthread_create()`
 
 2. Which CPU scheduling algorithm provides the theoretical minimum average waiting time for a given set of stationary processes?
-   - A) First-Come, First-Served (FCFS)
-   - B) Round Robin (RR)
-   - C) Shortest Job First (SJF / Shortest Remaining Time First)
-   - D) Priority Scheduling with aging
+    - **A)** First-Come, First-Served (FCFS)
+    - **B)** Round Robin (RR)
+    - **C)** Shortest Job First (SJF / Shortest Remaining Time First)
+    - **D)** Priority Scheduling with aging
 
 3. Which page replacement algorithm can experience Bélády's Anomaly?
-   - A) Least Recently Used (LRU)
-   - B) Optimal (OPT)
-   - C) First-In, First-Out (FIFO)
-   - D) Least Frequently Used (LFU)
+    - **A)** Least Recently Used (LRU)
+    - **B)** Optimal (OPT)
+    - **C)** First-In, First-Out (FIFO)
+    - **D)** Least Frequently Used (LFU)
 
 4. In the Banker's Algorithm for deadlock avoidance, a system state is considered "Safe" if:
-   - A) No process is currently requesting any resource.
-   - B) There exists at least one safe execution sequence of processes that allows all processes to finish without deadlocking.
-   - C) All resource instances are currently free.
-   - D) No process has been preempted.
+    - **A)** No process is currently requesting any resource.
+    - **B)** There exists at least one safe execution sequence of processes that allows all processes to finish without deadlocking.
+    - **C)** All resource instances are currently free.
+    - **D)** No process has been preempted.
 
 5. In demand paging, what hardware mechanism allows the operating system to detect that a referenced page is not currently resident in physical RAM?
-   - A) Dirty Bit
-   - B) Valid / Invalid Bit in the Page Table Entry
-   - C) Translation Lookaside Buffer (TLB) flush
-   - D) Clock pointer bit
-
----
+    - **A)** Dirty Bit
+    - **B)** Valid / Invalid Bit in the Page Table Entry
+    - **C)** Translation Lookaside Buffer (TLB) flush
+    - **D)** Clock pointer bit
 
 ### Answer Key & Explanations
 
-1. **B) `execvp()`** — The `exec` family of system calls overlays the calling process image with a new executable binary without altering the PID. `fork()` clones the process.
-2. **C) Shortest Job First (SJF / Shortest Remaining Time First)** — SJF mathematically minimizes average waiting time by scheduling processes with the shortest burst lengths first.
-3. **C) First-In, First-Out (FIFO)** — FIFO can exhibit Bélády's anomaly because the oldest page in memory is replaced regardless of whether it is referenced frequently or recently. LRU and OPT are stack algorithms and are immune to Bélády's Anomaly.
-4. **B) There exists at least one safe execution sequence of processes that allows all processes to finish without deadlocking** — A state is safe if the system can allocate resources to each process in some sequence up to its declared maximum need and still avoid deadlock.
-5. **B) Valid / Invalid Bit in the Page Table Entry** — When a virtual address is accessed whose PTE valid bit is set to $0$ (invalid), the MMU triggers a page fault hardware trap to the OS kernel.
-
-
----
+1. **B**. The `exec` family of system calls overlays the calling process image with a new executable binary without altering the PID. `fork()` clones the process.
+2. **C**. SJF mathematically minimizes average waiting time by scheduling processes with the shortest burst lengths first.
+3. **C**. FIFO can exhibit Bélády's anomaly because the oldest page in memory is replaced regardless of whether it is referenced frequently or recently. LRU and OPT are stack algorithms and are immune to Bélády's Anomaly.
+4. **B**. A state is safe if the system can allocate resources to each process in some sequence up to its declared maximum need and still avoid deadlock.
+5. **B**. When a virtual address is accessed whose PTE valid bit is set to $0$ (invalid), the MMU triggers a page fault hardware trap to the OS kernel.
 
 ## References & Navigation
 

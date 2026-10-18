@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Data Collection]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Data Collection]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
@@ -86,41 +86,42 @@ print("\nStratified Sample:\n", stratified_sample)
 ## Multiple Choice Questions
 
 1. What is the difference between a population and a sample?
-- **A)** A sample includes all items of interest, a population is a subset
-- **B)** A population includes all items of interest, a sample is a subset
-- **C)** A population is numerical, a sample is categorical
-- **D)** They are interchangeable terms in statistics
+    - **A)** A sample includes all items of interest, a population is a subset
+    - **B)** A population includes all items of interest, a sample is a subset
+    - **C)** A population is numerical, a sample is categorical
+    - **D)** They are interchangeable terms in statistics
 
 2. Which sampling strategy involves dividing the population into non-overlapping groups and randomly sampling from each group?
-- **A)** Simple random sampling
-- **B)** Systematic sampling
-- **C)** Stratified sampling
-- **D)** Cluster sampling
+    - **A)** Simple random sampling
+    - **B)** Systematic sampling
+    - **C)** Stratified sampling
+    - **D)** Cluster sampling
 
 3. Selection bias occurs when:
-- **A)** The sample is perfectly representative of the population
-- **B)** Certain groups are systematically over or underrepresented in the sample
-- **C)** Respondents give inaccurate answers
-- **D)** Data is collected over an extremely long time period
+    - **A)** The sample is perfectly representative of the population
+    - **B)** Certain groups are systematically over or underrepresented in the sample
+    - **C)** Respondents give inaccurate answers
+    - **D)** Data is collected over an extremely long time period
 
 4. An observational study differs from an experiment in that:
-- **A)** An observational study introduces interventions or treatments
-- **B)** An experiment observes variables without interference
-- **C)** An observational study does not manipulate the environment or variables
-- **D)** Observational studies always imply causation
+    - **A)** An observational study introduces interventions or treatments
+    - **B)** An experiment observes variables without interference
+    - **C)** An observational study does not manipulate the environment or variables
+    - **D)** Observational studies always imply causation
 
 5. What is cluster sampling?
-- **A)** Every nth item is selected
-- **B)** The population is divided into groups, and entire groups are randomly selected
-- **C)** Sampling based on user convenience
-- **D)** Ensuring equal proportions of demographic features
+    - **A)** Every nth item is selected
+    - **B)** The population is divided into groups, and entire groups are randomly selected
+    - **C)** Sampling based on user convenience
+    - **D)** Ensuring equal proportions of demographic features
 
 ### Answer Key & Explanations
-1. **B)** A population is the entire group, while a sample is a subset drawn from it.
-2. **C)** Stratified sampling ensures all subgroups (strata) are proportionally represented.
-3. **B)** Selection bias happens when the sampling method is flawed, leading to unrepresentative data.
-4. **C)** Observational studies just observe, whereas experiments involve active manipulation (treatments).
-5. **B)** In cluster sampling, the population is divided into clusters, and random clusters are chosen in their entirety.
+
+1. **B**. A population is the entire group, while a sample is a subset drawn from it.
+2. **C**. Stratified sampling ensures all subgroups (strata) are proportionally represented.
+3. **B**. Selection bias happens when the sampling method is flawed, leading to unrepresentative data.
+4. **C**. Observational studies just observe, whereas experiments involve active manipulation (treatments).
+5. **B**. In cluster sampling, the population is divided into clusters, and random clusters are chosen in their entirety.
 
 ## References & Navigation
 

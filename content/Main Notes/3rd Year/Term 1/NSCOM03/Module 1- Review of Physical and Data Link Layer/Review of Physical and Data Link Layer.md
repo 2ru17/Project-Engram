@@ -10,7 +10,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Review of Physical and Data Link Layer]]
+**Tags:** #[[Computer Science]] #[[NSCOM03]] #[[Conceptual]] #[[Review of Physical and Data Link Layer]]
 
 ---
 
@@ -39,34 +39,35 @@ $$ C = 3000 \log_2(1 + 3162) \approx 3000 \times 11.62 \approx 34860 \text{ bps}
 ## Multiple Choice Questions
 
 1. What is the definition of Data Communications according to the text?
-- **A)** The exchange of digital data between two or more nodes
-- **B)** The physical connection between multiple devices
-- **C)** The processing of analog signals over wide area networks
-- **D)** The synchronization of network layers
+    - **A)** The exchange of digital data between two or more nodes
+    - **B)** The physical connection between multiple devices
+    - **C)** The processing of analog signals over wide area networks
+    - **D)** The synchronization of network layers
 
 2. Which layer ensures error-free transmission of data frames between nodes?
-- **A)** Physical Layer
-- **B)** Data Link Layer
-- **C)** Network Layer
-- **D)** Transport Layer
+    - **A)** Physical Layer
+    - **B)** Data Link Layer
+    - **C)** Network Layer
+    - **D)** Transport Layer
 
 3. According to the Shannon capacity formula $C = B \log_2(1 + SNR)$, what is the approximate capacity if $B = 3000$ Hz and $SNR = 3162$?
-- **A)** 3000 bps
-- **B)** 11620 bps
-- **C)** 34860 bps
-- **D)** 31620 bps
+    - **A)** 3000 bps
+    - **B)** 11620 bps
+    - **C)** 34860 bps
+    - **D)** 31620 bps
 
 4. Which of the following is specifically handled by the Physical layer?
-- **A)** Framing and flow control
-- **B)** Attenuation and noise
-- **C)** Error detection and correction
-- **D)** Logical addressing
+    - **A)** Framing and flow control
+    - **B)** Attenuation and noise
+    - **C)** Error detection and correction
+    - **D)** Logical addressing
 
 ### Answer Key & Explanations
-1. **A)** The text explicitly defines Data Communications as "The exchange of digital data between two or more nodes."
-2. **B)** The Data Link Layer is defined as the layer that "Ensures error-free transmission of data frames between nodes."
-3. **C)** The example calculation shows that with $B = 3000$ and $SNR = 3162$, $C \approx 3000 \times 11.62 \approx 34860$ bps.
-4. **B)** The Physical layer deals with "analog/digital signals, bandwidth, attenuation, and noise."
+
+1. **A**. The text explicitly defines Data Communications as "The exchange of digital data between two or more nodes."
+2. **B**. The Data Link Layer is defined as the layer that "Ensures error-free transmission of data frames between nodes."
+3. **C**. The example calculation shows that with $B = 3000$ and $SNR = 3162$, $C \approx 3000 \times 11.62 \approx 34860$ bps.
+4. **B**. The Physical layer deals with "analog/digital signals, bandwidth, attenuation, and noise."
 
 ## References & Navigation
 

@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Physical Layer]] #[[Conceptual]]
+**Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Physical Layer]] #[[Conceptual]]
 
 ---
 
@@ -58,78 +58,43 @@ Throughput = $\min(100, 15, 100) = 15 \text{ Mbps}$. The client's access link is
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "**Rate adaptation** dynamically changes _____ transmission rate based on the SNR (slower rates have lower BERs at low SNR)."?
-- **A)** Network
-- **B)** Protocol
-- **C)** the
-- **D)** Router
+1. What are the three main physical Impairments that degrade signals traveling across guided copper media (such as Unshielded Twisted Pair — UTP)?
+    - **A)** Routing loops, DNS spoofing, and ARP poisoning
+    - **B)** **Attenuation** (loss of signal amplitude/power over distance), **Electromagnetic / Radio Frequency Interference (EMI/RFI)** from external power lines and motors, and **Crosstalk** (inductive/capacitive coupling of signals between adjacent wire pairs).
+    - **C)** TCP slow start, head-of-line blocking, and NAT translation
+    - **D)** Total internal reflection and chromatic dispersion
 
-2. Which word completes the following sentence from the text: "Throughput is constrained by traffic volume, traffic type, network delays, and most importantly, the **bottleneck link**—the link along the end-to-end _____ with the lowest capacity (the minimum of the server's rate $R_s$, the client's rate $R_c$, or shared backbone rates)."?
-- **A)** Network
-- **B)** path
-- **C)** Router
-- **D)** Protocol
+2. Why are the insulated copper wires inside a Cat5e/Cat6 Ethernet cable **twisted together in pairs**?
+    - **A)** Simply to make the cable shorter and stiffer.
+    - **B)** Twisting the two differential conductors causes external electromagnetic noise and adjacent-pair fields to affect both wires equally (common-mode noise), which **cancels out** when the receiver takes the voltage difference between the two wires, dramatically reducing **crosstalk and EMI**.
+    - **C)** To increase the propagation speed of electrons above the speed of light.
+    - **D)** To convert digital bits into optical laser pulses.
 
-3. Which word completes the following sentence from the text: "*Issues:* Suffers from **attenuation** (signal deterioration over distance), **Electromagnetic/Radio Frequency _____ (EMI/RFI)**, and **crosstalk** (magnetic field disturbance between adjacent wires)."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** Interference
+3. What are the primary physical advantages of **Single-Mode and Multi-Mode Optical Fiber** over copper twisted-pair cabling for long-haul backbone links?
+    - **A)** Optical fiber is immune to Electromagnetic Interference (EMI) and crosstalk, suffers extremely low signal attenuation over tens to hundreds of kilometers, and supports vastly higher bandwidth (tens to hundreds of Gbps per wavelength).
+    - **B)** Optical fiber can carry high-voltage AC power to PoE devices.
+    - **C)** Optical fiber requires no transceivers or termination equipment.
+    - **D)** Optical fiber is unaffected by sharp $90^\circ$ physical bends or glass fractures.
 
-4. Which word completes the following sentence from the text: "The client receives data over an access _____ with capacity $R_c = 15 \text{ Mbps}$."?
-- **A)** link
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
+4. In wireless physical-layer transmission (IEEE 802.11 Wi-Fi), how does **Rate Adaptation** respond when a mobile user walks farther away from the Access Point and the **Signal-to-Noise Ratio (SNR)** drops?
+    - **A)** It increases the modulation rate to 1024-QAM so bits arrive before they fade.
+    - **B)** As SNR decreases, the Bit Error Rate (BER) for dense modulation schemes rises sharply; Rate Adaptation **dynamically steps down to a more robust, lower-bit-rate modulation scheme** (e.g., from 64-QAM down to 16-QAM, QPSK, or BPSK) to keep the BER within acceptable bounds.
+    - **C)** It switches the Access Point from Infrastructure Mode to Ad-Hoc Mode.
+    - **D)** It changes the MAC address of the laptop.
 
-5. Which word completes the following sentence from the text: "**Bluetooth (PAN):** Personal Area Network under _____ meters, used as a cable replacement."?
-- **A)** Protocol
-- **B)** Router
-- **C)** 10
-- **D)** Network
-
-6. Which word completes the following sentence from the text: "Throughput = $\min(100, 15, _____ = 15 \text{ Mbps}$."?
-- **A)** 100
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
-
-7. Which word completes the following sentence from the text: "It depends on physical _____ and signaling technologies."?
-- **A)** Router
-- **B)** properties
-- **C)** Network
-- **D)** Protocol
-
-8. Which word completes the following sentence from the text: "There is a shared backbone with capacity $R _____ 1 \text{ Gbps}$ serving 10 equal connections."?
-- **A)** 
-- **B)** Protocol
-- **C)** Router
-- **D)** Network
-
-9. Which word completes the following sentence from the text: "**Wireless Media:** Transmits signals via _____ radio or microwave frequencies."?
-- **A)** Protocol
-- **B)** electromagnetic
-- **C)** Network
-- **D)** Router
-
-10. Which word completes the following sentence from the text: "**Network Modes:** *Infr_____structure Mode:* Devices communicate with a base station / Access Point (AP)."?
-- **A)** Network
-- **B)** a
-- **C)** Protocol
-- **D)** Router
-
+5. In IEEE 802.11 wireless networks, what is the difference between **Infrastructure Mode** and **Ad-Hoc Mode**?
+    - **A)** In Infrastructure Mode, wireless stations communicate through a central **Base Station / Access Point (AP)** that bridges traffic onto the wired distribution network; in Ad-Hoc Mode, wireless stations communicate directly peer-to-peer with one another without an Access Point.
+    - **B)** Infrastructure Mode uses coaxial cables, whereas Ad-Hoc Mode uses fiber optics.
+    - **C)** Infrastructure Mode only supports Bluetooth under 10 meters.
+    - **D)** Ad-Hoc Mode requires a cellular 5G tower.
 
 ### Answer Key & Explanations
-1. **C)** the completes the sentence: **Rate adaptation** dynamically changes the transm...
-2. **B)** path completes the sentence: Throughput is constrained by traffic volume, traff...
-3. **D)** Interference completes the sentence: *Issues:* Suffers from **attenuation** (signal det...
-4. **A)** link completes the sentence: The client receives data over an access link with ...
-5. **C)** 10 completes the sentence: **Bluetooth (PAN):** Personal Area Network under 1...
-6. **A)** 100 completes the sentence: Throughput = $\min(100, 15, 100) = 15 \text{ Mbps}...
-7. **B)** properties completes the sentence: It depends on physical properties and signaling te...
-8. **A)**  completes the sentence: There is a shared backbone with capacity $R = 1 \t...
-9. **B)** electromagnetic completes the sentence: **Wireless Media:** Transmits signals via electrom...
-10. **B)** a completes the sentence: **Network Modes:** *Infrastructure Mode:* Devices ...
+
+1. **B**. Copper transmission suffers from resistive/dielectric attenuation over distance, external EMI/RFI pickup, and near-end/far-end crosstalk between neighboring wire pairs.
+2. **B**. Differential signaling over twisted pairs ensures that external magnetic flux induces equal voltages in alternating half-twists, canceling out at the differential receiver.
+3. **A**. Photons in glass fiber do not couple with external electromagnetic fields (zero EMI/crosstalk) and experience minimal attenuation ($\sim 0.2\text{ dB/km}$ at $1550\text{ nm}$), ideal for high-capacity backbones.
+4. **B**. At low SNR, symbols packed closely in constellation space (e.g., 64-QAM) are easily corrupted by noise; stepping down to QPSK/BPSK separates constellation points, lowering BER at the cost of lower bit rate.
+5. **A**. Infrastructure mode associates wireless clients with an AP (forming a Basic Service Set connected to a wired LAN), whereas Ad-Hoc mode forms an Independent BSS directly between wireless peers.
 
 ## References & Navigation
 

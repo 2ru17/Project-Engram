@@ -11,111 +11,68 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Priori Probability]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Priori Probability]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Priori Probability**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+**A Priori (Classical) Probability** assigns probabilities **before** any empirical trials are performed, by deductive reasoning from the physical or mathematical symmetry of the experiment (such as fair coins, balanced dice, well-shuffled decks, or cryptographic uniform random number generators).
 
 ## Key Definitions
-- **Priori Probability**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Priori Probability** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **A Priori Probability Formula:** When symmetry guarantees that all $N = |S|$ elementary outcomes in sample space $S$ are equally likely, the a priori probability of event $E \subseteq S$ is:
+  $$P(E) = \frac{\text{Number of outcomes favorable to } E}{\text{Total number of equiprobable outcomes in } S} = \frac{n(E)}{n(S)}$$
+- **Contrast with A Posteriori (Empirical / Relative Frequency) Probability:** A priori probability is deduced *prior to experience* from structural symmetry, whereas empirical probability $\hat{P}(E) = \frac{f}{n}$ is estimated *after observing* $n$ repeated trials.
+- **Contrast with Bayesian Prior / Posterior:** In Bayesian inference, the *prior* $P(H)$ is the initial probability before new data $D$, updated via Bayes' Rule to the *posterior* $P(H \mid D)$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Priori Probability**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** Before drawing any card from a well-shuffled $52$-card deck, determine the a priori probability of drawing a **Face Card** (Jack, Queen, or King).
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Priori Probability** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- Each of the $4$ suits has $3$ face cards, giving $n(E) = 4 \times 3 = 12$ favorable cards out of $n(S) = 52$ equally likely cards.
+- $P(\text{Face Card}) = \frac{12}{52} = \frac{3}{13} \approx 0.2308$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. On what basis does **a priori (classical) probability** determine the probability of an event?
+    - **A)** By running $10,000$ physical experiments and counting frequencies.
+    - **B)** Deductively, prior to conducting trials, based on the symmetry and equiprobability of the elementary outcomes in the sample space.
+    - **C)** Based purely on personal intuition or gut feeling.
+    - **D)** By always setting every event's probability to $0.5$.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Why can we NOT use a priori symmetry alone to determine the probability that a thumbtack tossed on a table lands point-up vs. point-down?
+    - **A)** Because the physical geometry of a thumbtack is asymmetric, so the two outcomes (point-up and point-down) are NOT equally likely; empirical (relative frequency) trials are required instead.
+    - **B)** Because a thumbtack has more than two outcomes.
+    - **C)** Because $P(S) \ne 1$ for physical objects.
+    - **D)** Because thumbtacks are continuous random variables.
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. What is the a priori probability of drawing a **Heart or an Ace** on a single draw from a well-shuffled $52$-card deck?
+    - **A)** $\frac{17}{52}$
+    - **B)** $\frac{13}{52} \times \frac{4}{52}$
+    - **C)** $\frac{16}{52} = \frac{4}{13}$
+    - **D)** $\frac{1}{4}$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. How does the **Principle of Indifference** (Principle of Insufficient Reason) relate to a priori probability?
+    - **A)** It requires $N$ to be infinite.
+    - **B)** It states that all compound events have equal probability.
+    - **C)** It states that probabilities do not matter in statistics.
+    - **D)** It states that if there are $N$ mutually exclusive and exhaustive elementary possibilities that are indistinguishable except for their names (symmetric), each should be assigned probability $\frac{1}{N}$.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. As the number of real-world trials $n \to \infty$ on a physically fair die, how does the empirical relative frequency $\frac{f_n(E)}{n}$ relate to the theoretical a priori probability $P(E)$?
+    - **A)** They diverge to infinity.
+    - **B)** By Bernoulli's Law of Large Numbers, the empirical relative frequency converges in probability to the theoretical a priori probability $P(E)$.
+    - **C)** The empirical frequency is always exactly equal to $P(E)$ for every small $n$.
+    - **D)** The a priori probability changes after each roll.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. A priori probability relies on structural symmetry of the sample space to deduce $P(E) = |E|/|S|$ before any experimental data are collected.
+2. **A**. Unlike a symmetric coin or cube, a thumbtack's center of mass and shape make its two landing states physically unequal in likelihood, invalidating the equiprobable assumption.
+3. **C**. There are $13$ Hearts and $4$ Aces, with $1$ overlap (the Ace of Hearts). Thus $n(H \cup A) = 13 + 4 - 1 = 16$, giving $P(H \cup A) = \frac{16}{52} = \frac{4}{13}$.
+4. **D**. Formulated by Jakob Bernoulli and Pierre-Simon Laplace, the Principle of Indifference assigns uniform probability $1/N$ to symmetric elementary outcomes.
+5. **B**. The Law of Large Numbers bridges classical (a priori) and frequentist (empirical) probability: as $n \to \infty$, $\hat{P}_n(E) = f_n(E)/n \to P(E)$.
 
 ## References & Navigation
 

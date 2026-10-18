@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Web Development]] #[[CCAPDEV]] #[[MongoDB]] #[[Code Snippets]] #[[M5]]
+**Tags:** #[[Web Development]] #[[CCAPDEV]] #[[MongoDB]] #[[Code Snippets]] #[[M5]]
 
 ---
 
@@ -85,27 +85,28 @@ This is to prevent your credentials from being leaked to the internet!
 ## Multiple Choice Questions
 
 1. In MongoDB, a "document" is functionally equivalent to which concept in a traditional Relational Database Management System (RDBMS)?
-- **A)** A Table
-- **B)** A Schema
-- **C)** A Tuple (Row)
-- **D)** A Column
+    - **A)** A Table
+    - **B)** A Schema
+    - **C)** A Tuple (Row)
+    - **D)** A Column
 
 2. Which of the following best describes the CommonJS syntax used by default in Node.js for importing modules?
-- **A)** `import <name> from <module_name>;`
-- **B)** `const <name> = require(<module_name>);`
-- **C)** `include <module_name> as <name>;`
-- **D)** `loadModule(<module_name>);`
+    - **A)** `import <name> from <module_name>;`
+    - **B)** `const <name> = require(<module_name>);`
+    - **C)** `include <module_name> as <name>;`
+    - **D)** `loadModule(<module_name>);`
 
 3. Why is it considered a best practice to use `.env` files for configuration values and credentials?
-- **A)** Because `.env` files automatically compress data to save disk space.
-- **B)** Because they execute much faster than standard JavaScript files.
-- **C)** Because they allow sensitive information to be kept out of version control (like git) to prevent credentials from being leaked.
-- **D)** Because `.env` files are natively encrypted by the Node.js runtime environment.
+    - **A)** Because `.env` files automatically compress data to save disk space.
+    - **B)** Because they execute much faster than standard JavaScript files.
+    - **C)** Because they allow sensitive information to be kept out of version control (like git) to prevent credentials from being leaked.
+    - **D)** Because `.env` files are natively encrypted by the Node.js runtime environment.
 
 ### Answer Key & Explanations
-1. **C)** In MongoDB, a collection holds different documents, where a document is equivalent to a tuple (row) in an RDBMS.
-2. **B)** CommonJS is the Node.js default for imports and follows the syntax `const <name> = require(<module_name>);`.
-3. **C)** Config values, credentials, and sensitive information are stored in `.env` files which are ignored from version control to prevent leaks.
+
+1. **C**. In MongoDB, a collection holds different documents, where a document is equivalent to a tuple (row) in an RDBMS.
+2. **B**. CommonJS is the Node.js default for imports and follows the syntax `const <name> = require(<module_name>);`.
+3. **C**. Config values, credentials, and sensitive information are stored in `.env` files which are ignored from version control to prevent leaks.
 
 ## References & Navigation
 

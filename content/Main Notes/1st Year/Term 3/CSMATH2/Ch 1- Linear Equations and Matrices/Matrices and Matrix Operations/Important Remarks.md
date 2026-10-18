@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
+**Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
 
 ---
 
@@ -41,37 +41,34 @@ Example: Let A=[1​2 2​4​], B=[2​1 3​2​], C=[−2​7 5​−1​]
 
 > TL;DR — Matrix algebra differs from real-number algebra: no cancellation law, no zero-product property, and multiplication is not commutative.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. In matrix algebra, if the product of two matrices $AB = O$ (where $O$ is the zero matrix), what can logically be concluded?
-- **A)** Either $A = O$ or $B = O$.
-- **B)** Both $A$ and $B$ must be zero matrices.
-- **C)** Neither $A$ nor $B$ necessarily has to be the zero matrix.
-- **D)** At least one of the matrices must be an identity matrix.
+    - **A)** Either $A = O$ or $B = O$.
+    - **B)** Both $A$ and $B$ must be zero matrices.
+    - **C)** Neither $A$ nor $B$ necessarily has to be the zero matrix.
+    - **D)** At least one of the matrices must be an identity matrix.
 
 2. How does the cancellation law behave in standard matrix multiplication?
-- **A)** It always holds; if $AB = AC$, then $B = C$.
-- **B)** It only holds when both $B$ and $C$ are zero matrices.
-- **C)** It holds as long as matrix $A$ is not the zero matrix.
-- **D)** It generally does not hold; $AB = AC$ does not guarantee that $B = C$.
+    - **A)** It always holds; if $AB = AC$, then $B = C$.
+    - **B)** It only holds when both $B$ and $C$ are zero matrices.
+    - **C)** It holds as long as matrix $A$ is not the zero matrix.
+    - **D)** It generally does not hold; $AB = AC$ does not guarantee that $B = C$.
 
 3. Which of the following describes a common pitfall when first learning matrix algebra?
-- **A)** Applying real-number algebra rules like cancellation without verifying they hold for matrices.
-- **B)** Assuming that all zero matrices have the same dimensions.
-- **C)** Overcomplicating matrix addition by checking dimensions.
-- **D)** Using the identity matrix to test for associativity.
+    - **A)** Applying real-number algebra rules like cancellation without verifying they hold for matrices.
+    - **B)** Assuming that all zero matrices have the same dimensions.
+    - **C)** Overcomplicating matrix addition by checking dimensions.
+    - **D)** Using the identity matrix to test for associativity.
 
 ### Answer Key & Explanations
-1. **C)** The zero product property from real numbers does not apply. $AB = O$ does not necessarily imply that $A = O$ or $B = O$.
-2. **D)** The cancellation law does not generally hold for matrix multiplication, meaning $AB = AC$ does not always imply $B = C$, even if $A$ is not the zero matrix.
-3. **A)** A common pitfall is treating matrices like real numbers and falsely assuming that properties like commutativity and the cancellation law apply.
+
+1. **C**. The zero product property from real numbers does not apply. $AB = O$ does not necessarily imply that $A = O$ or $B = O$.
+2. **D**. The cancellation law does not generally hold for matrix multiplication, meaning $AB = AC$ does not always imply $B = C$, even if $A$ is not the zero matrix.
+3. **A**. A common pitfall is treating matrices like real numbers and falsely assuming that properties like commutativity and the cancellation law apply.
 
 ## References & Navigation
 

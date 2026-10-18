@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Problem Solving]] #[[M2]]
+**Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Problem Solving]] #[[M2]]
 
 ---
 
@@ -45,76 +45,77 @@ A single-bit adder can be described by boolean functions: **Sum:** $Y = A'B + AB
 ## Multiple Choice Questions
 
 1. Because computers process only bits, how are character data types represented internally?
-- **A)** They are stored directly as pixel matrices.
-- **B)** They are mapped to numeric values using standard coding tables.
-- **C)** They are converted into floating-point integers.
-- **D)** They are compressed into single-bit Boolean flags.
+    - **A)** They are stored directly as pixel matrices.
+    - **B)** They are mapped to numeric values using standard coding tables.
+    - **C)** They are converted into floating-point integers.
+    - **D)** They are compressed into single-bit Boolean flags.
 
 2. Which standard is a 7-bit or 8-bit encoding format commonly used in early systems for English and basic symbols?
-- **A)** Unicode
-- **B)** BCD (Binary-Coded Decimal)
-- **C)** ASCII
-- **D)** EBCDIC
+    - **A)** Unicode
+    - **B)** BCD (Binary-Coded Decimal)
+    - **C)** ASCII
+    - **D)** EBCDIC
 
 3. What is the primary advantage of the Unicode standard over ASCII?
-- **A)** It uses less memory space (only 4 bits per character).
-- **B)** It is exclusively designed for device control codes.
-- **C)** It supports a vast array of international characters using 16-bit or 32-bit formatting.
-- **D)** It inherently performs bitwise logic operations faster.
+    - **A)** It uses less memory space (only 4 bits per character).
+    - **B)** It is exclusively designed for device control codes.
+    - **C)** It supports a vast array of international characters using 16-bit or 32-bit formatting.
+    - **D)** It inherently performs bitwise logic operations faster.
 
 4. In CPU logic design, how are Boolean true and false values typically represented when conceptualized as integer formats?
-- **A)** 1 corresponds to false, and 0 corresponds to true.
-- **B)** 0 corresponds to false, and any non-zero value corresponds to true.
-- **C)** Negative numbers correspond to false, positive numbers to true.
-- **D)** 0 corresponds to false, and exactly 255 corresponds to true.
+    - **A)** 1 corresponds to false, and 0 corresponds to true.
+    - **B)** 0 corresponds to false, and any non-zero value corresponds to true.
+    - **C)** Negative numbers correspond to false, positive numbers to true.
+    - **D)** 0 corresponds to false, and exactly 255 corresponds to true.
 
 5. Which logic gate outputs true (1) only if ALL of its inputs are true?
-- **A)** NOT
-- **B)** OR
-- **C)** XOR
-- **D)** AND
+    - **A)** NOT
+    - **B)** OR
+    - **C)** XOR
+    - **D)** AND
 
 6. What is the function of an XOR (Exclusive-OR) logic gate?
-- **A)** It outputs true if at least one input is true.
-- **B)** It negates the given input.
-- **C)** It outputs true if the inputs differ (an odd number of 1s).
-- **D)** It outputs true only if all inputs are false.
+    - **A)** It outputs true if at least one input is true.
+    - **B)** It negates the given input.
+    - **C)** It outputs true if the inputs differ (an odd number of 1s).
+    - **D)** It outputs true only if all inputs are false.
 
 7. Non-printable characters like Carriage Return and Line Feed are examples of:
-- **A)** Bitwise masks
-- **B)** Device Control Codes
-- **C)** Boolean operators
-- **D)** Floating-point extensions
+    - **A)** Bitwise masks
+    - **B)** Device Control Codes
+    - **C)** Boolean operators
+    - **D)** Floating-point extensions
 
 8. What is the result of performing a Bitwise NOT on the binary value 11110011?
-- **A)** 11111111
-- **B)** 00000000
-- **C)** 00001100
-- **D)** 10000101
+    - **A)** 11111111
+    - **B)** 00000000
+    - **C)** 00001100
+    - **D)** 10000101
 
 9. Which logic gate operation is equivalent to the Boolean sum function Y = A'B + AB' in a single-bit adder?
-- **A)** AND
-- **B)** OR
-- **C)** NOT
-- **D)** XOR
+    - **A)** AND
+    - **B)** OR
+    - **C)** NOT
+    - **D)** XOR
 
 10. When parsing the hexadecimal string 434349434F4D50, what type of data structure is being interpreted?
-- **A)** A Boolean array
-- **B)** A character string
-- **C)** A 64-bit integer
-- **D)** A single Unicode symbol
+    - **A)** A Boolean array
+    - **B)** A character string
+    - **C)** A 64-bit integer
+    - **D)** A single Unicode symbol
 
 ### Answer Key & Explanations
-1. **B)** The note specifies that characters are represented indirectly by mapping them to numeric values via standard coding tables.
-2. **C)** ASCII is defined as a standard 7-bit (or 8-bit) encoding format supporting at least 128 characters, common for English.
-3. **C)** Unicode is described as a newer 16-bit or 32-bit standard designed to support a vast array of international characters.
-4. **B)** CPU designers often use integer formats where 0 corresponds to false and any non-zero value corresponds to true.
-5. **D)** The AND gate outputs true (1) only if all inputs are true.
-6. **C)** The XOR gate outputs true (1) if the inputs differ (meaning there is an odd number of 1s).
-7. **B)** Device Control Codes are defined as non-printable characters used for formatting text when communicating with output devices.
-8. **C)** A Bitwise NOT inverts all bits, transforming 11110011 into 00001100.
-9. **D)** The Sum function in a single-bit adder corresponds explicitly to the XOR operation.
-10. **B)** The worked example demonstrates interpreting this exact hexadecimal string as the ASCII character string CCICOMP.
+
+1. **B**. The note specifies that characters are represented indirectly by mapping them to numeric values via standard coding tables.
+2. **C**. ASCII is defined as a standard 7-bit (or 8-bit) encoding format supporting at least 128 characters, common for English.
+3. **C**. Unicode is described as a newer 16-bit or 32-bit standard designed to support a vast array of international characters.
+4. **B**. CPU designers often use integer formats where 0 corresponds to false and any non-zero value corresponds to true.
+5. **D**. The AND gate outputs true (1) only if all inputs are true.
+6. **C**. The XOR gate outputs true (1) if the inputs differ (meaning there is an odd number of 1s).
+7. **B**. Device Control Codes are defined as non-printable characters used for formatting text when communicating with output devices.
+8. **C**. A Bitwise NOT inverts all bits, transforming 11110011 into 00001100.
+9. **D**. The Sum function in a single-bit adder corresponds explicitly to the XOR operation.
+10. **B**. The worked example demonstrates interpreting this exact hexadecimal string as the ASCII character string CCICOMP.
 
 ## References & Navigation
 

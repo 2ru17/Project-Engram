@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSINTSY]] #[[Conceptual]] #[[Artificial Intelligence Overview]]
+**Tags:** #[[Computer Science]] #[[CSINTSY]] #[[Conceptual]] #[[Artificial Intelligence Overview]]
 
 ---
 
@@ -70,76 +70,77 @@ The journey of AI is marked by significant milestones and paradigm shifts:
 ## Multiple Choice Questions
 
 1. Which of the following best describes the "Modeling" step in the AI paradigm?
-- **A)** Representing a real-world task as an abstract mathematical or computational model
-- **B)** Executing systematic algorithms to find a solution
-- **C)** Adjusting the system's rules based on new data
-- **D)** Identifying the real-world problem to be solved
+    - **A)** Representing a real-world task as an abstract mathematical or computational model
+    - **B)** Executing systematic algorithms to find a solution
+    - **C)** Adjusting the system's rules based on new data
+    - **D)** Identifying the real-world problem to be solved
 
 2. What is the primary difference between Classical AI and Data-Driven AI?
-- **A)** Classical AI learns from data, while Data-Driven AI relies on explicit rules.
-- **B)** Classical AI is a top-down approach based on explicit rules, while Data-Driven AI is a bottom-up approach that learns from data patterns.
-- **C)** Classical AI is used only for natural language processing, while Data-Driven AI is used for expert systems.
-- **D)** There is no difference; they are synonymous terms for the same approach.
+    - **A)** Classical AI learns from data, while Data-Driven AI relies on explicit rules.
+    - **B)** Classical AI is a top-down approach based on explicit rules, while Data-Driven AI is a bottom-up approach that learns from data patterns.
+    - **C)** Classical AI is used only for natural language processing, while Data-Driven AI is used for expert systems.
+    - **D)** There is no difference; they are synonymous terms for the same approach.
 
 3. The Turing Test, proposed in 1950, is primarily designed to:
-- **A)** Measure the computational speed of a machine
-- **B)** Determine a machine's ability to exhibit intelligent behavior indistinguishable from a human
-- **C)** Evaluate a machine's mathematical modeling capabilities
-- **D)** Assess the efficiency of deep learning algorithms
+    - **A)** Measure the computational speed of a machine
+    - **B)** Determine a machine's ability to exhibit intelligent behavior indistinguishable from a human
+    - **C)** Evaluate a machine's mathematical modeling capabilities
+    - **D)** Assess the efficiency of deep learning algorithms
 
 4. Which academic discipline contributes to AI by answering the question, "How do we make optimal decisions to maximize payoffs?"
-- **A)** Philosophy
-- **B)** Linguistics
-- **C)** Economics
-- **D)** Psychology
+    - **A)** Philosophy
+    - **B)** Linguistics
+    - **C)** Economics
+    - **D)** Psychology
 
 5. What was a significant cause of the First AI Winter (1974-1980)?
-- **A)** The invention of the perceptron
-- **B)** The failure of rule-based machine translation to handle semantic ambiguity
-- **C)** The success of expert systems like MYCIN
-- **D)** The crash of the LISP machine market
+    - **A)** The invention of the perceptron
+    - **B)** The failure of rule-based machine translation to handle semantic ambiguity
+    - **C)** The success of expert systems like MYCIN
+    - **D)** The crash of the LISP machine market
 
 6. In the context of AI definitions, "Reasoning" refers to:
-- **A)** Performing non-trivial tasks
-- **B)** Improving performance over time through experience
-- **C)** Drawing logical inferences from facts
-- **D)** Perceiving the environment and executing actions
+    - **A)** Performing non-trivial tasks
+    - **B)** Improving performance over time through experience
+    - **C)** Drawing logical inferences from facts
+    - **D)** Perceiving the environment and executing actions
 
 7. Which historical event is credited with coining the term "Artificial Intelligence"?
-- **A)** The publication of the Turing Test in 1950
-- **B)** The Georgetown-IBM Experiment
-- **C)** The Dartmouth Workshop in 1956
-- **D)** The development of AlexNet in 2012
+    - **A)** The publication of the Turing Test in 1950
+    - **B)** The Georgetown-IBM Experiment
+    - **C)** The Dartmouth Workshop in 1956
+    - **D)** The development of AlexNet in 2012
 
 8. What characterizes an "Intelligent System"?
-- **A)** A system that solely relies on pre-programmed if-then statements without perception
-- **B)** A computational framework designed to perceive its environment, evaluate conditions, and execute actions analogous to human cognition
-- **C)** A machine that can only perform mathematical calculations at high speeds
-- **D)** A system that requires constant human intervention to make decisions
+    - **A)** A system that solely relies on pre-programmed if-then statements without perception
+    - **B)** A computational framework designed to perceive its environment, evaluate conditions, and execute actions analogous to human cognition
+    - **C)** A machine that can only perform mathematical calculations at high speeds
+    - **D)** A system that requires constant human intervention to make decisions
 
 9. The modern resurgence of AI is largely attributed to advancements in:
-- **A)** Symbolic logic and expert systems
-- **B)** Deep Learning and Transformer architectures
-- **C)** Rule-based machine translation
-- **D)** LISP programming environments
+    - **A)** Symbolic logic and expert systems
+    - **B)** Deep Learning and Transformer architectures
+    - **C)** Rule-based machine translation
+    - **D)** LISP programming environments
 
 10. In the Modeling-Inference-Learning loop, updating edge weights in a graph based on real-time traffic updates is an example of:
-- **A)** Modeling
-- **B)** Inference
-- **C)** Learning
-- **D)** The real-world problem
+    - **A)** Modeling
+    - **B)** Inference
+    - **C)** Learning
+    - **D)** The real-world problem
 
 ### Answer Key & Explanations
-1. **A** - Modeling is the process of translating a real-world problem into a formal abstraction that algorithms can process.
-2. **B** - Classical AI uses predefined rules to deduce solutions, whereas Data-Driven AI infers the rules from a large dataset of examples.
-3. **B** - Alan Turing's test evaluates whether a machine can engage in text conversation so human-like that an evaluator cannot tell it is a machine.
-4. **C** - Economics studies the allocation of resources and decision-making processes aimed at maximizing utility or payoffs.
-5. **B** - The inability of early symbolic systems to grasp the nuances and semantic ambiguity of human languages led to unmet expectations and reduced funding.
-6. **C** - Reasoning in AI involves using logic to deduce new information or conclusions from a set of known facts.
-7. **C** - John McCarthy officially introduced the term "Artificial Intelligence" during the seminal Dartmouth Workshop in 1956.
-8. **B** - Intelligent systems are defined by their ability to close the loop between perception, evaluation, and action in a cognitively inspired manner.
-9. **B** - The vast availability of data and immense compute power enabled Deep Learning and Transformers to break previous performance barriers, leading to today's AI boom.
-10. **C** - Learning involves refining the model based on experience; dynamically adjusting weights based on new observations is a direct application of this principle.
+
+1. **A**. Modeling is the process of translating a real-world problem into a formal abstraction that algorithms can process.
+2. **B**. Classical AI uses predefined rules to deduce solutions, whereas Data-Driven AI infers the rules from a large dataset of examples.
+3. **B**. Alan Turing's test evaluates whether a machine can engage in text conversation so human-like that an evaluator cannot tell it is a machine.
+4. **C**. Economics studies the allocation of resources and decision-making processes aimed at maximizing utility or payoffs.
+5. **B**. The inability of early symbolic systems to grasp the nuances and semantic ambiguity of human languages led to unmet expectations and reduced funding.
+6. **C**. Reasoning in AI involves using logic to deduce new information or conclusions from a set of known facts.
+7. **C**. John McCarthy officially introduced the term "Artificial Intelligence" during the seminal Dartmouth Workshop in 1956.
+8. **B**. Intelligent systems are defined by their ability to close the loop between perception, evaluation, and action in a cognitively inspired manner.
+9. **B**. The vast availability of data and immense compute power enabled Deep Learning and Transformers to break previous performance barriers, leading to today's AI boom.
+10. **C**. Learning involves refining the model based on experience; dynamically adjusting weights based on new observations is a direct application of this principle.
 
 ## References & Navigation
 

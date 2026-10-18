@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   async headers() {
+    const isDev = process.env.NODE_ENV === "development";
     return [
       {
         source: "/(.*)",
@@ -21,13 +22,13 @@ const nextConfig: NextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              // Next.js inline scripts (theme init, JSON-LD) + KaTeX inline styles
-              "script-src 'self' 'unsafe-inline'",
+              // Next.js inline scripts (theme init, JSON-LD); React/Turbopack dev mode requires unsafe-eval for callstack reconstruction
+              `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
               // KaTeX fonts and inline styles, Mermaid renders
               "style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net",
               "font-src 'self' https://fonts.gstatic.com data:",
               "img-src 'self' data: blob:",
-              "connect-src 'self'",
+              `connect-src 'self'${isDev ? " ws: wss:" : ""}`,
               "frame-src 'none'",
               "object-src 'none'",
               "base-uri 'self'",

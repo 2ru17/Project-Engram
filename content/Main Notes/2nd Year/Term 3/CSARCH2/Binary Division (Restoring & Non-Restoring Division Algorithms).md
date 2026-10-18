@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Binary Division (Restoring & Non-Restoring Division Algorithms)]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Hardware Modeling]] #[[Binary Division (Restoring & Non-Restoring Division Algorithms)]]
 
 ---
 
@@ -222,34 +222,34 @@ Performance Advantage of Non-Restoring Division:
 ## Multiple Choice Questions
 
 1. In the Restoring Division algorithm, what action is taken when a trial subtraction produces a negative accumulator value ($A < 0$)?
-- **A)** The quotient bit $Q_0$ is set to `1`, and $A$ is left unchanged
-- **B)** The original value of $A$ is restored via $A \leftarrow A + M$, and quotient bit $Q_0$ is set to `0`
-- **C)** The divisor register $M$ is shifted right by 1 bit
-- **D)** The division aborts immediately with a divide-by-zero trap
+    - **A)** The quotient bit $Q_0$ is set to `1`, and $A$ is left unchanged
+    - **B)** The original value of $A$ is restored via $A \leftarrow A + M$, and quotient bit $Q_0$ is set to `0`
+    - **C)** The divisor register $M$ is shifted right by 1 bit
+    - **D)** The division aborts immediately with a divide-by-zero trap
 
 2. What algebraic relationship enables Non-Restoring Division to avoid restoring additions on intermediate cycles?
-- **A)** $2(A + M) - M = 2A + M$
-- **B)** $(A - M)^2 = A^2 - 2AM + M^2$
-- **C)** $A \oplus M = A \cdot \overline{M} + \overline{A} \cdot M$
-- **D)** $A - M = A + \overline{M} + 1$
+    - **A)** $2(A + M) - M = 2A + M$
+    - **B)** $(A - M)^2 = A^2 - 2AM + M^2$
+    - **C)** $A \oplus M = A \cdot \overline{M} + \overline{A} \cdot M$
+    - **D)** $A - M = A + \overline{M} + 1$
 
 3. For an $n$-bit dividend and divisor, what is the minimum required bit width of the accumulator register $A$ during hardware division?
-- **A)** $n - 1$ bits
-- **B)** $n$ bits
-- **C)** $n + 1$ bits
-- **D)** $2n$ bits
+    - **A)** $n - 1$ bits
+    - **B)** $n$ bits
+    - **C)** $n + 1$ bits
+    - **D)** $2n$ bits
 
 4. In Non-Restoring Division, if the final remainder in register $A$ after $n$ cycles is negative ($A_n = 1$), what correction must be performed?
-- **A)** Invert all bits of the quotient register $Q$
-- **B)** Add the divisor back to the accumulator: $A \leftarrow A + M$
-- **C)** Subtract the divisor from the accumulator: $A \leftarrow A - M$
-- **D)** Decrement the quotient register by 1: $Q \leftarrow Q - 1$
+    - **A)** Invert all bits of the quotient register $Q$
+    - **B)** Add the divisor back to the accumulator: $A \leftarrow A + M$
+    - **C)** Subtract the divisor from the accumulator: $A \leftarrow A - M$
+    - **D)** Decrement the quotient register by 1: $Q \leftarrow Q - 1$
 
 5. Why is hardware integer division generally slower than integer multiplication in modern superscalar processors?
-- **A)** Multipliers use analog voltages whereas dividers use digital logic
-- **B)** Division requires recursive remainder feedback where each quotient bit depends sequentially on the sign of the preceding operation
-- **C)** Memory buses cannot transmit dividend and divisor simultaneously
-- **D)** Carry lookahead logic cannot be used in subtraction operations
+    - **A)** Multipliers use analog voltages whereas dividers use digital logic
+    - **B)** Division requires recursive remainder feedback where each quotient bit depends sequentially on the sign of the preceding operation
+    - **C)** Memory buses cannot transmit dividend and divisor simultaneously
+    - **D)** Carry lookahead logic cannot be used in subtraction operations
 
 ### Answer Key & Explanations
 

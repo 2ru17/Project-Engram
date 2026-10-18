@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCPROG3]] #[[The Object-Oriented Paradigm and an Overview of Java]] #[[Conceptual]] #[[M1]]
+**Tags:** #[[Computer Science]] #[[CCPROG3]] #[[The Object-Oriented Paradigm and an Overview of Java]] #[[Conceptual]] #[[M1]]
 
 ---
 
@@ -82,77 +82,77 @@ By binding the `balance` state and the `deposit(amount)` method into a single `A
 ## Multiple Choice Questions
 
 1. Which of the following is NOT one of the four pillars of Object-Oriented Programming?
-- **A)** Abstraction
-- **B)** Encapsulation
-- **C)** Compilation
-- **D)** Inheritance
+    - **A)** Abstraction
+    - **B)** Encapsulation
+    - **C)** Compilation
+    - **D)** Inheritance
 
 2. What is the primary role of the Java Virtual Machine (JVM)?
-- **A)** To compile Java source code into Bytecode.
-- **B)** To execute compiled Java Bytecode and provide platform independence.
-- **C)** To provide development tools like debuggers.
-- **D)** To write Java programs.
+    - **A)** To compile Java source code into Bytecode.
+    - **B)** To execute compiled Java Bytecode and provide platform independence.
+    - **C)** To provide development tools like debuggers.
+    - **D)** To write Java programs.
 
 3. Which concept refers to hiding complex implementation details and showing only the essential features of an object?
-- **A)** Polymorphism
-- **B)** Inheritance
-- **C)** Abstraction
-- **D)** Encapsulation
+    - **A)** Polymorphism
+    - **B)** Inheritance
+    - **C)** Abstraction
+    - **D)** Encapsulation
 
 4. In the Java platform, what does the JDK primarily contain that the JRE does not?
-- **A)** The JVM
-- **B)** Development tools such as the compiler (`javac`)
-- **C)** Core class libraries
-- **D)** Execution environments
+    - **A)** The JVM
+    - **B)** Development tools such as the compiler (`javac`)
+    - **C)** Core class libraries
+    - **D)** Execution environments
 
 5. How does OOP differ fundamentally from procedural programming?
-- **A)** OOP groups data and the methods that operate on them into cohesive objects.
-- **B)** OOP relies solely on global variables to manage state.
-- **C)** Procedural programming is class-based.
-- **D)** OOP lacks the ability to reuse code.
+    - **A)** OOP groups data and the methods that operate on them into cohesive objects.
+    - **B)** OOP relies solely on global variables to manage state.
+    - **C)** Procedural programming is class-based.
+    - **D)** OOP lacks the ability to reuse code.
 
 6. Which principle restricts direct access to some of an object's components, often via access modifiers?
-- **A)** Inheritance
-- **B)** Polymorphism
-- **C)** Encapsulation
-- **D)** Abstraction
+    - **A)** Inheritance
+    - **B)** Polymorphism
+    - **C)** Encapsulation
+    - **D)** Abstraction
 
 7. What is Java Bytecode?
-- **A)** The native machine code of a specific operating system.
-- **B)** The source code written by the developer.
-- **C)** An intermediate, architecture-neutral code executed by the JVM.
-- **D)** A special library used for networking.
+    - **A)** The native machine code of a specific operating system.
+    - **B)** The source code written by the developer.
+    - **C)** An intermediate, architecture-neutral code executed by the JVM.
+    - **D)** A special library used for networking.
 
 8. Which of the following best describes polymorphism?
-- **A)** The ability to derive a new class from an existing one.
-- **B)** The ability of different objects to respond uniquely to the same method call.
-- **C)** Bundling data and methods into a single unit.
-- **D)** Hiding the internal state of an object.
+    - **A)** The ability to derive a new class from an existing one.
+    - **B)** The ability of different objects to respond uniquely to the same method call.
+    - **C)** Bundling data and methods into a single unit.
+    - **D)** Hiding the internal state of an object.
 
 9. Why is Java often described with the phrase "Write Once, Run Anywhere"?
-- **A)** Because Java source code is automatically translated into C++ code.
-- **B)** Because compiled Java Bytecode can run on any device equipped with a JVM.
-- **C)** Because Java is only designed for one specific operating system.
-- **D)** Because Java doesn't require compiling.
+    - **A)** Because Java source code is automatically translated into C++ code.
+    - **B)** Because compiled Java Bytecode can run on any device equipped with a JVM.
+    - **C)** Because Java is only designed for one specific operating system.
+    - **D)** Because Java doesn't require compiling.
 
 10. In an object-oriented banking system, why is the `balance` often made private?
-- **A)** To prevent the program from compiling.
-- **B)** To enforce encapsulation and prevent uncontrolled modification.
-- **C)** To allow any part of the program to modify it directly.
-- **D)** Because inheritance requires all attributes to be private.
+    - **A)** To prevent the program from compiling.
+    - **B)** To enforce encapsulation and prevent uncontrolled modification.
+    - **C)** To allow any part of the program to modify it directly.
+    - **D)** Because inheritance requires all attributes to be private.
 
 ### Answer Key & Explanations
 
-1. **C** - Compilation is a process in programming, but it is not a foundational theoretical pillar of OOP. The four pillars are Encapsulation, Abstraction, Inheritance, and Polymorphism.
-2. **B** - The JVM acts as an interpreter/compiler at runtime that converts intermediate Bytecode into the native machine code of the host system.
-3. **C** - Abstraction deliberately hides the underlying complexity of an object's operations, exposing only what is necessary for interaction.
-4. **B** - The JDK is meant for developers and includes tools like `javac`, whereas the JRE is purely for running existing Java applications.
-5. **A** - Procedural programming separates data from the functions that operate on it, while OOP encapsulates them together into cohesive objects.
-6. **C** - Encapsulation acts as a protective shield that prevents the data from being accessed by code outside this shield.
-7. **C** - Bytecode is the compiled format of Java programs. It is independent of the underlying hardware, allowing the JVM to translate it for specific platforms.
-8. **B** - Polymorphism allows a common interface to be used for a general class of actions, with specific actions determined by the exact nature of the situation (the object type).
-9. **B** - The reliance on the JVM to translate Bytecode ensures that the exact same compiled output can be run on Windows, Mac, or Linux without recompilation.
-10. **B** - Making attributes private enforces encapsulation, ensuring that external entities can only interact with the `balance` through controlled, validated methods like `deposit`.
+1. **C**. Compilation is a process in programming, but it is not a foundational theoretical pillar of OOP. The four pillars are Encapsulation, Abstraction, Inheritance, and Polymorphism.
+2. **B**. The JVM acts as an interpreter/compiler at runtime that converts intermediate Bytecode into the native machine code of the host system.
+3. **C**. Abstraction deliberately hides the underlying complexity of an object's operations, exposing only what is necessary for interaction.
+4. **B**. The JDK is meant for developers and includes tools like `javac`, whereas the JRE is purely for running existing Java applications.
+5. **A**. Procedural programming separates data from the functions that operate on it, while OOP encapsulates them together into cohesive objects.
+6. **C**. Encapsulation acts as a protective shield that prevents the data from being accessed by code outside this shield.
+7. **C**. Bytecode is the compiled format of Java programs. It is independent of the underlying hardware, allowing the JVM to translate it for specific platforms.
+8. **B**. Polymorphism allows a common interface to be used for a general class of actions, with specific actions determined by the exact nature of the situation (the object type).
+9. **B**. The reliance on the JVM to translate Bytecode ensures that the exact same compiled output can be run on Windows, Mac, or Linux without recompilation.
+10. **B**. Making attributes private enforces encapsulation, ensuring that external entities can only interact with the `balance` through controlled, validated methods like `deposit`.
 
 ## References & Navigation
 

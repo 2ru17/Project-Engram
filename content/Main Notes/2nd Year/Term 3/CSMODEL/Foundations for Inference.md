@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Foundations for Inference]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Foundations for Inference]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 07: Foundations for Inference
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### 1. Point Estimate vs. Interval Estimate
 In statistical inference, our goal is to draw conclusions about unknown **population parameters** (such as the population mean $\mu$ or population proportion $p$) using data collected from a sample.
@@ -124,7 +124,7 @@ Because hypothesis testing relies on sample data, errors can occur:
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. Importing Libraries & Overview of `scipy.stats`
 ```python
@@ -243,7 +243,7 @@ else:
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 | Concept | Formula | Notes / Variable Definitions |
 | :--- | :--- | :--- |
@@ -260,7 +260,7 @@ else:
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
 > [!CAUTION]
 > **Trap 1: Misinterpreting Confidence Interval Probability**
@@ -293,7 +293,7 @@ else:
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 ### Question 1 (Calculation: 95% Confidence Interval for Mean)
 A random sample of $n = 36$ battery lifetimes yields a sample mean of $\bar{x} = 85.0$ hours with a sample standard deviation of $s = 12.0$ hours. Assuming the sample observations are independent, construct a **95% confidence interval** for the population mean battery lifetime $\mu$.
@@ -365,7 +365,7 @@ If $H_0$ is actually **true** in reality for this population, what is the printe
 
 ---
 
-### 📝 Answer Key
+### Answer Key
 
 * **Q1: B** — **Step-by-step solution**:
   1. Given: $n = 36$, $\bar{x} = 85.0$, $s = 12.0$, Confidence Level $= 95\%$.
@@ -410,41 +410,42 @@ If $H_0$ is actually **true** in reality for this population, what is the printe
 ## Multiple Choice Questions
 
 1. What does the Central Limit Theorem (CLT) state?
-- **A)** The distribution of sample means approaches normality as sample size increases, regardless of the population distribution
-- **B)** The population distribution will become normal if the sample size is large enough
-- **C)** A sample size of 10 is sufficient for normal approximation
-- **D)** Standard error increases as sample size increases
+    - **A)** The population distribution will become normal if the sample size is large enough
+    - **B)** The distribution of sample means approaches normality as sample size increases, regardless of the population distribution
+    - **C)** A sample size of 10 is sufficient for normal approximation
+    - **D)** Standard error increases as sample size increases
 
 2. A Type I error occurs when:
-- **A)** We fail to reject a false null hypothesis
-- **B)** We reject a true null hypothesis
-- **C)** We calculate the p-value incorrectly
-- **D)** The sample size is too small
+    - **A)** We reject a true null hypothesis
+    - **B)** We fail to reject a false null hypothesis
+    - **C)** We calculate the p-value incorrectly
+    - **D)** The sample size is too small
 
 3. What is a p-value?
-- **A)** The probability that the alternative hypothesis is true
-- **B)** The probability of observing a test statistic as extreme as, or more extreme than, the one observed, assuming the null hypothesis is true
-- **C)** The probability that the null hypothesis is false
-- **D)** The exact confidence interval
+    - **A)** The probability that the alternative hypothesis is true
+    - **B)** The probability that the null hypothesis is false
+    - **C)** The probability of observing a test statistic as extreme as, or more extreme than, the one observed, assuming the null hypothesis is true
+    - **D)** The exact confidence interval
 
 4. The standard error of the mean is calculated as:
-- **A)** Sample standard deviation multiplied by n
-- **B)** Sample standard deviation divided by the square root of n
-- **C)** Population mean divided by n
-- **D)** Variance squared
+    - **A)** Sample standard deviation multiplied by n
+    - **B)** Variance squared
+    - **C)** Population mean divided by n
+    - **D)** Sample standard deviation divided by the square root of n
 
 5. A point estimate is:
-- **A)** A range of plausible values for a parameter
-- **B)** A single value used as an estimate of a population parameter
-- **C)** The exact population parameter
-- **D)** The difference between Type I and Type II errors
+    - **A)** A range of plausible values for a parameter
+    - **B)** A single value used as an estimate of a population parameter
+    - **C)** The exact population parameter
+    - **D)** The difference between Type I and Type II errors
 
 ### Answer Key & Explanations
-1. **A)** CLT is fundamental: the sampling distribution of the mean is approx normal for large n.
-2. **B)** Type I error is a false positive - rejecting H0 when its actually true.
-3. **B)** The p-value quantifies evidence against the null under the assumption the null is true.
-4. **B)** SE = s / sqrt(n).
-5. **B)** A point estimate is a single statistic (like sample mean) estimating the true parameter.
+
+1. **B**. CLT is fundamental: the sampling distribution of the mean is approx normal for large n.
+2. **A**. Type I error is a false positive - rejecting H0 when its actually true.
+3. **C**. The p-value quantifies evidence against the null under the assumption the null is true.
+4. **D**. SE = s / sqrt(n).
+5. **B**. A point estimate is a single statistic (like sample mean) estimating the true parameter.
 
 ## References & Navigation
 

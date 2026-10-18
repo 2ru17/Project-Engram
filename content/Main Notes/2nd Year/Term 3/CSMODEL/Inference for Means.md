@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Inference for Means]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Inference for Means]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 08: Inference for Means
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### 1. Central Limit Theorem & The Student's t-Distribution
 When estimating a population mean $\mu$ using a sample mean $\bar{x}$, the Central Limit Theorem (CLT) states that for independent observations from a population with mean $\mu$ and standard deviation $\sigma$, the sampling distribution of $\bar{x}$ is approximately normal:
@@ -123,7 +123,7 @@ State conclusion in plain language relative to the problem context.
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. One-Sample t-Test (`scipy.stats.ttest_1samp`)
 Tests if a sample vector `data` has a population mean equal to `popmean`.
@@ -280,7 +280,7 @@ if res_posthoc.pvalue < alpha_bonferroni:
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 | Concept / Test Type | Parameter / Quantity | Mathematical Formula | Degrees of Freedom ($df$) |
 | :--- | :--- | :--- | :--- |
@@ -297,40 +297,40 @@ if res_posthoc.pvalue < alpha_bonferroni:
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
-* ❌ **Trap 1: Confusing Paired vs. Independent t-Tests**
+*  **Trap 1: Confusing Paired vs. Independent t-Tests**
   * *Mistake*: Running `ttest_ind` on data where measurements come from the same individuals (e.g., pre-treatment vs. post-treatment weights).
   * *Correction*: If observations are linked/paired, use `ttest_rel` (or 1-sample t-test on differences). Using independent t-test ignores pairing and reduces test power.
 
-* ❌ **Trap 2: Forgetting `equal_var=False` in SciPy**
+*  **Trap 2: Forgetting `equal_var=False` in SciPy**
   * *Mistake*: Calling `scipy.stats.ttest_ind(a, b)` without specifying `equal_var=False`.
   * *Correction*: By default, SciPy sets `equal_var=True` (Student's pooled t-test). In CSMODEL and modern statistics, Welch's t-test (`equal_var=False`) is required unless equal population variances are proven.
 
-* ❌ **Trap 3: Incorrect Degrees of Freedom Calculation**
+*  **Trap 3: Incorrect Degrees of Freedom Calculation**
   * *Paired t-test*: $df = n_{\text{pairs}} - 1$ (NOT $2n - 2$).
   * *Independent t-test (Manual Exam Rule)*: $df = \min(n_1 - 1, n_2 - 1)$ (NOT $n_1 + n_2 - 2$ unless pooled variance is assumed).
   * *ANOVA*: Numerator $df_1 = k - 1$, Denominator $df_2 = n_{\text{total}} - k$.
 
-* ❌ **Trap 4: One-Tailed p-Value Division Error**
+*  **Trap 4: One-Tailed p-Value Division Error**
   * *Mistake*: Always dividing SciPy's `pvalue` by 2 to get a one-tailed p-value.
   * *Correction*: Dividing by 2 is valid **ONLY IF** the sample statistic lies in the direction of the alternative hypothesis. If the sample statistic goes against $H_A$, the one-tailed p-value is $1 - \frac{p_{\text{two-tailed}}}{2}$. Alternatively, use `alternative='greater'` or `alternative='less'`.
 
-* ❌ **Trap 5: Misinterpreting $n \ge 30$ Normality Rule**
+*  **Trap 5: Misinterpreting $n \ge 30$ Normality Rule**
   * *Mistake*: Believing that $n \ge 30$ means the sample data itself becomes normally distributed.
   * *Correction*: The sample data distribution does not change. $n \ge 30$ ensures that the **sampling distribution of the mean** $\bar{x}$ is approximately normal due to the Central Limit Theorem.
 
-* ❌ **Trap 6: Misinterpreting Confidence Intervals**
+*  **Trap 6: Misinterpreting Confidence Intervals**
   * *Mistake*: Claiming "There is a 95% probability that the true mean $\mu$ falls inside the interval $(3.29, 5.51)$."
   * *Correction*: In frequentist statistics, $\mu$ is a fixed unknown constant, not a random variable. The correct phrasing is: *"We are 95% confident that the true population mean lies between 3.29 and 5.51"*, meaning 95% of intervals constructed using this procedure will capture $\mu$.
 
-* ❌ **Trap 7: Omitting Bonferroni Correction for Multiple Comparisons**
+*  **Trap 7: Omitting Bonferroni Correction for Multiple Comparisons**
   * *Mistake*: Running multiple pairwise t-tests after ANOVA using standard $\alpha = 0.05$.
   * *Correction*: Running $K$ tests inflates overall Type I error rate. You must compare p-values against $\alpha^* = \alpha / K$.
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 **Q1.** A factory manufactures precision steel rods. The target mean diameter is $\mu_0 = 15.00$ mm. A quality control inspector takes a random sample of $n = 16$ rods and measures their diameters. The sample mean is $\bar{x} = 14.82$ mm and the sample standard deviation is $s = 0.36$ mm.
 Perform a two-tailed hypothesis test at $\alpha = 0.05$ to determine if the manufacturing process is out of calibration. (Given: For $df = 15$, $t^*_{0.025} = 2.131$). A) $t = -2.000$; Fail to reject $H_0$ because $|-2.000| \le 2.131$. B) $t = -2.000$; Reject $H_0$ because $|-2.000| > 2.131$. C) $t = -0.500$; Fail to reject $H_0$ because $|-0.500| \le 2.131$. D) $t = -2.131$; Reject $H_0$ because $t = t^*$.
@@ -421,41 +421,42 @@ Calculate the ANOVA $F$-statistic and determine the Bonferroni-adjusted signific
 ## Multiple Choice Questions
 
 1. When estimating a population mean with an unknown standard deviation, which distribution is used?
-- **A)** Standard Normal (Z) Distribution
-- **B)** Students t-Distribution
-- **C)** Chi-Square Distribution
-- **D)** F-Distribution
+    - **A)** Standard Normal (Z) Distribution
+    - **B)** Students t-Distribution
+    - **C)** Chi-Square Distribution
+    - **D)** F-Distribution
 
 2. Which test is appropriate for comparing pre-test and post-test scores of the same individuals?
-- **A)** Independent Two-Sample t-Test
-- **B)** ANOVA
-- **C)** Paired (Dependent) t-Test
-- **D)** Chi-Square Test
+    - **A)** Independent Two-Sample t-Test
+    - **B)** ANOVA
+    - **C)** Paired (Dependent) t-Test
+    - **D)** Chi-Square Test
 
 3. Why is Welchs t-test generally preferred over the standard Students independent t-test?
-- **A)** It assumes equal population variances
-- **B)** It does not assume equal population variances
-- **C)** It only works on paired data
-- **D)** It handles categorical data
+    - **A)** It assumes equal population variances
+    - **B)** It does not assume equal population variances
+    - **C)** It only works on paired data
+    - **D)** It handles categorical data
 
 4. When conducting multiple pairwise t-tests, why is the Bonferroni correction used?
-- **A)** To increase the statistical power of the tests
-- **B)** To control for Type I Error inflation
-- **C)** To correct for small sample sizes
-- **D)** To convert the data to a normal distribution
+    - **A)** To increase the statistical power of the tests
+    - **B)** To control for Type I Error inflation
+    - **C)** To correct for small sample sizes
+    - **D)** To convert the data to a normal distribution
 
 5. What is the correct degrees of freedom formula for a One-Sample t-Test?
-- **A)** n - 1
-- **B)** n - 2
-- **C)** 2n - 1
-- **D)** min(n1-1, n2-1)
+    - **A)** n - 1
+    - **B)** n - 2
+    - **C)** 2n - 1
+    - **D)** min(n1-1, n2-1)
 
 ### Answer Key & Explanations
-1. **B)** The t-distribution accounts for the extra uncertainty introduced by using sample std dev.
-2. **C)** A paired t-test is used when observations are dependent or linked.
-3. **B)** Welchs t-test (`equal_var=False`) is safer because it drops the restrictive assumption of equal variances.
-4. **B)** Running multiple tests inflates the chance of a false positive; Bonferroni adjusts alpha to prevent this.
-5. **A)** For a single sample, df = n - 1.
+
+1. **B**. The t-distribution accounts for the extra uncertainty introduced by using sample std dev.
+2. **C**. A paired t-test is used when observations are dependent or linked.
+3. **B**. Welchs t-test (`equal_var=False`) is safer because it drops the restrictive assumption of equal variances.
+4. **B**. Running multiple tests inflates the chance of a false positive; Bonferroni adjusts alpha to prevent this.
+5. **A**. For a single sample, df = n - 1.
 
 ## References & Navigation
 

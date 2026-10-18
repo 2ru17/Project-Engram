@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Web Development]] #[[CCAPDEV]] #[[Handlebars]] #[[Code Snippets]] #[[M4]]
+**Tags:** #[[Web Development]] #[[CCAPDEV]] #[[Handlebars]] #[[Code Snippets]] #[[M4]]
 
 ---
 
@@ -79,27 +79,28 @@ views will be rendered inside main.hbs’ {{{body}}}
 ## Multiple Choice Questions
 
 1. What is Handlebars primarily used for in an Express application?
-- **A)** Handling database migrations and queries.
-- **B)** Managing the server's local file system and static assets.
-- **C)** Compiling template files with an input object to generate HTML or other text formats dynamically.
-- **D)** Routing HTTP requests to different controllers.
+    - **A)** Handling database migrations and queries.
+    - **B)** Managing the server's local file system and static assets.
+    - **C)** Compiling template files with an input object to generate HTML or other text formats dynamically.
+    - **D)** Routing HTTP requests to different controllers.
 
 2. In an Express-Handlebars project structure, where are static files (like CSS, JavaScript, and images) typically stored?
-- **A)** In the `views` folder.
-- **B)** In the `layouts` folder.
-- **C)** In the `public` folder.
-- **D)** In the `node_modules` folder.
+    - **A)** In the `views` folder.
+    - **B)** In the `layouts` folder.
+    - **C)** In the `public` folder.
+    - **D)** In the `node_modules` folder.
 
 3. What is the purpose of the `main.hbs` file?
-- **A)** It acts as the primary JavaScript entry point for the backend server.
-- **B)** It serves as the default layout container where other views are rendered inside `{{{body}}}`.
-- **C)** It stores all CSS styling for the application.
-- **D)** It handles all client-side JavaScript interactions.
+    - **A)** It acts as the primary JavaScript entry point for the backend server.
+    - **B)** It serves as the default layout container where other views are rendered inside `{{{body}}}`.
+    - **C)** It stores all CSS styling for the application.
+    - **D)** It handles all client-side JavaScript interactions.
 
 ### Answer Key & Explanations
-1. **C)** Handlebars is a templating language that uses a template and an input object to generate HTML documents on runtime.
-2. **C)** The `public` folder is designated for static files like CSS, JS, images, and other local media that clients download from the server.
-3. **B)** `main.hbs` serves as the default layout template, providing the standard HTML skeleton where specific view content is injected via `{{{body}}}`.
+
+1. **C**. Handlebars is a templating language that uses a template and an input object to generate HTML documents on runtime.
+2. **C**. The `public` folder is designated for static files like CSS, JS, images, and other local media that clients download from the server.
+3. **B**. `main.hbs` serves as the default layout template, providing the standard HTML skeleton where specific view content is injected via `{{{body}}}`.
 
 ## References & Navigation
 

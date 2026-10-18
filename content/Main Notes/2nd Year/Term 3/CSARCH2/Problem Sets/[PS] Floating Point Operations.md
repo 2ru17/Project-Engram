@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Floating-Point Arithmetic]] #[[Exponent Alignment]] #[[Guard Round Sticky]] #[[Normalization]] #[[IEEE-754]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Floating-Point Arithmetic]] #[[Exponent Alignment]] #[[Guard Round Sticky]] #[[Normalization]] #[[IEEE-754]]
 
 ---
 
 # Problem Set: Floating-Point Operations & Hardware Alignment
 
-## 📖 Overview & Theoretical Foundations
+## Overview & Theoretical Foundations
 
 Floating-point addition and subtraction are significantly more complex than integer arithmetic because operands generally possess different exponents. Before significands can be added or subtracted, they must be shifted so that both numbers share a common exponent.
 
@@ -83,18 +83,18 @@ $$S_{\text{new}} = S_{\text{old}} \lor b_{\text{shifted\_past\_R}}$$
 
 ---
 
-## ✍️ Problem Solutions
+## Problem Solutions
 
 ### Problem 1: Binary FP Addition WITH Guard, Round, and Sticky Bits (9-Bit System)
 
-#### 📋 Problem Statement
+#### Problem Statement
 Perform floating-point addition on the two binary operands in a system supporting a **9-bit significand** (1 integer bit + 8 fraction bits) using **Guard ($G$), Round ($R$), and Sticky ($S$) bits**:
 $$\mathbf{A} = 1.0111110010011_2 \times 2^5$$
 $$\mathbf{B} = 1.00111111100011_2 \times 2^3$$
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Load Operands into 9-bit Registers:**
    - System register format: $1\text{ integer bit} + 8\text{ fraction bits} = 9\text{ bits total}$.
@@ -160,7 +160,7 @@ $$\mathbf{B} = 1.00111111100011_2 \times 2^3$$
 
 ---
 
-#### 📊 Result Summary Table (Problem 1)
+#### Result Summary Table (Problem 1)
 
 | Row | Significand (9 bits) | G | R | S | $\text{Base}^{\text{Exp}}$ | Notes |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
@@ -173,14 +173,14 @@ $$\mathbf{B} = 1.00111111100011_2 \times 2^3$$
 
 ### Problem 2: Binary FP Addition WITHOUT Guard, Round, and Sticky Bits (9-Bit System)
 
-#### 📋 Problem Statement
+#### Problem Statement
 Perform floating-point addition on the same binary operands in a 9-bit system **WITHOUT Guard ($G$), Round ($R$), and Sticky ($S$) bits** (pure truncation):
 $$\mathbf{A} = 1.0111110010011_2 \times 2^5$$
 $$\mathbf{B} = 1.00111111100011_2 \times 2^3$$
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Load Operands into 9-bit Registers (Truncated):**
    - **Operand 1 ($A$):** `1.01111100` $\times 2^5$
@@ -207,7 +207,7 @@ $$\mathbf{B} = 1.00111111100011_2 \times 2^3$$
 
 ---
 
-#### 📊 Result Summary Table (Problem 2)
+#### Result Summary Table (Problem 2)
 
 | Row | Significand (9 bits) | $\text{Base}^{\text{Exp}}$ | Notes |
 | :--- | :---: | :---: | :--- |
@@ -218,7 +218,7 @@ $$\mathbf{B} = 1.00111111100011_2 \times 2^3$$
 
 ---
 
-#### 🔬 Error Analysis: Problem 1 vs. Problem 2
+#### Error Analysis: Problem 1 vs. Problem 2
 - **Result with G, R, S (Prob 1):** `1.11001100` $\times 2^5 = 60.0_{10}$
 - **Result without G, R, S (Prob 2):** `1.11001011` $\times 2^5 = 59.875_{10}$
 - **Discrepancy:**
@@ -229,14 +229,14 @@ $$\mathbf{B} = 1.00111111100011_2 \times 2^3$$
 
 ### Problem 3: Decimal FP Addition WITH Guard, Round, and Sticky Digits (7-Digit System)
 
-#### 📋 Problem Statement
+#### Problem Statement
 Perform floating-point addition in a system supporting **7 decimal digits** (1 integer digit + 6 fractional digits) using **Guard ($G$), Round ($R$), and Sticky ($S$) digits**:
 $$\mathbf{A} = 9.726542319 \times 10^{15}$$
 $$\mathbf{B} = 8.8736373412 \times 10^{13}$$
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Load Operands into 7-digit Registers:**
    - Format: $1\text{ integer digit} + 6\text{ fractional digits} = 7\text{ digits total}$.
@@ -294,7 +294,7 @@ $$\mathbf{B} = 8.8736373412 \times 10^{13}$$
 
 ---
 
-#### 📊 Result Summary Table (Problem 3)
+#### Result Summary Table (Problem 3)
 
 | Row | Significand (7 digits) | G | R | S | $\text{Base}^{\text{Exp}}$ | Notes |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
@@ -307,14 +307,14 @@ $$\mathbf{B} = 8.8736373412 \times 10^{13}$$
 
 ### Problem 4: Decimal FP Addition WITHOUT Guard, Round, and Sticky Digits (7-Digit System)
 
-#### 📋 Problem Statement
+#### Problem Statement
 Perform floating-point addition on the same decimal operands in a 7-digit system **WITHOUT Guard ($G$), Round ($R$), and Sticky ($S$) digits** (pure truncation):
 $$\mathbf{A} = 9.726542319 \times 10^{15}$$
 $$\mathbf{B} = 8.8736373412 \times 10^{13}$$
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Load Operands into 7-digit Registers (Truncated):**
    - **Operand 1 ($A$):** `9.726542` $\times 10^{15}$
@@ -341,7 +341,7 @@ $$\mathbf{B} = 8.8736373412 \times 10^{13}$$
 
 ---
 
-#### 📊 Result Summary Table (Problem 4)
+#### Result Summary Table (Problem 4)
 
 | Row | Significand (7 digits) | $\text{Base}^{\text{Exp}}$ | Notes |
 | :--- | :---: | :---: | :--- |
@@ -352,7 +352,7 @@ $$\mathbf{B} = 8.8736373412 \times 10^{13}$$
 
 ---
 
-#### 💡 Comparative Insight: Why Problems 3 and 4 Produce the Same Result
+#### Comparative Insight: Why Problems 3 and 4 Produce the Same Result
 - In Problem 3, the Guard digit was $G = 3$.
 - Under IEEE-754 / standard rounding, any discarded fraction with $G < 5$ rounds **down** (which is identical to truncation).
 - Therefore, both methods converged to `9.815278` $\times 10^{15}$.
@@ -360,7 +360,7 @@ $$\mathbf{B} = 8.8736373412 \times 10^{13}$$
 
 ---
 
-## 💻 Python Verification Script
+## Python Verification Script
 
 ```python
 def verify_operations():
@@ -387,7 +387,7 @@ verify_operations()
 
 ---
 
-## 🔑 Key Takeaways & Exam Summary
+## Key Takeaways & Exam Summary
 
 1. **Alignment Shift Direction:**
    - Always shift the operand with the **smaller exponent to the right** ($\Delta e = e_1 - e_2$).

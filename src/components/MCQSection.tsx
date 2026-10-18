@@ -13,9 +13,10 @@ export interface MCQItem {
 
 interface MCQSectionProps {
   items: MCQItem[];
+  renderMarkdown?: (markdown: string, inline?: boolean) => React.ReactNode;
 }
 
-export function MCQSection({ items }: MCQSectionProps) {
+export function MCQSection({ items, renderMarkdown }: MCQSectionProps) {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [showExplanations, setShowExplanations] = useState<Record<number, boolean>>({});
 
@@ -64,9 +65,9 @@ export function MCQSection({ items }: MCQSectionProps) {
                 <span className="px-2 py-0.5 text-xs font-mono font-semibold text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/5 shrink-0 mt-0.5">
                   Q{item.id}
                 </span>
-                <p className="text-sm sm:text-base font-medium text-[var(--zen-snow)] leading-relaxed">
-                  {item.question}
-                </p>
+                <div className="text-sm sm:text-base font-medium text-[var(--zen-snow)] leading-relaxed flex-1 min-w-0 overflow-x-auto">
+                  {renderMarkdown ? renderMarkdown(item.question, false) : item.question}
+                </div>
               </div>
 
               {/* Options Grid */}
@@ -108,7 +109,9 @@ export function MCQSection({ items }: MCQSectionProps) {
                       >
                         {opt.key}
                       </span>
-                      <span className="flex-1 font-normal text-[var(--zen-snow)]">{opt.text}</span>
+                      <span className="flex-1 font-normal text-[var(--zen-snow)] min-w-0">
+                        {renderMarkdown ? renderMarkdown(opt.text, true) : opt.text}
+                      </span>
                     </button>
                   );
                 })}
@@ -140,9 +143,9 @@ export function MCQSection({ items }: MCQSectionProps) {
                           KEY: {item.answerKey}
                         </span>
                       </div>
-                      <p className="text-xs sm:text-sm leading-relaxed text-[var(--zen-snow)] font-normal">
-                        {item.explanation}
-                      </p>
+                      <div className="text-xs sm:text-sm leading-relaxed text-[var(--zen-snow)] font-normal">
+                        {renderMarkdown ? renderMarkdown(item.explanation, false) : item.explanation}
+                      </div>
                     </div>
                   </motion.div>
                 )}

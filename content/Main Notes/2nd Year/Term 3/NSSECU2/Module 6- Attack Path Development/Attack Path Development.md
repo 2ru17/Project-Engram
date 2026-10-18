@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSSECU2]] #[[Cybersecurity]] #[[Attack Path Development]] #[[Threat Modeling]] #[[Exploit Matching]] #[[Searchsploit]] #[[CVE]]
+**Tags:** #[[Computer Science]] #[[NSSECU2]] #[[Cybersecurity]] #[[Attack Path Development]] #[[Threat Modeling]] #[[Exploit Matching]] #[[Searchsploit]] #[[CVE]]
 
 ---
 
@@ -176,63 +176,63 @@ Stop Condition:       If Redis requires `AUTH <password>`, stop immediately; do 
 ## Multiple Choice Questions
 
 1. What is the primary purpose of developing an Attack Path rather than running random automated exploit modules?
-- **A)** To increase the number of network packets transmitted per second
-- **B)** To logically correlate multi-stage evidence, verify preconditions, minimize system instability, and achieve demonstrable proof of business risk
-- **C)** To avoid generating written documentation
-- **D)** To permanently delete the target's operating system
+    - **A)** To increase the number of network packets transmitted per second
+    - **B)** To logically correlate multi-stage evidence, verify preconditions, minimize system instability, and achieve demonstrable proof of business risk
+    - **C)** To avoid generating written documentation
+    - **D)** To permanently delete the target's operating system
 
 2. Which condition in the 6-Point Exploit Matching Checklist ensures that a compiled buffer overflow exploit will execute valid CPU instructions on the target host?
-- **A)** Product Title Match
-- **B)** Operating System and Architecture Compatibility (e.g., Linux x86_64 vs Windows x86)
-- **C)** Color of the Terminal Text
-- **D)** Domain Name Registration Expiration Date
+    - **A)** Operating System and Architecture Compatibility (e.g., Linux x86_64 vs Windows x86)
+    - **B)** Product Title Match
+    - **C)** Color of the Terminal Text
+    - **D)** Domain Name Registration Expiration Date
 
 3. An analyst uses the command `searchsploit -m 50123.py`. What does the `-m` flag perform?
-- **A)** It automatically compiles and executes the script against `localhost`.
-- **B)** It mirrors (copies) the exploit script directly into the current working directory for safe code review and modification.
-- **C)** It mails the exploit to the system administrator.
-- **D)** It deletes the exploit from Exploit-DB.
+    - **A)** It automatically compiles and executes the script against `localhost`.
+    - **B)** It mails the exploit to the system administrator.
+    - **C)** It mirrors (copies) the exploit script directly into the current working directory for safe code review and modification.
+    - **D)** It deletes the exploit from Exploit-DB.
 
 4. In the Prioritization Matrix, what priority tier should be assigned to an attack path with Strong Supporting Evidence and High Potential Impact (e.g., verified unauthenticated RCE)?
-- **A)** Validate First (Priority 1)
-- **B)** Validate Later (Priority 2)
-- **C)** Research More
-- **D)** Park / Ignore
+    - **A)** Park / Ignore
+    - **B)** Validate Later (Priority 2)
+    - **C)** Research More
+    - **D)** Validate First (Priority 1)
 
 5. Why must an ethical hacker inspect the source code of a public exploit script line-by-line before running it against a client target?
-- **A)** To translate the programming language into HTML
-- **B)** To verify that the script does not contain destructive actions (e.g., `rm -rf /`), unhandled memory crashes, or backdoored payloads
-- **C)** To verify that the exploit contains at least 10,000 lines of code
-- **D)** To remove all comments and variable names
+    - **A)** To translate the programming language into HTML
+    - **B)** To verify that the script does not contain destructive actions (e.g., `rm -rf /`), unhandled memory crashes, or backdoored payloads
+    - **C)** To verify that the exploit contains at least 10,000 lines of code
+    - **D)** To remove all comments and variable names
 
 6. What is a "Stop Condition" in the context of a penetration testing validation plan?
-- **A)** The moment when the tester shuts down their laptop for lunch
-- **B)** A predetermined operational boundary where testing halts immediately if unexpected behavior, errors, or risks of disruption occur
-- **C)** An operating system command that disables all CPU interrupts
-- **D)** The expiration of the client's commercial software license
+    - **A)** The moment when the tester shuts down their laptop for lunch
+    - **B)** An operating system command that disables all CPU interrupts
+    - **C)** A predetermined operational boundary where testing halts immediately if unexpected behavior, errors, or risks of disruption occur
+    - **D)** The expiration of the client's commercial software license
 
 7. An analyst discovers an open port 8080 running Jenkins. Nmap scripts report the version as `Jenkins 2.121.1`. Searchsploit reveals an unauthenticated RCE exploit (CVE-2018-1000861). What is the safest non-destructive validation step?
-- **A)** Format the hard drive of the Jenkins server
-- **B)** Send a benign pre-flight probe or execute a non-destructive command (e.g., `whoami` or `id`) to confirm code execution without modifying job configurations
-- **C)** Immediately delete all client build pipelines and user accounts
-- **D)** Disconnect the client's data center power supply
+    - **A)** Send a benign pre-flight probe or execute a non-destructive command (e.g., `whoami` or `id`) to confirm code execution without modifying job configurations
+    - **B)** Format the hard drive of the Jenkins server
+    - **C)** Immediately delete all client build pipelines and user accounts
+    - **D)** Disconnect the client's data center power supply
 
 8. What mistake is made when a tester assumes a server is vulnerable to a remote exploit simply because the base software version matches, without checking if the required vulnerable module is loaded?
-- **A)** Title-Matching Fallacy
-- **B)** Correct Threat Modeling
-- **C)** Thorough Enumeration
-- **D)** Reverse Shell Pivoting
+    - **A)** Reverse Shell Pivoting
+    - **B)** Correct Threat Modeling
+    - **C)** Thorough Enumeration
+    - **D)** Title-Matching Fallacy
 
 ### Answer Key & Explanations
 
 1. **B**. **Attack Path Development** provides a structured, evidence-based methodology that logically links verified clues, respects operational safety, and demonstrates genuine business impact.
-2. **B**. **Architecture compatibility** (CPU instruction set, bitness, and OS system call conventions) is essential; running x86 shellcode on an ARM or x86_64 architecture results in instant segmentation faults and daemon crashes.
-3. **B**. The **`-m` (mirror)** flag in `searchsploit` copies the specified exploit file into the current working directory, enabling offline code auditing and customization.
-4. **A**. High potential impact combined with strong supporting evidence represents the highest risk finding and must be **Validated First (Priority 1)**.
+2. **A**. **Architecture compatibility** (CPU instruction set, bitness, and OS system call conventions) is essential; running x86 shellcode on an ARM or x86_64 architecture results in instant segmentation faults and daemon crashes.
+3. **C**. The **`-m` (mirror)** flag in `searchsploit` copies the specified exploit file into the current working directory, enabling offline code auditing and customization.
+4. **D**. High potential impact combined with strong supporting evidence represents the highest risk finding and must be **Validated First (Priority 1)**.
 5. **B**. Public exploit code must always be **manually audited** to ensure it contains no destructive payload commands, rogue network callbacks, or unhandled exceptions that could crash production systems.
-6. **B**. A **Stop Condition** protects client assets by defining unambiguous criteria (e.g., authentication prompts, error codes, service slowdowns) that halt the exploit attempt before collateral damage occurs.
-7. **B**. **Non-destructive validation** proves exploitability through benign execution (e.g., `whoami` or `id`), capturing timestamped evidence while preserving system state.
-8. **A**. The **Title-Matching Fallacy** occurs when an analyst assumes an exploit will succeed based purely on version text matching, ignoring prerequisites such as optional modules or operating system dependencies.
+6. **C**. A **Stop Condition** protects client assets by defining unambiguous criteria (e.g., authentication prompts, error codes, service slowdowns) that halt the exploit attempt before collateral damage occurs.
+7. **A**. **Non-destructive validation** proves exploitability through benign execution (e.g., `whoami` or `id`), capturing timestamped evidence while preserving system state.
+8. **D**. The **Title-Matching Fallacy** occurs when an analyst assumes an exploit will succeed based purely on version text matching, ignoring prerequisites such as optional modules or operating system dependencies.
 
 ## References & Navigation
 

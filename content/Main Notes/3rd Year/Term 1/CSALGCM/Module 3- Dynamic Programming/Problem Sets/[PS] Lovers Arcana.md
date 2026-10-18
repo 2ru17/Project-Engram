@@ -178,7 +178,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 

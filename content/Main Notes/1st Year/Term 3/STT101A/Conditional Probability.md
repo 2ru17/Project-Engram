@@ -11,111 +11,68 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Conditional Probability]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Conditional Probability]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Conditional Probability**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+**Conditional Probability**, denoted $P(A \mid B)$, measures the updated probability that event $A$ occurs given the partial knowledge that event $B$ has already occurred. Geometrically, conditioning on $B$ restricts the sample space from $S$ to $B$ and rescales all outcome probabilities within $B$ by $\frac{1}{P(B)}$.
 
 ## Key Definitions
-- **Conditional Probability**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Conditional Probability** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Formal Definition:** For any two events $A$ and $B$ with $P(B) > 0$:
+  $$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$$
+- **Reduced Sample Space Interpretation:** When outcomes in $S$ are equally likely, $P(A \mid B) = \frac{|A \cap B|}{|B|}$.
+- **Conditional Probability as a Measure:** For fixed $B$ with $P(B) > 0$, $Q(A) = P(A \mid B)$ satisfies all three Kolmogorov axioms: $P(A \mid B) \ge 0$, $P(S \mid B) = 1$, and $P(A_1 \cup A_2 \mid B) = P(A_1 \mid B) + P(A_2 \mid B)$ for disjoint $A_1, A_2$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Conditional Probability**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** A fair six-sided die is rolled. Given that the outcome is an **even** number ($B = \{2, 4, 6\}$), what is the conditional probability that the outcome is **greater than 3** ($A = \{4, 5, 6\}$)?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Conditional Probability** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- Intersection: $A \cap B = \{4, 6\}$, so $P(A \cap B) = \frac{2}{6}$ and $P(B) = \frac{3}{6}$.
+- $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{2/6}{3/6} = \frac{2}{3}$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. How does conditioning on event $B$ (with $P(B) > 0$) affect the sample space?
+    - **A)** It expands the sample space to $S \cup B$.
+    - **B)** It restricts the effective sample space to $B$ and normalizes intersection probabilities $P(A \cap B)$ by dividing by $P(B)$.
+    - **C)** It sets $P(B) = 0$.
+    - **D)** It makes $A$ and $B$ mutually exclusive.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. If $P(A \cap B) = 0.18$ and $P(B) = 0.45$, what is $P(A \mid B)$?
+    - **A)** $0.40$
+    - **B)** $0.081$
+    - **C)** $0.27$
+    - **D)** $0.63$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Suppose event $A$ is a subset of event $B$ ($A \subseteq B$) and $P(B) > 0$. What is $P(A \mid B)$?
+    - **A)** $1$
+    - **B)** $0$
+    - **C)** $\frac{P(A)}{P(B)}$
+    - **D)** $P(A)$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Suppose event $B$ is a subset of event $A$ ($B \subseteq A$) and $P(B) > 0$. What is $P(A \mid B)$?
+    - **A)** $\frac{P(B)}{P(A)}$
+    - **B)** $P(A) - P(B)$
+    - **C)** $0$
+    - **D)** $1$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. If $A$ and $B$ are mutually exclusive events with $P(B) > 0$, what is $P(A \mid B)$?
+    - **A)** $P(A)$
+    - **B)** $0$
+    - **C)** $1 - P(B)$
+    - **D)** Undefined
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Knowing $B$ occurred eliminates all outcomes in $B^c$; only outcomes in $A \cap B$ can still yield $A$, and dividing by $P(B)$ ensures the restricted space sums to $1$ ($P(B \mid B) = 1$).
+2. **A**. By definition, $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{0.18}{0.45} = 0.40$.
+3. **C**. When $A \subseteq B$, the intersection is $A \cap B = A$, so $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)}{P(B)}$.
+4. **D**. When $B \subseteq A$, every outcome in $B$ is automatically in $A$ ($A \cap B = B$). Thus $P(A \mid B) = \frac{P(B)}{P(B)} = 1$.
+5. **B**. Mutually exclusive events have $A \cap B = \emptyset \implies P(A \cap B) = 0$. Since $P(B) > 0$, $P(A \mid B) = \frac{0}{P(B)} = 0$.
 
 ## References & Navigation
 

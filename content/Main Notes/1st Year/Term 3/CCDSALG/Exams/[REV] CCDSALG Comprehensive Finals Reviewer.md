@@ -98,50 +98,45 @@ flowchart TD
 
 ---
 
-## 5. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. What is the time complexity to insert a new element into a binary max heap containing $n$ elements?
-   - A) $O(1)$
-   - B) $O(\log n)$
-   - C) $O(n)$
-   - D) $O(n \log n)$
+    - **A)** $O(1)$
+    - **B)** $O(\log n)$
+    - **C)** $O(n)$
+    - **D)** $O(n \log n)$
 
 2. In an AVL tree, after inserting a node into the left subtree of the right child of node $A$, what rotation sequence is required to restore balance?
-   - A) Right rotation on $A$
-   - B) Left rotation on $A$
-   - C) Right-Left (RL) double rotation
-   - D) Left-Right (LR) double rotation
+    - **A)** Right rotation on $A$
+    - **B)** Left rotation on $A$
+    - **C)** Right-Left (RL) double rotation
+    - **D)** Left-Right (LR) double rotation
 
 3. Which sorting algorithm is stable and has worst-case time complexity $O(n \log n)$?
-   - A) Quick Sort
-   - B) Heap Sort
-   - C) Merge Sort
-   - D) Selection Sort
+    - **A)** Quick Sort
+    - **B)** Heap Sort
+    - **C)** Merge Sort
+    - **D)** Selection Sort
 
 4. In a hash table with load factor $\alpha = 0.5$ using linear probing, what is the primary drawback of linear probing?
-   - A) High memory overhead per node
-   - B) Primary clustering where contiguous occupied slots form large blocks
-   - C) Inability to delete elements
-   - D) $O(n^2)$ lookup complexity
+    - **A)** High memory overhead per node
+    - **B)** Primary clustering where contiguous occupied slots form large blocks
+    - **C)** Inability to delete elements
+    - **D)** $O(n^2)$ lookup complexity
 
 5. Which graph algorithm will correctly find the Minimum Spanning Tree of a connected weighted graph by sorting all edges in non-decreasing order?
-   - A) Prim's Algorithm
-   - B) Kruskal's Algorithm
-   - C) Dijkstra's Algorithm
-   - D) Floyd-Warshall Algorithm
-
----
+    - **A)** Prim's Algorithm
+    - **B)** Kruskal's Algorithm
+    - **C)** Dijkstra's Algorithm
+    - **D)** Floyd-Warshall Algorithm
 
 ### Answer Key & Explanations
 
-1. **B) $O(\log n)$** — The element is appended at the next available leaf position ($O(1)$) and bubbles up along the tree height via sift-up operations, requiring at most $\lceil \log_2 n \rceil$ comparisons.
-2. **C) Right-Left (RL) double rotation** — The imbalance is in the right child's left subtree (Right-Left heavy). It is resolved by a right rotation on the right child followed by a left rotation on node $A$.
-3. **C) Merge Sort** — Merge Sort runs in $O(n \log n)$ time across best, average, and worst cases, and preserves the relative order of duplicate elements (stable). Quick Sort and Heap Sort are not stable.
-4. **B) Primary clustering where contiguous occupied slots form large blocks** — In linear probing, collisions resolve to consecutive slots, creating long clusters that increase search times for subsequent keys.
-5. **B) Kruskal's Algorithm** — Kruskal's algorithm greedily considers edges in non-decreasing order of weight, adding an edge to the forest if and only if it does not form a cycle (verified via Disjoint Set Union).
-
-
----
+1. **B**. The element is appended at the next available leaf position ($O(1)$) and bubbles up along the tree height via sift-up operations, requiring at most $\lceil \log_2 n \rceil$ comparisons.
+2. **C**. The imbalance is in the right child's left subtree (Right-Left heavy). It is resolved by a right rotation on the right child followed by a left rotation on node $A$.
+3. **C**. Merge Sort runs in $O(n \log n)$ time across best, average, and worst cases, and preserves the relative order of duplicate elements (stable). Quick Sort and Heap Sort are not stable.
+4. **B**. In linear probing, collisions resolve to consecutive slots, creating long clusters that increase search times for subsequent keys.
+5. **B**. Kruskal's algorithm greedily considers edges in non-decreasing order of weight, adding an edge to the forest if and only if it does not form a cycle (verified via Disjoint Set Union).
 
 ## References & Navigation
 

@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
+**Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
 
 ---
 
@@ -60,76 +60,77 @@ Imagine an array `int arr[5] = {10, 20, 30, 40};` with one empty slot at the end
 ## Multiple Choice Questions
 
 1. What time complexity describes the random access of elements in an array?
-- **A)** $O(n)$
-- **B)** $O(\log n)$
-- **C)** $O(1)$
-- **D)** $O(n^2)$
+    - **A)** $O(n)$
+    - **B)** $O(\log n)$
+    - **C)** $O(1)$
+    - **D)** $O(n^2)$
 
 2. Why are arrays considered cache-friendly?
-- **A)** They compress data to save space
-- **B)** They allocate memory dynamically on the heap
-- **C)** They store elements contiguously, utilizing spatial locality
-- **D)** They allow multiple data types in a single structure
+    - **A)** They compress data to save space
+    - **B)** They allocate memory dynamically on the heap
+    - **C)** They store elements contiguously, utilizing spatial locality
+    - **D)** They allow multiple data types in a single structure
 
 3. In standard C (prior to C99), when is the size of an array fixed?
-- **A)** At runtime
-- **B)** At compile time
-- **C)** During memory deallocation
-- **D)** After the first insertion
+    - **A)** At runtime
+    - **B)** At compile time
+    - **C)** During memory deallocation
+    - **D)** After the first insertion
 
 4. Which of the following is a major disadvantage of arrays?
-- **A)** High memory overhead per element
-- **B)** Costly insertions and deletions except at the end
-- **C)** Complex syntax for access
-- **D)** Slow access time
+    - **A)** High memory overhead per element
+    - **B)** Costly insertions and deletions except at the end
+    - **C)** Complex syntax for access
+    - **D)** Slow access time
 
 5. How much time does it take in the worst-case scenario to insert an element into an array?
-- **A)** $O(1)$
-- **B)** $O(\log n)$
-- **C)** $O(n)$
-- **D)** $O(n \log n)$
+    - **A)** $O(1)$
+    - **B)** $O(\log n)$
+    - **C)** $O(n)$
+    - **D)** $O(n \log n)$
 
 6. What is the homogeneity constraint of standard arrays in C?
-- **A)** They can hold any combination of data types
-- **B)** They can only hold elements of a single data type
-- **C)** They must contain only primitive data types
-- **D)** They restrict the use of structures
+    - **A)** They can hold any combination of data types
+    - **B)** They can only hold elements of a single data type
+    - **C)** They must contain only primitive data types
+    - **D)** They restrict the use of structures
 
 7. How does an array differ from a linked list regarding memory overhead?
-- **A)** Arrays require extra memory for pointers
-- **B)** Arrays have minimal memory overhead as they do not store pointers for each element
-- **C)** Arrays allocate random blocks of memory
-- **D)** Arrays automatically shrink to save space
+    - **A)** Arrays require extra memory for pointers
+    - **B)** Arrays have minimal memory overhead as they do not store pointers for each element
+    - **C)** Arrays allocate random blocks of memory
+    - **D)** Arrays automatically shrink to save space
 
 8. Which operation requires shifting all subsequent elements in an array?
-- **A)** Reading an element at index 0
-- **B)** Modifying the last element
-- **C)** Inserting an element at the beginning
-- **D)** Traversing the array
+    - **A)** Reading an element at index 0
+    - **B)** Modifying the last element
+    - **C)** Inserting an element at the beginning
+    - **D)** Traversing the array
 
 9. What risk does the lack of bounds checking in arrays present?
-- **A)** Cache misses
-- **B)** Buffer overflows and undefined behavior
-- **C)** Increased compilation time
-- **D)** Memory leaks during allocation
+    - **A)** Cache misses
+    - **B)** Buffer overflows and undefined behavior
+    - **C)** Increased compilation time
+    - **D)** Memory leaks during allocation
 
 10. When should arrays be preferred over other data structures?
-- **A)** When the collection frequently grows and shrinks
-- **B)** When rapid read/write operations via indices are the priority
-- **C)** When storing elements of vastly different types
-- **D)** When memory overhead is not a concern
+    - **A)** When the collection frequently grows and shrinks
+    - **B)** When rapid read/write operations via indices are the priority
+    - **C)** When storing elements of vastly different types
+    - **D)** When memory overhead is not a concern
 
 ### Answer Key & Explanations
-1. **C)** Since elements are stored contiguously, addresses are calculated instantly granting $O(1)$ time.
-2. **C)** Contiguous blocks are loaded into the CPU cache simultaneously maximizing cache utilization.
-3. **B)** Static allocation determines the layout entirely during the compilation phase.
-4. **B)** Adding items requires shifting numerous adjacent items, slowing the operation.
-5. **C)** Adding an element at the start requires shifting all $N$ elements, taking $O(n)$ time.
-6. **B)** Arrays mandate homogeneity; all slots must store identical data types.
-7. **B)** Arrays dispense with the need to track individual element node pointers.
-8. **C)** Placing a new element at the start forces all existing elements down one index.
-9. **B)** Exceeding allocations can overwrite adjoining memory resulting in overflows and crashes.
-10. **B)** The principal advantage of array structures is quick lookup speeds and modifications using fixed indices.
+
+1. **C**. Since elements are stored contiguously, addresses are calculated instantly granting $O(1)$ time.
+2. **C**. Contiguous blocks are loaded into the CPU cache simultaneously maximizing cache utilization.
+3. **B**. Static allocation determines the layout entirely during the compilation phase.
+4. **B**. Adding items requires shifting numerous adjacent items, slowing the operation.
+5. **C**. Adding an element at the start requires shifting all $N$ elements, taking $O(n)$ time.
+6. **B**. Arrays mandate homogeneity; all slots must store identical data types.
+7. **B**. Arrays dispense with the need to track individual element node pointers.
+8. **C**. Placing a new element at the start forces all existing elements down one index.
+9. **B**. Exceeding allocations can overwrite adjoining memory resulting in overflows and crashes.
+10. **B**. The principal advantage of array structures is quick lookup speeds and modifications using fixed indices.
 
 ## References & Navigation
 

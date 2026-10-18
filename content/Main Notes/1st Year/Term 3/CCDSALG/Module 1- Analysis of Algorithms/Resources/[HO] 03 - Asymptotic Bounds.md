@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Asymptotic Bounds]] #[[Problem Solving]] #[[M1]]
+**Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Asymptotic Bounds]] #[[Problem Solving]] #[[M1]]
 
 ---
 

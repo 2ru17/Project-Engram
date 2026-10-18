@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Web Development]] #[[CCAPDEV]] #[[Specificity-Properties-and-Others]] #[[Code Snippets]] #[[M2]]
+**Tags:** #[[Web Development]] #[[CCAPDEV]] #[[Specificity-Properties-and-Others]] #[[Code Snippets]] #[[M2]]
 
 ---
 
@@ -91,27 +91,28 @@ padding-top, padding-left, padding-right, padding-bottom can be used to adjust e
 ## Multiple Choice Questions
 
 1. Which of the following defines the correct order of the CSS Specificity hierarchy from highest precedence to lowest?
-- **A)** Inline styles, IDs, Classes/Pseudo-classes, Elements
-- **B)** IDs, Inline styles, Elements, Classes/Pseudo-classes
-- **C)** Elements, Classes/Pseudo-classes, IDs, Inline styles
-- **D)** Inline styles, Classes/Pseudo-classes, IDs, Elements
+    - **A)** Inline styles, IDs, Classes/Pseudo-classes, Elements
+    - **B)** IDs, Inline styles, Elements, Classes/Pseudo-classes
+    - **C)** Elements, Classes/Pseudo-classes, IDs, Inline styles
+    - **D)** Inline styles, Classes/Pseudo-classes, IDs, Elements
 
 2. What is the effect of setting the `float` property on an element in CSS?
-- **A)** It permanently fixes the element to the viewport, regardless of scrolling.
-- **B)** It removes the element from the normal layout flow, allowing other elements to flow around it.
-- **C)** It centers the element within its parent container.
-- **D)** It hides the element from the document flow completely.
+    - **A)** It permanently fixes the element to the viewport, regardless of scrolling.
+    - **B)** It removes the element from the normal layout flow, allowing other elements to flow around it.
+    - **C)** It centers the element within its parent container.
+    - **D)** It hides the element from the document flow completely.
 
 3. Which property generates space around an element's content, *inside* of any defined borders?
-- **A)** `margin`
-- **B)** `clear`
-- **C)** `padding`
-- **D)** `float`
+    - **A)** `margin`
+    - **B)** `clear`
+    - **C)** `padding`
+    - **D)** `float`
 
 ### Answer Key & Explanations
-1. **A)** The specificity hierarchy places inline styles at the top, followed by IDs, then classes/attributes/pseudo-classes, and finally elements.
-2. **B)** 'Float'-ing an element removes it from the normal flow of the layout, but other elements still flow around it.
-3. **C)** The `padding` property generates space around an element’s content, inside of any defined borders, whereas margin is outside the border.
+
+1. **A**. The specificity hierarchy places inline styles at the top, followed by IDs, then classes/attributes/pseudo-classes, and finally elements.
+2. **B**. 'Float'-ing an element removes it from the normal flow of the layout, but other elements still flow around it.
+3. **C**. The `padding` property generates space around an element’s content, inside of any defined borders, whereas margin is outside the border.
 
 ## References & Navigation
 

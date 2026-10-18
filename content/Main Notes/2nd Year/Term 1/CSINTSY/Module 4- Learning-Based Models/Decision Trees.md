@@ -83,41 +83,42 @@ Leaf nodes then output the average value of the samples within that node.
 ## Multiple Choice Questions
 
 1. In a Decision Tree model, how does the algorithm determine the "best" question to split the data at an internal node?
-- **A)** By choosing the feature that most successfully separates target classes and minimizes "impurity."
-- **B)** By always splitting the data exactly in half.
-- **C)** By randomly selecting a feature and a threshold.
-- **D)** By maximizing the Gini index for the resulting subsets.
+    - **A)** By choosing the feature that most successfully separates target classes and minimizes "impurity."
+    - **B)** By always splitting the data exactly in half.
+    - **C)** By randomly selecting a feature and a threshold.
+    - **D)** By maximizing the Gini index for the resulting subsets.
 
 2. How do Decision Trees typically handle continuous or numerical features during the splitting process?
-- **A)** They ignore them completely and only use categorical features.
-- **B)** They round all numerical values to the nearest integer.
-- **C)** They consider all unique values in the feature as potential threshold questions (e.g., `>= threshold`).
-- **D)** They convert numerical features into text strings before processing.
+    - **A)** They ignore them completely and only use categorical features.
+    - **B)** They round all numerical values to the nearest integer.
+    - **C)** They consider all unique values in the feature as potential threshold questions (e.g., `>= threshold`).
+    - **D)** They convert numerical features into text strings before processing.
 
 3. Which of the following is used as a stopping criterion to prevent a Decision Tree from overfitting?
-- **A)** Ensuring a Gini index of exactly 1 at all leaf nodes.
-- **B)** Requiring the tree to evaluate every single numerical feature.
-- **C)** Setting a maximum tree depth.
-- **D)** Maximizing the variance in leaf nodes.
+    - **A)** Ensuring a Gini index of exactly 1 at all leaf nodes.
+    - **B)** Requiring the tree to evaluate every single numerical feature.
+    - **C)** Setting a maximum tree depth.
+    - **D)** Maximizing the variance in leaf nodes.
 
 4. What does a Gini index of $0$ indicate about a specific node?
-- **A)** The node is perfectly pure, containing instances of only a single class.
-- **B)** The node has exactly zero samples remaining.
-- **C)** The node contains an equal, perfectly mixed distribution of all classes.
-- **D)** The node represents a numerical feature rather than a categorical one.
+    - **A)** The node is perfectly pure, containing instances of only a single class.
+    - **B)** The node has exactly zero samples remaining.
+    - **C)** The node contains an equal, perfectly mixed distribution of all classes.
+    - **D)** The node represents a numerical feature rather than a categorical one.
 
 5. For regression trees, which metric is used instead of the Gini index to measure node purity?
-- **A)** Entropy
-- **B)** Impurity reduction percentage
-- **C)** Variance
-- **D)** Cross-entropy loss
+    - **A)** Entropy
+    - **B)** Impurity reduction percentage
+    - **C)** Variance
+    - **D)** Cross-entropy loss
 
 ### Answer Key & Explanations
-1. **A)** Decision trees recursively choose splits that decrease impurity, meaning they separate the data into the most distinct class groups possible.
-2. **C)** For continuous features, the tree algorithm evaluates unique numerical values as potential `<` or `>=` thresholds to find the optimal split point.
-3. **C)** Setting a maximum tree depth forces the tree to stop growing, acting as a stopping criterion that prevents it from overfitting to noise in the training data.
-4. **A)** The Gini index measures impurity; an index of 0 means there is no impurity, so all instances in that node belong to the exact same class.
-5. **C)** While classification trees use Gini (or entropy), regression trees use Variance to measure how spread out the continuous target values are within a node.
+
+1. **A**. Decision trees recursively choose splits that decrease impurity, meaning they separate the data into the most distinct class groups possible.
+2. **C**. For continuous features, the tree algorithm evaluates unique numerical values as potential `<` or `>=` thresholds to find the optimal split point.
+3. **C**. Setting a maximum tree depth forces the tree to stop growing, acting as a stopping criterion that prevents it from overfitting to noise in the training data.
+4. **A**. The Gini index measures impurity; an index of 0 means there is no impurity, so all instances in that node belong to the exact same class.
+5. **C**. While classification trees use Gini (or entropy), regression trees use Variance to measure how spread out the continuous target values are within a node.
 
 ## References & Navigation
 

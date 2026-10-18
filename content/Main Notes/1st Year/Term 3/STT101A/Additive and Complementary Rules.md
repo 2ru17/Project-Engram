@@ -11,111 +11,67 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Additive and Complementary Rules]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Additive and Complementary Rules]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Additive and Complementary Rules**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+Combining the **Additive Rule** and the **Complementary Rule** allows efficient computation of complex event probabilities—especially statements involving *"at least one"*, *"neither"*, or *"at most one"*—often bypassing tedious case-by-case enumeration.
 
 ## Key Definitions
-- **Additive and Complementary Rules**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Additive and Complementary Rules** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Complementary Rule:** For any event $E$, $P(E^c) = 1 - P(E)$, since $E \cup E^c = S$ and $E \cap E^c = \emptyset$.
+- **De Morgan's First Law (Neither $A$ nor $B$):** $(A \cup B)^c = A^c \cap B^c$, so $P(A^c \cap B^c) = 1 - P(A \cup B)$.
+- **De Morgan's Second Law (Not both $A$ and $B$):** $(A \cap B)^c = A^c \cup B^c$, so $P(A^c \cup B^c) = 1 - P(A \cap B)$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Additive and Complementary Rules**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** Suppose $P(A) = 0.50$, $P(B) = 0.40$, and $P(A \cap B) = 0.20$. Find the probability that **neither** $A$ **nor** $B$ occurs, $P(A^c \cap B^c)$.
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Additive and Complementary Rules** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+1. First apply the Additive Rule: $P(A \cup B) = 0.50 + 0.40 - 0.20 = 0.70$.
+2. By De Morgan's Law and the Complementary Rule: $P(A^c \cap B^c) = P((A \cup B)^c) = 1 - P(A \cup B) = 1 - 0.70 = 0.30$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. By De Morgan's Laws and the Complementary Rule, which expression is equivalent to $P(A^c \cap B^c)$?
+    - **A)** $1 - P(A \cap B)$
+    - **B)** $1 - P(A) - P(B)$
+    - **C)** $1 - P(A \cup B)$
+    - **D)** $P(A^c) + P(B^c)$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. If $P(A) = 0.60$, $P(B) = 0.50$, and $P(A \cap B) = 0.30$, what is the probability that **neither** $A$ nor $B$ occurs?
+    - **A)** $0.20$
+    - **B)** $0.80$
+    - **C)** $0.70$
+    - **D)** $0.10$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. What does the event $A^c \cup B^c$ represent in words, and how is its probability computed from $P(A \cap B)$?
+    - **A)** Both $A$ and $B$ occur; $P(A \cap B)$
+    - **B)** At least one of $A$ or $B$ does NOT occur (not both occur); $1 - P(A \cap B)$
+    - **C)** Neither $A$ nor $B$ occurs; $1 - P(A \cup B)$
+    - **D)** Exactly one of $A$ or $B$ occurs; $P(A) + P(B) - 2P(A \cap B)$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. If $P(A) = 0.35$ and $P(B^c) = 0.60$, and $A$ and $B$ are mutually exclusive, what is $P(A \cup B)$?
+    - **A)** $0.95$
+    - **B)** $0.75$
+    - **C)** $0.25$
+    - **D)** $0.65$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Why is $P(\text{at least one success in } n \text{ trials})$ almost always computed as $1 - P(\text{zero successes})$?
+    - **A)** Because the Additive Rule is invalid for more than 2 trials.
+    - **B)** Because the complement of "at least one" ($\ge 1$) is the single outcome "none" ($0$), avoiding the inclusion-exclusion sum over $2^n - 1$ overlapping cases.
+    - **C)** Because $P(\text{zero successes})$ is always $0$.
+    - **D)** Because complements change dependent events into mutually exclusive events.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **C**. By De Morgan's Law, $A^c \cap B^c = (A \cup B)^c$. Applying the Complementary Rule yields $P((A \cup B)^c) = 1 - P(A \cup B)$.
+2. **A**. First, $P(A \cup B) = 0.60 + 0.50 - 0.30 = 0.80$. Then $P(A^c \cap B^c) = 1 - P(A \cup B) = 1 - 0.80 = 0.20$.
+3. **B**. By De Morgan's second law, $A^c \cup B^c = (A \cap B)^c$, which is the complement of both occurring simultaneously, so $P(A^c \cup B^c) = 1 - P(A \cap B)$.
+4. **B**. Since $P(B^c) = 0.60$, the Complementary Rule gives $P(B) = 1 - 0.60 = 0.40$. Since $A$ and $B$ are mutually exclusive, $P(A \cup B) = P(A) + P(B) = 0.35 + 0.40 = 0.75$.
+5. **B**. The event $X \ge 1$ is the complement of $X = 0$ in discrete counts. Computing $1 - P(X = 0)$ requires evaluating only one configuration instead of expanding inclusion-exclusion across $n$ events.
 
 ## References & Navigation
 

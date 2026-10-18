@@ -3,7 +3,7 @@ id: Row-Matrix
 type: note
 course: CSMATH2
 topic: Linear Algebra
-status: draft
+status: completed
 ---
 
 # Row Matrix
@@ -13,7 +13,7 @@ status: draft
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Vectors]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
+**Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Vectors]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
 
 ---
 
@@ -57,37 +57,34 @@ $\mathbf{r}^T$ converts a row matrix to a [[Column Matrix]] and vice versa.
 
 > TL;DR — A row matrix is a $1 \times n$ matrix (one row, $n$ columns). Its transpose is a column matrix. Row-times-column multiplication yields the dot product.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** [[Column Matrix]] — [[Definition of a Matrix]] — [[Size & Dimension of a Matrix]] — [[Transpose of a Matrix]] — [[Types of Matrices]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. What are the formal dimensions of a row matrix?
-- **A)** $n \times 1$
-- **B)** $n \times n$
-- **C)** $1 \times n$
-- **D)** $1 \times 1$
+    - **A)** $n \times 1$
+    - **B)** $n \times n$
+    - **C)** $1 \times n$
+    - **D)** $1 \times 1$
 
 2. What is the result of taking the transpose of a row matrix?
-- **A)** An identity matrix.
-- **B)** A scalar value.
-- **C)** A column matrix.
-- **D)** Another row matrix.
+    - **A)** An identity matrix.
+    - **B)** A scalar value.
+    - **C)** A column matrix.
+    - **D)** Another row matrix.
 
 3. In matrix multiplication, what does a $1 \times n$ row matrix multiplied by an $n \times 1$ column matrix yield?
-- **A)** A scalar, representing the dot product of the two vectors.
-- **B)** An $n \times n$ square matrix.
-- **C)** A zero matrix.
-- **D)** A new row matrix.
+    - **A)** A scalar, representing the dot product of the two vectors.
+    - **B)** An $n \times n$ square matrix.
+    - **C)** A zero matrix.
+    - **D)** A new row matrix.
 
 ### Answer Key & Explanations
-1. **C)** A row matrix (or row vector) is defined as a matrix with exactly one row and $n$ columns, making it a $1 \times n$ matrix.
-2. **C)** The relationship section specifies that taking the transpose $\mathbf{r}^T$ converts a row matrix into a column matrix.
-3. **A)** Multiplying a row matrix by a column matrix (where the inner dimensions $n$ match) yields a $1 \times 1$ matrix, which is effectively a scalar representing the dot product.
+
+1. **C**. A row matrix (or row vector) is defined as a matrix with exactly one row and $n$ columns, making it a $1 \times n$ matrix.
+2. **C**. The relationship section specifies that taking the transpose $\mathbf{r}^T$ converts a row matrix into a column matrix.
+3. **A**. Multiplying a row matrix by a column matrix (where the inner dimensions $n$ match) yields a $1 \times 1$ matrix, which is effectively a scalar representing the dot product.
 
 ## References & Navigation
 

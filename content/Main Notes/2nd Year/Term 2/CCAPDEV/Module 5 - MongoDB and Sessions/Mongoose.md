@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Web Development]] #[[CCAPDEV]] #[[Mongoose]] #[[Code Snippets]] #[[M5]]
+**Tags:** #[[Web Development]] #[[CCAPDEV]] #[[Mongoose]] #[[Code Snippets]] #[[M5]]
 
 ---
 
@@ -63,15 +63,15 @@ const userSchema = new mongoose.Schema({
     min: 0
   }
 });
-★
-★ Text Editor
-★ models/user.js★ 
+
+ Text Editor
+ models/user.js 
 https://mongoosejs.com/docs/guide.html
 ```
 
 ```text
-★
-★ models/user.js★ 
+
+ models/user.js 
 // A Sample Schema
 const userSchema = new mongoose.Schema({
   name: {
@@ -85,9 +85,9 @@ const userSchema = new mongoose.Schema({
 });
 // A Sample Model
 const User = mongoose.model('user', userSchema);
-★
-★ Text Editor
-★ models/user.js★
+
+ Text Editor
+ models/user.js
 ```
 
 ```text
@@ -99,8 +99,8 @@ const UserSchema = new mongoose.Schema({
         required: true
     }
 });
-★
-★ Text Editor
+
+ Text Editor
 models/user.js
 ```
 
@@ -113,27 +113,28 @@ models/user.js
 ## Multiple Choice Questions
 
 1. What is the primary role of Mongoose in a Node.js application?
-- **A)** It acts as an Object Data Modelling (ODM) library for MongoDB, providing schema-based solutions and validation.
-- **B)** It serves as a front-end framework for dynamically rendering HTML templates.
-- **C)** It is a relational database management system designed to replace MongoDB.
-- **D)** It is a middleware strictly used for session authentication.
+    - **A)** It acts as an Object Data Modelling (ODM) library for MongoDB, providing schema-based solutions and validation.
+    - **B)** It serves as a front-end framework for dynamically rendering HTML templates.
+    - **C)** It is a relational database management system designed to replace MongoDB.
+    - **D)** It is a middleware strictly used for session authentication.
 
 2. Even though MongoDB is naturally schema-less, what is the advantage of defining a Mongoose Schema?
-- **A)** It entirely disables NoSQL properties, forcing MongoDB to act exactly like an SQL database.
-- **B)** It automatically compresses all documents to save storage space.
-- **C)** It allows for strongly-typed documents, making it easier to enforce validation (e.g., checking strings against strings).
-- **D)** It prevents users from performing CRUD operations on the database.
+    - **A)** It entirely disables NoSQL properties, forcing MongoDB to act exactly like an SQL database.
+    - **B)** It automatically compresses all documents to save storage space.
+    - **C)** It allows for strongly-typed documents, making it easier to enforce validation (e.g., checking strings against strings).
+    - **D)** It prevents users from performing CRUD operations on the database.
 
 3. In Mongoose, what is a "Model"?
-- **A)** The raw unformatted JSON data retrieved from a query.
-- **B)** A constructor compiled from a Schema that lets you create instances of a document and perform CRUD operations.
-- **C)** The connection string used to connect to the MongoDB instance.
-- **D)** A middleware function that triggers after a document is saved.
+    - **A)** The raw unformatted JSON data retrieved from a query.
+    - **B)** A constructor compiled from a Schema that lets you create instances of a document and perform CRUD operations.
+    - **C)** The connection string used to connect to the MongoDB instance.
+    - **D)** A middleware function that triggers after a document is saved.
 
 ### Answer Key & Explanations
-1. **A)** Mongoose is an Object Data Modelling (ODM) library for MongoDB and Node.js that provides a schema-based solution to model application data.
-2. **C)** A Mongoose schema defines a document structure to be enforced, allowing for strongly-typed documents and robust validation.
-3. **B)** A mongoose model is a constructor that lets you create instances of a document using a defined schema and perform CRUD operations on a collection.
+
+1. **A**. Mongoose is an Object Data Modelling (ODM) library for MongoDB and Node.js that provides a schema-based solution to model application data.
+2. **C**. A Mongoose schema defines a document structure to be enforced, allowing for strongly-typed documents and robust validation.
+3. **B**. A mongoose model is a constructor that lets you create instances of a document using a defined schema and perform CRUD operations on a collection.
 
 ## References & Navigation
 

@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Recommender Systems]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Recommender Systems]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
@@ -19,7 +19,7 @@ status: completed
 
 ---
 
-## 📚 Key Concepts
+## Key Concepts
 
 ---
 
@@ -263,7 +263,7 @@ Penalizes large errors more heavily than MAE. **Lower is better.** RMSE >= MAE a
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ---
 
@@ -517,7 +517,7 @@ print(similar_movies[1].round(2))
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 | Formula | Expression | Range | Notes |
 |---------|-----------|-------|-------|
@@ -534,7 +534,7 @@ print(similar_movies[1].round(2))
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
 1. **Jaccard ignores rating values** — it only counts how many items were *commonly rated*, not what the ratings were. An exam might give two users who agree on ratings but Jaccard gives low similarity because they rated few items in common.
 
@@ -566,7 +566,7 @@ Item-Item CF → subtract **item's** mean (row = item in item-user matrix)
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 ---
 
@@ -666,7 +666,7 @@ return data.subtract(row_mean, axis=0)
 
 ---
 
-### ✅ Answer Key
+### Answer Key
 
 | Q | Answer | Explanation |
 |---|--------|-------------|
@@ -694,41 +694,42 @@ return data.subtract(row_mean, axis=0)
 ## Multiple Choice Questions
 
 1. Which approach recommends items based on features of items the user liked in the past?
-- **A)** Collaborative Filtering
-- **B)** Content-Based Filtering
-- **C)** Matrix Factorization
-- **D)** Simple Aggregates
+    - **A)** Collaborative Filtering
+    - **B)** Content-Based Filtering
+    - **C)** Matrix Factorization
+    - **D)** Simple Aggregates
 
 2. What is the `Cold Start` problem in recommender systems?
-- **A)** The system crashes when too many users log in
-- **B)** The inability to recommend accurately for brand new users or items lacking history
-- **C)** Over-recommending highly popular items
-- **D)** The sparse matrix taking too long to compute
+    - **A)** The system crashes when too many users log in
+    - **B)** The inability to recommend accurately for brand new users or items lacking history
+    - **C)** Over-recommending highly popular items
+    - **D)** The sparse matrix taking too long to compute
 
 3. Why is Centered Cosine Similarity (Pearson correlation) preferred over Raw Cosine Similarity in collaborative filtering?
-- **A)** It ignores rating magnitudes completely
-- **B)** It treats unrated items as `dislikes`
-- **C)** It normalizes individual user rating biases and treats missing ratings neutrally
-- **D)** It only works for content-based models
+    - **A)** It ignores rating magnitudes completely
+    - **B)** It treats unrated items as `dislikes`
+    - **C)** It normalizes individual user rating biases and treats missing ratings neutrally
+    - **D)** It only works for content-based models
 
 4. In Matrix Factorization (e.g., SVD), what do the latent factors represent?
-- **A)** Explicit user demographic data like age and gender
-- **B)** Unobserved underlying concepts (like movie genres) that link users to items
-- **C)** The exact title names of the items
-- **D)** The exact geographical location of the users
+    - **A)** Explicit user demographic data like age and gender
+    - **B)** Unobserved underlying concepts (like movie genres) that link users to items
+    - **C)** The exact title names of the items
+    - **D)** The exact geographical location of the users
 
 5. What is a key weakness of Content-Based Filtering?
-- **A)** It suffers from overspecialization, rarely recommending items outside the users established profile
-- **B)** It requires a massive amount of ratings from other users to work
-- **C)** It cannot handle new items
-- **D)** It relies exclusively on the Jaccard similarity metric
+    - **A)** It suffers from overspecialization, rarely recommending items outside the users established profile
+    - **B)** It requires a massive amount of ratings from other users to work
+    - **C)** It cannot handle new items
+    - **D)** It relies exclusively on the Jaccard similarity metric
 
 ### Answer Key & Explanations
-1. **B)** Content-based filtering uses item profiles (features) to match against a users past preferences.
-2. **B)** Cold start refers to the lack of initial data (ratings/history) for new entities.
-3. **C)** Centered cosine subtracts user means, handling strict/generous raters and making zero numerically average instead of negative.
-4. **B)** Matrix factorization decomposes ratings into hidden (latent) dimensions explaining preferences.
-5. **A)** Without community input, content-based systems only suggest more of the exact same type of items.
+
+1. **B**. Content-based filtering uses item profiles (features) to match against a users past preferences.
+2. **B**. Cold start refers to the lack of initial data (ratings/history) for new entities.
+3. **C**. Centered cosine subtracts user means, handling strict/generous raters and making zero numerically average instead of negative.
+4. **B**. Matrix factorization decomposes ratings into hidden (latent) dimensions explaining preferences.
+5. **A**. Without community input, content-based systems only suggest more of the exact same type of items.
 
 ## References & Navigation
 

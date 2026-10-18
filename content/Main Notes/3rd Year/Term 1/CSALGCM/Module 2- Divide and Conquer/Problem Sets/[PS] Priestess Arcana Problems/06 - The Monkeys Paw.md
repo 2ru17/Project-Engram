@@ -14,7 +14,7 @@ hackerrank_domain: Divide and Conquer
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Segment Tree]] #[[Range Queries]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Segment Tree]] #[[Range Queries]]
 
 ---
 
@@ -43,16 +43,16 @@ For each query, output one line containing the length of the last movie Richie w
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > Richie has a budget and wants to watch as many movies as possible, each costing a fixed ticket price. He always picks the longest movie (by net runtime = runtime − credits). Given multiple queries over movie sub-ranges, output the runtime of the LAST movie he watches per query, or -1 if he can't afford any.
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > For each query, collect all movies in range, sort them descending, greedily buy them.
 > **O(q × r log r)** where r = range size. With Q=4000 and r=10,000: ~5×10⁸ comparisons → TLE.
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > Observe: we only need the **k-th largest** element, not the full sorted order. `nth_element` finds exactly the k-th largest in **O(r) average** — no full sort needed.
-> **O(q × r)** ≈ 4×10⁷ ops → ✅
+> **O(q × r)** ≈ 4×10⁷ ops → 
 
 ---
 
@@ -83,7 +83,7 @@ and partitions the rest (smaller left, larger right) — but doesn't sort either
 
 Performance:
   sort:         4000 queries × 10000 × 14 steps ≈ 560,000,000 → TLE
-  nth_element:  4000 queries × 10000 steps       ≈  40,000,000 → ✅
+  nth_element:  4000 queries × 10000 steps       ≈  40,000,000 → 
 ```
 
 ---
@@ -119,13 +119,13 @@ cnt < range_size → use nth_element to find 4th largest
 buf = [154, 90, 23, 95, 143]   (m=5, cnt=4, so pivot index = m-cnt = 1)
 After nth_element(buf, buf+1, buf+5):
   buf[1] = 4th largest = 90   (everything at index<1 is ≥90, index>1 is ≤90)
-Output: buf[m-cnt] = buf[1] = 90 ✓
+Output: buf[m-cnt] = buf[1] = 90 
 ```
 
 ```mermaid
 flowchart LR
     BG["budget=52, cost=12\ncnt=52/12=4"] --> NTH
-    NTH["nth_element finds\n4th largest in [154,90,23,95,143]\n= 90"] --> OUT["Print 90 ✓"]
+    NTH["nth_element finds\n4th largest in [154,90,23,95,143]\n= 90"] --> OUT["Print 90 "]
 ```
 
 ---
@@ -261,7 +261,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

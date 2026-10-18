@@ -93,50 +93,45 @@ flowchart LR
 
 ---
 
-## 6. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. What is the negation of the quantified statement $\forall x \in \mathbb{R}, (x > 0 \implies \exists y \in \mathbb{R}, y^2 = x)$?
-   - A) $\exists x \in \mathbb{R}, (x \le 0 \implies \forall y \in \mathbb{R}, y^2 \ne x)$
-   - B) $\exists x \in \mathbb{R}, (x > 0 \land \forall y \in \mathbb{R}, y^2 \ne x)$
-   - C) $\forall x \in \mathbb{R}, (x > 0 \land \exists y \in \mathbb{R}, y^2 \ne x)$
-   - D) $\exists x \in \mathbb{R}, (x \le 0 \land \forall y \in \mathbb{R}, y^2 = x)$
+    - **A)** $\exists x \in \mathbb{R}, (x \le 0 \implies \forall y \in \mathbb{R}, y^2 \ne x)$
+    - **B)** $\exists x \in \mathbb{R}, (x > 0 \land \forall y \in \mathbb{R}, y^2 \ne x)$
+    - **C)** $\forall x \in \mathbb{R}, (x > 0 \land \exists y \in \mathbb{R}, y^2 \ne x)$
+    - **D)** $\exists x \in \mathbb{R}, (x \le 0 \land \forall y \in \mathbb{R}, y^2 = x)$
 
 2. Let $R = \{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)\}$ on the set $A = \{1, 2, 3\}$. What type of relation is $R$?
-   - A) Equivalence relation
-   - B) Partial order
-   - C) Total order
-   - D) Not reflexive
+    - **A)** Equivalence relation
+    - **B)** Partial order
+    - **C)** Total order
+    - **D)** Not reflexive
 
 3. Using the Extended Euclidean Algorithm, what is the modular inverse of $7 \pmod{26}$?
-   - A) 11
-   - B) 15
-   - C) 19
-   - D) No inverse exists
+    - **A)** 11
+    - **B)** 15
+    - **C)** 19
+    - **D)** No inverse exists
 
 4. In mathematical induction, what is the inductive hypothesis in proving that $1 + 2 + \dots + n = \frac{n(n+1)}{2}$?
-   - A) Proving that $1 = \frac{1(2)}{2}$
-   - B) Assuming that $1 + 2 + \dots + k = \frac{k(k+1)}{2}$ for an arbitrary integer $k \ge 1$
-   - C) Proving that $1 + 2 + \dots + (k+1) = \frac{(k+1)(k+2)}{2}$
-   - D) Showing that the formula holds for all real numbers $n$
+    - **A)** Proving that $1 = \frac{1(2)}{2}$
+    - **B)** Assuming that $1 + 2 + \dots + k = \frac{k(k+1)}{2}$ for an arbitrary integer $k \ge 1$
+    - **C)** Proving that $1 + 2 + \dots + (k+1) = \frac{(k+1)(k+2)}{2}$
+    - **D)** Showing that the formula holds for all real numbers $n$
 
 5. Find the unique solution modulo 15 for the system: $x \equiv 2 \pmod 3$ and $x \equiv 3 \pmod 5$.
-   - A) 8
-   - B) 11
-   - C) 13
-   - D) 14
-
----
+    - **A)** 8
+    - **B)** 11
+    - **C)** 13
+    - **D)** 14
 
 ### Answer Key & Explanations
 
-1. **B) $\exists x \in \mathbb{R}, (x > 0 \land \forall y \in \mathbb{R}, y^2 \ne x)$** — The negation of $\forall x, P(x)$ is $\exists x, \neg P(x)$. Here $P(x)$ is $A \to B \equiv \neg A \lor B$. The negation $\neg(A \to B)$ is $A \land \neg B$. Hence $x > 0 \land \forall y, y^2 \ne x$.
-2. **A) Equivalence relation** — $R$ contains $(1,1), (2,2), (3,3)$ (Reflexive). $(1,2) \in R$ and $(2,1) \in R$ (Symmetric). Since $(1,2)$ and $(2,1)$ chain to $(1,1) \in R$ and $(2,1)$ and $(1,2)$ chain to $(2,2) \in R$, it is Transitive. Thus it is an equivalence relation.
-3. **B) 15** — By Euclidean algorithm: $26 = 3(7) + 5$, then $7 = 1(5) + 2$, then $5 = 2(2) + 1$. Back-substituting: $1 = 5 - 2(2) = 5 - 2(7 - 5) = 3(5) - 2(7) = 3(26 - 3(7)) - 2(7) = 3(26) - 11(7)$. Modulo 26: $-11 \cdot 7 \equiv 1 \pmod{26}$. Since $-11 \equiv 15 \pmod{26}$, the modular inverse is 15 ($15 \times 7 = 105 = 4 \times 26 + 1$).
-4. **B) Assuming that $1 + 2 + \dots + k = \frac{k(k+1)}{2}$ for an arbitrary integer $k \ge 1$** — The inductive hypothesis is the formal assumption that the predicate $P(k)$ is true for an arbitrary step $k$.
-5. **A) 8** — Checking $x \in \{3, 8, 13\}$ (values $\equiv 3 \pmod 5$): $8 \bmod 3 = 2$, matching $x \equiv 2 \pmod 3$. Thus $x \equiv 8 \pmod{15}$.
-
-
----
+1. **B**. The negation of $\forall x, P(x)$ is $\exists x, \neg P(x)$. Here $P(x)$ is $A \to B \equiv \neg A \lor B$. The negation $\neg(A \to B)$ is $A \land \neg B$. Hence $x > 0 \land \forall y, y^2 \ne x$.
+2. **A**. $R$ contains $(1,1), (2,2), (3,3)$ (Reflexive). $(1,2) \in R$ and $(2,1) \in R$ (Symmetric). Since $(1,2)$ and $(2,1)$ chain to $(1,1) \in R$ and $(2,1)$ and $(1,2)$ chain to $(2,2) \in R$, it is Transitive. Thus it is an equivalence relation.
+3. **B**. By Euclidean algorithm: $26 = 3(7) + 5$, then $7 = 1(5) + 2$, then $5 = 2(2) + 1$. Back-substituting: $1 = 5 - 2(2) = 5 - 2(7 - 5) = 3(5) - 2(7) = 3(26 - 3(7)) - 2(7) = 3(26) - 11(7)$. Modulo 26: $-11 \cdot 7 \equiv 1 \pmod{26}$. Since $-11 \equiv 15 \pmod{26}$, the modular inverse is 15 ($15 \times 7 = 105 = 4 \times 26 + 1$).
+4. **B**. The inductive hypothesis is the formal assumption that the predicate $P(k)$ is true for an arbitrary step $k$.
+5. **A**. Checking $x \in \{3, 8, 13\}$ (values $\equiv 3 \pmod 5$): $8 \bmod 3 = 2$, matching $x \equiv 2 \pmod 3$. Thus $x \equiv 8 \pmod{15}$.
 
 ## References & Navigation
 

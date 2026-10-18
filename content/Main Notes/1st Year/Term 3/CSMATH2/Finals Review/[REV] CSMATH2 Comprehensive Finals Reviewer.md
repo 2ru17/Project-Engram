@@ -67,50 +67,45 @@ flowchart LR
 
 ---
 
-## 4. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. If $A$ is a $3 \times 3$ matrix with $\det(A) = 4$, what is $\det(2A)$?
-   - A) 8
-   - B) 16
-   - C) 32
-   - D) 64
+    - **A)** 8
+    - **B)** 16
+    - **C)** 32
+    - **D)** 64
 
 2. Let $A$ be a $4 \times 7$ matrix. If the dimension of the null space of $A$ is 4, what is the rank of $A$?
-   - A) 0
-   - B) 3
-   - C) 4
-   - D) 7
+    - **A)** 0
+    - **B)** 3
+    - **C)** 4
+    - **D)** 7
 
 3. For which value of $k$ is the matrix $\begin{bmatrix} 2 & k \\ 4 & 6 \end{bmatrix}$ singular (non-invertible)?
-   - A) 1
-   - B) 2
-   - C) 3
-   - D) 4
+    - **A)** 1
+    - **B)** 2
+    - **C)** 3
+    - **D)** 4
 
 4. What are the eigenvalues of the matrix $A = \begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix}$?
-   - A) $\lambda = 3$ and $\lambda = 2$
-   - B) $\lambda = 5$ and $\lambda = 6$
-   - C) $\lambda = 1$ and $\lambda = 3$
-   - D) $\lambda = 0$ and $\lambda = 5$
+    - **A)** $\lambda = 3$ and $\lambda = 2$
+    - **B)** $\lambda = 5$ and $\lambda = 6$
+    - **C)** $\lambda = 1$ and $\lambda = 3$
+    - **D)** $\lambda = 0$ and $\lambda = 5$
 
 5. Which of the following subsets of $\mathbb{R}^3$ is a valid vector subspace?
-   - A) The set of vectors $(x, y, z)$ such that $x + y + z = 1$
-   - B) The set of vectors $(x, y, z)$ such that $x y = 0$
-   - C) The set of vectors $(x, y, z)$ such that $2x - 3y + z = 0$
-   - D) The set of vectors $(x, y, z)$ such that $x^2 + y^2 + z^2 \le 1$
-
----
+    - **A)** The set of vectors $(x, y, z)$ such that $x + y + z = 1$
+    - **B)** The set of vectors $(x, y, z)$ such that $x y = 0$
+    - **C)** The set of vectors $(x, y, z)$ such that $2x - 3y + z = 0$
+    - **D)** The set of vectors $(x, y, z)$ such that $x^2 + y^2 + z^2 \le 1$
 
 ### Answer Key & Explanations
 
-1. **C) 32** — For an $n \times n$ matrix, $\det(c A) = c^n \det(A)$. Here $n = 3$, so $\det(2A) = 2^3 \det(A) = 8 \times 4 = 32$.
-2. **B) 3** — By the Rank-Nullity Theorem: $\text{rank}(A) + \text{nullity}(A) = n$ (number of columns). Thus, $\text{rank}(A) + 4 = 7 \implies \text{rank}(A) = 3$.
-3. **C) 3** — A matrix is singular when its determinant equals zero: $\det(A) = 2(6) - 4(k) = 12 - 4k = 0 \implies k = 3$.
-4. **A) $\lambda = 3$ and $\lambda = 2$** — $A$ is an upper triangular matrix. The eigenvalues of an upper or lower triangular matrix are strictly the entries on its main diagonal: 3 and 2.
-5. **C) The set of vectors $(x, y, z)$ such that $2x - 3y + z = 0$** — A valid subspace must contain the zero vector $\mathbf{0}$ and be closed under vector addition and scalar multiplication. The homogeneous linear equation $2x - 3y + z = 0$ defines a plane passing through the origin in $\mathbb{R}^3$, satisfying all subspace axioms.
-
-
----
+1. **C**. For an $n \times n$ matrix, $\det(c A) = c^n \det(A)$. Here $n = 3$, so $\det(2A) = 2^3 \det(A) = 8 \times 4 = 32$.
+2. **B**. By the Rank-Nullity Theorem: $\text{rank}(A) + \text{nullity}(A) = n$ (number of columns). Thus, $\text{rank}(A) + 4 = 7 \implies \text{rank}(A) = 3$.
+3. **C**. A matrix is singular when its determinant equals zero: $\det(A) = 2(6) - 4(k) = 12 - 4k = 0 \implies k = 3$.
+4. **A**. $A$ is an upper triangular matrix. The eigenvalues of an upper or lower triangular matrix are strictly the entries on its main diagonal: 3 and 2.
+5. **C**. A valid subspace must contain the zero vector $\mathbf{0}$ and be closed under vector addition and scalar multiplication. The homogeneous linear equation $2x - 3y + z = 0$ defines a plane passing through the origin in $\mathbb{R}^3$, satisfying all subspace axioms.
 
 ## References & Navigation
 

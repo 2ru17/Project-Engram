@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Conceptual]] #[[A Posteriori Analysis]]
+**Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Conceptual]] #[[A Posteriori Analysis]]
 
 ---
 
@@ -52,76 +52,77 @@ To conduct a meaningful a posteriori analysis, developers rely on benchmarking a
 ## Multiple Choice Questions
 
 1. What does A Posteriori Analysis primarily measure?
-- **A)** Theoretical bounds
-- **B)** Actual execution time and memory usage
-- **C)** Asymptotic growth rate
-- **D)** The mathematical complexity of an algorithm
+    - **A)** Theoretical bounds
+    - **B)** Actual execution time and memory usage
+    - **C)** Asymptotic growth rate
+    - **D)** The mathematical complexity of an algorithm
 
 2. When is A Posteriori Analysis conducted?
-- **A)** Before the algorithm is designed
-- **B)** During the mathematical modeling phase
-- **C)** After the algorithm has been implemented and executed
-- **D)** Only when theoretical analysis fails
+    - **A)** After the algorithm has been implemented and executed
+    - **B)** During the mathematical modeling phase
+    - **C)** Before the algorithm is designed
+    - **D)** Only when theoretical analysis fails
 
 3. Which of the following is NOT a factor that influences A Posteriori measurements?
-- **A)** CPU architecture and clock speed
-- **B)** Operating system overhead
-- **C)** The asymptotic notation of the algorithm
-- **D)** Compiler and language runtime
+    - **A)** CPU architecture and clock speed
+    - **B)** Operating system overhead
+    - **C)** The asymptotic notation of the algorithm
+    - **D)** Compiler and language runtime
 
 4. How does A Posteriori Analysis handle constants and lower-order terms?
-- **A)** It ignores them entirely.
-- **B)** It accounts for them, unlike theoretical models.
-- **C)** It replaces them with Big-O notation.
-- **D)** It assumes they are equal to zero.
+    - **A)** It ignores them entirely.
+    - **B)** It assumes they are equal to zero.
+    - **C)** It replaces them with Big-O notation.
+    - **D)** It accounts for them, unlike theoretical models.
 
 5. What is the primary purpose of benchmarking in A Posteriori Analysis?
-- **A)** To mathematically prove the correctness of an algorithm
-- **B)** To track which sections of code consume the most resources
-- **C)** To run a program on defined datasets to measure performance metrics
-- **D)** To convert pseudo-code into machine code
+    - **A)** To mathematically prove the correctness of an algorithm
+    - **B)** To run a program on defined datasets to measure performance metrics
+    - **C)** To track which sections of code consume the most resources
+    - **D)** To convert pseudo-code into machine code
 
 6. Which process provides a micro-level view by identifying bottlenecks in the code?
-- **A)** Benchmarking
-- **B)** Profiling
-- **C)** Compiling
-- **D)** Asymptotic bounding
+    - **A)** Benchmarking
+    - **B)** Compiling
+    - **C)** Profiling
+    - **D)** Asymptotic bounding
 
 7. How might the choice of programming language affect A Posteriori Analysis?
-- **A)** It changes the time complexity class of the algorithm.
-- **B)** Different compilers handle memory management and instruction generation differently.
-- **C)** It alters the mathematical correctness of the algorithm.
-- **D)** It completely removes the need for benchmarking.
+    - **A)** Different compilers handle memory management and instruction generation differently.
+    - **B)** It changes the time complexity class of the algorithm.
+    - **C)** It alters the mathematical correctness of the algorithm.
+    - **D)** It completely removes the need for benchmarking.
 
 8. Which of the following best describes the difference between A Posteriori and A Priori analysis?
-- **A)** A Posteriori is theoretical, while A Priori is empirical.
-- **B)** A Posteriori evaluates implemented programs, while A Priori evaluates mathematical models.
-- **C)** A Posteriori focuses on time complexity, while A Priori focuses on space complexity.
-- **D)** A Posteriori is only used for sorting algorithms.
+    - **A)** A Posteriori is theoretical, while A Priori is empirical.
+    - **B)** A Posteriori is only used for sorting algorithms.
+    - **C)** A Posteriori focuses on time complexity, while A Priori focuses on space complexity.
+    - **D)** A Posteriori evaluates implemented programs, while A Priori evaluates mathematical models.
 
 9. Why are input data characteristics important in A Posteriori Analysis?
-- **A)** They determine the Big-O notation of the code.
-- **B)** The size, order, and distribution of data significantly impact performance.
-- **C)** They dictate which programming language must be used.
-- **D)** They eliminate operating system overhead.
+    - **A)** They determine the Big-O notation of the code.
+    - **B)** They dictate which programming language must be used.
+    - **C)** The size, order, and distribution of data significantly impact performance.
+    - **D)** They eliminate operating system overhead.
 
 10. In which scenario would A Posteriori Analysis be most useful?
-- **A)** Determining if an algorithm runs in O(n) or O(n^2) time
-- **B)** Comparing the real-world efficiency of two sorting algorithms running on identical hardware
-- **C)** Proving that a problem is NP-Complete
-- **D)** Calculating the theoretical minimum number of operations for a task
+    - **A)** Comparing the real-world efficiency of two sorting algorithms running on identical hardware
+    - **B)** Determining if an algorithm runs in O(n) or O(n^2) time
+    - **C)** Proving that a problem is NP-Complete
+    - **D)** Calculating the theoretical minimum number of operations for a task
 
 ### Answer Key & Explanations
-1. **B)** A Posteriori analysis involves direct measurement of the physical time and memory consumed during execution.
-2. **C)** It is performed after the algorithm has been fully implemented and compiled.
-3. **C)** Asymptotic notation belongs to A Priori analysis; hardware, OS, and compilers are physical factors affecting execution.
-4. **B)** It accounts for the constants and lower-order terms that theoretical models often ignore.
-5. **C)** Benchmarking provides a macro-level view by running programs on defined datasets to measure performance metrics.
-6. **B)** Profiling is used to track the execution and identify bottlenecks that consume the most resources.
-7. **B)** Different languages and compilers handle memory and instruction generation differently, impacting performance (e.g., C vs. Python).
-8. **B)** A Posteriori is based on actual execution metrics, whereas A Priori focuses on mathematical abstractions.
-9. **B)** The size, order, and distribution of input data significantly change how the algorithm performs in a real-world setting.
-10. **B)** Benchmarking and profiling real-world efficiency on specific hardware is the core use-case of A Posteriori analysis.
+
+1. **B**. A Posteriori analysis involves direct measurement of the physical time and memory consumed during execution.
+2. **A**. It is performed after the algorithm has been fully implemented and compiled.
+3. **C**. Asymptotic notation belongs to A Priori analysis; hardware, OS, and compilers are physical factors affecting execution.
+4. **D**. It accounts for the constants and lower-order terms that theoretical models often ignore.
+5. **B**. Benchmarking provides a macro-level view by running programs on defined datasets to measure performance metrics.
+6. **C**. Profiling is used to track the execution and identify bottlenecks that consume the most resources.
+7. **A**. Different languages and compilers handle memory and instruction generation differently, impacting performance (e.g., C vs. Python).
+8. **D**. A Posteriori is based on actual execution metrics, whereas A Priori focuses on mathematical abstractions.
+9. **C**. The size, order, and distribution of input data significantly change how the algorithm performs in a real-world setting.
+10. **A**. Benchmarking and profiling real-world efficiency on specific hardware is the core use-case of A Posteriori analysis.
 
 ## References & Navigation
 

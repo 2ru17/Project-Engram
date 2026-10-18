@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Application Software]] #[[Programming Tools]] #[[M4]]
+**Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Application Software]] #[[Programming Tools]] #[[M4]]
 
 ---
 
@@ -67,76 +67,77 @@ Understanding licensing is crucial for ethical and legal software usage:
 ## Multiple Choice Questions
 
 1. What is Application Software?
-- **A)** Software that manages hardware resources directly.
-- **B)** Programs designed to assist users with specific tasks, such as word processing or web browsing.
-- **C)** Firm, unchanging system instructions stored in ROM.
-- **D)** Virtualized network environments for cloud servers.
+    - **A)** Software that manages hardware resources directly.
+    - **B)** Programs designed to assist users with specific tasks, such as word processing or web browsing.
+    - **C)** Firm, unchanging system instructions stored in ROM.
+    - **D)** Virtualized network environments for cloud servers.
 
 2. Which term describes a bundle of related proprietary software applications sold together more cost-effectively?
-- **A)** Software as a Service (SaaS)
-- **B)** Emulators
-- **C)** Software Suite
-- **D)** Open Source Repository
+    - **A)** Software as a Service (SaaS)
+    - **B)** Emulators
+    - **C)** Software Suite
+    - **D)** Open Source Repository
 
 3. What is the Software as a Service (SaaS) model?
-- **A)** Installing software directly from a physical CD/DVD.
-- **B)** A web software delivery model where applications are hosted by a vendor and accessed over the Internet.
-- **C)** Creating customized operating systems for enterprise clients.
-- **D)** Giving away source code for users to compile themselves.
+    - **A)** Installing software directly from a physical CD/DVD.
+    - **B)** A web software delivery model where applications are hosted by a vendor and accessed over the Internet.
+    - **C)** Creating customized operating systems for enterprise clients.
+    - **D)** Giving away source code for users to compile themselves.
 
 4. Which software translator converts entire high-level source code into machine code in a single batch before execution?
-- **A)** Interpreter
-- **B)** Assembler
-- **C)** Compiler
-- **D)** Hypervisor
+    - **A)** Interpreter
+    - **B)** Assembler
+    - **C)** Compiler
+    - **D)** Hypervisor
 
 5. How does an interpreter differ from a compiler?
-- **A)** It translates and executes high-level source code line-by-line during runtime without generating a permanent machine code file.
-- **B)** It only translates low-level assembly language.
-- **C)** It compiles the entire codebase into a standalone executable file faster than a compiler.
-- **D)** It is used exclusively for operating system kernels.
+    - **A)** It translates and executes high-level source code line-by-line during runtime without generating a permanent machine code file.
+    - **B)** It only translates low-level assembly language.
+    - **C)** It compiles the entire codebase into a standalone executable file faster than a compiler.
+    - **D)** It is used exclusively for operating system kernels.
 
 6. What type of software is an emulator?
-- **A)** A word processor bundled in a software suite.
-- **B)** A compiler that translates Java into C++.
-- **C)** Educational & Simulation software that duplicates hardware/OS features to run non-native software.
-- **D)** A database management system for small businesses.
+    - **A)** A word processor bundled in a software suite.
+    - **B)** A compiler that translates Java into C++.
+    - **C)** Educational & Simulation software that duplicates hardware/OS features to run non-native software.
+    - **D)** A database management system for small businesses.
 
 7. Under which software license type do the creators retain copyright but grant users access to source code and permission to freely copy and modify it?
-- **A)** Proprietary
-- **B)** Freeware
-- **C)** Public Domain
-- **D)** Open Source
+    - **A)** Proprietary
+    - **B)** Freeware
+    - **C)** Public Domain
+    - **D)** Open Source
 
 8. What characterizes a Public Domain software license?
-- **A)** The creator retains copyright but allows free distribution.
-- **B)** The source code is hidden and modifications are strictly forbidden.
-- **C)** The creator does not retain copyright, and users have complete freedom to copy, modify, and distribute the source code.
-- **D)** It is only legally available to government agencies.
+    - **A)** The creator retains copyright but allows free distribution.
+    - **B)** The source code is hidden and modifications are strictly forbidden.
+    - **C)** The creator does not retain copyright, and users have complete freedom to copy, modify, and distribute the source code.
+    - **D)** It is only legally available to government agencies.
 
 9. Which translator is used to convert low-level assembly language directly into machine code?
-- **A)** Compiler
-- **B)** Assembler
-- **C)** Interpreter
-- **D)** Device Driver
+    - **A)** Compiler
+    - **B)** Assembler
+    - **C)** Interpreter
+    - **D)** Device Driver
 
 10. What is a key feature of a "Custom Installation" for software?
-- **A)** It copies all commonly used files without asking for user preferences.
-- **B)** It automatically updates the BIOS.
-- **C)** It allows the user to select specific components to install and customize settings.
-- **D)** It requires compiling the software from source code.
+    - **A)** It copies all commonly used files without asking for user preferences.
+    - **B)** It automatically updates the BIOS.
+    - **C)** It allows the user to select specific components to install and customize settings.
+    - **D)** It requires compiling the software from source code.
 
 ### Answer Key & Explanations
-1. **B)** Application Software encompasses programs designed to assist users with specific tasks.
-2. **C)** A Software Suite is a bundle of related proprietary software sold together.
-3. **B)** SaaS is a web delivery model where applications are hosted and accessed over a network/Internet.
-4. **C)** A Compiler translates entire high-level source code into machine code in a single batch.
-5. **A)** An Interpreter translates and executes code line-by-line during runtime (no permanent file generated).
-6. **C)** Emulators are simulation programs that duplicate hardware/OS features to run non-native software.
-7. **D)** Under an Open Source license, creators retain copyright but provide source code access and permission to modify and copy.
-8. **C)** Public Domain software does not retain copyright, granting full access and freedom.
-9. **B)** An Assembler translates low-level assembly language directly into machine code.
-10. **C)** Custom Installation allows the user to select specific components and customize settings, unlike Full/Typical installation.
+
+1. **B**. Application Software encompasses programs designed to assist users with specific tasks.
+2. **C**. A Software Suite is a bundle of related proprietary software sold together.
+3. **B**. SaaS is a web delivery model where applications are hosted and accessed over a network/Internet.
+4. **C**. A Compiler translates entire high-level source code into machine code in a single batch.
+5. **A**. An Interpreter translates and executes code line-by-line during runtime (no permanent file generated).
+6. **C**. Emulators are simulation programs that duplicate hardware/OS features to run non-native software.
+7. **D**. Under an Open Source license, creators retain copyright but provide source code access and permission to modify and copy.
+8. **C**. Public Domain software does not retain copyright, granting full access and freedom.
+9. **B**. An Assembler translates low-level assembly language directly into machine code.
+10. **C**. Custom Installation allows the user to select specific components and customize settings, unlike Full/Typical installation.
 
 ## References & Navigation
 

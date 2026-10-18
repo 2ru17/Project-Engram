@@ -11,111 +11,67 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Multiplication Rule]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Multiplication Rule]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Multiplication Rule**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+In combinatorics, the **Multiplication Rule** (Rule of Product) states that if an operation can be broken into a sequence of $k$ ordered steps where Step $1$ has $n_1$ choices, Step $2$ has $n_2$ choices, ..., and Step $k$ has $n_k$ choices, the total number of ways to perform the entire operation is $n_1 \times n_2 \times \cdots \times n_k$.
 
 ## Key Definitions
-- **Multiplication Rule**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Multiplication Rule** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Rule of Product:** $|A_1 \times A_2 \times \cdots \times A_k| = n_1 \cdot n_2 \cdots n_k$.
+- **Sampling With Replacement:** Each of the $r$ steps has $n$ choices, giving $n \times n \times \cdots \times n = n^r$ ordered tuples.
+- **Sampling Without Replacement:** Step 1 has $n$ choices, Step 2 has $n-1$ choices, ..., Step $r$ has $n - r + 1$ choices, giving $P(n, r) = n(n-1)\cdots(n-r+1)$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Multiplication Rule**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** An IPv4 subnet host identifier has $8$ bits, each of which can be `0` or `1`. How many total $8$-bit strings exist, and how many usable host addresses remain after excluding the network address (all `0`s) and broadcast address (all `1`s)?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Multiplication Rule** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- By the Multiplication Rule across $8$ bit positions: $2^8 = 256$ total addresses.
+- Subtracting the $2$ reserved addresses leaves $2^8 - 2 = 254$ usable host addresses.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. A restaurant menu offers $4$ appetizers, $6$ main courses, and $3$ desserts. If a meal consists of one item from each category, how many distinct meals can be ordered?
+    - **A)** $13$
+    - **B)** $72$
+    - **C)** $27$
+    - **D)** $144$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. How many $5$-letter strings (words) can be formed from the $26$-letter English alphabet if **no letter may be repeated**?
+    - **A)** $26^5$
+    - **B)** $26 \times 25 \times 24 \times 23 \times 22 = 7,893,600$
+    - **C)** $\binom{26}{5} = 65,780$
+    - **D)** $5! = 120$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. How many $4$-digit integers (from $1000$ to $9999$) consist entirely of **odd digits** ($\{1, 3, 5, 7, 9\}$) if repetition of digits is allowed?
+    - **A)** $5^4 = 625$
+    - **B)** $5 \times 4 \times 3 \times 2 = 120$
+    - **C)** $4^5 = 1024$
+    - **D)** $9 \times 10^3 = 9000$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. When do we **multiply** counts (Rule of Product) versus **add** counts (Rule of Sum)?
+    - **A)** We multiply for sequential stages joined by **AND** (where each stage must be completed in succession) and add for mutually exclusive alternatives joined by **OR**.
+    - **B)** We multiply for disjoint cases and add for sequential stages.
+    - **C)** We always multiply when numbers are small.
+    - **D)** Multiplication and addition always give the same count.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. A byte consists of $8$ bits. How many bytes begin with `10` and end with `01`?
+    - **A)** $2^8 = 256$
+    - **B)** $2^4 = 16$
+    - **C)** $4^2 = 16$
+    - **D)** $2^6 = 64$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. By the Multiplication Rule across 3 stages: $4 \times 6 \times 3 = 72$.
+2. **B**. Without replacement across 5 positions, the choices are $26, 25, 24, 23, 22$, whose product is $7,893,600$.
+3. **A**. There are $5$ odd digits ($1,3,5,7,9$) and none is $0$, so each of the $4$ digit places independently has $5$ choices: $5^4 = 625$.
+4. **A**. Sequential multi-step construction ("do Stage 1 AND Stage 2") multiplies branching counts, whereas choosing between disjoint cases ("Case 1 OR Case 2") sums their counts.
+5. **B**. Four bit positions are fixed ($1$ choice each), and the middle $4$ bits each have $2$ choices (`0` or `1`), yielding $1 \times 1 \times 2^4 \times 1 \times 1 = 16$.
 
 ## References & Navigation
 

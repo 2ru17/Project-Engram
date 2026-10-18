@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
+**Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
 
 ---
 
@@ -110,10 +110,6 @@ Skipping the normalization analysis explanations — they show how to identify U
 ## Summary
 
 > TL;DR — Complete answer key with explanations for the Concept-Finals-Mock. Each answer includes a rationale connecting to the underlying DBMS concept.
-
-## Review Questions
-
-_To be added._
 
 ## Links
 

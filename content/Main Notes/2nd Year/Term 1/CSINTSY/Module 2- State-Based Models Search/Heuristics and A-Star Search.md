@@ -93,41 +93,42 @@ flowchart TD
 ## Multiple Choice Questions
 
 1. How does informed search differ from uninformed search?
-- **A)** Informed search explicitly tests all possible paths before deciding.
-- **B)** Informed search exploits partial domain knowledge, often using a heuristic function to guide exploration.
-- **C)** Informed search relies exclusively on the accumulated path cost without estimation.
-- **D)** Informed search does not require a goal test.
+    - **A)** Informed search explicitly tests all possible paths before deciding.
+    - **B)** Informed search exploits partial domain knowledge, often using a heuristic function to guide exploration.
+    - **C)** Informed search relies exclusively on the accumulated path cost without estimation.
+    - **D)** Informed search does not require a goal test.
 
 2. What is the primary characteristic of Greedy Best-First Search (GBFS)?
-- **A)** It expands the node with the lowest accumulated cost $g(s)$.
-- **B)** It expands the node that appears closest to the goal based solely on $h(s)$.
-- **C)** It is always guaranteed to find the optimal path.
-- **D)** It combines Uniform Cost Search and Depth-First Search.
+    - **A)** It expands the node with the lowest accumulated cost $g(s)$.
+    - **B)** It expands the node that appears closest to the goal based solely on $h(s)$.
+    - **C)** It is always guaranteed to find the optimal path.
+    - **D)** It combines Uniform Cost Search and Depth-First Search.
 
 3. How does A* Search calculate the priority of a node to expand?
-- **A)** By finding the difference between $g(s)$ and $h(s)$.
-- **B)** By ignoring $g(s)$ and only looking at $h(s)$.
-- **C)** By taking the sum of the accumulated path cost and the estimated cost to the goal ($f(s) = g(s) + h(s)$).
-- **D)** By multiplying the step cost by the heuristic value.
+    - **A)** By finding the difference between $g(s)$ and $h(s)$.
+    - **B)** By ignoring $g(s)$ and only looking at $h(s)$.
+    - **C)** By taking the sum of the accumulated path cost and the estimated cost to the goal ($f(s) = g(s) + h(s)$).
+    - **D)** By multiplying the step cost by the heuristic value.
 
 4. What happens to the A* Search algorithm if the heuristic function $h(s)$ is always set to 0?
-- **A)** It devolves into a Uniform Cost Search (UCS).
-- **B)** It devolves into a standard Depth-First Search.
-- **C)** It will completely fail to find any solution.
-- **D)** It becomes a purely Greedy Best-First Search.
+    - **A)** It devolves into a Uniform Cost Search (UCS).
+    - **B)** It devolves into a standard Depth-First Search.
+    - **C)** It will completely fail to find any solution.
+    - **D)** It becomes a purely Greedy Best-First Search.
 
 5. What does the Admissibility Condition $h(s) \leq h^*(s)$ ensure for a heuristic?
-- **A)** That the heuristic perfectly calculates the path without searching.
-- **B)** That the heuristic never overestimates the true optimal cost to reach the goal.
-- **C)** That the heuristic will always overestimate the cost to ensure safety.
-- **D)** That the heuristic can only be used for the 8-Puzzle problem.
+    - **A)** That the heuristic perfectly calculates the path without searching.
+    - **B)** That the heuristic never overestimates the true optimal cost to reach the goal.
+    - **C)** That the heuristic will always overestimate the cost to ensure safety.
+    - **D)** That the heuristic can only be used for the 8-Puzzle problem.
 
 ### Answer Key & Explanations
-1. **B)** Informed search uses a heuristic function, encapsulating problem-specific domain knowledge to estimate the cost to the goal.
-2. **B)** GBFS focuses entirely on the heuristic $h(s)$, expanding the node that looks closest to the goal, which sacrifices optimality.
-3. **C)** A* uses the evaluation function $f(s) = g(s) + h(s)$, combining past actual cost with future estimated cost.
-4. **A)** If $h(s) = 0$, then $f(s) = g(s)$, meaning A* will expand nodes purely based on accumulated cost, exactly like UCS.
-5. **B)** An admissible heuristic is optimistic; it never predicts a cost higher than the actual true optimal cost ($h^*(s)$).
+
+1. **B**. Informed search uses a heuristic function, encapsulating problem-specific domain knowledge to estimate the cost to the goal.
+2. **B**. GBFS focuses entirely on the heuristic $h(s)$, expanding the node that looks closest to the goal, which sacrifices optimality.
+3. **C**. A* uses the evaluation function $f(s) = g(s) + h(s)$, combining past actual cost with future estimated cost.
+4. **A**. If $h(s) = 0$, then $f(s) = g(s)$, meaning A* will expand nodes purely based on accumulated cost, exactly like UCS.
+5. **B**. An admissible heuristic is optimistic; it never predicts a cost higher than the actual true optimal cost ($h^*(s)$).
 
 ## References & Navigation
 

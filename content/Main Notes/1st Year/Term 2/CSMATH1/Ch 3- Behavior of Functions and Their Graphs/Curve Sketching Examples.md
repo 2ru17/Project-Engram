@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
 
 ---
 
@@ -55,77 +55,43 @@ Let $f(x)$ be a differentiable function.
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. If $f'(x) > 0$ on $(-\infty, 2)$ and $f'(x) < 0$ on $(2, \infty)$ for a continuous function $f$, what does the First Derivative Test conclude at $x = 2$?
+    - **A)** $f$ has a local minimum at $x = 2$
+    - **B)** $f$ has a local maximum at $x = 2$
+    - **C)** $f$ has a point of inflection at $x = 2$
+    - **D)** $f$ has a vertical asymptote at $x = 2$
 
-2. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. What does the condition $f''(x) < 0$ on an open interval $I$ tell us about the graph of $f$ on $I$?
+    - **A)** The graph of $f$ is concave downward on $I$ (its tangent slopes $f'(x)$ are decreasing)
+    - **B)** $f$ is strictly decreasing on $I$
+    - **C)** The graph of $f$ is concave upward on $I$
+    - **D)** $f(x)$ takes only negative values on $I$
 
-3. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. How is a **point of inflection** defined on the graph of a continuous function $f$?
+    - **A)** Any point where $f'(x) = 0$
+    - **B)** Any point where $f''(x) = 0$, regardless of whether concavity changes
+    - **C)** A point where the graph changes concavity (from concave upward to concave downward, or vice versa)
+    - **D)** A point where the graph crosses the $x$-axis
 
-4. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. Suppose $f'(c) = 0$ and $f''(c) = 6 > 0$. By the Second Derivative Test, what occurs at $x = c$?
+    - **A)** A local maximum, because $f''(c) > 0$
+    - **B)** A point of inflection
+    - **C)** The Second Derivative Test is inconclusive
+    - **D)** A local minimum, because the tangent is horizontal and the curve is concave upward
 
-5. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Curve Sketching Examples?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. Find the x-coordinate of the point of inflection of $f(x) = x^3 - 6x^2 + 9x + 1$.
+    - **A)** $x = 1$
+    - **B)** $x = 2$
+    - **C)** $x = 3$
+    - **D)** $x = 0$
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Curve Sketching Examples without relying on rote computation.
+
+1. **B**. Since $f$ is increasing to the left of $2$ ($f' > 0$) and decreasing to the right of $2$ ($f' < 0$), the graph rises to a peak at $x = 2$, yielding a local maximum.
+2. **A**. The second derivative $f''(x)$ is the rate of change of the slope $f'(x)$. When $f''(x) < 0$, the slopes are decreasing, meaning the curve bends downward (concave downward).
+3. **C**. A point of inflection requires an actual sign change in $f''(x)$ (a change in concavity). Merely having $f''(c) = 0$ is not enough (for instance, $f(x) = x^4$ has $f''(0) = 0$ but is concave up on both sides).
+4. **D**. At $x = c$, $f'(c) = 0$ gives a horizontal tangent, and $f''(c) > 0$ means the curve opens upward like a cup around $c$, so $f(c)$ is a local minimum.
+5. **B**. Here $f'(x) = 3x^2 - 12x + 9$ and $f''(x) = 6x - 12 = 6(x - 2)$. Since $f''(x)$ changes sign from negative ($x < 2$) to positive ($x > 2$) at $x = 2$, the inflection point is at $x = 2$.
 
 ## References & Navigation
 

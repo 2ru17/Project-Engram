@@ -75,50 +75,45 @@ flowchart TB
 
 ---
 
-## 4. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. What mechanism in Distance-Vector routing prevents a router from advertising a learned route back out the same interface through which it originally received it?
-   - A) Dijkstra's Algorithm
-   - B) Split Horizon
-   - C) Link-State Refresh
-   - D) Area Border Routing
+    - **A)** Dijkstra's Algorithm
+    - **B)** Split Horizon
+    - **C)** Link-State Refresh
+    - **D)** Area Border Routing
 
 2. What is the maximum valid hop count supported by the Routing Information Protocol (RIP) before a destination is declared unreachable?
-   - A) 10
-   - B) 15
-   - C) 16
-   - D) 255
+    - **A)** 10
+    - **B)** 15
+    - **C)** 16
+    - **D)** 255
 
 3. In OSPF, what type of router connects one or more non-backbone areas directly to the backbone Area 0?
-   - A) Internal Router (IR)
-   - B) Autonomous System Boundary Router (ASBR)
-   - C) Area Border Router (ABR)
-   - D) Designated Router (DR)
+    - **A)** Internal Router (IR)
+    - **B)** Autonomous System Boundary Router (ASBR)
+    - **C)** Area Border Router (ABR)
+    - **D)** Designated Router (DR)
 
 4. Which BGP path attribute list guarantees loop-free interdomain routing by recording every Autonomous System traversed by a route advertisement?
-   - A) NEXT-HOP
-   - B) LOCAL-PREF
-   - C) AS-PATH
-   - D) MED (Multi-Exit Discriminator)
+    - **A)** NEXT-HOP
+    - **B)** LOCAL-PREF
+    - **C)** AS-PATH
+    - **D)** MED (Multi-Exit Discriminator)
 
 5. In Software-Defined Networking (SDN), what protocol commonly operates across the Southbound interface between the centralized controller and the data-plane forwarding switches?
-   - A) BGP
-   - B) OpenFlow
-   - C) SNMP
-   - D) RIP
-
----
+    - **A)** BGP
+    - **B)** OpenFlow
+    - **C)** SNMP
+    - **D)** RIP
 
 ### Answer Key & Explanations
 
-1. **B) Split Horizon** — Split Horizon prevents two-node routing loops by forbidding a router from advertising a route back out the interface from which it learned that route. Poison Reverse enhances this by advertising it back with a metric of infinity.
-2. **B) 15** — RIP defines 15 as the maximum reachable hop count; a metric of 16 is defined as infinity (unreachable), preventing infinite looping.
-3. **C) Area Border Router (ABR)** — An ABR has interfaces in multiple OSPF areas, at least one of which must belong to the backbone Area 0, and is responsible for summarizing routes between areas.
-4. **C) AS-PATH** — AS-PATH contains an ordered list of AS numbers traversed. If a BGP router receives an advertisement containing its own local AS number, it immediately detects a routing loop and discards the route.
-5. **B) OpenFlow** — OpenFlow is the standardized Southbound protocol allowing SDN controllers to program the flow tables of network switches directly.
-
-
----
+1. **B**. Split Horizon prevents two-node routing loops by forbidding a router from advertising a route back out the interface from which it learned that route. Poison Reverse enhances this by advertising it back with a metric of infinity.
+2. **B**. RIP defines 15 as the maximum reachable hop count; a metric of 16 is defined as infinity (unreachable), preventing infinite looping.
+3. **C**. An ABR has interfaces in multiple OSPF areas, at least one of which must belong to the backbone Area 0, and is responsible for summarizing routes between areas.
+4. **C**. AS-PATH contains an ordered list of AS numbers traversed. If a BGP router receives an advertisement containing its own local AS number, it immediately detects a routing loop and discards the route.
+5. **B**. OpenFlow is the standardized Southbound protocol allowing SDN controllers to program the flow tables of network switches directly.
 
 ## References & Navigation
 

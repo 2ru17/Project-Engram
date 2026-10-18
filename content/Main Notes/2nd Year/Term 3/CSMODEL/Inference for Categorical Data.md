@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Inference for Categorical Data]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Inference for Categorical Data]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 09: Inference for Categorical Data
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### 1. Introduction to Categorical Data Inference
 In statistical modeling and data science, categorical data consists of variables representing qualitative categories rather than numerical measurements (e.g., survey agreement, political affiliation, health status, race, or success/failure outcomes). 
@@ -115,7 +115,7 @@ where $k$ is the number of categories/bins.
 #### Conditions for Goodness-of-Fit Test
 1. **Independence:** Each observation in the sample must be independent of all other observations.
 2. **Expected Cell Counts Condition:** EVERY expected cell count must be at least 5 ($E_i \ge 5$ for all $i$).
-   > ⚠️ **Crucial Note:** This condition applies to **expected counts ($E_i$)**, NOT observed counts ($O_i$).
+   >  **Crucial Note:** This condition applies to **expected counts ($E_i$)**, NOT observed counts ($O_i$).
 
 ---
 
@@ -149,7 +149,7 @@ If $p\text{-value} > \alpha$: **Fail to reject $H_0$** (or accept $H_0$). The sa
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. Contingency Tables with `pd.crosstab()`
 Creates a frequency cross-tabulation of two categorical series from a pandas DataFrame.
@@ -264,7 +264,7 @@ print(f"95% CI            : ({minimum_value * 100:.4f}%, {maximum_value * 100:.4
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 | Formula / Metric | Mathematical Expression | Key Context / Notes |
 | :--- | :--- | :--- |
@@ -283,37 +283,37 @@ print(f"95% CI            : ({minimum_value * 100:.4f}%, {maximum_value * 100:.4
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
 1. **Checking $E \ge 5$ on Observed Counts instead of Expected Counts:**
-❌ **Wrong:** Rejecting a Chi-Square test because an observed cell count is $O_{ij} = 2$.
-✅ **Correct:** The condition requires **EXPECTED counts ($E_{ij} \ge 5$)**. It is completely fine if observed counts $O_{ij}$ are small or even $0$, as long as all $E_{ij} \ge 5$.
+ **Wrong:** Rejecting a Chi-Square test because an observed cell count is $O_{ij} = 2$.
+ **Correct:** The condition requires **EXPECTED counts ($E_{ij} \ge 5$)**. It is completely fine if observed counts $O_{ij}$ are small or even $0$, as long as all $E_{ij} \ge 5$.
 
 2. **Standard Error Formula: $p_0$ vs $\hat{p}$ Confusion:**
-❌ **Wrong:** Using $\hat{p}$ in the SE denominator when calculating the 1-proportion z-test statistic.
-✅ **Correct:**
+ **Wrong:** Using $\hat{p}$ in the SE denominator when calculating the 1-proportion z-test statistic.
+ **Correct:**
 For **Hypothesis Testing** ($z$-test), use $p_0$: $SE = \sqrt{\frac{p_0(1-p_0)}{n}}$.
 For **Confidence Intervals** ($CI$), use $\hat{p}$: $SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$.
 
 3. **Degrees of Freedom Miscalculation in Contingency Tables:**
-❌ **Wrong:** Setting $df = (r \times c) - 1$ for a Test of Independence.
-✅ **Correct:** For a Test of Independence, $df = (r - 1)(c - 1)$. For Goodness-of-Fit, $df = k - 1$.
+ **Wrong:** Setting $df = (r \times c) - 1$ for a Test of Independence.
+ **Correct:** For a Test of Independence, $df = (r - 1)(c - 1)$. For Goodness-of-Fit, $df = k - 1$.
 
 4. **Yates' Continuity Correction in Python (`chi2_contingency`):**
-❌ **Wrong:** Expecting `scipy.stats.chi2_contingency(table)` to equal hand calculations when analyzing a $2 \times 2$ table without checking parameters.
-✅ **Correct:** By default, SciPy applies Yates' continuity correction (`correction=True`) for $2 \times 2$ tables, which shrinks $\chi^2$. Set `correction=False` to reproduce exact Pearson hand calculations on exams.
+ **Wrong:** Expecting `scipy.stats.chi2_contingency(table)` to equal hand calculations when analyzing a $2 \times 2$ table without checking parameters.
+ **Correct:** By default, SciPy applies Yates' continuity correction (`correction=True`) for $2 \times 2$ tables, which shrinks $\chi^2$. Set `correction=False` to reproduce exact Pearson hand calculations on exams.
 
 5. **Assuming Chi-Square Tests are Two-Tailed:**
-❌ **Wrong:** Splitting $\alpha$ into two tails ($\alpha/2$) for a Chi-Square p-value.
-✅ **Correct:** Chi-Square tests are **always right-tailed** because squared terms $(O-E)^2$ enforce $\chi^2 \ge 0$. Any deviation from $H_0$ pushes $\chi^2$ further into the upper tail.
+ **Wrong:** Splitting $\alpha$ into two tails ($\alpha/2$) for a Chi-Square p-value.
+ **Correct:** Chi-Square tests are **always right-tailed** because squared terms $(O-E)^2$ enforce $\chi^2 \ge 0$. Any deviation from $H_0$ pushes $\chi^2$ further into the upper tail.
 
 6. **Maximum Margin of Error Misinterpretation:**
-❌ **Wrong:** Thinking Margin of Error is highest when sample proportion is close to $0$ or $1$.
-✅ **Correct:** Margin of Error $ME = z^* \sqrt{\frac{p(1-p)}{n}}$ is **maximized at $p = 0.5$** and shrinks as $p \to 0$ or $p \to 1$.
+ **Wrong:** Thinking Margin of Error is highest when sample proportion is close to $0$ or $1$.
+ **Correct:** Margin of Error $ME = z^* \sqrt{\frac{p(1-p)}{n}}$ is **maximized at $p = 0.5$** and shrinks as $p \to 0$ or $p \to 1$.
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 **Q1.** A Computer Science department wants to test if students are equally distributed across 4 elective tracks: Data Science (DS), Software Technology (ST), Network & Security (NS), and Interactive Media (IM). In a random sample of $N = 200$ students, the observed counts are: DS: $65$ ST: $55$ NS: $45$ IM: $35$
 
@@ -431,76 +431,77 @@ Chi-Square statistics cannot be negative because all terms $\frac{(O-E)^2}{E} \g
 ## Multiple Choice Questions
 
 1. Which of the following is true about categorical data compared to numerical data in statistical inference?
-- **A)** Categorical data is analyzed using inference on means and standard deviations.
-- **B)** Categorical data inference relies on analyzing proportions and frequencies/counts.
-- **C)** Categorical data cannot be used in hypothesis testing.
-- **D)** Categorical data requires the population standard deviation to be known.
+    - **A)** Categorical data is analyzed using inference on means and standard deviations.
+    - **B)** Categorical data inference relies on analyzing proportions and frequencies/counts.
+    - **C)** Categorical data cannot be used in hypothesis testing.
+    - **D)** Categorical data requires the population standard deviation to be known.
 
 2. In a One-Proportion z-Test, what is the correct formula for the standard error under the null hypothesis?
-- **A)** $\sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}$
-- **B)** $\sqrt{\frac{p_0(1 - p_0)}{n}}$
-- **C)** $\frac{\hat{p} - p_0}{\sqrt{n}}$
-- **D)** $\sqrt{n \cdot p_0 \cdot (1 - p_0)}$
+    - **A)** $\sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}$
+    - **B)** $\sqrt{\frac{p_0(1 - p_0)}{n}}$
+    - **C)** $\frac{\hat{p} - p_0}{\sqrt{n}}$
+    - **D)** $\sqrt{n \cdot p_0 \cdot (1 - p_0)}$
 
 3. When planning sample sizes for a confidence interval, under which condition is the Margin of Error maximized?
-- **A)** When the sample proportion $p = 1.0$
-- **B)** When the sample proportion $p = 0.5$
-- **C)** When the sample proportion $p = 0.0$
-- **D)** When the sample size $n$ is very large
+    - **A)** When the sample proportion $p = 1.0$
+    - **B)** When the sample proportion $p = 0.5$
+    - **C)** When the sample proportion $p = 0.0$
+    - **D)** When the sample size $n$ is very large
 
 4. Which condition must be met to use the normal approximation in a One-Proportion z-Test?
-- **A)** The expected successes $n p_0$ and expected failures $n (1 - p_0)$ must both be $\ge 10$.
-- **B)** The sample size must be exactly 10% of the total population.
-- **C)** The expected cell counts must be at least 5.
-- **D)** The data must be normally distributed before testing.
+    - **A)** The expected successes $n p_0$ and expected failures $n (1 - p_0)$ must both be $\ge 10$.
+    - **B)** The sample size must be exactly 10% of the total population.
+    - **C)** The expected cell counts must be at least 5.
+    - **D)** The data must be normally distributed before testing.
 
 5. What is the purpose of calculating a pooled proportion ($\hat{p}_{\text{pool}}$) in a Two-Proportion z-Test?
-- **A)** To adjust for unequal variances between the two groups.
-- **B)** To estimate the common proportion assuming the null hypothesis ($p_1 = p_2$) is true.
-- **C)** To find the degrees of freedom for the test statistic.
-- **D)** To ensure the success-failure condition is met.
+    - **A)** To adjust for unequal variances between the two groups.
+    - **B)** To estimate the common proportion assuming the null hypothesis ($p_1 = p_2$) is true.
+    - **C)** To find the degrees of freedom for the test statistic.
+    - **D)** To ensure the success-failure condition is met.
 
 6. In a Chi-Square Goodness-of-Fit Test, what does the null hypothesis ($H_0$) generally state?
-- **A)** The two categorical variables are completely independent.
-- **B)** The sample distribution matches the specified population distribution.
-- **C)** There is a significant difference between observed and expected frequencies.
-- **D)** The sample standard deviation equals the population standard deviation.
+    - **A)** The two categorical variables are completely independent.
+    - **B)** The sample distribution matches the specified population distribution.
+    - **C)** There is a significant difference between observed and expected frequencies.
+    - **D)** The sample standard deviation equals the population standard deviation.
 
 7. How are the degrees of freedom calculated for a Chi-Square Test of Independence on an $r \times c$ contingency table?
-- **A)** $df = (r \times c) - 1$
-- **B)** $df = k - 1$
-- **C)** $df = (r - 1) \times (c - 1)$
-- **D)** $df = r + c - 2$
+    - **A)** $df = (r \times c) - 1$
+    - **B)** $df = k - 1$
+    - **C)** $df = (r - 1) \times (c - 1)$
+    - **D)** $df = r + c - 2$
 
 8. What is the "Expected Cell Counts Condition" for a valid Chi-Square test?
-- **A)** Every expected cell count $E_i$ must be $\ge 5$.
-- **B)** Every observed cell count $O_i$ must be $\ge 5$.
-- **C)** At least one expected cell count must be $\ge 10$.
-- **D)** The total sample size must be $> 30$.
+    - **A)** Every expected cell count $E_i$ must be $\ge 5$.
+    - **B)** Every observed cell count $O_i$ must be $\ge 5$.
+    - **C)** At least one expected cell count must be $\ge 10$.
+    - **D)** The total sample size must be $> 30$.
 
 9. Why are Chi-Square tests inherently one-sided (right-tailed)?
-- **A)** Because frequency data can only increase over time.
-- **B)** Because the test statistic measures negative deviations only.
-- **C)** Because the squared differences $(O_i - E_i)^2$ enforce $\chi^2 \ge 0$, accumulating deviations in the upper tail.
-- **D)** Because the standard normal curve is asymmetric.
+    - **A)** Because frequency data can only increase over time.
+    - **B)** Because the test statistic measures negative deviations only.
+    - **C)** Because the squared differences $(O_i - E_i)^2$ enforce $\chi^2 \ge 0$, accumulating deviations in the upper tail.
+    - **D)** Because the standard normal curve is asymmetric.
 
 10. When using Python's `scipy.stats.chi2_contingency` function on a $2 \times 2$ table, why might the results differ from manual Pearson calculations?
-- **A)** Scipy applies Yates' continuity correction by default, which shrinks the $\chi^2$ statistic.
-- **B)** Scipy automatically pools proportions across rows.
-- **C)** Manual calculations often miscalculate the degrees of freedom.
-- **D)** Scipy assumes a left-tailed test by default.
+    - **A)** Scipy applies Yates' continuity correction by default, which shrinks the $\chi^2$ statistic.
+    - **B)** Scipy automatically pools proportions across rows.
+    - **C)** Manual calculations often miscalculate the degrees of freedom.
+    - **D)** Scipy assumes a left-tailed test by default.
 
 ### Answer Key & Explanations
-1. **B)** Categorical data inference relies on analyzing proportions and frequencies/counts. While numerical data uses means, categorical data focuses on proportions and discrete counts.
-2. **B)** $\sqrt{\frac{p_0(1 - p_0)}{n}}$. The standard error for hypothesis testing uses the hypothesized baseline proportion $p_0$, not the sample proportion.
-3. **B)** When the sample proportion $p = 0.5$. The margin of error formula scales with $p(1-p)$, which forms a parabola peaking at $p = 0.5$, representing maximum uncertainty.
-4. **A)** The expected successes $n p_0$ and expected failures $n (1 - p_0)$ must both be $\ge 10$. This is the Success-Failure Condition required to approximate the binomial distribution as normal.
-5. **B)** To estimate the common proportion assuming the null hypothesis ($p_1 = p_2$) is true. Pooling combines successes and sample sizes under the assumption that both groups share the same true proportion.
-6. **B)** The sample distribution matches the specified population distribution. The null hypothesis for goodness-of-fit assumes no difference between observed sample proportions and theoretical expectations.
-7. **C)** $df = (r - 1) \times (c - 1)$. For an $r \times c$ table test of independence, the degrees of freedom are the product of rows minus one and columns minus one.
-8. **A)** Every expected cell count $E_i$ must be $\ge 5$. It is a common trap to check observed counts, but the condition strictly applies to expected cell counts.
-9. **C)** Because the squared differences $(O_i - E_i)^2$ enforce $\chi^2 \ge 0$, accumulating deviations in the upper tail. Any deviation between observed and expected pushes the statistic into the positive right tail.
-10. **A)** Scipy applies Yates' continuity correction by default, which shrinks the $\chi^2$ statistic. The `correction=True` default for $2 \times 2$ tables adjusts the statistic, which must be set to `False` to match standard Pearson calculations.
+
+1. **B**. Categorical data inference relies on analyzing proportions and frequencies/counts. While numerical data uses means, categorical data focuses on proportions and discrete counts.
+2. **B**. $\sqrt{\frac{p_0(1 - p_0)}{n}}$. The standard error for hypothesis testing uses the hypothesized baseline proportion $p_0$, not the sample proportion.
+3. **B**. When the sample proportion $p = 0.5$. The margin of error formula scales with $p(1-p)$, which forms a parabola peaking at $p = 0.5$, representing maximum uncertainty.
+4. **A**. The expected successes $n p_0$ and expected failures $n (1 - p_0)$ must both be $\ge 10$. This is the Success-Failure Condition required to approximate the binomial distribution as normal.
+5. **B**. To estimate the common proportion assuming the null hypothesis ($p_1 = p_2$) is true. Pooling combines successes and sample sizes under the assumption that both groups share the same true proportion.
+6. **B**. The sample distribution matches the specified population distribution. The null hypothesis for goodness-of-fit assumes no difference between observed sample proportions and theoretical expectations.
+7. **C**. $df = (r - 1) \times (c - 1)$. For an $r \times c$ table test of independence, the degrees of freedom are the product of rows minus one and columns minus one.
+8. **A**. Every expected cell count $E_i$ must be $\ge 5$. It is a common trap to check observed counts, but the condition strictly applies to expected cell counts.
+9. **C**. Because the squared differences $(O_i - E_i)^2$ enforce $\chi^2 \ge 0$, accumulating deviations in the upper tail. Any deviation between observed and expected pushes the statistic into the positive right tail.
+10. **A**. Scipy applies Yates' continuity correction by default, which shrinks the $\chi^2$ statistic. The `correction=True` default for $2 \times 2$ tables adjusts the statistic, which must be set to `False` to match standard Pearson calculations.
 
 ## References & Navigation
 

@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Web Development]] #[[CCAPDEV]] #[[Cookies and Sessions]] #[[Code Snippets]] #[[M5]]
+**Tags:** #[[Web Development]] #[[CCAPDEV]] #[[Cookies and Sessions]] #[[Code Snippets]] #[[M5]]
 
 ---
 
@@ -115,27 +115,28 @@ Cookie, Cookie properties are set here
 ## Multiple Choice Questions
 
 1. Which of the following is a key characteristic of HTTP cookies?
-- **A)** They can hold up to 10GB of data.
-- **B)** They live permanently on the server side and are invisible to the client.
-- **C)** They can be tampered with by the user unless properly secured.
-- **D)** They cannot be deleted once set by the server.
+    - **A)** They can hold up to 10GB of data.
+    - **B)** They live permanently on the server side and are invisible to the client.
+    - **C)** They can be tampered with by the user unless properly secured.
+    - **D)** They cannot be deleted once set by the server.
 
 2. In Express, when creating a cookie, what does the `httpOnly: true` flag do?
-- **A)** It encrypts the cookie using AES-256 before sending it over the network.
-- **B)** It restricts the cookie to only be accessible by the web server, making it inaccessible to client-side scripts like `document.cookie`.
-- **C)** It forces the client to only request pages over HTTP instead of HTTPS.
-- **D)** It extends the `maxAge` of the cookie indefinitely.
+    - **A)** It encrypts the cookie using AES-256 before sending it over the network.
+    - **B)** It restricts the cookie to only be accessible by the web server, making it inaccessible to client-side scripts like `document.cookie`.
+    - **C)** It forces the client to only request pages over HTTP instead of HTTPS.
+    - **D)** It extends the `maxAge` of the cookie indefinitely.
 
 3. Why are Sessions generally preferred over plain Cookies for storing sensitive user data?
-- **A)** Sessions do not use cookies at all, making them immune to network sniffing.
-- **B)** Sessions run faster because they bypass the HTTP protocol.
-- **C)** Sessions still rely on a cookie (like a Session ID), but the actual sensitive data is securely stored on the server side.
-- **D)** Sessions are natively encrypted by the client's browser before being sent.
+    - **A)** Sessions do not use cookies at all, making them immune to network sniffing.
+    - **B)** Sessions run faster because they bypass the HTTP protocol.
+    - **C)** Sessions still rely on a cookie (like a Session ID), but the actual sensitive data is securely stored on the server side.
+    - **D)** Sessions are natively encrypted by the client's browser before being sent.
 
 ### Answer Key & Explanations
-1. **C)** Cookies live on the client side, are available to the client to look at, and can be tampered with by the user.
-2. **B)** `httpOnly` flags the cookie to be only accessible by the web server, making the cookie inaccessible via client-side JavaScript (`document.cookie`).
-3. **C)** Sessions are preferred because they store only an identifier (Session ID) in the cookie, keeping the actual data on the server side, which is much more secure.
+
+1. **C**. Cookies live on the client side, are available to the client to look at, and can be tampered with by the user.
+2. **B**. `httpOnly` flags the cookie to be only accessible by the web server, making the cookie inaccessible via client-side JavaScript (`document.cookie`).
+3. **C**. Sessions are preferred because they store only an identifier (Session ID) in the cookie, keeping the actual data on the server side, which is much more secure.
 
 ## References & Navigation
 

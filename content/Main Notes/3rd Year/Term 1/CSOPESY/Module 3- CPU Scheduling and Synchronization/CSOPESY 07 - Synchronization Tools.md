@@ -275,55 +275,56 @@ sequenceDiagram
 ## Multiple Choice Questions
 
 1. Which of the following conditions ensures that if no process is executing in its critical section, the selection of the next process to enter cannot be postponed indefinitely?
-A) Mutual Exclusion
-B) Progress
-C) Bounded Waiting
-D) Spinlocking
+    - **A)** Mutual Exclusion
+    - **B)** Progress
+    - **C)** Bounded Waiting
+    - **D)** Spinlocking
 
 2. What is the primary disadvantage of using a spinlock?
-A) It requires a context switch, which is expensive.
-B) It wastes CPU cycles if the critical section is long.
-C) It cannot guarantee mutual exclusion on a single-core system.
-D) It can only be implemented using Peterson's solution.
+    - **A)** It requires a context switch, which is expensive.
+    - **B)** It wastes CPU cycles if the critical section is long.
+    - **C)** It cannot guarantee mutual exclusion on a single-core system.
+    - **D)** It can only be implemented using Peterson's solution.
 
 3. In the context of semaphores, what does the `wait()` operation do?
-A) It increments the semaphore value and blocks the process if the value is negative.
-B) It decrements the semaphore value and blocks the process if the value becomes negative.
-C) It checks if the semaphore is zero, and if so, wakes up the next process.
-D) It forces the CPU to idle until an interrupt occurs.
+    - **A)** It increments the semaphore value and blocks the process if the value is negative.
+    - **B)** It decrements the semaphore value and blocks the process if the value becomes negative.
+    - **C)** It checks if the semaphore is zero, and if so, wakes up the next process.
+    - **D)** It forces the CPU to idle until an interrupt occurs.
 
 4. Which of the following accurately describes the difference between deadlock and starvation?
-A) In a deadlock, the system makes progress for some processes, but in starvation, no processes make progress.
-B) Deadlocks only occur with semaphores, while starvation only occurs with monitors.
-C) In a deadlock, processes wait indefinitely for an event caused by another waiting process, halting progress; in starvation, the system continues to make progress, but a specific process is indefinitely denied resources.
-D) There is no difference; they are synonymous terms in operating systems.
+    - **A)** In a deadlock, the system makes progress for some processes, but in starvation, no processes make progress.
+    - **B)** Deadlocks only occur with semaphores, while starvation only occurs with monitors.
+    - **C)** In a deadlock, processes wait indefinitely for an event caused by another waiting process, halting progress; in starvation, the system continues to make progress, but a specific process is indefinitely denied resources.
+    - **D)** There is no difference; they are synonymous terms in operating systems.
 
 5. What happens when a process invokes `signal()` on a condition variable within a Monitor, and no process is currently waiting?
-A) The signal is saved, and the next process to call `wait()` will immediately proceed.
-B) The operation has no effect.
-C) The monitor enters a deadlock state.
-D) A hardware trap is generated.
+    - **A)** The signal is saved, and the next process to call `wait()` will immediately proceed.
+    - **B)** The operation has no effect.
+    - **C)** The monitor enters a deadlock state.
+    - **D)** A hardware trap is generated.
 
 6. Why might Peterson's solution fail on modern computer architectures?
-A) It only supports up to three processes.
-B) Modern architectures do not have boolean variables.
-C) Modern processors optimize and reorder memory accesses, breaking the strict sequence of variable updates required.
-D) The `while` loop consumes too much power.
+    - **A)** It only supports up to three processes.
+    - **B)** Modern architectures do not have boolean variables.
+    - **C)** Modern processors optimize and reorder memory accesses, breaking the strict sequence of variable updates required.
+    - **D)** The `while` loop consumes too much power.
 
 7. Which synchronization tool provides built-in mutual exclusion and encapsulates shared data and condition variables into a single abstract data type?
-A) Spinlock
-B) Semaphore
-C) Monitor
-D) Atomic Integer
+    - **A)** Spinlock
+    - **B)** Semaphore
+    - **C)** Monitor
+    - **D)** Atomic Integer
 
 ### Answer Key & Explanations
-1. **B) Progress.** The progress requirement specifically guarantees that a decision on which process enters the critical section next is made by the processes not in their remainder sections, and it is made without indefinite delay.
-2. **B) It wastes CPU cycles if the critical section is long.** Spinlocks use "busy waiting" by continuously looping while checking a condition, preventing other tasks from utilizing that CPU core.
-3. **B) It decrements the semaphore value and blocks the process if the value becomes negative.** If it drops below zero, the process cannot proceed and is placed in a blocked queue.
-4. **C)** Deadlock implies a circular wait where no involved process can proceed. Starvation means one or more processes are skipped over indefinitely, but the system overall is still servicing other processes.
-5. **B) The operation has no effect.** Unlike semaphores, where a signal (or V) increments a persistent counter, a signal on a condition variable in a monitor is lost if there are no waiting processes.
-6. **C)** Out-of-order execution and memory caching in modern CPUs can cause the updates to `turn` and `flag` to appear in a different order to other threads, violating the solution's logic.
-7. **C) Monitor.** Monitors encapsulate the shared data, the operations on that data, and the synchronization mechanisms (condition variables) guaranteeing that only one process is active within the monitor at a time.
+
+1. **B**. The progress requirement specifically guarantees that a decision on which process enters the critical section next is made by the processes not in their remainder sections, and it is made without indefinite delay.
+2. **B**. Spinlocks use "busy waiting" by continuously looping while checking a condition, preventing other tasks from utilizing that CPU core.
+3. **B**. If it drops below zero, the process cannot proceed and is placed in a blocked queue.
+4. **C**. Deadlock implies a circular wait where no involved process can proceed. Starvation means one or more processes are skipped over indefinitely, but the system overall is still servicing other processes.
+5. **B**. Unlike semaphores, where a signal (or V) increments a persistent counter, a signal on a condition variable in a monitor is lost if there are no waiting processes.
+6. **C**. Out-of-order execution and memory caching in modern CPUs can cause the updates to `turn` and `flag` to appear in a different order to other threads, violating the solution's logic.
+7. **C**. Monitors encapsulate the shared data, the operations on that data, and the synchronization mechanisms (condition variables) guaranteeing that only one process is active within the monitor at a time.
 
 ## References & Navigation
 

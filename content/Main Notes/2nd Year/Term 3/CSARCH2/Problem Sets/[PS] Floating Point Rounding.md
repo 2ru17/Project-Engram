@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Floating-Point Rounding]] #[[Rounding Modes]] #[[Guard Round Sticky]] #[[Truncation]] #[[IEEE-754]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Floating-Point Rounding]] #[[Rounding Modes]] #[[Guard Round Sticky]] #[[Truncation]] #[[IEEE-754]]
 
 ---
 
 # Problem Set: Floating-Point Rounding
 
-## 📖 Overview & Theoretical Foundations
+## Overview & Theoretical Foundations
 
 During floating-point arithmetic (e.g., alignment shifts, multiplication, division), intermediate calculations frequently generate more bits or digits of precision than can fit into the destination register (e.g., 24 bits in single precision, 53 bits in double precision). **Rounding** is the process of mapping an exact infinite-precision or extended-precision real number $x$ to the nearest representable floating-point number $x'$.
 
@@ -74,18 +74,18 @@ To perform IEEE-754 compliant rounding without maintaining an infinite number of
 
 ---
 
-## ✍️ Problem Solutions
+## Problem Solutions
 
 ### Problem 1: Rounding the Decimal Value $-1.86855$
 
-#### 📋 Problem Statement
+#### Problem Statement
 Apply all four floating-point rounding modes to the decimal number **$-1.86855$** for:
 - **a.)** 4 decimal digits
 - **b.)** 3 decimal digits
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 #### Part (a): Rounding to 4 Decimal Digits (4 Fractional Places)
 - **Input:** $x = -1.86855$
@@ -151,7 +151,7 @@ Apply all four floating-point rounding modes to the decimal number **$-1.86855$*
 
 ---
 
-#### 📊 Result Summary Table (Problem 1)
+#### Result Summary Table (Problem 1)
 
 | Precision Target | Truncate (toward 0) | Round Up (toward $+\infty$) | Round Down (toward $-\infty$) | Round to Nearest (Ties to Even) |
 | :--- | :---: | :---: | :---: | :---: |
@@ -167,14 +167,14 @@ Apply all four floating-point rounding modes to the decimal number **$-1.86855$*
 
 ### Problem 2: Rounding the Binary Value $-1.011100_2$
 
-#### 📋 Problem Statement
+#### Problem Statement
 Apply all four floating-point rounding modes to the binary floating-point significand **$-1.011100_2$** for:
 - **a.)** 4 binary digits
 - **b.)** 3 binary digits
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 #### Part (a): Rounding to 4 Binary Digits (4 Fractional Bits)
 - **Input:** $x = -1.011100_2$
@@ -234,7 +234,7 @@ Apply all four floating-point rounding modes to the binary floating-point signif
 
 ---
 
-#### 📊 Result Summary Table (Problem 2)
+#### Result Summary Table (Problem 2)
 
 | Precision Target | Truncate (toward 0) | Round Up (toward $+\infty$) | Round Down (toward $-\infty$) | Round to Nearest (Ties to Even) |
 | :--- | :---: | :---: | :---: | :---: |
@@ -248,7 +248,7 @@ Apply all four floating-point rounding modes to the binary floating-point signif
 
 ---
 
-## 💻 Python Verification Script
+## Python Verification Script
 
 ```python
 from decimal import Decimal, ROUND_DOWN, ROUND_CEILING, ROUND_FLOOR, ROUND_HALF_EVEN
@@ -277,7 +277,7 @@ verify_decimal_rounding()
 
 ---
 
-## 🔑 Key Takeaways & Rounding Decision Table
+## Key Takeaways & Rounding Decision Table
 
 1. **Negative Value Directions:**
    - On the negative side of the real line, moving toward **$+\infty$ (Round Up)** decreases the magnitude (less negative, identical to truncation toward zero).

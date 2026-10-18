@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Algorithms - Search]] #[[Code Snippets]] #[[M2]]
+**Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Algorithms - Search]] #[[Code Snippets]] #[[M2]]
 
 ---
 

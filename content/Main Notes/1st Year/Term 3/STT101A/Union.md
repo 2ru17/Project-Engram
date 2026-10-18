@@ -11,111 +11,69 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Union]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Union]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Union**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Union** of two events $A$ and $B$, denoted $A \cup B$, is the event consisting of all outcomes $\omega \in S$ that belong to $A$, or to $B$, or to **both** $A$ and $B$ (inclusive `OR`). In words, $A \cup B$ occurs if and only if **at least one** of the events $A$ or $B$ occurs.
 
 ## Key Definitions
-- **Union**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Union** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Set Definition:** $A \cup B = \{\omega \in S : \omega \in A \text{ or } \omega \in B\}$.
+- **Countable Union ($\bigcup_{i=1}^n A_i$):** Occurs if and only if $\omega \in A_i$ for **at least one** index $i \in \{1, \dots, n\}$.
+- **Monotonicity Property:** $A \subseteq A \cup B$ and $B \subseteq A \cup B$, so $\max(P(A), P(B)) \le P(A \cup B) \le \min(1, P(A) + P(B))$.
+- **Boole's Inequality (Union Bound):** For any finite or countable sequence of events $A_1, A_2, \dots, A_n$:
+  $$P\left(\bigcup_{i=1}^n A_i\right) \le \sum_{i=1}^n P(A_i)$$
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Union**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** On a single roll of a fair six-sided die ($S = \{1, 2, 3, 4, 5, 6\}$), let $A = \{1, 2, 3\}$ and $B = \{2, 4, 6\}$. Find $A \cup B$ and $P(A \cup B)$.
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Union** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- Combining unique elements from both sets gives $A \cup B = \{1, 2, 3, 4, 6\}$.
+- $P(A \cup B) = \frac{|A \cup B|}{|S|} = \frac{5}{6}$ (which matches $P(A) + P(B) - P(A \cap B) = \frac{3}{6} + \frac{3}{6} - \frac{1}{6} = \frac{5}{6}$ since $A \cap B = \{2\}$).
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. In probability and logic, does the union $A \cup B$ represent an **inclusive OR** or an **exclusive OR (XOR)**?
+    - **A)** Exclusive OR (outcomes in $A \cap B$ are excluded).
+    - **B)** **Inclusive OR**: an outcome $\omega$ is in $A \cup B$ if $\omega \in A$ only, $\omega \in B$ only, OR $\omega \in A \cap B$ (both).
+    - **C)** Logical AND (only outcomes in both $A$ and $B$).
+    - **D)** Logical NOT.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. If $P(A) = 0.60$ and $P(B) = 0.50$, what are the **minimum possible** and **maximum possible** values of $P(A \cup B)$?
+    - **A)** Minimum $= 0.60$ (when $B \subseteq A$), Maximum $= 1.00$ (when $A \cup B = S$)
+    - **B)** Minimum $= 0.50$, Maximum $= 1.10$
+    - **C)** Minimum $= 0.10$, Maximum $= 0.60$
+    - **D)** Minimum $= 0.30$, Maximum $= 0.80$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. What does **Boole's Inequality (the Union Bound)** state for any events $A_1, A_2, \dots, A_n$?
+    - **A)** $P\left(\bigcup_{i=1}^n A_i\right) \ge \sum_{i=1}^n P(A_i)$
+    - **B)** $P\left(\bigcup_{i=1}^n A_i\right) = \prod_{i=1}^n P(A_i)$
+    - **C)** $P\left(\bigcup_{i=1}^n A_i\right) \le \sum_{i=1}^n P(A_i)$, with equality when the events are pairwise disjoint.
+    - **D)** $P\left(\bigcup_{i=1}^n A_i\right) = 1$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. If $A \subseteq B$ ($A$ is a subset of $B$), what do $A \cup B$ and $P(A \cup B)$ simplify to?
+    - **A)** $A$ and $P(A)$
+    - **B)** $S$ and $1$
+    - **C)** $\emptyset$ and $0$
+    - **D)** $B$ and $P(B)$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. A system has $4$ subsystems whose individual failure probabilities are $0.01, 0.02, 0.01,$ and $0.03$ (with unknown dependencies between them). By the Union Bound, the probability that **at least one** subsystem fails is at most:
+    - **A)** $0.01 \times 0.02 \times 0.01 \times 0.03$
+    - **B)** $0.01 + 0.02 + 0.01 + 0.03 = 0.07$
+    - **C)** $0.03$
+    - **D)** $1.00$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Set union $A \cup B$ corresponds to inclusive disjunction (`OR`): it includes $(A \cap B^c)$, $(A^c \cap B)$, and $(A \cap B)$.
+2. **A**. Because $A \subseteq A \cup B$, $P(A \cup B) \ge \max(P(A), P(B)) = 0.60$ (achieved when $B \subseteq A$). And since $A \cup B \subseteq S$, $P(A \cup B) \le \min(1, P(A)+P(B)) = \min(1, 1.10) = 1.00$.
+3. **C**. Subtracting non-negative overlaps can only reduce or keep equal the sum of individual probabilities, so $P(\bigcup A_i) \le \sum P(A_i)$ always holds.
+4. **D**. Every element of $A$ is already in $B$, so taking the union adds no new elements: $A \cup B = B$ and $P(A \cup B) = P(B)$.
+5. **B**. By Boole's Inequality, $P(F_1 \cup F_2 \cup F_3 \cup F_4) \le P(F_1) + P(F_2) + P(F_3) + P(F_4) = 0.01 + 0.02 + 0.01 + 0.03 = 0.07$ regardless of how the failures are correlated.
 
 ## References & Navigation
 

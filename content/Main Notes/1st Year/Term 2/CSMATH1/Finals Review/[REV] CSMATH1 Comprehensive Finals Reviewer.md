@@ -86,50 +86,45 @@ graph LR
 
 ---
 
-## 5. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. Evaluate the limit: $\lim_{x \to 0} \frac{\sin(3x)}{5x}$.
-   - A) $3/5$
-   - B) 0
-   - C) $5/3$
-   - D) 1
+    - **A)** $3/5$
+    - **B)** 0
+    - **C)** $5/3$
+    - **D)** 1
 
 2. If $x^2 + y^2 = 25$, what is $\frac{dy}{dx}$ at the point $(3, 4)$?
-   - A) $3/4$
-   - B) $-3/4$
-   - C) $-4/3$
-   - D) $4/3$
+    - **A)** $3/4$
+    - **B)** $-3/4$
+    - **C)** $-4/3$
+    - **D)** $4/3$
 
 3. A 10-ft ladder rests against a vertical wall. If the bottom of the ladder slides away at $2\text{ ft/s}$, how fast is the top sliding down when the bottom is $6\text{ ft}$ from the wall?
-   - A) $-1.5\text{ ft/s}$
-   - B) $-2.5\text{ ft/s}$
-   - C) $-1.0\text{ ft/s}$
-   - D) $-0.75\text{ ft/s}$
+    - **A)** $-1.5\text{ ft/s}$
+    - **B)** $-2.5\text{ ft/s}$
+    - **C)** $-1.0\text{ ft/s}$
+    - **D)** $-0.75\text{ ft/s}$
 
 4. What is the maximum area of a rectangle that can be enclosed with $100\text{ meters}$ of fencing?
-   - A) $500\text{ m}^2$
-   - B) $625\text{ m}^2$
-   - C) $1000\text{ m}^2$
-   - D) $2500\text{ m}^2$
+    - **A)** $500\text{ m}^2$
+    - **B)** $625\text{ m}^2$
+    - **C)** $1000\text{ m}^2$
+    - **D)** $2500\text{ m}^2$
 
 5. Let $f(x) = x^3 - 3x^2 + 2$. At $x = 1$, the function has:
-   - A) A local maximum
-   - B) A local minimum
-   - C) An inflection point
-   - D) A vertical asymptote
-
----
+    - **A)** A local maximum
+    - **B)** A local minimum
+    - **C)** An inflection point
+    - **D)** A vertical asymptote
 
 ### Answer Key & Explanations
 
-1. **A) $3/5$** — $\lim_{x \to 0} \frac{\sin(3x)}{5x} = \frac{3}{5} \lim_{x \to 0} \frac{\sin(3x)}{3x} = \frac{3}{5}(1) = \frac{3}{5}$. (Or using L'Hôpital: $\lim \frac{3\cos(3x)}{5} = \frac{3}{5}$).
-2. **B) $-3/4$** — Differentiating implicitly: $2x + 2y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}$. At $(3, 4)$, $\frac{dy}{dx} = -\frac{3}{4}$.
-3. **A) $-1.5\text{ ft/s}$** — By Pythagorean theorem: $x^2 + y^2 = 10^2 = 100$. When $x = 6$, $y = \sqrt{100 - 36} = 8$. Differentiating: $2x \frac{dx}{dt} + 2y \frac{dy}{dt} = 0 \implies 6(2) + 8 \frac{dy}{dt} = 0 \implies \frac{dy}{dt} = -\frac{12}{8} = -1.5\text{ ft/s}$.
-4. **B) $625\text{ m}^2$** — Perimeter $2x + 2y = 100 \implies y = 50 - x$. Area $A(x) = x(50 - x) = 50x - x^2$. $A'(x) = 50 - 2x = 0 \implies x = 25\text{ m}$. Maximum area is a square: $25 \times 25 = 625\text{ m}^2$.
-5. **C) An inflection point** — $f'(x) = 3x^2 - 6x$, $f''(x) = 6x - 6$. Setting $f''(x) = 0 \implies x = 1$. For $x < 1$, $f'' < 0$ (concave down); for $x > 1$, $f'' > 0$ (concave up). Because concavity changes sign, $x = 1$ is an inflection point.
-
-
----
+1. **A**. $\lim_{x \to 0} \frac{\sin(3x)}{5x} = \frac{3}{5} \lim_{x \to 0} \frac{\sin(3x)}{3x} = \frac{3}{5}(1) = \frac{3}{5}$. (Or using L'Hôpital: $\lim \frac{3\cos(3x)}{5} = \frac{3}{5}$).
+2. **B**. Differentiating implicitly: $2x + 2y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}$. At $(3, 4)$, $\frac{dy}{dx} = -\frac{3}{4}$.
+3. **A**. By Pythagorean theorem: $x^2 + y^2 = 10^2 = 100$. When $x = 6$, $y = \sqrt{100 - 36} = 8$. Differentiating: $2x \frac{dx}{dt} + 2y \frac{dy}{dt} = 0 \implies 6(2) + 8 \frac{dy}{dt} = 0 \implies \frac{dy}{dt} = -\frac{12}{8} = -1.5\text{ ft/s}$.
+4. **B**. Perimeter $2x + 2y = 100 \implies y = 50 - x$. Area $A(x) = x(50 - x) = 50x - x^2$. $A'(x) = 50 - 2x = 0 \implies x = 25\text{ m}$. Maximum area is a square: $25 \times 25 = 625\text{ m}^2$.
+5. **C**. $f'(x) = 3x^2 - 6x$, $f''(x) = 6x - 6$. Setting $f''(x) = 0 \implies x = 1$. For $x < 1$, $f'' < 0$ (concave down); for $x > 1$, $f'' > 0$ (concave up). Because concavity changes sign, $x = 1$ is an inflection point.
 
 ## References & Navigation
 

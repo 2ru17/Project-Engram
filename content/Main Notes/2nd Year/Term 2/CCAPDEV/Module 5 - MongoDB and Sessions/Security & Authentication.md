@@ -101,27 +101,28 @@ graph TD
 ## Multiple Choice Questions
 
 1. Which of the following is a primary characteristic of Session-based Authentication?
-- **A)** The server does not store any information about the authenticated user.
-- **B)** It is considered stateless.
-- **C)** The server assigns a unique session ID and persists it in a server-side database or memory.
-- **D)** The token contains all user details and is fully decodable by the client.
+    - **A)** The server does not store any information about the authenticated user.
+    - **B)** It is considered stateless.
+    - **C)** The server assigns a unique session ID and persists it in a server-side database or memory.
+    - **D)** The token contains all user details and is fully decodable by the client.
 
 2. What is a notable drawback (Con) of Token-based Authentication?
-- **A)** It requires extremely heavy database lookups on every request.
-- **B)** It cannot be used for server-to-server communication.
-- **C)** The content of the token is typically decodable (e.g., JWT) and must be stored securely.
-- **D)** It strictly relies on the Local MemoryStore which deletes tokens on server restart.
+    - **A)** It requires extremely heavy database lookups on every request.
+    - **B)** It cannot be used for server-to-server communication.
+    - **C)** The content of the token is typically decodable (e.g., JWT) and must be stored securely.
+    - **D)** It strictly relies on the Local MemoryStore which deletes tokens on server restart.
 
 3. When using `express-session` combined with `passport-local` in a production environment, why is the default MemoryStore not recommended?
-- **A)** Because when the server is restarted, all stored sessions are deleted.
-- **B)** Because MemoryStore automatically shares sessions across all users.
-- **C)** Because it requires users to manually input their IP address to login.
-- **D)** Because it encrypts the session ID poorly, making it vulnerable to brute force.
+    - **A)** Because when the server is restarted, all stored sessions are deleted.
+    - **B)** Because MemoryStore automatically shares sessions across all users.
+    - **C)** Because it requires users to manually input their IP address to login.
+    - **D)** Because it encrypts the session ID poorly, making it vulnerable to brute force.
 
 ### Answer Key & Explanations
-1. **C)** Session-based authentication is stateful, as the server checks if the user exists, assigns a unique session ID, and stores that session in a database or server storage.
-2. **C)** A con of token-based authentication is that the content is often decodable (like JWT) and must be stored very securely since the server relies purely on the token's signature.
-3. **A)** By default, the local MemoryStore deletes all sessions when the server restarts, meaning all users would be logged out.
+
+1. **C**. Session-based authentication is stateful, as the server checks if the user exists, assigns a unique session ID, and stores that session in a database or server storage.
+2. **C**. A con of token-based authentication is that the content is often decodable (like JWT) and must be stored very securely since the server relies purely on the token's signature.
+3. **A**. By default, the local MemoryStore deletes all sessions when the server restarts, meaning all users would be logged out.
 
 ## References & Navigation
 

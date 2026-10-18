@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCPROG1]] #[[Conceptual]] #[[Functions]] #[[Modular Programming]] #[[M4]]
+**Tags:** #[[Computer Science]] #[[CCPROG1]] #[[Conceptual]] #[[Functions]] #[[Modular Programming]] #[[M4]]
 
 ---
 
@@ -72,76 +72,77 @@ This simple structure illustrates modularity, prototype placement, and the separ
 ## Multiple Choice Questions
 
 1. What is the primary purpose of breaking a program into functions?
-- **A)** To make the file size smaller
-- **B)** To achieve modularity and code reuse
-- **C)** To force the compiler to run faster
-- **D)** To eliminate the need for variables
+    - **A)** To make the file size smaller
+    - **B)** To achieve modularity and code reuse
+    - **C)** To force the compiler to run faster
+    - **D)** To eliminate the need for variables
 
 2. Which function is absolutely required in every executable C program?
-- **A)** `start()`
-- **B)** `init()`
-- **C)** `main()`
-- **D)** `execute()`
+    - **A)** `start()`
+    - **B)** `init()`
+    - **C)** `main()`
+    - **D)** `execute()`
 
 3. What does "Code Reusability" mean in the context of functions?
-- **A)** Writing the same code block multiple times across different files
-- **B)** Using a written function multiple times without rewriting its internal logic
-- **C)** Copying and pasting code to prevent typos
-- **D)** Reusing old projects for new assignments
+    - **A)** Writing the same code block multiple times across different files
+    - **B)** Using a written function multiple times without rewriting its internal logic
+    - **C)** Copying and pasting code to prevent typos
+    - **D)** Reusing old projects for new assignments
 
 4. What is the benefit of abstraction via functions?
-- **A)** It hides complex implementation details from the calling code
-- **B)** It makes the program mathematically abstract
-- **C)** It encrypts the source code
-- **D)** It prevents users from seeing the output
+    - **A)** It hides complex implementation details from the calling code
+    - **B)** It makes the program mathematically abstract
+    - **C)** It encrypts the source code
+    - **D)** It prevents users from seeing the output
 
 5. In a typical C program structure, what comes immediately after preprocessor directives?
-- **A)** The `main()` function definition
-- **B)** Variable assignments
-- **C)** Function Prototypes (Declarations)
-- **D)** The `return` statement
+    - **A)** The `main()` function definition
+    - **B)** Variable assignments
+    - **C)** Function Prototypes (Declarations)
+    - **D)** The `return` statement
 
 6. Why does using functions make debugging easier?
-- **A)** Functions automatically fix syntax errors
-- **B)** The compiler ignores errors inside functions
-- **C)** It isolates specific behaviors into small, testable blocks of code
-- **D)** Debuggers can only read function names
+    - **A)** Functions automatically fix syntax errors
+    - **B)** The compiler ignores errors inside functions
+    - **C)** It isolates specific behaviors into small, testable blocks of code
+    - **D)** Debuggers can only read function names
 
 7. What is a "black box" in programming?
-- **A)** A system whose internal workings are hidden, focusing only on inputs and outputs
-- **B)** A terminal window
-- **C)** An unrecoverable error
-- **D)** A block of code that crashes the compiler
+    - **A)** A system whose internal workings are hidden, focusing only on inputs and outputs
+    - **B)** A terminal window
+    - **C)** An unrecoverable error
+    - **D)** A block of code that crashes the compiler
 
 8. What happens if a function performs multiple unrelated tasks?
-- **A)** It runs more efficiently
-- **B)** It violates the best practice of a function doing exactly one thing well
-- **C)** It saves memory
-- **D)** The compiler rejects the code
+    - **A)** It runs more efficiently
+    - **B)** It violates the best practice of a function doing exactly one thing well
+    - **C)** It saves memory
+    - **D)** The compiler rejects the code
 
 9. What does a function prototype do?
-- **A)** It executes the function
-- **B)** It tells the compiler about the function's name and signature before its definition
-- **C)** It imports external libraries
-- **D)** It initializes variables
+    - **A)** It executes the function
+    - **B)** It tells the compiler about the function's name and signature before its definition
+    - **C)** It imports external libraries
+    - **D)** It initializes variables
 
 10. Which statement represents a function call?
-- **A)** `void printGreeting() {`
-- **B)** `int main() {`
-- **C)** `printGreeting();`
-- **D)** `#include <stdio.h>`
+    - **A)** `void printGreeting() {`
+    - **B)** `int main() {`
+    - **C)** `printGreeting();`
+    - **D)** `#include <stdio.h>`
 
 ### Answer Key & Explanations
-1. **B** - Modularity allows developers to manage complexity and reuse logic easily.
-2. **C** - The C runtime environment inherently looks for `main()` to begin program execution.
-3. **B** - Calling a function by its name repeatedly instead of writing the raw code again is the essence of reusability.
-4. **A** - Abstraction allows you to use a function (like `printf`) without needing to know the low-level hardware instructions it uses.
-5. **C** - Declaring function prototypes at the top ensures the compiler recognizes the functions when they are called in `main()`.
-6. **C** - Isolating logic allows you to test small parts of the system independently.
-7. **A** - Abstraction treats functions as black boxes where internal complexity is hidden from the caller.
-8. **B** - A function should adhere to the single-responsibility principle to remain modular and easy to debug.
-9. **B** - A prototype acts as a forward declaration so the compiler doesn't throw an "undeclared identifier" error when the function is called.
-10. **C** - Appending parentheses (and a semicolon) to a function's name executes it.
+
+1. **B**. Modularity allows developers to manage complexity and reuse logic easily.
+2. **C**. The C runtime environment inherently looks for `main()` to begin program execution.
+3. **B**. Calling a function by its name repeatedly instead of writing the raw code again is the essence of reusability.
+4. **A**. Abstraction allows you to use a function (like `printf`) without needing to know the low-level hardware instructions it uses.
+5. **C**. Declaring function prototypes at the top ensures the compiler recognizes the functions when they are called in `main()`.
+6. **C**. Isolating logic allows you to test small parts of the system independently.
+7. **A**. Abstraction treats functions as black boxes where internal complexity is hidden from the caller.
+8. **B**. A function should adhere to the single-responsibility principle to remain modular and easy to debug.
+9. **B**. A prototype acts as a forward declaration so the compiler doesn't throw an "undeclared identifier" error when the function is called.
+10. **C**. Appending parentheses (and a semicolon) to a function's name executes it.
 
 ## References & Navigation
 

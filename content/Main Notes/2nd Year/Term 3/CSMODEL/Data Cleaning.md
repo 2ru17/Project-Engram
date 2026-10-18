@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Data Cleaning]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Data Cleaning]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 04: Data Cleaning
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### Data Cleaning Overview
 Raw data collected from real-world sources is almost always "dirty." Data cleaning is the process of detecting and correcting (or removing) corrupt, inaccurate, incomplete, incorrectly formatted, or duplicate records from a dataset prior to analysis or model training.
@@ -117,7 +117,7 @@ Inspection: Using `df['col'].unique()` and `df['col'].value_counts()` to identif
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. Identifying Missing Data (`isnull`, `isnull().sum`, `isnull().any`)
 Check for `NaN` / `None` values across a DataFrame.
@@ -335,7 +335,7 @@ print("Outliers based on Z-score:\n", outliers_z)
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 ### 1. Interquartile Range (IQR) & Outlier Boundaries
 $$\text{IQR} = Q_3 - Q_1$$
@@ -367,7 +367,7 @@ $$\text{Missing Ratio} = \frac{N_{\text{missing}}}{N_{\text{total}}} \times 100\
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
 > [!WARNING]
 > **Trap 1: The `inplace=True` Assignment Bug**
@@ -400,7 +400,7 @@ $$\text{Missing Ratio} = \frac{N_{\text{missing}}}{N_{\text{total}}} \times 100\
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 **Q1.** A researcher is analyzing a dataset of patient medical records. Patients diagnosed with mild symptoms are less likely to report their post-treatment pain levels on follow-up surveys. However, the diagnosis level ("Mild", "Moderate", "Severe") is recorded in the dataset. Which missing data mechanism best describes the missing pain levels? A) Missing Completely at Random (MCAR) B) Missing at Random (MAR) C) Missing Not at Random (MNAR) D) Pairwise Missing Data (PMD)
 
@@ -502,41 +502,42 @@ Applying `.str.lower()` normalizes casing: `'apple'`, `'apple'`, `'apple'`, `'ba
 ## Multiple Choice Questions
 
 1. What does the missing data mechanism MCAR stand for?
-- **A)** Missing Categorically And Randomly
-- **B)** Missing Completely At Random
-- **C)** Missing Correlated At Random
-- **D)** Mean Calculation At Random
+    - **A)** Missing Categorically And Randomly
+    - **B)** Missing Completely At Random
+    - **C)** Missing Correlated At Random
+    - **D)** Mean Calculation At Random
 
 2. Which outlier detection method uses the formula: [Q1 - 1.5 * IQR, Q3 + 1.5 * IQR]?
-- **A)** Z-score method
-- **B)** Isolation Forest
-- **C)** IQR method
-- **D)** Standard deviation method
+    - **A)** Z-score method
+    - **B)** Isolation Forest
+    - **C)** IQR method
+    - **D)** Standard deviation method
 
 3. When data is MAR (Missing At Random), the missingness is related to:
-- **A)** The missing value itself
-- **B)** Unobserved variables
-- **C)** Observed variables in the dataset
-- **D)** Completely random chance
+    - **A)** The missing value itself
+    - **B)** Unobserved variables
+    - **C)** Observed variables in the dataset
+    - **D)** Completely random chance
 
 4. Which imputation strategy can introduce the most bias if the data is not MCAR?
-- **A)** Mean imputation
-- **B)** Multiple imputation
-- **C)** K-Nearest Neighbors imputation
-- **D)** Regression imputation
+    - **A)** Mean imputation
+    - **B)** Multiple imputation
+    - **C)** K-Nearest Neighbors imputation
+    - **D)** Regression imputation
 
 5. A Z-score threshold of 3 implies that an observation is considered an outlier if it is:
-- **A)** More than 3 standard deviations from the mean
-- **B)** Less than 3% of the total range
-- **C)** Greater than the 3rd quartile
-- **D)** 3 times the median value
+    - **A)** More than 3 standard deviations from the mean
+    - **B)** Less than 3% of the total range
+    - **C)** Greater than the 3rd quartile
+    - **D)** 3 times the median value
 
 ### Answer Key & Explanations
-1. **B)** MCAR means the missingness is completely independent of both observed and unobserved data.
-2. **C)** This is the standard Interquartile Range (IQR) method for outlier bounds.
-3. **C)** MAR means missingness depends on the observed data, not the missing values themselves.
-4. **A)** Mean imputation severely distorts variance and relationships, especially if data is not MCAR.
-5. **A)** A Z-score measures how many standard deviations a value is away from the mean.
+
+1. **B**. MCAR means the missingness is completely independent of both observed and unobserved data.
+2. **C**. This is the standard Interquartile Range (IQR) method for outlier bounds.
+3. **C**. MAR means missingness depends on the observed data, not the missing values themselves.
+4. **A**. Mean imputation severely distorts variance and relationships, especially if data is not MCAR.
+5. **A**. A Z-score measures how many standard deviations a value is away from the mean.
 
 ## References & Navigation
 

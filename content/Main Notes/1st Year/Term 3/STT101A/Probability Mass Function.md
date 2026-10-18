@@ -11,111 +11,71 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Probability Mass Function]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Probability Mass Function]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Probability Mass Function**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Probability Mass Function (PMF)** of a discrete random variable $X$, denoted $p_X(x)$ or $f(x) = P(X = x)$, assigns a probability mass to each possible discrete value $x$ in the support $R_X$.
 
 ## Key Definitions
-- **Probability Mass Function**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Probability Mass Function** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **PMF Definition:** $p_X(x) = P(X = x) = P(\{\omega \in S : X(\omega) = x\})$ for $x \in \mathbb{R}$.
+- **Support ($R_X$):** The countable set of values with strictly positive probability: $R_X = \{x \in \mathbb{R} : p_X(x) > 0\}$.
+- **Two Defining Axioms of a Valid PMF:**
+  1. **Non-negativity:** $p_X(x) \ge 0$ for all $x \in \mathbb{R}$.
+  2. **Normalization (Sums to 1):** $\sum_{x \in R_X} p_X(x) = 1$.
+- **Relation to CDF $F_X(x)$:** $F_X(x) = \sum_{t \le x} p_X(t)$, and for ordered support $x_1 < x_2 < \cdots$, $p_X(x_i) = F_X(x_i) - F_X(x_{i-1})$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Probability Mass Function**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** Verify that $p(x) = \frac{x^2}{30}$ for $x \in \{1, 2, 3, 4\}$ is a valid PMF, and compute $P(X \ge 3)$.
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Probability Mass Function** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+1. Non-negative: $p(x) > 0$ for each $x \in \{1, 2, 3, 4\}$.
+2. Sum: $\sum_{x=1}^4 \frac{x^2}{30} = \frac{1 + 4 + 9 + 16}{30} = \frac{30}{30} = 1$. (Valid PMF!)
+3. $P(X \ge 3) = p(3) + p(4) = \frac{9}{30} + \frac{16}{30} = \frac{25}{30} = \frac{5}{6}$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Which two conditions are both necessary and sufficient for a function $p(x)$ on a countable set $R_X$ to be a valid **Probability Mass Function (PMF)**?
+    - **A)** $p(x) \ge 0$ for all $x \in R_X$ and $\sum_{x \in R_X} p(x) = 1$
+    - **B)** $-1 \le p(x) \le 1$ and $\sum_{x \in R_X} p(x) = 0$
+    - **C)** $p(x)$ is monotonically increasing and $\lim_{x \to \infty} p(x) = 1$
+    - **D)** $\int_{-\infty}^{\infty} p(x)\,dx = 1$ and $p(x)$ can exceed $1$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Let $X$ have PMF $p(x) = k(2x + 1)$ for $x \in \{0, 1, 2\}$. What must the constant $k$ equal?
+    - **A)** $\frac{1}{6}$
+    - **B)** $\frac{1}{9}$
+    - **C)** $\frac{1}{3}$
+    - **D)** $\frac{1}{5}$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. How can you recover the PMF value $p_X(x_i) = P(X = x_i)$ at a jump point $x_i$ from the Cumulative Distribution Function $F_X(x)$?
+    - **A)** By taking the derivative $F'_X(x_i)$
+    - **B)** By computing the jump height $F_X(x_i) - \lim_{t \to x_i^-} F_X(t)$ (or $F_X(x_i) - F_X(x_{i-1})$ for ordered discrete support)
+    - **C)** By squaring $F_X(x_i)$
+    - **D)** $p_X(x_i)$ always equals $F_X(x_i)$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. What is the PMF of a **Poisson** random variable $X \sim \text{Poisson}(\lambda)$ for $x \in \{0, 1, 2, \dots\}$?
+    - **A)** $p(x) = \binom{n}{x} p^x (1-p)^{n-x}$
+    - **B)** $p(x) = \frac{e^{-\lambda} \lambda^x}{x!}$
+    - **C)** $p(x) = (1-p)^{x-1} p$
+    - **D)** $p(x) = \lambda e^{-\lambda x}$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Why do we use a **Probability Mass Function (PMF)** for discrete random variables, whereas continuous random variables require a **Probability Density Function (PDF)**?
+    - **A)** Because discrete random variables concentrate non-zero probability $P(X = x) > 0$ at isolated countable points (point masses), whereas continuous variables have $P(X = x) = 0$ at every single point and distribute probability over intervals via integration $\int_a^b f(x)\,dx$.
+    - **B)** Because continuous random variables only take integer values.
+    - **C)** Because a PMF can take values greater than $1$, while a PDF cannot.
+    - **D)** There is no difference between a PMF and a PDF.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **A**. Every discrete probability mass must be non-negative ($p(x) \ge 0$) and the total probability across the entire support must sum to $1$ ($\sum p(x) = 1$).
+2. **B**. Evaluating at $x = 0, 1, 2$ gives $k(1) + k(3) + k(5) = 9k = 1 \implies k = \frac{1}{9}$.
+3. **B**. The CDF $F_X(x) = P(X \le x)$ accumulates all probability masses up to $x$. Subtracting the cumulative probability strictly below $x_i$ isolates the exact point mass $P(X = x_i)$.
+4. **B**. The Poisson PMF is $p(x) = \frac{e^{-\lambda}\lambda^x}{x!}$ for $x = 0, 1, 2, \dots$, which sums to $e^{-\lambda} \sum_{x=0}^\infty \frac{\lambda^x}{x!} = e^{-\lambda}e^\lambda = 1$.
+5. **A**. Discrete variables have point masses $p(x) = P(X=x) \in [0, 1]$, whereas continuous densities $f(x)$ represent probability *per unit length* (which can exceed $1$) and yield probabilities only when integrated over an interval.
 
 ## References & Navigation
 

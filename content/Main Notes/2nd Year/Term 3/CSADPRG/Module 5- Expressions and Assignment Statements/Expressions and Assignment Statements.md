@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Conceptual]] #[[Expressions and Assignment Statements]]
+**Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Conceptual]] #[[Expressions and Assignment Statements]]
 
 ## Overview
 This module explores the fundamental concepts of expressions and assignment statements in programming languages. It details the mechanisms governing operand evaluation, including operator precedence, associativity, and the implications of function side effects. Furthermore, the module discusses type conversions (coercion), short-circuit evaluation, relational and Boolean expressions, and the varied implementations of assignment statements across different programming paradigms.
@@ -111,77 +111,77 @@ while ((ch = getchar()) != EOF) {
 ## Multiple Choice Questions
 
 1. Which of the following is defined as a foundational construct in programming used to specify computations, typically consisting of operators, operands, parentheses, and function calls?
-- **A)** Statement
-- **B)** Keyword
-- **C)** Expression
-- **D)** Variable
+    - **A)** Statement
+    - **B)** Keyword
+    - **C)** Expression
+    - **D)** Variable
 
 2. What determines the order in which adjacent operators of different precedence levels are evaluated?
-- **A)** Operator associativity
-- **B)** Operator precedence
-- **C)** Coercion
-- **D)** Short-circuit evaluation
+    - **A)** Operator associativity
+    - **B)** Operator precedence
+    - **C)** Coercion
+    - **D)** Short-circuit evaluation
 
 3. Which of the following describes a function side effect?
-- **A)** A function returning multiple values
-- **B)** A function executing without evaluating all operands
-- **C)** A function modifying one of its parameters or a global variable
-- **D)** A function automatically converting variable types
+    - **A)** A function returning multiple values
+    - **B)** A function executing without evaluating all operands
+    - **C)** A function modifying one of its parameters or a global variable
+    - **D)** A function automatically converting variable types
 
 4. What is the term for using a single operator symbol for multiple purposes, such as using `+` for both arithmetic addition and string concatenation?
-- **A)** Overloading
-- **B)** Coercion
-- **C)** Associativity
-- **D)** Narrowing
+    - **A)** Overloading
+    - **B)** Coercion
+    - **C)** Associativity
+    - **D)** Narrowing
 
 5. Which type of implicit type conversion is generally considered safe?
-- **A)** Narrowing conversion
-- **B)** Widening conversion
-- **C)** Mixed-mode conversion
-- **D)** Overloaded conversion
+    - **A)** Narrowing conversion
+    - **B)** Widening conversion
+    - **C)** Mixed-mode conversion
+    - **D)** Overloaded conversion
 
 6. Which evaluation strategy improves efficiency by determining the result of an expression without evaluating all operands or operators?
-- **A)** Compound evaluation
-- **B)** Associative evaluation
-- **C)** Coercive evaluation
-- **D)** Short-circuit evaluation
+    - **A)** Compound evaluation
+    - **B)** Associative evaluation
+    - **C)** Coercive evaluation
+    - **D)** Short-circuit evaluation
 
 7. In imperative languages, what issue arises when an operand is fetched before a function call that modifies it?
-- **A)** Integer overflow
-- **B)** Narrowing conversion
-- **C)** Unpredictable outcome due to function side effects
-- **D)** Fatal critical error
+    - **A)** Integer overflow
+    - **B)** Narrowing conversion
+    - **C)** Unpredictable outcome due to function side effects
+    - **D)** Fatal critical error
 
 8. Which operator type is used when an expression evaluates to a Boolean value and generally possesses lower precedence than arithmetic operators?
-- **A)** Compound assignment operators
-- **B)** Ternary operators
-- **C)** Relational operators
-- **D)** Unary operators
+    - **A)** Compound assignment operators
+    - **B)** Ternary operators
+    - **C)** Relational operators
+    - **D)** Unary operators
 
 9. What is a potential drawback of treating assignments as expressions?
-- **A)** It prevents dynamic binding.
-- **B)** It can lead to side effects or reduced error detection.
-- **C)** It strictly enforces evaluation orders.
-- **D)** It eliminates mutable variables.
+    - **A)** It prevents dynamic binding.
+    - **B)** It can lead to side effects or reduced error detection.
+    - **C)** It strictly enforces evaluation orders.
+    - **D)** It eliminates mutable variables.
 
 10. In pure functional languages, what role do assignment statements play?
-- **A)** They dynamically change the binding of values to variables and mutate state.
-- **B)** They are used primarily for shorthand notation.
-- **C)** They do not mutate state; they merely bind names to values.
-- **D)** They are evaluated using short-circuit evaluation.
+    - **A)** They dynamically change the binding of values to variables and mutate state.
+    - **B)** They are used primarily for shorthand notation.
+    - **C)** They do not mutate state; they merely bind names to values.
+    - **D)** They are evaluated using short-circuit evaluation.
 
 ### Answer Key & Explanations
 
-1. **C** - The document defines an expression as a foundational construct used to specify computations, consisting of operators, operands, etc.
-2. **B** - Operator precedence defines the rules that dictate the order in which adjacent operators of different precedence levels are evaluated.
-3. **C** - A function side effect occurs when a function modifies one of its parameters or a global variable, potentially altering expression outcomes.
-4. **A** - Overloading refers to using a single operator symbol for multiple purposes, such as using `+` for addition and string concatenation.
-5. **B** - The text states that a widening conversion (e.g., `int` to `float`) is generally safe, unlike a narrowing conversion which is unsafe.
-6. **D** - Short-circuit evaluation determines the result without evaluating all operands, improving efficiency and preventing certain runtime errors.
-7. **C** - Fetching an operand before a modifying function call causes side effects, where the result differs depending on the evaluation order.
-8. **C** - Relational expressions compare operands to evaluate to a Boolean value and generally possess lower precedence than arithmetic operators.
-9. **B** - Treating assignments as expressions allows flexibility but can lead to side effects or confusion (e.g., confusing `=` with `==`), reducing error detection.
-10. **C** - In pure functional languages, assignments do not mutate state but merely bind names to values.
+1. **C**. The document defines an expression as a foundational construct used to specify computations, consisting of operators, operands, etc.
+2. **B**. Operator precedence defines the rules that dictate the order in which adjacent operators of different precedence levels are evaluated.
+3. **C**. A function side effect occurs when a function modifies one of its parameters or a global variable, potentially altering expression outcomes.
+4. **A**. Overloading refers to using a single operator symbol for multiple purposes, such as using `+` for addition and string concatenation.
+5. **B**. The text states that a widening conversion (e.g., `int` to `float`) is generally safe, unlike a narrowing conversion which is unsafe.
+6. **D**. Short-circuit evaluation determines the result without evaluating all operands, improving efficiency and preventing certain runtime errors.
+7. **C**. Fetching an operand before a modifying function call causes side effects, where the result differs depending on the evaluation order.
+8. **C**. Relational expressions compare operands to evaluate to a Boolean value and generally possess lower precedence than arithmetic operators.
+9. **B**. Treating assignments as expressions allows flexibility but can lead to side effects or confusion (e.g., confusing `=` with `==`), reducing error detection.
+10. **C**. In pure functional languages, assignments do not mutate state but merely bind names to values.
 
 ## References & Navigation
 

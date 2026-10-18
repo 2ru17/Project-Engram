@@ -87,76 +87,77 @@ There are 4 major types of Flip-Flops, differing in the number of inputs and how
 ## Multiple Choice Questions
 
 1. What defines a sequential circuit's output?
-- **A)** It depends only on the present input.
-- **B)** It depends only on the clock signal.
-- **C)** It depends on the present input and the present state (memory).
-- **D)** It depends exclusively on the previous output.
+    - **A)** It depends only on the present input.
+    - **B)** It depends only on the clock signal.
+    - **C)** It depends on the present input and the present state (memory).
+    - **D)** It depends exclusively on the previous output.
 
 2. What is required in a sequential system that differentiates it from a combinational system?
-- **A)** An arithmetic logic unit
-- **B)** At least one feedback path from the memory element to system inputs
-- **C)** A set of tri-state buffers
-- **D)** Only NAND or NOR gates
+    - **A)** An arithmetic logic unit
+    - **B)** At least one feedback path from the memory element to system inputs
+    - **C)** A set of tri-state buffers
+    - **D)** Only NAND or NOR gates
 
 3. What achieves synchronization in a synchronous sequential circuit?
-- **A)** A clock generator providing a periodic train of clock pulses
-- **B)** Gate delays within the combinational logic
-- **C)** External user inputs
-- **D)** Asynchronous resets
+    - **A)** A clock generator providing a periodic train of clock pulses
+    - **B)** Gate delays within the combinational logic
+    - **C)** External user inputs
+    - **D)** Asynchronous resets
 
 4. What is the primary difference between a latch and a flip-flop?
-- **A)** Latches store 2 bits; flip-flops store 1 bit.
-- **B)** Latches are based on edge-triggering; flip-flops are level-triggered.
-- **C)** Latches are level-triggered; flip-flops are edge-triggered.
-- **D)** Latches are synchronous; flip-flops are asynchronous.
+    - **A)** Latches store 2 bits; flip-flops store 1 bit.
+    - **B)** Latches are based on edge-triggering; flip-flops are level-triggered.
+    - **C)** Latches are level-triggered; flip-flops are edge-triggered.
+    - **D)** Latches are synchronous; flip-flops are asynchronous.
 
 5. In an SR Flip-Flop, what happens when both S and R inputs are 1?
-- **A)** The state toggles.
-- **B)** The state remains unchanged.
-- **C)** The output is indeterminate.
-- **D)** The output becomes high-impedance.
+    - **A)** The state toggles.
+    - **B)** The state remains unchanged.
+    - **C)** The output is indeterminate.
+    - **D)** The output becomes high-impedance.
 
 6. What is the defining characteristic of a JK Flip-Flop when both J and K are 1?
-- **A)** The flip-flop resets.
-- **B)** The flip-flop state toggles.
-- **C)** The output becomes indeterminate.
-- **D)** The output matches the input.
+    - **A)** The flip-flop resets.
+    - **B)** The flip-flop state toggles.
+    - **C)** The output becomes indeterminate.
+    - **D)** The output matches the input.
 
 7. Which flip-flop simply follows its input at the next clock edge?
-- **A)** SR Flip-Flop
-- **B)** JK Flip-Flop
-- **C)** D Flip-Flop
-- **D)** T Flip-Flop
+    - **A)** SR Flip-Flop
+    - **B)** JK Flip-Flop
+    - **C)** D Flip-Flop
+    - **D)** T Flip-Flop
 
 8. What is the state equation for a D Flip-Flop?
-- **A)** Q(t+1) = S + R'Q
-- **B)** Q(t+1) = D
-- **C)** Q(t+1) = JQ' + K'Q
-- **D)** Q(t+1) = T'Q + TQ'
+    - **A)** Q(t+1) = S + R'Q
+    - **B)** Q(t+1) = D
+    - **C)** Q(t+1) = JQ' + K'Q
+    - **D)** Q(t+1) = T'Q + TQ'
 
 9. What does an asynchronous sequential circuit's behavior depend upon?
-- **A)** The frequency of the system clock.
-- **B)** The order in which input signals change and transitions defined by gate delay.
-- **C)** The rising edge of the periodic clock pulse.
-- **D)** The falling edge of the periodic clock pulse.
+    - **A)** The frequency of the system clock.
+    - **B)** The order in which input signals change and transitions defined by gate delay.
+    - **C)** The rising edge of the periodic clock pulse.
+    - **D)** The falling edge of the periodic clock pulse.
 
 10. In a T (Toggle) Flip-Flop, what is the next state when T=0?
-- **A)** Toggles to the opposite state
-- **B)** Resets to 0
-- **C)** Sets to 1
-- **D)** Remains unchanged
+    - **A)** Toggles to the opposite state
+    - **B)** Resets to 0
+    - **C)** Sets to 1
+    - **D)** Remains unchanged
 
 ### Answer Key & Explanations
-1. **C)** A sequential circuit's output is a function of both the present state (memory) and the inputs.
-2. **B)** To retain state, sequential circuits must have at least one feedback path.
-3. **A)** Synchronous circuits use a clock generator with periodic pulses to synchronize changes.
-4. **C)** Latches react to signal levels (level-triggered), whereas flip-flops react to clock transitions (edge-triggered).
-5. **C)** The SR flip-flop has an indeterminate state when both Set and Reset are high.
-6. **B)** The JK flip-flop solves the indeterminate state of the SR flip-flop by toggling the output when both inputs are 1.
-7. **C)** The D (Data) flip-flop passes its D input to the Q output on the clock edge.
-8. **B)** The next state of a D flip-flop is simply its D input.
-9. **B)** Asynchronous circuits lack a central clock; they depend on input changes and gate delays.
-10. **D)** A T flip-flop maintains its current state (no change) when T is 0, and toggles when T is 1.
+
+1. **C**. A sequential circuit's output is a function of both the present state (memory) and the inputs.
+2. **B**. To retain state, sequential circuits must have at least one feedback path.
+3. **A**. Synchronous circuits use a clock generator with periodic pulses to synchronize changes.
+4. **C**. Latches react to signal levels (level-triggered), whereas flip-flops react to clock transitions (edge-triggered).
+5. **C**. The SR flip-flop has an indeterminate state when both Set and Reset are high.
+6. **B**. The JK flip-flop solves the indeterminate state of the SR flip-flop by toggling the output when both inputs are 1.
+7. **C**. The D (Data) flip-flop passes its D input to the Q output on the clock edge.
+8. **B**. The next state of a D flip-flop is simply its D input.
+9. **B**. Asynchronous circuits lack a central clock; they depend on input changes and gate delays.
+10. **D**. A T flip-flop maintains its current state (no change) when T is 0, and toggles when T is 1.
 
 ## References & Navigation
 

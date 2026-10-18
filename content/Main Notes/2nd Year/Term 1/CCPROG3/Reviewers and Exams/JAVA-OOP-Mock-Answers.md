@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCPROG3]] #[[Object-Oriented Concepts]] #[[Programming]] #[[Computer Science]] #[[Java]] #[[Object-Oriented Programming]] #[[Software Engineering Principles]] #[[Algorithms]]
+**Tags:** #[[CCPROG3]] #[[Object-Oriented Concepts]] #[[Programming]] #[[Computer Science]] #[[Java]] #[[Object-Oriented Programming]] #[[Software Engineering Principles]] #[[Algorithms]]
 
 ---
 
@@ -245,10 +245,6 @@ _Explanation:_ `final` variables cannot be reassigned.
 
 ---
 
-## Code Example
-
-_To be added._
-
 ## Common Pitfalls
 
 Checking only the letter answer without reading the explanation — understanding **why** is crucial for exam variants.
@@ -258,10 +254,6 @@ Ignoring the UML analysis rationales — UML notation rules (visibility, line st
 ## Summary
 
 > TL;DR — Complete 70-item answer key with explanations covering OOP theory, UML notation rules, and code tracing mechanics (static sharing, polymorphic dispatch, constructor chaining, exception flow, autoboxing).
-
-## Review Questions
-
-_To be added._
 
 ## Links
 

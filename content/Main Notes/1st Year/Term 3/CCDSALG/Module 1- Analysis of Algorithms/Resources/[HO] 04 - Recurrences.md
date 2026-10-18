@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Recurrences]] #[[Problem Solving]] #[[M1]]
+**Tags:** #[[Computer Science]] #[[CCDSALG]] #[[Recurrences]] #[[Problem Solving]] #[[M1]]
 
 ---
 

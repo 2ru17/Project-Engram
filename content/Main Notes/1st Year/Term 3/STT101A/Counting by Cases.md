@@ -11,111 +11,69 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Counting by Cases]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Counting by Cases]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Counting by Cases**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+**Counting by Cases ( the Addition Principle / Rule of Sum)** decomposes a complex event $E$ into $k$ **mutually exclusive and collectively exhaustive** subcases $E_1, E_2, \dots, E_k$. Within each case, the Multiplication Rule counts the configurations; across disjoint cases, the counts are **summed**:
+$$|E| = |E_1| + |E_2| + \cdots + |E_k|$$
 
 ## Key Definitions
-- **Counting by Cases**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Counting by Cases** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Addition Principle (Rule of Sum):** If $E_1, E_2, \dots, E_k$ are pairwise disjoint ($E_i \cap E_j = \emptyset$ for $i \ne j$), then $\left|\bigcup_{i=1}^k E_i\right| = \sum_{i=1}^k |E_i|$.
+- **Case-Splitting Strategy:** Used whenever constraints change depending on an earlier choice (e.g., *"at least $k$"*, *"at most $k$"*, or digit restrictions where $0$ cannot be a leading digit but can be the last digit of an even number).
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Counting by Cases**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** From $6$ men and $5$ women, a $4$-person committee must have **at least $3$ women**. How many such committees can be formed?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Counting by Cases** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+Split into two mutually exclusive cases based on the exact number of women:
+- **Case 1 (Exactly 3 women and 1 man):** $\binom{5}{3} \times \binom{6}{1} = 10 \times 6 = 60$.
+- **Case 2 (Exactly 4 women and 0 men):** $\binom{5}{4} \times \binom{6}{0} = 5 \times 1 = 5$.
+- **Total:** $60 + 5 = 65$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. What condition MUST be satisfied by the cases $E_1, E_2, \dots, E_k$ when applying Counting by Cases ($|E| = \sum |E_i|$)?
+    - **A)** The cases must be statistically independent.
+    - **B)** The cases must be pairwise disjoint (mutually exclusive) and their union must equal $E$.
+    - **C)** Each case must have the exact same number of outcomes.
+    - **D)** There can be at most two cases.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Why is the following attempt to count 4-person committees with *at least 1 woman* from $5$ women and $6$ men INCORRECT: $\binom{5}{1} \times \binom{10}{3} = 5 \times 120 = 600$?
+    - **A)** Because committees with $2, 3,$ or $4$ women are counted multiple times (the cases overlap depending on which woman is chosen first).
+    - **B)** Because $\binom{5}{1}$ should be $5!$.
+    - **C)** Because men and women cannot be on the same committee.
+    - **D)** Because $\binom{10}{3} = 720$.
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Using valid Counting by Cases (or the complement), how many $4$-person committees from $5$ women and $6$ men have **at least $1$ woman**?
+    - **A)** $600$
+    - **B)** $315$
+    - **C)** $330$
+    - **D)** $15$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. How many $3$-digit **even** integers with **distinct digits** can be formed from $\{0, 1, 2, 3, 4, 5\}$ (where the hundreds digit cannot be $0$)?
+    - **A)** $60$
+    - **B)** $52$
+    - **C)** $48$
+    - **D)** $36$
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Why must the problem in Question 4 be split into Case 1 (units digit is $0$) and Case 2 (units digit is $2$ or $4$)?
+    - **A)** Because if the units digit is $0$, all $5$ remaining digits are valid for the hundreds place; whereas if the units digit is $2$ or $4$, $0$ is still unused and cannot occupy the hundreds place (leaving only $4$ choices).
+    - **B)** Because $0$ is an odd number.
+    - **C)** Because $2$ and $4$ can be repeated.
+    - **D)** Because multiplication is not associative.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. The Rule of Sum holds without inclusion-exclusion adjustments if and only if no outcome belongs to two different cases ($E_i \cap E_j = \emptyset$) and every valid outcome in $E$ falls into one of the cases.
+2. **A**. Selecting 1 woman first ($\binom{5}{1}$) and then 3 people from the remaining 10 ($\binom{10}{3}$) counts a committee with $k$ women $k$ times—once for each woman who could be designated as the "first" woman.
+3. **B**. Total committees $= \binom{11}{4} = 330$; committees with $0$ women $= \binom{6}{4} = 15$; thus $330 - 15 = 315$ (or by cases: $\binom{5}{1}\binom{6}{3} + \binom{5}{2}\binom{6}{2} + \binom{5}{3}\binom{6}{1} + \binom{5}{4}\binom{6}{0} = 100 + 150 + 60 + 5 = 315$).
+4. **B**. Case 1 (units digit $= 0$): $1 \text{ choice for units} \times 5 \text{ for hundreds} \times 4 \text{ for tens} = 20$. Case 2 (units digit $\in \{2,4\}$): $2 \text{ choices for units} \times 4 \text{ for hundreds (not } 0 \text{ or units)} \times 4 \text{ for tens} = 32$. Total $= 20 + 32 = 52$.
+5. **A**. The number of available choices for the hundreds digit depends on whether $0$ was already used in the units place ($5$ choices if $0$ was used; $4$ choices if $2$ or $4$ was used), requiring two disjoint cases.
 
 ## References & Navigation
 

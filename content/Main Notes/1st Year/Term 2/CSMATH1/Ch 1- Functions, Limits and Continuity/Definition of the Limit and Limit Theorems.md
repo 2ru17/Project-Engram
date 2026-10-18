@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
 
 ---
 
@@ -73,77 +73,43 @@ Since $20 \neq 117$, the limit **does not exist (DNE)**.
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. In the formal $\varepsilon$-$\delta$ definition of $\lim_{x \to c} f(x) = L$, what inequality must imply $|f(x) - L| < \varepsilon$?
+    - **A)** $|x - c| \le \delta$
+    - **B)** $0 < |x - c| < \delta$
+    - **C)** $|x - L| < \delta$
+    - **D)** $0 < |f(x) - c| < \varepsilon$
 
-2. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. Given $\lim_{x \to c} f(x) = 4$ and $\lim_{x \to c} g(x) = -2$, what is $\lim_{x \to c} \frac{3f(x) - g(x)}{g(x)^2}$?
+    - **A)** $\frac{5}{2}$
+    - **B)** $\frac{7}{2}$
+    - **C)** $-\frac{7}{2}$
+    - **D)** $3$
 
-3. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. Evaluate $\lim_{x \to 0} \frac{\sqrt{x + 4} - 2}{x}$ by rationalizing the numerator.
+    - **A)** $0$
+    - **B)** $\frac{1}{2}$
+    - **C)** $\frac{1}{4}$
+    - **D)** Does not exist
 
-4. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. Which theorem guarantees that if $g(x) \le f(x) \le h(x)$ near $c$ and $\lim_{x \to c} g(x) = \lim_{x \to c} h(x) = L$, then $\lim_{x \to c} f(x) = L$?
+    - **A)** Intermediate Value Theorem
+    - **B)** Mean Value Theorem
+    - **C)** Squeeze (Sandwich) Theorem
+    - **D)** Extreme Value Theorem
 
-5. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Definition of the Limit and Limit Theorems?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. Using the Squeeze Theorem, what is $\lim_{x \to 0} x^2 \cos\left(\frac{1}{x}\right)$?
+    - **A)** $1$
+    - **B)** $-1$
+    - **C)** $0$
+    - **D)** Does not exist
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Definition of the Limit and Limit Theorems without relying on rote computation.
+
+1. **B**. The condition $0 < |x - c| < \delta$ ensures that $x$ is within distance $\delta$ of $c$ while strictly excluding $x = c$ itself ($0 < |x - c|$).
+2. **B**. By the Limit Laws (since $\lim g(x)^2 = (-2)^2 = 4 \ne 0$): $\frac{3(4) - (-2)}{(-2)^2} = \frac{12 + 2}{4} = \frac{14}{4} = \frac{7}{2}$.
+3. **C**. Multiply numerator and denominator by the conjugate $\sqrt{x+4} + 2$: $\frac{(x+4) - 4}{x(\sqrt{x+4} + 2)} = \frac{1}{\sqrt{x+4} + 2}$. Substituting $x = 0$ yields $\frac{1}{\sqrt{4} + 2} = \frac{1}{4}$.
+4. **C**. The Squeeze (or Sandwich/Pinching) Theorem traps $f(x)$ between two functions that converge to the same limit $L$ at $x = c$, forcing $f(x)$ to converge to $L$ as well.
+5. **C**. Since $-1 \le \cos(1/x) \le 1$ for all $x \ne 0$, multiplying by $x^2 \ge 0$ gives $-x^2 \le x^2 \cos(1/x) \le x^2$. Because $\lim_{x \to 0} (-x^2) = \lim_{x \to 0} x^2 = 0$, the Squeeze Theorem gives $0$.
 
 ## References & Navigation
 

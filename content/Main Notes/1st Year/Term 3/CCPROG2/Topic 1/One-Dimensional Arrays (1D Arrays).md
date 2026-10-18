@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
+**Tags:** #[[CCPROG2]] #[[C Programming]] #[[Programming]] #[[Computer Science]] #[[Data Structures]] #[[Data Types]] #[[Structured Programming]] #[[Memory Management]]
 
 ---
 
@@ -129,34 +129,32 @@ for (int i = 4; i >= 0; i--) {
 
 > TL;DR — **1D arrays** are declared as `type name[size]`, zero-indexed (`0` to `size-1`). Initialize with `{}` or a loop. Traverse forward (`i = 0` to `n-1`) or backward (`i = n-1` to `0`). Always guard against out-of-bounds access.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
+
 1. Which best describes a 1D array?
-- **A)** A grid of rows and columns
-- **B)** A linear sequence of elements accessed by a single index
-- **C)** A structure containing disparate data types
-- **D)** A tree-based data structure
+    - **A)** A grid of rows and columns
+    - **B)** A linear sequence of elements accessed by a single index
+    - **C)** A structure containing disparate data types
+    - **D)** A tree-based data structure
 2. How do you access the very first element of a 1D array named `list`?
-- **A)** `list[1]`
-- **B)** `list[first]`
-- **C)** `list[0]`
-- **D)** `list[-1]`
+    - **A)** `list[1]`
+    - **B)** `list[first]`
+    - **C)** `list[0]`
+    - **D)** `list[-1]`
 3. In a 1D array of size N, what is the index of the last element?
-- **A)** N
-- **B)** N + 1
-- **C)** N - 1
-- **D)** 0
+    - **A)** N
+    - **B)** N + 1
+    - **C)** N - 1
+    - **D)** 0
 
 ### Answer Key & Explanations
-1. **B)** 1D arrays are the simplest array form, resembling a straight list of variables.
-2. **C)** Zero-based indexing means the offset for the very first item is zero.
-3. **C)** Since indexing starts at 0, the final slot is one less than the total allocated capacity.
+
+1. **B**. 1D arrays are the simplest array form, resembling a straight list of variables.
+2. **C**. Zero-based indexing means the offset for the very first item is zero.
+3. **C**. Since indexing starts at 0, the final slot is one less than the total allocated capacity.
 
 ## References & Navigation
 

@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCPROG3]] #[[Object-Oriented Concepts]] #[[Programming]] #[[Computer Science]] #[[Java]] #[[Object-Oriented Programming]] #[[Software Engineering Principles]] #[[Algorithms]]
+**Tags:** #[[CCPROG3]] #[[Object-Oriented Concepts]] #[[Programming]] #[[Computer Science]] #[[Java]] #[[Object-Oriented Programming]] #[[Software Engineering Principles]] #[[Algorithms]]
 
 ---
 
@@ -781,10 +781,6 @@ System.out.println(x);
 ## Summary
 
 > TL;DR — 70-item mock exam: 30 theory (OOP concepts), 15 UML analysis (visibility, relationships), and 25 code tracing (polymorphism, exceptions, collections, casting). Full coverage of CCPROG3 Java OOP syllabus.
-
-## Review Questions
-
-_To be added._
 
 ## Links
  **Related:** **Source / Reference:**

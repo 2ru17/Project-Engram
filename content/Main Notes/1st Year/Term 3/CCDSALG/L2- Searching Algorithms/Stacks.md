@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Searching]] #[[Data Structures]] #[[Search Efficiency]] #[[Algorithm]] #[[Data Abstraction]] #[[Accessing Elements]] #[[Fundamental Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
+**Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Searching]] #[[Data Structures]] #[[Search Efficiency]] #[[Algorithm]] #[[Data Abstraction]] #[[Accessing Elements]] #[[Fundamental Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
 
 ---
 
@@ -165,86 +165,83 @@ Assume a stack `S` with capacity 9.
 
 > TL;DR — A **stack** is a LIFO data structure with $O(1)$ `push`, `pop`, `top`, `empty`, and `full` operations. Watch for **overflow** (push on full) and **underflow** (pop/top on empty). Implemented via arrays (fixed size) or linked lists (dynamic size).
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. What principle does a stack follow?
-- **A)** First-In, First-Out (FIFO)
-- **B)** Last-In, First-Out (LIFO)
-- **C)** Random Access
-- **D)** First-In, Last-Out (FILO)
+    - **A)** First-In, First-Out (FIFO)
+    - **B)** Last-In, First-Out (LIFO)
+    - **C)** Random Access
+    - **D)** First-In, Last-Out (FILO)
 
 2. What does the PUSH operation do?
-- **A)** Removes the most recently added element.
-- **B)** Adds an element to the bottom of the stack.
-- **C)** Adds an element to the top of the stack.
-- **D)** Checks if the stack is full.
+    - **A)** Removes the most recently added element.
+    - **B)** Adds an element to the bottom of the stack.
+    - **C)** Adds an element to the top of the stack.
+    - **D)** Checks if the stack is full.
 
 3. What does the POP operation do?
-- **A)** Adds an element to the top.
-- **B)** Removes and returns the most recently added element (the top).
-- **C)** Returns the top element without removing it.
-- **D)** Empties the entire stack.
+    - **A)** Adds an element to the top.
+    - **B)** Removes and returns the most recently added element (the top).
+    - **C)** Returns the top element without removing it.
+    - **D)** Empties the entire stack.
 
 4. What error occurs if you try to POP from an empty stack?
-- **A)** Overflow
-- **B)** Underflow
-- **C)** Segmentation Fault
-- **D)** Syntax Error
+    - **A)** Overflow
+    - **B)** Underflow
+    - **C)** Segmentation Fault
+    - **D)** Syntax Error
 
 5. What is the time complexity of the PUSH operation?
-- **A)** $O(n)$
-- **B)** $O(\log n)$
-- **C)** $O(1)$
-- **D)** $O(n^2)$
+    - **A)** $O(n)$
+    - **B)** $O(\log n)$
+    - **C)** $O(1)$
+    - **D)** $O(n^2)$
 
 6. Which operation returns the current top element WITHOUT removing it?
-- **A)** PUSH
-- **B)** POP
-- **C)** TOP
-- **D)** CREATE
+    - **A)** PUSH
+    - **B)** POP
+    - **C)** TOP
+    - **D)** CREATE
 
 7. In the Stack Simulation Walkthrough, after PUSHing 8, 12, -7, 1, 3, 17 and then calling POP once, what does the next TOP operation return?
-- **A)** 17
-- **B)** 8
-- **C)** 3
-- **D)** -7
+    - **A)** 17
+    - **B)** 8
+    - **C)** 3
+    - **D)** -7
 
 8. What error occurs if you try to PUSH into a stack that has reached its maximum capacity?
-- **A)** Underflow
-- **B)** Overflow
-- **C)** Null Pointer
-- **D)** Type Mismatch
+    - **A)** Underflow
+    - **B)** Overflow
+    - **C)** Null Pointer
+    - **D)** Type Mismatch
 
 9. Which of the following is a real-world application of a stack?
-- **A)** A queue at a grocery store.
-- **B)** A round-robin scheduler.
-- **C)** An undo feature in a text editor.
-- **D)** Broadcasting a network packet.
+    - **A)** A queue at a grocery store.
+    - **B)** A round-robin scheduler.
+    - **C)** An undo feature in a text editor.
+    - **D)** Broadcasting a network packet.
 
 10. What is a common pitfall when working with stacks and queues?
-- **A)** Confusing LIFO (stack) with FIFO (queue).
-- **B)** Assuming `push` takes $O(n)$ time.
-- **C)** Thinking a stack can only hold integers.
-- **D)** Using `pop` instead of `push` to add items.
+    - **A)** Confusing LIFO (stack) with FIFO (queue).
+    - **B)** Assuming `push` takes $O(n)$ time.
+    - **C)** Thinking a stack can only hold integers.
+    - **D)** Using `pop` instead of `push` to add items.
 
 ### Answer Key & Explanations
-1. **B)** A stack operates on a Last-In, First-Out (LIFO) model, much like adding and removing plates from a physical stack.
-2. **C)** PUSH strictly inserts new data at the very TOP of the structure, advancing the top pointer.
-3. **B)** POP both retrieves the value stored at the top pointer and decrements the pointer, permanently removing it from the stack.
-4. **B)** Attempting to extract data that doesn't exist drops the pointer below zero, triggering an Underflow Error.
-5. **C)** Because you are just writing a value to an array index and incrementing a pointer, PUSH is highly efficient and executes in constant $O(1)$ time.
-6. **C)** The TOP operation (sometimes called Peek) allows you to view the data currently at the top of the stack without altering the pointer.
-7. **C)** The POP operation removed the 17, making the 3 the new topmost element. Therefore, querying TOP immediately after will return 3.
-8. **B)** When the underlying array is completely full, attempting to PUSH drops the pointer out of bounds, triggering an Overflow Error.
-9. **C)** Text editors store your actions in a stack; when you hit "Undo", they POP the most recent action off the stack and reverse it.
-10. **A)** Developers frequently mix up the data retrieval logic—stacks return the newest item (LIFO), whereas queues return the oldest item (FIFO).
+
+1. **B**. A stack operates on a Last-In, First-Out (LIFO) model, much like adding and removing plates from a physical stack.
+2. **C**. PUSH strictly inserts new data at the very TOP of the structure, advancing the top pointer.
+3. **B**. POP both retrieves the value stored at the top pointer and decrements the pointer, permanently removing it from the stack.
+4. **B**. Attempting to extract data that doesn't exist drops the pointer below zero, triggering an Underflow Error.
+5. **C**. Because you are just writing a value to an array index and incrementing a pointer, PUSH is highly efficient and executes in constant $O(1)$ time.
+6. **C**. The TOP operation (sometimes called Peek) allows you to view the data currently at the top of the stack without altering the pointer.
+7. **C**. The POP operation removed the 17, making the 3 the new topmost element. Therefore, querying TOP immediately after will return 3.
+8. **B**. When the underlying array is completely full, attempting to PUSH drops the pointer out of bounds, triggering an Overflow Error.
+9. **C**. Text editors store your actions in a stack; when you hit "Undo", they POP the most recent action off the stack and reverse it.
+10. **A**. Developers frequently mix up the data retrieval logic—stacks return the newest item (LIFO), whereas queues return the oldest item (FIFO).
 
 ## References & Navigation
 

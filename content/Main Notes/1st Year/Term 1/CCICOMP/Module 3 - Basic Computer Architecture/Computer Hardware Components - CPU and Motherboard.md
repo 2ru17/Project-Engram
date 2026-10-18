@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Conceptual]] #[[M3]]
+**Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Conceptual]] #[[M3]]
 
 ---
 
@@ -44,76 +44,77 @@ The processor operates on a continuous loop consisting of the following stages:
 ## Multiple Choice Questions
 
 1. What acts as the central hub interconnecting the CPU, memory, and peripheral components?
-- **A)** The Control Unit
-- **B)** The Motherboard
-- **C)** The Arithmetic Logic Unit
-- **D)** The System Clock
+    - **A)** The Control Unit
+    - **B)** The Motherboard
+    - **C)** The Arithmetic Logic Unit
+    - **D)** The System Clock
 
 2. Which sequence of steps does a CPU continuously perform to execute instructions?
-- **A)** Boot-Load-Terminate
-- **B)** Input-Process-Output
-- **C)** Fetch-Decode-Execute
-- **D)** Read-Write-Erase
+    - **A)** Boot-Load-Terminate
+    - **B)** Input-Process-Output
+    - **C)** Fetch-Decode-Execute
+    - **D)** Read-Write-Erase
 
 3. What is the primary function of the Control Unit (CU) within the processor?
-- **A)** To perform complex mathematical calculations and bitwise logic operations.
-- **B)** To supply continuous electrical power to the motherboard.
-- **C)** To direct operations, fetch/decode instructions, and coordinate the ALU and memory.
-- **D)** To permanently store the operating system kernel.
+    - **A)** To perform complex mathematical calculations and bitwise logic operations.
+    - **B)** To supply continuous electrical power to the motherboard.
+    - **C)** To direct operations, fetch/decode instructions, and coordinate the ALU and memory.
+    - **D)** To permanently store the operating system kernel.
 
 4. What component dictates the pace of the machine cycle by emitting a continuous stream of electrical pulses?
-- **A)** The System Clock
-- **B)** The L3 Cache
-- **C)** The Heat Sink
-- **D)** The Motherboard Bus
+    - **A)** The System Clock
+    - **B)** The L3 Cache
+    - **C)** The Heat Sink
+    - **D)** The Motherboard Bus
 
 5. Which processor subunit is responsible for performing integer arithmetic and bitwise logic operations?
-- **A)** Registers
-- **B)** Control Unit
-- **C)** Arithmetic Logic Unit (ALU)
-- **D)** Primary Storage
+    - **A)** Registers
+    - **B)** Control Unit
+    - **C)** Arithmetic Logic Unit (ALU)
+    - **D)** Primary Storage
 
 6. What are registers in the context of a CPU?
-- **A)** Connectors for external I/O devices on the motherboard.
-- **B)** Tiny, ultra-fast storage locations built directly into the CPU to hold temporary data.
-- **C)** Software protocols that dictate network communication.
-- **D)** Large secondary storage drives for long-term archiving.
+    - **A)** Connectors for external I/O devices on the motherboard.
+    - **B)** Tiny, ultra-fast storage locations built directly into the CPU to hold temporary data.
+    - **C)** Software protocols that dictate network communication.
+    - **D)** Large secondary storage drives for long-term archiving.
 
 7. What occurs during the "Decode" stage of the machine cycle?
-- **A)** The instruction is translated into a set of control signals the CPU understands.
-- **B)** The result is written back to a memory location.
-- **C)** Data is retrieved from the Hard Disk Drive.
-- **D)** The CPU executes the mathematical calculation.
+    - **A)** The instruction is translated into a set of control signals the CPU understands.
+    - **B)** The result is written back to a memory location.
+    - **C)** Data is retrieved from the Hard Disk Drive.
+    - **D)** The CPU executes the mathematical calculation.
 
 8. Instead of solely increasing clock speed, how do modern CPUs handle massive amounts of instructions while managing heat?
-- **A)** By removing the ALU entirely.
-- **B)** By slowing down the system clock dynamically.
-- **C)** By combining multiple independent processing units (cores) onto a single chip.
-- **D)** By shifting all processing tasks to the GPU.
+    - **A)** By removing the ALU entirely.
+    - **B)** By slowing down the system clock dynamically.
+    - **C)** By combining multiple independent processing units (cores) onto a single chip.
+    - **D)** By shifting all processing tasks to the GPU.
 
 9. What technology allows a single core to fetch/decode the next instruction while simultaneously executing the current one?
-- **A)** Overclocking
-- **B)** Pipelining/Hyper-Threading
-- **C)** Direct Memory Access
-- **D)** Virtualization
+    - **A)** Overclocking
+    - **B)** Pipelining/Hyper-Threading
+    - **C)** Direct Memory Access
+    - **D)** Virtualization
 
 10. If a processor operates at 3.0 GHz, how many clock cycles does it experience per second?
-- **A)** 3 thousand
-- **B)** 3 million
-- **C)** 3 billion
-- **D)** 3 trillion
+    - **A)** 3 thousand
+    - **B)** 3 million
+    - **C)** 3 billion
+    - **D)** 3 trillion
 
 ### Answer Key & Explanations
-1. **B)** The motherboard acts as the central hub, providing connectors and pathways for the CPU, memory, and peripherals.
-2. **C)** The machine cycle is the fundamental sequence of Fetch-Decode-Execute steps performed continuously.
-3. **C)** The Control Unit (CU) directs operations, fetches/decodes instructions, and coordinates the ALU and memory.
-4. **A)** The system clock regulates timing by emitting a continuous stream of electrical pulses.
-5. **C)** The Arithmetic Logic Unit (ALU) performs integer arithmetic and bitwise logic.
-6. **B)** Registers are tiny, ultra-fast storage locations built directly into the CPU for holding temporary data.
-7. **A)** During decoding, the instruction is translated into control signals that the CPU understands.
-8. **C)** Modern CPUs combine multiple independent processing units (cores) onto a single chip to allow parallel execution without excessive heat.
-9. **B)** Pipelining/Hyper-Threading allows a single core to process different stages of different instructions simultaneously.
-10. **C)** A 3.0 GHz processor experiences 3 billion clock cycles per second.
+
+1. **B**. The motherboard acts as the central hub, providing connectors and pathways for the CPU, memory, and peripherals.
+2. **C**. The machine cycle is the fundamental sequence of Fetch-Decode-Execute steps performed continuously.
+3. **C**. The Control Unit (CU) directs operations, fetches/decodes instructions, and coordinates the ALU and memory.
+4. **A**. The system clock regulates timing by emitting a continuous stream of electrical pulses.
+5. **C**. The Arithmetic Logic Unit (ALU) performs integer arithmetic and bitwise logic.
+6. **B**. Registers are tiny, ultra-fast storage locations built directly into the CPU for holding temporary data.
+7. **A**. During decoding, the instruction is translated into control signals that the CPU understands.
+8. **C**. Modern CPUs combine multiple independent processing units (cores) onto a single chip to allow parallel execution without excessive heat.
+9. **B**. Pipelining/Hyper-Threading allows a single core to process different stages of different instructions simultaneously.
+10. **C**. A 3.0 GHz processor experiences 3 billion clock cycles per second.
 
 ## References & Navigation
 

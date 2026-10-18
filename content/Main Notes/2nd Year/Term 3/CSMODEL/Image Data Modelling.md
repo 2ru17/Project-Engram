@@ -11,13 +11,13 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Image Data Modelling]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Image Data Modelling]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
 # Module 18: Image Data Modelling
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### 1. Image Representation in Computer Vision & ML
 In digital image processing and machine learning, an image is mathematically represented as a 2D spatial function $f(x, y)$, where $(x, y)$ denotes spatial coordinates in a discrete 2D grid, and $f(x, y)$ represents the intensity or color value at that location.
@@ -152,7 +152,7 @@ As covered in the module, modern computer vision models address diverse tasks: *
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### 1. Image Loading, Grayscale Conversion, Resizing & NumPy Array Conversion
 Loading an image using Pillow (PIL), resizing, converting color modes, and transforming into NumPy arrays.
@@ -353,7 +353,7 @@ plt.show()
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 1. **RGB Color Space Combinations**:
    $$N_{\text{RGB}} = 256 \times 256 \times 256 = 256^3 = 16,777,216$$
@@ -382,31 +382,31 @@ plt.show()
 
 ---
 
-## ⚠️ Common Exam Traps
- ⚠️ **PIL `Image.size` vs NumPy `array.shape` Axis Flip**:
+## Common Exam Traps
+  **PIL `Image.size` vs NumPy `array.shape` Axis Flip**:
 PIL's `img.size` returns `(width, height)` i.e., `(W, H)`.
 NumPy's `array.shape` returns `(height, width, channels)` i.e., `(H, W, C)`.
 When calling `img.resize((w, h))`, pass `(width, height)`. Passing `img_array.shape` directly into `PIL.Image.resize()` swaps width and height, causing unexpected distortion!
- ⚠️ **Integer Division with `uint8` Arrays**:
+  **Integer Division with `uint8` Arrays**:
 Performing integer division `img_uint8 // 255` in Python/NumPy results in all zeros (except for pure white pixels `255 // 255 = 1`).
 Always convert to floating-point first: `img.astype(np.float32) / 255.0`.
- ⚠️ **Kernel Weight Sum & Brightness Conservation**:
+  **Kernel Weight Sum & Brightness Conservation**:
 **Blur/Smoothing Kernels**: Weights sum to **$1$** (e.g., Box Blur sums to $9/9 = 1$, Gaussian sums to $16/16 = 1$). This preserves original image overall energy/brightness.
 **Edge Detection Kernels**: Weights sum to **$0$** (e.g., Laplacian $\begin{bmatrix}-1&-1&-1\\-1&8&-1\\-1&-1&-1\end{bmatrix}$ sums to $0$). Constant uniform regions yield an output of $0$ (black).
 **Sharpen / Edge Enhancement Kernels**: Weights sum to **$1$** (e.g., center is $5$ or $9$, surrounding elements sum to $-4$ or $-8$).
- ⚠️ **Distinguishing Line Detection Kernels**:
+  **Distinguishing Line Detection Kernels**:
 **Vertical Line Detector**: Columns have uniform constant values (e.g., left column $-1$, center $+2$, right column $-1$).
 **Horizontal Line Detector**: Rows have uniform constant values (e.g., top row $-1$, center row $+2$, bottom row $-1$).
- ⚠️ **Flattening Destroys Spatial Topology**:
+  **Flattening Destroys Spatial Topology**:
 Flattening an image $H \times W \times C \to (H \cdot W \cdot C)$ treats pixels as independent isolated features. It completely ignores spatial relationships (e.g., pixel $(x, y)$ is adjacent to $(x+1, y)$). CNNs solve this by using localized 2D convolution filters.
- ⚠️ **PCA Input Requirements**:
+  **PCA Input Requirements**:
 PCA in `scikit-learn` expects a 2D matrix of shape `(n_samples, n_features)`. Passing a single 2D image matrix `(H, W)` will cause PCA to treat $H$ as individual samples and $W$ as features, which is conceptually incorrect!
- ⚠️ **Matplotlib Default Colormap (`cmap`)**:
+  **Matplotlib Default Colormap (`cmap`)**:
 Displaying a 2D grayscale NumPy array with `plt.imshow(img_gray)` without specifying `cmap='gray'` will render the image with the default `viridis` color palette (appearing green/purple).
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 **Q1.** A color digital image has resolution $200 \times 150$ pixels (Width = 200, Height = 150) in standard RGB format (`uint8`). Which of the following statements correctly describes its NumPy array representation and total possible pixel color choices? A) Shape is `(200, 150, 3)`, dtype is `float32`, total color choices per pixel is $256$. B) Shape is `(150, 200, 3)`, dtype is `uint8`, total color choices per pixel is $16,777,216$. C) Shape is `(150, 200)`, dtype is `uint8`, total color choices per pixel is $65,536$. D) Shape is `(200, 150)`, dtype is `int64`, total color choices per pixel is $16,777,216$.
 
@@ -477,76 +477,77 @@ Which statement regarding this pipeline is CORRECT? A) `pca.n_components_` will 
 ## Multiple Choice Questions
 
 1. How is a standard RGB color image mathematically represented in machine learning?
-- **A)** A 2D matrix of shape `(H, W)` with float32 precision
-- **B)** A 1D vector of length $H \times W \times 3$
-- **C)** A 3D tensor of shape `(H, W, 3)` with three distinct color channels
-- **D)** A 3D tensor of shape `(3, H, W)` representing intensity, saturation, and hue
+    - **A)** A 2D matrix of shape `(H, W)` with float32 precision
+    - **B)** A 1D vector of length $H \times W \times 3$
+    - **C)** A 3D tensor of shape `(H, W, 3)` with three distinct color channels
+    - **D)** A 3D tensor of shape `(3, H, W)` representing intensity, saturation, and hue
 
 2. What is the total number of unique color combinations per pixel in an 8-bit RGB image?
-- **A)** 256
-- **B)** 65,536
-- **C)** 16,777,216
-- **D)** 4,294,967,296
+    - **A)** 256
+    - **B)** 65,536
+    - **C)** 16,777,216
+    - **D)** 4,294,967,296
 
 3. Which of the following affine transformation matrices represents a horizontal reflection (flipping across the vertical axis)?
-- **A)** $\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}$
-- **B)** $\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$
-- **C)** $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$
-- **D)** $\begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix}$
+    - **A)** $\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}$
+    - **B)** $\begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$
+    - **C)** $\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$
+    - **D)** $\begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix}$
 
 4. What is the sum of the weights in an edge detection (Laplacian) kernel, and why?
-- **A)** 1, to preserve the original base brightness of the image.
-- **B)** 0, so that constant uniform regions yield a black (0) output.
-- **C)** 9, because it operates on a 3x3 neighborhood.
-- **D)** -1, to invert the colors of the edges.
+    - **A)** 1, to preserve the original base brightness of the image.
+    - **B)** 0, so that constant uniform regions yield a black (0) output.
+    - **C)** 9, because it operates on a 3x3 neighborhood.
+    - **D)** -1, to invert the colors of the edges.
 
 5. Why is image normalization (scaling from `[0, 255]` to `[0.0, 1.0]`) crucial before training machine learning models like SVM or Neural Networks?
-- **A)** It reduces the number of pixels in the image array.
-- **B)** It converts a grayscale image into an RGB image.
-- **C)** It prevents large numeric values from distorting distance metrics and gradient steps.
-- **D)** It applies a Gaussian blur to remove noise.
+    - **A)** It reduces the number of pixels in the image array.
+    - **B)** It converts a grayscale image into an RGB image.
+    - **C)** It prevents large numeric values from distorting distance metrics and gradient steps.
+    - **D)** It applies a Gaussian blur to remove noise.
 
 6. What is a major limitation of flattening a 2D image matrix into a 1D vector for traditional machine learning classifiers?
-- **A)** It requires converting the image to 8-bit integers.
-- **B)** It creates the curse of dimensionality and destroys the spatial structure of the pixels.
-- **C)** It forces the classifier to perform data augmentation automatically.
-- **D)** It limits the number of channels to only one (grayscale).
+    - **A)** It requires converting the image to 8-bit integers.
+    - **B)** It creates the curse of dimensionality and destroys the spatial structure of the pixels.
+    - **C)** It forces the classifier to perform data augmentation automatically.
+    - **D)** It limits the number of channels to only one (grayscale).
 
 7. Which traditional feature extraction method divides an image into cells and computes the direction and magnitude of gradients?
-- **A)** Principal Component Analysis (PCA)
-- **B)** Convolutional Neural Networks (CNN)
-- **C)** Histogram of Oriented Gradients (HOG)
-- **D)** Autoencoders
+    - **A)** Principal Component Analysis (PCA)
+    - **B)** Convolutional Neural Networks (CNN)
+    - **C)** Histogram of Oriented Gradients (HOG)
+    - **D)** Autoencoders
 
 8. In a Convolutional Neural Network (CNN), what is the primary purpose of a Pooling Layer?
-- **A)** To map the image to a higher-dimensional space for classification
-- **B)** To downsample feature maps, reduce spatial dimensions, and provide translation invariance
-- **C)** To convert raw RGB values into normalized floating-point numbers
-- **D)** To reconstruct the original image from a latent bottleneck representation
+    - **A)** To map the image to a higher-dimensional space for classification
+    - **B)** To downsample feature maps, reduce spatial dimensions, and provide translation invariance
+    - **C)** To convert raw RGB values into normalized floating-point numbers
+    - **D)** To reconstruct the original image from a latent bottleneck representation
 
 9. When applying PCA to flattened image vectors (e.g., Eigenfaces), what does the `explained_variance_ratio_` indicate?
-- **A)** The fraction of total dataset variance captured by each principal component
-- **B)** The required number of hidden layers for the neural network
-- **C)** The percentage of images that were successfully classified
-- **D)** The spatial dimensions of the compressed images
+    - **A)** The fraction of total dataset variance captured by each principal component
+    - **B)** The required number of hidden layers for the neural network
+    - **C)** The percentage of images that were successfully classified
+    - **D)** The spatial dimensions of the compressed images
 
 10. A developer incorrectly uses integer division `img_uint8 // 255` instead of `img.astype(np.float32) / 255.0` in Python. What is the most likely consequence?
-- **A)** The image colors will be inverted.
-- **B)** The image will be converted to grayscale automatically.
-- **C)** All pixel values will become zero, except for pure white pixels.
-- **D)** The script will throw a memory overflow error.
+    - **A)** The image colors will be inverted.
+    - **B)** The image will be converted to grayscale automatically.
+    - **C)** All pixel values will become zero, except for pure white pixels.
+    - **D)** The script will throw a memory overflow error.
 
 ### Answer Key & Explanations
-1. **C)** A 3D tensor of shape `(H, W, 3)` with three distinct color channels. According to the note, color images are represented as 3D tensors of shape `(H, W, 3)` with Red, Green, and Blue channels.
-2. **C)** 16,777,216. The note specifies that each channel has 256 levels, resulting in 256 * 256 * 256 = 16,777,216 colors.
-3. **A)** $\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}$. A horizontal flip mirrors the image across the vertical axis, multiplying the x-coordinate by -1 while keeping y unchanged.
-4. **B)** 0, so that constant uniform regions yield a black (0) output. The note states that edge detection kernels sum to 0, which highlights boundaries and zeroes out uniform regions.
-5. **C)** It prevents large numeric values from distorting distance metrics and gradient steps. Normalizing to float32 between 0.0 and 1.0 is required so scale doesn't negatively impact algorithms like SVM or KNN.
-6. **B)** It creates the curse of dimensionality and destroys the spatial structure of the pixels. Flattening unrolls the 2D array, which destroys the structural adjacency of pixels.
-7. **C)** Histogram of Oriented Gradients (HOG). HOG computes localized histograms of gradient directions to capture object shape and structure.
-8. **B)** To downsample feature maps, reduce spatial dimensions, and provide translation invariance. Pooling layers aggregate information (e.g. Max Pooling) to shrink spatial size.
-9. **A)** The fraction of total dataset variance captured by each principal component. The explained variance ratio shows how much of the original data's spread is retained by each PCA axis.
-10. **C)** All pixel values will become zero, except for pure white pixels. Since `uint8` values range from 0-255, integer division by 255 yields 0 for everything < 255, destroying the image data.
+
+1. **C**. A 3D tensor of shape `(H, W, 3)` with three distinct color channels. According to the note, color images are represented as 3D tensors of shape `(H, W, 3)` with Red, Green, and Blue channels.
+2. **C**. 16,777,216. The note specifies that each channel has 256 levels, resulting in 256 * 256 * 256 = 16,777,216 colors.
+3. **A**. $\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}$. A horizontal flip mirrors the image across the vertical axis, multiplying the x-coordinate by -1 while keeping y unchanged.
+4. **B**. 0, so that constant uniform regions yield a black (0) output. The note states that edge detection kernels sum to 0, which highlights boundaries and zeroes out uniform regions.
+5. **C**. It prevents large numeric values from distorting distance metrics and gradient steps. Normalizing to float32 between 0.0 and 1.0 is required so scale doesn't negatively impact algorithms like SVM or KNN.
+6. **B**. It creates the curse of dimensionality and destroys the spatial structure of the pixels. Flattening unrolls the 2D array, which destroys the structural adjacency of pixels.
+7. **C**. Histogram of Oriented Gradients (HOG). HOG computes localized histograms of gradient directions to capture object shape and structure.
+8. **B**. To downsample feature maps, reduce spatial dimensions, and provide translation invariance. Pooling layers aggregate information (e.g. Max Pooling) to shrink spatial size.
+9. **A**. The fraction of total dataset variance captured by each principal component. The explained variance ratio shows how much of the original data's spread is retained by each PCA axis.
+10. **C**. All pixel values will become zero, except for pure white pixels. Since `uint8` values range from 0-255, integer division by 255 yields 0 for everything < 255, destroying the image data.
 
 ## References & Navigation
 

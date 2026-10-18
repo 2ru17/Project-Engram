@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Problem Solving]] #[[M2]]
+**Tags:** #[[Computer Science]] #[[CCICOMP]] #[[Problem Solving]] #[[M2]]
 
 ---
 
@@ -55,76 +55,77 @@ Notice the MSB is now $1$. In an $8$-bit signed 2's complement system, $10000010
 ## Multiple Choice Questions
 
 1. Which of the following best describes data representation in the context of computer circuitry?
-- **A)** Creating graphical user interfaces for numerical applications.
-- **B)** Encoding information into binary form so it can be reliably transported and processed.
-- **C)** Utilizing hexadecimal codes specifically for network security.
-- **D)** Translating high-level programming languages into spoken languages.
+    - **A)** Creating graphical user interfaces for numerical applications.
+    - **B)** Encoding information into binary form so it can be reliably transported and processed.
+    - **C)** Utilizing hexadecimal codes specifically for network security.
+    - **D)** Translating high-level programming languages into spoken languages.
 
 2. What distinguishes unsigned integers from signed integers?
-- **A)** Unsigned integers use 2's complement, while signed integers use ASCII.
-- **B)** Unsigned integers represent only non-negative values, while signed integers can represent both positive and negative values.
-- **C)** Unsigned integers are used for floating-point calculations, while signed integers are used for memory addresses.
-- **D)** Unsigned integers require double the memory footprint of signed integers.
+    - **A)** Unsigned integers use 2's complement, while signed integers use ASCII.
+    - **B)** Unsigned integers represent only non-negative values, while signed integers can represent both positive and negative values.
+    - **C)** Unsigned integers are used for floating-point calculations, while signed integers are used for memory addresses.
+    - **D)** Unsigned integers require double the memory footprint of signed integers.
 
 3. Which encoding scheme is almost universally used by modern CPUs for signed integers?
-- **A)** Sign-and-Magnitude
-- **B)** Floating-Point notation
-- **C)** 1's complement
-- **D)** 2's complement
+    - **A)** Sign-and-Magnitude
+    - **B)** Floating-Point notation
+    - **C)** 1's complement
+    - **D)** 2's complement
 
 4. What happens when a calculation exceeds the fixed-width capacity of an integer format?
-- **A)** The CPU automatically upgrades the hardware structure.
-- **B)** The program pauses and awaits user input.
-- **C)** An overflow occurs, producing mathematically illogical values.
-- **D)** The system converts the data into a real number format.
+    - **A)** The CPU automatically upgrades the hardware structure.
+    - **B)** The program pauses and awaits user input.
+    - **C)** An overflow occurs, producing mathematically illogical values.
+    - **D)** The system converts the data into a real number format.
 
 5. How is zero extension performed on an unsigned integer?
-- **A)** By converting it to 1's complement first.
-- **B)** By padding the left side (most significant bits) with 0s.
-- **C)** By multiplying the integer by 2 repeatedly.
-- **D)** By replicating the least significant bit across all new spaces.
+    - **A)** By converting it to 1's complement first.
+    - **B)** By padding the left side (most significant bits) with 0s.
+    - **C)** By multiplying the integer by 2 repeatedly.
+    - **D)** By replicating the least significant bit across all new spaces.
 
 6. In a signed integer representation, what does a Most Significant Bit (MSB) of 1 indicate?
-- **A)** The number is extremely large.
-- **B)** The number is positive.
-- **C)** The number is negative.
-- **D)** The number has experienced an overflow error.
+    - **A)** The number is extremely large.
+    - **B)** The number is positive.
+    - **C)** The number is negative.
+    - **D)** The number has experienced an overflow error.
 
 7. How do you convert a positive binary number to its 1's complement negative equivalent?
-- **A)** By keeping the bits identical and only changing the sign bit.
-- **B)** By inverting every bit, changing 0s to 1s and 1s to 0s.
-- **C)** By inverting every bit and adding 1.
-- **D)** By shifting all bits one position to the left.
+    - **A)** By keeping the bits identical and only changing the sign bit.
+    - **B)** By inverting every bit, changing 0s to 1s and 1s to 0s.
+    - **C)** By inverting every bit and adding 1.
+    - **D)** By shifting all bits one position to the left.
 
 8. What is the formula for the maximum range of an n-bit unsigned integer?
-- **A)** 0 to 2^n - 1
-- **B)** -(2^n) to 2^n
-- **C)** 0 to 10^n
-- **D)** 2^(n-1) to 2^(n+1)
+    - **A)** 0 to 2^n - 1
+    - **B)** -(2^n) to 2^n
+    - **C)** 0 to 10^n
+    - **D)** 2^(n-1) to 2^(n+1)
 
 9. What is a key advantage of 2's complement over sign-and-magnitude representation?
-- **A)** It represents negative numbers using fewer bits.
-- **B)** It only uses one representation of zero.
-- **C)** It naturally supports decimal floating points.
-- **D)** It eliminates the possibility of integer overflow.
+    - **A)** It represents negative numbers using fewer bits.
+    - **B)** It only uses one representation of zero.
+    - **C)** It naturally supports decimal floating points.
+    - **D)** It eliminates the possibility of integer overflow.
 
 10. How is sign extension performed on a negative 2's complement signed integer?
-- **A)** By padding the left side exclusively with 0s.
-- **B)** By inverting the entire bit string.
-- **C)** By replicating the sign bit (1) to the left to expand its width.
-- **D)** By adding a parity bit at the end of the string.
+    - **A)** By padding the left side exclusively with 0s.
+    - **B)** By inverting the entire bit string.
+    - **C)** By replicating the sign bit (1) to the left to expand its width.
+    - **D)** By adding a parity bit at the end of the string.
 
 ### Answer Key & Explanations
-1. **B)** Data representation involves encoding information into binary form for reliable transport and processing.
-2. **B)** Unsigned integers represent only non-negative values, while signed integers can represent both positive and negative values.
-3. **D)** Modern CPUs almost universally use the 2's complement scheme for signed integers.
-4. **C)** Calculations exceeding fixed-width capacity result in overflow, causing illogical values.
-5. **B)** Zero extension expands an unsigned integer by padding the left side with 0s.
-6. **C)** Signed integers allocate the MSB as the sign bit: 0 for positive, 1 for negative.
-7. **B)** 1's complement involves starting with the positive unsigned binary value and inverting every bit.
-8. **A)** The range of an unsigned integer is 0 to 2^n - 1.
-9. **B)** A noted advantage is that 2's complement uses only one representation of 0, unlike sign-and-magnitude.
-10. **C)** Sign extension for negative signed integers replicates the sign bit (1) to the left.
+
+1. **B**. Data representation involves encoding information into binary form for reliable transport and processing.
+2. **B**. Unsigned integers represent only non-negative values, while signed integers can represent both positive and negative values.
+3. **D**. Modern CPUs almost universally use the 2's complement scheme for signed integers.
+4. **C**. Calculations exceeding fixed-width capacity result in overflow, causing illogical values.
+5. **B**. Zero extension expands an unsigned integer by padding the left side with 0s.
+6. **C**. Signed integers allocate the MSB as the sign bit: 0 for positive, 1 for negative.
+7. **B**. 1's complement involves starting with the positive unsigned binary value and inverting every bit.
+8. **A**. The range of an unsigned integer is 0 to 2^n - 1.
+9. **B**. A noted advantage is that 2's complement uses only one representation of 0, unlike sign-and-magnitude.
+10. **C**. Sign extension for negative signed integers replicates the sign bit (1) to the left.
 
 ## References & Navigation
 

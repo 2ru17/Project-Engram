@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Data Representation]] #[[Binary-Coded Decimal]] #[[Decimal Arithmetic]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Data Representation]] #[[Binary-Coded Decimal]] #[[Decimal Arithmetic]]
 
 ---
 
@@ -382,8 +382,6 @@ From the DPD decoding table, pattern $vwxst = 11101_2$ corresponds to:
 > 2. **Illegal States in 8421 BCD:** Nibbles in the range $1010_2 \dots 1111_2$ ($10 \dots 15$) are undefined in standard BCD. Decoders should treat these as invalid data exceptions unless assigned as sign codes ($0\text{xC}, 0\text{xD}$).
 > 3. **DPD Bit Grouping Ordering:** DPD places the primary selector bit $v$ at position index $6$ (bit $7$ from the left). Misaligning $v, w, x$ with payload variables $p, q, r, s, t, u, y$ will corrupt the entire decoded decimal triplet.
 > 4. **Self-Complementing Codes:** Excess-3 is self-complementing, meaning bitwise inversion directly yields the 9's complement. Natural 8421 BCD is **not** self-complementing, requiring explicit subtraction logic ($9 - D$).
-
----
 
 
 ## References & Navigation

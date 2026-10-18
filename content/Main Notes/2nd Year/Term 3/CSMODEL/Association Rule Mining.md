@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Association Rule Mining]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Association Rule Mining]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
@@ -19,7 +19,7 @@ status: completed
 
 ---
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### Market Basket Model A common framework for describing **many-to-many relationships** between two kinds of objects (customers ↔ items). **Goal:** Identify sets of items (*itemsets*) that are **frequently bought together** by sufficiently many customers. **Key Assumptions:**
 There is a **large set of items** (e.g., all products in a grocery store).
@@ -63,15 +63,15 @@ With `S_θ = 3`:
 
 | Itemset | Support | Frequent? |
 |---|---|---|
-| {m} | 5 | ✅ |
-| {c} | 5 | ✅ |
-| {p} | 2 | ❌ |
-| {j} | 4 | ✅ |
-| {b} | 6 | ✅ |
-| {m, b} | 4 | ✅ |
-| {c, j} | 3 | ✅ |
-| {c, b} | 4 | ✅ |
-| {j, b} | 2 | ❌ |
+| {m} | 5 |  |
+| {c} | 5 |  |
+| {p} | 2 |  |
+| {j} | 4 |  |
+| {b} | 6 |  |
+| {m, b} | 4 |  |
+| {c, j} | 3 |  |
+| {c, b} | 4 |  |
+| {j, b} | 2 |  |
 
 **Key insight:** Adding more items to an itemset can only *decrease or maintain* support — never increase it. This is the **anti-monotone property** of support.
 
@@ -110,20 +110,20 @@ For a frequent itemset of size `n`, you generate rules by picking every non-empt
 **Example:** From itemset `{1, 2, 3}` (S=2, with S_θ=2, C_θ=0.6):
 | Rule | Support (S) | Confidence (C) | Passes? |
 |---|---|---|---|
-| 1 → {2, 3} | 5 | 0.40 | ❌ |
-| 2 → {1, 3} | 7 | 0.29 | ❌ |
-| 3 → {1, 2} | 5 | 0.40 | ❌ |
-| {1,2} → 3 | 4 | 0.50 | ❌ |
-| {1,3} → 2 | 3 | **0.67** | ✅ |
-| {2,3} → 1 | 4 | 0.50 | ❌ |
+| 1 → {2, 3} | 5 | 0.40 |  |
+| 2 → {1, 3} | 7 | 0.29 |  |
+| 3 → {1, 2} | 5 | 0.40 |  |
+| {1,2} → 3 | 4 | 0.50 |  |
+| {1,3} → 2 | 3 | **0.67** |  |
+| {2,3} → 1 | 4 | 0.50 |  |
 
 From itemset `{1, 2, 5}` (notable rules):
 | Rule | Support (S) | Confidence (C) | Passes? |
 |---|---|---|---|
-| 5 → {1,2} | 2 | **1.00** | ✅ |
-| {1,5} → 2 | 2 | **1.00** | ✅ |
-| {2,5} → 1 | 2 | **1.00** | ✅ |
-| {1,2} → 5 | 4 | 0.50 | ❌ |
+| 5 → {1,2} | 2 | **1.00** |  |
+| {1,5} → 2 | 2 | **1.00** |  |
+| {2,5} → 1 | 2 | **1.00** |  |
+| {1,2} → 5 | 4 | 0.50 |  |
 
 ---
 
@@ -162,7 +162,7 @@ This allows early pruning of the search space.
 5. Generate all possible rules from all found frequent itemsets.
 6. Keep only rules with `Confidence >= C_θ`.
 
-**Candidate Generation (merge rule):** Two k-itemsets can be merged into a (k+1)-itemset **only if they share k-1 items**. Example: `[1, 2]` and `[1, 3]` → merge to `[1, 2, 3]` ✅ Example: `[1, 2]` and `[3, 4]` → cannot merge (share 0 items) ❌
+**Candidate Generation (merge rule):** Two k-itemsets can be merged into a (k+1)-itemset **only if they share k-1 items**. Example: `[1, 2]` and `[1, 3]` → merge to `[1, 2, 3]`  Example: `[1, 2]` and `[3, 4]` → cannot merge (share 0 items) 
 
 ---
 
@@ -200,7 +200,7 @@ The course notebook implements a custom `RuleMiner` class in `rule_miner.py` tha
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### Setting Up Imports
 ```python
@@ -399,7 +399,7 @@ print(grocery_rules)
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 | Measure | Formula | Range | Notes |
 |---|---|---|---|
@@ -421,7 +421,7 @@ $$\sum_{k=1}^{n-1} \binom{n}{k} = 2^n - 2$$
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
  **Confidence is NOT symmetric.** `conf(X → Y) ≠ conf(Y → X)` in general. The denominator changes (support of the antecedent). Always check which side is the antecedent.
  **Support threshold in mlxtend is relative (0–1), not an absolute count.** If you have 1000 transactions and want `min_support = 50 baskets`, pass `min_support=0.05`, not `50`.
  **High confidence does not imply a meaningful rule.** If Y appears in 95% of baskets, then `conf(anything → Y)` will be near 95% regardless. **Always check Lift**.
@@ -435,7 +435,7 @@ $$\sum_{k=1}^{n-1} \binom{n}{k} = 2^n - 2$$
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 **Q1.** Given 10 baskets and a support threshold `S_θ = 3`, itemset `{bread, butter}` appears in 4 baskets. What is true? A) {bread, butter} is NOT a frequent itemset because 4 < 10 B) {bread, butter} IS a frequent itemset because 4 >= 3 C) We cannot determine without knowing all items D) {bread, butter, jam} must also be frequent
 
@@ -490,7 +490,7 @@ return int(data[itemset].all(axis=1).sum())
 
 ---
 
-## 🔗 Quick Reference: RuleMiner vs. mlxtend
+## Quick Reference: RuleMiner vs. mlxtend
 
 | Feature | Custom `RuleMiner` | mlxtend `apriori` + `association_rules` |
 |---|---|---|
@@ -554,41 +554,42 @@ print(strong_rules[['antecedents', 'consequents', 'support', 'confidence', 'lift
 ## Multiple Choice Questions
 
 1. What does the `support` metric measure in Association Rule Mining?
-- **A)** The probability of the consequent given the antecedent
-- **B)** The frequency of an itemset appearing in the database
-- **C)** The ratio of confidence to expected confidence
-- **D)** The statistical significance of a rule
+    - **A)** The probability of the consequent given the antecedent
+    - **B)** The frequency of an itemset appearing in the database
+    - **C)** The ratio of confidence to expected confidence
+    - **D)** The statistical significance of a rule
 
 2. Which algorithm uses a candidate generation step to find frequent itemsets?
-- **A)** FP-Growth
-- **B)** Apriori
-- **C)** K-Means
-- **D)** DBSCAN
+    - **A)** FP-Growth
+    - **B)** Apriori
+    - **C)** K-Means
+    - **D)** DBSCAN
 
 3. In rule A -> B, how is `confidence` defined?
-- **A)** Support(A U B) / Support(A)
-- **B)** Support(A U B) / Support(B)
-- **C)** Support(A) * Support(B)
-- **D)** Support(A) / Support(A U B)
+    - **A)** Support(A U B) / Support(A)
+    - **B)** Support(A U B) / Support(B)
+    - **C)** Support(A) * Support(B)
+    - **D)** Support(A) / Support(A U B)
 
 4. A lift value greater than 1 indicates that:
-- **A)** The antecedent and consequent are negatively correlated
-- **B)** The antecedent and consequent are independent
-- **C)** The antecedent and consequent are positively correlated
-- **D)** The rule is invalid
+    - **A)** The antecedent and consequent are negatively correlated
+    - **B)** The antecedent and consequent are independent
+    - **C)** The antecedent and consequent are positively correlated
+    - **D)** The rule is invalid
 
 5. How does FP-Growth improve upon Apriori?
-- **A)** By generating more candidate itemsets
-- **B)** By avoiding the candidate generation phase entirely
-- **C)** By only finding association rules with 100% confidence
-- **D)** By converting all categorical variables into numeric values
+    - **A)** By generating more candidate itemsets
+    - **B)** By avoiding the candidate generation phase entirely
+    - **C)** By only finding association rules with 100% confidence
+    - **D)** By converting all categorical variables into numeric values
 
 ### Answer Key & Explanations
-1. **B)** Support is the proportion of transactions that contain the itemset.
-2. **B)** Apriori works by generating candidates of length k from length k-1.
-3. **A)** Confidence measures the probability of B given A, calculated as Support(A U B) / Support(A).
-4. **C)** Lift > 1 implies that the occurrence of A increases the probability of B.
-5. **B)** FP-Growth uses an FP-tree structure to find frequent itemsets without candidate generation.
+
+1. **B**. Support is the proportion of transactions that contain the itemset.
+2. **B**. Apriori works by generating candidates of length k from length k-1.
+3. **A**. Confidence measures the probability of B given A, calculated as Support(A U B) / Support(A).
+4. **C**. Lift > 1 implies that the occurrence of A increases the probability of B.
+5. **B**. FP-Growth uses an FP-tree structure to find frequent itemsets without candidate generation.
 
 ## References & Navigation
 

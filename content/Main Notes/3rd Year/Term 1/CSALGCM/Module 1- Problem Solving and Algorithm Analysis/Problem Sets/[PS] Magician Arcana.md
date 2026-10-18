@@ -13,7 +13,7 @@ status: complete
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSALGCM]] #[[Problem Sets]] #[[HackerRank]] #[[Algorithms]]
+**Tags:** #[[CSALGCM]] #[[Problem Sets]] #[[HackerRank]] #[[Algorithms]]
 
 ---
 
@@ -21,14 +21,14 @@ A set of HackerRank problems covering core data structures: BFS graphs, linked l
 
 | # | Problem | Domain | Difficulty | Status |
 |---|---------|--------|------------|--------|
-| 01 | [[01 - Breadth First Search Shortest Reach\|BFS: Shortest Reach]] | Graphs | Medium | ✅ |
-| 02 | [[02 - Cycle Detection\|Cycle Detection]] | Linked Lists | Medium | ✅ |
-| 03 | [[03 - Find The Running Median\|Find the Running Median]] | Heaps | Hard | ✅ |
-| 04 | [[04 - Is This a Binary Search Tree\|Is This a BST?]] | Trees | Medium | ✅ |
-| 05 | [[05 - Queue Using Two Stacks\|Queue Using Two Stacks]] | Queues | Medium | ✅ |
-| 06 | [[06 - Sherlock and Array\|Sherlock and Array]] | Arrays | Easy | ✅ |
-| 07 | [[07 - Sparse Arrays\|Sparse Arrays]] | Strings | Medium | ✅ |
-| 08 | [[08 - Tree Preorder Traversal\|Tree: Preorder Traversal]] | Trees | Easy | ✅ |
+| 01 | [[01 - Breadth First Search Shortest Reach\|BFS: Shortest Reach]] | Graphs | Medium |  |
+| 02 | [[02 - Cycle Detection\|Cycle Detection]] | Linked Lists | Medium |  |
+| 03 | [[03 - Find The Running Median\|Find the Running Median]] | Heaps | Hard |  |
+| 04 | [[04 - Is This a Binary Search Tree\|Is This a BST?]] | Trees | Medium |  |
+| 05 | [[05 - Queue Using Two Stacks\|Queue Using Two Stacks]] | Queues | Medium |  |
+| 06 | [[06 - Sherlock and Array\|Sherlock and Array]] | Arrays | Easy |  |
+| 07 | [[07 - Sparse Arrays\|Sparse Arrays]] | Strings | Medium |  |
+| 08 | [[08 - Tree Preorder Traversal\|Tree: Preorder Traversal]] | Trees | Easy |  |
 
 ## References & Navigation
 - **Previous Problem Set:** [[[PS] Fool Arcana]]

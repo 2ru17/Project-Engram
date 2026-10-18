@@ -203,81 +203,77 @@ Hence, postage $k+1$ can also be formed, completing the proof by strong inductio
 ## Multiple Choice Questions
 
 1. Which foundational axiom of the integers guarantees the mathematical validity of the Principle of Mathematical Induction?
-- **A)** The Axiom of Choice
-- **B)** The Well-Ordering Property of positive integers
-- **C)** The Continuum Hypothesis
-- **D)** The Fundamental Theorem of Arithmetic
+    - **A)** The Axiom of Choice
+    - **B)** The Well-Ordering Property of positive integers
+    - **C)** The Continuum Hypothesis
+    - **D)** The Fundamental Theorem of Arithmetic
 
 2. In an inductive proof, why is proving the Basis Step strictly required?
-- **A)** Because without a true starting base, the implication $P(k) \implies P(k+1)$ could be vacuously true for false statements (like $n = n + 1$).
-- **B)** To determine the upper bound of the integers.
-- **C)** To ensure that the integers are countable.
-- **D)** To convert the proof into a deductive syllogism.
+    - **A)** Because without a true starting base, the implication $P(k) \implies P(k+1)$ could be vacuously true for false statements (like $n = n + 1$).
+    - **B)** To determine the upper bound of the integers.
+    - **C)** To ensure that the integers are countable.
+    - **D)** To convert the proof into a deductive syllogism.
 
 3. When proving the postage problem for $n \ge 12$ using 4-cent and 5-cent stamps via strong induction, why are four base cases ($12, 13, 14, 15$) required?
-- **A)** Because $4 + 5 = 9 < 12$.
-- **B)** Because the inductive step builds upon $(k+1) - 4 = k - 3$, requiring four consecutive valid cases to initiate the leap.
-- **C)** Because 15 is a multiple of 5.
-- **D)** Because strong induction always requires four times as many base cases as weak induction.
+    - **A)** Because $4 + 5 = 9 < 12$.
+    - **B)** Because the inductive step builds upon $(k+1) - 4 = k - 3$, requiring four consecutive valid cases to initiate the leap.
+    - **C)** Because 15 is a multiple of 5.
+    - **D)** Because strong induction always requires four times as many base cases as weak induction.
 
 4. When proving an inequality $P(n): 2^n > n^2$, what is the smallest integer base case for which the proposition is true?
-- **A)** $n = 1$
-- **B)** $n = 2$
-- **C)** $n = 4$
-- **D)** $n = 5$
+    - **A)** $n = 1$
+    - **B)** $n = 2$
+    - **C)** $n = 4$
+    - **D)** $n = 5$
 
 5. What is the fundamental difference between Weak Induction and Strong Induction?
-- **A)** Weak induction only applies to summations, whereas strong induction applies to inequalities.
-- **B)** Strong induction assumes $P(j)$ is true for all $n_0 \le j \le k$ to prove $P(k+1)$, whereas weak induction assumes only $P(k)$.
-- **C)** Strong induction can prove unprovable theorems.
-- **D)** Weak induction does not require a basis step.
+    - **A)** Weak induction only applies to summations, whereas strong induction applies to inequalities.
+    - **B)** Strong induction assumes $P(j)$ is true for all $n_0 \le j \le k$ to prove $P(k+1)$, whereas weak induction assumes only $P(k)$.
+    - **C)** Strong induction can prove unprovable theorems.
+    - **D)** Weak induction does not require a basis step.
 
 6. In proving that $3 \mid (n^3 + 2n)$, how was $(k+1)^3 + 2(k+1)$ algebraically partitioned?
-- **A)** Into $(k^3 + 2k) + 3(k^2 + k + 1)$, isolating the inductive hypothesis.
-- **B)** By dividing the polynomial by $(k+1)$.
-- **C)** By setting $k = 0$.
-- **D)** By factoring out $k^3$.
+    - **A)** Into $(k^3 + 2k) + 3(k^2 + k + 1)$, isolating the inductive hypothesis.
+    - **B)** By dividing the polynomial by $(k+1)$.
+    - **C)** By setting $k = 0$.
+    - **D)** By factoring out $k^3$.
 
 7. If a proposition $P(n)$ is proven for $P(1)$ and $P(k) \implies P(k+2)$ is proven, for which set of integers is $P(n)$ proven true?
-- **A)** All positive integers $\mathbb{Z}^+$
-- **B)** All odd positive integers
-- **C)** All even positive integers
-- **D)** Only $n = 1$ and $n = 3$
+    - **A)** All positive integers $\mathbb{Z}^+$
+    - **B)** All odd positive integers
+    - **C)** All even positive integers
+    - **D)** Only $n = 1$ and $n = 3$
 
 8. In the sum of squares proof, what was the common binomial factor extracted from $\frac{k(k+1)(2k+1)}{6} + (k+1)^2$?
-- **A)** $k$
-- **B)** $2k+1$
-- **C)** $k+1$
-- **D)** $k+2$
+    - **A)** $k$
+    - **B)** $2k+1$
+    - **C)** $k+1$
+    - **D)** $k+2$
 
 9. What fallacy occurs if one assumes $P(k+1)$ is true at the beginning of the Inductive Step?
-- **A)** Begging the question (Circular Reasoning / Petitio Principii)
-- **B)** False dilemma
-- **C)** Straw man fallacy
-- **D)** Modus tollens violation
+    - **A)** Begging the question (Circular Reasoning / Petitio Principii)
+    - **B)** False dilemma
+    - **C)** Straw man fallacy
+    - **D)** Modus tollens violation
 
 10. Are the Principle of Mathematical Induction and the Principle of Strong Mathematical Induction mathematically equivalent?
-- **A)** No, strong induction is strictly more powerful.
-- **B)** Yes, any statement provable by strong induction can be restructured and proven by weak induction.
-- **C)** No, weak induction can only prove finite sets.
-- **D)** Yes, but only when $n_0 = 0$.
-
----
+    - **A)** No, strong induction is strictly more powerful.
+    - **B)** Yes, any statement provable by strong induction can be restructured and proven by weak induction.
+    - **C)** No, weak induction can only prove finite sets.
+    - **D)** Yes, but only when $n_0 = 0$.
 
 ### Answer Key & Explanations
 
-1. **B** - The Well-Ordering Property states that every non-empty set of positive integers has a minimum element; if the set of counterexamples were non-empty, its least element would contradict the inductive step.
-2. **A** - The implication $P(k) \implies P(k+1)$ is a conditional rule. For example, $k = k + 1 \implies k+1 = k+2$ is algebraically valid, but false for all integers because the base case $1 = 2$ fails.
-3. **B** - Because the step reduces $k+1$ to $(k+1) - 4$, the hypothesis must reach back 4 steps, necessitating 4 independent anchors ($12, 13, 14, 15$).
-4. **D** - For $n=1$, $2^1 > 1^2$ (holds); for $n=2$, $4 > 4$ (fails); for $n=3$, $8 > 9$ (fails); for $n=4$, $16 > 16$ (fails); for $n=5$, $32 > 25$ (holds and persists $\forall n \ge 5$).
-5. **B** - Strong induction expands the inductive hypothesis to cover all preceding cases $\bigwedge_{j=n_0}^k P(j)$.
-6. **A** - Regrouping directly isolates $(k^3 + 2k) = 3m$, allowing 3 to be factored out from the entire expression.
-7. **B** - Starting at $P(1)$ with step size 2 proves the proposition for $1, 3, 5, 7, \dots$ (odd integers only).
-8. **C** - Factoring $(k+1)$ avoids expanding cubic polynomials and yields the required $(k+1)(k+2)(2k+3)/6$ structure immediately.
-9. **A** - Assuming the conclusion $P(k+1)$ to prove $P(k+1)$ is circular reasoning. The hypothesis must assume $P(k)$ only.
-10. **B** - By defining a compound predicate $Q(n) = \bigwedge_{j=n_0}^n P(j)$, strong induction on $P$ maps directly to weak induction on $Q$.
-
----
+1. **B**. The Well-Ordering Property states that every non-empty set of positive integers has a minimum element; if the set of counterexamples were non-empty, its least element would contradict the inductive step.
+2. **A**. The implication $P(k) \implies P(k+1)$ is a conditional rule. For example, $k = k + 1 \implies k+1 = k+2$ is algebraically valid, but false for all integers because the base case $1 = 2$ fails.
+3. **B**. Because the step reduces $k+1$ to $(k+1) - 4$, the hypothesis must reach back 4 steps, necessitating 4 independent anchors ($12, 13, 14, 15$).
+4. **D**. For $n=1$, $2^1 > 1^2$ (holds); for $n=2$, $4 > 4$ (fails); for $n=3$, $8 > 9$ (fails); for $n=4$, $16 > 16$ (fails); for $n=5$, $32 > 25$ (holds and persists $\forall n \ge 5$).
+5. **B**. Strong induction expands the inductive hypothesis to cover all preceding cases $\bigwedge_{j=n_0}^k P(j)$.
+6. **A**. Regrouping directly isolates $(k^3 + 2k) = 3m$, allowing 3 to be factored out from the entire expression.
+7. **B**. Starting at $P(1)$ with step size 2 proves the proposition for $1, 3, 5, 7, \dots$ (odd integers only).
+8. **C**. Factoring $(k+1)$ avoids expanding cubic polynomials and yields the required $(k+1)(k+2)(2k+3)/6$ structure immediately.
+9. **A**. Assuming the conclusion $P(k+1)$ to prove $P(k+1)$ is circular reasoning. The hypothesis must assume $P(k)$ only.
+10. **B**. By defining a compound predicate $Q(n) = \bigwedge_{j=n_0}^n P(j)$, strong induction on $P$ maps directly to weak induction on $Q$.
 
 ## References & Navigation
 

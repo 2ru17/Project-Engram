@@ -11,111 +11,70 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Counting Techniques]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Counting Techniques]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Counting Techniques**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+**Combinatorial Counting Techniques** systematically determine the cardinality $|S|$ and $|E|$ of finite sample spaces without listing every outcome individually. Choosing the right formula depends on two classification questions: **(1) Does order matter?** and **(2) Is sampling done with or without replacement?**
 
 ## Key Definitions
-- **Counting Techniques**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Counting Techniques** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+| Order Matters? | With Replacement | Without Replacement |
+| :--- | :---: | :---: |
+| **Yes (Ordered Tuple / Permutation)** | $n^r$ | $P(n, r) = \frac{n!}{(n-r)!}$ |
+| **No (Unordered Subset / Combination)** | $\binom{n + r - 1}{r}$ | $\binom{n}{r} = \frac{n!}{r!(n-r)!}$ |
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+- **Multinomial Coefficient (Permutations with Identical Items):** The number of distinct arrangements of $n$ items consisting of $n_1$ identical of type 1, ..., $n_k$ identical of type $k$ is $\frac{n!}{n_1! n_2! \cdots n_k!}$.
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Counting Techniques**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+## Worked Example
 
-By following these structured steps, errors and common pitfalls can be minimized.
+**Problem:** How many distinct strings can be formed by rearranging all the letters of the word `MISSISSIPPI`?
 
-## Summary & Key Takeaways
-- **Counting Techniques** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- Total letters $n = 11$: $1\text{ M}$, $4\text{ I}$'s, $4\text{ S}$'s, $2\text{ P}$'s.
+- Distinct arrangements $= \frac{11!}{1! \, 4! \, 4! \, 2!} = \frac{39,916,800}{1 \times 24 \times 24 \times 2} = \frac{39,916,800}{1152} = 34,650$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. How many distinct $4$-digit PIN codes can be formed using digits $0$–$9$ if digits **may be repeated** (order matters, with replacement)?
+    - **A)** $P(10, 4) = 5040$
+    - **B)** $10^4 = 10,000$
+    - **C)** $\binom{10}{4} = 210$
+    - **D)** $4^{10} = 1,048,576$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Which formula counts the number of ways to arrange $n$ items in a circle (circular permutations, where rotations are considered identical)?
+    - **A)** $n!$
+    - **B)** $(n - 1)!$
+    - **C)** $\frac{n!}{2}$
+    - **D)** $n^2$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. How many distinct permutations can be formed using all $6$ letters of the word `BANANA`?
+    - **A)** $720$
+    - **B)** $120$
+    - **C)** $60$
+    - **D)** $36$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. When selecting $r$ items from $n$ distinct items **without replacement**, how are $P(n, r)$ and $\binom{n}{r}$ related?
+    - **A)** $P(n, r) = r! \cdot \binom{n}{r}$
+    - **B)** $\binom{n}{r} = r! \cdot P(n, r)$
+    - **C)** $P(n, r) = \binom{n}{r} + r!$
+    - **D)** They are always equal.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. A lottery draws $6$ numbers from $1$ to $45$ **without replacement**, and the order in which the balls are drawn does NOT matter. How many distinct lottery combinations exist?
+    - **A)** $45^6$
+    - **B)** $P(45, 6)$
+    - **C)** $\binom{45}{6} = 8,145,060$
+    - **D)** $6! \times 45$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Each of the $4$ positions independently has $10$ choices ($0$–$9$), yielding $10 \times 10 \times 10 \times 10 = 10^4 = 10,000$.
+2. **B**. Fixing one element's position breaks rotational symmetry ($n$ equivalent rotations per linear arrangement), leaving $(n - 1)!$ distinct circular arrangements.
+3. **C**. `BANANA` has $n = 6$ letters with $3$ `A`s, $2$ `N`s, and $1$ `B`. The multinomial formula gives $\frac{6!}{3! \, 2! \, 1!} = \frac{720}{6 \times 2 \times 1} = 60$.
+4. **A**. Every unordered $r$-combination can be ordered in $r!$ ways to form an ordered $r$-permutation, so $P(n, r) = r! \binom{n}{r}$.
+5. **C**. Since selection is without replacement and order does not matter, the number of outcomes is $\binom{45}{6} = 8,145,060$.
 
 ## References & Navigation
 

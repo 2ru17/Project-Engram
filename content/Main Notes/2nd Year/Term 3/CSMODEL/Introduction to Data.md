@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMODEL]] #[[Conceptual]] #[[Introduction to Data]]
+**Tags:** #[[Computer Science]] #[[CSMODEL]] #[[Conceptual]] #[[Introduction to Data]]
 
 ---
 
@@ -88,78 +88,78 @@ print(df.describe(include='all'))
 
 ## Multiple Choice Questions
 
-**1.** Which of the following data formats is considered Semi-Structured?
-- **A)** A PostgreSQL relational database table
-- **B)** A raw MP4 video file
-- **C)** A JSON file mapping hierarchical configuration settings
-- **D)** A pure text document containing a narrative essay
+1. Which of the following data formats is considered Semi-Structured?
+    - **A)** A PostgreSQL relational database table
+    - **B)** A raw MP4 video file
+    - **C)** A JSON file mapping hierarchical configuration settings
+    - **D)** A pure text document containing a narrative essay
 
-**2.** A survey asks respondents to indicate their socioeconomic status as "Lower Class," "Middle Class," or "Upper Class." What level of measurement does this variable represent?
-- **A)** Nominal
-- **B)** Ordinal
-- **C)** Interval
-- **D)** Ratio
+2. A survey asks respondents to indicate their socioeconomic status as "Lower Class," "Middle Class," or "Upper Class." What level of measurement does this variable represent?
+    - **A)** Nominal
+    - **B)** Ordinal
+    - **C)** Interval
+    - **D)** Ratio
 
-**3.** What is the defining characteristic that separates Interval data from Ratio data?
-- **A)** Interval data possesses a true absolute zero point.
-- **B)** Ratio data possesses a true absolute zero point, whereas Interval data has an arbitrary zero.
-- **C)** Interval data does not possess equal mathematical distances between ranks.
-- **D)** Ratio data can only consist of whole integers.
+3. What is the defining characteristic that separates Interval data from Ratio data?
+    - **A)** Interval data possesses a true absolute zero point.
+    - **B)** Ratio data possesses a true absolute zero point, whereas Interval data has an arbitrary zero.
+    - **C)** Interval data does not possess equal mathematical distances between ranks.
+    - **D)** Ratio data can only consist of whole integers.
 
-**4.** A pharmaceutical company tests a new vaccine. Subjects are randomly assigned to receive the vaccine or a saline injection. The researchers observing the outcomes do not know who received which. What kind of study is this?
-- **A)** Stratified Observational Study
-- **B)** Single-Blind Observational Study
-- **C)** Double-Blind Randomized Controlled Trial
-- **D)** Cluster Experiment
+4. A pharmaceutical company tests a new vaccine. Subjects are randomly assigned to receive the vaccine or a saline injection. The researchers observing the outcomes do not know who received which. What kind of study is this?
+    - **A)** Stratified Observational Study
+    - **B)** Single-Blind Observational Study
+    - **C)** Double-Blind Randomized Controlled Trial
+    - **D)** Cluster Experiment
 
-**5.** If a researcher calculates the average age of a specific sample of 100 individuals, the resulting numerical value is formally called a:
-- **A)** Population Parameter
-- **B)** Sample Statistic
-- **C)** Standard Error
-- **D)** Confidence Interval
+5. If a researcher calculates the average age of a specific sample of 100 individuals, the resulting numerical value is formally called a:
+    - **A)** Population Parameter
+    - **B)** Sample Statistic
+    - **C)** Standard Error
+    - **D)** Confidence Interval
 
-**6.** A university wishes to survey its student body. It randomly selects 5 entire college departments and surveys every single student enrolled in those 5 departments. Which sampling method was utilized?
-- **A)** Stratified Sampling
-- **B)** Simple Random Sampling
-- **C)** Cluster Sampling
-- **D)** Systematic Sampling
+6. A university wishes to survey its student body. It randomly selects 5 entire college departments and surveys every single student enrolled in those 5 departments. Which sampling method was utilized?
+    - **A)** Stratified Sampling
+    - **B)** Simple Random Sampling
+    - **C)** Cluster Sampling
+    - **D)** Systematic Sampling
 
-**7.** Which sampling method involves dividing the population into homogeneous subgroups and taking a random sample from *every* subgroup?
-- **A)** Systematic Sampling
-- **B)** Cluster Sampling
-- **C)** Stratified Sampling
-- **D)** Convenience Sampling
+7. Which sampling method involves dividing the population into homogeneous subgroups and taking a random sample from *every* subgroup?
+    - **A)** Systematic Sampling
+    - **B)** Cluster Sampling
+    - **C)** Stratified Sampling
+    - **D)** Convenience Sampling
 
-**8.** What is a key limitation of Observational Studies compared to Randomized Controlled Trials?
-- **A)** Observational studies cannot demonstrate correlations.
-- **B)** Observational studies are generally more expensive and invasive.
-- **C)** Observational studies cannot definitively establish causal relationships due to unmeasured confounders.
-- **D)** Observational studies can only utilize nominal data.
+8. What is a key limitation of Observational Studies compared to Randomized Controlled Trials?
+    - **A)** Observational studies cannot demonstrate correlations.
+    - **B)** Observational studies are generally more expensive and invasive.
+    - **C)** Observational studies cannot definitively establish causal relationships due to unmeasured confounders.
+    - **D)** Observational studies can only utilize nominal data.
 
-**9.** An analyst has a dataset of calendar years (e.g., 1999, 2005, 2021). Which measure of central tendency is statistically valid for this Interval-level data?
-- **A)** Arithmetic Mean only
-- **B)** Arithmetic Mean, Median, and Mode
-- **C)** Mode only
-- **D)** Geometric Mean
+9. An analyst has a dataset of calendar years (e.g., 1999, 2005, 2021). Which measure of central tendency is statistically valid for this Interval-level data?
+    - **A)** Arithmetic Mean only
+    - **B)** Arithmetic Mean, Median, and Mode
+    - **C)** Mode only
+    - **D)** Geometric Mean
 
-**10.** Which of the following pandas methods is most appropriate for counting the exact frequencies of distinct nominal categories in a DataFrame column?
-- **A)** `df.describe()`
-- **B)** `df['col'].nunique()`
-- **C)** `df['col'].value_counts()`
-- **D)** `df.info()`
+10. Which of the following pandas methods is most appropriate for counting the exact frequencies of distinct nominal categories in a DataFrame column?
+    - **A)** `df.describe()`
+    - **B)** `df['col'].nunique()`
+    - **C)** `df['col'].value_counts()`
+    - **D)** `df.info()`
 
 ### Answer Key & Explanations
 
-1. **C** - JSON files utilize structural markers (keys) to organize data hierarchies, which defines them as semi-structured, unlike strict tabular DBs or fully unstructured media files.
-2. **B** - Socioeconomic classes possess a meaningful natural order, but the exact mathematical distance between "Lower" and "Middle" is undefined, making it Ordinal.
-3. **B** - Ratio data has an absolute zero (meaning the total absence of the quantity, like $0\text{ kg}$), whereas Interval data has an arbitrary zero (like $0^\circ\text{C}$).
-4. **C** - It involves random assignment to treatment/control (making it an RCT), and the researchers evaluating the outcomes are blind to the assignments, making it double-blind.
-5. **B** - Any numerical summary derived from a *sample* is termed a statistic (represented by Latin letters like $\bar{x}$).
-6. **C** - Cluster sampling selects entire intact heterogeneous groups (departments) and surveys everyone within them, contrasting with stratified sampling which pulls a few individuals from every group.
-7. **C** - Stratified sampling ensures representation by breaking the population into homogeneous strata and sampling individuals from all of them.
-8. **C** - Due to the lack of random assignment and control over variables, observational studies are vulnerable to confounding factors, meaning they can only prove association, not causation.
-9. **B** - For Interval data, differences are mathematically meaningful, making it valid to calculate the Mean, Median, and Mode. Multiplication/division operations (like Geometric Mean) remain invalid due to the lack of a true zero.
-10. **C** - `value_counts()` directly tallies and returns the frequency count for each distinct category in a pandas Series.
+1. **C**. JSON files utilize structural markers (keys) to organize data hierarchies, which defines them as semi-structured, unlike strict tabular DBs or fully unstructured media files.
+2. **B**. Socioeconomic classes possess a meaningful natural order, but the exact mathematical distance between "Lower" and "Middle" is undefined, making it Ordinal.
+3. **B**. Ratio data has an absolute zero (meaning the total absence of the quantity, like $0\text{ kg}$), whereas Interval data has an arbitrary zero (like $0^\circ\text{C}$).
+4. **C**. It involves random assignment to treatment/control (making it an RCT), and the researchers evaluating the outcomes are blind to the assignments, making it double-blind.
+5. **B**. Any numerical summary derived from a *sample* is termed a statistic (represented by Latin letters like $\bar{x}$).
+6. **C**. Cluster sampling selects entire intact heterogeneous groups (departments) and surveys everyone within them, contrasting with stratified sampling which pulls a few individuals from every group.
+7. **C**. Stratified sampling ensures representation by breaking the population into homogeneous strata and sampling individuals from all of them.
+8. **C**. Due to the lack of random assignment and control over variables, observational studies are vulnerable to confounding factors, meaning they can only prove association, not causation.
+9. **B**. For Interval data, differences are mathematically meaningful, making it valid to calculate the Mean, Median, and Mode. Multiplication/division operations (like Geometric Mean) remain invalid due to the lack of a true zero.
+10. **C**. `value_counts()` directly tallies and returns the frequency count for each distinct category in a pandas Series.
 
 ## References & Navigation
 

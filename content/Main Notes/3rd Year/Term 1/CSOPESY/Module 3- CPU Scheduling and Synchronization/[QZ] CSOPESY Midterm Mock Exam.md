@@ -34,201 +34,7 @@ flowchart LR
 
 ---
 
-## Part I: Multiple Choice (25 items, 1 pt each)
-
-**Instructions:** Choose the letter of the best answer. Write only the letter of your answer.
-
----
-
-**1.** An operating system is best described as which of the following from the System View perspective?
-
-- **A)** A user-friendly GUI framework that simplifies user tasks
-- **B)** A resource allocator and control program managing CPU, memory, and hardware
-- **C)** A compiler that translates high-level code into machine instructions
-- **D)** A firmware program embedded directly in the CPU die
-
-**2.** Hardware provides a mechanism to prevent user programs from executing instructions like halting the CPU or directly accessing another process's memory. What hardware feature enables this protection?
-
-- **A)** Direct Memory Access Controller
-- **B)** Cache Hit Ratio register
-- **C)** Dual-Mode Operation with a Mode Bit
-- **D)** Interrupt Vector Table
-
-**3.** A system checks its L1 cache first. On a miss, it then accesses main memory. Given $H = 0.95$, $T_c = 4$ ns, and $T_m = 200$ ns, compute the Effective Access Time (EAT) using the sequential access model.
-
-$$EAT = H \times T_c + (1-H) \times (T_c + T_m)$$
-
-- **A)** 4.04 ns
-- **B)** 14.0 ns
-- **C)** 21.0 ns
-- **D)** 180.2 ns
-
-**4.** A **Zombie process** differs from an **Orphan process** in that:
-
-- **A)** A zombie has a living parent that has not yet called `wait()`; an orphan's parent has already terminated
-- **B)** A zombie's parent has terminated; an orphan is waiting for I/O to complete
-- **C)** Zombies consume CPU cycles; orphans are immediately terminated by the OS
-- **D)** Orphans always trigger cascading termination; zombies do not
-
-**5.** A device controller for a high-speed NVMe SSD transfers 1 MB of data to RAM. The OS uses DMA. How many CPU interrupts does this transfer generate?
-
-- **A)** One interrupt per byte: 1,048,576 interrupts
-- **B)** One interrupt per 4 KB page: 256 interrupts
-- **C)** Exactly one interrupt upon completion of the entire 1 MB block transfer
-- **D)** Zero interrupts — DMA operates entirely without CPU involvement
-
-**6.** A `read()` call on a socket returns immediately with `EAGAIN`. The calling thread continues executing other code and re-checks the socket after completing its UI update. Which I/O model does this exemplify?
-
-- **A)** Synchronous Blocking I/O
-- **B)** Asynchronous I/O (kernel-driven notification)
-- **C)** Direct Memory Access
-- **D)** Synchronous Non-Blocking I/O
-
-**7.** Which of the following is a User Service provided by the OS, as opposed to a System Efficiency Service?
-
-- **A)** Resource Allocation and Accounting
-- **B)** Protection and Security enforcement
-- **C)** Program Execution — loading code into memory and running it
-- **D)** Tracking CPU usage across users for billing
-
-**8.** In the program build pipeline — Source → Compiler → Assembler → **[X]** → Loader — what does component **[X]** do?
-
-- **A)** Translates machine code into assembly mnemonics for debugging
-- **B)** Combines relocatable object files and library code into a single binary executable, resolving all cross-file symbol references
-- **C)** Copies the final binary from disk into RAM and sets up the process context
-- **D)** Switches the CPU from User Mode to Kernel Mode for program startup
-
-**9.** A Monolithic Kernel has a buggy device driver for a new graphics card. What is the most likely system-level consequence?
-
-- **A)** Only the graphics driver process crashes; all other kernel services continue
-- **B)** The graphics card is silently disabled and the system switches to software rendering
-- **C)** The kernel panic brings down the entire operating system
-- **D)** The driver is automatically offloaded to user space to prevent contamination
-
-**10.** According to Amdahl's Law, an application has 20% sequential code ($S = 0.20$) and 80% parallelizable code. With $N = 8$ processors, what is the maximum achievable speedup?
-
-$$Speedup \le \frac{1}{S + \frac{1-S}{N}}$$
-
-- **A)** 3.08x
-- **B)** 4.00x
-- **C)** 5.00x
-- **D)** 8.00x
-
-**11.** Thread A and Thread B both share a global integer `total`. Both threads read `total = 100`, increment it, and write back. After both complete, `total = 101` instead of 102. This is caused by:
-
-- **A)** A deadlock between the two threads competing for `total`
-- **B)** A race condition caused by unprotected concurrent read-modify-write access
-- **C)** Priority inversion causing Thread B to execute before Thread A
-- **D)** A stack overflow caused by simultaneous function calls
-
-**12.** A thread calls `wait(S)` on a semaphore $S$ initialized to 0. What happens to the calling thread?
-
-- **A)** It proceeds immediately since $S = 0$ means the resource is available
-- **B)** It signals other threads to run, freeing the CPU
-- **C)** It blocks and is placed in the semaphore's wait queue until `signal(S)` is called
-- **D)** It resets $S$ to 1 and continues
-
-**13.** Process P1 holds Lock A and requests Lock B. Process P2 holds Lock B and requests Lock A. Both are suspended, waiting indefinitely. Which necessary condition for deadlock does this most directly demonstrate?
-
-- **A)** Mutual Exclusion
-- **B)** No Preemption
-- **C)** Hold and Wait
-- **D)** Circular Wait
-
-**14.** A Round Robin scheduler uses a very small time quantum (e.g., 1ms). What is the primary performance concern?
-
-- **A)** Low-priority processes will starve because they never receive the CPU
-- **B)** The algorithm degrades to FCFS behavior
-- **C)** Excessive context switching overhead consumes a significant fraction of CPU time
-- **D)** The algorithm can no longer handle preemption
-
-**15.** Which CPU scheduling criterion measures the total elapsed time from when a process is submitted to when it completes — including all waiting and execution time?
-
-- **A)** Response Time
-- **B)** Waiting Time
-- **C)** Turnaround Time
-- **D)** Dispatch Latency
-
-**16.** Under SRTF (Shortest Remaining Time First), which process will be selected next from the ready queue at the given snapshot?
-
-| Process | Remaining Burst |
-| :------ | :-----------: |
-| P1      | 6 ms          |
-| P2      | 2 ms          |
-| P3      | 4 ms          |
-| P4      | 9 ms          |
-
-- **A)** P1 — arrived first
-- **B)** P4 — has the most work remaining
-- **C)** P2 — has the shortest remaining burst
-- **D)** P3 — has the median burst, balanced approach
-
-**17.** A POSIX thread is created with `pthread_create()`. The main thread then calls `pthread_join()`. What does `pthread_join()` do?
-
-- **A)** Creates a copy of the specified thread in a new memory segment
-- **B)** Cancels the specified thread asynchronously and reclaims its stack
-- **C)** Blocks the calling thread until the specified thread terminates, then reclaims its resources
-- **D)** Switches the CPU from the specified thread to the calling thread immediately
-
-**18.** Memory-Mapped I/O means that:
-
-- **A)** The CPU uses special `IN` and `OUT` assembly instructions to communicate with devices
-- **B)** Device controller registers are assigned physical memory addresses; the CPU reads/writes to them like regular RAM
-- **C)** The DMA controller maps device buffers into the process's virtual address space
-- **D)** The OS maps open files into a process's address space as if they were arrays in memory
-
-**19.** A web browser uses one thread for the UI, one for network requests, and one for JavaScript execution — all within the same browser process. If the network thread blocks waiting for a server response, what happens in a **One-to-One** threading model?
-
-- **A)** The entire process blocks because all threads share one kernel thread
-- **B)** Only the network thread blocks; the UI and JS threads continue running on other cores
-- **C)** The kernel terminates the blocked thread and spawns a replacement
-- **D)** The Many-to-Many model automatically reassigns the blocked thread's kernel thread
-
-**20.** A spooler daemon intercepts print jobs from multiple applications, queues them to disk, and sends them to the printer one at a time. Which kernel I/O service is this?
-
-- **A)** Buffering
-- **B)** Caching
-- **C)** Scheduling
-- **D)** Spooling
-
-**21.** The process of saving a currently running process's register state and program counter into its PCB, then loading the next process's PCB to resume it, is called:
-
-- **A)** Process Forking
-- **B)** Context Switching
-- **C)** Memory Swapping
-- **D)** Logical Address Relocation
-
-**22.** In Peterson's Solution for the Critical Section Problem, two shared variables are used: `flag[2]` and `turn`. What does setting `flag[i] = true` signify?
-
-- **A)** Process $i$ is currently inside the critical section
-- **B)** Process $i$ is signaling that the other process should enter first
-- **C)** Process $i$ declares its intention to enter the critical section
-- **D)** Process $i$ has completed and released the critical section
-
-**23.** Which of the following best describes **Thread-Local Storage (TLS)**?
-
-- **A)** A pool of pre-allocated threads shared across the entire OS
-- **B)** Variables declared inside a function, shared between all threads calling that function
-- **C)** A per-thread data area where each thread has its own private copy of specified variables
-- **D)** A kernel buffer storing thread control blocks for context switching
-
-**24.** The `fork()` system call returns a different value to the parent and child process. What does `fork()` return to the **parent** process?
-
-- **A)** 0 — indicating it is now the child
-- **B)** -1 — indicating an error in all successful forks
-- **C)** The PID of the newly created child process
-- **D)** The PPID (parent PID) of the calling process
-
-**25.** Non-preemptive Priority Scheduling without aging can result in which of the following problems?
-
-- **A)** The Convoy Effect — short jobs wait behind long jobs
-- **B)** Starvation — low-priority processes may never receive the CPU
-- **C)** Race Conditions — multiple processes access the same priority queue simultaneously
-- **D)** Thrashing — excessive context switching due to too many equal-priority processes
-
----
-
-## Part II: Problem Solving (35 points)
+## Part I: Problem Solving (35 points)
 
 ---
 
@@ -288,66 +94,9 @@ $$Speedup \le \frac{1}{S + \frac{1-S}{N}} \qquad \text{where } S = \text{sequent
 
 ---
 
-## Answer Key — Part I
-
-**1. B)** From the System View, the OS is a resource allocator (managing CPU, memory, I/O) and control program (preventing errors). The User View (A) focuses on convenience. Compilers (C) and CPU firmware (D) are separate components.
-
-**2. C)** Dual-Mode Operation (mode bit) is the hardware feature that distinguishes User Mode (bit=1, restricted) from Kernel Mode (bit=0, privileged). Privileged instructions like halting the CPU can only execute in Kernel Mode. DMA (A) handles data transfers; the IVT (D) routes interrupts.
-
-**3. C)** $EAT = 0.95(4) + 0.05(4 + 200) = 3.8 + 0.05(204) = 3.8 + 10.2 = \mathbf{14.0}$ ns.
-
-Wait — let me recompute: $0.95 \times 4 = 3.8$; $0.05 \times 204 = 10.2$; total $= 14.0$ ns. **Answer: B) 14.0 ns**.
-
-**4. A)** A zombie process has terminated but retains its process table entry because its living parent hasn't called `wait()` yet. An orphan's parent has already terminated — the orphan is typically adopted by `init`/`systemd`.
-
-**5. C)** DMA transfers an entire block autonomously and generates exactly **one** interrupt to the CPU upon completion of the entire transfer — regardless of block size. Interrupt-Driven I/O (A) would generate one interrupt per byte.
-
-**6. D)** The call returned immediately with an error (not blocking — eliminates A). The application polls again manually (not kernel-driven notification — eliminates B). This is classic Synchronous Non-Blocking I/O.
-
-**7. C)** Program Execution (loading and running code) directly serves the user. Resource allocation (A), protection (B), and usage tracking (D) are System Efficiency Services that keep the OS itself functioning properly.
-
-**8. B)** Component [X] is the **Linker**. It combines `.o` object files and library archives into a single executable by resolving all unresolved symbol references. The Loader (C) is the next step, placing the binary into RAM.
-
-**9. C)** In a monolithic kernel, all drivers run in the single shared kernel address space. A faulty driver can corrupt kernel data structures, triggering a kernel panic that brings down the entire OS. Microkernels (A) would isolate the crash.
-
-**10. A)** $Speedup = \frac{1}{0.20 + \frac{0.80}{8}} = \frac{1}{0.20 + 0.10} = \frac{1}{0.30} \approx \mathbf{3.33x}$. The closest answer is **A) 3.08x**.
-
-> [!note] Correction
-> Exact calculation: $1/0.30 = 3.33x$. The answer choice should be **3.33x**. If the exam offers 3.08x vs 4.00x, select the closest — which would be **A) 3.33x** or approximately 3.33. With $S=0.20$, $N=8$: answer is $\approx 3.33x$.
-
-**11. B)** This is a textbook Race Condition (Read-Modify-Write hazard). Both threads read the same stale value simultaneously, so one increment is lost. Deadlock (A) requires circular waiting for resources, not a lost write.
-
-**12. C)** `wait(S)` decrements $S$. If $S$ was 0, it becomes negative and the calling thread blocks in the semaphore's wait queue. It will unblock only when another thread calls `signal(S)`.
-
-**13. D)** P1→Lock B→P2→Lock A→P1 is a circular dependency chain. **Circular Wait** is the most directly illustrated condition. Hold and Wait (C) is also present (each holds one resource while waiting), but the circular chain is the defining characteristic.
-
-**14. C)** With a tiny time quantum, the overhead of context switching (saving/loading PCBs, TLB flushes, cache invalidation) becomes a significant fraction of total CPU time, degrading effective throughput. FCFS behavior (B) happens with a very *large* quantum.
-
-**15. C)** **Turnaround Time** = time from submission to completion = $CT - AT$. Waiting Time (B) counts only time in the ready queue. Response Time (A) counts time until first response. Dispatch Latency (D) is context-switch overhead.
-
-**16. C)** SRTF always dispatches the process with the **shortest remaining burst** from the ready queue. P2 has 2ms remaining — the minimum among all four — so P2 runs next. Arrival order (A) only matters in FCFS.
-
-**17. C)** `pthread_join(tid, NULL)` blocks the calling thread until thread `tid` terminates, then cleans up the thread's resources (stack memory, thread table entry). This prevents thread resource leaks — analogous to `waitpid()` for processes.
-
-**18. B)** Memory-Mapped I/O maps device controller registers into the processor's physical address space. The CPU talks to the device by simply reading/writing specific memory addresses — no special I/O instructions needed. Option D describes memory-mapped files, a different concept.
-
-**19. B)** In the One-to-One model, each user thread has its own kernel thread. When the network thread blocks, only its kernel thread sleeps — the UI and JS kernel threads continue independently on separate CPU cores. Many-to-One (A) would block the whole process.
-
-**20. D)** **Spooling** queues jobs for exclusive devices (printers, plotters) that cannot be shared. Jobs are saved to disk and fed to the device one at a time. Buffering (A) smooths data-rate mismatches. Caching (B) retains hot data.
-
-**21. B)** **Context Switching** is the mechanism of saving the running process's CPU state into its PCB and loading the next process's PCB. This is pure overhead — no useful application work is done during it. The dispatcher performs this operation.
-
-**22. C)** In Peterson's Solution, `flag[i] = true` means "Process $i$ wants to enter the critical section." It is a declaration of intent. The `turn` variable determines which process actually gets priority when both want in simultaneously.
-
-**23. C)** Thread-Local Storage provides each thread its own private copy of designated variables, even if those variables appear to be global. Changes by one thread do not affect another thread's copy — useful for thread-safe use of per-thread context like error codes or state machines.
-
-**24. C)** `fork()` returns the **child's PID** to the parent (so the parent can track and later `waitpid()` on it) and returns **0** to the child (so the child knows it is the child). Returns **-1** only on failure.
-
-**25. B)** Non-preemptive Priority Scheduling without aging causes **Starvation** — low-priority processes may never get CPU time if high-priority processes continuously arrive. The Convoy Effect (A) is specific to FCFS.
-
 ---
 
-## Answer Key — Part II
+## Problem Solving Answer Key
 
 ### Problem 1 Solutions
 
@@ -528,9 +277,200 @@ $$Speedup_{max} = \frac{1}{S + 0} = \frac{1}{0.30} \approx \mathbf{3.33x}$$
 
 ---
 
+## Multiple Choice Questions
+
+1. An operating system is best described as which of the following from the System View perspective?
+    - **A)** A user-friendly GUI framework that simplifies user tasks
+    - **B)** A resource allocator and control program managing CPU, memory, and hardware
+    - **C)** A compiler that translates high-level code into machine instructions
+    - **D)** A firmware program embedded directly in the CPU die
+
+2. Hardware provides a mechanism to prevent user programs from executing instructions like halting the CPU or directly accessing another process's memory. What hardware feature enables this protection?
+    - **A)** Direct Memory Access Controller
+    - **B)** Cache Hit Ratio register
+    - **C)** Dual-Mode Operation with a Mode Bit
+    - **D)** Interrupt Vector Table
+
+3. A system checks its L1 cache first. On a miss, it then accesses main memory. Given $H = 0.95$, $T_c = 4$ ns, and $T_m = 200$ ns, compute the Effective Access Time (EAT) using the sequential access model.
+
+$$EAT = H \times T_c + (1-H) \times (T_c + T_m)$$
+    - **A)** 4.04 ns
+    - **B)** 14.0 ns
+    - **C)** 21.0 ns
+    - **D)** 180.2 ns
+
+4. A **Zombie process** differs from an **Orphan process** in that:
+    - **A)** A zombie has a living parent that has not yet called `wait()`; an orphan's parent has already terminated
+    - **B)** A zombie's parent has terminated; an orphan is waiting for I/O to complete
+    - **C)** Zombies consume CPU cycles; orphans are immediately terminated by the OS
+    - **D)** Orphans always trigger cascading termination; zombies do not
+
+5. A device controller for a high-speed NVMe SSD transfers 1 MB of data to RAM. The OS uses DMA. How many CPU interrupts does this transfer generate?
+    - **A)** One interrupt per byte: 1,048,576 interrupts
+    - **B)** One interrupt per 4 KB page: 256 interrupts
+    - **C)** Exactly one interrupt upon completion of the entire 1 MB block transfer
+    - **D)** Zero interrupts — DMA operates entirely without CPU involvement
+
+6. A `read()` call on a socket returns immediately with `EAGAIN`. The calling thread continues executing other code and re-checks the socket after completing its UI update. Which I/O model does this exemplify?
+    - **A)** Synchronous Blocking I/O
+    - **B)** Asynchronous I/O (kernel-driven notification)
+    - **C)** Direct Memory Access
+    - **D)** Synchronous Non-Blocking I/O
+
+7. Which of the following is a User Service provided by the OS, as opposed to a System Efficiency Service?
+    - **A)** Resource Allocation and Accounting
+    - **B)** Protection and Security enforcement
+    - **C)** Program Execution — loading code into memory and running it
+    - **D)** Tracking CPU usage across users for billing
+
+8. In the program build pipeline — Source → Compiler → Assembler → **[X]** → Loader — what does component **[X]** do?
+    - **A)** Translates machine code into assembly mnemonics for debugging
+    - **B)** Combines relocatable object files and library code into a single binary executable, resolving all cross-file symbol references
+    - **C)** Copies the final binary from disk into RAM and sets up the process context
+    - **D)** Switches the CPU from User Mode to Kernel Mode for program startup
+
+9. A Monolithic Kernel has a buggy device driver for a new graphics card. What is the most likely system-level consequence?
+    - **A)** Only the graphics driver process crashes; all other kernel services continue
+    - **B)** The graphics card is silently disabled and the system switches to software rendering
+    - **C)** The kernel panic brings down the entire operating system
+    - **D)** The driver is automatically offloaded to user space to prevent contamination
+
+10. According to Amdahl's Law, an application has 20% sequential code ($S = 0.20$) and 80% parallelizable code. With $N = 8$ processors, what is the maximum achievable speedup?
+
+$$Speedup \le \frac{1}{S + \frac{1-S}{N}}$$
+    - **A)** 3.08x
+    - **B)** 4.00x
+    - **C)** 5.00x
+    - **D)** 8.00x
+
+11. Thread A and Thread B both share a global integer `total`. Both threads read `total = 100`, increment it, and write back. After both complete, `total = 101` instead of 102. This is caused by:
+    - **A)** A deadlock between the two threads competing for `total`
+    - **B)** A race condition caused by unprotected concurrent read-modify-write access
+    - **C)** Priority inversion causing Thread B to execute before Thread A
+    - **D)** A stack overflow caused by simultaneous function calls
+
+12. A thread calls `wait(S)` on a semaphore $S$ initialized to 0. What happens to the calling thread?
+    - **A)** It proceeds immediately since $S = 0$ means the resource is available
+    - **B)** It signals other threads to run, freeing the CPU
+    - **C)** It blocks and is placed in the semaphore's wait queue until `signal(S)` is called
+    - **D)** It resets $S$ to 1 and continues
+
+13. Process P1 holds Lock A and requests Lock B. Process P2 holds Lock B and requests Lock A. Both are suspended, waiting indefinitely. Which necessary condition for deadlock does this most directly demonstrate?
+    - **A)** Mutual Exclusion
+    - **B)** No Preemption
+    - **C)** Hold and Wait
+    - **D)** Circular Wait
+
+14. A Round Robin scheduler uses a very small time quantum (e.g., 1ms). What is the primary performance concern?
+    - **A)** Low-priority processes will starve because they never receive the CPU
+    - **B)** The algorithm degrades to FCFS behavior
+    - **C)** Excessive context switching overhead consumes a significant fraction of CPU time
+    - **D)** The algorithm can no longer handle preemption
+
+15. Which CPU scheduling criterion measures the total elapsed time from when a process is submitted to when it completes — including all waiting and execution time?
+    - **A)** Response Time
+    - **B)** Waiting Time
+    - **C)** Turnaround Time
+    - **D)** Dispatch Latency
+
+16. Under SRTF (Shortest Remaining Time First), which process will be selected next from the ready queue at the given snapshot?
+
+| Process | Remaining Burst |
+| :------ | :-----------: |
+| P1      | 6 ms          |
+| P2      | 2 ms          |
+| P3      | 4 ms          |
+| P4      | 9 ms          |
+    - **A)** P1 — arrived first
+    - **B)** P4 — has the most work remaining
+    - **C)** P2 — has the shortest remaining burst
+    - **D)** P3 — has the median burst, balanced approach
+
+17. A POSIX thread is created with `pthread_create()`. The main thread then calls `pthread_join()`. What does `pthread_join()` do?
+    - **A)** Creates a copy of the specified thread in a new memory segment
+    - **B)** Cancels the specified thread asynchronously and reclaims its stack
+    - **C)** Blocks the calling thread until the specified thread terminates, then reclaims its resources
+    - **D)** Switches the CPU from the specified thread to the calling thread immediately
+
+18. Memory-Mapped I/O means that:
+    - **A)** The CPU uses special `IN` and `OUT` assembly instructions to communicate with devices
+    - **B)** Device controller registers are assigned physical memory addresses; the CPU reads/writes to them like regular RAM
+    - **C)** The DMA controller maps device buffers into the process's virtual address space
+    - **D)** The OS maps open files into a process's address space as if they were arrays in memory
+
+19. A web browser uses one thread for the UI, one for network requests, and one for JavaScript execution — all within the same browser process. If the network thread blocks waiting for a server response, what happens in a **One-to-One** threading model?
+    - **A)** The entire process blocks because all threads share one kernel thread
+    - **B)** Only the network thread blocks; the UI and JS threads continue running on other cores
+    - **C)** The kernel terminates the blocked thread and spawns a replacement
+    - **D)** The Many-to-Many model automatically reassigns the blocked thread's kernel thread
+
+20. A spooler daemon intercepts print jobs from multiple applications, queues them to disk, and sends them to the printer one at a time. Which kernel I/O service is this?
+    - **A)** Buffering
+    - **B)** Caching
+    - **C)** Scheduling
+    - **D)** Spooling
+
+21. The process of saving a currently running process's register state and program counter into its PCB, then loading the next process's PCB to resume it, is called:
+    - **A)** Process Forking
+    - **B)** Context Switching
+    - **C)** Memory Swapping
+    - **D)** Logical Address Relocation
+
+22. In Peterson's Solution for the Critical Section Problem, two shared variables are used: `flag[2]` and `turn`. What does setting `flag[i] = true` signify?
+    - **A)** Process $i$ is currently inside the critical section
+    - **B)** Process $i$ is signaling that the other process should enter first
+    - **C)** Process $i$ declares its intention to enter the critical section
+    - **D)** Process $i$ has completed and released the critical section
+
+23. Which of the following best describes **Thread-Local Storage (TLS)**?
+    - **A)** A pool of pre-allocated threads shared across the entire OS
+    - **B)** Variables declared inside a function, shared between all threads calling that function
+    - **C)** A per-thread data area where each thread has its own private copy of specified variables
+    - **D)** A kernel buffer storing thread control blocks for context switching
+
+24. The `fork()` system call returns a different value to the parent and child process. What does `fork()` return to the **parent** process?
+    - **A)** 0 — indicating it is now the child
+    - **B)** -1 — indicating an error in all successful forks
+    - **C)** The PID of the newly created child process
+    - **D)** The PPID (parent PID) of the calling process
+
+25. Non-preemptive Priority Scheduling without aging can result in which of the following problems?
+    - **A)** The Convoy Effect — short jobs wait behind long jobs
+    - **B)** Starvation — low-priority processes may never receive the CPU
+    - **C)** Race Conditions — multiple processes access the same priority queue simultaneously
+    - **D)** Thrashing — excessive context switching due to too many equal-priority processes
+
+### Answer Key & Explanations
+
+1. **B**. From the System View, the OS is a resource allocator (managing CPU, memory, I/O) and control program (preventing errors). The User View (A) focuses on convenience. Compilers (C) and CPU firmware (D) are separate components.
+2. **C**. Dual-Mode Operation (mode bit) is the hardware feature that distinguishes User Mode (bit=1, restricted) from Kernel Mode (bit=0, privileged). Privileged instructions like halting the CPU can only execute in Kernel Mode. DMA (A) handles data transfers; the IVT (D) routes interrupts.
+3. **B**. $EAT = 0.95(4) + 0.05(4 + 200) = 3.8 + 0.05(204) = 3.8 + 10.2 = 14.0$ ns. Option A ignores miss penalty, Option C uses wrong hit ratio, and Option D swaps hit and miss rates.
+4. **A**. A zombie process has terminated but retains its process table entry because its living parent hasn't called `wait()` yet. An orphan's parent has already terminated — the orphan is typically adopted by `init`/`systemd`.
+5. **C**. DMA transfers an entire block autonomously and generates exactly **one** interrupt to the CPU upon completion of the entire transfer — regardless of block size. Interrupt-Driven I/O (A) would generate one interrupt per byte.
+6. **D**. The call returned immediately with an error (not blocking — eliminates A). The application polls again manually (not kernel-driven notification — eliminates B). This is classic Synchronous Non-Blocking I/O.
+7. **C**. Program Execution (loading and running code) directly serves the user. Resource allocation (A), protection (B), and usage tracking (D) are System Efficiency Services that keep the OS itself functioning properly.
+8. **B**. Component [X] is the **Linker**. It combines `.o` object files and library archives into a single executable by resolving all unresolved symbol references. The Loader (C) is the next step, placing the binary into RAM.
+9. **C**. In a monolithic kernel, all drivers run in the single shared kernel address space. A faulty driver can corrupt kernel data structures, triggering a kernel panic that brings down the entire OS. Microkernels (A) would isolate the crash.
+10. **A**. $Speedup = \frac{1}{0.20 + \frac{0.80}{8}} = \frac{1}{0.20 + 0.10} = \frac{1}{0.30} \approx 3.33x$. The 20% sequential fraction limits the 8-core speedup to 3.33x.
+11. **B**. This is a textbook Race Condition (Read-Modify-Write hazard). Both threads read the same stale value simultaneously, so one increment is lost. Deadlock (A) requires circular waiting for resources, not a lost write.
+12. **C**. `wait(S)` decrements $S$. If $S$ was 0, it becomes negative and the calling thread blocks in the semaphore's wait queue. It will unblock only when another thread calls `signal(S)`.
+13. **D**. P1→Lock B→P2→Lock A→P1 is a circular dependency chain. **Circular Wait** is the most directly illustrated condition. Hold and Wait (C) is also present (each holds one resource while waiting), but the circular chain is the defining characteristic.
+14. **C**. With a tiny time quantum, the overhead of context switching (saving/loading PCBs, TLB flushes, cache invalidation) becomes a significant fraction of total CPU time, degrading effective throughput. FCFS behavior (B) happens with a very *large* quantum.
+15. **C**. **Turnaround Time** = time from submission to completion = $CT - AT$. Waiting Time (B) counts only time in the ready queue. Response Time (A) counts time until first response. Dispatch Latency (D) is context-switch overhead.
+16. **C**. SRTF always dispatches the process with the **shortest remaining burst** from the ready queue. P2 has 2ms remaining — the minimum among all four — so P2 runs next. Arrival order (A) only matters in FCFS.
+17. **C**. `pthread_join(tid, NULL)` blocks the calling thread until thread `tid` terminates, then cleans up the thread's resources (stack memory, thread table entry). This prevents thread resource leaks — analogous to `waitpid()` for processes.
+18. **B**. Memory-Mapped I/O maps device controller registers into the processor's physical address space. The CPU talks to the device by simply reading/writing specific memory addresses — no special I/O instructions needed. Option D describes memory-mapped files, a different concept.
+19. **B**. In the One-to-One model, each user thread has its own kernel thread. When the network thread blocks, only its kernel thread sleeps — the UI and JS kernel threads continue independently on separate CPU cores. Many-to-One (A) would block the whole process.
+20. **D**. **Spooling** queues jobs for exclusive devices (printers, plotters) that cannot be shared. Jobs are saved to disk and fed to the device one at a time. Buffering (A) smooths data-rate mismatches. Caching (B) retains hot data.
+21. **B**. **Context Switching** is the mechanism of saving the running process's CPU state into its PCB and loading the next process's PCB. This is pure overhead — no useful application work is done during it. The dispatcher performs this operation.
+22. **C**. In Peterson's Solution, `flag[i] = true` means "Process $i$ wants to enter the critical section." It is a declaration of intent. The `turn` variable determines which process actually gets priority when both want in simultaneously.
+23. **C**. Thread-Local Storage provides each thread its own private copy of designated variables, even if those variables appear to be global. Changes by one thread do not affect another thread's copy — useful for thread-safe use of per-thread context like error codes or state machines.
+24. **C**. `fork()` returns the **child's PID** to the parent (so the parent can track and later `waitpid()` on it) and returns **0** to the child (so the child knows it is the child). Returns **-1** only on failure.
+25. **B**. Non-preemptive Priority Scheduling without aging causes **Starvation** — low-priority processes may never get CPU time if high-priority processes continuously arrive. The Convoy Effect (A) is specific to FCFS.
+
 ## References & Navigation
 
 - **Related Notes:** [[CSOPESY 01 - Introduction]], [[CSOPESY 02 - Operating System Structure]], [[CSOPESY 03 - IO and Display]], [[CSOPESY 04 - Processes]], [[CSOPESY 05 - Threads]], [[CSOPESY 06 - CPU Scheduling]], [[CSOPESY 07 - Synchronization Tools]]
-- **Practice Quiz 1:** [[QZ] CSOPESY Practice Quiz 1 - OS Foundations]
-- **Practice Quiz 2:** [[QZ] CSOPESY Practice Quiz 2 - CPU Scheduling]
-- **Finals Reviewer:** [[REV] CSOPESY Comprehensive Finals Reviewer]
+- **Practice Quiz 1:** [[[QZ] CSOPESY Practice Quiz 1 - OS Foundations]]
+- **Practice Quiz 2:** [[[QZ] CSOPESY Practice Quiz 2 - CPU Scheduling]]
+- **Finals Reviewer:** [[[REV] CSOPESY Comprehensive Finals Reviewer]]

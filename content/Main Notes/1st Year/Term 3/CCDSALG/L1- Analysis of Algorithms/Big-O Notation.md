@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
+**Tags:** #[[CCDSALG]] #[[Algorithms]] #[[Computer Science]] #[[Computational Complexity]] #[[Efficiency]] #[[Algorithm Design Paradigms]] #[[Data Structures]] #[[Time Complexity]] #[[Space Complexity]]
 
 ---
 
@@ -30,10 +30,6 @@ Is the function also $O(n^4)$? How about $O(n^6)$?
 Yes, since the function grows no faster than $n^4$ and $n^6$
 The function is $O(n^c),c≥3$
 
-## Code Example
-
-_To be added._
-
 ## Complexity
 
 | Operation | Time | Space |
@@ -47,37 +43,34 @@ _To be added._
 
 > TL;DR — Big-O ($O$) gives an asymptotic upper bound: $f(n) = O(g(n))$ means $f(n)$ grows no faster than $g(n)$. It represents the worst-case growth rate.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. What does the notation $f(n) = O(g(n))$ mean?
-- **A)** $f(n)$ grows exactly at the same rate as $g(n)$
-- **B)** $f(n)$ grows no faster than $g(n)$
-- **C)** $f(n)$ grows at least as fast as $g(n)$
-- **D)** $f(n)$ is independent of $g(n)$
+    - **A)** $f(n)$ grows exactly at the same rate as $g(n)$
+    - **B)** $f(n)$ grows no faster than $g(n)$
+    - **C)** $f(n)$ grows at least as fast as $g(n)$
+    - **D)** $f(n)$ is independent of $g(n)$
 
 2. Which of the following correctly describes Big-O notation?
-- **A)** It represents the best-case lower bound of an algorithm.
-- **B)** It gives an asymptotic tight bound.
-- **C)** It represents an asymptotic upper bound.
-- **D)** It measures the space complexity only.
+    - **A)** It represents the best-case lower bound of an algorithm.
+    - **B)** It gives an asymptotic tight bound.
+    - **C)** It represents an asymptotic upper bound.
+    - **D)** It measures the space complexity only.
 
 3. Is the function $6n^3 + 2n^2 + 3n + 8$ considered $O(n^4)$?
-- **A)** Yes, because it grows no faster than $n^4$.
-- **B)** No, because $O(n^3)$ is the only valid Big-O notation for it.
-- **C)** Yes, but only for $n < 0$.
-- **D)** No, because it grows faster than $n^4$.
+    - **A)** Yes, because it grows no faster than $n^4$.
+    - **B)** No, because $O(n^3)$ is the only valid Big-O notation for it.
+    - **C)** Yes, but only for $n < 0$.
+    - **D)** No, because it grows faster than $n^4$.
 
 ### Answer Key & Explanations
-1. **B)** Big-O notation means $f(n)$ grows no faster than $g(n)$, acting as an asymptotic upper bound.
-2. **C)** Big-O provides an asymptotic upper bound, representing the worst-case growth rate of a function.
-3. **A)** Since the function grows no faster than $n^4$, it is technically $O(n^4)$, although $O(n^3)$ is the tightest bound.
+
+1. **B**. Big-O notation means $f(n)$ grows no faster than $g(n)$, acting as an asymptotic upper bound.
+2. **C**. Big-O provides an asymptotic upper bound, representing the worst-case growth rate of a function.
+3. **A**. Since the function grows no faster than $n^4$, it is technically $O(n^4)$, although $O(n^3)$ is the tightest bound.
 
 ## References & Navigation
 

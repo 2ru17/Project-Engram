@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[NSSECU1]] #[[Conceptual]] #[[Introduction to Cybersecurity]]
+**Tags:** #[[Computer Science]] #[[NSSECU1]] #[[Conceptual]] #[[Introduction to Cybersecurity]]
 
 ---
 
@@ -54,77 +54,79 @@ Consider a web application that stores user data.
 - Threat modeling helps proactively secure systems by thinking from an attacker's perspective.
 
 ## Multiple Choice Questions
+
 1. Which of the following is NOT part of the CIA Triad?
-- **A)** Confidentiality
-- **B)** Integrity
-- **C)** Authorization
-- **D)** Availability
+    - **A)** Confidentiality
+    - **B)** Authorization
+    - **C)** Integrity
+    - **D)** Availability
 
 2. What does Confidentiality ensure?
-- **A)** Data is accessible when needed
-- **B)** Data is accurate and unaltered
-- **C)** Data is only accessible to authorized individuals
-- **D)** Systems are redundant
+    - **A)** Data is only accessible to authorized individuals
+    - **B)** Data is accurate and unaltered
+    - **C)** Data is accessible when needed
+    - **D)** Systems are redundant
 
 3. A weakness in a system that can be exploited is called a:
-- **A)** Threat
-- **B)** Vulnerability
-- **C)** Risk
-- **D)** Exploit
+    - **A)** Threat
+    - **B)** Risk
+    - **C)** Vulnerability
+    - **D)** Exploit
 
 4. Which security control is designed to fix an issue after an incident has occurred?
-- **A)** Preventative
-- **B)** Detective
-- **C)** Corrective
-- **D)** Deterrent
+    - **A)** Preventative
+    - **B)** Detective
+    - **C)** Deterrent
+    - **D)** Corrective
 
 5. What is the formula often used to conceptualize risk?
-- **A)** Risk = Threat $\times$ Vulnerability $\times$ Impact
-- **B)** Risk = Threat + Vulnerability
-- **C)** Risk = Impact / Threat
-- **D)** Risk = Vulnerability - Mitigation
+    - **A)** Risk = Threat + Vulnerability
+    - **B)** Risk = Threat $\times$ Vulnerability $\times$ Impact
+    - **C)** Risk = Impact / Threat
+    - **D)** Risk = Vulnerability - Mitigation
 
 6. Hashing is primarily used to ensure which part of the CIA Triad?
-- **A)** Confidentiality
-- **B)** Integrity
-- **C)** Availability
-- **D)** Non-repudiation
+    - **A)** Confidentiality
+    - **B)** Availability
+    - **C)** Integrity
+    - **D)** Non-repudiation
 
 7. Implementing a backup generator is an example of supporting which principle?
-- **A)** Confidentiality
-- **B)** Integrity
-- **C)** Availability
-- **D)** Authentication
+    - **A)** Availability
+    - **B)** Integrity
+    - **C)** Confidentiality
+    - **D)** Authentication
 
 8. Threat modeling is best performed during which phase of software development?
-- **A)** Deployment
-- **B)** Maintenance
-- **C)** Design
-- **D)** Incident Response
+    - **A)** Deployment
+    - **B)** Maintenance
+    - **C)** Incident Response
+    - **D)** Design
 
 9. Accepting a risk means:
-- **A)** Implementing all possible controls
-- **B)** Ignoring the risk completely
-- **C)** Acknowledging the risk and choosing not to mitigate it further due to cost-benefit analysis
-- **D)** Transferring the risk to a third party
+    - **A)** Implementing all possible controls
+    - **B)** Ignoring the risk completely
+    - **C)** Acknowledging the risk and choosing not to mitigate it further due to cost-benefit analysis
+    - **D)** Transferring the risk to a third party
 
 10. Which of the following best describes an Insider Threat?
-- **A)** A state-sponsored hacker
-- **B)** A script kiddie
-- **C)** A disgruntled employee with valid access
-- **D)** An automated botnet
+    - **A)** A disgruntled employee with valid access
+    - **B)** A script kiddie
+    - **C)** A state-sponsored hacker
+    - **D)** An automated botnet
 
 ### Answer Key & Explanations
-1. **C.** Authorization is not part of the CIA Triad; the triad consists of Confidentiality, Integrity, and Availability.
-2. **C.** Confidentiality ensures that only authorized individuals can view or access the data.
-3. **B.** A vulnerability is a flaw or weakness in system security procedures, design, implementation, or internal controls.
-4. **C.** Corrective controls aim to restore the system to normal operations after an incident.
-5. **A.** Risk is commonly understood as a function of threats exploiting vulnerabilities to cause impact.
-6. **B.** Hashing creates a unique mathematical representation of data, which verifies that the data has not been altered (Integrity).
-7. **C.** Backup generators ensure systems remain online during power failures, supporting Availability.
-8. **C.** Threat modeling is most effective during the design phase to build security in from the start.
-9. **C.** Risk acceptance is a formal process of understanding a risk and deciding that the cost of mitigation outweighs the potential loss.
-10. **C.** An insider threat involves an individual who has legitimate access to the organization's network, systems, or data.
+
+1. **B**. Authorization is not part of the CIA Triad; the triad consists of Confidentiality, Integrity, and Availability.
+2. **A**. Confidentiality ensures that only authorized individuals can view or access the data.
+3. **C**. A vulnerability is a flaw or weakness in system security procedures, design, implementation, or internal controls.
+4. **D**. Corrective controls aim to restore the system to normal operations after an incident.
+5. **B**. Risk is commonly understood as a function of threats exploiting vulnerabilities to cause impact.
+6. **C**. Hashing creates a unique mathematical representation of data, which verifies that the data has not been altered (Integrity).
+7. **A**. Backup generators ensure systems remain online during power failures, supporting Availability.
+8. **D**. Threat modeling is most effective during the design phase to build security in from the start.
+9. **C**. Risk acceptance is a formal process of understanding a risk and deciding that the cost of mitigation outweighs the potential loss.
+10. **A**. An insider threat involves an individual who has legitimate access to the organization's network, systems, or data.
 
 ## References & Navigation
 

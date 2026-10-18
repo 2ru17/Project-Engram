@@ -14,7 +14,7 @@ hackerrank_domain: Binary Search on Answer
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
 
 ---
 
@@ -60,14 +60,14 @@ $1 \le D, G, P, X, Y \le 10^9$
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > V is a mercenary. She can add skill points to increase her skill level. Given job acceptance rules (based on skill vs. difficulty and payout vs. thresholds Y and Y²), find the **minimum** extra skill so her total earnings reach at least G eddies. Output -1 if impossible.
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > Try add = 0, 1, 2, ... up to max(D), computing earnings each time.
 > **O(max_D × N)** — max_D can be 10⁹ → impossible.
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > Earnings is **non-decreasing** as skill increases (higher skill unlocks more jobs). Binary search on the skill increase.
 > **O(N · log(max_D)) per test case** — fast.
 
@@ -120,11 +120,11 @@ Jobs: (D=15, P=7), (D=11, P=19). Y²=121.
 
 | add | X' | Job 1 (D=15,P=7) | Job 2 (D=11,P=19) | Total | ≥ G=2? |
 |---|---|---|---|---|---|
-| 0 | 1 | 1<15, P=7<121 → skip | 1<11, P=19<121 → skip | 0 | ✗ |
-| 9 | 10 | 10<15, P=7<121 → skip | 10<11, P=19<121 → skip | 0 | ✗ |
-| **10** | **11** | 11<15, P=7<121 → skip | **11=11, P=19≥11** → take | **19** | **✓** |
+| 0 | 1 | 1<15, P=7<121 → skip | 1<11, P=19<121 → skip | 0 |  |
+| 9 | 10 | 10<15, P=7<121 → skip | 10<11, P=19<121 → skip | 0 |  |
+| **10** | **11** | 11<15, P=7<121 → skip | **11=11, P=19≥11** → take | **19** | **** |
 
-Binary search converges to **add = 10** ✓
+Binary search converges to **add = 10** 
 
 ---
 
@@ -267,7 +267,6 @@ if __name__ == "__main__":
     main()
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

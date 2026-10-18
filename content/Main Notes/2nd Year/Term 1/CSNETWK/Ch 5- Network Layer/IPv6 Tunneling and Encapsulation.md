@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
+**Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
 
 ---
 
@@ -90,87 +90,48 @@ Inner = Host to Host (IPv6).
 
 > TL;DR — IPv6 tunneling wraps IPv6 packets inside IPv4 headers so they can traverse IPv4-only networks. Dual-stack routers at tunnel endpoints handle encapsulation/decapsulation; intermediate IPv4 routers forward based on the outer header only.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Pasted image 20251121092752.png]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "IPv4 or IPv6?**  **Analysis:** We are traversing _____ IPv4-only network (Routers c and d)."?
-- **A)** Router
-- **B)** Network
-- **C)** the
-- **D)** Protocol
+1. Why was **IPv6** standardized with a **128-bit address space** and a simplified **fixed 40-byte base header**?
+    - **A)** To reduce address size compared to IPv4's 32-bit addresses.
+    - **B)** To permanently solve 32-bit IPv4 address exhaustion ($2^{128} \approx 3.4 \times 10^{38}$ addresses) and accelerate router packet forwarding by eliminating header-length variability, in-network fragmentation, and per-hop header checksum recomputation.
+    - **C)** To replace MAC addresses at Layer 2.
+    - **D)** To require NAT on every home router.
 
-2. Which word completes the following sentence from the text: "What is inside?**  **Analysis (The "Passenger"):** Inside _____ IPv4 payload sits the original IPv6 packet."?
-- **A)** Router
-- **B)** the
-- **C)** Network
-- **D)** Protocol
+2. Which three IPv4 header fields were **removed** from the base IPv6 header to speed up Layer-3 router processing?
+    - **A)** **Header Checksum** (relies on Layer-2 and Layer-4 checksums instead), **In-Network Fragmentation fields** (`ID`, `Flags`, `Fragment Offset`—IPv6 routers never fragment packets in flight; they send an ICMPv6 *Packet Too Big* message), and variable-length **Options** (moved to Next Header extension headers).
+    - **B)** Source IP Address, Destination IP Address, and Version
+    - **C)** Hop Limit (TTL), Payload Length, and Next Header
+    - **D)** Traffic Class and Flow Label
 
-3. Which word completes the following sentence from the text: "**The Path:** To _____ intermediate routers, the packet looks like normal IPv4 traffic."?
-- **A)** the
-- **B)** Protocol
-- **C)** Network
-- **D)** Router
+3. What is **IPv6-over-IPv4 Tunneling**, and how does it enable two IPv6 islands to communicate across legacy IPv4-only intermediate routers?
+    - **A)** The border router translates the 128-bit IPv6 address into a 32-bit IPv4 address by deleting 96 bits of the header, losing the original address permanently.
+    - **B)** Intermediate IPv4 routers are upgraded in real time via ICMP packets.
+    - **C)** The ingress dual-stack border router **encapsulates the entire IPv6 datagram (header + payload) inside the payload field of a new IPv4 datagram** addressed to the egress border router; intermediate IPv4 routers route the outer IPv4 packet normally, and the egress router strips the outer IPv4 header to recover the intact IPv6 datagram.
+    - **D)** The IPv6 packet is sent at Layer 2 using ARP across the entire Internet.
 
-4. Which word completes the following sentence from the text: "What are the Source and Destination addresses?**  **Analysis (The _____ The "Vehicle" is the IPv4 packet carrying the data."?
-- **A)** Vehicle
-- **B)** Network
-- **C)** Router
-- **D)** Protocol
+4. When an ingress border router $B$ encapsulates an IPv6 packet (originating from IPv6 host $A$ and destined for IPv6 host $F$) into an IPv4 tunnel ending at egress border router $E$, what are the **outer IPv4 source and destination addresses** while inside the tunnel?
+    - **A)** Source $= A$'s IPv6 address; Destination $= F$'s IPv6 address
+    - **B)** Outer IPv4 Source $=$ Router $E$; Outer IPv4 Destination $=$ Router $B$
+    - **C)** Outer IPv4 Source $= 0.0.0.0$; Outer IPv4 Destination $= 255.255.255.255$
+    - **D)** Outer IPv4 Source $=$ **Router $B$'s IPv4 address**; Outer IPv4 Destination $=$ **Router $E$'s IPv4 address** (while the inner IPv6 header retains Source $= A$ and Destination $= F$).
 
-5. Which word completes the following sentence from the text: "Confusing the tunnel endpoints (dual-stack routers) _____ regular IPv4-only routers in the middle."?
-- **A)** with
-- **B)** Network
-- **C)** Router
-- **D)** Protocol
-
-6. Which word completes the following sentence from the text: "They only care about the IPv4 _____ and ignore the IPv6 payload inside."?
-- **A)** Network
-- **B)** Router
-- **C)** headers
-- **D)** Protocol
-
-7. Which word completes the following sentence from the text: "IPv4 or IPv6?**  **Analys_____:** Router E receives the IPv4 packet, sees that it is the destination, strips off the IPv4 header (decapsulation), and reveals the IPv6 packet."?
-- **A)** is
-- **B)** Protocol
-- **C)** Router
-- **D)** Network
-
-8. Which word completes the following sentence from the text: "Concept Overview: Tunneling  Definition  Tunneling is a technique used when two IPv6 _____ need to communicate but are separated by an older IPv4 network."?
-- **A)** Network
-- **B)** Protocol
-- **C)** Router
-- **D)** networks
-
-9. Which word completes the following sentence from the text: "**Destination:** The router _ending_ _____ tunnel (Router E)."?
-- **A)** Router
-- **B)** Network
-- **C)** Protocol
-- **D)** the
-
-10. Which word completes the following sentence from the text: "Problem Analysis  ### Phase 1: Inside the Tunnel _____ $\rightarrow$ c $\rightarrow$ d $\rightarrow$ E)  **1."?
-- **A)** Router
-- **B)** Protocol
-- **C)** B
-- **D)** Network
-
+5. From the perspective of the IPv6 routing architecture at endpoints $B$ and $E$, what does the intervening chain of IPv4-only routers ($C \to D$) look like?
+    - **A)** An Application-layer HTTP proxy.
+    - **B)** A single virtual **data-link layer (Layer-2) channel** directly connecting IPv6 router $B$ to IPv6 router $E$.
+    - **C)** A DNS authoritative zone.
+    - **D)** A disconnected network segment with infinite hop count.
 
 ### Answer Key & Explanations
-1. **C)** the completes the sentence: IPv4 or IPv6?**  **Analysis:** We are traversing t...
-2. **B)** the completes the sentence: What is inside?**  **Analysis (The "Passenger"):**...
-3. **A)** the completes the sentence: **The Path:** To the intermediate routers, the pac...
-4. **A)** Vehicle completes the sentence: What are the Source and Destination addresses?**  ...
-5. **A)** with completes the sentence: Confusing the tunnel endpoints (dual-stack routers...
-6. **C)** headers completes the sentence: They only care about the IPv4 headers and ignore t...
-7. **A)** is completes the sentence: IPv4 or IPv6?**  **Analysis:** Router E receives t...
-8. **D)** networks completes the sentence: Concept Overview: Tunneling  Definition  Tunneling...
-9. **D)** the completes the sentence: **Destination:** The router _ending_ the tunnel (R...
-10. **C)** B completes the sentence: Problem Analysis  ### Phase 1: Inside the Tunnel (...
+
+1. **B**. IPv6 expands addresses from 32 bits to 128 bits and streamlines the base header to a fixed 40 bytes so core routers can process headers at hardware line rate.
+2. **A**. Removing the IPv4 Header Checksum (which had to be recomputed at every hop as TTL decremented), in-network router fragmentation, and inline variable options dramatically simplifies router fast-path forwarding.
+3. **C**. Tunneling treats the entire IPv6 datagram as opaque payload inside an IPv4 packet (with IPv4 `Protocol = 41`), preserving all IPv6 fields end-to-end across IPv4 transit networks.
+4. **D**. Inside the tunnel, IPv4 routers only inspect the outer IPv4 header, which carries the tunnel endpoint IPv4 addresses (Source $= B$, Destination $= E$); the inner IPv6 header keeps Source $= A$ and Destination $= F$.
+5. **B**. Tunneling abstracts the multi-hop IPv4 transit network into a single logical Layer-2 link (single IPv6 hop) between dual-stack tunnel endpoints $B$ and $E$.
 
 ## References & Navigation
 

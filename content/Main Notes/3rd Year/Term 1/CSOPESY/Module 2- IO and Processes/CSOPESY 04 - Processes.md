@@ -241,62 +241,63 @@ int main(void) {
 ## Multiple Choice Questions
 
 1. Which memory segment dynamically grows upwards and is used for manually allocated memory like `malloc()`?
-    A. Text Section
-    B. Stack
-    C. Heap
-    D. Data Section
+    - **A)** Text Section
+    - **B)** Stack
+    - **C)** Heap
+    - **D)** Data Section
 
 2. A process has completed execution but its parent has not yet invoked `wait()` to read its exit status. What is this process called?
-    A. Orphan process
-    B. Zombie process
-    C. Daemon process
-    D. Terminated process
+    - **A)** Orphan process
+    - **B)** Zombie process
+    - **C)** Daemon process
+    - **D)** Terminated process
 
 3. In an operating system, the Long-Term Scheduler is primarily responsible for:
-    A. Allocating the CPU to a ready process.
-    B. Swapping a blocked process out to disk.
-    C. Controlling the degree of multiprogramming.
-    D. Performing context switches.
+    - **A)** Allocating the CPU to a ready process.
+    - **B)** Swapping a blocked process out to disk.
+    - **C)** Controlling the degree of multiprogramming.
+    - **D)** Performing context switches.
 
 4. Which of the following is true regarding a Context Switch?
-    A. It executes the next instruction in the application code.
-    B. It has zero overhead on modern processors.
-    C. It involves saving the old process's PCB and loading the new process's PCB.
-    D. It requires user intervention to occur.
+    - **A)** It executes the next instruction in the application code.
+    - **B)** It has zero overhead on modern processors.
+    - **C)** It involves saving the old process's PCB and loading the new process's PCB.
+    - **D)** It requires user intervention to occur.
 
 5. In UNIX-like systems, what is the standard method for a process to replace its memory space with a completely new program?
-    A. `fork()`
-    B. `wait()`
-    C. `exit()`
-    D. `exec()`
+    - **A)** `fork()`
+    - **B)** `wait()`
+    - **C)** `exit()`
+    - **D)** `exec()`
 
 6. What is a key advantage of the Message Passing model for IPC over the Shared Memory model?
-    A. It requires less OS intervention during communication.
-    B. It is significantly faster for transferring large gigabytes of data.
-    C. It is better suited for distributed systems across different computers.
-    D. It avoids the need for system calls like `send()` and `receive()`.
+    - **A)** It requires less OS intervention during communication.
+    - **B)** It is significantly faster for transferring large gigabytes of data.
+    - **C)** It is better suited for distributed systems across different computers.
+    - **D)** It avoids the need for system calls like `send()` and `receive()`.
 
 7. Which of the following components is NOT typically stored in the Process Control Block (PCB)?
-    A. Program Counter
-    B. CPU Registers
-    C. Source code of the program
-    D. Process State
+    - **A)** Program Counter
+    - **B)** CPU Registers
+    - **C)** Source code of the program
+    - **D)** Process State
 
 8. What happens during cascading termination?
-    A. A parent process terminates, and the OS terminates all of its child processes.
-    B. A process triggers a segmentation fault, terminating itself.
-    C. An orphan process is reassigned to the `init` process.
-    D. A process spawns an infinite loop of threads.
+    - **A)** A parent process terminates, and the OS terminates all of its child processes.
+    - **B)** A process triggers a segmentation fault, terminating itself.
+    - **C)** An orphan process is reassigned to the `init` process.
+    - **D)** A process spawns an infinite loop of threads.
 
 ### Answer Key & Explanations
-1. **C. Heap** - The heap is used for dynamic memory allocation and grows upwards, whereas the stack is used for local variables/functions and grows downwards.
-2. **B. Zombie process** - A zombie is a terminated process that still retains an entry in the process table because the parent hasn't collected its exit status. Orphans lack a parent completely.
-3. **C. Controlling the degree of multiprogramming** - The long-term scheduler dictates how many processes are placed into memory, while the short-term scheduler decides which in-memory process gets the CPU.
-4. **C. It involves saving the old process's PCB and loading the new process's PCB** - Context switching is pure overhead and entirely handled by the kernel using the PCBs.
-5. **D. `exec()`** - While `fork()` duplicates a process, `exec()` overwrites the current process's address space with a new executable program.
-6. **C. It is better suited for distributed systems across different computers** - Message passing handles synchronization intrinsically and can route messages over networks seamlessly, unlike local shared memory.
-7. **C. Source code of the program** - The PCB holds metadata and state for execution (like the PC and registers), but the raw source code is not needed; the compiled binary is in the Text segment.
-8. **A. A parent process terminates, and the OS terminates all of its child processes.** - Some systems don't allow children to outlive their parents and forcibly shut them down in a cascading manner.
+
+1. **C**. The heap is used for dynamic memory allocation and grows upwards, whereas the stack is used for local variables/functions and grows downwards.
+2. **B**. A zombie is a terminated process that still retains an entry in the process table because the parent hasn't collected its exit status. Orphans lack a parent completely.
+3. **C**. The long-term scheduler dictates how many processes are placed into memory, while the short-term scheduler decides which in-memory process gets the CPU.
+4. **C**. Context switching is pure overhead and entirely handled by the kernel using the PCBs.
+5. **D**. While `fork()` duplicates a process, `exec()` overwrites the current process's address space with a new executable program.
+6. **C**. Message passing handles synchronization intrinsically and can route messages over networks seamlessly, unlike local shared memory.
+7. **C**. The PCB holds metadata and state for execution (like the PC and registers), but the raw source code is not needed; the compiled binary is in the Text segment.
+8. **A**. Some systems don't allow children to outlive their parents and forcibly shut them down in a cascading manner.
 
 ## References & Navigation
 

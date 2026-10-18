@@ -100,81 +100,77 @@ This counterintuitive result is known as the **Base Rate Fallacy**: because beni
 ## Multiple Choice Questions
 
 1. In Bayes' Theorem, what does the term $P(A \mid B)$ represent?
-- **A)** The posterior probability of $B$ given $A$.
-- **B)** The likelihood of observing evidence $A$ given that hypothesis $B$ is true.
-- **C)** The marginal prior probability of $A$.
-- **D)** The joint probability of $A$ and $B$ being independent.
+    - **A)** The posterior probability of $B$ given $A$.
+    - **B)** The likelihood of observing evidence $A$ given that hypothesis $B$ is true.
+    - **C)** The marginal prior probability of $A$.
+    - **D)** The joint probability of $A$ and $B$ being independent.
 
 2. What role does the Law of Total Probability play in Bayes' Formula?
-- **A)** It computes the prior probability of the hypothesis.
-- **B)** It computes the normalizer in the denominator (marginal probability of the evidence $P(A)$).
-- **C)** It guarantees that all events are independent.
-- **D)** It eliminates false positive errors.
+    - **A)** It computes the normalizer in the denominator (marginal probability of the evidence $P(A)$).
+    - **B)** It computes the prior probability of the hypothesis.
+    - **C)** It guarantees that all events are independent.
+    - **D)** It eliminates false positive errors.
 
 3. Why does the Base Rate Fallacy occur in medical screening or intrusion detection?
-- **A)** Because the test has zero specificity.
-- **B)** Because when a condition is extremely rare in a population, even a low false positive rate produces more false alarms in absolute terms than true detections.
-- **C)** Because Bayes' Theorem is only valid when priors are uniformly distributed ($50/50$).
-- **D)** Because probabilities cannot be updated conditionally.
+    - **A)** Because the test has zero specificity.
+    - **B)** Because Bayes' Theorem is only valid when priors are uniformly distributed ($50/50$).
+    - **C)** Because when a condition is extremely rare in a population, even a low false positive rate produces more false alarms in absolute terms than true detections.
+    - **D)** Because probabilities cannot be updated conditionally.
 
 4. If events $B_1, B_2, B_3$ form a partition of sample space $S$, which condition must strictly hold?
-- **A)** $P(B_1) = P(B_2) = P(B_3) = 1/3$.
-- **B)** The events are pairwise disjoint ($B_i \cap B_j = \emptyset$ for $i \ne j$) and their union equals $S$ ($\sum P(B_i) = 1$).
-- **C)** $B_1 \cup B_2 \cup B_3 = \emptyset$.
-- **D)** Each event is independent of any test $A$.
+    - **A)** $P(B_1) = P(B_2) = P(B_3) = 1/3$.
+    - **B)** Each event is independent of any test $A$.
+    - **C)** $B_1 \cup B_2 \cup B_3 = \emptyset$.
+    - **D)** The events are pairwise disjoint ($B_i \cap B_j = \emptyset$ for $i \ne j$) and their union equals $S$ ($\sum P(B_i) = 1$).
 
 5. In our IDS example, what was the probability that a randomly chosen flow triggered an alarm ($P(+)$)?
-- **A)** $0.99$
-- **B)** $0.005$
-- **C)** $0.02485$
-- **D)** $0.1992$
+    - **A)** $0.99$
+    - **B)** $0.02485$
+    - **C)** $0.005$
+    - **D)** $0.1992$
 
 6. If the prior probability of hypothesis $B$ is $0.10$, likelihood $P(A \mid B) = 0.80$, and total evidence probability $P(A) = 0.20$, what is the posterior $P(B \mid A)$?
-- **A)** $0.08$
-- **B)** $0.40$
-- **C)** $0.16$
-- **D)** $0.50$
+    - **A)** $0.08$
+    - **B)** $0.16$
+    - **C)** $0.40$
+    - **D)** $0.50$
 
 7. What happens to the posterior probability $P(B \mid A)$ if the prior probability $P(B) \to 0$ while likelihood and evidence remain non-zero?
-- **A)** The posterior probability approaches $1$.
-- **B)** The posterior probability approaches $0$.
-- **C)** The posterior probability approaches $0.5$.
-- **D)** The posterior probability becomes undefined.
+    - **A)** The posterior probability approaches $0$.
+    - **B)** The posterior probability approaches $1$.
+    - **C)** The posterior probability approaches $0.5$.
+    - **D)** The posterior probability becomes undefined.
 
 8. In Bayesian statistics, how is sequential updating performed when a second independent piece of evidence $A_2$ arrives?
-- **A)** The initial prior $P(B)$ is discarded and replaced with $1$.
-- **B)** The posterior probability after $A_1$, $P(B \mid A_1)$, becomes the new prior probability for evaluating $A_2$.
-- **C)** The experiment must be restarted from scratch.
-- **D)** The probabilities are subtracted from 1.
+    - **A)** The initial prior $P(B)$ is discarded and replaced with $1$.
+    - **B)** The probabilities are subtracted from 1.
+    - **C)** The experiment must be restarted from scratch.
+    - **D)** The posterior probability after $A_1$, $P(B \mid A_1)$, becomes the new prior probability for evaluating $A_2$.
 
 9. What does a likelihood ratio of $P(A \mid B) / P(A \mid B^c) > 1$ indicate?
-- **A)** Evidence $A$ is more likely under hypothesis $B$ than under its negation, increasing the posterior probability of $B$ relative to its prior.
-- **B)** Hypothesis $B$ is impossible.
-- **C)** The evidence decreases confidence in hypothesis $B$.
-- **D)** The test is completely uninformative.
+    - **A)** The evidence decreases confidence in hypothesis $B$.
+    - **B)** Hypothesis $B$ is impossible.
+    - **C)** Evidence $A$ is more likely under hypothesis $B$ than under its negation, increasing the posterior probability of $B$ relative to its prior.
+    - **D)** The test is completely uninformative.
 
 10. Which branch of artificial intelligence directly implements Bayes' Formula with conditional independence assumptions between features?
-- **A)** Convolutional Neural Networks
-- **B)** Naïve Bayes Classifier
-- **C)** K-Means Clustering
-- **D)** Breadth-First Search
-
----
+    - **A)** Naïve Bayes Classifier
+    - **B)** Convolutional Neural Networks
+    - **C)** K-Means Clustering
+    - **D)** Breadth-First Search
 
 ### Answer Key & Explanations
 
-1. **B** - $P(A \mid B)$ is the likelihood function: the probability of generating data $A$ given parameter state $B$.
-2. **B** - The denominator $\sum P(A \mid B_i)P(B_i)$ sums all disjoint paths leading to evidence $A$, serving as the normalizing constant.
-3. **B** - Low base rates mean the non-target group is vast; multiplying a small false-positive rate by a massive population yields an absolute count that dominates true positives.
-4. **B** - A partition divides the sample space into non-overlapping subsets whose probabilities sum to 1.
-5. **C** - Total probability of an alarm: $P(+) = (0.99)(0.005) + (0.02)(0.995) = 0.00495 + 0.01990 = 0.02485$.
-6. **B** - $P(B \mid A) = \frac{P(A \mid B)P(B)}{P(A)} = \frac{0.80 \times 0.10}{0.20} = \frac{0.08}{0.20} = 0.40$.
-7. **B** - When prior belief is virtually impossible ($P(B) \to 0$), extraordinarily strong evidence is required to lift the posterior above zero.
-8. **B** - In Bayesian filtering and tracking (e.g., Kalman filters, spam classifiers), today's posterior is tomorrow's prior.
-9. **A** - A likelihood ratio greater than 1 means the observed outcome is characteristic of hypothesis $B$, boosting its posterior credibility.
-10. **B** - The Naïve Bayes algorithm applies Bayes' theorem under the simplifying assumption that feature dimensions are conditionally independent given the class label.
-
----
+1. **B**. $P(A \mid B)$ is the likelihood function: the probability of generating data $A$ given parameter state $B$.
+2. **A**. The denominator $\sum P(A \mid B_i)P(B_i)$ sums all disjoint paths leading to evidence $A$, serving as the normalizing constant.
+3. **C**. Low base rates mean the non-target group is vast; multiplying a small false-positive rate by a massive population yields an absolute count that dominates true positives.
+4. **D**. A partition divides the sample space into non-overlapping subsets whose probabilities sum to 1.
+5. **B**. Total probability of an alarm: $P(+) = (0.99)(0.005) + (0.02)(0.995) = 0.00495 + 0.01990 = 0.02485$.
+6. **C**. $P(B \mid A) = \frac{P(A \mid B)P(B)}{P(A)} = \frac{0.80 \times 0.10}{0.20} = \frac{0.08}{0.20} = 0.40$.
+7. **A**. When prior belief is virtually impossible ($P(B) \to 0$), extraordinarily strong evidence is required to lift the posterior above zero.
+8. **D**. In Bayesian filtering and tracking (e.g., Kalman filters, spam classifiers), today's posterior is tomorrow's prior.
+9. **C**. A likelihood ratio greater than 1 means the observed outcome is characteristic of hypothesis $B$, boosting its posterior credibility.
+10. **A**. The Naïve Bayes algorithm applies Bayes' theorem under the simplifying assumption that feature dimensions are conditionally independent given the class label.
 
 ## References & Navigation
 

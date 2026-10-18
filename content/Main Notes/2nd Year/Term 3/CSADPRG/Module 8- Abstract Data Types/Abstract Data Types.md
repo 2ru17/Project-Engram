@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Conceptual]] #[[Abstract Data Types]]
+**Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Conceptual]] #[[Abstract Data Types]]
 
 ## Overview
 Abstraction is a fundamental concept in programming that reduces complexity by removing irrelevant information and highlighting important attributes, allowing entities to be grouped based on common characteristics. Data abstraction involves the use of abstract data types (ADTs), enclosures that bundle data representations with subprograms to manipulate them. This module covers the theoretical principles of ADTs, their language design issues, and implementations in object-oriented languages like C++ and Java. 
@@ -111,96 +111,77 @@ Java is similar to C++ but has notable differences:
 ## Multiple Choice Questions
 
 1. Which of the following best describes the principle of information hiding in Abstract Data Types (ADTs)?
-- **A)** The grouping of logically related subprograms into a single unit.
-- **B)** The prevention of direct user manipulation of the actual data representation by enforcing access via specified operations.
-- **C)** The use of subprograms to encapsulate logic and reduce the number of variables.
-- **D)** The ability to allocate and reclaim heap storage automatically.
+    - **A)** The grouping of logically related subprograms into a single unit.
+    - **B)** The prevention of direct user manipulation of the actual data representation by enforcing access via specified operations.
+    - **C)** The use of subprograms to encapsulate logic and reduce the number of variables.
+    - **D)** The ability to allocate and reclaim heap storage automatically.
 
 2. What are the two conditions user-defined abstract data types must satisfy to have the same characteristics as built-in data types?
-- **A)** Public representation and multiple syntactic units
-- **B)** Parametrized typing and explicit access modifiers
-- **C)** Hidden representation and a single syntactic unit
-- **D)** Friend functions and accessor methods
+    - **A)** Public representation and multiple syntactic units
+    - **B)** Parametrized typing and explicit access modifiers
+    - **C)** Hidden representation and a single syntactic unit
+    - **D)** Friend functions and accessor methods
 
 3. In C++, what is the purpose of "friend" functions or classes?
-- **A)** To group logically related subprograms into a separately compiled unit.
-- **B)** To initialize the data members of an instance automatically.
-- **C)** To allow objects to share a single copy of member functions.
-- **D)** To grant private member access to specific, unrelated units.
+    - **A)** To group logically related subprograms into a separately compiled unit.
+    - **B)** To initialize the data members of an instance automatically.
+    - **C)** To allow objects to share a single copy of member functions.
+    - **D)** To grant private member access to specific, unrelated units.
 
 4. How does Java handle objects and memory allocation compared to C++?
-- **A)** Java objects are stored on the stack and accessed directly.
-- **B)** Java objects are exclusively heap-allocated and accessed through reference variables.
-- **C)** Java allows users to manually reclaim heap storage using destructors.
-- **D)** Java requires objects to be allocated using C-style structs.
+    - **A)** Java objects are stored on the stack and accessed directly.
+    - **B)** Java objects are exclusively heap-allocated and accessed through reference variables.
+    - **C)** Java allows users to manually reclaim heap storage using destructors.
+    - **D)** Java requires objects to be allocated using C-style structs.
 
 5. Which programming language utilizes "Package Scope" as an alternative to C++'s "friend" mechanisms?
-- **A)** C#
-- **B)** Ruby
-- **C)** Ada
-- **D)** Java
+    - **A)** C#
+    - **B)** Ruby
+    - **C)** Ada
+    - **D)** Java
 
 6. Which of the following is NOT one of the primary benefits of abstraction mentioned in the text?
-- **A)** Reliability
-- **B)** Simplicity
-- **C)** Inheritance
-- **D)** Flexibility
+    - **A)** Reliability
+    - **B)** Simplicity
+    - **C)** Inheritance
+    - **D)** Flexibility
 
 7. What term refers to a view or representation of an entity that includes only the most significant attributes while hiding irrelevant details?
-- **A)** Encapsulation
-- **B)** Abstraction
-- **C)** Object
-- **D)** Process Abstraction
+    - **A)** Encapsulation
+    - **B)** Abstraction
+    - **C)** Object
+    - **D)** Process Abstraction
 
 8. In the context of C++ implementations of ADTs, which of the following is true regarding data members and member functions?
-- **A)** Instances share a single copy of data members and have their own copies of member functions.
-- **B)** Instances have their own copies of data members but share a single copy of member functions.
-- **C)** Instances have their own copies of both data members and member functions.
-- **D)** Instances share a single copy of both data members and member functions.
+    - **A)** Instances share a single copy of data members and have their own copies of member functions.
+    - **B)** Instances have their own copies of data members but share a single copy of member functions.
+    - **C)** Instances have their own copies of both data members and member functions.
+    - **D)** Instances share a single copy of both data members and member functions.
 
 9. Which of the following encapsulation mechanisms is correctly paired with its programming language?
-- **A)** Ruby: Header files
-- **B)** C#: JAR files
-- **C)** Ada: Packages
-- **D)** C: Modules
+    - **A)** Ruby: Header files
+    - **B)** C#: JAR files
+    - **C)** Ada: Packages
+    - **D)** C: Modules
 
 10. What is a key language design issue for Abstract Data Types?
-- **A)** Determining if accessor methods should be private or protected.
-- **B)** Deciding whether all user-defined types must be classes.
-- **C)** Deciding whether the specification of the type should be physically separated from its implementation.
-- **D)** Choosing between destructors and garbage collection for memory reclamation.
+    - **A)** Determining if accessor methods should be private or protected.
+    - **B)** Deciding whether all user-defined types must be classes.
+    - **C)** Deciding whether the specification of the type should be physically separated from its implementation.
+    - **D)** Choosing between destructors and garbage collection for memory reclamation.
 
 ### Answer Key & Explanations
 
-**1. Answer: B**
-Explanation: Information hiding means the actual data representation is concealed from the user, ensuring manipulation is only done via specified operations.
-
-**2. Answer: C**
-Explanation: The text states user-defined ADTs must have a hidden representation and be contained within a single syntactic unit.
-
-**3. Answer: D**
-Explanation: C++ uses "friend" functions/classes to selectively grant access to private members for specific, unrelated units.
-
-**4. Answer: B**
-Explanation: Unlike C++, Java requires all objects to be heap-allocated and accessed exclusively through reference variables.
-
-**5. Answer: D**
-Explanation: Java uses package scoping, where entities in the same package lacking explicit access modifiers are mutually visible, replacing C++'s "friend" mechanism.
-
-**6. Answer: C**
-Explanation: The benefits of abstraction listed in the text are reliability, simplicity, and flexibility; inheritance is not mentioned.
-
-**7. Answer: B**
-Explanation: Abstraction is defined as a view or representation that includes only the most significant attributes, hiding irrelevant details.
-
-**8. Answer: B**
-Explanation: In C++, instances maintain their own copies of data members, but they all share a single copy of the member functions to conserve memory.
-
-**9. Answer: C**
-Explanation: The text explicitly lists "Packages" as the encapsulation mechanism used in Ada.
-
-**10. Answer: C**
-Explanation: One of the three main language design issues mentioned is whether the specification of the type should be physically separated from its implementation.
+1. **B**. Information hiding means the actual data representation is concealed from the user, ensuring manipulation is only done via specified operations.
+2. **C**. The text states user-defined ADTs must have a hidden representation and be contained within a single syntactic unit.
+3. **D**. C++ uses "friend" functions/classes to selectively grant access to private members for specific, unrelated units.
+4. **B**. Unlike C++, Java requires all objects to be heap-allocated and accessed exclusively through reference variables.
+5. **D**. Java uses package scoping, where entities in the same package lacking explicit access modifiers are mutually visible, replacing C++'s "friend" mechanism.
+6. **C**. The benefits of abstraction listed in the text are reliability, simplicity, and flexibility; inheritance is not mentioned.
+7. **B**. Abstraction is defined as a view or representation that includes only the most significant attributes, hiding irrelevant details.
+8. **B**. In C++, instances maintain their own copies of data members, but they all share a single copy of the member functions to conserve memory.
+9. **C**. The text explicitly lists "Packages" as the encapsulation mechanism used in Ada.
+10. **C**. One of the three main language design issues mentioned is whether the specification of the type should be physically separated from its implementation.
 
 ## References & Navigation
 

@@ -160,30 +160,30 @@ for(int i = 1; i < n; i++) {
 ## Multiple Choice Questions
 
 1. What asymptotic notation represents a strictly upper bound?
-    A) $O$ (Big-Oh)
-    B) $o$ (Little-Oh)
-    C) $\Theta$ (Big-Theta)
-    D) $\Omega$ (Big-Omega)
+    - **A)** $O$ (Big-Oh)
+    - **B)** $o$ (Little-Oh)
+    - **C)** $\Theta$ (Big-Theta)
+    - **D)** $\Omega$ (Big-Omega)
 2. If $\lim_{n \to \infty} \frac{f(n)}{g(n)} = \infty$, which of the following is true?
-    A) $f(n) = o(g(n))$
-    B) $f(n) = \Theta(g(n))$
-    C) $f(n) = \omega(g(n))$
-    D) $f(n) = O(g(n))$
+    - **A)** $f(n) = o(g(n))$
+    - **B)** $f(n) = \Theta(g(n))$
+    - **C)** $f(n) = \omega(g(n))$
+    - **D)** $f(n) = O(g(n))$
 3. An algorithm iterates over an array of size $n$, and for each element, it performs a binary search on another array of size $n$. What is the time complexity?
-    A) $O(n^2)$
-    B) $O(n \log n)$
-    C) $O(\log n)$
-    D) $O(1)$
+    - **A)** $O(n^2)$
+    - **B)** $O(n \log n)$
+    - **C)** $O(\log n)$
+    - **D)** $O(1)$
 4. Which of the following correctly describes Big-Theta ($\Theta$) notation?
-    A) It provides a lower bound on the growth rate.
-    B) It bounds a function simultaneously from above and below by the same order of growth.
-    C) It represents a condition that is only true for small values of $n$.
-    D) It indicates that a function grows strictly faster than another.
+    - **A)** It provides a lower bound on the growth rate.
+    - **B)** It bounds a function simultaneously from above and below by the same order of growth.
+    - **C)** It represents a condition that is only true for small values of $n$.
+    - **D)** It indicates that a function grows strictly faster than another.
 5. In the limit definition, if $\lim_{n \to \infty} \frac{f(n)}{g(n)} = 5$, what can we conclude?
-    A) $f(n) = \omega(g(n))$
-    B) $f(n) = o(g(n))$
-    C) $f(n) = \Theta(g(n))$
-    D) $f(n) = \Omega(g^2(n))$
+    - **A)** $f(n) = \omega(g(n))$
+    - **B)** $f(n) = o(g(n))$
+    - **C)** $f(n) = \Theta(g(n))$
+    - **D)** $f(n) = \Omega(g^2(n))$
 6. Consider the code snippet:
    ```c
    for(int i = 1; i <= n; i *= 2) {
@@ -191,42 +191,43 @@ for(int i = 1; i < n; i++) {
    }
    ```
    What is the time complexity?
-    A) $O(n)$
-    B) $O(n \log n)$
-    C) $O(n^2)$
-    D) $O(\log n)$
+    - **A)** $O(n)$
+    - **B)** $O(n \log n)$
+    - **C)** $O(n^2)$
+    - **D)** $O(\log n)$
 7. Rank the following complexities from most efficient to least efficient: $O(n^2)$, $O(n \log n)$, $O(2^n)$, $O(\log n)$.
-    A) $O(\log n)$, $O(n \log n)$, $O(n^2)$, $O(2^n)$
-    B) $O(2^n)$, $O(n^2)$, $O(n \log n)$, $O(\log n)$
-    C) $O(n \log n)$, $O(\log n)$, $O(n^2)$, $O(2^n)$
-    D) $O(\log n)$, $O(n^2)$, $O(n \log n)$, $O(2^n)$
+    - **A)** $O(\log n)$, $O(n \log n)$, $O(n^2)$, $O(2^n)$
+    - **B)** $O(2^n)$, $O(n^2)$, $O(n \log n)$, $O(\log n)$
+    - **C)** $O(n \log n)$, $O(\log n)$, $O(n^2)$, $O(2^n)$
+    - **D)** $O(\log n)$, $O(n^2)$, $O(n \log n)$, $O(2^n)$
 8. What is the complexity of evaluating a mathematical formula like the area of a triangle ($b \times h / 2$)?
-    A) $O(\log n)$
-    B) $O(1)$
-    C) $O(n)$
-    D) $O(n^2)$
+    - **A)** $O(\log n)$
+    - **B)** $O(1)$
+    - **C)** $O(n)$
+    - **D)** $O(n^2)$
 9. If an algorithm takes time proportional to $n!$, which bound describes it?
-    A) Polynomial bound
-    B) Factorial bound
-    C) Linearithmic bound
-    D) Constant bound
+    - **A)** Polynomial bound
+    - **B)** Factorial bound
+    - **C)** Linearithmic bound
+    - **D)** Constant bound
 10. Which condition must hold true for $f(n) = O(g(n))$ to be correct?
-    A) There exists $c>0$ such that $f(n) \ge c \cdot g(n)$
-    B) There exists $c>0$ such that $f(n) \le c \cdot g(n)$ for sufficiently large $n$
-    C) $f(n)$ must be exactly equal to $g(n)$
-    D) $f(n)$ must grow strictly slower than $g(n)$
+    - **A)** There exists $c>0$ such that $f(n) \ge c \cdot g(n)$
+    - **B)** There exists $c>0$ such that $f(n) \le c \cdot g(n)$ for sufficiently large $n$
+    - **C)** $f(n)$ must be exactly equal to $g(n)$
+    - **D)** $f(n)$ must grow strictly slower than $g(n)$
 
 ### Answer Key & Explanations
-1. **B** - Little-Oh ($o$) represents a strictly upper bound ($<$ rather than $\le$).
-2. **C** - If the ratio approaches infinity, the numerator $f(n)$ grows strictly faster, thus $\omega(g(n))$.
-3. **B** - Iterating takes $O(n)$, and a binary search takes $O(\log n)$. Multiplying them gives $O(n \log n)$.
-4. **B** - Big-Theta represents an asymptotically tight bound, meaning it bounds from both above and below.
-5. **C** - Since 5 is a constant ($0 < c < \infty$), $f(n)$ and $g(n)$ grow at the same rate, yielding $\Theta(g(n))$.
-6. **D** - The loop variable `i` doubles each iteration. The number of times you can double 1 until reaching $n$ is $\log_2 n$, so the complexity is $O(\log n)$.
-7. **A** - Logarithmic is fastest, followed by linearithmic, quadratic, and exponential is slowest.
-8. **B** - Executing basic arithmetic operations takes constant time, $O(1)$.
-9. **B** - $O(n!)$ is factorial time, which grows faster than exponential and polynomial times.
-10. **B** - The formal definition of Big-Oh ($O$) requires $f(n) \le c \cdot g(n)$ for all $n \ge n_0$.
+
+1. **B**. Little-Oh ($o$) represents a strictly upper bound ($<$ rather than $\le$).
+2. **C**. If the ratio approaches infinity, the numerator $f(n)$ grows strictly faster, thus $\omega(g(n))$.
+3. **B**. Iterating takes $O(n)$, and a binary search takes $O(\log n)$. Multiplying them gives $O(n \log n)$.
+4. **B**. Big-Theta represents an asymptotically tight bound, meaning it bounds from both above and below.
+5. **C**. Since 5 is a constant ($0 < c < \infty$), $f(n)$ and $g(n)$ grow at the same rate, yielding $\Theta(g(n))$.
+6. **D**. The loop variable `i` doubles each iteration. The number of times you can double 1 until reaching $n$ is $\log_2 n$, so the complexity is $O(\log n)$.
+7. **A**. Logarithmic is fastest, followed by linearithmic, quadratic, and exponential is slowest.
+8. **B**. Executing basic arithmetic operations takes constant time, $O(1)$.
+9. **B**. $O(n!)$ is factorial time, which grows faster than exponential and polynomial times.
+10. **B**. The formal definition of Big-Oh ($O$) requires $f(n) \le c \cdot g(n)$ for all $n \ge n_0$.
 
 ## References & Navigation
 

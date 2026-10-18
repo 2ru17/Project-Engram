@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Time Series Data Modelling]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Time Series Data Modelling]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
@@ -19,7 +19,7 @@ status: completed
 
 ---
 
-## 📚 Key Concepts
+## Key Concepts
 
 ### 1. What Is Time Series Data?
 
@@ -94,9 +94,9 @@ print(f"p-value       : {result[1]:.4f}")
 print(f"Critical Values: {result[4]}")
 
 if result[1] < 0.05:
-    print("✅ Series is STATIONARY (reject H₀)")
+    print(" Series is STATIONARY (reject H₀)")
 else:
-    print("❌ Series is NON-STATIONARY (fail to reject H₀)")
+    print(" Series is NON-STATIONARY (fail to reject H₀)")
 ```
 
 ---
@@ -514,11 +514,11 @@ stats.probplot(residuals, plot=plt)
 plt.show()
 ```
 
-**Signs of a good fit:** ✅ Residuals look like random noise (no pattern or trend) ✅ ACF of residuals shows no significant spikes beyond lag 0 ✅ Residuals approximately normally distributed (QQ-plot close to diagonal line)
+**Signs of a good fit:**  Residuals look like random noise (no pattern or trend)  ACF of residuals shows no significant spikes beyond lag 0  Residuals approximately normally distributed (QQ-plot close to diagonal line)
 
 ---
 
-## 🐍 Python Snippets
+## Python Snippets
 
 ### `pd.DataFrame.resample()`
 Aggregates data at a new temporal frequency.
@@ -668,7 +668,7 @@ conf_int = result.get_forecast(steps=n).conf_int()  # confidence intervals
 
 ---
 
-## 📊 Formulas & Key Equations
+## Formulas & Key Equations
 
 ### Time Series Decomposition
 
@@ -712,15 +712,15 @@ $$\text{MAPE} = \frac{100\%}{n}\sum_{i=1}^n \left|\frac{y_i - \hat{y}_i}{y_i}\ri
 
 ---
 
-## ⚠️ Common Exam Traps
+## Common Exam Traps
 
 1. **Confusing MA smoothing with the MA model.**
 *Moving average smoothing* = rolling window average for trend visualization.
 *MA model (in ARIMA)* = regression on **past forecast errors** ε_{t-q}, not past values.
 
 2. **Using ACF for AR order and PACF for MA order (backwards!).**
-✅ **ACF** → determines **q** (MA order): cuts off after lag q
-✅ **PACF** → determines **p** (AR order): cuts off after lag p
+ **ACF** → determines **q** (MA order): cuts off after lag q
+ **PACF** → determines **p** (AR order): cuts off after lag p
 
 3. **Forgetting to check stationarity before fitting AR or MA models.**
 Both AR and MA require stationary data. Always run ADF test first.
@@ -735,8 +735,8 @@ After differencing, re-run ADF. If still p ≥ 0.05, apply another difference (d
 Pandas resampling and plotting only work correctly if the index is a `DatetimeIndex`.
 
 7. **Confusing p-value interpretation in ADF test.**
-**Low p-value (< 0.05)** = stationary ✅
-**High p-value (≥ 0.05)** = non-stationary ❌ → needs differencing
+**Low p-value (< 0.05)** = stationary 
+**High p-value (≥ 0.05)** = non-stationary  → needs differencing
 
 8. **Double-differencing by accident.**
 Setting `order=(p, 1, q)` in ARIMA automatically applies differencing internally.
@@ -755,7 +755,7 @@ Cyclical: **irregular** multi-year swings (economic cycles)
 
 ---
 
-## 🧪 Practice Questions
+## Practice Questions
 
 ---
 
@@ -837,7 +837,7 @@ print(df['diff'].iloc[0])
 
 ---
 
-### ✅ Answer Key
+### Answer Key
 
 | Q | Answer | Explanation |
 |---|--------|-------------|
@@ -854,7 +854,7 @@ print(df['diff'].iloc[0])
 
 ---
 
-## 📎 Quick Reference Cheat Sheet
+## Quick Reference Cheat Sheet
 
 ```text
 TIME SERIES MODELLING WORKFLOW
@@ -869,8 +869,8 @@ TIME SERIES MODELLING WORKFLOW
 
 3. CHECK STATIONARITY
    └─ adfuller(series)
-      p < 0.05   →  stationary ✅  (proceed)
-      p >= 0.05  →  non-stationary ❌  (difference first)
+      p < 0.05   →  stationary   (proceed)
+      p >= 0.05  →  non-stationary   (difference first)
 
 4. DIFFERENCE (if needed)
    └─ series.diff(1)  →  re-run ADF
@@ -886,8 +886,8 @@ TIME SERIES MODELLING WORKFLOW
    └─ SARIMAX(series, order=(...), seasonal_order=(P,D,Q,s)).fit()
 
 7. DIAGNOSE RESIDUALS
-   └─ plot_acf(residuals)  → no significant spikes = good ✅
-   └─ QQ-plot              → approximately normal = good ✅
+   └─ plot_acf(residuals)  → no significant spikes = good 
+   └─ QQ-plot              → approximately normal = good 
 
 8. FORECAST & EVALUATE
    └─ result.forecast(steps=n)
@@ -902,8 +902,8 @@ MODEL SELECTION CHEAT SHEET
   Series has seasonality             →  use SARIMA(P,D,Q,s)
 
 ADF TEST QUICK RULE
-  p-value < 0.05   →  STATIONARY   ✅
-  p-value >= 0.05  →  DIFFERENCE   🔄
+  p-value < 0.05   →  STATIONARY   
+  p-value >= 0.05  →  DIFFERENCE   
 
 ARIMA PARAMETER NOTATION
   ARIMA(p, d, q)
@@ -920,47 +920,48 @@ ERROR METRICS (lower = better)
   MAE  = mean|actual - pred|               → robust, same units
   RMSE = sqrt(mean(actual-pred)²)          → penalizes big errors
   MAPE = mean|actual-pred|/|actual| × 100% → %, scale-free
-         ⚠️ breaks when actual = 0
+          breaks when actual = 0
 ```
 
 ## Multiple Choice Questions
 
 1. A time series is considered `Stationary` when:
-- **A)** Its mean and variance are constant over time
-- **B)** It contains a strong upward trend
-- **C)** It has obvious seasonal cycles
-- **D)** The observations are randomly shuffled
+    - **A)** Its mean and variance are constant over time
+    - **B)** It contains a strong upward trend
+    - **C)** It has obvious seasonal cycles
+    - **D)** The observations are randomly shuffled
 
 2. In an ARIMA(p, d, q) model, what does the parameter `d` represent?
-- **A)** The autoregressive order
-- **B)** The degree of differencing required to make the series stationary
-- **C)** The moving average order
-- **D)** The seasonal period length
+    - **A)** The autoregressive order
+    - **B)** The degree of differencing required to make the series stationary
+    - **C)** The moving average order
+    - **D)** The seasonal period length
 
 3. When determining the parameters for an ARIMA model, a sharp cut-off in the ACF plot suggests:
-- **A)** The AR order (p)
-- **B)** The MA order (q)
-- **C)** The differencing order (d)
-- **D)** The seasonality (s)
+    - **A)** The AR order (p)
+    - **B)** The MA order (q)
+    - **C)** The differencing order (d)
+    - **D)** The seasonality (s)
 
 4. The Augmented Dickey-Fuller (ADF) test is used to:
-- **A)** Determine the optimal learning rate
-- **B)** Test whether a time series is stationary or has a unit root
-- **C)** Detect outliers in the dataset
-- **D)** Impute missing values
+    - **A)** Determine the optimal learning rate
+    - **B)** Test whether a time series is stationary or has a unit root
+    - **C)** Detect outliers in the dataset
+    - **D)** Impute missing values
 
 5. What is the fundamental difference between an AR model and an MA model?
-- **A)** AR uses past values of the series; MA uses past forecast errors
-- **B)** AR is used for forecasting; MA is used for clustering
-- **C)** AR uses past forecast errors; MA uses past values of the series
-- **D)** AR requires non-stationary data; MA requires stationary data
+    - **A)** AR uses past values of the series; MA uses past forecast errors
+    - **B)** AR is used for forecasting; MA is used for clustering
+    - **C)** AR uses past forecast errors; MA uses past values of the series
+    - **D)** AR requires non-stationary data; MA requires stationary data
 
 ### Answer Key & Explanations
-1. **A)** Stationarity implies statistical properties like mean and variance do not change over time.
-2. **B)** `d` stands for Integrated, the number of differencing steps applied.
-3. **B)** The Autocorrelation Function (ACF) plot cutting off helps identify the MA order (q). PACF identifies AR (p).
-4. **B)** A low p-value (<0.05) in ADF rejects the null hypothesis of a unit root, implying stationarity.
-5. **A)** Autoregressive (AR) regresses on its own lags. Moving Average (MA) regresses on past error terms (noise).
+
+1. **A**. Stationarity implies statistical properties like mean and variance do not change over time.
+2. **B**. `d` stands for Integrated, the number of differencing steps applied.
+3. **B**. The Autocorrelation Function (ACF) plot cutting off helps identify the MA order (q). PACF identifies AR (p).
+4. **B**. A low p-value (<0.05) in ADF rejects the null hypothesis of a unit root, implying stationarity.
+5. **A**. Autoregressive (AR) regresses on its own lags. Moving Average (MA) regresses on past error terms (noise).
 
 ## References & Navigation
 

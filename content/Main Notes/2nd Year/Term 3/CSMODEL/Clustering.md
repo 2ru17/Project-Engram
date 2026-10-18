@@ -425,7 +425,7 @@ if len(set(db_labels[valid_mask])) > 1:
 
 ---
 
-## ⚠ Common Exam Traps
+## Common Exam Traps
 
 * **Centroid vs. Clustroid Definition:**
   * A **Centroid** is an artificial point computed as the mean of points (valid only in Euclidean space).
@@ -531,41 +531,42 @@ Which configuration represents the best clustering result and why? A) Configurat
 ## Multiple Choice Questions
 
 1. Which distance metric is best suited for finding clusters of arbitrary shapes?
-- **A)** K-Means
-- **B)** DBSCAN
-- **C)** Hierarchical Agglomerative
-- **D)** Gaussian Mixture Models
+    - **A)** K-Means
+    - **B)** DBSCAN
+    - **C)** Hierarchical Agglomerative
+    - **D)** Gaussian Mixture Models
 
 2. What does the Silhouette Score evaluate?
-- **A)** The number of clusters to choose
-- **B)** The compactness and separation of clusters
-- **C)** The time complexity of the clustering algorithm
-- **D)** The density of the noise points
+    - **A)** The compactness and separation of clusters
+    - **B)** The number of clusters to choose
+    - **C)** The time complexity of the clustering algorithm
+    - **D)** The density of the noise points
 
 3. In K-Means clustering, what is the role of the `centroid`?
-- **A)** It acts as an outlier detection threshold
-- **B)** It is the mean position of all points in a cluster
-- **C)** It connects the two closest points in different clusters
-- **D)** It is a hyperparameter for the number of clusters
+    - **A)** It acts as an outlier detection threshold
+    - **B)** It connects the two closest points in different clusters
+    - **C)** It is the mean position of all points in a cluster
+    - **D)** It is a hyperparameter for the number of clusters
 
 4. Which algorithm does not require the user to specify the number of clusters in advance?
-- **A)** K-Means
-- **B)** Mini-Batch K-Means
-- **C)** DBSCAN
-- **D)** Spectral Clustering
+    - **A)** K-Means
+    - **B)** Mini-Batch K-Means
+    - **C)** Spectral Clustering
+    - **D)** DBSCAN
 
 5. In hierarchical clustering, what is a dendrogram used for?
-- **A)** Visualizing the feature space
-- **B)** Representing the arrangement of clusters produced by the algorithm
-- **C)** Evaluating the Silhouette score
-- **D)** Calculating Euclidean distance
+    - **A)** Visualizing the feature space
+    - **B)** Representing the arrangement of clusters produced by the algorithm
+    - **C)** Evaluating the Silhouette score
+    - **D)** Calculating Euclidean distance
 
 ### Answer Key & Explanations
-1. **B)** DBSCAN is a density-based algorithm that can find arbitrarily shaped clusters.
-2. **B)** Silhouette score measures how similar an object is to its own cluster compared to other clusters.
-3. **B)** The centroid is the center (mean) of a cluster.
-4. **C)** DBSCAN determines clusters based on density parameters (eps and min_samples), not a predefined cluster count.
-5. **B)** A dendrogram is a tree-like diagram that records the sequences of merges or splits.
+
+1. **B**. DBSCAN is a density-based algorithm that can find arbitrarily shaped clusters.
+2. **A**. Silhouette score measures how similar an object is to its own cluster compared to other clusters.
+3. **C**. The centroid is the center (mean) of a cluster.
+4. **D**. DBSCAN determines clusters based on density parameters (eps and min_samples), not a predefined cluster count.
+5. **B**. A dendrogram is a tree-like diagram that records the sequences of merges or splits.
 
 ## References & Navigation
 

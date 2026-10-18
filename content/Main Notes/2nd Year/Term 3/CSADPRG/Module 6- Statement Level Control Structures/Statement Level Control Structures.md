@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Conceptual]] #[[Statement Level Control Structures]]
+**Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Conceptual]] #[[Statement Level Control Structures]]
 
 ## Overview
 Control statements are fundamentally necessary because simple variable assignment is not enough to fully automate computation. They allow a program to choose different execution paths (conditionals) or repeat statements (loops). Together, a control statement and the statements it governs form a control structure. The design and inclusion of these structures in programming languages are an ongoing balance between writability (which favors more specialized structures) and readability.
@@ -123,76 +123,77 @@ od
 ## Multiple Choice Questions
 
 1. What do a control statement and the statements it governs form together?
-- **A)** Iterative Statement
-- **B)** Guarded Command
-- **C)** Control Structure
-- **D)** Selection Statement
+    - **A)** Iterative Statement
+    - **B)** Guarded Command
+    - **C)** Control Structure
+    - **D)** Selection Statement
 
 2. Which statement provides a means of choosing between two or more execution paths?
-- **A)** Iterative Statement
-- **B)** Control Structure
-- **C)** Guarded Command
-- **D)** Selection Statement
+    - **A)** Iterative Statement
+    - **B)** Control Structure
+    - **C)** Guarded Command
+    - **D)** Selection Statement
 
 3. What design issue is typically addressed by using block braces or specific end markers like `end` or `fi` in two-way selection?
-- **A)** The dangling else problem
-- **B)** Non-determinism
-- **C)** Automatic exit
-- **D)** Multiple-selection representation
+    - **A)** The dangling else problem
+    - **B)** Non-determinism
+    - **C)** Automatic exit
+    - **D)** Multiple-selection representation
 
 4. In multiple-selection statements, how does C differ from C# regarding flow restriction?
-- **A)** C requires automatic exit, while C# requires `break`
-- **B)** C requires `break` to exit a segment, while C# provides automatic exit
-- **C)** C does not allow multiple selection, while C# does
-- **D)** C# raises a runtime exception, while C defaults to the next case
+    - **A)** C requires automatic exit, while C# requires `break`
+    - **B)** C requires `break` to exit a segment, while C# provides automatic exit
+    - **C)** C does not allow multiple selection, while C# does
+    - **D)** C# raises a runtime exception, while C defaults to the next case
 
 5. Which iteration control mechanism evaluates the loop completion condition *after* the body is executed?
-- **A)** Pretest
-- **B)** Logical
-- **C)** Counting
-- **D)** Posttest
+    - **A)** Pretest
+    - **B)** Logical
+    - **C)** Counting
+    - **D)** Posttest
 
 6. How is iteration implemented in pure functional languages?
-- **A)** Using `for` loops
-- **B)** Using `do...while` loops
-- **C)** Using iterators
-- **D)** Using recursion
+    - **A)** Using `for` loops
+    - **B)** Using `do...while` loops
+    - **C)** Using iterators
+    - **D)** Using recursion
 
 7. Which control structure was proposed by Edsger Dijkstra in 1975?
-- **A)** Selection Commands
-- **B)** Guarded Commands
-- **C)** Two-way Iterations
-- **D)** Unconditional Branches
+    - **A)** Selection Commands
+    - **B)** Guarded Commands
+    - **C)** Two-way Iterations
+    - **D)** Unconditional Branches
 
 8. What happens in a Guarded Command if none of the guards are true?
-- **A)** It defaults to the first guard
-- **B)** It raises a runtime exception
-- **C)** It loops infinitely
-- **D)** It chooses non-deterministically
+    - **A)** It defaults to the first guard
+    - **B)** It raises a runtime exception
+    - **C)** It loops infinitely
+    - **D)** It chooses non-deterministically
 
 9. Why is the unrestricted `goto` statement generally considered dangerous?
-- **A)** Because it requires block braces
-- **B)** Because it evaluates boolean expressions randomly
-- **C)** Because unrestricted use makes programs extremely difficult to read
-- **D)** Because it only supports pure functional languages
+    - **A)** Because it requires block braces
+    - **B)** Because it evaluates boolean expressions randomly
+    - **C)** Because unrestricted use makes programs extremely difficult to read
+    - **D)** Because it only supports pure functional languages
 
 10. Which iteration mechanism is typically controlled by traversing elements until none remain?
-- **A)** Counting iteration
-- **B)** Iteration based on Data Structures
-- **C)** User-located iteration
-- **D)** Guarded Iteration
+    - **A)** Counting iteration
+    - **B)** Iteration based on Data Structures
+    - **C)** User-located iteration
+    - **D)** Guarded Iteration
 
 ### Answer Key & Explanations
-1. **C** - A control structure is defined as a control statement combined with the collection of statements whose execution it controls.
-2. **D** - A selection statement is a control structure that allows a program to choose between alternate paths of execution.
-3. **A** - The dangling else problem occurs when nested selectors are ambiguous, and it is resolved using specific block markers.
-4. **B** - In C, flow falls through unless a `break` is explicitly used, whereas C# automatically exits a switch case.
-5. **D** - Posttest loops, like `do...while`, evaluate the condition after execution, guaranteeing at least one run.
-6. **D** - Pure functional languages lack variables for standard loops, so iteration is instead handled using recursion.
-7. **B** - Guarded Commands were proposed by Dijkstra in 1975 to introduce non-determinism and evaluate all boolean guards.
-8. **B** - In a Guarded Command, if multiple guards are true, a statement is chosen non-deterministically; if none are true, it raises a runtime exception.
-9. **C** - Unrestricted unconditional branching makes control flow hard to follow, reducing program readability.
-10. **B** - Iteration based on data structures operates over the elements in a collection, often using an iterator to traverse them.
+
+1. **C**. A control structure is defined as a control statement combined with the collection of statements whose execution it controls.
+2. **D**. A selection statement is a control structure that allows a program to choose between alternate paths of execution.
+3. **A**. The dangling else problem occurs when nested selectors are ambiguous, and it is resolved using specific block markers.
+4. **B**. In C, flow falls through unless a `break` is explicitly used, whereas C# automatically exits a switch case.
+5. **D**. Posttest loops, like `do...while`, evaluate the condition after execution, guaranteeing at least one run.
+6. **D**. Pure functional languages lack variables for standard loops, so iteration is instead handled using recursion.
+7. **B**. Guarded Commands were proposed by Dijkstra in 1975 to introduce non-determinism and evaluate all boolean guards.
+8. **B**. In a Guarded Command, if multiple guards are true, a statement is chosen non-deterministically; if none are true, it raises a runtime exception.
+9. **C**. Unrestricted unconditional branching makes control flow hard to follow, reducing program readability.
+10. **B**. Iteration based on data structures operates over the elements in a collection, often using an iterator to traverse them.
 
 ## References & Navigation
 

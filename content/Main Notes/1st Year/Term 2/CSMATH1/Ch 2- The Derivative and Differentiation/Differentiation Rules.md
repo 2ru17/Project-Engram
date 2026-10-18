@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
+**Tags:** #[[Computer Science]] #[[CSMATH1]] #[[Problem Solving]]
 
 ---
 
@@ -71,77 +71,43 @@ Factoring $x$ from the inner term: $f'(x) = 8(x+1)(x(x+2))^3 = 8x^3(x+1)(x+2)^3$
 
 ## Multiple Choice Questions
 
-1. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+1. According to the Product Rule, what is the derivative $\frac{d}{dx}[f(x)g(x)]$?
+    - **A)** $f'(x)g'(x)$
+    - **B)** $f'(x)g(x) + f(x)g'(x)$
+    - **C)** $f'(x)g(x) - f(x)g'(x)$
+    - **D)** $\frac{f'(x)}{g'(x)}$
 
-2. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+2. Using the Quotient Rule, find $f'(x)$ for $f(x) = \frac{2x + 1}{x - 3}$.
+    - **A)** $2$
+    - **B)** $\frac{4x - 5}{(x - 3)^2}$
+    - **C)** $\frac{-7}{(x - 3)^2}$
+    - **D)** $\frac{5}{(x - 3)^2}$
 
-3. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+3. Using the Chain Rule, what is the derivative of $y = (3x^2 - 5)^4$?
+    - **A)** $4(3x^2 - 5)^3$
+    - **B)** $4(6x)^3$
+    - **C)** $24x(3x^2 - 5)^3$
+    - **D)** $12x(3x^2 - 5)^4$
 
-4. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+4. Given $f(1) = 3$, $f'(1) = -2$, $g(1) = 4$, and $g'(1) = 5$, what is $(f \cdot g)'(1)$?
+    - **A)** $-10$
+    - **B)** $7$
+    - **C)** $23$
+    - **D)** $-7$
 
-5. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-6. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-7. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-8. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-9. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
-
-10. What geometric or conceptual interpretation best describes Differentiation Rules?
-- **A)** It illustrates the fundamental behavior described in the theorem.
-- **B)** It only applies to discrete points on a graph.
-- **C)** It is a static property without rate of change.
-- **D)** It invalidates the continuity of the function.
+5. What is the derivative of $h(x) = 4x^5 - \frac{3}{x^2} + 7\sqrt{x} - \pi^2$?
+    - **A)** $20x^4 + \frac{6}{x^3} + \frac{7}{2\sqrt{x}}$
+    - **B)** $20x^4 - \frac{6}{x^3} + \frac{7}{2\sqrt{x}} - 2\pi$
+    - **C)** $20x^4 + \frac{3}{2x} + 7x^{-1/2}$
+    - **D)** $4x^4 + \frac{6}{x^3} - 2\pi$
 
 ### Answer Key & Explanations
-1. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
-2. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
-3. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
-4. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
-5. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
-6. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
-7. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
-8. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
-9. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
-10. **A)** This conceptually relates to the core principles of Differentiation Rules without relying on rote computation.
+
+1. **B**. The derivative of a product is the derivative of the first times the second plus the first times the derivative of the second: $(fg)' = f'g + fg'$. It is NOT the product of the derivatives (A).
+2. **C**. By the Quotient Rule $\frac{u'v - uv'}{v^2}$: $f'(x) = \frac{2(x - 3) - (2x + 1)(1)}{(x - 3)^2} = \frac{2x - 6 - 2x - 1}{(x - 3)^2} = \frac{-7}{(x - 3)^2}$.
+3. **C**. Differentiate the outer power $u^4 \to 4u^3$ and multiply by the derivative of the inner function $u = 3x^2 - 5 \to u' = 6x$: $4(3x^2 - 5)^3 \cdot (6x) = 24x(3x^2 - 5)^3$.
+4. **B**. By the Product Rule at $x = 1$: $f'(1)g(1) + f(1)g'(1) = (-2)(4) + (3)(5) = -8 + 15 = 7$.
+5. **A**. Rewrite as $4x^5 - 3x^{-2} + 7x^{1/2} - \pi^2$. Applying the Power Rule term-by-term gives $20x^4 + 6x^{-3} + \frac{7}{2}x^{-1/2} - 0$ (since $\pi^2$ is a constant, its derivative is $0$, not $2\pi$).
 
 ## References & Navigation
 

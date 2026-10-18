@@ -11,111 +11,74 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Random Variables]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Random Variables]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Random Variables**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+**Random Variables** are classified into **Discrete** and **Continuous** families based on the structure of their range (support) $R_X$, and can be analyzed jointly using **bivariate/multivariate distributions**, **covariance**, and **linear combinations**.
 
 ## Key Definitions
-- **Random Variables**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Random Variables** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+| Feature | Discrete Random Variable | Continuous Random Variable |
+| :--- | :--- | :--- |
+| **Support $R_X$** | Finite or countably infinite ($\{x_1, x_2, \dots\}$) | Uncountable interval(s) of $\mathbb{R}$ (e.g., $[0, \infty)$ or $(-\infty, \infty)$) |
+| **Distribution Function** | PMF $p(x) = P(X = x)$ | PDF $f(x) \ge 0$ with $P(a \le X \le b) = \int_a^b f(x)\,dx$ |
+| **Point Probability $P(X = c)$** | $p(c) \ge 0$ (can be strictly positive) | Always $0$ ($\int_c^c f(x)\,dx = 0$) |
+| **Expected Value $E[X]$** | $\sum_{x \in R_X} x \, p(x)$ | $\int_{-\infty}^{\infty} x \, f(x)\,dx$ |
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+- **Linear Scaling of Mean & Variance:** For constants $a, b \in \mathbb{R}$:
+  $$E[aX + b] = aE[X] + b, \qquad \text{Var}(aX + b) = a^2 \text{Var}(X)$$
+- **Variance of a Sum:** $\text{Var}(X \pm Y) = \text{Var}(X) + \text{Var}(Y) \pm 2\text{Cov}(X, Y)$. If $X$ and $Y$ are **independent**, $\text{Cov}(X, Y) = 0$, so $\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y)$ **and** $\text{Var}(X - Y) = \text{Var}(X) + \text{Var}(Y)$.
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Random Variables**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+## Worked Example
 
-By following these structured steps, errors and common pitfalls can be minimized.
+**Problem:** Let $X$ and $Y$ be independent random variables with $E[X] = 10, \text{Var}(X) = 4$ and $E[Y] = 6, \text{Var}(Y) = 9$. Find $E[2X - Y + 3]$ and $\text{Var}(2X - Y + 3)$.
 
-## Summary & Key Takeaways
-- **Random Variables** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- $E[2X - Y + 3] = 2E[X] - E[Y] + 3 = 2(10) - 6 + 3 = 17$.
+- $\text{Var}(2X - Y + 3) = 2^2 \text{Var}(X) + (-1)^2 \text{Var}(Y) + 0 = 4(4) + 1(9) = 16 + 9 = 25$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Which of the following is a **continuous** random variable rather than a discrete random variable?
+    - **A)** The number of HTTP requests arriving at a web server in one minute.
+    - **B)** The exact CPU execution time (in milliseconds, measured on a real continuum $[0, \infty)$) required to complete a database query.
+    - **C)** The number of defective RAM sticks in a box of $50$.
+    - **D)** The number of heads obtained in $100$ coin flips.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. If $\text{Var}(X) = 5$, what is $\text{Var}(3X + 10)$?
+    - **A)** $15$
+    - **B)** $25$
+    - **C)** $45$
+    - **D)** $55$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Suppose $X$ and $Y$ are **independent** random variables with $\text{Var}(X) = 4$ and $\text{Var}(Y) = 9$. What is $\text{Var}(X - Y)$?
+    - **A)** $-5$
+    - **B)** $5$
+    - **C)** $13$
+    - **D)** $0$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Why does adding a constant shift $+b$ to a random variable ($X + b$) leave its variance completely unchanged ($\text{Var}(X + b) = \text{Var}(X)$)?
+    - **A)** Because shifting every value by $+b$ also shifts the mean $\mu$ by $+b$, so the deviation $(X + b) - (\mu + b) = X - \mu$ (spread around the mean) is identical.
+    - **B)** Because $b$ is always equal to $0$.
+    - **C)** Because variance can be negative.
+    - **D)** Because $E[X + b] = E[X]$.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. For a continuous random variable $X$ with PDF $f(x)$, which statement about $f(x)$ is TRUE?
+    - **A)** $f(x)$ must always satisfy $f(x) \le 1$ because $f(x) = P(X = x)$.
+    - **B)** $f(x)$ is a probability density (height of the curve), so $f(x)$ can exceed $1$ (e.g., Uniform on $[0, 0.5]$ has $f(x) = 2$), provided $f(x) \ge 0$ and the total area $\int_{-\infty}^{\infty} f(x)\,dx = 1$.
+    - **C)** $f(x)$ can be negative as long as the integral is $1$.
+    - **D)** $P(a \le X \le b) = f(b) - f(a)$.
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Time measured on an uncountable real interval $[0, \infty)$ is continuous, whereas counts of requests, defects, or heads take values in countable integer sets ($\{0, 1, 2, \dots\}$) and are discrete.
+2. **C**. By the variance scaling property $\text{Var}(aX + b) = a^2 \text{Var}(X)$, $\text{Var}(3X + 10) = 3^2 \times 5 = 9 \times 5 = 45$.
+3. **C**. For independent variables, $\text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)$. With $a = 1, b = -1$, $\text{Var}(X - Y) = (1)^2(4) + (-1)^2(9) = 4 + 9 = 13$. Uncertainty adds even when subtracting independent noisy quantities!
+4. **A**. Variance measures dispersion around the mean; translating the entire distribution rigidly along the number line by $+b$ does not change its spread.
+5. **B**. Unlike a PMF, a PDF $f(x)$ is not a probability itself—only its integral $\int_a^b f(x)\,dx$ is a probability. On a narrow interval like $[0, 0.5]$, $f(x) = 2 > 1$ while $\int_0^{0.5} 2\,dx = 1$.
 
 ## References & Navigation
 

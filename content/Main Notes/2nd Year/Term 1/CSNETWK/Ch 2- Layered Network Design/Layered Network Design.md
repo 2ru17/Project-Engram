@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Layered Network Design]] #[[Conceptual]]
+**Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Layered Network Design]] #[[Conceptual]]
 
 ---
 
@@ -64,78 +64,43 @@ Decapsulation occurs at the destination, stripping the respective headers layer 
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "Defines specific user-oriented services (e.g., _____ for web, SMTP for email)."?
-- **A)** HTTP
-- **B)** Protocol
-- **C)** Router
-- **D)** Network
+1. In the 5-layer Internet protocol stack, what is the correct top-to-bottom order of layers and their corresponding Protocol Data Units (PDUs)?
+    - **A)** Application (Message) $\to$ Transport (Segment) $\to$ Network (Datagram) $\to$ Link (Frame) $\to$ Physical (Bit)
+    - **B)** Application (Frame) $\to$ Network (Segment) $\to$ Transport (Datagram) $\to$ Link (Bit) $\to$ Physical (Message)
+    - **C)** Physical (Bit) $\to$ Network (Frame) $\to$ Link (Datagram) $\to$ Transport (Segment) $\to$ Application (Message)
+    - **D)** Application (Packet) $\to$ Session (Frame) $\to$ Transport (Bit) $\to$ Network (Segment) $\to$ Physical (Message)
 
-2. Which word completes the following sentence from the text: "**Network Layer (Layer 3):** Handles end-to-end routing and _____ between heterogeneous networks using logical addressing (e.g., IP)."?
-- **A)** Router
-- **B)** switching
-- **C)** Network
-- **D)** Protocol
+2. What happens during **encapsulation** as data travels down the protocol stack at the sending host?
+    - **A)** Each layer strips off the header from the layer above before transmitting.
+    - **B)** Each layer takes the PDU from the layer above as its payload and prepends its own layer-specific header (and trailer at the Link layer) to form a new PDU.
+    - **C)** The Physical layer encrypts the Application message directly without Transport or Network headers.
+    - **D)** Routers add new Transport layer headers at every hop.
 
-3. Which word completes the following sentence from the text: "**Physical Layer (Layer 1):** Transmits raw bit streams over a _____ medium, translating bits into signals over wires, connectors, etc."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** physical
+3. According to the **End-to-End Principle** and standard Internet layering, which layers are processed by an intermediate **Layer-3 core router** versus a **Layer-2 link-layer switch**?
+    - **A)** Both routers and switches process all 5 layers up to the Application layer.
+    - **B)** A Layer-2 switch processes up to Layer 2 (Physical + Link), whereas a Layer-3 router processes up to Layer 3 (Physical + Link + Network); neither processes Transport (Layer 4) or Application (Layer 5) headers in the normal data plane.
+    - **C)** A Layer-2 switch processes Layer 3 IP addresses, whereas a Layer-3 router only processes MAC addresses.
+    - **D)** Routers only process the Physical layer.
 
-4. Which word completes the following sentence from the text: "**Application Layer (Layer 7):** _____ with end-user applications."?
-- **A)** Router
-- **B)** Protocol
-- **C)** Network
-- **D)** Interfaces
+4. Which two layers exist in the **7-layer ISO/OSI Reference Model** but are omitted as separate layers in the **5-layer Internet (TCP/IP) stack** (their functions being absorbed into the Application layer if needed)?
+    - **A)** Network and Data Link layers
+    - **B)** Transport and Physical layers
+    - **C)** Presentation and Session layers
+    - **D)**Subnetwork and Convergence layers
 
-5. Which word completes the following sentence from the text: "**Data Link Layer (Layer 2):** Transfers data across a _____ link, handling error detection, framing, and flow control."?
-- **A)** Protocol
-- **B)** physical
-- **C)** Network
-- **D)** Router
-
-6. Which word completes the following sentence from the text: "It is comprised of 7 layers, offering clear advantages: functional _____ simpler design, and independent technology updates without affecting other layers."?
-- **A)** Router
-- **B)** Protocol
-- **C)** isolation
-- **D)** Network
-
-7. Which word completes the following sentence from the text: "**Network Layer:** Encapsulates the segment with a _____ header ($H_n$) to create a **Datagram**."?
-- **A)** Router
-- **B)** Network
-- **C)** network
-- **D)** Protocol
-
-8. Which word completes the following sentence from the text: "**Transport Layer (Layer 4):** Ensures error-free _____ complete delivery of data end-to-end."?
-- **A)** Network
-- **B)** Router
-- **C)** and
-- **D)** Protocol
-
-9. Which word completes the following sentence from the text: "Decapsulation occurs at the destination, stripping the respective _____ layer by layer as data moves upward."?
-- **A)** Router
-- **B)** headers
-- **C)** Network
-- **D)** Protocol
-
-10. Which word completes the following sentence from the text: "**Application Layer:** Creates _____ core data/message ($M$)."?
-- **A)** Router
-- **B)** Network
-- **C)** the
-- **D)** Protocol
-
+5. What is the primary architectural advantage of organizing network protocols into modular **layers**?
+    - **A)** It eliminates all propagation delay on physical links.
+    - **B)** It enforces separation of concerns: the internal implementation of one layer (e.g., swapping Wi-Fi for Fiber at Layer 1/2) can be changed without modifying the higher layers (Network, Transport, Application), as long as the service interface between adjacent layers remains unchanged.
+    - **C)** It reduces total packet size by removing all headers.
+    - **D)** It allows every layer to directly modify the internal state of non-adjacent layers.
 
 ### Answer Key & Explanations
-1. **A)** HTTP completes the sentence: Defines specific user-oriented services (e.g., HTT...
-2. **B)** switching completes the sentence: **Network Layer (Layer 3):** Handles end-to-end ro...
-3. **D)** physical completes the sentence: **Physical Layer (Layer 1):** Transmits raw bit st...
-4. **D)** Interfaces completes the sentence: **Application Layer (Layer 7):** Interfaces with e...
-5. **B)** physical completes the sentence: **Data Link Layer (Layer 2):** Transfers data acro...
-6. **C)** isolation completes the sentence: It is comprised of 7 layers, offering clear advant...
-7. **C)** network completes the sentence: **Network Layer:** Encapsulates the segment with a...
-8. **C)** and completes the sentence: **Transport Layer (Layer 4):** Ensures error-free ...
-9. **B)** headers completes the sentence: Decapsulation occurs at the destination, stripping...
-10. **C)** the completes the sentence: **Application Layer:** Creates the core data/messa...
+
+1. **A**. From top to bottom, the 5-layer Internet stack consists of Application (Message), Transport (Segment/User Datagram), Network (IP Datagram), Link (Frame), and Physical (Bits on the wire).
+2. **B**. Encapsulation wraps the upper-layer PDU as payload and attaches the current layer's control header (e.g., $H_T$ at Layer 4, $H_N$ at Layer 3, $H_L$ at Layer 2).
+3. **B**. Link-layer switches forward frames using Layer-2 MAC headers (Layers 1–2); routers decapsulate frames to inspect Layer-3 IP headers (Layers 1–3); Layers 4 and 5 run end-to-end on the source and destination hosts.
+4. **C**. The 7-layer OSI model includes Session (Layer 5) and Presentation (Layer 6) between Transport and Application; in TCP/IP, session management and data encoding/TLS are handled within the Application layer.
+5. **B**. Layering provides clean abstraction boundaries and modularity so hardware or protocol upgrades at one layer do not break the rest of the protocol stack.
 
 ## References & Navigation
 

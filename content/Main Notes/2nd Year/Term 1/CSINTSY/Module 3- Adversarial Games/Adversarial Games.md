@@ -108,41 +108,42 @@ flowchart TD
 ## Multiple Choice Questions
 
 1. Which algorithm is best suited for evaluating a "Stochastic Opponent" that makes moves based on a probability distribution?
-- **A)** Minimax
-- **B)** $\alpha\beta$-Pruning
-- **C)** Expectimax
-- **D)** Depth-First Search
+    - **A)** Minimax
+    - **B)** $\alpha\beta$-Pruning
+    - **C)** Expectimax
+    - **D)** Depth-First Search
 
 2. In a 2-Player Zero-Sum Game, how does an "Optimally Smart Opponent" make decisions?
-- **A)** By maximizing the agent's expected utility.
-- **B)** By randomly selecting moves with equal probability.
-- **C)** By selecting moves that minimize the agent's expected utility.
-- **D)** By solely minimizing their own potential score.
+    - **A)** By maximizing the agent's expected utility.
+    - **B)** By randomly selecting moves with equal probability.
+    - **C)** By selecting moves that minimize the agent's expected utility.
+    - **D)** By solely minimizing their own potential score.
 
 3. What is the time complexity of the simple Minimax algorithm if the branching factor is $b$ and depth is $d$?
-- **A)** $O(b \times d)$
-- **B)** $O(d^b)$
-- **C)** $O(b^d)$
-- **D)** $O(b \log d)$
+    - **A)** $O(b \times d)$
+    - **B)** $O(d^b)$
+    - **C)** $O(b^d)$
+    - **D)** $O(b \log d)$
 
 4. What is the primary purpose of $\alpha\beta$-Pruning in adversarial game search?
-- **A)** To convert a stochastic opponent into an optimally smart opponent.
-- **B)** To reduce the number of nodes evaluated by ignoring branches that won't affect the final decision.
-- **C)** To ensure the algorithm always expands the entire game tree.
-- **D)** To calculate the exact probability distribution of the opponent's moves.
+    - **A)** To convert a stochastic opponent into an optimally smart opponent.
+    - **B)** To reduce the number of nodes evaluated by ignoring branches that won't affect the final decision.
+    - **C)** To ensure the algorithm always expands the entire game tree.
+    - **D)** To calculate the exact probability distribution of the opponent's moves.
 
 5. During $\alpha\beta$-Pruning, under what condition can a branch be safely pruned?
-- **A)** When the known $\beta$ is greater than $\alpha$.
-- **B)** When the known $\beta$ is less than or equal to $\alpha$.
-- **C)** When $\alpha$ reaches zero.
-- **D)** When the node is identified as a stochastic variable.
+    - **A)** When the known $\beta$ is greater than $\alpha$.
+    - **B)** When the known $\beta$ is less than or equal to $\alpha$.
+    - **C)** When $\alpha$ reaches zero.
+    - **D)** When the node is identified as a stochastic variable.
 
 ### Answer Key & Explanations
-1. **C)** Expectimax optimizes expected values when facing an opponent that acts according to a probability distribution rather than pure opposition.
-2. **C)** In a zero-sum game, an optimal opponent perfectly understands the game and actively selects moves that minimize the agent's utility (since doing so maximizes their own).
-3. **C)** The time complexity of Minimax is exponential, $O(b^d)$, making it computationally infeasible for complex games without pruning.
-4. **B)** $\alpha\beta$-Pruning speeds up Minimax by skipping (pruning) branches that are provably worse than previously examined options, reducing the number of evaluated nodes.
-5. **B)** Pruning occurs when $\beta \leq \alpha$, meaning the minimizing player already has a guaranteed option that is worse for the maximizer than the best option the maximizer has found elsewhere, making further exploration useless.
+
+1. **C**. Expectimax optimizes expected values when facing an opponent that acts according to a probability distribution rather than pure opposition.
+2. **C**. In a zero-sum game, an optimal opponent perfectly understands the game and actively selects moves that minimize the agent's utility (since doing so maximizes their own).
+3. **C**. The time complexity of Minimax is exponential, $O(b^d)$, making it computationally infeasible for complex games without pruning.
+4. **B**. $\alpha\beta$-Pruning speeds up Minimax by skipping (pruning) branches that are provably worse than previously examined options, reducing the number of evaluated nodes.
+5. **B**. Pruning occurs when $\beta \leq \alpha$, meaning the minimizing player already has a guaranteed option that is worse for the maximizer than the best option the maximizer has found elsewhere, making further exploration useless.
 
 ## References & Navigation
 

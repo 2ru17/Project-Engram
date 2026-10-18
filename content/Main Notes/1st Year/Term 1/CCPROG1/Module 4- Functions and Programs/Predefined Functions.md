@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CCPROG1]] #[[Code Snippets]] #[[Functions]] #[[C Libraries]] #[[M4]]
+**Tags:** #[[Computer Science]] #[[CCPROG1]] #[[Code Snippets]] #[[Functions]] #[[C Libraries]] #[[M4]]
 
 ---
 
@@ -75,76 +75,77 @@ In this example, the developer relies entirely on standard library code to handl
 ## Multiple Choice Questions
 
 1. What is a predefined function in C?
-- **A)** A function written by the user
-- **B)** A built-in function provided by the C compiler/standard library
-- **C)** A function that only handles variables
-- **D)** A function that returns no value
+    - **A)** A function written by the user
+    - **B)** A built-in function provided by the C compiler/standard library
+    - **C)** A function that only handles variables
+    - **D)** A function that returns no value
 
 2. Which preprocessor directive is used to include a standard library header file?
-- **A)** `#define`
-- **B)** `#import`
-- **C)** `#include`
-- **D)** `#using`
+    - **A)** `#define`
+    - **B)** `#import`
+    - **C)** `#include`
+    - **D)** `#using`
 
 3. The function `printf()` is declared in which header file?
-- **A)** `<math.h>`
-- **B)** `<stdlib.h>`
-- **C)** `<string.h>`
-- **D)** `<stdio.h>`
+    - **A)** `<math.h>`
+    - **B)** `<stdlib.h>`
+    - **C)** `<string.h>`
+    - **D)** `<stdio.h>`
 
 4. Which predefined function is used to calculate the square root of a number?
-- **A)** `sqroot()`
-- **B)** `power()`
-- **C)** `sqrt()`
-- **D)** `rt()`
+    - **A)** `sqroot()`
+    - **B)** `power()`
+    - **C)** `sqrt()`
+    - **D)** `rt()`
 
 5. What happens if you use a predefined function without including its corresponding header file?
-- **A)** The compiler will automatically find and include it
-- **B)** The code will compile but run slowly
-- **C)** The compiler will issue a warning or error regarding an implicit declaration or unknown identifier
-- **D)** The program will crash the operating system
+    - **A)** The compiler will automatically find and include it
+    - **B)** The code will compile but run slowly
+    - **C)** The compiler will issue a warning or error regarding an implicit declaration or unknown identifier
+    - **D)** The program will crash the operating system
 
 6. Which header file provides the `pow()` function?
-- **A)** `<stdio.h>`
-- **B)** `<math.h>`
-- **C)** `<ctype.h>`
-- **D)** `<time.h>`
+    - **A)** `<stdio.h>`
+    - **B)** `<math.h>`
+    - **C)** `<ctype.h>`
+    - **D)** `<time.h>`
 
 7. What does the "std" in `<stdio.h>` stand for?
-- **A)** Studio
-- **B)** Standard
-- **C)** Student
-- **D)** System
+    - **A)** Studio
+    - **B)** Standard
+    - **C)** Student
+    - **D)** System
 
 8. When compiling a program utilizing `<math.h>` on a GCC compiler, which flag is often required to link the math library?
-- **A)** `-lmath`
-- **B)** `-lm`
-- **C)** `-m`
-- **D)** `-math`
+    - **A)** `-lmath`
+    - **B)** `-lm`
+    - **C)** `-m`
+    - **D)** `-math`
 
 9. What does the `pow(base, exponent)` function return?
-- **A)** The base multiplied by the exponent
-- **B)** The base raised to the power of the exponent
-- **C)** The exponent raised to the power of the base
-- **D)** The square root of the base
+    - **A)** The base multiplied by the exponent
+    - **B)** The base raised to the power of the exponent
+    - **C)** The exponent raised to the power of the base
+    - **D)** The square root of the base
 
 10. What is a major benefit of using standard library functions?
-- **A)** They allow bypassing the compiler
-- **B)** They prevent the need for writing repetitive, complex code for basic operations
-- **C)** They make the source code invisible to users
-- **D)** They automatically fix logic errors in a program
+    - **A)** They allow bypassing the compiler
+    - **B)** They prevent the need for writing repetitive, complex code for basic operations
+    - **C)** They make the source code invisible to users
+    - **D)** They automatically fix logic errors in a program
 
 ### Answer Key & Explanations
-1. **B** - Predefined functions are included with the language environment to perform common tasks.
-2. **C** - `#include` instructs the preprocessor to insert the contents of the specified header.
-3. **D** - `<stdio.h>` handles Standard Input/Output operations, including `printf()`.
-4. **C** - `sqrt()` is the mathematically standard function provided by `<math.h>` for square roots.
-5. **C** - The compiler will not know the function's signature and will generate an implicit declaration warning/error.
-6. **B** - `<math.h>` handles advanced numerical operations like powers and trigonometry.
-7. **B** - It stands for Standard Input/Output.
-8. **B** - The linker requires the `-lm` flag to correctly attach the compiled math library binaries.
-9. **B** - The first argument is the base, and the second is the power it is raised to.
-10. **B** - Standard libraries save time and ensure highly optimized, thoroughly tested execution of standard tasks.
+
+1. **B**. Predefined functions are included with the language environment to perform common tasks.
+2. **C**. `#include` instructs the preprocessor to insert the contents of the specified header.
+3. **D**. `<stdio.h>` handles Standard Input/Output operations, including `printf()`.
+4. **C**. `sqrt()` is the mathematically standard function provided by `<math.h>` for square roots.
+5. **C**. The compiler will not know the function's signature and will generate an implicit declaration warning/error.
+6. **B**. `<math.h>` handles advanced numerical operations like powers and trigonometry.
+7. **B**. It stands for Standard Input/Output.
+8. **B**. The linker requires the `-lm` flag to correctly attach the compiled math library binaries.
+9. **B**. The first argument is the base, and the second is the power it is raised to.
+10. **B**. Standard libraries save time and ensure highly optimized, thoroughly tested execution of standard tasks.
 
 ## References & Navigation
 

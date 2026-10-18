@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
+**Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
 
 ---
 
@@ -35,37 +35,34 @@ _**Personal Note:**_ _The main diagonal runs from the top-left corner to the bot
 
 > TL;DR — The main diagonal consists of entries $a_{ii}$. It determines the trace, and is central to diagonal, triangular, and identity matrices.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Square Matrix]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. In a square matrix $A = [a_{ij}]$ of order $n$, how are the main diagonal entries defined?
-- **A)** The entries where $i > j$.
-- **B)** The entries where $i < j$.
-- **C)** The entries where $i = j$.
-- **D)** The entries in the first row and first column only.
+    - **A)** The entries where $i > j$.
+    - **B)** The entries where $i < j$.
+    - **C)** The entries where $i = j$.
+    - **D)** The entries in the first row and first column only.
 
 2. In a standard visual representation of a matrix, which direction does the main diagonal run?
-- **A)** From the top-right corner to the bottom-left corner.
-- **B)** From the top-left corner to the bottom-right corner.
-- **C)** Horizontally across the middle row.
-- **D)** Vertically down the middle column.
+    - **A)** From the top-right corner to the bottom-left corner.
+    - **B)** From the top-left corner to the bottom-right corner.
+    - **C)** Horizontally across the middle row.
+    - **D)** Vertically down the middle column.
 
 3. Which of the following describes a common pitfall related to the main diagonal?
-- **A)** Attempting to find main diagonal entries in matrices that are not square.
-- **B)** Believing the main diagonal exists meaningfully for determinant operations in non-square matrices.
-- **C)** Assuming the main diagonal entries must all be equal to 1.
-- **D)** Thinking the main diagonal only applies to identity matrices.
+    - **A)** Attempting to find main diagonal entries in matrices that are not square.
+    - **B)** Believing the main diagonal exists meaningfully for determinant operations in non-square matrices.
+    - **C)** Assuming the main diagonal entries must all be equal to 1.
+    - **D)** Thinking the main diagonal only applies to identity matrices.
 
 ### Answer Key & Explanations
-1. **C)** By definition, the main diagonal entries of a square matrix are those where the row index equals the column index ($i = j$).
-2. **B)** As noted, the main diagonal runs from the top-left corner ($a_{11}$) to the bottom-right corner ($a_{nn}$).
-3. **B)** A common pitfall is that the main diagonal only exists meaningfully in square matrices for operations like the trace or determinant, even though any matrix technically has $a_{ii}$ entries.
+
+1. **C**. By definition, the main diagonal entries of a square matrix are those where the row index equals the column index ($i = j$).
+2. **B**. As noted, the main diagonal runs from the top-left corner ($a_{11}$) to the bottom-right corner ($a_{nn}$).
+3. **B**. A common pitfall is that the main diagonal only exists meaningfully in square matrices for operations like the trace or determinant, even though any matrix technically has $a_{ii}$ entries.
 
 ## References & Navigation
 

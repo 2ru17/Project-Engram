@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Conceptual]] #[[Propositional Logic]] #[[CCDSTRU]] #[[M1]]
+**Tags:** #[[Conceptual]] #[[Propositional Logic]] #[[CCDSTRU]] #[[M1]]
 
 ---
 

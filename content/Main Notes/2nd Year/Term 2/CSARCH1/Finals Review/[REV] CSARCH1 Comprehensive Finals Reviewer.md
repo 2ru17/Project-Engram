@@ -84,50 +84,45 @@ flowchart TD
 
 ---
 
-## 4. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. What is the 8-bit 2's complement representation of decimal $-43$?
-   - A) `11010101`
-   - B) `11010100`
-   - C) `10101011`
-   - D) `11101011`
+    - **A)** `11010101`
+    - **B)** `11010100`
+    - **C)** `10101011`
+    - **D)** `11101011`
 
 2. How many $2$-to-$1$ multiplexers are required to construct an $8$-to-$1$ multiplexer?
-   - A) 4
-   - B) 7
-   - C) 8
-   - D) 15
+    - **A)** 4
+    - **B)** 7
+    - **C)** 8
+    - **D)** 15
 
 3. What is the characteristic next-state equation for a JK flip-flop?
-   - A) $Q_{next} = D$
-   - B) $Q_{next} = J Q + K \bar{Q}$
-   - C) $Q_{next} = J \bar{Q} + \bar{K} Q$
-   - D) $Q_{next} = J \oplus K$
+    - **A)** $Q_{next} = D$
+    - **B)** $Q_{next} = J Q + K \bar{Q}$
+    - **C)** $Q_{next} = J \bar{Q} + \bar{K} Q$
+    - **D)** $Q_{next} = J \oplus K$
 
 4. Which statement correctly differentiates a Moore machine from a Mealy machine?
-   - A) In a Moore machine, outputs depend on both current state and current inputs.
-   - B) In a Mealy machine, outputs depend on both current state and current inputs.
-   - C) Moore machines always require fewer states than Mealy machines.
-   - D) Mealy machines have outputs strictly tied to state flip-flops without input feeding.
+    - **A)** In a Moore machine, outputs depend on both current state and current inputs.
+    - **B)** In a Mealy machine, outputs depend on both current state and current inputs.
+    - **C)** Moore machines always require fewer states than Mealy machines.
+    - **D)** Mealy machines have outputs strictly tied to state flip-flops without input feeding.
 
 5. In Verilog HDL, which statement should be used to describe sequential registers triggered on the rising edge of a clock?
-   - A) `assign out = in;`
-   - B) `always @(posedge clk) q <= d;`
-   - C) `always @(*) q = d;`
-   - D) `initial clk = 0;`
-
----
+    - **A)** `assign out = in;`
+    - **B)** `always @(posedge clk) q <= d;`
+    - **C)** `always @(*) q = d;`
+    - **D)** `initial clk = 0;`
 
 ### Answer Key & Explanations
 
-1. **A) `11010101`** — $+43$ in 8-bit binary is `00101011`. Invert all bits (1's complement): `11010100`. Add 1 (2's complement): `11010101`.
-2. **B) 7** — Tree of 2-to-1 MUXes: Level 1 requires 4 MUXes (handling 8 inputs down to 4), Level 2 requires 2 MUXes (4 inputs to 2), Level 3 requires 1 MUX (2 inputs to 1). Total $= 4 + 2 + 1 = 7$.
-3. **C) $Q_{next} = J \bar{Q} + \bar{K} Q$** — When $J=0, K=0 \implies Q$; when $J=0, K=1 \implies 0$; when $J=1, K=0 \implies 1$; when $J=1, K=1 \implies \bar{Q}$.
-4. **B) In a Mealy machine, outputs depend on both current state and current inputs** — Moore outputs depend solely on the current state, whereas Mealy outputs are a combinational function of current state and external inputs.
-5. **B) `always @(posedge clk) q <= d;`** — Clocked edge-triggered behavior in Verilog is modeled using an `always @(posedge clk)` event control block with non-blocking assignments (`<=`).
-
-
----
+1. **A**. $+43$ in 8-bit binary is `00101011`. Invert all bits (1's complement): `11010100`. Add 1 (2's complement): `11010101`.
+2. **B**. Tree of 2-to-1 MUXes: Level 1 requires 4 MUXes (handling 8 inputs down to 4), Level 2 requires 2 MUXes (4 inputs to 2), Level 3 requires 1 MUX (2 inputs to 1). Total $= 4 + 2 + 1 = 7$.
+3. **C**. When $J=0, K=0 \implies Q$; when $J=0, K=1 \implies 0$; when $J=1, K=0 \implies 1$; when $J=1, K=1 \implies \bar{Q}$.
+4. **B**. Moore outputs depend solely on the current state, whereas Mealy outputs are a combinational function of current state and external inputs.
+5. **B**. Clocked edge-triggered behavior in Verilog is modeled using an `always @(posedge clk)` event control block with non-blocking assignments (`<=`).
 
 ## References & Navigation
 

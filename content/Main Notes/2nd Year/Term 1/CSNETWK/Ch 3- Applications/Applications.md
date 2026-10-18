@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Applications]] #[[Code Snippets]]
+**Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Applications]] #[[Code Snippets]]
 
 ---
 
@@ -59,78 +59,43 @@ Average end-to-end delay = $0.6 \times (\text{origin delay}) + 0.4 \times (\text
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "**HTTP Responses:** Includes status codes (e.g., `200 OK`, `301 Moved _____ `400 Bad Request`, `404 Not Found`, `505 Version Not Supported`)."?
-- **A)** Router
-- **B)** Protocol
-- **C)** Network
-- **D)** Permanently
+1. In the **Client-Server** vs. **Peer-to-Peer (P2P)** application architectures, how does the minimum distribution time to deliver a file of size $F$ to $N$ peers scale as $N$ grows large?
+    - **A)** Client-Server scales as $O(1)$ while P2P scales as $O(N^2)$.
+    - **B)** In Client-Server, the server must upload $N$ copies sequentially over its uplink $u_s$, so distribution time grows **linearly** with $N$ ($\ge \frac{NF}{u_s}$); in P2P, each downloading peer also contributes its own upload bandwidth $u_i$, enabling **self-scalability** where distribution time remains bounded even as $N$ grows.
+    - **C)** Both architectures require exact $NF / u_s$ time regardless of peer upload rates.
+    - **D)** P2P requires a dedicated always-on supercomputer to relay every byte of the file.
 
-2. Which word completes the following sentence from the text: "A `Conditional GET` (using `If-modified-since`) _____ keep caches up to date."?
-- **A)** Router
-- **B)** helps
-- **C)** Network
-- **D)** Protocol
+2. How many Round-Trip Times (RTTs) are required to fetch a base HTML page plus $10$ referenced JPEG objects over **Non-Persistent HTTP/1.0** (without parallel connections) versus **Persistent HTTP/1.1 with pipelining**?
+    - **A)** Non-Persistent HTTP requires $2\text{ RTTs per object}$ ($1$ RTT for TCP 3-way handshake $+ 1$ RTT for HTTP request/response), totaling $2 \times 11 = 22\text{ RTTs}$; Persistent HTTP with pipelining reuses a single TCP connection ($1$ RTT handshake $+ 1$ RTT base HTML $+ 1$ RTT for all $10$ pipelined objects) totaling $3\text{ RTTs}$.
+    - **B)** Non-Persistent requires $1$ RTT total; Persistent requires $22$ RTTs.
+    - **C)** Both require $11$ RTTs.
+    - **D)** Non-Persistent HTTP uses UDP and requires $0$ RTTs.
 
-3. Which word completes the following sentence from the text: "UDP provides unreliable, best-effort datagram _____ with no connection setup."?
-- **A)** Protocol
-- **B)** Network
-- **C)** delivery
-- **D)** Router
+3. In the **Domain Name System (DNS)** hierarchy, what is the difference between a **recursive query** and an **iterative query**?
+    - **A)** A recursive query uses TCP port 80, whereas an iterative query uses UDP port 25.
+    - **B)** Iterative queries encrypt the domain name, whereas recursive queries do not.
+    - **C)** In a recursive query (typically sent from a host to its local DNS resolver), the contacted server takes full responsibility for resolving the name on behalf of the requester; in an iterative query (typically used by the local resolver querying Root, TLD, and Authoritative servers), each contacted server replies with a referral to the next server to contact.
+    - **D)** Recursive queries only resolve IPv6 `AAAA` records.
 
-4. Which word completes the following sentence from the text: "**Proprietary protocols:** Closed _____ (Skype, Zoom)."?
-- **A)** Network
-- **B)** Router
-- **C)** Protocol
-- **D)** definitions
+4. Which DNS Resource Record (RR) type maps a hostname alias (e.g., `www.example.com`) to its canonical hostname, and which RR type maps a domain to the hostname of its mail server?
+    - **A)** `A` record for alias; `PTR` record for mail server
+    - **B)** `TXT` record for alias; `SOA` record for mail server
+    - **C)** `NS` record for alias; `AAAA` record for mail server
+    - **D)** `CNAME` record for canonical name alias; `MX` record for mail exchange server
 
-5. Which word completes the following sentence from the text: "Arbitrary end systems directly communicate, bringing self-scalability _____ each peer adds service capacity and demand."?
-- **A)** Network
-- **B)** Protocol
-- **C)** since
-- **D)** Router
-
-6. Which word completes the following sentence from the text: "*With cache (40% hit rate):* The request rate _____ to the origin server drops to 60%."?
-- **A)** Protocol
-- **B)** Router
-- **C)** going
-- **D)** Network
-
-7. Which word completes the following sentence from the text: "**Web Caches (Proxy Servers):** Intermediaries that store _____ requested objects to satisfy client requests locally."?
-- **A)** Router
-- **B)** Protocol
-- **C)** Network
-- **D)** recently
-
-8. Which word completes the following sentence from the text: "**DNS (Domain Name System):** A distributed, hierarchical _____ mapping human-readable hostnames to IP addresses."?
-- **A)** Network
-- **B)** Protocol
-- **C)** Router
-- **D)** database
-
-9. Which word completes the following sentence from the text: "Clients intermittently connect to the server and do not _____ communicate with each other (e.g., HTTP, IMAP, FTP)."?
-- **A)** Protocol
-- **B)** Network
-- **C)** directly
-- **D)** Router
-
-10. Which word completes the following sentence from the text: "**HTTP Requests:** Includes methods like GET (requests object), POST _____ user input), HEAD (requests headers only), PUT (uploads object)."?
-- **A)** Protocol
-- **B)** sends
-- **C)** Network
-- **D)** Router
-
+5. Why does **FTP (File Transfer Protocol)** described as maintaining an **out-of-band** control connection, whereas **HTTP** sends control information **in-band**?
+    - **A)** FTP uses UDP for files and ICMP for control.
+    - **B)** FTP uses a persistent TCP control connection on **port 21** for commands/replies and opens a separate TCP data connection on **port 20** for file transfers; HTTP sends headers and file payloads within the **same** TCP connection on port 80/443.
+    - **C)** HTTP uses two separate ports (80 and 81) for every image.
+    - **D)** Out-of-band means FTP cannot traverse routers.
 
 ### Answer Key & Explanations
-1. **D)** Permanently completes the sentence: **HTTP Responses:** Includes status codes (e.g., `...
-2. **B)** helps completes the sentence: A `Conditional GET` (using `If-modified-since`) he...
-3. **C)** delivery completes the sentence: UDP provides unreliable, best-effort datagram deli...
-4. **D)** definitions completes the sentence: **Proprietary protocols:** Closed definitions (Sky...
-5. **C)** since completes the sentence: Arbitrary end systems directly communicate, bringi...
-6. **C)** going completes the sentence: *With cache (40% hit rate):* The request rate goin...
-7. **D)** recently completes the sentence: **Web Caches (Proxy Servers):** Intermediaries tha...
-8. **D)** database completes the sentence: **DNS (Domain Name System):** A distributed, hiera...
-9. **C)** directly completes the sentence: Clients intermittently connect to the server and d...
-10. **B)** sends completes the sentence: **HTTP Requests:** Includes methods like GET (requ...
+
+1. **B**. In Client-Server, $D_{cs} = \max\left(\frac{NF}{u_s}, \frac{F}{d_{\min}}\right)$ grows linearly in $N$; in P2P, $D_{p2p} = \max\left(\frac{F}{u_s}, \frac{F}{d_{\min}}, \frac{NF}{u_s + \sum_{i=1}^N u_i}\right)$ self-scales because aggregate upload capacity $\sum u_i$ grows with $N$.
+2. **A**. Non-Persistent HTTP tears down and re-establishes TCP for every object ($2\text{ RTTs/object} \times 11 = 22\text{ RTTs}$). Persistent pipelined HTTP/1.1 keeps TCP open ($1$ RTT handshake $+ 1$ RTT HTML $+ 1$ RTT pipelined assets $= 3\text{ RTTs}$).
+3. **C**. Hosts normally issue a single recursive query to their local DNS resolver, which then performs iterative queries across the Root $\to$ TLD $\to$ Authoritative hierarchy.
+4. **D**. `CNAME` maps an alias hostname to its canonical domain name; `MX` specifies the mail server responsible for accepting email for a domain.
+5. **B**. FTP separates control signaling (TCP port 21) from data transfer (TCP port 20, "out-of-band"), whereas HTTP interleaves control headers and body payload on the same TCP stream ("in-band").
 
 ## References & Navigation
 

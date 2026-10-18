@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[Problems, Problem Types, and Algorithms]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[Problems, Problem Types, and Algorithms]]
 
 ---
 
@@ -99,67 +99,68 @@ def count_factors(n):
 ## Multiple Choice Questions
 
 1. Which of the following is NOT a pillar of algorithm analysis discussed in this module?
-    A) Efficiency
-    B) Correctness
-    C) Extensibility
-    D) Elegance
+    - **A)** Efficiency
+    - **B)** Correctness
+    - **C)** Extensibility
+    - **D)** Elegance
 2. Determining whether a given graph contains a cycle is an example of which type of problem?
-    A) Search Problem
-    B) Decision Problem
-    C) Counting Problem
-    D) Function Problem
+    - **A)** Search Problem
+    - **B)** Decision Problem
+    - **C)** Counting Problem
+    - **D)** Function Problem
 3. What is the primary characteristic of an Optimization Problem?
-    A) It returns a strictly YES or NO answer.
-    B) It counts the number of possible valid paths.
-    C) It computes a formally defined mathematical expression.
-    D) It seeks the best possible solution among all valid constraints based on a criterion.
+    - **A)** It returns a strictly YES or NO answer.
+    - **B)** It counts the number of possible valid paths.
+    - **C)** It computes a formally defined mathematical expression.
+    - **D)** It seeks the best possible solution among all valid constraints based on a criterion.
 4. An algorithm must be a sequence of finite and unambiguous instructions. What does "finite" mean in this context?
-    A) It must use a finite amount of RAM.
-    B) It must complete execution in a bounded number of steps.
-    C) Its code must be less than 1000 lines.
-    D) It can only accept inputs of finite length.
+    - **A)** It must use a finite amount of RAM.
+    - **B)** It must complete execution in a bounded number of steps.
+    - **C)** Its code must be less than 1000 lines.
+    - **D)** It can only accept inputs of finite length.
 5. In the context of computational problems, what do Occam's Razor and "Elegance" advocate?
-    A) Algorithms should run as fast as possible regardless of code size.
-    B) A simpler algorithmic logic is preferred over unnecessarily complex ones.
-    C) Every algorithm must be rigorously proven using mathematics.
-    D) All optimization problems must be reduced to decision problems.
+    - **A)** Algorithms should run as fast as possible regardless of code size.
+    - **B)** A simpler algorithmic logic is preferred over unnecessarily complex ones.
+    - **C)** Every algorithm must be rigorously proven using mathematics.
+    - **D)** All optimization problems must be reduced to decision problems.
 6. The problem "Finding the Minimum Spanning Tree of a network" is classified as:
-    A) Decision
-    B) Optimization
-    C) Counting
-    D) Function
+    - **A)** Decision
+    - **B)** Optimization
+    - **C)** Counting
+    - **D)** Function
 7. If an algorithm is designed to return the number of ways to climb stairs, what type of problem is it solving?
-    A) Counting Problem
-    B) Search Problem
-    C) Optimization Problem
-    D) Decision Problem
+    - **A)** Counting Problem
+    - **B)** Search Problem
+    - **C)** Optimization Problem
+    - **D)** Decision Problem
 8. Which of the following best describes the difference between a Search problem and a Decision problem?
-    A) Search problems ask for a YES/NO, Decision problems find the path.
-    B) Search problems find a configuration satisfying constraints, Decision problems only ask if such a configuration exists.
-    C) There is no fundamental difference; they are the same.
-    D) Search problems look for the best solution, Decision problems look for any solution.
+    - **A)** Search problems ask for a YES/NO, Decision problems find the path.
+    - **B)** Search problems find a configuration satisfying constraints, Decision problems only ask if such a configuration exists.
+    - **C)** There is no fundamental difference; they are the same.
+    - **D)** Search problems look for the best solution, Decision problems look for any solution.
 9. What is the time complexity of the provided `COUNT-FACTORS` algorithm?
-    A) $O(\log n)$
-    B) $O(1)$
-    C) $O(n)$
-    D) $O(n^2)$
+    - **A)** $O(\log n)$
+    - **B)** $O(1)$
+    - **C)** $O(n)$
+    - **D)** $O(n^2)$
 10. If a computational problem lacks an unambiguous output specification, what is the consequence?
-    A) It becomes a Function Problem.
-    B) It can only be solved with $O(n!)$ time complexity.
-    C) It is impossible to mathematically prove an algorithm's correctness for it.
-    D) It automatically requires a heuristic approach.
+    - **A)** It becomes a Function Problem.
+    - **B)** It can only be solved with $O(n!)$ time complexity.
+    - **C)** It is impossible to mathematically prove an algorithm's correctness for it.
+    - **D)** It automatically requires a heuristic approach.
 
 ### Answer Key & Explanations
-1. **C** - Extensibility is a software engineering concern, whereas the module strictly lists Correctness, Efficiency, and Elegance as the three pillars of algorithm analysis.
-2. **B** - Asking "whether" something is true (e.g., does a cycle exist?) requires a YES or NO answer, making it a Decision Problem.
-3. **D** - Optimization problems involve maximizing or minimizing a certain measure.
-4. **B** - Finiteness in an algorithm means it must eventually halt; it cannot loop infinitely.
-5. **B** - Occam's Razor applied to algorithms (Elegance) means simplicity in logic should be favored.
-6. **B** - A Minimum Spanning Tree seeks to *minimize* the total edge weight, which is an optimization.
-7. **A** - Finding "the number of ways" strictly corresponds to a Counting Problem.
-8. **B** - Decision problems evaluate a boolean condition, whereas search problems return the actual state or path.
-9. **C** - The loop iterates exactly `n` times, incrementing `i` by 1 each time.
-10. **C** - Without clear output specifications, correctness cannot be proven since the goal is undefined.
+
+1. **C**. Extensibility is a software engineering concern, whereas the module strictly lists Correctness, Efficiency, and Elegance as the three pillars of algorithm analysis.
+2. **B**. Asking "whether" something is true (e.g., does a cycle exist?) requires a YES or NO answer, making it a Decision Problem.
+3. **D**. Optimization problems involve maximizing or minimizing a certain measure.
+4. **B**. Finiteness in an algorithm means it must eventually halt; it cannot loop infinitely.
+5. **B**. Occam's Razor applied to algorithms (Elegance) means simplicity in logic should be favored.
+6. **B**. A Minimum Spanning Tree seeks to *minimize* the total edge weight, which is an optimization.
+7. **A**. Finding "the number of ways" strictly corresponds to a Counting Problem.
+8. **B**. Decision problems evaluate a boolean condition, whereas search problems return the actual state or path.
+9. **C**. The loop iterates exactly `n` times, incrementing `i` by 1 each time.
+10. **C**. Without clear output specifications, correctness cannot be proven since the goal is undefined.
 
 ## References & Navigation
 

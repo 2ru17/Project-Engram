@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
+**Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
 
 ---
 
@@ -88,87 +88,48 @@ If A and B are on **different switches**, entries update on **both** switches (a
 
 > TL;DR — Advanced switch problems involve TTL-based table entries and reverse-engineering which nodes communicated and when. Cross-switch traffic updates both switches; same-switch traffic updates only one.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Pasted image 20251121094417.png]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "Cross-switch traffic updates both switches; _____ traffic updates only one."?
-- **A)** sameswitch
-- **B)** Protocol
-- **C)** Network
-- **D)** Router
+1. Suppose two Layer-2 self-learning switches $S_1$ and $S_2$ are interconnected via port $4$ on $S_1$ and port $1$ on $S_2$, with both switch tables initially empty. Host $A$ (on $S_1$ port 1) sends a frame to Host $E$ (on $S_2$ port 2). Which switch table entries are learned during this **single frame transmission**, and which ports receive the frame?
+    - **A)** Both $S_1$ and $S_2$ learn the locations of both $A$ and $E$ immediately, and the frame goes only to $E$.
+    - **B)** $S_1$ learns `(MAC_A -> Port 1)` and floods the frame out all other ports (including port 4 to $S_2$); $S_2$ receives the frame on port 1, learns **`(MAC_A -> Port 1)`**, and floods the frame out all its other ports (including port 2 to $E$). Neither switch learns `MAC_E` until $E$ transmits a frame!
+    - **C)** $S_1$ drops the frame because `MAC_E` is not in its table.
+    - **D)** $S_2$ learns `(MAC_A -> Port 2)`.
 
-2. Which word completes the following sentence from the text: "_Hypothesis for this Problem:_ The problem likely assumes a simple _____ where TTL represents "Time Step" or the order of events."?
-- **A)** counter
-- **B)** Router
-- **C)** Protocol
-- **D)** Network
+2. Continuing Question 1, after $A \to E$ completes, suppose Host $B$ (also on $S_1$, port 2) sends a frame to Host $A$ (on $S_1$, port 1). Does Switch $S_2$ ever see this frame?
+    - **A)** **No**; $S_1$ learns `(MAC_B -> Port 2)`, looks up destination `MAC_A` in its switch table, finds `(MAC_A -> Port 1)`, and **unicast-forwards** the frame exclusively out Port 1 without flooding it across the inter-switch trunk to $S_2$ (traffic isolation).
+    - **B)** Yes, $S_1$ floods all frames to $S_2$.
+    - **C)** Yes, because $S_2$ must approve every frame on $S_1$.
+    - **D)** No, because $S_1$ filters the frame as a same-port collision.
 
-3. Which word completes the following sentence from the text: "However, the solution says _____ was C $\rightarrow$ L"."?
-- **A)** Router
-- **B)** Transmission
-- **C)** Protocol
-- **D)** Network
+3. Next, suppose Host $A$ (on $S_1$, port 1) sends a frame to Host $B$ (on $S_1$, port 2), where both `MAC_A` and `MAC_B` are already in $S_1$'s table. What happens if both Host $A$ and Host $B$ are instead attached to the **same shared hub/segment connected to Port 1** of $S_1$?
+    - **A)** $S_1$ forwards the frame back out Port 1, creating a duplicate frame collision.
+    - **B)** $S_1$ floods the frame out all ports except Port 1.
+    - **C)** $S_1$ sees `(MAC_B -> Port 1)` matches the **exact incoming interface (Port 1)** and performs **filtering** (drops/discards the frame without re-transmitting it back out Port 1, since $B$ already received it on the shared segment).
+    - **D)** $S_1$ clears its entire MAC table.
 
-4. Which word completes the following sentence from the text: "**Check for Replies:** Remember that every transmission $A _____ B$ is immediately followed by $B \rightarrow A$."?
-- **A)** rightarrow
-- **B)** Router
-- **C)** Network
-- **D)** Protocol
+4. Why do redundant physical loops in a Layer-2 switched topology cause catastrophic **Broadcast Storms** and **MAC Table Instability** unless **Spanning Tree Protocol (STP, IEEE 802.1D)** is enabled?
+    - **A)** Because Layer-2 Ethernet frames have a TTL field of 255.
+    - **B)** Because STP increases the physical cable speed.
+    - **C)** Because switches convert broadcast frames into BGP updates.
+    - **D)** Because Layer-2 Ethernet frames have **no TTL (Time-To-Live) field**, so any broadcast or unknown-unicast frame flooded by switches in a physical loop circulates and multiplies endlessly around the cycle, saturating all link bandwidth and causing switches to see the same source MAC arriving on oscillating ports.
 
-5. Which word completes the following sentence from the text: "When an entry is created or refreshed (seen again), the _____ is reset to the max value (e.g., 60 minutes)."?
-- **A)** Network
-- **B)** Router
-- **C)** TTL
-- **D)** Protocol
-
-6. Which word completes the following sentence from the text: "Since both are on the same switch, traffic G $\rightarrow$ H _____ local to Switch 2 _if_ Switch 2 already knows H."?
-- **A)** stays
-- **B)** Protocol
-- **C)** Router
-- **D)** Network
-
-7. Which word completes the following sentence from the text: "If the table provided shows _different_ TTL values, _____ implies the entries were created at different times."?
-- **A)** Protocol
-- **B)** it
-- **C)** Router
-- **D)** Network
-
-8. Which word completes the following sentence from the text: "_Example:_ If the question asks about $t=4$, look for entries _____ have a value indicating they were touched at step 4."?
-- **A)** Network
-- **B)** Router
-- **C)** Protocol
-- **D)** that
-
-9. Which word completes the following sentence from the text: "This means **C** would be added to Switch _____ (Int 3) and Switch 2 (Int 8)."?
-- **A)** 1
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
-
-10. Which word completes the following sentence from the text: "In learning switch problems, we typically track the **Source** _____ that is who gets added to the table."?
-- **A)** because
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
-
+5. How does a **VLAN (Virtual Local Area Network, IEEE 802.1Q)** alter the broadcast and forwarding behavior of a Layer-2 switch?
+    - **A)** It merges all subnets on the Internet into a single broadcast domain.
+    - **B)** It partitions a single physical switch (or multi-switch trunked fabric using 4-byte 802.1Q VLAN tags) into **multiple isolated logical broadcast domains**: broadcast and unknown-unicast frames from a port in VLAN 10 are flooded ONLY to other ports in VLAN 10, and traffic between VLAN 10 and VLAN 20 requires routing through a Layer-3 device.
+    - **C)** It removes MAC addresses from Ethernet frames.
+    - **D)** It forces all ports to operate in half-duplex hub mode.
 
 ### Answer Key & Explanations
-1. **A)** sameswitch completes the sentence: Cross-switch traffic updates both switches; same-s...
-2. **A)** counter completes the sentence: _Hypothesis for this Problem:_ The problem likely ...
-3. **B)** Transmission completes the sentence: However, the solution says "Transmission was C $\r...
-4. **A)** rightarrow completes the sentence: **Check for Replies:** Remember that every transmi...
-5. **C)** TTL completes the sentence: When an entry is created or refreshed (seen again)...
-6. **A)** stays completes the sentence: Since both are on the same switch, traffic G $\rig...
-7. **B)** it completes the sentence: If the table provided shows _different_ TTL values...
-8. **D)** that completes the sentence: _Example:_ If the question asks about $t=4$, look ...
-9. **A)** 1 completes the sentence: This means **C** would be added to Switch 1 (Int 3...
-10. **A)** because completes the sentence: In learning switch problems, we typically track th...
+
+1. **B**. Switches learn **only from the Source MAC** of arriving frames. When $A$ sends to $E$, $S_1$ learns `A -> Port 1` and floods; $S_2$ receives the flooded frame on its trunk port (Port 1), learns `A -> Port 1`, and floods to $E$.
+2. **A**. Because $S_1$ already learned `MAC_A -> Port 1`, it forwards $B$'s frame directly out Port 1, isolating local traffic on $S_1$ from the trunk link to $S_2$.
+3. **C**. Self-learning switch rule: if the destination MAC is found in the table and its associated port equals the arrival port, the switch **filters** (does not forward) the frame.
+4. **D**. Without a Layer-2 TTL field or STP blocking redundant ports to form an acyclic spanning tree, flooded frames loop infinitely and exponentially duplicate at branching switches.
+5. **B**. VLANs logically segment one physical switch infrastructure into separate Layer-2 broadcast domains, improving security and containing broadcast traffic.
 
 ## References & Navigation
 

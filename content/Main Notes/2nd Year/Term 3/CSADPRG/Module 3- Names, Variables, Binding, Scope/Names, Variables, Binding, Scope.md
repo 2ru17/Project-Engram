@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Conceptual]] #[[Names, Variables, Binding, Scope]]
+**Tags:** #[[Computer Science]] #[[CSADPRG]] #[[Conceptual]] #[[Names, Variables, Binding, Scope]]
 
 ## Overview
 This document discusses the fundamental concepts of names, variables, binding, and scoping in programming languages. It explains the distinction between names, reserved words, and keywords, explores the attributes of variables (such as name, address, type, value, lifetime, and scope), and distinguishes between static and dynamic bindings as well as static and dynamic scoping mechanisms.
@@ -111,78 +111,78 @@ int main() {
 
 ## Multiple Choice Questions
 
-**1. What is a "Keyword" in the context of programming languages?**
-- **A)** A string of characters that identifies an entity.
-- **B)** A special word that cannot be redefined or used as an identifier by the programmer.
-- **C)** A special word that has special meaning in a certain context.
-- **D)** An abstraction of a computer memory cell.
+1. What is a "Keyword" in the context of programming languages?
+    - **A)** A string of characters that identifies an entity.
+    - **B)** A special word that cannot be redefined or used as an identifier by the programmer.
+    - **C)** A special word that has special meaning in a certain context.
+    - **D)** An abstraction of a computer memory cell.
 
-**2. Which variable attribute represents the physical machine memory location?**
-- **A)** Type
-- **B)** L-value
-- **C)** R-value
-- **D)** Lifetime
+2. Which variable attribute represents the physical machine memory location?
+    - **A)** Type
+    - **B)** L-value
+    - **C)** R-value
+    - **D)** Lifetime
 
-**3. When does binding occur for the range of values for a primitive type in many compiled languages?**
-- **A)** Language Design Time
-- **B)** Language Implementation Time
-- **C)** Compile Time
-- **D)** Run Time
+3. When does binding occur for the range of values for a primitive type in many compiled languages?
+    - **A)** Language Design Time
+    - **B)** Language Implementation Time
+    - **C)** Compile Time
+    - **D)** Run Time
 
-**4. What is a primary disadvantage of dynamic type binding?**
-- **A)** It lacks flexibility for generic programming.
-- **B)** It requires the use of explicit declarations for types.
-- **C)** It incurs a runtime cost for type checking and dynamic storage allocation.
-- **D)** It prevents the use of recursive functions.
+4. What is a primary disadvantage of dynamic type binding?
+    - **A)** It lacks flexibility for generic programming.
+    - **B)** It requires the use of explicit declarations for types.
+    - **C)** It incurs a runtime cost for type checking and dynamic storage allocation.
+    - **D)** It prevents the use of recursive functions.
 
-**5. Which category of variables is bound to memory from the run-time stack when execution reaches their declaration?**
-- **A)** Static Variables
-- **B)** Stack-dynamic Variables
-- **C)** Explicit Heap-dynamic Variables
-- **D)** Implicit Heap-dynamic Variables
+5. Which category of variables is bound to memory from the run-time stack when execution reaches their declaration?
+    - **A)** Static Variables
+    - **B)** Stack-dynamic Variables
+    - **C)** Explicit Heap-dynamic Variables
+    - **D)** Implicit Heap-dynamic Variables
 
-**6. What does the "Scope" of a variable refer to?**
-- **A)** The temporal duration during which it is bound to a memory location.
-- **B)** The actual contents of its memory cell.
-- **C)** The set of operations that can be performed on it.
-- **D)** The spatial range of statements wherein it is visible and can be referenced.
+6. What does the "Scope" of a variable refer to?
+    - **A)** The temporal duration during which it is bound to a memory location.
+    - **B)** The actual contents of its memory cell.
+    - **C)** The set of operations that can be performed on it.
+    - **D)** The spatial range of statements wherein it is visible and can be referenced.
 
-**7. In static (lexical) scoping, how is a variable's scope determined?**
-- **A)** Based on the dynamic calling sequence of subprograms at runtime.
-- **B)** By examining the source code structure prior to execution.
-- **C)** By the OS loader assigning absolute memory cells.
-- **D)** Through the explicit use of pointers and reference types.
+7. In static (lexical) scoping, how is a variable's scope determined?
+    - **A)** Based on the dynamic calling sequence of subprograms at runtime.
+    - **B)** By examining the source code structure prior to execution.
+    - **C)** By the OS loader assigning absolute memory cells.
+    - **D)** Through the explicit use of pointers and reference types.
 
-**8. Which memory area is described as disorganized and dynamically allocated, not tightly managed directly by the CPU?**
-- **A)** Code Data
-- **B)** Global/Static Data
-- **C)** Stack
-- **D)** Heap
+8. Which memory area is described as disorganized and dynamically allocated, not tightly managed directly by the CPU?
+    - **A)** Code Data
+    - **B)** Global/Static Data
+    - **C)** Stack
+    - **D)** Heap
 
-**9. What happens when two variables share the same memory address?**
-- **A)** Scope resolution
-- **B)** Variable hiding
-- **C)** Aliasing
-- **D)** Stack-dynamic allocation
+9. What happens when two variables share the same memory address?
+    - **A)** Scope resolution
+    - **B)** Variable hiding
+    - **C)** Aliasing
+    - **D)** Stack-dynamic allocation
 
-**10. Based on the provided example, what is a feature of Fortran regarding identifiers?**
-- **A)** It strictly enforces variable hiding.
-- **B)** It has no reserved words.
-- **C)** It uses implicit heap-dynamic variables.
-- **D)** It prevents variables from dynamically changing type.
+10. Based on the provided example, what is a feature of Fortran regarding identifiers?
+    - **A)** It strictly enforces variable hiding.
+    - **B)** It has no reserved words.
+    - **C)** It uses implicit heap-dynamic variables.
+    - **D)** It prevents variables from dynamically changing type.
 
 ### Answer Key & Explanations
 
-1. **C** - A keyword is defined as a special word that has special meaning in a certain context, differentiating it from reserved words which cannot be redefined.
-2. **B** - The Address is referred to as the L-value, indicating the physical machine memory location associated with a variable.
-3. **B** - The specific compiler implementation defines the range of values for primitive types at Language Implementation Time.
-4. **C** - Dynamic type binding requires runtime type checking and dynamic storage allocation, which introduces overhead and potential loss of compile-time error detection.
-5. **B** - Stack-dynamic variables are allocated on the run-time stack upon their declaration, supporting features like recursion.
-6. **D** - Scope is defined as the spatial range of statements within the source code where a given variable is visible and can be referenced.
-7. **B** - Static scoping (or lexical scoping) allows a variable's scope to be determined strictly by examining the source code structure prior to execution.
-8. **D** - The Heap consists of disorganized, dynamically allocated memory that is not tightly managed directly by the CPU, unlike the Stack.
-9. **C** - When multiple variables share the exact same physical memory location (Address/L-value), it creates a phenomenon known as aliasing.
-10. **B** - As shown in the edge cases, Fortran has no reserved words, allowing keywords like IF or THEN to be used as variable identifiers.
+1. **C**. A keyword is defined as a special word that has special meaning in a certain context, differentiating it from reserved words which cannot be redefined.
+2. **B**. The Address is referred to as the L-value, indicating the physical machine memory location associated with a variable.
+3. **B**. The specific compiler implementation defines the range of values for primitive types at Language Implementation Time.
+4. **C**. Dynamic type binding requires runtime type checking and dynamic storage allocation, which introduces overhead and potential loss of compile-time error detection.
+5. **B**. Stack-dynamic variables are allocated on the run-time stack upon their declaration, supporting features like recursion.
+6. **D**. Scope is defined as the spatial range of statements within the source code where a given variable is visible and can be referenced.
+7. **B**. Static scoping (or lexical scoping) allows a variable's scope to be determined strictly by examining the source code structure prior to execution.
+8. **D**. The Heap consists of disorganized, dynamically allocated memory that is not tightly managed directly by the CPU, unlike the Stack.
+9. **C**. When multiple variables share the exact same physical memory location (Address/L-value), it creates a phenomenon known as aliasing.
+10. **B**. As shown in the edge cases, Fortran has no reserved words, allowing keywords like IF or THEN to be used as variable identifiers.
 
 ## References & Navigation
 

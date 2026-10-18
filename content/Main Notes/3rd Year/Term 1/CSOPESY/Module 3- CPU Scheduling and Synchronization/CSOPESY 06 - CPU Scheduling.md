@@ -128,76 +128,77 @@ flowchart TD
 ## Multiple Choice Questions
 
 1. What specific issue does the First-Come, First-Serve (FCFS) algorithm suffer from that degrades system performance?
-    A. Exponential Decay
-    B. Cache Invalidation
-    C. The Convoy Effect
-    D. Starvation
+    - **A)** Exponential Decay
+    - **B)** Cache Invalidation
+    - **C)** The Convoy Effect
+    - **D)** Starvation
 
 2. Which algorithm is mathematically proven to provide the minimum average waiting time for a given batch of processes?
-    A. Shortest Job First (SJF)
-    B. Round Robin (RR)
-    C. Multilevel Feedback Queue (MLFQ)
-    D. Priority Scheduling
+    - **A)** Shortest Job First (SJF)
+    - **B)** Round Robin (RR)
+    - **C)** Multilevel Feedback Queue (MLFQ)
+    - **D)** Priority Scheduling
 
 3. If a Round Robin scheduler is given a very large time quantum approaching infinity, the algorithm effectively devolves into which other algorithm?
-    A. Priority Scheduling
-    B. Shortest Remaining Time First
-    C. First-Come, First-Serve
-    D. Multilevel Queue
+    - **A)** Priority Scheduling
+    - **B)** Shortest Remaining Time First
+    - **C)** First-Come, First-Serve
+    - **D)** Multilevel Queue
 
 4. In Priority Scheduling, what is the standard solution to prevent process starvation?
-    A. Context Switching
-    B. Aging
-    C. Preemption
-    D. Multithreading
+    - **A)** Context Switching
+    - **B)** Aging
+    - **C)** Preemption
+    - **D)** Multithreading
 
 5. A process that frequently pauses to wait for keyboard input and screen refreshes is classified as:
-    A. CPU-bound
-    B. Core-bound
-    C. I/O-bound
-    D. Thread-bound
+    - **A)** CPU-bound
+    - **B)** Core-bound
+    - **C)** I/O-bound
+    - **D)** Thread-bound
 
 6. What is the primary purpose of Exponential Average estimation in Shortest Job First scheduling?
-    A. To calculate the dispatch latency.
-    B. To predict the length of a process's next CPU burst based on past behavior.
-    C. To allocate memory chunks for the heap.
-    D. To determine the time quantum for Round Robin.
+    - **A)** To calculate the dispatch latency.
+    - **B)** To predict the length of a process's next CPU burst based on past behavior.
+    - **C)** To allocate memory chunks for the heap.
+    - **D)** To determine the time quantum for Round Robin.
 
 7. Why do Symmetric Multiprocessing (SMP) systems enforce Processor Affinity?
-    A. To prevent starvation of background threads.
-    B. To guarantee equitable distribution of RAM.
-    C. To avoid the massive overhead of invalidating and repopulating cache memory when jumping between physical CPU cores.
-    D. To enforce security between isolated containers.
+    - **A)** To prevent starvation of background threads.
+    - **B)** To guarantee equitable distribution of RAM.
+    - **C)** To avoid the massive overhead of invalidating and repopulating cache memory when jumping between physical CPU cores.
+    - **D)** To enforce security between isolated containers.
 
 8. In a Multilevel Feedback Queue (MLFQ), what typical action is taken if a process entirely consumes its allotted time quantum without yielding?
-    A. It is promoted to a higher priority queue.
-    B. It is terminated instantly.
-    C. It is demoted to a lower priority queue because it is behaving like a CPU-bound process.
-    D. It triggers a hardware interrupt.
+    - **A)** It is promoted to a higher priority queue.
+    - **B)** It is terminated instantly.
+    - **C)** It is demoted to a lower priority queue because it is behaving like a CPU-bound process.
+    - **D)** It triggers a hardware interrupt.
 
 9. Which OS component is directly responsible for saving the old PCB and loading the new PCB into the CPU registers?
-    A. The Medium-Term Scheduler
-    B. The Dispatcher
-    C. The Job Scheduler
-    D. The Thread Pool
+    - **A)** The Medium-Term Scheduler
+    - **B)** The Dispatcher
+    - **C)** The Job Scheduler
+    - **D)** The Thread Pool
 
 10. A system interrupts a running process to give the CPU to a newly arrived higher-priority process. This behavior represents what kind of scheduling?
-    A. Nonpreemptive scheduling
-    B. Cooperative scheduling
-    C. Deterministic scheduling
-    D. Preemptive scheduling
+    - **A)** Nonpreemptive scheduling
+    - **B)** Cooperative scheduling
+    - **C)** Deterministic scheduling
+    - **D)** Preemptive scheduling
 
 ### Answer Key & Explanations
-1. **C. The Convoy Effect** - Fast I/O bound processes get stuck behind a single long CPU-bound process, causing hardware components to sit idle.
-2. **A. Shortest Job First (SJF)** - SJF optimally shifts short bursts to the front of the queue, minimizing average wait, though it is impossible to implement perfectly without future knowledge.
-3. **C. First-Come, First-Serve** - If the quantum is large enough that no process ever hits the limit, processes just execute in the exact order they arrive until completion.
-4. **B. Aging** - Aging slowly increases the priority of a process the longer it waits, guaranteeing it will eventually reach the top of the queue.
-5. **C. I/O-bound** - It spends the vast majority of its life cycle waiting for external input/output rather than actively calculating on the CPU.
-6. **B. To predict the length of a process's next CPU burst based on past behavior.** - Short-term schedulers cannot look into the future, so they use the exponential average of past bursts to guess the next burst length.
-7. **C. To avoid the massive overhead of invalidating and repopulating cache memory when jumping between physical CPU cores.** - Moving a thread to a new CPU means it experiences slow L3 cache/RAM access until the new core's L1/L2 caches warm up.
-8. **C. It is demoted to a lower priority queue because it is behaving like a CPU-bound process.** - MLFQ penalizes CPU hogs by moving them down, freeing the fast upper queues for responsive I/O processes.
-9. **B. The Dispatcher** - Schedulers just choose the next process; the dispatcher physically executes the context switch overhead.
-10. **D. Preemptive scheduling** - Preemption allows the OS kernel to forcefully seize control back from a process.
+
+1. **C**. Fast I/O bound processes get stuck behind a single long CPU-bound process, causing hardware components to sit idle.
+2. **A**. SJF optimally shifts short bursts to the front of the queue, minimizing average wait, though it is impossible to implement perfectly without future knowledge.
+3. **C**. If the quantum is large enough that no process ever hits the limit, processes just execute in the exact order they arrive until completion.
+4. **B**. Aging slowly increases the priority of a process the longer it waits, guaranteeing it will eventually reach the top of the queue.
+5. **C**. It spends the vast majority of its life cycle waiting for external input/output rather than actively calculating on the CPU.
+6. **B**. Short-term schedulers cannot look into the future, so they use the exponential average of past bursts to guess the next burst length.
+7. **C**. Moving a thread to a new CPU means it experiences slow L3 cache/RAM access until the new core's L1/L2 caches warm up.
+8. **C**. MLFQ penalizes CPU hogs by moving them down, freeing the fast upper queues for responsive I/O processes.
+9. **B**. Schedulers just choose the next process; the dispatcher physically executes the context switch overhead.
+10. **D**. Preemption allows the OS kernel to forcefully seize control back from a process.
 
 ## References & Navigation
 

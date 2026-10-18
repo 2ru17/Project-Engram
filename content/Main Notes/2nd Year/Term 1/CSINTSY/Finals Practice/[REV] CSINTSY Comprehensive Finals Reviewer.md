@@ -86,50 +86,45 @@ graph TD
 
 ---
 
-## 5. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. If a heuristic function $h(n)$ satisfies $h(n) \le c(n, a, n') + h(n')$ for every node $n$ and successor $n'$, the heuristic is:
-   - A) Inadmissible
-   - B) Consistent (Monotonic)
-   - C) Greedy
-   - D) Overestimating
+    - **A)** Inadmissible
+    - **B)** Consistent (Monotonic)
+    - **C)** Greedy
+    - **D)** Overestimating
 
 2. In an adversarial game tree, a MIN node evaluates a child that returns a score of 4. If the parent MAX node currently has an $\alpha$ value of 5, what should happen?
-   - A) The search continues evaluating all remaining children of the MIN node.
-   - B) The MIN node prunes its remaining children because $\alpha \ge \beta$ ($5 \ge 4$).
-   - C) The $\alpha$ value is updated from 5 to 4.
-   - D) The game terminates in a draw.
+    - **A)** The search continues evaluating all remaining children of the MIN node.
+    - **B)** The MIN node prunes its remaining children because $\alpha \ge \beta$ ($5 \ge 4$).
+    - **C)** The $\alpha$ value is updated from 5 to 4.
+    - **D)** The game terminates in a draw.
 
 3. Given a dataset of 8 positive examples and 8 negative examples, what is the initial Entropy $H(S)$?
-   - A) 0.0
-   - B) 0.5
-   - C) 1.0
-   - D) 2.0
+    - **A)** 0.0
+    - **B)** 0.5
+    - **C)** 1.0
+    - **D)** 2.0
 
 4. In A* graph search, what is the evaluation function $f(n)$?
-   - A) $f(n) = g(n)$ (cost from start to current node)
-   - B) $f(n) = h(n)$ (estimated cost to goal)
-   - C) $f(n) = g(n) + h(n)$
-   - D) $f(n) = g(n) - h(n)$
+    - **A)** $f(n) = g(n)$ (cost from start to current node)
+    - **B)** $f(n) = h(n)$ (estimated cost to goal)
+    - **C)** $f(n) = g(n) + h(n)$
+    - **D)** $f(n) = g(n) - h(n)$
 
 5. Which unsupervised algorithm iteratively assigns points to the closest centroid and recalculates centroids as the arithmetic mean of assigned points?
-   - A) ID3 Decision Tree
-   - B) K-Means Clustering
-   - C) Minimax
-   - D) Q-Learning
-
----
+    - **A)** ID3 Decision Tree
+    - **B)** K-Means Clustering
+    - **C)** Minimax
+    - **D)** Q-Learning
 
 ### Answer Key & Explanations
 
-1. **B) Consistent (Monotonic)** — Consistency requires that the estimated cost from $n$ is no greater than the step cost to $n'$ plus the estimated cost from $n'$ (the triangle inequality). Every consistent heuristic is also admissible.
-2. **B) The MIN node prunes its remaining children because $\alpha \ge \beta$ ($5 \ge 4$)** — At the MIN node, $\beta$ is updated to $\min(\beta, 4) = 4$. Since the ancestor MAX node already has a guaranteed move of value $\alpha = 5$, MAX will never choose this branch. Because $\alpha \ge \beta$ ($5 \ge 4$), the remaining children are pruned.
-3. **C) 1.0** — $H(S) = - (0.5 \log_2 0.5 + 0.5 \log_2 0.5) = - (0.5(-1) + 0.5(-1)) = -(-1) = 1.0$.
-4. **C) $f(n) = g(n) + h(n)$** — A* balances the known cost to reach the node $g(n)$ with the estimated remaining cost to the goal $h(n)$.
-5. **B) K-Means Clustering** — K-Means alternates between cluster assignment based on Euclidean distance to centroids and updating centroids as the center of mass (mean) of all cluster members.
-
-
----
+1. **B**. Consistency requires that the estimated cost from $n$ is no greater than the step cost to $n'$ plus the estimated cost from $n'$ (the triangle inequality). Every consistent heuristic is also admissible.
+2. **B**. At the MIN node, $\beta$ is updated to $\min(\beta, 4) = 4$. Since the ancestor MAX node already has a guaranteed move of value $\alpha = 5$, MAX will never choose this branch. Because $\alpha \ge \beta$ ($5 \ge 4$), the remaining children are pruned.
+3. **C**. $H(S) = - (0.5 \log_2 0.5 + 0.5 \log_2 0.5) = - (0.5(-1) + 0.5(-1)) = -(-1) = 1.0$.
+4. **C**. A* balances the known cost to reach the node $g(n)$ with the estimated remaining cost to the goal $h(n)$.
+5. **B**. K-Means alternates between cluster assignment based on Euclidean distance to centroids and updating centroids as the center of mass (mean) of all cluster members.
 
 ## References & Navigation
 

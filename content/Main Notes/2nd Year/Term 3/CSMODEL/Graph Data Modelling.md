@@ -501,8 +501,8 @@ nodes = sorted(G.nodes())
 A = nx.to_numpy_array(G, nodelist=nodes)
 print(A)
 # [[0. 1. 1.]
-#  [1. 0. 1.]
-#  [1. 1. 0.]]
+# [1. 0. 1.]
+# [1. 1. 0.]]
 
 # Adjacency List (dict of dicts)
 adj_list = dict(G.adjacency())
@@ -540,7 +540,7 @@ print(nx.is_bipartite(G))  # False for complete triangle
 
 ---
 
-## ⚠ Common Exam Traps
+## Common Exam Traps
  **Undirected max edges = n(n-1)/2, NOT n(n-1).** The n(n-1) formula is for directed graphs. Don't mix them up. **Degree in undirected vs. in/out-degree in directed.** Undirected graphs have only one "degree" per node. Directed graphs have separate in-degree and out-degree. **Adjacency matrix is symmetric only for undirected graphs.** A directed graph's matrix is generally NOT symmetric. **Adjacency list total length:** For undirected = 2|E| (each edge stored TWICE). For directed = |E| (each edge stored ONCE from its source). **Closeness centrality = RECIPROCAL of average distance.** Higher closeness = closer to all other nodes. Don't confuse with raw average distance. **Betweenness centrality counts only SHORTEST paths.** Longer paths don't count. **PageRank requires a DiGraph in NetworkX.** `nx.pagerank()` will raise an error on an undirected `nx.Graph()`. **Clustering coefficient is undefined for nodes with degree 0 or 1** (cannot form a triangle). **Graph diameter is only defined for connected graphs.** If the graph is disconnected, call `nx.diameter()` on a connected component only. **DeepWalk != Node2Vec.** DeepWalk uses simple uniform random walks. Node2Vec adds a biased walk with parameters p and q. When p=1, q=1, Node2Vec reduces to DeepWalk. **Node2Vec p and q effects:** Low p = prefer returning to source (BFS-like). Low q = prefer exploring farther away (DFS-like). High p, high q = uniform random walk. **Modularity Q > 0.3** generally indicates strong community structure. Q can be negative. **`nx.Graph()` vs `nx.DiGraph()`:** PageRank, in_degree/out_degree only work correctly on DiGraph. Most centrality functions work on both but produce different results. **Density = 1.0 means COMPLETE graph**, not just "highly connected."
 
 ---
@@ -636,41 +636,42 @@ print(max(pr, key=pr.get))
 ## Multiple Choice Questions
 
 1. What does an adjacency matrix represent in graph data modelling?
-- **A)** The textual features of nodes
-- **B)** A square matrix indicating whether pairs of vertices are adjacent or connected by edges
-- **C)** The geographic distances between nodes
-- **D)** A list of edges without node references
+    - **A)** The textual features of nodes
+    - **B)** A square matrix indicating whether pairs of vertices are adjacent or connected by edges
+    - **C)** The geographic distances between nodes
+    - **D)** A list of edges without node references
 
 2. PageRank determines the importance of a node based on:
-- **A)** Its alphabetical order
-- **B)** The number and quality of links pointing to it
-- **C)** The total number of outgoing edges
-- **D)** The size of its data payload
+    - **A)** The number and quality of links pointing to it
+    - **B)** Its alphabetical order
+    - **C)** The total number of outgoing edges
+    - **D)** The size of its data payload
 
 3. Degree centrality measures:
-- **A)** The shortest path between a node and all others
-- **B)** The number of direct connections a node has
-- **C)** The amount of time a node has existed
-- **D)** The probability of a random walk visiting the node
+    - **A)** The shortest path between a node and all others
+    - **B)** The amount of time a node has existed
+    - **C)** The number of direct connections a node has
+    - **D)** The probability of a random walk visiting the node
 
 4. A directed graph is characterized by:
-- **A)** Edges having a specific orientation or direction (from node A to node B)
-- **B)** Edges that can only connect a node to itself
-- **C)** Bidirectional relationships exclusively
-- **D)** Having no cycles
+    - **A)** Having no cycles
+    - **B)** Edges that can only connect a node to itself
+    - **C)** Bidirectional relationships exclusively
+    - **D)** Edges having a specific orientation or direction (from node A to node B)
 
 5. What is the primary purpose of node embeddings?
-- **A)** To compress the graph into a single integer
-- **B)** To map nodes to low-dimensional continuous vectors while preserving network topology
-- **C)** To visualize graphs in 3D
-- **D)** To delete disconnected nodes
+    - **A)** To compress the graph into a single integer
+    - **B)** To map nodes to low-dimensional continuous vectors while preserving network topology
+    - **C)** To visualize graphs in 3D
+    - **D)** To delete disconnected nodes
 
 ### Answer Key & Explanations
-1. **B)** An adjacency matrix has a 1 (or weight) if an edge exists between node i and node j.
-2. **B)** PageRank counts in-links and weighs them by the importance of the referring nodes.
-3. **B)** Degree centrality is simply the count of incident edges on a node.
-4. **A)** Directed graphs have edges with direction (A -> B is not the same as B -> A).
-5. **B)** Embeddings (like Node2Vec) create vector representations for machine learning downstream tasks.
+
+1. **B**. An adjacency matrix has a 1 (or weight) if an edge exists between node i and node j.
+2. **A**. PageRank counts in-links and weighs them by the importance of the referring nodes.
+3. **C**. Degree centrality is simply the count of incident edges on a node.
+4. **D**. Directed graphs have edges with direction (A -> B is not the same as B -> A).
+5. **B**. Embeddings (like Node2Vec) create vector representations for machine learning downstream tasks.
 
 ## References & Navigation
 

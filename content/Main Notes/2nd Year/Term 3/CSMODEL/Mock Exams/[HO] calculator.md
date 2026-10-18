@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMODEL]] #[[Mock Exams]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
+**Tags:** #[[CSMODEL]] #[[Mock Exams]] #[[Computer Science]] #[[Data Science]] #[[Statistical Modeling]] #[[Python]] #[[Machine Learning]]
 
 ---
 
@@ -113,7 +113,7 @@ Given: P(B|A) = 0.9, P(A) = 0.01, P(B) = 0.05
 4. Press `=` (Result: 0.18)
 
 ---
-## 💡 General Calculator Tips for the Exam:
+## General Calculator Tips for the Exam:
 - **Parentheses are your best friend:** When dealing with fractions (like Cosine Similarity or Bayes' theorem) with multiple terms in the denominator, always wrap the denominator in parentheses. `A / (B * C)` is NOT the same as `A / B * C`.
 - **Store intermediate values:** For complex calculations like Cosine Similarity, write down the intermediate dot product and magnitudes on your scratch paper to avoid making a syntax error on a long one-line equation.
 - **Square Roots:** Depending on your calculator (Casio vs. Sharp vs. TI), you either press `√` *before* the number, or type the number and press `√` *after*. Make sure you know which way your specific calculator works!

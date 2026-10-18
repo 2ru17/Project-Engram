@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Security]] #[[Conceptual]]
+**Tags:** #[[Computer Science]] #[[CSNETWK]] #[[Security]] #[[Conceptual]]
 
 ---
 
@@ -70,78 +70,43 @@ $m = 17^{29} \pmod{35} = 12$
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "*Cons:* Requires a secure way _____ establish the shared key beforehand."?
-- **A)** Router
-- **B)** Network
-- **C)** to
-- **D)** Protocol
+1. What are the core security properties of the **CIA Triad plus Authentication and Non-Repudiation** in network security?
+    - **A)** Caching, Indexing, and Aggregation
+    - **B)** **Confidentiality** (only authorized sender/receiver can understand message contents, via encryption), **Integrity** (detecting any in-flight tampering/alteration of message bits, via MACs/hashes), **Availability** (keeping network services operational for legitimate users despite DoS attacks), and **Authentication** (verifying the true identity of the communicating peer).
+    - **C)** Collision Detection, Interleaving, and Acknowledgment
+    - **D)** Classful Addressing, ICMP, and ARP
 
-2. Which word completes the following sentence from the text: "The sender must encrypt the _____ to prove they are live."?
-- **A)** nonce
-- **B)** Protocol
-- **C)** Network
-- **D)** Router
+2. How do **Symmetric-Key Cryptography** (e.g., AES) and **Public-Key (Asymmetric) Cryptography** (e.g., RSA, Diffie-Hellman) differ, and how are they combined in protocols like **TLS**?
+    - **A)** Symmetric encryption uses a **single shared secret key** $K_S$ for both encryption and decryption and is computationally fast for bulk data, while Asymmetric cryptography uses a mathematically linked **(Public Key $K^+$, Private Key $K^-$) pair**; TLS uses asymmetric cryptography during the handshake to authenticate the server and securely establish a shared ephemeral **symmetric session key** used to encrypt the bulk session traffic.
+    - **B)** Symmetric cryptography uses two different keys and is $1000\times$ slower than RSA.
+    - **C)** TLS encrypts every megabyte of video streaming directly with 4096-bit RSA without symmetric keys.
+    - **D)** Public-key cryptography requires meeting in person to exchange the private key.
 
-3. Which word completes the following sentence from the text: "To send a confidential message, the sender _____ it using the receiver's public key."?
-- **A)** encrypts
-- **B)** Router
-- **C)** Network
-- **D)** Protocol
+3. To create a **Digital Signature** on a document $m$ that provides both **sender authentication** and **message integrity**, which key does Alice use to sign the cryptographic hash $H(m)$, and which key does Bob use to verify it?
+    - **A)** Alice signs with Bob's public key $K_B^+$; Bob verifies with Bob's private key $K_B^-$.
+    - **B)** Alice signs with Alice's public key $K_A^+$; Bob verifies with Alice's private key $K_A^-$.
+    - **C)** Alice encrypts/signs the hash $H(m)$ using **Alice's own Private Key $K_A^-$**; anyone (including Bob) can verify the signature by applying **Alice's Public Key $K_A^+$** to recover $H(m)$ and comparing it against a freshly computed hash of the received document $m$.
+    - **D)** No keys are used; sending $H(m)$ in plaintext is a digital signature.
 
-4. Which word completes the following sentence from the text: "The CA issues a certificate containing the entity's public _____ digitally signed by the CA's own private key."?
-- **A)** Router
-- **B)** Protocol
-- **C)** key
-- **D)** Network
+4. Why is sending an unkeyed cryptographic hash $H(m)$ alongside a plaintext message $\langle m, H(m) \rangle$ **insufficient** to protect message integrity against an active Man-in-the-Middle attacker?
+    - **A)** Because hash functions like SHA-256 are reversible.
+    - **B)** Because routers strip SHA-256 hashes at Layer 3.
+    - **C)** Because $H(m)$ is always longer than $m$.
+    - **D)** Because hash algorithms are publicly known: an active attacker can intercept $\langle m, H(m) \rangle$, modify the message to $m'$, compute the valid hash $H(m')$ themselves, and forward $\langle m', H(m') \rangle$; preventing this requires a **Message Authentication Code (MAC / HMAC)** $H(m + s)$ that incorporates a shared secret key $s$ (or a digital signature).
 
-5. Which word completes the following sentence from the text: "(Wait, the notes used $d=29$ because $29 \times _____ = 145 = 6 \times 24 + 1$)."?
-- **A)** 5
-- **B)** Network
-- **C)** Router
-- **D)** Protocol
-
-6. Which word completes the following sentence from the text: "**RSA Decryption:**   $$ m = c^d _____ n $$  **Modular Arithmetic Properties:**   $$ (a \pmod n \times b \pmod n) \pmod n = (a \times b) \pmod n $$   $$ (m^e \pmod n)^d \pmod n = m^{ed} \pmod n = m $$  ## Worked Examples  **Example 1: RSA Key Generation and Encryption** 1."?
-- **A)** Network
-- **B)** Router
-- **C)** Protocol
-- **D)** pmod
-
-7. Which word completes the following sentence from the text: "**Access and Availability:** Services must _____ accessible to legitimate users."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** be
-
-8. Which word completes the following sentence from the text: "**Public Key Cryp_____graphy:** The receiver has a public key (known to everyone) and a private key (known only to them)."?
-- **A)** to
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
-
-9. Which word completes the following sentence from the text: "**Symmetric Key Cryptography:** Both sender and _____ share the same secret key."?
-- **A)** Network
-- **B)** Protocol
-- **C)** receiver
-- **D)** Router
-
-10. Which word completes the following sentence from the text: "A sender signs a document by _____ it with their *private* key."?
-- **A)** encrypting
-- **B)** Router
-- **C)** Protocol
-- **D)** Network
-
+5. At which layers of the Internet protocol stack do **TLS (Transport Layer Security)**, **IPsec**, and **WPA2/WPA3 (802.11i)** respectively operate?
+    - **A)** TLS operates at Layer 1; IPsec at Layer 5; WPA2 at Layer 3.
+    - **B)** **TLS** secures Application/Transport streams (above TCP at Layer 4/5); **IPsec** secures Network-layer IP datagrams host-to-host or gateway-to-gateway (Layer 3); **WPA2/WPA3** secures wireless Link-layer frames between a device and the Wi-Fi Access Point (Layer 2).
+    - **C)** All three operate exclusively inside DNS servers.
+    - **D)** All three encrypt Ethernet MAC addresses at Layer 1.
 
 ### Answer Key & Explanations
-1. **C)** to completes the sentence: *Cons:* Requires a secure way to establish the sha...
-2. **A)** nonce completes the sentence: The sender must encrypt the nonce to prove they ar...
-3. **A)** encrypts completes the sentence: To send a confidential message, the sender encrypt...
-4. **C)** key completes the sentence: The CA issues a certificate containing the entity'...
-5. **A)** 5 completes the sentence: (Wait, the notes used $d=29$ because $29 \times 5 ...
-6. **D)** pmod completes the sentence: **RSA Decryption:**   $$ m = c^d \pmod n $$  **Mod...
-7. **D)** be completes the sentence: **Access and Availability:** Services must be acce...
-8. **A)** to completes the sentence: **Public Key Cryptography:** The receiver has a pu...
-9. **C)** receiver completes the sentence: **Symmetric Key Cryptography:** Both sender and re...
-10. **A)** encrypting completes the sentence: A sender signs a document by encrypting it with th...
+
+1. **B**. Network security rests on Confidentiality (encryption), Message Integrity (HMAC/signatures), Endpoint Authentication (certificates/keys), and Service Availability.
+2. **A**. Hybrid cryptosystems like TLS combine the key-exchange/authentication strength of asymmetric cryptography (RSA/ECDHE) with the high throughput of symmetric ciphers (AES-GCM) for bulk payload encryption.
+3. **C**. Because only Alice possesses her private key $K_A^-$, only Alice could have produced $K_A^-(H(m))$; anyone with Alice's public key $K_A^+$ can verify that $K_A^+(K_A^-(H(m))) = H(m)$.
+4. **D**. Without a secret key $s$ (as in an HMAC) or private signing key, an attacker can trivially recompute $H(m')$ for a forged message $m'$.
+5. **B**. Security protocols provide defense-in-depth at different layers: WPA2/WPA3 on the wireless link (L2), IPsec on IP datagrams (L3), and TLS on application/TCP connections (L4/L5).
 
 ## References & Navigation
 

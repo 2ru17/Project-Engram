@@ -11,111 +11,67 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Bayes's Rules]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Bayes's Rules]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Bayes's Rules**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+**Bayes' Rule (Bayes' Theorem)** inverts conditional probabilities, allowing us to compute the **posterior probability** $P(B_k \mid A)$ of an unobservable cause or hypothesis $B_k$ given observed evidence $A$, using the **prior probabilities** $P(B_i)$ and **likelihoods** $P(A \mid B_i)$ across a partition of the sample space.
 
 ## Key Definitions
-- **Bayes's Rules**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Bayes's Rules** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Two-Hypothesis Form:** $P(B \mid A) = \frac{P(A \mid B)P(B)}{P(A \mid B)P(B) + P(A \mid B^c)P(B^c)}$.
+- **General Partition Form:** For a partition $\{B_1, B_2, \dots, B_n\}$ of $S$:
+  $$P(B_k \mid A) = \frac{P(A \mid B_k)P(B_k)}{\sum_{i=1}^n P(A \mid B_i)P(B_i)}$$
+- **Posterior Odds Form:** $\frac{P(B \mid A)}{P(B^c \mid A)} = \frac{P(A \mid B)}{P(A \mid B^c)} \cdot \frac{P(B)}{P(B^c)} = \text{Likelihood Ratio} \times \text{Prior Odds}$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Bayes's Rules**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** Factory machines $M_1$ and $M_2$ produce $60\%$ and $40\%$ of chips, respectively. Defective rates are $P(D \mid M_1) = 0.02$ and $P(D \mid M_2) = 0.05$. If a randomly selected chip is defective ($D$), what is the probability it came from $M_2$?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Bayes's Rules** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+$$P(M_2 \mid D) = \frac{P(D \mid M_2)P(M_2)}{P(D \mid M_1)P(M_1) + P(D \mid M_2)P(M_2)} = \frac{(0.05)(0.40)}{(0.02)(0.60) + (0.05)(0.40)} = \frac{0.020}{0.012 + 0.020} = \frac{0.020}{0.032} = 0.625$$
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Which identity directly relates $P(B \mid A)$ and $P(A \mid B)$ when $P(A) > 0$ and $P(B) > 0$?
+    - **A)** $P(B \mid A) = P(A \mid B)$
+    - **B)** $P(B \mid A) = \frac{P(A \mid B)P(B)}{P(A)}$
+    - **C)** $P(B \mid A) = 1 - P(A \mid B)$
+    - **D)** $P(B \mid A) = \frac{P(A \mid B)P(A)}{P(B)}$
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Using the worked example ($P(M_1)=0.60, P(M_2)=0.40, P(D\mid M_1)=0.02, P(D\mid M_2)=0.05$), what is the posterior probability $P(M_1 \mid D)$ that a defective chip came from Machine 1?
+    - **A)** $0.375$
+    - **B)** $0.600$
+    - **C)** $0.012$
+    - **D)** $0.500$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Why must the sum of posterior probabilities $\sum_{i=1}^n P(B_i \mid A)$ over a partition $\{B_1, \dots, B_n\}$ always equal $1$?
+    - **A)** Because $A$ is mutually exclusive with every $B_i$.
+    - **B)** Because the prior probabilities are all equal to $1/n$.
+    - **C)** Because each numerator $P(A \mid B_i)P(B_i)$ is divided by the exact sum of all numerators $P(A) = \sum_{j=1}^n P(A \mid B_j)P(B_j)$.
+    - **D)** Because $P(A) = 1$.
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. Suppose a diagnostic test has sensitivity $P(+ \mid D) = 0.90$ and false-positive rate $P(+ \mid D^c) = 0.10$. If disease prevalence is $P(D) = 0.01$, what is the posterior odds $\frac{P(D \mid +)}{P(D^c \mid +)}$?
+    - **A)** $9 : 1$
+    - **B)** $90 : 1$
+    - **C)** $1 : 99$
+    - **D)** $9 : 99$ (i.e., $1 : 11$)
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. Which common error confuses $P(A \mid B)$ with $P(B \mid A)$ in legal and statistical reasoning?
+    - **A)** Gambler's Fallacy
+    - **B)** Prosecutor's Fallacy (Confusion of the Inverse)
+    - **C)** Simpson's Paradox
+    - **D)** Berkson's Paradox
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Since $P(A \cap B) = P(B \mid A)P(A) = P(A \mid B)P(B)$, dividing by $P(A)$ gives Bayes' Rule: $P(B \mid A) = \frac{P(A \mid B)P(B)}{P(A)}$.
+2. **A**. $P(M_1 \mid D) = \frac{0.012}{0.032} = 0.375$ (which also equals $1 - P(M_2 \mid D) = 1 - 0.625 = 0.375$).
+3. **C**. Conditioning on event $A$ defines a valid probability measure on the partition $\{B_i\}$; algebraically, $\sum_{i=1}^n \frac{P(A \mid B_i)P(B_i)}{P(A)} = \frac{P(A)}{P(A)} = 1$.
+4. **D**. Posterior odds equal Likelihood Ratio $\times$ Prior Odds $= \frac{0.90}{0.10} \times \frac{0.01}{0.99} = 9 \times \frac{1}{99} = \frac{9}{99} = \frac{1}{11}$.
+5. **B**. The Prosecutor's Fallacy (confusion of the inverse) mistakenly equates the probability of observing evidence given innocence $P(E \mid I)$ with the probability of innocence given the evidence $P(I \mid E)$.
 
 ## References & Navigation
 

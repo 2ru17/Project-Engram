@@ -14,7 +14,7 @@ hackerrank_domain: Divide and Conquer
 > - **Status:** `=this.status`
 > - **Difficulty:** `=this.difficulty`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Modular Exponentiation]] #[[Fast Power]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Modular Exponentiation]] #[[Fast Power]]
 
 ---
 
@@ -41,14 +41,14 @@ Output consists of one line containing Palpatine's power $X^N$ after $N$ millise
 ---
 
 ## Approach & Intuition
-> **🗂️ Abstract the problem**
+> ** Abstract the problem**
 > Emperor Palpatine fires lightning that starts at power 1 and multiplies by `E` every millisecond. After `T` milliseconds, the power is `E^T`. Output `E^T mod 10^7`.
 
-> **🐢 Dumb sol?**
+> ** Dumb sol?**
 > Multiply by E repeatedly, T times: `result = 1; for t times: result *= E;`
 > **O(T)** — T can be up to 10¹², which means **1 trillion multiplications** → TLE (would take hours).
 
-> **🚀 Smart sol?**
+> ** Smart sol?**
 > Read the exponent in binary. Only ~40 bits are needed. Square-and-multiply: O(log T) steps.
 > **O(log T) ≈ 40 steps** — runs instantly.
 
@@ -117,7 +117,7 @@ With mod applied at each step:
   This means applying mod per step = same result as applying once at end.
 
   Max intermediate: (10^7 - 1)² = ~10^14 << int64_max (9.2×10^18)
-  So no overflow ever occurs! ✓
+  So no overflow ever occurs! 
 ```
 
 ---
@@ -146,13 +146,13 @@ flowchart TD
 
 | exponent | binary | lowest bit? | result | base after squaring |
 |---|---|---|---|---|
-| 13 | `1101` | **1** ✓ | 1 × 2 = **2** | 2² = 4 |
-| 6 | `0110` | **0** ✗ | 2 (no change) | 4² = 16 |
-| 3 | `0011` | **1** ✓ | 2 × 16 = **32** | 16² = 256 |
-| 1 | `0001` | **1** ✓ | 32 × 256 = **8192** | 256² = 65536 |
+| 13 | `1101` | **1**  | 1 × 2 = **2** | 2² = 4 |
+| 6 | `0110` | **0**  | 2 (no change) | 4² = 16 |
+| 3 | `0011` | **1**  | 2 × 16 = **32** | 16² = 256 |
+| 1 | `0001` | **1**  | 32 × 256 = **8192** | 256² = 65536 |
 | 0 | `0000` | — | Loop ends | — |
 
-**Output: 8192 = 2¹³** ✓
+**Output: 8192 = 2¹³** 
 
 ---
 
@@ -249,7 +249,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 - **Related Notes:** [[Divide and Conquer Introduction]]

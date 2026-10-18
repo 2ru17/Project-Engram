@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[Computational Thinking in Problem Solving]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[Computational Thinking in Problem Solving]]
 
 ---
 
@@ -89,67 +89,68 @@ def max_candies(X, K, stores):
 ## Multiple Choice Questions
 
 1. In the context of online judges, what does "TLE" stand for?
-    A) Target Limit Exceeded
-    B) Time Limit Exceeded
-    C) Thread Lock Error
-    D) Trial Limit Exceeded
+    - **A)** Target Limit Exceeded
+    - **B)** Time Limit Exceeded
+    - **C)** Thread Lock Error
+    - **D)** Trial Limit Exceeded
 2. Which CT concept refers to ignoring irrelevant narrative details in a problem description?
-    A) Algorithmic Thinking
-    B) Problem Decomposition
-    C) Evaluation
-    D) Abstraction
+    - **A)** Algorithmic Thinking
+    - **B)** Problem Decomposition
+    - **C)** Evaluation
+    - **D)** Abstraction
 3. If a problem restricts the input size to $N \le 10^5$, which time complexity is generally expected to pass?
-    A) $O(N^3)$
-    B) $O(N^2)$
-    C) $O(N \log N)$
-    D) $O(2^N)$
+    - **A)** $O(N^3)$
+    - **B)** $O(N^2)$
+    - **C)** $O(N \log N)$
+    - **D)** $O(2^N)$
 4. What does the verdict "Presentation Error" signify?
-    A) The logic is flawed, resulting in an incorrect answer.
-    B) The program crashed during execution.
-    C) The program successfully computed the answer but the formatting did not match exactly.
-    D) The program used too much memory.
+    - **A)** The logic is flawed, resulting in an incorrect answer.
+    - **B)** The program crashed during execution.
+    - **C)** The program successfully computed the answer but the formatting did not match exactly.
+    - **D)** The program used too much memory.
 5. Breaking down the problem of "Building a web server" into routing, database handling, and authentication is an example of:
-    A) Algorithmic Thinking
-    B) Abstraction
-    C) Evaluation
-    D) Problem Decomposition
+    - **A)** Algorithmic Thinking
+    - **B)** Abstraction
+    - **C)** Evaluation
+    - **D)** Problem Decomposition
 6. Why is it dangerous to solely rely on the Sample Input/Output provided in a problem?
-    A) They are usually intentionally mathematically incorrect.
-    B) They are automatically generated and might crash your IDE.
-    C) They rarely cover complex edge cases and are only meant as basic sanity checks.
-    D) They do not follow the actual Input Format specified in the rules.
+    - **A)** They are usually intentionally mathematically incorrect.
+    - **B)** They are automatically generated and might crash your IDE.
+    - **C)** They rarely cover complex edge cases and are only meant as basic sanity checks.
+    - **D)** They do not follow the actual Input Format specified in the rules.
 7. If your code produces an output that perfectly matches the required format but computes 5 instead of 6, what verdict will you receive?
-    A) Presentation Error
-    B) Output Limit Exceeded
-    C) Runtime Error
-    D) Wrong Answer
+    - **A)** Presentation Error
+    - **B)** Output Limit Exceeded
+    - **C)** Runtime Error
+    - **D)** Wrong Answer
 8. Which data structure is typically utilized for maintaining a Priority Queue?
-    A) Hash Map
-    B) Heap
-    C) Stack
-    D) Linked List
+    - **A)** Hash Map
+    - **B)** Heap
+    - **C)** Stack
+    - **D)** Linked List
 9. Evaluating an algorithm's "Usability" and "Correctness" falls under which pillar of Computational Thinking?
-    A) Problem Decomposition
-    B) Evaluation
-    C) Abstraction
-    D) Algorithmic Thinking
+    - **A)** Problem Decomposition
+    - **B)** Evaluation
+    - **C)** Abstraction
+    - **D)** Algorithmic Thinking
 10. A problem states: $1 \le T \le 10$ and $0 \le X \le 10^9$. Why are constraints vital before coding?
-    A) They dictate the programming language you must use.
-    B) They tell you the precise Time Limit (e.g., 2.0s).
-    C) They determine the data types needed (e.g., 64-bit integers) and what algorithms will run efficiently within limits.
-    D) They ensure the output format is correct.
+    - **A)** They dictate the programming language you must use.
+    - **B)** They tell you the precise Time Limit (e.g., 2.0s).
+    - **C)** They determine the data types needed (e.g., 64-bit integers) and what algorithms will run efficiently within limits.
+    - **D)** They ensure the output format is correct.
 
 ### Answer Key & Explanations
-1. **B** - Time Limit Exceeded happens when the code is too slow.
-2. **D** - Abstraction is the process of removing unnecessary details to focus on core logic.
-3. **C** - $O(N \log N)$ typically performs around $1.6 \times 10^6$ operations, fitting comfortably inside a 1-second limit. $O(N^2)$ would be $10^{10}$, triggering a TLE.
-4. **C** - Presentation Errors happen due to trailing spaces, missing newlines, etc., despite correct algorithmic output.
-5. **D** - Problem Decomposition splits large issues into manageable chunks.
-6. **C** - Samples are just sanity checks; problem setters leave the hardest edge cases hidden.
-7. **D** - The math/logic is wrong, resulting in a Wrong Answer.
-8. **B** - A Heap optimally provides priority queue operations.
-9. **B** - Evaluation includes reviewing Correctness, Efficiency, Elegance, and Usability.
-10. **C** - Large inputs (like $10^9$) indicate you might need a formula rather than a loop, or `long long` integers in languages like C++ to prevent overflow.
+
+1. **B**. Time Limit Exceeded happens when the code is too slow.
+2. **D**. Abstraction is the process of removing unnecessary details to focus on core logic.
+3. **C**. $O(N \log N)$ typically performs around $1.6 \times 10^6$ operations, fitting comfortably inside a 1-second limit. $O(N^2)$ would be $10^{10}$, triggering a TLE.
+4. **C**. Presentation Errors happen due to trailing spaces, missing newlines, etc., despite correct algorithmic output.
+5. **D**. Problem Decomposition splits large issues into manageable chunks.
+6. **C**. Samples are just sanity checks; problem setters leave the hardest edge cases hidden.
+7. **D**. The math/logic is wrong, resulting in a Wrong Answer.
+8. **B**. A Heap optimally provides priority queue operations.
+9. **B**. Evaluation includes reviewing Correctness, Efficiency, Elegance, and Usability.
+10. **C**. Large inputs (like $10^9$) indicate you might need a formula rather than a loop, or `long long` integers in languages like C++ to prevent overflow.
 
 ## References & Navigation
 

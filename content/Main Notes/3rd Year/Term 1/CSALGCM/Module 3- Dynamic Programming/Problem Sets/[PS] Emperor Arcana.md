@@ -168,7 +168,6 @@ int main() {
 }
 ```
 
----
 
 ## References & Navigation
 

@@ -11,7 +11,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[LBYARCH]] #[[Conceptual]] #[[Verilog]] #[[Simulation]] #[[Code Snippets]]
+**Tags:** #[[Computer Science]] #[[LBYARCH]] #[[Conceptual]] #[[Verilog]] #[[Simulation]] #[[Code Snippets]]
 
 ---
 
@@ -122,77 +122,77 @@ endmodule
 ## Multiple Choice Questions
 
 1. What is the fundamental building block of a Verilog design?
-- **A)** Function
-- **B)** Task
-- **C)** Module
-- **D)** Block
+    - **A)** Function
+    - **B)** Task
+    - **C)** Module
+    - **D)** Block
 
 2. Which keyword is used for continuous assignment in Verilog?
-- **A)** assign
-- **B)** always
-- **C)** initial
-- **D)** wire
+    - **A)** assign
+    - **B)** always
+    - **C)** initial
+    - **D)** wire
 
 3. In an `always` block modeling sequential logic, which assignment operator should be used?
-- **A)** `=`
-- **B)** `<=`
-- **C)** `==`
-- **D)** `:=`
+    - **A)** `=`
+    - **B)** `<=`
+    - **C)** `==`
+    - **D)** `:=`
 
 4. What is the purpose of a testbench in Verilog?
-- **A)** To synthesize the design into hardware
-- **B)** To generate stimuli and verify the functionality of a module
-- **C)** To define the power requirements of a circuit
-- **D)** To optimize the logic gates in the design
+    - **A)** To synthesize the design into hardware
+    - **B)** To generate stimuli and verify the functionality of a module
+    - **C)** To define the power requirements of a circuit
+    - **D)** To optimize the logic gates in the design
 
 5. Which modeling style uses instances of logic gates and modules?
-- **A)** Behavioral
-- **B)** Dataflow
-- **C)** Structural
-- **D)** Algorithmic
+    - **A)** Behavioral
+    - **B)** Dataflow
+    - **C)** Structural
+    - **D)** Algorithmic
 
 6. What does the `$monitor` system task do?
-- **A)** Stops the simulation
-- **B)** Displays text once when executed
-- **C)** Continuously tracks and prints specified variables when they change
-- **D)** Writes variables to a file
+    - **A)** Stops the simulation
+    - **B)** Displays text once when executed
+    - **C)** Continuously tracks and prints specified variables when they change
+    - **D)** Writes variables to a file
 
 7. In a module declaration, which type is typically used for input ports?
-- **A)** reg
-- **B)** wire
-- **C)** logic
-- **D)** integer
+    - **A)** reg
+    - **B)** wire
+    - **C)** logic
+    - **D)** integer
 
 8. What indicates a positive edge of a clock signal in a sensitivity list?
-- **A)** edge clk
-- **B)** posedge clk
-- **C)** negedge clk
-- **D)** rising clk
+    - **A)** edge clk
+    - **B)** posedge clk
+    - **C)** negedge clk
+    - **D)** rising clk
 
 9. Which timescale directive means a time unit of 1 nanosecond and precision of 1 picosecond?
-- **A)** \`timescale 1ns / 1ps
-- **B)** \`timescale 1ps / 1ns
-- **C)** \`timescale 1ns - 1ps
-- **D)** \`timescale 1ns : 1ps
+    - **A)** \`timescale 1ns / 1ps
+    - **B)** \`timescale 1ps / 1ns
+    - **C)** \`timescale 1ns - 1ps
+    - **D)** \`timescale 1ns : 1ps
 
 10. What is a key difference between `initial` and `always` blocks?
-- **A)** `initial` blocks run continuously, `always` blocks run once.
-- **B)** `initial` blocks are only used in testbenches, `always` blocks only in synthesis.
-- **C)** `initial` blocks execute once at time zero, `always` blocks execute continuously in a loop.
-- **D)** There is no difference; they are interchangeable.
+    - **A)** `initial` blocks run continuously, `always` blocks run once.
+    - **B)** `initial` blocks are only used in testbenches, `always` blocks only in synthesis.
+    - **C)** `initial` blocks execute once at time zero, `always` blocks execute continuously in a loop.
+    - **D)** There is no difference; they are interchangeable.
 
 ### Answer Key & Explanations
 
-1. **C** - A module is the principal design entity in Verilog, encapsulating structural and functional details.
-2. **A** - The `assign` keyword specifies a continuous assignment, driving a value onto a wire.
-3. **B** - Non-blocking assignments (`<=`) allow concurrent updates necessary for accurately modeling sequential logic like flip-flops.
-4. **B** - Testbenches simulate the environment, providing inputs to the Design Under Test (DUT) to check its behavior.
-5. **C** - Structural modeling builds a system by instantiating and connecting basic gates or other modules.
-6. **C** - `$monitor` tracks variables in its argument list and prints their values whenever any of them changes.
-7. **B** - Input ports are continuously driven from the outside, so they are typically declared as `wire`.
-8. **B** - `posedge clk` specifies that the block should trigger on the rising edge of the clock signal.
-9. **A** - `\`timescale 1ns / 1ps` sets the reference time unit to 1ns and the precision to 1ps.
-10. **C** - An `initial` block starts at time 0 and runs exactly once, whereas an `always` block repeatedly executes throughout the simulation.
+1. **C**. A module is the principal design entity in Verilog, encapsulating structural and functional details.
+2. **A**. The `assign` keyword specifies a continuous assignment, driving a value onto a wire.
+3. **B**. Non-blocking assignments (`<=`) allow concurrent updates necessary for accurately modeling sequential logic like flip-flops.
+4. **B**. Testbenches simulate the environment, providing inputs to the Design Under Test (DUT) to check its behavior.
+5. **C**. Structural modeling builds a system by instantiating and connecting basic gates or other modules.
+6. **C**. `$monitor` tracks variables in its argument list and prints their values whenever any of them changes.
+7. **B**. Input ports are continuously driven from the outside, so they are typically declared as `wire`.
+8. **B**. `posedge clk` specifies that the block should trigger on the rising edge of the clock signal.
+9. **A**. `\`timescale 1ns / 1ps` sets the reference time unit to 1ns and the precision to 1ps.
+10. **C**. An `initial` block starts at time 0 and runs exactly once, whereas an `always` block repeatedly executes throughout the simulation.
 
 ## References & Navigation
 

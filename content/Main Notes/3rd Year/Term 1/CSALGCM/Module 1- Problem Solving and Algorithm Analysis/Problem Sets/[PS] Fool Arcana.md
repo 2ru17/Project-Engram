@@ -12,7 +12,7 @@ hackerrank_link: "https://www.hackerrank.com/"
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Problem Sets]]
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Problem Sets]]
 
 ---
 
@@ -25,16 +25,16 @@ hackerrank_link: "https://www.hackerrank.com/"
 
 | # | Problem | Key Concept | Status |
 |---|---------|-------------|--------|
-| 01 | [[01 - Solve Me First]] | Function completion, basic I/O | ✅ Solved |
-| 02 | [[02 - Simple Array Sum]] | Linear scan aggregation | ✅ Solved |
-| 03 | [[03 - Mini-Max Sum]] | Single-pass min/max + `long long` overflow | ✅ Solved |
-| 04 | [[04 - CamelCase]] | Linear scan counter | ✅ Solved |
-| 05 | [[05 - Library Fine]] | Cascading conditionals | ✅ Solved |
-| 06 | [[06 - Minimum Distances]] | Hash map (last-seen pattern) | ✅ Solved |
-| 07 | [[07 - Repeated String]] | Quotient/remainder decomposition | ✅ Solved |
-| 08 | [[08 - Sherlock and Squares]] | Integer square root + float correction | ✅ Solved |
-| 09 | [[09 - Anagram]] | Frequency difference array | ✅ Solved |
-| 10 | [[10 - Circular Array Rotation]] | Modular index mapping | ✅ Solved |
+| 01 | [[01 - Solve Me First]] | Function completion, basic I/O |  Solved |
+| 02 | [[02 - Simple Array Sum]] | Linear scan aggregation |  Solved |
+| 03 | [[03 - Mini-Max Sum]] | Single-pass min/max + `long long` overflow |  Solved |
+| 04 | [[04 - CamelCase]] | Linear scan counter |  Solved |
+| 05 | [[05 - Library Fine]] | Cascading conditionals |  Solved |
+| 06 | [[06 - Minimum Distances]] | Hash map (last-seen pattern) |  Solved |
+| 07 | [[07 - Repeated String]] | Quotient/remainder decomposition |  Solved |
+| 08 | [[08 - Sherlock and Squares]] | Integer square root + float correction |  Solved |
+| 09 | [[09 - Anagram]] | Frequency difference array |  Solved |
+| 10 | [[10 - Circular Array Rotation]] | Modular index mapping |  Solved |
 
 ## Patterns Covered
 
@@ -47,7 +47,6 @@ hackerrank_link: "https://www.hackerrank.com/"
 - **Frequency difference array** (09)
 - **Inverse circular offset formula** (10)
 
----
 
 ## References & Navigation
 

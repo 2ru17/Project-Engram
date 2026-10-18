@@ -11,111 +11,68 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Complementary Rule]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Complementary Rule]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Complementary Rule**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Complementary Rule** states that the sum of the probabilities of an event $A$ and its complement $A^c$ is always $1$: $P(A) + P(A^c) = 1$, or equivalently $P(A) = 1 - P(A^c)$. It is derived directly from Kolmogorov's normalization and additivity axioms.
 
 ## Key Definitions
-- **Complementary Rule**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Complementary Rule** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Complementary Probability Formula:** $P(A^c) = 1 - P(A)$ and $P(A) = 1 - P(A^c)$.
+- **Axiomatic Proof:** Since $S = A \cup A^c$ and $A \cap A^c = \emptyset$, Axiom 2 and Axiom 3 give $1 = P(S) = P(A \cup A^c) = P(A) + P(A^c)$.
+- **"At Least One" Shortcut:** For $n$ independent trials with failure probability $q = 1 - p$, $P(\text{at least one success}) = 1 - q^n$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Complementary Rule**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** A packet transmission across a noisy wireless link fails independently with probability $0.10$. If $4$ packets are transmitted, what is the probability that **at least one** packet fails?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Complementary Rule** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- Let $A$ be the event "at least one packet fails." Then $A^c$ is "no packets fail (all 4 succeed)."
+- $P(A^c) = (1 - 0.10)^4 = (0.90)^4 = 0.6561$.
+- By the Complementary Rule: $P(A) = 1 - P(A^c) = 1 - 0.6561 = 0.3439$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Which pair of Kolmogorov's axioms is directly used to prove that $P(A^c) = 1 - P(A)$?
+    - **A)** Axiom 1 (Non-negativity) only
+    - **B)** Axiom 2 ($P(S) = 1$) and Axiom 3 (Additivity for disjoint sets $A$ and $A^c$)
+    - **C)** Bayes' Theorem and independence
+    - **D)** The Central Limit Theorem
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. A security system has $3$ independent firewall layers, each blocking an intrusion attempt with probability $0.80$ (and failing to block with probability $0.20$). What is the probability that an intrusion is blocked by **at least one** layer?
+    - **A)** $0.992$
+    - **B)** $0.512$
+    - **C)** $0.008$
+    - **D)** $0.800$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Using the Complementary Rule, how can one prove that $P(A) \le 1$ for every event $A \subseteq S$?
+    - **A)** Since $P(A) = 1 - P(A^c)$ and Axiom 1 guarantees $P(A^c) \ge 0$, subtracting a non-negative number from $1$ yields $P(A) \le 1$.
+    - **B)** Because $P(A)$ is always equal to $0.5$.
+    - **C)** Because $A$ and $A^c$ are independent.
+    - **D)** Because $P(\emptyset) = 1$.
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. In the Birthday Problem with $n = 23$ people (assuming $365$ equally likely birthdays), why is the Complementary Rule used to find $P(\text{at least two share a birthday})$?
+    - **A)** Because computing $1 - P(\text{all 23 birthdays are distinct}) = 1 - \frac{P(365, 23)}{365^{23}} \approx 0.5073$ avoids counting all combinations of pairs, triples, and higher collisions.
+    - **B)** Because $23 / 365 = 0.5073$.
+    - **C)** Because birthdays are mutually exclusive.
+    - **D)** Because only 2 people can share a birthday.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. If the odds in favor of event $A$ are $3 : 5$, what is $P(A^c)$?
+    - **A)** $\frac{3}{8}$
+    - **B)** $\frac{5}{8}$
+    - **C)** $\frac{3}{5}$
+    - **D)** $\frac{2}{5}$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. Since $A \cup A^c = S$ and $A \cap A^c = \emptyset$, Axiom 3 gives $P(A \cup A^c) = P(A) + P(A^c)$ and Axiom 2 gives $P(S) = 1$, so $P(A) + P(A^c) = 1$.
+2. **A**. The complement is that all 3 layers fail to block the intrusion: $P(\text{none block}) = (0.20)^3 = 0.008$. Thus $P(\text{at least one blocks}) = 1 - 0.008 = 0.992$.
+3. **A**. From $P(A) + P(A^c) = 1$ and $P(A^c) \ge 0$ (Axiom 1), it immediately follows that $P(A) = 1 - P(A^c) \le 1$.
+4. **A**. The complement of "at least one shared birthday" is "all $23$ birthdays are distinct," whose probability is a single product $\frac{365 \times 364 \times \cdots \times 343}{365^{23}} \approx 0.4927$, giving $1 - 0.4927 = 0.5073$.
+5. **B**. Odds in favor of $A$ being $3:5$ means $P(A) = \frac{3}{3+5} = \frac{3}{8}$. By the Complementary Rule, $P(A^c) = 1 - \frac{3}{8} = \frac{5}{8}$.
 
 ## References & Navigation
 

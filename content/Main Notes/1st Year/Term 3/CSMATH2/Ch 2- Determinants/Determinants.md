@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Problem Solving]] #[[CSMATH2]] #[[Linear Algebra]] #[[Mathematics]]
+**Tags:** #[[Problem Solving]] #[[CSMATH2]] #[[Linear Algebra]] #[[Mathematics]]
 
 ---
 
@@ -52,27 +52,28 @@ $ A + B = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix} $
 ## Multiple Choice Questions
 
 1. For a $2 \times 2$ matrix $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, what is the explicit formula for computing the determinant $\det(A)$?
-- **A)** $ac - bd$
-- **B)** $ad + bc$
-- **C)** $ab - cd$
-- **D)** $ad - bc$
+    - **A)** $ac - bd$
+    - **B)** $ad + bc$
+    - **C)** $ab - cd$
+    - **D)** $ad - bc$
 
 2. In the context of linear algebra, what does evaluating the determinant help analyze when given linear equations represented as $Ax = b$?
-- **A)** The aesthetic properties of the vector space.
-- **B)** The properties and solutions of the structural linear equations.
-- **C)** The color gradients of a transformation matrix.
-- **D)** The programming language syntax needed to solve them.
+    - **A)** The aesthetic properties of the vector space.
+    - **B)** The properties and solutions of the structural linear equations.
+    - **C)** The color gradients of a transformation matrix.
+    - **D)** The programming language syntax needed to solve them.
 
 3. What exact role does the determinant play in the formula for finding the inverse of a $2 \times 2$ matrix?
-- **A)** It acts as the scalar denominator $\frac{1}{\det(A)}$ multiplying the rearranged matrix entries.
-- **B)** It is added to every entry in the matrix.
-- **C)** It replaces the main diagonal.
-- **D)** It is ignored if the matrix is square.
+    - **A)** It acts as the scalar denominator $\frac{1}{\det(A)}$ multiplying the rearranged matrix entries.
+    - **B)** It is added to every entry in the matrix.
+    - **C)** It replaces the main diagonal.
+    - **D)** It is ignored if the matrix is square.
 
 ### Answer Key & Explanations
-1. **D)** The determinant of a $2 \times 2$ matrix $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ is mathematically defined by the formula $ad - bc$.
-2. **B)** The theoretical framework notes that finding the determinant or using Gaussian elimination helps analyze the properties and solutions of linear equation systems like $Ax = b$.
-3. **A)** In the $2 \times 2$ inverse formula $A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$, the determinant is used as a scalar divisor.
+
+1. **D**. The determinant of a $2 \times 2$ matrix $\begin{pmatrix} a & b \\ c & d \end{pmatrix}$ is mathematically defined by the formula $ad - bc$.
+2. **B**. The theoretical framework notes that finding the determinant or using Gaussian elimination helps analyze the properties and solutions of linear equation systems like $Ax = b$.
+3. **A**. In the $2 \times 2$ inverse formula $A^{-1} = \frac{1}{\det(A)} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$, the determinant is used as a scalar divisor.
 
 ## References & Navigation
 

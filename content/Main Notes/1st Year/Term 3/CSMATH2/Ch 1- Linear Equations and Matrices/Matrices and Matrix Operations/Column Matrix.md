@@ -3,7 +3,7 @@ id: Column-Matrix
 type: note
 course: CSMATH2
 topic: Linear Algebra
-status: draft
+status: completed
 ---
 
 # Column Matrix
@@ -13,7 +13,7 @@ status: draft
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Vectors]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
+**Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Vectors]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
 
 ---
 
@@ -56,37 +56,34 @@ $$\begin{bmatrix} 3 \\ -1 \\ 7 \end{bmatrix}^T = \begin{bmatrix} 3 & -1 & 7 \end
 
 > TL;DR — A column matrix is an $m \times 1$ matrix representing a vector. Its transpose is a row matrix. Column vectors are fundamental in linear systems $A\mathbf{x} = \mathbf{b}$.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** [[Row Matrix]] — [[Definition of a Matrix]] — [[Size & Dimension of a Matrix]] — [[Transpose of a Matrix]] — [[Types of Matrices]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. What are the dimensions of a column matrix with $m$ rows?
-- **A)** $m \times m$
-- **B)** $1 \times m$
-- **C)** $m \times 1$
-- **D)** $1 \times 1$
+    - **A)** $m \times m$
+    - **B)** $1 \times m$
+    - **C)** $m \times 1$
+    - **D)** $1 \times 1$
 
 2. What is the result of taking the transpose of a column matrix?
-- **A)** A scalar
-- **B)** A square matrix
-- **C)** A row matrix
-- **D)** An identity matrix
+    - **A)** A scalar
+    - **B)** A square matrix
+    - **C)** A row matrix
+    - **D)** An identity matrix
 
 3. Which of the following statements about a column matrix and a row matrix with identical entries is true?
-- **A)** They are equal as matrices.
-- **B)** They represent the exact same vector in all mathematical contexts.
-- **C)** They are not equal as matrices due to different dimensions.
-- **D)** They can be added together without any transformations.
+    - **A)** They are equal as matrices.
+    - **B)** They represent the exact same vector in all mathematical contexts.
+    - **C)** They are not equal as matrices due to different dimensions.
+    - **D)** They can be added together without any transformations.
 
 ### Answer Key & Explanations
-1. **C)** A column matrix (column vector) is defined as a matrix with exactly one column and $m$ rows, denoted as an $m \times 1$ matrix.
-2. **C)** The relationship between column and row matrices states that if $\mathbf{v}$ is a column matrix, then its transpose $\mathbf{v}^T$ is a row matrix.
-3. **C)** A common pitfall is forgetting that a column vector and row vector with the same entries are NOT equal as matrices because they have different dimensions (rows × columns).
+
+1. **C**. A column matrix (column vector) is defined as a matrix with exactly one column and $m$ rows, denoted as an $m \times 1$ matrix.
+2. **C**. The relationship between column and row matrices states that if $\mathbf{v}$ is a column matrix, then its transpose $\mathbf{v}^T$ is a row matrix.
+3. **C**. A common pitfall is forgetting that a column vector and row vector with the same entries are NOT equal as matrices because they have different dimensions (rows × columns).
 
 ## References & Navigation
 

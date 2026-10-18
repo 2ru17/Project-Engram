@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
+**Tags:** #[[CSMATH2]] #[[Linear Algebra]] #[[Computational Mathematics]] #[[Matrices]] #[[Matrix Operations]] #[[Computer Science]] #[[Vector Spaces]] #[[Linear Transformations]]
 
 ---
 
@@ -38,37 +38,34 @@ If A is symmetric, it must be a square matrix (since A and A⊤ must have the sa
 
 > TL;DR — Symmetric: $A^T = A$, meaning $a_{ij} = a_{ji}$. Must be square. Common in applications (covariance matrices, distance matrices). Eigenvalues are always real.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** **Source / Reference:**
 
 ## Multiple Choice Questions
 
 1. What is the formal definition of a symmetric matrix $A$?
-- **A)** $A^T = -A$
-- **B)** $A^T = A$
-- **C)** $A = A^{-1}$
-- **D)** $A = I_n$
+    - **A)** $A^T = -A$
+    - **B)** $A^T = A$
+    - **C)** $A = A^{-1}$
+    - **D)** $A = I_n$
 
 2. In terms of matrix entries, what must hold strictly true for a symmetric matrix?
-- **A)** $a_{ij} = -a_{ji}$ for all indices $i, j$
-- **B)** $a_{ij} = 0$ for all $i \neq j$
-- **C)** $a_{ij} = a_{ji}$ for all indices $i, j$
-- **D)** $a_{ii} = 1$ for all indices $i$
+    - **A)** $a_{ij} = -a_{ji}$ for all indices $i, j$
+    - **B)** $a_{ij} = 0$ for all $i \neq j$
+    - **C)** $a_{ij} = a_{ji}$ for all indices $i, j$
+    - **D)** $a_{ii} = 1$ for all indices $i$
 
 3. According to the notes, which of the following matrix expressions always results in a symmetric matrix, regardless of the original dimensions of matrix $A$?
-- **A)** $A - A^T$
-- **B)** $A^T A$ and $A A^T$
-- **C)** $A^2$
-- **D)** $A + A^{-1}$
+    - **A)** $A - A^T$
+    - **B)** $A^T A$ and $A A^T$
+    - **C)** $A^2$
+    - **D)** $A + A^{-1}$
 
 ### Answer Key & Explanations
-1. **B)** By definition, a square matrix is called symmetric if it is equal to its own transpose, meaning $A^T = A$.
-2. **C)** The structural consequence of $A^T = A$ is that every entry $a_{ij}$ must equal its corresponding reflected entry $a_{ji}$.
-3. **B)** A common property highlighted in the pitfalls is that the products $A^T A$ and $A A^T$ always yield a symmetric matrix for any matrix $A$.
+
+1. **B**. By definition, a square matrix is called symmetric if it is equal to its own transpose, meaning $A^T = A$.
+2. **C**. The structural consequence of $A^T = A$ is that every entry $a_{ij}$ must equal its corresponding reflected entry $a_{ji}$.
+3. **B**. A common property highlighted in the pitfalls is that the products $A^T A$ and $A A^T$ always yield a symmetric matrix for any matrix $A$.
 
 ## References & Navigation
 

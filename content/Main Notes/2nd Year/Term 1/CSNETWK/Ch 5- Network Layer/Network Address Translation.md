@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
+**Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
 
 ---
 
@@ -109,87 +109,48 @@ _Context: The router looks up the destination port in its NAT table, finds the o
 
 > TL;DR — NAT translates private IPs to a single public IP using port numbers. Outgoing: source IP replaced. Incoming: destination IP replaced. The NAT table maps (private IP:port) ↔ (public IP:WAN port).
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Pasted image 20251121092549.png]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "**Scenario Data** ![[Pasted image 20251121092549.png]]  **Host (Internal):** `10.0.1.19` (Private) **Router (LAN Side):** `10.0.1.25` **Router _____ Side):** `135.122.202.208` (Public) **Remote Server (Destination):** `128.119.166.189` **Traffic Details:** Host `10.0.1.19` sends to `128.119.166.189`."?
-- **A)** Router
-- **B)** Network
-- **C)** WANInternet
-- **D)** Protocol
+1. What is the primary purpose of **Network Address Translation (NAT) / NAPT (Port-Based NAT)** in IPv4 home and enterprise networks?
+    - **A)** To encrypt packet payloads using AES-256.
+    - **B)** To allow multiple hosts on a private LAN (using RFC 1918 private addresses such as `10.0.0.0/8`, `172.16.0.0/12`, or `192.168.0.0/16`) to share a **single public IPv4 address** on the WAN by multiplexing connections using distinct 16-bit Transport-layer port numbers.
+    - **C)** To replace DNS resolution with ARP broadcasts.
+    - **D)** To convert TCP segments into UDP datagrams.
 
-2. Which word completes the following sentence from the text: "What is the source IP address for this _____  **Analysis:** Inside the LAN, the packet acts normally."?
-- **A)** datagram
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
+2. Suppose internal host `10.0.1.19` (source port `3345`) sends an HTTP request to public web server `128.119.166.189` (port `80`) through a NAT router whose public WAN IP is `135.122.202.208`. If the NAT router assigns WAN port `5001`, how does the NAT router modify the **outgoing** packet header?
+    - **A)** It changes the Destination IP to `135.122.202.208` and leaves the Source IP as `10.0.1.19`.
+    - **B)** It rewrites the **Source IP and Source Port** from `(10.0.1.19, 3345)` to `(135.122.202.208, 5001)` (leaving Destination IP `128.119.166.189` and Port `80` untouched), and records `(135.122.202.208, 5001) <-> (10.0.1.19, 3345)` in its NAT translation table.
+    - **C)** It encapsulates the packet inside an IPv6 header without modifying the IPv4 addresses.
+    - **D)** It only changes the MAC address and leaves all IP and TCP fields unchanged.
 
-3. Which word completes the following sentence from the text: "_____ | **3 (WAN)** | Incoming      | **Remote IP** (Server) | **Public IP** (Router) | Server replies to the Router."?
-- **A)** Router
-- **B)** Protocol
-- **C)** 
-- **D)** Network
+3. In the scenario from Question 2, when the remote web server `128.119.166.189:80` sends its HTTP reply back to `(135.122.202.208, 5001)`, what transformation does the NAT router perform on the **incoming** reply packet?
+    - **A)** It looks up destination `(135.122.202.208, 5001)` in its NAT translation table and rewrites the **Destination IP and Destination Port** to `(10.0.1.19, 3345)` before forwarding the packet onto the internal LAN.
+    - **B)** It rewrites the Source IP from `128.119.166.189` to `10.0.1.19`.
+    - **C)** It broadcasts the packet to every host on `10.0.1.0/24`.
+    - **D)** It drops the packet because private IPs cannot receive replies.
 
-4. Which word completes the following sentence from the text: "At step 4, what is the destination IP address for this datagram**  **Analysis:** The router _____ the Public destination back to the Private destination (`10.0.1.19`) based on the NAT table entry."?
-- **A)** Network
-- **B)** Router
-- **C)** translates
-- **D)** Protocol
+4. Why must a NAT router recompute **both** the Layer-3 IPv4 header checksum **and** the Layer-4 TCP/UDP checksum whenever it translates a packet?
+    - **A)** Because the payload text is modified.
+    - **B)** Because the IPv4 header checksum covers the IP addresses, and the TCP/UDP checksum covers a **pseudo-header** (which includes the 32-bit Source IP and Destination IP) as well as the 16-bit TCP/UDP port numbers.
+    - **C)** Because Ethernet CRC-32 is stored inside the TCP header.
+    - **D)** NAT routers never recompute checksums.
 
-5. Which word completes the following sentence from the text: "The reply hits the _____ outside interface._  **6."?
-- **A)** routers
-- **B)** Network
-- **C)** Router
-- **D)** Protocol
-
-6. Which word completes the following sentence from the text: "The NAT Table  The router maintains a translation table mapping _____ IP : Private Port} to {Public IP : Public Port}."?
-- **A)** Network
-- **B)** Router
-- **C)** Private
-- **D)** Protocol
-
-7. Which word completes the following sentence from the text: "This allows it to route incoming _____ back to the correct internal device."?
-- **A)** Network
-- **B)** responses
-- **C)** Protocol
-- **D)** Router
-
-8. Which word completes the following sentence from the text: "At step 2, what is the destination IP address for _____ datagram?**  **Analysis:** The router does not touch the destination."?
-- **A)** Protocol
-- **B)** this
-- **C)** Router
-- **D)** Network
-
-9. Which word completes the following sentence from the text: "It replaces `10.0.1.19` with its own WAN address so _____ internet sees the request coming from the router."?
-- **A)** Router
-- **B)** Protocol
-- **C)** the
-- **D)** Network
-
-10. Which word completes the following sentence from the text: "At step 1, what is the destination IP address?**  _____ The computer wants to reach the web server."?
-- **A)** Analysis
-- **B)** Network
-- **C)** Protocol
-- **D)** Router
-
+5. Why do architectural purists consider NAT a **violation of strict layering and the End-to-End Principle**?
+    - **A)** Because a Layer-3 network device (the router) inspects and modifies Layer-4 transport port numbers, and external hosts on the public Internet cannot initiate unsolicited inbound connections directly to an internal private host without explicit port forwarding or NAT traversal (STUN/TURN/UPnP).
+    - **B)** Because NAT operates only at the Physical layer (Layer 1).
+    - **C)** Because NAT requires fiber-optic cables.
+    - **D)** Because NAT forces all applications to use IPv6.
 
 ### Answer Key & Explanations
-1. **C)** WANInternet completes the sentence: **Scenario Data** ![[Pasted image 20251121092549.p...
-2. **A)** datagram completes the sentence: What is the source IP address for this datagram?**...
-3. **C)**  completes the sentence: | | **3 (WAN)** | Incoming      | **Remote IP** (S...
-4. **C)** translates completes the sentence: At step 4, what is the destination IP address for ...
-5. **A)** routers completes the sentence: The reply hits the router's outside interface._  *...
-6. **C)** Private completes the sentence: The NAT Table  The router maintains a translation ...
-7. **B)** responses completes the sentence: This allows it to route incoming responses back to...
-8. **B)** this completes the sentence: At step 2, what is the destination IP address for ...
-9. **C)** the completes the sentence: It replaces `10.0.1.19` with its own WAN address s...
-10. **A)** Analysis completes the sentence: At step 1, what is the destination IP address?**  ...
+
+1. **B**. RFC 1918 private addresses are not routable on the public Internet; NAPT maps `(Private IP, Private Port)` pairs to `(Public WAN IP, Assigned WAN Port)` so up to $\sim 65,535$ concurrent flows can share one public IPv4 address.
+2. **B**. On outbound traffic, the NAT router substitutes its own public WAN IP and a unique NAT port as the new Source `(135.122.202.208, 5001)` so the remote server knows where to send the reply.
+3. **A**. When the reply arrives addressed to `(135.122.202.208, 5001)`, the NAT table maps port `5001` back to internal destination `(10.0.1.19, 3345)`.
+4. **B**. Modifying either an IP address or a TCP/UDP port invalidates both the IPv4 header checksum and the TCP/UDP transport checksum (which includes the IPv4 pseudo-header).
+5. **A**. NAPT crosses the Layer-3/Layer-4 boundary by rewriting port numbers and breaks universal end-to-end host addressability for inbound connections.
 
 ## References & Navigation
 

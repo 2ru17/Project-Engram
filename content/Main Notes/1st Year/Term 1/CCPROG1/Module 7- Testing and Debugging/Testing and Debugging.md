@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Conceptual]] #[[CCPROG1]] #[[Debugging]] #[[Software Quality]] #[[M7]]
+**Tags:** #[[Conceptual]] #[[CCPROG1]] #[[Debugging]] #[[Software Quality]] #[[M7]]
 
 ---
 
@@ -42,86 +42,43 @@ status: completed
 
 ## Multiple Choice Questions
 
-1. What best describes the role of **Test Cases**?
-- **A)** An error, flaw, or fault in a computer program that produces an incorrect or ...
-- **B)** Specific sets of inputs and expected outputs used to test a program
-- **C)** Testing functionality without looking at the internal code structure. Focuses...
-- **D)** A software-only abstraction that does not correspond to physical hardware
+1. Which type of error occurs when a C program compiles without warnings or errors, runs to completion, but produces an incorrect calculation result (such as using `+` instead of `*`)?
+    - **A)** Syntax error
+    - **B)** Linker error
+    - **C)** Logic error (semantic bug)
+    - **D)** Preprocessor error
 
-2. What best describes the role of **Bug**?
-- **A)** A theoretical concept with no practical hardware implementation
-- **B)** An error, flaw, or fault in a computer program that produces an incorrect or ...
-- **C)** Testing values at the extremes of allowed inputs (e.g., an empty string, `0`,...
-- **D)** Verify that the fix worked and did not introduce new bugs
+2. When designing test cases for a function that accepts a student score in the valid range `[0, 100]`, which set of inputs best represents Boundary Value Analysis?
+    - **A)** `50, 60, 70`
+    - **B)** `-1, 0, 1, 99, 100, 101`
+    - **C)** `25, 50, 75`
+    - **D)** `1000, -1000, 0`
 
-3. What best describes the role of **White-box Testing**?
-- **A)** An error, flaw, or fault in a computer program that produces an incorrect or ...
-- **B)** A measurement unit used exclusively in network performance benchmarking
-- **C)** Testing internal structures, logic paths, and edge cases by reading the sourc...
-- **D)** Specific sets of inputs and expected outputs used to test a program
+3. What is the difference between Black-Box Testing and White-Box Testing?
+    - **A)** Black-Box Testing examines internal code paths and branches, while White-Box Testing only checks inputs and outputs
+    - **B)** Black-Box Testing validates functionality against specifications without looking at internal source code, while White-Box Testing designs test cases using knowledge of internal code structure and branches
+    - **C)** Black-Box Testing is done by compilers, while White-Box Testing is done by users
+    - **D)** White-Box Testing does not require running the program
 
-4. What best describes the role of **Re-test**?
-- **A)** A deprecated standard that has been replaced in modern implementations
-- **B)** Verify that the fix worked and did not introduce new bugs
-- **C)** The program runs but produces incorrect outputs because the underlying algori...
-- **D)** Testing functionality without looking at the internal code structure. Focuses...
+4. Which of the following causes a Linker Error rather than a Compile-Time Syntax Error in C?
+    - **A)** Missing a semicolon at the end of a `printf` statement
+    - **B)** Misspelling the keyword `while` as `whlie`
+    - **C)** Declaring a function prototype and calling it, or misspelling `main`, without providing the function's actual definition
+    - **D)** Dividing an integer by zero at runtime
 
-5. In the sequence described in this topic, what happens during the **Fix the Bug:** step?
-- **A)** Modify the code to resolve the issue.
-- **B)** Verify that the fix worked and did not introduce new bugs.
-- **C)** Notice that the program is not behaving as expected.
-- **D)** Understand *why* the error is occurring.
-
-6. Which step immediately follows **Fix the Bug:**?
-- **A)** Re-test:
-- **B)** Analyze the Cause:
-- **C)** Identify the Error:
-- **D)** There is no subsequent step
-
-7. According to the material on **Testing and Debugging**, which statement is correct?
-- **A)** The opposite of the stated principle applies
-- **B)** 4. Fix the Bug: Modify the code to resolve the issue.
-- **C)** This principle only applies in theoretical models, not practical systems
-- **D)** The described behavior is considered deprecated in modern implementations
-
-8. According to the material on **Testing and Debugging**, which statement is correct?
-- **A)** The described behavior is considered deprecated in modern implementations
-- **B)** This principle only applies in theoretical models, not practical systems
-- **C)** 5. Re-test: Verify that the fix worked and did not introduce new bugs.
-- **D)** The opposite of the stated principle applies
-
-9. According to the material on **Testing and Debugging**, which statement is correct?
-- **A)** This principle only applies in theoretical models, not practical systems
-- **B)** Testing is the process of evaluating a program to verify that it functions exactly as intended, w...
-- **C)** The described behavior is considered deprecated in modern implementations
-- **D)** Testing is not the process of evaluating a program to verify that it functions exactly as intended, w...
-
-10. According to the material on **Testing and Debugging**, which statement is correct?
-- **A)** 1. Identify the Error: Notice that the program is not not behaving as expected.
-- **B)** The described behavior is considered deprecated in modern implementations
-- **C)** This principle only applies in theoretical models, not practical systems
-- **D)** 1. Identify the Error: Notice that the program is not behaving as expected.
+5. What is a "driver" in the context of unit testing modular C programs?
+    - **A)** A hardware kernel module that controls external I/O devices
+    - **B)** A dummy placeholder function called by the module under test
+    - **C)** A test harness (such as a temporary `main()` function) written to invoke the function under test with specific inputs and verify its return value
+    - **D)** An automated code formatter that enforces indentation rules
 
 ### Answer Key & Explanations
-1. **B)** **Test Cases** is defined in the note as: Specific sets of inputs and expected outputs used to test a program.
 
-2. **B)** **Bug** is defined in the note as: An error, flaw, or fault in a computer program that produces an incorrect or unexpected result.
-
-3. **C)** **White-box Testing** is defined in the note as: Testing internal structures, logic paths, and edge cases by reading the source code.
-
-4. **B)** **Re-test** is defined in the note as: Verify that the fix worked and did not introduce new bugs.
-
-5. **A)** The Fix the Bug: step involves: Modify the code to resolve the issue.
-
-6. **A)** According to the sequence, Re-test: directly follows Fix the Bug:.
-
-7. **B)** The note explicitly states: "4. Fix the Bug: Modify the code to resolve the issue."
-
-8. **C)** The note explicitly states: "5. Re-test: Verify that the fix worked and did not introduce new bugs."
-
-9. **B)** The note explicitly states: "Testing is the process of evaluating a program to verify that it functions exactly as intended, w..."
-
-10. **D)** The note explicitly states: "1. Identify the Error: Notice that the program is not behaving as expected."
+1. **C**. A logic error means the code is syntactically valid C, so the compiler and linker succeed, but the algorithm implemented by the programmer does not match the intended specification.
+2. **B**. Off-by-one bugs (`<` vs `<=`) almost always occur at the exact boundaries of valid input ranges. Boundary Value Analysis tests the minimum and maximum edges (`0` and `100`) as well as the values immediately adjacent to them (`-1, 1, 99, 101`).
+3. **B**. Black-Box Testing treats the program as an opaque box and tests input-to-output behavior against requirements. White-Box (glass-box) Testing inspects the control flow graph, `if/else` branches, and loop conditions to ensure full path coverage.
+4. **C**. Syntax errors (A, B) are caught by the compiler during translation. A missing function definition after a valid prototype passes compilation, but fails when the linker tries to resolve symbol references into a final executable.
+5. **C**. In bottom-up testing, a test driver is a caller module that feeds test inputs into a lower-level function and checks its output. By contrast, a "stub" (B) is a dummy callee function used in top-down testing.
 
 ## References & Navigation
 

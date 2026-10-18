@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
+**Tags:** #[[CCINFOM]] #[[Data Modeling]] #[[Information Structures]] #[[Computer Science]] #[[Databases]] #[[SQL]]
 
 ---
 
@@ -324,10 +324,6 @@ Good luck! You got this.
 ## Summary
 
 > TL;DR — Comprehensive CCINFOM concepts review: DBMS architecture, relational model & keys, relational algebra, EER, normalization (1NF–4NF), ACID transactions, concurrency control (2PL, deadlocks), indexing, and SQL injection prevention.
-
-## Review Questions
-
-_To be added._
 
 ## Links
  **Related:** **Source / Reference:**

@@ -3,7 +3,7 @@ id: Recursion-Tree-Method
 type: note
 course: CCDSALG
 topic: Algorithms
-status: draft
+status: completed
 ---
 
 # Recursion Tree Method
@@ -95,86 +95,83 @@ The root level dominates (top-heavy tree) — directly consistent with Master Th
 
 > TL;DR — The Recursion Tree Method draws out recursive calls as a tree, sums costs per level, and totals them to solve the recurrence. It’s especially useful for intuition and as a precursor to formal proofs.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** [[Master Theorem]] — [[Substitution Method]] — [[Divide and Conquer]] — [[Asymptotic Notation]] — [[Recursion]] **Source / Reference:** Handout 03
 
 ## Multiple Choice Questions
 
 1. What is the Recursion Tree Method used for?
-- **A)** Generating iterative loops automatically.
-- **B)** Visually solving recurrences by drawing recursive calls as a tree and summing costs per level.
-- **C)** Managing binary search trees in memory.
-- **D)** Storing output data hierarchically.
+    - **A)** Generating iterative loops automatically.
+    - **B)** Visually solving recurrences by drawing recursive calls as a tree and summing costs per level.
+    - **C)** Managing binary search trees in memory.
+    - **D)** Storing output data hierarchically.
 
 2. In a recursion tree for $T(n) = aT(n/b) + f(n)$, what does each node represent?
-- **A)** The exact Big-O notation for that step.
-- **B)** The total cost of all subproblems combined.
-- **C)** The cost of a single recursive call, excluding its children's costs.
-- **D)** The number of loops.
+    - **A)** The exact Big-O notation for that step.
+    - **B)** The total cost of all subproblems combined.
+    - **C)** The cost of a single recursive call, excluding its children's costs.
+    - **D)** The number of loops.
 
 3. For a recurrence that divides the input by $b$ at each step, what is the total depth of the recursion tree?
-- **A)** $\log_b n$
-- **B)** $b \log n$
-- **C)** $n/b$
-- **D)** $n^b$
+    - **A)** $\log_b n$
+    - **B)** $b \log n$
+    - **C)** $n/b$
+    - **D)** $n^b$
 
 4. In the worked example $T(n) = 2T(n/2) + n$, what is the total cost at level 1?
-- **A)** $n/2$
-- **B)** $n$
-- **C)** $2n$
-- **D)** $n^2$
+    - **A)** $n/2$
+    - **B)** $n$
+    - **C)** $2n$
+    - **D)** $n^2$
 
 5. In the worked example $T(n) = 2T(n/2) + n$, how many leaves does the tree have at the final level?
-- **A)** $\log_2 n$
-- **B)** $n/2$
-- **C)** $n$
-- **D)** $2n$
+    - **A)** $\log_2 n$
+    - **B)** $n/2$
+    - **C)** $n$
+    - **D)** $2n$
 
 6. In the worked example $T(n) = 3T(n/4) + cn^2$, what does the geometric series indicate about the tree?
-- **A)** The root dominates (top-heavy tree).
-- **B)** The leaves dominate (bottom-heavy tree).
-- **C)** The work is perfectly balanced across all levels.
-- **D)** The recurrence cannot be solved.
+    - **A)** The root dominates (top-heavy tree).
+    - **B)** The leaves dominate (bottom-heavy tree).
+    - **C)** The work is perfectly balanced across all levels.
+    - **D)** The recurrence cannot be solved.
 
 7. Which method is the Recursion Tree Method often used to help or generate a "guess" for?
-- **A)** Frequency counting
-- **B)** The Substitution Method
-- **C)** Iterative unrolling
-- **D)** The Master Theorem
+    - **A)** Frequency counting
+    - **B)** The Substitution Method
+    - **C)** Iterative unrolling
+    - **D)** The Master Theorem
 
 8. What is a common pitfall when drawing a recursion tree?
-- **A)** Forgetting to account for the cost at the leaf level.
-- **B)** Drawing the tree upside down.
-- **C)** Assuming the tree has exactly 2 branches at every node regardless of $a$.
-- **D)** Using asymptotic notation instead of constants.
+    - **A)** Forgetting to account for the cost at the leaf level.
+    - **B)** Drawing the tree upside down.
+    - **C)** Assuming the tree has exactly 2 branches at every node regardless of $a$.
+    - **D)** Using asymptotic notation instead of constants.
 
 9. When computing the number of nodes per level, by what factor does it increase each time?
-- **A)** It multiplies by $b$.
-- **B)** It multiplies by $a$.
-- **C)** It adds $f(n)$.
-- **D)** It divides by $n$.
+    - **A)** It multiplies by $b$.
+    - **B)** It multiplies by $a$.
+    - **C)** It adds $f(n)$.
+    - **D)** It divides by $n$.
 
 10. Why might someone choose to use the Recursion Tree Method over the Master Theorem?
-- **A)** Because the Master Theorem is mathematically unproven.
-- **B)** To get a visual/intuitive understanding of the recurrence, or when the Master Theorem doesn’t directly apply.
-- **C)** Because it provides an exact millisecond execution time.
-- **D)** Because it is the only way to analyze sorting algorithms.
+    - **A)** Because the Master Theorem is mathematically unproven.
+    - **B)** To get a visual/intuitive understanding of the recurrence, or when the Master Theorem doesn’t directly apply.
+    - **C)** Because it provides an exact millisecond execution time.
+    - **D)** Because it is the only way to analyze sorting algorithms.
 
 ### Answer Key & Explanations
-1. **B)** It is a technique for modeling recursive calls hierarchically to easily sum up the work done at every level of depth.
-2. **C)** A node strictly holds the non-recursive overhead $f(n)$ for that specific subproblem, ensuring work isn't double-counted when summing.
-3. **A)** The problem size decreases by a factor of $b$ at each level, so it takes $\log_b n$ steps to reach the base case of size 1.
-4. **B)** Level 1 has 2 nodes, each doing $n/2$ work. $2 \times (n/2) = n$.
-5. **C)** The number of leaves is $a^{\text{depth}} = 2^{\log_2 n} = n$.
-6. **A)** Because the ratio of the geometric series is less than 1 ($3/16$), the terms shrink rapidly, meaning the very first term (the root) holds the vast majority of the cost.
-7. **B)** Finding the exact sum of a recursion tree can be algebraically messy, so it's often used to just estimate the bound (guess) and then formally prove it using substitution.
-8. **A)** It is easy to sum up the internal nodes and completely forget that the massive row of base-case leaves at the very bottom also contributes $\Theta(n^{\log_b a})$ work.
-9. **B)** The variable $a$ dictates the branching factor—how many child subproblems each parent spawns.
-10. **B)** The Master Theorem has strict structural requirements. The tree method is flexible enough to handle bizarre recurrences and provides deep intuition about where the algorithm spends its time.
+
+1. **B**. It is a technique for modeling recursive calls hierarchically to easily sum up the work done at every level of depth.
+2. **C**. A node strictly holds the non-recursive overhead $f(n)$ for that specific subproblem, ensuring work isn't double-counted when summing.
+3. **A**. The problem size decreases by a factor of $b$ at each level, so it takes $\log_b n$ steps to reach the base case of size 1.
+4. **B**. Level 1 has 2 nodes, each doing $n/2$ work. $2 \times (n/2) = n$.
+5. **C**. The number of leaves is $a^{\text{depth}} = 2^{\log_2 n} = n$.
+6. **A**. Because the ratio of the geometric series is less than 1 ($3/16$), the terms shrink rapidly, meaning the very first term (the root) holds the vast majority of the cost.
+7. **B**. Finding the exact sum of a recursion tree can be algebraically messy, so it's often used to just estimate the bound (guess) and then formally prove it using substitution.
+8. **A**. It is easy to sum up the internal nodes and completely forget that the massive row of base-case leaves at the very bottom also contributes $\Theta(n^{\log_b a})$ work.
+9. **B**. The variable $a$ dictates the branching factor—how many child subproblems each parent spawns.
+10. **B**. The Master Theorem has strict structural requirements. The tree method is flexible enough to handle bizarre recurrences and provides deep intuition about where the algorithm spends its time.
 
 ## References & Navigation
 

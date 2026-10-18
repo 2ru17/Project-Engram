@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Problem Sets]] #[[IEEE-754]] #[[Floating-Point Representation]] #[[Single Precision]] #[[Double Precision]] #[[Subnormal Numbers]] #[[Binary Conversion]]
+**Tags:** #[[Computer Science]] #[[CSARCH2]] #[[Computer Architecture]] #[[Problem Sets]] #[[IEEE-754]] #[[Floating-Point Representation]] #[[Single Precision]] #[[Double Precision]] #[[Subnormal Numbers]] #[[Binary Conversion]]
 
 ---
 
@@ -92,16 +92,16 @@ IEEE-754 partitions the exponent field $E$ into special regimes:
 
 ---
 
-## ✍️ Problem Solutions
+## Problem Solutions
 
 ### Problem 1: Convert $1.1101_2 \times 2^{135}$ to IEEE-754 Single Precision
 
-#### 📋 Problem Statement
+#### Problem Statement
 Represent the floating-point value $+1.1101_2 \times 2^{135}$ using 32-bit single-precision binary format. Specify the sign bit, 8-bit exponent representation, 23-bit fraction, and hexadecimal representation.
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Sign Bit ($S$):**
    - The value is positive $\implies S = \mathbf{0}$.
@@ -131,7 +131,7 @@ Represent the floating-point value $+1.1101_2 \times 2^{135}$ using 32-bit singl
 
 ---
 
-#### 📊 Result Summary Table
+#### Result Summary Table
 
 | Field | IEEE-754 Standard (+$\infty$ on Overflow) | Theoretical Exact (9-bit Exp Overflow) |
 | :--- | :--- | :--- |
@@ -147,12 +147,12 @@ Represent the floating-point value $+1.1101_2 \times 2^{135}$ using 32-bit singl
 
 ### Problem 2: Convert $1.1101_2 \times 2^{135}$ to IEEE-754 Double Precision
 
-#### 📋 Problem Statement
+#### Problem Statement
 Represent $+1.1101_2 \times 2^{135}$ using 64-bit double-precision binary format.
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Sign Bit ($S$):**
    - Positive number $\implies S = \mathbf{0}$.
@@ -186,7 +186,7 @@ Represent $+1.1101_2 \times 2^{135}$ using 64-bit double-precision binary format
 
 ---
 
-#### 📊 Result Summary Table
+#### Result Summary Table
 
 | Field | Binary Value | Description |
 | :--- | :--- | :--- |
@@ -199,12 +199,12 @@ Represent $+1.1101_2 \times 2^{135}$ using 64-bit double-precision binary format
 
 ### Problem 3: Convert $1.1101_2 \times 2^{-135}$ to IEEE-754 Single Precision
 
-#### 📋 Problem Statement
+#### Problem Statement
 Represent $+1.1101_2 \times 2^{-135}$ using 32-bit single-precision format.
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Sign Bit ($S$):**
    - Positive number $\implies S = \mathbf{0}$.
@@ -252,7 +252,7 @@ Represent $+1.1101_2 \times 2^{-135}$ using 32-bit single-precision format.
 
 ---
 
-#### 📊 Result Summary Table
+#### Result Summary Table
 
 | Field | Value | Notes |
 | :--- | :--- | :--- |
@@ -265,12 +265,12 @@ Represent $+1.1101_2 \times 2^{-135}$ using 32-bit single-precision format.
 
 ### Problem 4: Convert $1.1101_2 \times 2^{-135}$ to IEEE-754 Double Precision
 
-#### 📋 Problem Statement
+#### Problem Statement
 Represent $+1.1101_2 \times 2^{-135}$ using 64-bit double-precision format.
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Sign Bit ($S$):**
    - Positive number $\implies S = \mathbf{0}$.
@@ -304,7 +304,7 @@ Represent $+1.1101_2 \times 2^{-135}$ using 64-bit double-precision format.
 
 ---
 
-#### 📊 Result Summary Table
+#### Result Summary Table
 
 | Field | Binary Value | Description |
 | :--- | :--- | :--- |
@@ -317,12 +317,12 @@ Represent $+1.1101_2 \times 2^{-135}$ using 64-bit double-precision format.
 
 ### Problem 5: Decode Single-Precision `0xC1C20000` to Decimal
 
-#### 📋 Problem Statement
+#### Problem Statement
 Determine the equivalent fixed-point decimal value of the IEEE-754 single-precision floating-point bit pattern `0xC1C20000`.
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Convert Hexadecimal to 32-bit Binary:**
    $$\begin{aligned}
@@ -358,7 +358,7 @@ Determine the equivalent fixed-point decimal value of the IEEE-754 single-precis
 
 ---
 
-#### 📊 Result Summary Table
+#### Result Summary Table
 
 | Field | Extraction | Value |
 | :--- | :--- | :--- |
@@ -372,12 +372,12 @@ Determine the equivalent fixed-point decimal value of the IEEE-754 single-precis
 
 ### Problem 6: Decode Double-Precision `0x4027800000000000` to Decimal
 
-#### 📋 Problem Statement
+#### Problem Statement
 Determine the equivalent fixed-point decimal value of the IEEE-754 double-precision bit pattern `0x4027800000000000`.
 
 ---
 
-#### 🔍 Step-by-Step Derivation
+#### Step-by-Step Derivation
 
 1. **Convert Hexadecimal to 64-bit Binary:**
    $$\begin{aligned}
@@ -413,7 +413,7 @@ Determine the equivalent fixed-point decimal value of the IEEE-754 double-precis
 
 ---
 
-#### 📊 Result Summary Table
+#### Result Summary Table
 
 | Field | Extraction | Value |
 | :--- | :--- | :--- |
@@ -425,7 +425,7 @@ Determine the equivalent fixed-point decimal value of the IEEE-754 double-precis
 
 ---
 
-## 💻 Python Verification Script
+## Python Verification Script
 
 ```python
 import struct
@@ -454,7 +454,7 @@ verify_all()
 
 ---
 
-## 🔑 Key Takeaways & Exam Summary
+## Key Takeaways & Exam Summary
 
 1. **Biased Exponent Formula:** $E = e + \text{Bias}$ where $\text{Bias} = 2^{k-1} - 1$.
    - Single precision ($k=8$): $\text{Bias} = 127$.

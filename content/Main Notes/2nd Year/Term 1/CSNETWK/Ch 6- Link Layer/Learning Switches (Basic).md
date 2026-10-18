@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
+**Tags:** #[[CSNETWK]] #[[Computer Science]] #[[Computer Networks]] #[[Networking Protocols]] #[[Graph Theory Basics]]
 
 ---
 
@@ -103,87 +103,48 @@ Not Found? $\rightarrow$ Flood (send to all).
 
 > TL;DR — Self-learning switches build MAC-to-port tables by recording source addresses of incoming frames. Known destinations are forwarded to specific ports; unknown destinations are flooded to all ports.
 
-## Review Questions
-
-_To be added._
-
 ## Links
  **Related:** - [[Pasted image 20251121094303.png]] **Source / Reference:**
 
 ## Multiple Choice Questions
 
-1. Which word completes the following sentence from the text: "**Switch 2 (Left):** Connects computers _____ and link to Switch 1."?
-- **A)** Protocol
-- **B)** Network
-- **C)** GL
-- **D)** Router
+1. Why is a Layer-2 Ethernet switch described as **transparent** and **plug-and-play**?
+    - **A)** Because its plastic casing is see-through.
+    - **B)** Because hosts and routers are completely unaware of the switch's existence (frames are addressed to host/router MACs, not the switch's MAC), and the switch builds its forwarding table **automatically via self-learning** without requiring manual configuration or a routing protocol.
+    - **C)** Because it assigns IP addresses via DHCP automatically.
+    - **D)** Because it broadcasts every frame to every port permanently like a Layer-1 hub.
 
-2. Which word completes the following sentence from the text: "**Listen (Learn):** When a frame arrives on Interface $X$ with Source MAC _____ the switch writes in its table: **(MAC A** $\rightarrow$ **Interface X)**."?
-- **A)** Protocol
-- **B)** A
-- **C)** Network
-- **D)** Router
+2. When a frame with **Source MAC $X$** and **Destination MAC $Y$** arrives on **Interface $i$** of a self-learning switch, which field does the switch use to **update (learn) its switch table**, and which field does it use to **make the forwarding decision**?
+    - **A)** It **learns** by recording `(Source MAC X, Interface i, Timestamp)` in its switch table, and **forwards** by looking up **Destination MAC $Y$** in its switch table.
+    - **B)** It learns from Destination MAC $Y$ and forwards using Source MAC $X$.
+    - **C)** It learns from the IP header and forwards using the TCP port.
+    - **D)** It only updates its table when an ARP Reply arrives.
 
-3. Which word completes the following sentence from the text: "**_____ 1 (Right):** Receives flooded frame from Switch 2 (Source K) on Int 7."?
-- **A)** Switch
-- **B)** Router
-- **C)** Network
-- **D)** Protocol
+3. What are the **three possible actions** a self-learning switch can take after looking up the frame's **Destination MAC $Y$** (which arrived on Interface $i$) in its switch table?
+    - **A)** Encrypt, Compress, or Fragment
+    - **B)** Drop all unknown frames, broadcast known frames, and reboot on broadcast frames.
+    - **C)** (1) **Flood** (broadcast out all interfaces *except* $i$) if $Y$ is not in the table (or if $Y$ is `FF-FF-FF-FF-FF-FF`); (2) **Forward** (send unicast out interface $j$) if $Y$ is in the table mapped to interface $j \ne i$; (3) **Filter** (discard/drop) if $Y$ is in the table mapped to the same incoming interface $i$.
+    - **D)** Decrement TTL, recompute IP checksum, and send ICMP Redirect.
 
-4. Which word completes the following sentence from the text: "**Inter-Switch Rule:** If a packet comes from ano_____r switch, the "Interface" recorded is the link connecting the switches."?
-- **A)** Protocol
-- **B)** the
-- **C)** Network
-- **D)** Router
+4. How does a **Layer-2 Ethernet Switch** improve performance compared to a legacy **Layer-1 Hub (Repeater)**?
+    - **A)** A hub inspects Layer-3 IP headers, whereas a switch only repeats bits.
+    - **B)** There is no difference between a hub and a switch.
+    - **C)** A switch divides the broadcast domain, whereas a hub divides the collision domain.
+    - **D)** A Layer-1 hub blindly repeats every incoming bit out all ports, placing all connected hosts in a **single shared collision domain**; a full-duplex Layer-2 switch buffers frames and isolates **each switch port into its own separate collision domain**, allowing simultaneous collision-free transmissions ($A \to B$ and $C \to D$ at the same time).
 
-5. Which word completes the following sentence from the text: "**Switch 1 (Right):** Receives from Switch _____ (Source G) on Int 7."?
-- **A)** Protocol
-- **B)** Router
-- **C)** 2
-- **D)** Network
-
-6. Which word completes the following sentence from the text: "**Table Entries Added:**  Switch 1: **(F, 6)** Switch 2: **(F, 8)**  ### _____ $t=4$: $G \rightarrow B$  **Action:** Node G sends to Node B."?
-- **A)** Time
-- **B)** Network
-- **C)** Router
-- **D)** Protocol
-
-7. Which word completes the following sentence from the text: "**Switch 2 (Left):** Receives from Switch _____ (Source F) on Int 8."?
-- **A)** Network
-- **B)** Protocol
-- **C)** Router
-- **D)** 1
-
-8. Which word completes the following sentence from the text: "**If Unknown:** **Flood** the frame out _____ _all_ interfaces (except the incoming one)."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** to
-
-9. Which word completes the following sentence from the text: "**Inter-Switch Link:** Switch 1 (Int _____ $\leftrightarrow$ Switch 2 (Int 8)."?
-- **A)** Protocol
-- **B)** Router
-- **C)** Network
-- **D)** 7
-
-10. Which word completes the following sentence from the text: "_(Note: Switch 1 thinks K is "out that way" towards Int 7)._  **Table Entries Added:**  Switch 1: **(K, _____ Switch 2: **(K, 14)**  ### Time $t=2$: $B \rightarrow I$  **Action:** Node B sends to Node I."?
-- **A)** 7
-- **B)** Router
-- **C)** Network
-- **D)** Protocol
-
+5. Why does a switch associate an **aging timer (TTL)** with every learned `(MAC Address, Interface)` entry in its switch table?
+    - **A)** Because Ethernet cables lose conductivity after 10 minutes.
+    - **B)** So that if a laptop is unplugged from Port 1 and plugged into Port 5 (or leaves the network), outdated entries are automatically forgotten and refreshed without manual administrator intervention.
+    - **C)** To force hosts to renew their IP addresses.
+    - **D)** Because IEEE 802.3 forbids tables with more than 4 entries.
 
 ### Answer Key & Explanations
-1. **C)** GL completes the sentence: **Switch 2 (Left):** Connects computers G-L and li...
-2. **B)** A completes the sentence: **Listen (Learn):** When a frame arrives on Interf...
-3. **A)** Switch completes the sentence: **Switch 1 (Right):** Receives flooded frame from ...
-4. **B)** the completes the sentence: **Inter-Switch Rule:** If a packet comes from anot...
-5. **C)** 2 completes the sentence: **Switch 1 (Right):** Receives from Switch 2 (Sour...
-6. **A)** Time completes the sentence: **Table Entries Added:**  Switch 1: **(F, 6)** Swi...
-7. **D)** 1 completes the sentence: **Switch 2 (Left):** Receives from Switch 1 (Sourc...
-8. **D)** to completes the sentence: **If Unknown:** **Flood** the frame out to _all_ i...
-9. **D)** 7 completes the sentence: **Inter-Switch Link:** Switch 1 (Int 7) $\leftrigh...
-10. **A)** 7 completes the sentence: _(Note: Switch 1 thinks K is "out that way" toward...
+
+1. **B**. Hosts address frames directly to destination MACs as if on a direct wire; the switch invisibly intercepts, learns source locations, and forwards frames with zero configuration.
+2. **A**. An arriving frame on port $i$ proves that `Source MAC X` is reachable via port $i$ (learning), while `Destination MAC Y` determines where the frame needs to go next (forwarding).
+3. **C**. The three canonical switch actions are **Flood** (unknown destination or broadcast), **Forward** (known destination on port $j \ne i$), and **Filter** (known destination on arrival port $i$).
+4. **D**. Modern full-duplex switches eliminate collisions entirely by giving each port a dedicated point-to-point link and storing-and-forwarding frames selectively across high-speed internal switch fabrics.
+5. **B**. Aging timers (plus instant port-reassignment overwrites when a MAC is seen on a new port) keep the switch table accurate as devices move or power off.
 
 ## References & Navigation
 

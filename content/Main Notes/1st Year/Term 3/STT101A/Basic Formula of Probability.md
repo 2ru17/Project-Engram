@@ -11,111 +11,69 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Basic Formula of Probability]]
+**Tags:** #[[Computer Science]] #[[STT101A]] #[[Conceptual]] #[[Basic Formula of Probability]]
 
 ---
 
 ## Overview
-This document provides a comprehensive high-level summary of **Basic Formula of Probability**. It explores the fundamental motivations, the practical relevance of the topic in the broader context of STT101A, and essential conceptual underpinnings. Understanding this material is crucial for analyzing probabilistic and statistical scenarios effectively.
+
+The **Classical (Laplacian) Formula of Probability** defines the probability of an event $E$ in a finite sample space $S$ of equally likely outcomes as the ratio of the number of outcomes favorable to $E$ to the total number of outcomes in $S$, grounded in **Kolmogorov's Three Axioms**.
 
 ## Key Definitions
-- **Basic Formula of Probability**: A formal description of the core principle or theorem.
-- **Probability Space**: The foundation upon which these rules operate, defining all possible outcomes.
-- **Events**: The subsets of outcomes that we are interested in analyzing and measuring.
 
-## Theoretical Framework / Core Concepts
-At the heart of **Basic Formula of Probability** is a robust theoretical framework that formalizes how variables interact. When working with these constructs, it is essential to consider the axioms of probability. The mathematical rules dictate how probabilities can be combined, updated, or evaluated under different conditions.
+- **Classical Probability Formula:** If a sample space $S$ consists of $N = |S|$ equally likely outcomes and event $E \subseteq S$ contains $n(E) = |E|$ outcomes, then $P(E) = \frac{n(E)}{n(S)} = \frac{|E|}{|S|}$.
+- **Axiom 1 (Non-negativity):** $P(E) \ge 0$ for every event $E \subseteq S$.
+- **Axiom 2 (Normalization):** $P(S) = 1$ for the entire sample space $S$.
+- **Axiom 3 (Countable Additivity):** For any pairwise disjoint events $E_1, E_2, \dots$, $P\left(\bigcup_{i=1}^\infty E_i\right) = \sum_{i=1}^\infty P(E_i)$.
 
-- The fundamental equations often look like standard algebraic relationships, adapting depending on the conditions (e.g., independence or mutual exclusivity).
-- Diagrams such as Venn diagrams or probability trees are highly beneficial for visualizing these interactions.
+## Worked Example
 
-## Worked Examples / Protocol Walkthroughs / Calculations
-Let's consider a practical scenario demonstrating **Basic Formula of Probability**:
-1. **Identify parameters**: Determine the given probabilities or event counts from the problem description.
-2. **Select appropriate formula**: Based on the theoretical framework, write down the formula needed.
-3. **Substitute values**: Carefully insert the values into the formula.
-4. **Calculate and verify**: Perform the arithmetic operations and ensure the final answer is a valid probability (between 0 and 1).
+**Problem:** Two fair six-sided dice are rolled. What is the probability that the sum of the two upward faces equals $8$?
 
-By following these structured steps, errors and common pitfalls can be minimized.
-
-## Summary & Key Takeaways
-- **Basic Formula of Probability** is a vital tool for statistical analysis and reasoning.
-- Proper application requires verifying underlying assumptions (e.g., are events independent?).
-- Mastery of this topic enables more advanced study in statistical modeling and data science.
-
+**Solution:**
+- Total equally likely ordered pairs in $S$: $n(S) = 6 \times 6 = 36$.
+- Favorable outcomes summing to $8$: $E = \{(2,6), (3,5), (4,4), (5,3), (6,2)\}$, so $n(E) = 5$.
+- $P(E) = \frac{5}{36} \approx 0.1389$.
 
 ## Multiple Choice Questions
-1. **What is the primary motivation for this statistical concept?**
-- **A)** To understand the underlying distribution of data.
-- **B)** To confuse students.
-- **C)** To create graphical models.
-- **D)** To ignore data points.
 
-2. **Which of the following best describes the key definition?**
-- **A)** A formalized mathematical framework.
-- **B)** A random guess.
-- **C)** An empirical observation.
-- **D)** A programming paradigm.
+1. Under what fundamental assumption is the classical formula $P(E) = \frac{|E|}{|S|}$ valid?
+    - **A)** All events in the problem are independent.
+    - **B)** The sample space $S$ is finite and all elementary outcomes in $S$ are equally likely (equiprobable).
+    - **C)** The sample space $S$ is continuous and normally distributed.
+    - **D)** The number of events equals 2.
 
-3. **In the theoretical framework, what role does this concept play?**
-- **A)** It serves as a foundational building block for advanced theories.
-- **B)** It is purely for aesthetic purposes.
-- **C)** It contradicts basic probability.
-- **D)** It is only applicable in computer science.
+2. Which of the following values CANNOT be a valid probability for any event $E$ under Kolmogorov's axioms?
+    - **A)** $0$
+    - **B)** $1$
+    - **C)** $0.0001$
+    - **D)** $-0.05$
 
-4. **When walking through a calculation, what is the first step typically?**
-- **A)** Identifying the given parameters and appropriate formula.
-- **B)** Guessing the answer.
-- **C)** Skipping to the end.
-- **D)** Ignoring the constraints.
+3. Two fair six-sided dice are rolled. Using the classical formula, what is the probability that the sum of the dice is $7$?
+    - **A)** $\frac{1}{6}$
+    - **B)** $\frac{7}{36}$
+    - **C)** $\frac{1}{12}$
+    - **D)** $\frac{5}{36}$
 
-5. **Which common pitfall is most associated with this topic?**
-- **A)** Forgetting to account for specific conditions (like mutual exclusivity).
-- **B)** Using a calculator.
-- **C)** Writing down the steps.
-- **D)** Double-checking work.
+4. From Kolmogorov's three axioms, why does the impossible event $\emptyset$ satisfy $P(\emptyset) = 0$?
+    - **A)** Because $\emptyset$ and $S$ are disjoint with $S \cup \emptyset = S$, so $P(S) + P(\emptyset) = P(S) \implies P(\emptyset) = 0$.
+    - **B)** Because $P(S) = 0$.
+    - **C)** Because $\emptyset$ contains negative outcomes.
+    - **D)** Because Axiom 1 states $P(E) < 0$.
 
-6. **How does this concept relate to real-world applications?**
-- **A)** It helps in making data-driven decisions and predictions.
-- **B)** It has no real-world application.
-- **C)** It is only used in casinos.
-- **D)** It is an abstract theoretical construct only.
-
-7. **What is the outcome of a correct calculation?**
-- **A)** A valid probability or statistical measure.
-- **B)** An arbitrary number.
-- **C)** A negative probability.
-- **D)** A syntax error.
-
-8. **Which symbol is commonly associated with this concept in equations?**
-- **A)** Mathematical operators like $P(A)$, $\cup$, or $\cap$.
-- **B)** Emojis.
-- **C)** HTML tags.
-- **D)** Hashtags.
-
-9. **If a scenario violates the core assumptions, what should be done?**
-- **A)** Use a different, appropriate statistical method or rule.
-- **B)** Ignore the violation.
-- **C)** Proceed with the calculation anyway.
-- **D)** Give up.
-
-10. **What is the main takeaway from understanding this topic?**
-- **A)** It provides essential tools for modeling uncertainty and analyzing data systematically.
-- **B)** Statistics is just guesswork.
-- **C)** Formulas are meant to be memorized without understanding.
-- **D)** Only simple probability is useful.
+5. A 4-bit binary string is generated uniformly at random. What is the probability that it contains exactly two $1$s?
+    - **A)** $\frac{1}{4}$
+    - **B)** $\frac{3}{8}$
+    - **C)** $\frac{1}{2}$
+    - **D)** $\frac{1}{16}$
 
 ### Answer Key & Explanations
-1. **A** - Statistical methods aim to understand data distributions and patterns to make informed conclusions.
-2. **A** - Key definitions formalize concepts mathematically to ensure precise communication and application.
-3. **A** - Core concepts act as building blocks for more complex theorems and models in probability and statistics.
-4. **A** - The first step in any statistical calculation is always to identify knowns and choose the right formula.
-5. **A** - A major pitfall is ignoring conditions, such as assuming events are mutually exclusive when they are not.
-6. **A** - These concepts are widely used in fields like engineering, finance, and science for data-driven decisions.
-7. **A** - A correct application of the formula yields a valid mathematical measure within expected bounds (e.g., [0, 1] for probability).
-8. **A** - Standard mathematical notation is used to represent sets, events, and probabilities unambiguously.
-9. **A** - When assumptions fail, the model is invalid, and a robust alternative method must be selected.
-10. **A** - Understanding provides a systematic approach to modeling uncertainty and analyzing complex systems.
+
+1. **B**. The ratio $|E|/|S|$ assigns probability $1/|S|$ to each elementary outcome, which is valid if and only if the sample space is finite and every elementary outcome is equally likely.
+2. **D**. By Axiom 1 ($P(E) \ge 0$) and the consequence $P(E) \le 1$, any valid probability must lie in the closed interval $[0, 1]$. $-0.05$ is negative and therefore impossible.
+3. **A**. There are $36$ equally likely ordered pairs $(d_1, d_2)$ and $6$ pairs that sum to $7$: $\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}$. Thus $P(\text{sum}=7) = 6/36 = 1/6$.
+4. **A**. Since $S$ and $\emptyset$ are mutually exclusive and $S \cup \emptyset = S$, Axiom 3 gives $P(S \cup \emptyset) = P(S) + P(\emptyset) = P(S)$, which implies $P(\emptyset) = 0$.
+5. **B**. There are $|S| = 2^4 = 16$ equally likely 4-bit strings and $\binom{4}{2} = 6$ strings with exactly two $1$s. Thus $P(E) = 6/16 = 3/8$.
 
 ## References & Navigation
 

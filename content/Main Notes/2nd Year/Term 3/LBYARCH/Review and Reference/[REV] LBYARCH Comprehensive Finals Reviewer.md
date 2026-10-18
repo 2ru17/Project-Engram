@@ -78,50 +78,45 @@ flowchart TB
 
 ---
 
-## 4. Comprehensive Practice Exam
+## Multiple Choice Questions
 
 1. Under the System V AMD64 ABI, in which register does a C caller pass the third integer argument to an assembly function?
-   - A) `RAX`
-   - B) `RSI`
-   - C) `RDX`
-   - D) `RCX`
+    - **A)** `RAX`
+    - **B)** `RSI`
+    - **C)** `RDX`
+    - **D)** `RCX`
 
 2. Which register must be explicitly preserved (pushed and popped) by an assembly function if it is modified during execution?
-   - A) `RDI`
-   - B) `RDX`
-   - C) `R12`
-   - D) `R10`
+    - **A)** `RDI`
+    - **B)** `RDX`
+    - **C)** `R12`
+    - **D)** `R10`
 
 3. In x86-64 assembly, what does the instruction `lea rax, [rdi + rsi*4 + 8]` do?
-   - A) Reads 4 bytes from memory at that computed address into `EAX`.
-   - B) Computes the effective arithmetic address `rdi + rsi*4 + 8` and stores the result in `RAX` without touching memory.
-   - C) Multiplies `RDI` by 4 and stores the address in `RSI`.
-   - D) Triggers a memory bus error if the address is not mapped.
+    - **A)** Reads 4 bytes from memory at that computed address into `EAX`.
+    - **B)** Computes the effective arithmetic address `rdi + rsi*4 + 8` and stores the result in `RAX` without touching memory.
+    - **C)** Multiplies `RDI` by 4 and stores the address in `RSI`.
+    - **D)** Triggers a memory bus error if the address is not mapped.
 
 4. If an assembly function calls `printf`, what condition must be satisfied regarding the stack pointer `RSP` prior to the `call`?
-   - A) `RSP` must be 8-byte aligned.
-   - B) `RSP` must be 16-byte aligned (`RSP % 16 == 0`).
-   - C) `RSP` must point to the data segment.
-   - D) `RSP` must equal `RBP`.
+    - **A)** `RSP` must be 8-byte aligned.
+    - **B)** `RSP` must be 16-byte aligned (`RSP % 16 == 0`).
+    - **C)** `RSP` must point to the data segment.
+    - **D)** `RSP` must equal `RBP`.
 
 5. In Verilog HDL testbenches, which system task displays a formatted string in the console whenever any monitored variable changes value?
-   - A) `$display`
-   - B) `$monitor`
-   - C) `$finish`
-   - D) `$stop`
-
----
+    - **A)** `$display`
+    - **B)** `$monitor`
+    - **C)** `$finish`
+    - **D)** `$stop`
 
 ### Answer Key & Explanations
 
-1. **C) `RDX`** — The standard argument order for integer/pointer types is: 1st in `RDI`, 2nd in `RSI`, 3rd in `RDX`, 4th in `RCX`, 5th in `R8`, 6th in `R9`.
-2. **C) `R12`** — `R12` through `R15`, as well as `RBX`, `RBP`, and `RSP`, are callee-saved registers. Any function that alters them must restore their original values before returning.
-3. **B) Computes the effective arithmetic address `rdi + rsi*4 + 8` and stores the result in `RAX` without touching memory** — `LEA` (Load Effective Address) computes the memory address using the CPU address generation unit (AGU) and writes the calculated value directly to the destination register.
-4. **B) `RSP` must be 16-byte aligned (`RSP % 16 == 0`)** — The System V ABI enforces 16-byte stack alignment at the point of the `call` instruction for SSE vector instruction safety and ABI compliance.
-5. **B) `$monitor`** — `$monitor` continuously traces the specified argument list and prints to the console whenever any signal in the list changes state throughout simulation.
-
-
----
+1. **C**. The standard argument order for integer/pointer types is: 1st in `RDI`, 2nd in `RSI`, 3rd in `RDX`, 4th in `RCX`, 5th in `R8`, 6th in `R9`.
+2. **C**. `R12` through `R15`, as well as `RBX`, `RBP`, and `RSP`, are callee-saved registers. Any function that alters them must restore their original values before returning.
+3. **B**. `LEA` (Load Effective Address) computes the memory address using the CPU address generation unit (AGU) and writes the calculated value directly to the destination register.
+4. **B**. The System V ABI enforces 16-byte stack alignment at the point of the `call` instruction for SSE vector instruction safety and ABI compliance.
+5. **B**. `$monitor` continuously traces the specified argument list and prints to the console whenever any signal in the list changes state throughout simulation.
 
 ## References & Navigation
 

@@ -141,62 +141,63 @@ print(f"Physical address: {translate_address(8200)}")
 ## Multiple Choice Questions
 
 1. Which of the following best describes external fragmentation?
-A) The wasted space inside an allocated fixed-size block.
-B) The situation where total free memory is sufficient, but no single contiguous block is large enough to satisfy a request.
-C) The delay caused by fetching a page from the backing store.
-D) The overhead of maintaining a TLB.
+    - **A)** The wasted space inside an allocated fixed-size block.
+    - **B)** The situation where total free memory is sufficient, but no single contiguous block is large enough to satisfy a request.
+    - **C)** The delay caused by fetching a page from the backing store.
+    - **D)** The overhead of maintaining a TLB.
 
 2. In a system using contiguous memory allocation, what happens if a user program attempts to access an address beyond its Limit Register?
-A) The program accesses the operating system's memory.
-B) The OS expands the program's memory allocation automatically.
-C) The hardware generates a trap (fatal error) to the Operating System.
-D) The Memory Management Unit wraps the address around to zero.
+    - **A)** The program accesses the operating system's memory.
+    - **B)** The OS expands the program's memory allocation automatically.
+    - **C)** The hardware generates a trap (fatal error) to the Operating System.
+    - **D)** The Memory Management Unit wraps the address around to zero.
 
 3. What is the primary purpose of the Translation Look-aside Buffer (TLB)?
-A) To store frequently accessed user data blocks.
-B) To convert 32-bit addresses into 64-bit addresses.
-C) To cache recently used page-to-frame translations to avoid the performance penalty of accessing the page table in RAM.
-D) To handle dynamic loading of dynamically linked libraries (DLLs).
+    - **A)** To store frequently accessed user data blocks.
+    - **B)** To convert 32-bit addresses into 64-bit addresses.
+    - **C)** To cache recently used page-to-frame translations to avoid the performance penalty of accessing the page table in RAM.
+    - **D)** To handle dynamic loading of dynamically linked libraries (DLLs).
 
 4. Which allocation algorithm produces the smallest leftover hole, but requires searching the entire free list?
-A) First-fit
-B) Best-fit
-C) Worst-fit
-D) Round-Robin
+    - **A)** First-fit
+    - **B)** Best-fit
+    - **C)** Worst-fit
+    - **D)** Round-Robin
 
 5. How does paging solve the external fragmentation problem?
-A) By allowing a process's physical address space to be noncontiguous, slotting pages into any available physical frames.
-B) By continuously running a compaction algorithm in the background.
-C) By allocating a single, massive block of memory for all user processes.
-D) By replacing the hard drive with a faster SSD.
+    - **A)** By allowing a process's physical address space to be noncontiguous, slotting pages into any available physical frames.
+    - **B)** By continuously running a compaction algorithm in the background.
+    - **C)** By allocating a single, massive block of memory for all user processes.
+    - **D)** By replacing the hard drive with a faster SSD.
 
 6. An Inverted Page Table is structured such that:
-A) There is one entry for every logical page across all processes.
-B) The table is swapped out to disk.
-C) There is one entry for each physical frame in the system, significantly reducing memory overhead.
-D) It uses a TLB miss to generate the logical address.
+    - **A)** There is one entry for every logical page across all processes.
+    - **B)** The table is swapped out to disk.
+    - **C)** There is one entry for each physical frame in the system, significantly reducing memory overhead.
+    - **D)** It uses a TLB miss to generate the logical address.
 
 7. Why do mobile operating systems like iOS and Android generally avoid traditional swapping to a backing store?
-A) Mobile processors lack a Memory Management Unit (MMU).
-B) Flash memory used in phones has limited write cycles and slower throughput, making continuous swapping detrimental to device lifespan and performance.
-C) Mobile apps do not use virtual memory.
-D) Paging algorithms like LRU are computationally impossible on ARM processors.
+    - **A)** Mobile processors lack a Memory Management Unit (MMU).
+    - **B)** Flash memory used in phones has limited write cycles and slower throughput, making continuous swapping detrimental to device lifespan and performance.
+    - **C)** Mobile apps do not use virtual memory.
+    - **D)** Paging algorithms like LRU are computationally impossible on ARM processors.
 
 8. If a page size is 4KB ($2^{12}$ bytes), what are the page number and page offset for the logical address $4105$ (in decimal)?
-A) Page Number: 0, Offset: 4105
-B) Page Number: 1, Offset: 9
-C) Page Number: 4, Offset: 105
-D) Page Number: 1, Offset: 4096
+    - **A)** Page Number: 0, Offset: 4105
+    - **B)** Page Number: 1, Offset: 9
+    - **C)** Page Number: 4, Offset: 105
+    - **D)** Page Number: 1, Offset: 4096
 
 ### Answer Key & Explanations
-1. **B)** External fragmentation occurs when free memory is broken into many small pieces, preventing a large block from being allocated contiguously.
-2. **C)** CPU hardware checks every address against the Limit Register. A violation triggers a hardware trap, resulting in the OS terminating the program with a segmentation fault.
-3. **C)** Without the TLB, every memory access requires two physical memory trips (one for the page table, one for the data). The TLB is a specialized cache that mitigates this overhead.
-4. **B) Best-fit.** Best-fit searches for the hole that is closest in size to the requested amount, leaving a tiny, usually unusable fragment.
-5. **A)** Paging maps fixed-size logical pages to fixed-size physical frames, completely eliminating the need for contiguous physical memory blocks.
-6. **C)** Standard page tables scale with the virtual address space. Inverted page tables scale with the physical RAM, which is much smaller, thereby saving memory.
-7. **B)** Flash storage wears out after a certain number of write cycles, and its latency makes standard page-swapping heavily noticeable to the user.
-8. **B)** $4105 / 4096 = 1$ (Page Number). $4105 \pmod{4096} = 9$ (Offset).
+
+1. **B**. External fragmentation occurs when free memory is broken into many small pieces, preventing a large block from being allocated contiguously.
+2. **C**. CPU hardware checks every address against the Limit Register. A violation triggers a hardware trap, resulting in the OS terminating the program with a segmentation fault.
+3. **C**. Without the TLB, every memory access requires two physical memory trips (one for the page table, one for the data). The TLB is a specialized cache that mitigates this overhead.
+4. **B**. Best-fit searches for the hole that is closest in size to the requested amount, leaving a tiny, usually unusable fragment.
+5. **A**. Paging maps fixed-size logical pages to fixed-size physical frames, completely eliminating the need for contiguous physical memory blocks.
+6. **C**. Standard page tables scale with the virtual address space. Inverted page tables scale with the physical RAM, which is much smaller, thereby saving memory.
+7. **B**. Flash storage wears out after a certain number of write cycles, and its latency makes standard page-swapping heavily noticeable to the user.
+8. **B**. $4105 / 4096 = 1$ (Page Number). $4105 \pmod{4096} = 9$ (Offset).
 
 ## References & Navigation
 

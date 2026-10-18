@@ -13,7 +13,7 @@ status: completed
 > - **Topic:** `=this.topic`
 > - **Status:** `=this.status`
 
-**🏷️ Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Problem Solving]] #[[M3]]
+**Tags:** #[[Computer Science]] #[[CSARCH1]] #[[Problem Solving]] #[[M3]]
 
 ---
 
@@ -131,76 +131,77 @@ The complement of a function $\bar{F}$ can be obtained in two ways:
 ## Multiple Choice Questions
 
 1. What is a "literal" in the context of a Boolean expression?
-- **A)** An integer value of 0 or 1
-- **B)** Each appearance of a variable or its complement
-- **C)** The final output of the logic gate
-- **D)** A grouping of terms joined by an OR operator
+    - **A)** An integer value of 0 or 1
+    - **B)** Each appearance of a variable or its complement
+    - **C)** The final output of the logic gate
+    - **D)** A grouping of terms joined by an OR operator
 
 2. A minterm is obtained from which type of operation on n variables?
-- **A)** OR term
-- **B)** AND term
-- **C)** XOR term
-- **D)** NOT term
+    - **A)** OR term
+    - **B)** AND term
+    - **C)** XOR term
+    - **D)** NOT term
 
 3. In a maxterm, how is a variable with a value of binary 1 represented?
-- **A)** As an unprimed variable
-- **B)** As a primed or complemented variable
-- **C)** As a 0
-- **D)** As a don't-care condition
+    - **A)** As an unprimed variable
+    - **B)** As a primed or complemented variable
+    - **C)** As a 0
+    - **D)** As a don't-care condition
 
 4. The canonical sum of minterms is obtained by taking which values from a truth table?
-- **A)** All the binary 0s
-- **B)** All the binary 1s
-- **C)** Only the prime implicants
-- **D)** The don't-care terms
+    - **A)** All the binary 0s
+    - **B)** All the binary 1s
+    - **C)** Only the prime implicants
+    - **D)** The don't-care terms
 
 5. What is the Standard Sum of Product (SOP)?
-- **A)** A simplified Boolean expression containing OR terms, AND-ed together
-- **B)** A single minterm encompassing all variables
-- **C)** A simplified Boolean expression containing AND terms, OR-ed together
-- **D)** An unsimplified Boolean equation with parentheses
+    - **A)** A simplified Boolean expression containing OR terms, AND-ed together
+    - **B)** A single minterm encompassing all variables
+    - **C)** A simplified Boolean expression containing AND terms, OR-ed together
+    - **D)** An unsimplified Boolean equation with parentheses
 
 6. According to the axioms of Boolean Algebra, what is the result of 1 + 1?
-- **A)** 0
-- **B)** 1
-- **C)** 2
-- **D)** 10
+    - **A)** 0
+    - **B)** 1
+    - **C)** 2
+    - **D)** 10
 
 7. The duality principle states that an algebraic expression remains valid if we interchange:
-- **A)** AND with OR, and 0 with 1
-- **B)** NOT with AND, and 1 with 0
-- **C)** Variables with their complements
-- **D)** Positive logic with negative logic
+    - **A)** AND with OR, and 0 with 1
+    - **B)** NOT with AND, and 1 with 0
+    - **C)** Variables with their complements
+    - **D)** Positive logic with negative logic
 
 8. Which theorem states that X + X•Y = X?
-- **A)** Commutative Law
-- **B)** Distributive Law
-- **C)** Absorption Law
-- **D)** De Morgan's Law
+    - **A)** Commutative Law
+    - **B)** Distributive Law
+    - **C)** Absorption Law
+    - **D)** De Morgan's Law
 
 9. According to De Morgan's Law, what is the equivalent of the expression (X•Y)'?
-- **A)** X' • Y'
-- **B)** X + Y
-- **C)** X' + Y'
-- **D)** (X+Y)'
+    - **A)** X' • Y'
+    - **B)** X + Y
+    - **C)** X' + Y'
+    - **D)** (X+Y)'
 
 10. What is one valid method to obtain the complement of a function?
-- **A)** Multiply all terms by 1
-- **B)** Divide the function by 0
-- **C)** Get the dual of the function and then complement each literal
-- **D)** Swap all variables with their adjacent letters
+    - **A)** Multiply all terms by 1
+    - **B)** Divide the function by 0
+    - **C)** Get the dual of the function and then complement each literal
+    - **D)** Swap all variables with their adjacent letters
 
 ### Answer Key & Explanations
-1. **B)** A literal represents each individual appearance of a variable, whether it is primed or unprimed.
-2. **B)** A minterm is defined as a complete representation obtained from an AND term of all n variables.
-3. **B)** In maxterm representation, the rule is inverted: binary 1 is represented by a primed variable.
-4. **B)** Canonical sum of minterms focuses on the combinations that produce a binary 1 in the truth table.
-5. **C)** Sum of Product implies that product terms (AND terms) are summed (OR-ed) together.
-6. **B)** In Boolean algebra, 1 + 1 evaluates to 1, as '+' represents the logical OR operation.
-7. **A)** The duality principle involves swapping the operators (+ and •) and the identity elements (0 and 1).
-8. **C)** This is the Absorption Law, which dictates that the larger term absorbs the smaller redundant one.
-9. **C)** De Morgan's Law states that the complement of a product is the sum of the complements (X' + Y').
-10. **C)** Complementing a function can be done either via De Morgan's theorem or by finding the dual and complementing all literals.
+
+1. **B**. A literal represents each individual appearance of a variable, whether it is primed or unprimed.
+2. **B**. A minterm is defined as a complete representation obtained from an AND term of all n variables.
+3. **B**. In maxterm representation, the rule is inverted: binary 1 is represented by a primed variable.
+4. **B**. Canonical sum of minterms focuses on the combinations that produce a binary 1 in the truth table.
+5. **C**. Sum of Product implies that product terms (AND terms) are summed (OR-ed) together.
+6. **B**. In Boolean algebra, 1 + 1 evaluates to 1, as '+' represents the logical OR operation.
+7. **A**. The duality principle involves swapping the operators (+ and •) and the identity elements (0 and 1).
+8. **C**. This is the Absorption Law, which dictates that the larger term absorbs the smaller redundant one.
+9. **C**. De Morgan's Law states that the complement of a product is the sum of the complements (X' + Y').
+10. **C**. Complementing a function can be done either via De Morgan's theorem or by finding the dual and complementing all literals.
 
 ## References & Navigation
 
