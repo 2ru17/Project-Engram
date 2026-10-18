@@ -96,7 +96,15 @@ function CodeBlockPre({ children, ...props }: any) {
   })();
 
   const langMatch = child?.props?.className?.match(/language-(\w+)/);
-  const lang = langMatch ? langMatch[1].toUpperCase() : "SOURCE";
+  let lang = langMatch ? langMatch[1].toUpperCase() : "";
+
+  if (!lang) {
+    if (rawCode.includes("|") && /\d+[\s\d]+/.test(rawCode)) {
+      lang = "TIMELINE";
+    } else {
+      lang = "TEXT";
+    }
+  }
 
   const handleCopy = () => {
     navigator.clipboard.writeText(rawCode);
@@ -127,8 +135,10 @@ function CodeBlockPre({ children, ...props }: any) {
         </button>
       </div>
 
-      <pre className="p-5 font-mono text-xs sm:text-sm overflow-x-auto text-[var(--zen-frost)] leading-relaxed bg-[var(--zen-void)]/80" {...props}>
-        {children}
+      <pre className="p-5 font-mono text-xs sm:text-sm overflow-x-auto text-[var(--zen-frost)] leading-relaxed bg-[var(--zen-void)]/80 whitespace-pre" {...props}>
+        <code className="block w-full bg-transparent border-0 p-0 text-inherit font-mono leading-relaxed whitespace-pre">
+          {rawCode}
+        </code>
       </pre>
     </div>
   );
@@ -235,12 +245,23 @@ const components = {
     );
   },
   pre: CodeBlockPre,
-  code: (props: any) => (
-    <code
-      className="px-1.5 py-0.5 rounded font-mono text-[var(--zen-cyan)] bg-[var(--zen-card)] border border-[var(--zen-border)] text-[0.88em] font-medium"
-      {...props}
-    />
-  ),
+  code: ({ className, children, ...props }: any) => {
+    if (className?.includes("language-") || className?.includes("block")) {
+      return (
+        <code className={`block w-full bg-transparent border-0 p-0 text-inherit font-mono leading-relaxed whitespace-pre ${className || ""}`} {...props}>
+          {children}
+        </code>
+      );
+    }
+    return (
+      <code
+        className={`px-1.5 py-0.5 rounded font-mono text-[var(--zen-cyan)] bg-[var(--zen-card)] border border-[var(--zen-border)] text-[0.88em] font-medium inline-block my-0.5 ${className || ""}`}
+        {...props}
+      >
+        {children}
+      </code>
+    );
+  },
   h1: (props: any) => (
     <h1
       className="mt-12 mb-6 text-2xl sm:text-3xl font-semibold text-[var(--zen-snow)] tracking-wider uppercase border-b border-[var(--zen-border)] pb-3"
