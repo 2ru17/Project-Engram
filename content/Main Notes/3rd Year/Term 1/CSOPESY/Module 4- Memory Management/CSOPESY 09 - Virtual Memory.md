@@ -42,7 +42,7 @@ sequenceDiagram
     OS->>OS: Verify legal memory reference via internal PCB tables
     OS->>RAM: Locate free frame F (or run page replacement to evict)
     OS->>Disk: Issue asynchronous disk read: Load page P into frame F
-    Note over OS: Process placed in Wait Queue; context switch to other task
+    Note over OS: Process placed in Wait Queue, context switch to other task
     Disk-->>OS: Disk controller generates I/O completion interrupt
     OS->>RAM: Page P successfully resident in frame F
     OS->>OS: Update Process Page Table: Map P -> F, set Valid = 1

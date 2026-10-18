@@ -61,7 +61,7 @@ graph TD
     Root["MAX (alpha = 3, beta = inf)"] --> Child1["MIN (value = 3)"]
     Root --> Child2["MIN (alpha = 3, beta = 2)"]
     Child2 --> L1["Left: 2 (beta updated to 2)"]
-    Child2 -.->|alpha >= beta (3 >= 2): PRUNED!| L2["Right: 9 (pruned)"]
+    Child2 -.->|"alpha >= beta (3 >= 2): PRUNED!"| L2["Right: 9 (pruned)"]
 ```
 
 ---

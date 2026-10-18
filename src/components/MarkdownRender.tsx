@@ -269,6 +269,64 @@ const components = {
     </h3>
   ),
   p: (props: any) => <p className="mb-5 text-[var(--zen-frost)] leading-[1.75] text-sm sm:text-base" {...props} />,
+  h4: (props: any) => (
+    <h4
+      className="mt-6 mb-3 text-base font-semibold text-[var(--zen-snow)] tracking-wide uppercase flex items-center gap-2"
+      style={{ fontFamily: "var(--font-zen-display, serif)" }}
+      {...props}
+    />
+  ),
+  hr: (props: any) => (
+    <hr className="my-8 border-none h-px bg-gradient-to-r from-transparent via-[var(--zen-border)] to-transparent opacity-60" {...props} />
+  ),
+  table: ({ children, className, ...props }: any) => (
+    <div className="my-8 w-full overflow-x-auto rounded-sm border border-[var(--zen-border)] bg-[var(--zen-card)] shadow-lg">
+      <table className={`w-full border-collapse text-left text-sm ${className || ""}`} {...props}>
+        {children}
+      </table>
+    </div>
+  ),
+  thead: ({ children, className, ...props }: any) => (
+    <thead className={`border-b border-[var(--zen-border)] bg-[var(--zen-void)]/90 text-xs font-mono uppercase tracking-wider text-[var(--zen-cyan)] ${className || ""}`} {...props}>
+      {children}
+    </thead>
+  ),
+  tbody: ({ children, className, ...props }: any) => (
+    <tbody className={`divide-y divide-[var(--zen-border)]/40 ${className || ""}`} {...props}>
+      {children}
+    </tbody>
+  ),
+  tr: ({ children, className, ...props }: any) => (
+    <tr className={`transition-colors duration-150 hover:bg-[var(--zen-cyan)]/[0.04] even:bg-[var(--zen-void)]/30 ${className || ""}`} {...props}>
+      {children}
+    </tr>
+  ),
+  th: ({ children, className, style, align, ...props }: any) => {
+    const alignClass = align === "center" ? "text-center" : align === "right" ? "text-right" : "text-left";
+    return (
+      <th
+        className={`px-4 py-3 font-semibold text-[var(--zen-cyan)] border-r border-[var(--zen-border)]/40 last:border-r-0 whitespace-nowrap text-xs font-mono uppercase tracking-wider ${alignClass} ${className || ""}`}
+        style={style}
+        align={align}
+        {...props}
+      >
+        {children}
+      </th>
+    );
+  },
+  td: ({ children, className, style, align, ...props }: any) => {
+    const alignClass = align === "center" ? "text-center" : align === "right" ? "text-right" : "text-left";
+    return (
+      <td
+        className={`px-4 py-3 text-xs sm:text-sm text-[var(--zen-frost)] border-r border-[var(--zen-border)]/20 last:border-r-0 leading-relaxed ${alignClass} ${className || ""}`}
+        style={style}
+        align={align}
+        {...props}
+      >
+        {children}
+      </td>
+    );
+  },
 };
 
 // Parser to extract Multiple Choice Questions into structured items

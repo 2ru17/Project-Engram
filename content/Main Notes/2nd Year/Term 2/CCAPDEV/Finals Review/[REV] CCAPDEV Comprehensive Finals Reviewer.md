@@ -23,8 +23,8 @@ This reviewer consolidates Web Application Development (CCAPDEV). Subjects span 
 
 ```mermaid
 flowchart LR
-    Client["Client Browser<br/>• HTML5 / CSS3 / JS<br/>• Fetch API / Forms"] -->|HTTP REST Requests (JSON/Form)| Express["Express.js Server<br/>• Router & Controllers<br/>• Middleware Pipeline"]
-    Express -->|Sessions / Auth (bcrypt)| SessionStore["Session Store / Cookies"]
+    Client["Client Browser<br/>• HTML5 / CSS3 / JS<br/>• Fetch API / Forms"] -->|"HTTP REST Requests (JSON/Form)"| Express["Express.js Server<br/>• Router & Controllers<br/>• Middleware Pipeline"]
+    Express -->|"Sessions / Auth (bcrypt)"| SessionStore["Session Store / Cookies"]
     Express -->|Mongoose Schemas / CRUD| Mongo[("MongoDB NoSQL Database")]
 ```
 

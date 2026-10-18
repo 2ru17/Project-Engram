@@ -35,7 +35,7 @@ sequenceDiagram
     Server->>Store: Verify credentials in User Collection
     Store-->>Server: Credentials Valid
     Server->>Store: Generate session record {sid: "s_987", userId: 42}
-    Server-->>Client: 200 OK (Set-Cookie: connect.sid=s_987; HttpOnly; SameSite=Strict)
+    Server-->>Client: 200 OK (Set-Cookie: connect.sid=s_987, HttpOnly, SameSite=Strict)
     Client->>Server: GET /profile (Cookie: connect.sid=s_987)
     Server->>Store: Query session store (connect-mongo) for sid "s_987"
     Store-->>Server: Return active session data
