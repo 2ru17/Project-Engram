@@ -208,7 +208,7 @@ export default function DirectoryView() {
         {/* Quick Telemetry Indicator */}
         <div className="flex items-center justify-between px-1 text-[10px] font-mono tracking-wider text-[var(--zen-ink-muted)] select-none">
           <span className="flex items-center gap-1.5">
-            <span className="text-[var(--zen-cyan)] text-[9px]">★</span>
+            <span className="text-[var(--zen-cyan)] text-[9px]">◇</span>
             <span>
               {rawQuery.trim() || domainFilter !== "all"
                 ? `${filteredTree.folders.length} STARS · ${matchCount} NOTES`

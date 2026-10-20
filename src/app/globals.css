@@ -13,7 +13,7 @@
   --font-wuxia-primary: var(--font-zen-display, var(--font-wuxia-primary));
   --font-wuxia-body: var(--font-zen-serif, var(--font-wuxia-body));
 
-  /* === DYNAMIC JAPANESE ZEN PALETTE TOKENS === */
+  /* === DYNAMIC UNIVERSE PALETTE TOKENS === */
   --color-zen-void: var(--zen-void);
   --color-zen-abyss: var(--zen-abyss);
   --color-zen-midnight: var(--zen-midnight);
@@ -43,8 +43,9 @@
 }
 
 @layer base {
-  :root {
-    /* === PURE OLED VANTABLACK DARK MODE (DEFAULT) === */
+  :root,
+  [data-universe="cyber-zen"][data-theme="dark"] {
+    /* === U-01 CYBER-ZEN: PURE OLED VANTABLACK DARK MODE (DEFAULT) === */
     --zen-void: #000000;
     --zen-abyss: #020407;
     --zen-midnight: #05080f;
@@ -71,8 +72,8 @@
     --border-panel: rgba(52, 76, 110, 0.35);
   }
 
-  [data-theme="light"] {
-    /* === ECHIZEN WASHI (和紙) LIGHT MODE === */
+  [data-universe="cyber-zen"][data-theme="light"] {
+    /* === U-01 CYBER-ZEN: ECHIZEN WASHI (和紙) LIGHT MODE === */
     --zen-void: #F8F5EC;
     --zen-abyss: #FFFDF7;
     --zen-midnight: #F0ECE1;
@@ -82,12 +83,12 @@
     --zen-slate-edge: #C0B5A3;
     --zen-steel: #7E7667;
     --zen-moon-silver: #4B4539;
-    --zen-frost: #27272A; /* Pure Sumi charcoal body ink */
-    --zen-snow: #09090B;  /* Deepest calligraphy heading ink */
+    --zen-frost: #27272A;
+    --zen-snow: #09090B;
     --zen-ink-muted: #57534E;
     --zen-ink-dim: #A8A29E;
-    --zen-cyan: #0284C7; /* Refined Indigo Azure */
-    --zen-hanko: #DC2626; /* Vermilion Seal */
+    --zen-cyan: #0284C7;
+    --zen-hanko: #DC2626;
     --zen-emerald: #059669;
     --zen-amber: #D97706;
     --zen-border: rgba(120, 113, 108, 0.22);
@@ -97,6 +98,125 @@
     --bg-body: radial-gradient(circle at 65% 18%, #FFFDF7 0%, #F8F5EC 45%, #F0ECE1 100%);
     --bg-card: linear-gradient(180deg, rgba(255, 253, 247, 0.96) 0%, rgba(248, 245, 236, 0.92) 100%);
     --border-panel: rgba(200, 190, 170, 0.6);
+  }
+
+  /* === U-02 NEO-BRUTALISM (SINGLE MODE — neubrutalism.com / Swiss Industrial Print) === */
+  [data-universe="neo-brutalism"] {
+    --zen-void: #F4F3EE;
+    --zen-abyss: #EAE8E1;
+    --zen-midnight: #FFFFFF;
+    --zen-lampblack: #FFDE59;
+    --zen-slate-deep: #E5E2D9;
+    --zen-slate-mid: #D4D0C4;
+    --zen-slate-edge: #0A0A0A;
+    --zen-steel: #0A0A0A;
+    --zen-moon-silver: #1C1C1C;
+    --zen-frost: #111111;
+    --zen-snow: #050505;
+    --zen-ink-muted: #3A3A36;
+    --zen-ink-dim: #6E6D66;
+    --zen-cyan: #FF2A2A;
+    --zen-hanko: #0A0A0A;
+    --zen-emerald: #009E60;
+    --zen-amber: #FFDE59;
+    --zen-border: #0A0A0A;
+    --zen-card: #FFFFFF;
+    --zen-card-hover: #FFF6CC;
+    --zen-vignette: rgba(0, 0, 0, 0);
+    --bg-body: #F4F3EE;
+    --bg-card: #FFFFFF;
+    --border-panel: #0A0A0A;
+    --font-zen-display: var(--font-grotesk, sans-serif);
+    --font-zen-decor: var(--font-grotesk, sans-serif);
+  }
+
+  /* === U-03 MINIMALISM (SINGLE MODE — kickpush.co / Editorial Warm Monochrome) === */
+  [data-universe="minimalism"] {
+    --zen-void: #F7F6F3;
+    --zen-abyss: #FFFFFF;
+    --zen-midnight: #FFFFFF;
+    --zen-lampblack: #FBFBFA;
+    --zen-slate-deep: #F1F0EC;
+    --zen-slate-mid: #E6E4DD;
+    --zen-slate-edge: #D4D1C8;
+    --zen-steel: #8A8780;
+    --zen-moon-silver: #575550;
+    --zen-frost: #2F3437;
+    --zen-snow: #111111;
+    --zen-ink-muted: #787774;
+    --zen-ink-dim: #A6A49F;
+    --zen-cyan: #1F6C9F;
+    --zen-hanko: #9F2F2D;
+    --zen-emerald: #346538;
+    --zen-amber: #956400;
+    --zen-border: #E5E3DC;
+    --zen-card: #FFFFFF;
+    --zen-card-hover: #F9F8F6;
+    --zen-vignette: rgba(0, 0, 0, 0);
+    --bg-body: #F7F6F3;
+    --bg-card: #FFFFFF;
+    --border-panel: #E5E3DC;
+    --font-zen-display: var(--font-wuxia-primary, serif);
+    --font-zen-decor: var(--font-wuxia-primary, serif);
+  }
+
+  /* === U-04 PARALLAX (SINGLE MODE — beargrylls.com / Deep Horizon Expedition) === */
+  [data-universe="parallax"] {
+    --zen-void: #070B12;
+    --zen-abyss: #04070C;
+    --zen-midnight: #0C1422;
+    --zen-lampblack: #111C2E;
+    --zen-slate-deep: #16243A;
+    --zen-slate-mid: #1F3250;
+    --zen-slate-edge: #2F4B73;
+    --zen-steel: #54749E;
+    --zen-moon-silver: #A3B8D4;
+    --zen-frost: #E2E8F0;
+    --zen-snow: #FFFBEB;
+    --zen-ink-muted: #94A3B8;
+    --zen-ink-dim: #475569;
+    --zen-cyan: #E5A93C;
+    --zen-hanko: #F97316;
+    --zen-emerald: #10B981;
+    --zen-amber: #F59E0B;
+    --zen-border: rgba(229, 169, 60, 0.25);
+    --zen-card: rgba(12, 20, 34, 0.90);
+    --zen-card-hover: rgba(18, 30, 50, 0.96);
+    --zen-vignette: rgba(4, 7, 12, 0.92);
+    --bg-body: radial-gradient(circle at 50% 0%, #152338 0%, #070B12 58%, #04060A 100%);
+    --bg-card: linear-gradient(180deg, rgba(16, 27, 45, 0.94) 0%, rgba(9, 15, 26, 0.98) 100%);
+    --border-panel: rgba(229, 169, 60, 0.35);
+    --font-zen-display: var(--font-grotesk, sans-serif);
+  }
+
+  /* === U-05 BROKEN GRID (SINGLE MODE — dau.lt / Asymmetric Architectural Blueprint) === */
+  [data-universe="broken-grid"] {
+    --zen-void: #ECE9E2;
+    --zen-abyss: #E3DFD6;
+    --zen-midnight: #F7F5F0;
+    --zen-lampblack: #DEDAD0;
+    --zen-slate-deep: #D3CEC2;
+    --zen-slate-mid: #C2BCB0;
+    --zen-slate-edge: #9A9488;
+    --zen-steel: #59554D;
+    --zen-moon-silver: #38352F;
+    --zen-frost: #1C1B18;
+    --zen-snow: #0A0A09;
+    --zen-ink-muted: #57534E;
+    --zen-ink-dim: #8A8479;
+    --zen-cyan: #D9381E;
+    --zen-hanko: #111111;
+    --zen-emerald: #15803D;
+    --zen-amber: #B45309;
+    --zen-border: rgba(17, 17, 17, 0.24);
+    --zen-card: rgba(247, 245, 240, 0.96);
+    --zen-card-hover: #FFFFFF;
+    --zen-vignette: rgba(0, 0, 0, 0);
+    --bg-body: #ECE9E2;
+    --bg-card: #F7F5F0;
+    --border-panel: rgba(17, 17, 17, 0.35);
+    --font-zen-display: var(--font-grotesk, sans-serif);
+    --font-zen-decor: var(--font-grotesk, sans-serif);
   }
 
   body {
@@ -160,6 +280,62 @@
 
   * {
     @apply border-border outline-ring/50;
+  }
+}
+
+/* ─── UNIVERSE-SPECIFIC STRUCTURAL SIGNATURES ───────────────────────── */
+
+/* Neo-Brutalism: 0px radius, 2px solid black borders, hard offset shadows */
+[data-universe="neo-brutalism"] h1,
+[data-universe="neo-brutalism"] h2,
+[data-universe="neo-brutalism"] h3,
+[data-universe="neo-brutalism"] h4 {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+[data-universe="neo-brutalism"] .rounded-2xl,
+[data-universe="neo-brutalism"] .rounded-xl,
+[data-universe="neo-brutalism"] .rounded-lg,
+[data-universe="neo-brutalism"] .rounded-md,
+[data-universe="neo-brutalism"] .rounded,
+[data-universe="neo-brutalism"] .rounded-\[15px\] {
+  border-radius: 0px !important;
+}
+
+[data-universe="neo-brutalism"] .universe-card {
+  border: 2px solid #0A0A0A !important;
+  box-shadow: 5px 5px 0px #0A0A0A !important;
+  background: #FFFFFF !important;
+}
+
+[data-universe="neo-brutalism"] .universe-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #FF2A2A !important;
+}
+
+/* Minimalism: Zero shadows, 1px crisp hairlines, calm editorial tracking */
+[data-universe="minimalism"] h1,
+[data-universe="minimalism"] h2,
+[data-universe="minimalism"] h3,
+[data-universe="minimalism"] h4 {
+  letter-spacing: -0.01em;
+}
+
+[data-universe="minimalism"] .shadow-2xl,
+[data-universe="minimalism"] .shadow-xl,
+[data-universe="minimalism"] .shadow-lg,
+[data-universe="minimalism"] .shadow-md {
+  box-shadow: none !important;
+}
+
+/* Broken Grid: Asymmetric desktop card offsets that collapse cleanly on mobile */
+@media (min-width: 1024px) {
+  [data-universe="broken-grid"] .universe-bento-grid > div:nth-child(2n) {
+    transform: translateY(18px);
+  }
+  [data-universe="broken-grid"] .universe-bento-grid > div:nth-child(3n) {
+    transform: translateY(-10px);
   }
 }
 
