@@ -13,7 +13,7 @@
   --font-wuxia-primary: var(--font-zen-display, var(--font-wuxia-primary));
   --font-wuxia-body: var(--font-zen-serif, var(--font-wuxia-body));
 
-  /* === DYNAMIC JAPANESE ZEN PALETTE TOKENS === */
+  /* === DYNAMIC UNIVERSE PALETTE TOKENS === */
   --color-zen-void: var(--zen-void);
   --color-zen-abyss: var(--zen-abyss);
   --color-zen-midnight: var(--zen-midnight);
@@ -42,63 +42,217 @@
   --color-wuxia-paper: var(--zen-frost);
 }
 
+/* ============================================================================
+   5-UNIVERSE PALETTE & TYPOGRAPHY DEFINITIONS
+   Placed outside @layer base with html[...] selector so they override Next.js
+   font utility classes attached to the <html> element.
+   ============================================================================ */
+
+:root,
+html[data-universe="cyber-zen"][data-theme="dark"] {
+  /* === U-01 CYBER-ZEN: PURE OLED VANTABLACK DARK MODE (DEFAULT) === */
+  --zen-void: #000000;
+  --zen-abyss: #020407;
+  --zen-midnight: #05080f;
+  --zen-lampblack: #080d17;
+  --zen-slate-deep: #0c1422;
+  --zen-slate-mid: #121e33;
+  --zen-slate-edge: #1e304d;
+  --zen-steel: #344c6e;
+  --zen-moon-silver: #8ba6c4;
+  --zen-frost: #e2e8f0;
+  --zen-snow: #f8fafc;
+  --zen-ink-muted: #94a3b8;
+  --zen-ink-dim: #223247;
+  --zen-cyan: #00E5FF;
+  --zen-hanko: #E63946;
+  --zen-emerald: #10B981;
+  --zen-amber: #F59E0B;
+  --zen-border: rgba(255, 255, 255, 0.12);
+  --zen-card: rgba(8, 13, 23, 0.88);
+  --zen-card-hover: rgba(12, 20, 34, 0.96);
+  --zen-vignette: rgba(0, 0, 0, 0.95);
+  --bg-body: radial-gradient(circle at 65% 18%, #081224 0%, #020408 45%, #000000 100%);
+  --bg-card: linear-gradient(180deg, rgba(8, 14, 25, 0.94) 0%, rgba(3, 6, 12, 0.98) 100%);
+  --border-panel: rgba(52, 76, 110, 0.35);
+  --universe-spotlight: rgba(0, 229, 255, 0.16);
+  --universe-glow-sm: 0 0 12px rgba(0, 229, 255, 0.2);
+  --universe-glow-md: 0 0 18px rgba(0, 229, 255, 0.25);
+  --universe-progress-glow: 0 0 12px rgba(0, 229, 255, 0.85);
+}
+
+html[data-universe="cyber-zen"][data-theme="light"] {
+  /* === U-01 CYBER-ZEN: ECHIZEN WASHI LIGHT MODE === */
+  --zen-void: #F8F5EC;
+  --zen-abyss: #FFFDF7;
+  --zen-midnight: #F0ECE1;
+  --zen-lampblack: #EAE4D5;
+  --zen-slate-deep: #E2DBD0;
+  --zen-slate-mid: #D5CCC0;
+  --zen-slate-edge: #C0B5A3;
+  --zen-steel: #7E7667;
+  --zen-moon-silver: #4B4539;
+  --zen-frost: #27272A;
+  --zen-snow: #09090B;
+  --zen-ink-muted: #57534E;
+  --zen-ink-dim: #A8A29E;
+  --zen-cyan: #0284C7;
+  --zen-hanko: #DC2626;
+  --zen-emerald: #059669;
+  --zen-amber: #D97706;
+  --zen-border: rgba(120, 113, 108, 0.22);
+  --zen-card: rgba(255, 253, 247, 0.92);
+  --zen-card-hover: rgba(240, 236, 225, 0.98);
+  --zen-vignette: rgba(168, 162, 158, 0.08);
+  --bg-body: radial-gradient(circle at 65% 18%, #FFFDF7 0%, #F8F5EC 45%, #F0ECE1 100%);
+  --bg-card: linear-gradient(180deg, rgba(255, 253, 247, 0.96) 0%, rgba(248, 245, 236, 0.92) 100%);
+  --border-panel: rgba(200, 190, 170, 0.6);
+  --universe-spotlight: rgba(2, 132, 199, 0.10);
+  --universe-glow-sm: 0 2px 8px rgba(2, 132, 199, 0.12);
+  --universe-glow-md: 0 4px 14px rgba(2, 132, 199, 0.16);
+  --universe-progress-glow: none;
+}
+
+/* === U-02 NEO-BRUTALISM (SINGLE MODE - neubrutalism.com / Swiss Industrial Print) === */
+html[data-universe="neo-brutalism"] {
+  --zen-void: #F4F3EE;
+  --zen-abyss: #EAE8E1;
+  --zen-midnight: #FFFFFF;
+  --zen-lampblack: #FFDE59;
+  --zen-slate-deep: #E5E2D9;
+  --zen-slate-mid: #D4D0C4;
+  --zen-slate-edge: #0A0A0A;
+  --zen-steel: #0A0A0A;
+  --zen-moon-silver: #1C1C1C;
+  --zen-frost: #111111;
+  --zen-snow: #050505;
+  --zen-ink-muted: #2D2D2A;
+  --zen-ink-dim: #5C5B55;
+  --zen-cyan: #FF4D00;
+  --zen-hanko: #0A0A0A;
+  --zen-emerald: #009E60;
+  --zen-amber: #FFDE59;
+  --zen-border: #0A0A0A;
+  --zen-card: #FFFFFF;
+  --zen-card-hover: #FFDE59;
+  --zen-vignette: rgba(0, 0, 0, 0);
+  --bg-body: #F4F3EE;
+  --bg-card: #FFFFFF;
+  --border-panel: #0A0A0A;
+  --universe-spotlight: transparent;
+  --universe-glow-sm: 3px 3px 0px #0A0A0A;
+  --universe-glow-md: 5px 5px 0px #0A0A0A;
+  --universe-progress-glow: none;
+  --font-zen-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-decor: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-serif: var(--font-mono-code), ui-monospace, monospace !important;
+}
+
+/* === U-03 MINIMALISM (SINGLE MODE - kickpush.co / Editorial Warm Monochrome) === */
+html[data-universe="minimalism"] {
+  --zen-void: #F6F5F2;
+  --zen-abyss: #FFFFFF;
+  --zen-midnight: #FFFFFF;
+  --zen-lampblack: #EFECE6;
+  --zen-slate-deep: #E8E5DF;
+  --zen-slate-mid: #DDD9D0;
+  --zen-slate-edge: #C8C4BA;
+  --zen-steel: #78756E;
+  --zen-moon-silver: #4A4843;
+  --zen-frost: #262523;
+  --zen-snow: #0F0F0E;
+  --zen-ink-muted: #6E6C66;
+  --zen-ink-dim: #9E9B94;
+  --zen-cyan: #111111;
+  --zen-hanko: #78756E;
+  --zen-emerald: #2E5A36;
+  --zen-amber: #8A5A00;
+  --zen-border: #DEDBD3;
+  --zen-card: #FFFFFF;
+  --zen-card-hover: #F0EFEA;
+  --zen-vignette: rgba(0, 0, 0, 0);
+  --bg-body: #F6F5F2;
+  --bg-card: #FFFFFF;
+  --border-panel: #DEDBD3;
+  --universe-spotlight: transparent;
+  --universe-glow-sm: none;
+  --universe-glow-md: none;
+  --universe-progress-glow: none;
+  --font-zen-display: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-decor: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-serif: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* === U-04 PARALLAX (SINGLE MODE - beargrylls.com / Deep Horizon Expedition) === */
+html[data-universe="parallax"] {
+  --zen-void: #060A10;
+  --zen-abyss: #04070B;
+  --zen-midnight: #0B1320;
+  --zen-lampblack: #101B2D;
+  --zen-slate-deep: #152338;
+  --zen-slate-mid: #1E314D;
+  --zen-slate-edge: #2E4A70;
+  --zen-steel: #54749E;
+  --zen-moon-silver: #A3B8D4;
+  --zen-frost: #E2E8F0;
+  --zen-snow: #FFFBEB;
+  --zen-ink-muted: #94A3B8;
+  --zen-ink-dim: #475569;
+  --zen-cyan: #E5A93C;
+  --zen-hanko: #38BDF8;
+  --zen-emerald: #10B981;
+  --zen-amber: #F59E0B;
+  --zen-border: rgba(229, 169, 60, 0.26);
+  --zen-card: rgba(11, 19, 32, 0.90);
+  --zen-card-hover: rgba(17, 29, 48, 0.96);
+  --zen-vignette: rgba(4, 7, 12, 0.92);
+  --bg-body: radial-gradient(circle at 50% 0%, #16263D 0%, #060A10 60%, #030508 100%);
+  --bg-card: linear-gradient(180deg, rgba(16, 27, 45, 0.94) 0%, rgba(8, 14, 24, 0.98) 100%);
+  --border-panel: rgba(229, 169, 60, 0.38);
+  --universe-spotlight: rgba(229, 169, 60, 0.15);
+  --universe-glow-sm: 0 0 14px rgba(229, 169, 60, 0.22);
+  --universe-glow-md: 0 0 22px rgba(229, 169, 60, 0.28);
+  --universe-progress-glow: 0 0 12px rgba(229, 169, 60, 0.85);
+  --font-zen-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-decor: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* === U-05 BROKEN GRID (SINGLE MODE - dau.lt / Asymmetric Architectural Blueprint) === */
+html[data-universe="broken-grid"] {
+  --zen-void: #EAE6DF;
+  --zen-abyss: #E0DBD1;
+  --zen-midnight: #F4F1EA;
+  --zen-lampblack: #DCD7CC;
+  --zen-slate-deep: #D0C9BC;
+  --zen-slate-mid: #BFB8AA;
+  --zen-slate-edge: #8C857B;
+  --zen-steel: #524E46;
+  --zen-moon-silver: #33302B;
+  --zen-frost: #1A1917;
+  --zen-snow: #0A0A09;
+  --zen-ink-muted: #545049;
+  --zen-ink-dim: #857F74;
+  --zen-cyan: #D9381E;
+  --zen-hanko: #141413;
+  --zen-emerald: #15803D;
+  --zen-amber: #B45309;
+  --zen-border: rgba(20, 20, 19, 0.26);
+  --zen-card: #F4F1EA;
+  --zen-card-hover: #FFFFFF;
+  --zen-vignette: rgba(0, 0, 0, 0);
+  --bg-body: #EAE6DF;
+  --bg-card: #F4F1EA;
+  --border-panel: rgba(20, 20, 19, 0.35);
+  --universe-spotlight: transparent;
+  --universe-glow-sm: 4px 4px 0px rgba(217, 56, 30, 0.85);
+  --universe-glow-md: 6px 6px 0px #D9381E;
+  --universe-progress-glow: none;
+  --font-zen-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-decor: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-serif: var(--font-mono-code), ui-monospace, monospace !important;
+}
+
 @layer base {
-  :root {
-    /* === PURE OLED VANTABLACK DARK MODE (DEFAULT) === */
-    --zen-void: #000000;
-    --zen-abyss: #020407;
-    --zen-midnight: #05080f;
-    --zen-lampblack: #080d17;
-    --zen-slate-deep: #0c1422;
-    --zen-slate-mid: #121e33;
-    --zen-slate-edge: #1e304d;
-    --zen-steel: #344c6e;
-    --zen-moon-silver: #8ba6c4;
-    --zen-frost: #e2e8f0;
-    --zen-snow: #f8fafc;
-    --zen-ink-muted: #94a3b8;
-    --zen-ink-dim: #223247;
-    --zen-cyan: #00E5FF;
-    --zen-hanko: #E63946;
-    --zen-emerald: #10B981;
-    --zen-amber: #F59E0B;
-    --zen-border: rgba(255, 255, 255, 0.12);
-    --zen-card: rgba(8, 13, 23, 0.88);
-    --zen-card-hover: rgba(12, 20, 34, 0.96);
-    --zen-vignette: rgba(0, 0, 0, 0.95);
-    --bg-body: radial-gradient(circle at 65% 18%, #081224 0%, #020408 45%, #000000 100%);
-    --bg-card: linear-gradient(180deg, rgba(8, 14, 25, 0.94) 0%, rgba(3, 6, 12, 0.98) 100%);
-    --border-panel: rgba(52, 76, 110, 0.35);
-  }
-
-  [data-theme="light"] {
-    /* === ECHIZEN WASHI (和紙) LIGHT MODE === */
-    --zen-void: #F8F5EC;
-    --zen-abyss: #FFFDF7;
-    --zen-midnight: #F0ECE1;
-    --zen-lampblack: #EAE4D5;
-    --zen-slate-deep: #E2DBD0;
-    --zen-slate-mid: #D5CCC0;
-    --zen-slate-edge: #C0B5A3;
-    --zen-steel: #7E7667;
-    --zen-moon-silver: #4B4539;
-    --zen-frost: #27272A; /* Pure Sumi charcoal body ink */
-    --zen-snow: #09090B;  /* Deepest calligraphy heading ink */
-    --zen-ink-muted: #57534E;
-    --zen-ink-dim: #A8A29E;
-    --zen-cyan: #0284C7; /* Refined Indigo Azure */
-    --zen-hanko: #DC2626; /* Vermilion Seal */
-    --zen-emerald: #059669;
-    --zen-amber: #D97706;
-    --zen-border: rgba(120, 113, 108, 0.22);
-    --zen-card: rgba(255, 253, 247, 0.92);
-    --zen-card-hover: rgba(240, 236, 225, 0.98);
-    --zen-vignette: rgba(168, 162, 158, 0.08);
-    --bg-body: radial-gradient(circle at 65% 18%, #FFFDF7 0%, #F8F5EC 45%, #F0ECE1 100%);
-    --bg-card: linear-gradient(180deg, rgba(255, 253, 247, 0.96) 0%, rgba(248, 245, 236, 0.92) 100%);
-    --border-panel: rgba(200, 190, 170, 0.6);
-  }
-
   body {
     background: var(--bg-body);
     background-color: var(--zen-void);
@@ -106,7 +260,7 @@
     font-family: ui-sans-serif, system-ui, sans-serif;
     line-height: 1.65;
     overflow-x: hidden;
-    transition: background 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: background 0.5s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   ::selection {
@@ -117,10 +271,10 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-zen-display, serif);
     font-weight: 600;
-    letter-spacing: 0.15em;
-    line-height: 1.25;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
     color: var(--zen-snow);
-    transition: color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   hr {
@@ -160,6 +314,129 @@
 
   * {
     @apply border-border outline-ring/50;
+  }
+}
+
+/* ============================================================================
+   UNIVERSE-SPECIFIC STRUCTURAL SIGNATURES & OVERRIDES
+   Each universe enforces its own geometry, shadows, borders, and typography.
+   ============================================================================ */
+
+/* --- U-02 NEO-BRUTALISM (neubrutalism.com) --- */
+html[data-universe="neo-brutalism"] h1,
+html[data-universe="neo-brutalism"] h2,
+html[data-universe="neo-brutalism"] h3,
+html[data-universe="neo-brutalism"] h4,
+html[data-universe="neo-brutalism"] h5,
+html[data-universe="neo-brutalism"] h6 {
+  font-family: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 800 !important;
+}
+
+html[data-universe="neo-brutalism"] * {
+  border-radius: 0px !important;
+}
+
+html[data-universe="neo-brutalism"] .universe-card {
+  border: 3px solid #0A0A0A !important;
+  box-shadow: 6px 6px 0px #0A0A0A !important;
+  background: #FFFFFF !important;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+html[data-universe="neo-brutalism"] .universe-card:hover {
+  transform: translate(-3px, -3px) !important;
+  box-shadow: 9px 9px 0px #0A0A0A !important;
+}
+
+/* --- U-03 MINIMALISM (kickpush.co) --- */
+html[data-universe="minimalism"] h1,
+html[data-universe="minimalism"] h2,
+html[data-universe="minimalism"] h3,
+html[data-universe="minimalism"] h4,
+html[data-universe="minimalism"] h5,
+html[data-universe="minimalism"] h6 {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: -0.03em !important;
+  font-weight: 500 !important;
+}
+
+html[data-universe="minimalism"] * {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html[data-universe="minimalism"] .universe-card {
+  border: 1px solid #DEDBD3 !important;
+  border-radius: 0px !important;
+  background: #FFFFFF !important;
+}
+
+html[data-universe="minimalism"] .universe-card:hover {
+  background: #F0EFEA !important;
+  border-color: #111111 !important;
+}
+
+/* --- U-04 PARALLAX (beargrylls.com) --- */
+html[data-universe="parallax"] h1,
+html[data-universe="parallax"] h2,
+html[data-universe="parallax"] h3,
+html[data-universe="parallax"] h4 {
+  font-family: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: 0.14em !important;
+  font-weight: 700 !important;
+}
+
+html[data-universe="parallax"] .universe-card {
+  border: 1px solid rgba(229, 169, 60, 0.28) !important;
+  background: linear-gradient(180deg, rgba(14, 24, 40, 0.92) 0%, rgba(7, 12, 20, 0.98) 100%) !important;
+  box-shadow: 0 18px 40px -15px rgba(0, 0, 0, 0.85) !important;
+}
+
+html[data-universe="parallax"] .universe-card:hover {
+  border-color: #E5A93C !important;
+  box-shadow: 0 22px 48px -12px rgba(229, 169, 60, 0.22) !important;
+}
+
+/* --- U-05 BROKEN GRID (dau.lt) --- */
+html[data-universe="broken-grid"] h1,
+html[data-universe="broken-grid"] h2,
+html[data-universe="broken-grid"] h3,
+html[data-universe="broken-grid"] h4 {
+  font-family: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 700 !important;
+}
+
+html[data-universe="broken-grid"] .rounded-2xl,
+html[data-universe="broken-grid"] .rounded-xl,
+html[data-universe="broken-grid"] .rounded-lg,
+html[data-universe="broken-grid"] .rounded-md,
+html[data-universe="broken-grid"] .rounded,
+html[data-universe="broken-grid"] .rounded-\[15px\] {
+  border-radius: 0px !important;
+}
+
+html[data-universe="broken-grid"] .universe-card {
+  border: 1px solid rgba(20, 20, 19, 0.45) !important;
+  background: #F4F1EA !important;
+  box-shadow: 4px 4px 0px rgba(20, 20, 19, 0.12) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+html[data-universe="broken-grid"] .universe-card:hover {
+  border-color: #D9381E !important;
+  box-shadow: 6px 6px 0px #D9381E !important;
+  transform: translate(-2px, -2px);
+}
+
+@media (min-width: 1024px) {
+  html[data-universe="broken-grid"] .universe-bento-grid > div:nth-child(2n) {
+    transform: translateY(20px);
+  }
+  html[data-universe="broken-grid"] .universe-bento-grid > div:nth-child(3n) {
+    transform: translateY(-12px);
   }
 }
 
@@ -220,7 +497,7 @@
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-xl: var(--radius);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);

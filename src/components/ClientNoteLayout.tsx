@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import DirectoryView from "./DirectoryView";
+import { useStudyPlan } from "./StudyPlanProvider";
+import { useTheme } from "./ThemeProvider";
 
 interface TocItem {
   text: string;
@@ -17,6 +19,8 @@ interface ClientNoteLayoutProps {
   parentUrl: string;
   toc?: TocItem[];
   lastUpdated?: string | null;
+  isMonograph?: boolean;
+  courseCode?: string;
 }
 
 export default function ClientNoteLayout({
@@ -25,10 +29,30 @@ export default function ClientNoteLayout({
   parentUrl,
   toc = [],
   lastUpdated,
+  isMonograph = false,
+  courseCode,
 }: ClientNoteLayoutProps) {
   const router = useRouter();
+  const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [activeTocSlug, setActiveTocSlug] = useState<string>("");
+  const {
+    isNoteCompleted,
+    toggleNoteCompleted,
+    markNoteVisited,
+    setSyncModalOpen,
+  } = useStudyPlan();
+  const { universe } = useTheme();
+
+  const decodedPath = decodeURIComponent(pathname || "");
+  const completed = isMonograph && decodedPath ? isNoteCompleted(decodedPath) : false;
+
+  // Record last visited monograph for stateless EG2 code and Study Plan resume
+  useEffect(() => {
+    if (isMonograph && decodedPath && title) {
+      markNoteVisited(decodedPath, title, courseCode);
+    }
+  }, [isMonograph, decodedPath, title, courseCode, markNoteVisited]);
 
   // Default to closed on mobile/tablets so drawer does not block initial reading
   useEffect(() => {
@@ -67,11 +91,13 @@ export default function ClientNoteLayout({
 
   return (
     <div className="min-h-screen bg-[var(--zen-void)] text-[var(--zen-frost)] relative selection:bg-[var(--zen-cyan)]/20 selection:text-[var(--zen-cyan)] transition-colors duration-500">
-      {/* Background Subtle Radial Vignette */}
-      <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-20 bg-[radial-gradient(circle_at_50%_15%,var(--zen-cyan)_0%,transparent_60%)]"
-        aria-hidden="true"
-      />
+      {/* Background Subtle Radial Vignette (Cyber-Zen & Parallax only) */}
+      {(universe === "cyber-zen" || universe === "parallax") && (
+        <div
+          className="fixed inset-0 pointer-events-none z-0 opacity-20 bg-[radial-gradient(circle_at_50%_15%,var(--zen-cyan)_0%,transparent_60%)]"
+          aria-hidden="true"
+        />
+      )}
 
       {/* Sub-Header Ribbon: Note Studio Command Strip (Docks right below TopNav at sticky top-[53px]) */}
       <div className="sticky top-[53px] left-0 w-full z-30 px-4 sm:px-8 py-2.5 bg-[var(--zen-void)]/90 backdrop-blur-xl border-b border-[var(--zen-border)] transition-colors duration-500">
@@ -100,7 +126,7 @@ export default function ClientNoteLayout({
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
               className={`flex items-center gap-2 px-3 py-1.5 rounded border text-xs font-mono tracking-wider transition-all ${
                 isSidebarOpen
-                  ? "border-[var(--zen-cyan)] text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 shadow-[0_0_12px_rgba(0,229,255,0.2)] font-semibold"
+                  ? "border-[var(--zen-cyan)] text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 font-semibold"
                   : "border-[var(--zen-border)] text-[var(--zen-frost)] hover:border-[var(--zen-cyan)] hover:text-[var(--zen-cyan)] bg-[var(--zen-card)]"
               }`}
               title={isSidebarOpen ? "Collapse Explorer (Hide Sidebar)" : "Expand Explorer (Show Sidebar)"}
@@ -111,7 +137,9 @@ export default function ClientNoteLayout({
                 <line x1="9" y1="3" x2="9" y2="21" />
               </svg>
               <span>{isSidebarOpen ? "HIDE EXPLORER" : "EXPLORER"}</span>
-              <span className="text-[10px] text-[var(--zen-ink-muted)] font-serif">目録</span>
+              {universe === "cyber-zen" && (
+                <span className="text-[10px] text-[var(--zen-ink-muted)] font-serif">目録</span>
+              )}
             </button>
 
             {/* Note Title & Badge */}
@@ -128,13 +156,39 @@ export default function ClientNoteLayout({
             </div>
           </div>
 
-          {/* Right: Telemetry / Date */}
-          {lastUpdated && (
-            <div className="hidden sm:flex items-center gap-2 text-[10px] font-mono text-[var(--zen-ink-muted)] shrink-0">
-              <span>COMPILED:</span>
-              <span className="text-[var(--zen-frost)] font-semibold">{lastUpdated}</span>
-            </div>
-          )}
+          {/* Right: Completion Toggle, Sync Trigger & Date */}
+          <div className="flex items-center gap-2.5 shrink-0">
+            {isMonograph && decodedPath && (
+              <button
+                onClick={() => toggleNoteCompleted(decodedPath, title)}
+                className={`px-2.5 py-1 rounded border text-[10px] font-mono tracking-wider uppercase transition-all ${
+                  completed
+                    ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)] text-[var(--zen-void)] font-bold"
+                    : "border-[var(--zen-border)] hover:border-[var(--zen-cyan)] text-[var(--zen-frost)] hover:text-[var(--zen-cyan)] bg-[var(--zen-card)]"
+                }`}
+                title="Toggle completion status in your Study Plan"
+              >
+                {completed ? "[x] COMPLETED" : "[ ] MARK COMPLETE"}
+              </button>
+            )}
+
+            <button
+              onClick={() => setSyncModalOpen(true)}
+              className="hidden md:inline-flex px-2.5 py-1 rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] bg-[var(--zen-card)] text-[10px] font-mono tracking-wider text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)] transition-colors uppercase"
+              title="Open Study Plan and EG2 Sync Code"
+            >
+              STUDY PLAN
+            </button>
+
+            {lastUpdated && (
+              <div className="hidden lg:flex items-center gap-2 text-[10px] font-mono text-[var(--zen-ink-muted)] pl-2 border-l border-[var(--zen-border)]">
+                <span>COMPILED:</span>
+                <span className="text-[var(--zen-frost)] font-semibold">
+                  {lastUpdated}
+                </span>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -169,7 +223,7 @@ export default function ClientNoteLayout({
                       VAULT EXPLORER
                     </h2>
                     <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] tracking-wider">
-                      CURRICULAR DIRECTORY // 目録
+                      {universe === "cyber-zen" ? "CURRICULAR DIRECTORY // 目録" : "CURRICULAR DIRECTORY"}
                     </span>
                   </div>
                 </div>
@@ -210,7 +264,9 @@ export default function ClientNoteLayout({
                   >
                     VAULT EXPLORER
                   </span>
-                  <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] uppercase shrink-0">目録</span>
+                  {universe === "cyber-zen" && (
+                    <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] uppercase shrink-0">目録</span>
+                  )}
                 </div>
                 <button
                   onClick={() => setIsSidebarOpen(false)}
@@ -236,6 +292,39 @@ export default function ClientNoteLayout({
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             {children}
+
+            {isMonograph && decodedPath && (
+              <div className="mt-12 pt-6 border-t border-[var(--zen-border)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--zen-ink-muted)] block">
+                    STUDY PROGRESS TRACKER
+                  </span>
+                  <p className="text-xs text-[var(--zen-frost)] mt-0.5">
+                    {completed
+                      ? "This monograph is recorded as completed in your local profile and EG2 sync code."
+                      : "Finished reviewing this monograph? Mark it complete to update your study plan progress."}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    onClick={() => toggleNoteCompleted(decodedPath, title)}
+                    className={`px-4 py-2 rounded border text-xs font-mono tracking-wider uppercase transition-all ${
+                      completed
+                        ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)] text-[var(--zen-void)] font-bold"
+                        : "border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/10 hover:bg-[var(--zen-cyan)]/20 text-[var(--zen-cyan)] font-semibold"
+                    }`}
+                  >
+                    {completed ? "[x] COMPLETED" : "MARK AS COMPLETED"}
+                  </button>
+                  <button
+                    onClick={() => setSyncModalOpen(true)}
+                    className="px-3 py-2 rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] bg-[var(--zen-card)] text-xs font-mono tracking-wider text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] transition-colors"
+                  >
+                    EG2 CODE
+                  </button>
+                </div>
+              </div>
+            )}
           </motion.div>
         </main>
 
@@ -250,7 +339,9 @@ export default function ClientNoteLayout({
                 >
                   OUTLINE
                 </span>
-                <span className="text-[10px] font-mono text-[var(--zen-ink-muted)]">目次 · {toc.length} SECTIONS</span>
+                <span className="text-[10px] font-mono text-[var(--zen-ink-muted)]">
+                  {universe === "cyber-zen" ? `目次 · ${toc.length} SECTIONS` : `${toc.length} SECTIONS`}
+                </span>
               </div>
               <nav className="space-y-2.5" aria-label="Table of contents">
                 {toc.map((heading, i) => {
