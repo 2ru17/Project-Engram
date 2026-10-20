@@ -6,7 +6,12 @@ import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
 import { animate } from "animejs";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { BorderBeam } from "@/components/ui/border-beam";
-import { COURSE_REGISTRY, type CourseInfo } from "@/lib/course-registry";
+import {
+  COURSE_REGISTRY,
+  STAR_DOMAINS,
+  type StarDomainId,
+  type CourseTrack,
+} from "@/lib/course-registry";
 
 interface BentoLayoutConfig {
   spanClass: string;
@@ -112,15 +117,15 @@ export default function HomePage() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.22], [1, 0]);
   const heroScale = useTransform(scrollYProgress, [0, 0.22], [1, 0.94]);
 
-  const [activeYear, setActiveYear] = useState<number | "all">("all");
-  const [activeDomain, setActiveDomain] = useState<string>("all");
+  const [activeDomain, setActiveDomain] = useState<StarDomainId | "all">("all");
+  const [activeTrack, setActiveTrack] = useState<CourseTrack | "all">("all");
   const [currentPage, setCurrentPage] = useState(0);
   const ITEMS_PER_PAGE = 7;
 
-  // Reset page when switching year tabs or domain chips
+  // Reset page when switching constellation domain or track filters
   useEffect(() => {
     setCurrentPage(0);
-  }, [activeYear, activeDomain]);
+  }, [activeDomain, activeTrack]);
 
   // Anime.js path stroke animation on mount
   useEffect(() => {
@@ -134,9 +139,9 @@ export default function HomePage() {
   }, []);
 
   const filteredCourses = COURSE_REGISTRY.filter((c) => {
-    const matchesYear = activeYear === "all" || c.year === activeYear;
     const matchesDomain = activeDomain === "all" || c.category === activeDomain;
-    return matchesYear && matchesDomain;
+    const matchesTrack = activeTrack === "all" || c.track === activeTrack;
+    return matchesDomain && matchesTrack;
   });
 
   const totalPages = Math.ceil(filteredCourses.length / ITEMS_PER_PAGE) || 1;
@@ -159,8 +164,8 @@ export default function HomePage() {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    const rotY = ((x / rect.width) - 0.5) * 10;
-    const rotX = ((y / rect.height) - 0.5) * -10;
+    const rotY = (x / rect.width - 0.5) * 10;
+    const rotX = (y / rect.height - 0.5) * -10;
     card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px)`;
     card.style.setProperty("--mx", `${(x / rect.width) * 100}%`);
     card.style.setProperty("--my", `${(y / rect.height) * 100}%`);
@@ -187,10 +192,26 @@ export default function HomePage() {
           aria-hidden="true"
         >
           <svg viewBox="0 0 400 400" fill="none" className="w-full h-full">
-            <circle cx="200" cy="200" r="190" stroke="var(--zen-slate-edge)" strokeWidth="1" strokeDasharray="8 6" />
+            <circle
+              cx="200"
+              cy="200"
+              r="190"
+              stroke="var(--zen-slate-edge)"
+              strokeWidth="1"
+              strokeDasharray="8 6"
+            />
             <circle cx="200" cy="200" r="140" stroke="var(--zen-steel)" strokeWidth="0.75" />
-            <polygon points="200,10 390,200 200,390 10,200" stroke="var(--zen-cyan)" strokeWidth="0.8" opacity="0.6" />
-            <polygon points="65,65 335,65 335,335 65,335" stroke="var(--zen-slate-deep)" strokeWidth="1" />
+            <polygon
+              points="200,10 390,200 200,390 10,200"
+              stroke="var(--zen-cyan)"
+              strokeWidth="0.8"
+              opacity="0.6"
+            />
+            <polygon
+              points="65,65 335,65 335,335 65,335"
+              stroke="var(--zen-slate-deep)"
+              strokeWidth="1"
+            />
           </svg>
         </motion.div>
 
@@ -257,10 +278,8 @@ export default function HomePage() {
           </div>
 
           {/* Sub-tagline */}
-          <p
-            className="font-mono text-xs sm:text-sm tracking-[0.22em] text-[var(--zen-cyan)] uppercase mt-1 font-semibold"
-          >
-            Computer Science & Systems Architecture Archive
+          <p className="font-mono text-xs sm:text-sm tracking-[0.22em] text-[var(--zen-cyan)] uppercase mt-1 font-semibold">
+            Heliocentric Computer Science Knowledge Universe
           </p>
 
           {/* Katana Blade Divider SVG with Anime.js hook */}
@@ -272,7 +291,12 @@ export default function HomePage() {
             aria-hidden="true"
           >
             <line x1="0" y1="10" x2="220" y2="10" stroke="var(--zen-steel)" strokeWidth="1" />
-            <polygon points="230,10 270,3 310,10 270,17" fill="var(--zen-void)" stroke="var(--zen-cyan)" strokeWidth="1.2" />
+            <polygon
+              points="230,10 270,3 310,10 270,17"
+              fill="var(--zen-void)"
+              stroke="var(--zen-cyan)"
+              strokeWidth="1.2"
+            />
             <circle cx="270" cy="10" r="3" fill="var(--zen-cyan)" />
             <line x1="320" y1="10" x2="540" y2="10" stroke="var(--zen-steel)" strokeWidth="1" />
           </svg>
@@ -283,7 +307,9 @@ export default function HomePage() {
               <svg
                 key={i}
                 viewBox="0 0 24 24"
-                className={`fill-[var(--zen-cyan)] animate-pulse ${i === 2 ? "w-5 h-5 opacity-100" : "w-4 h-4 opacity-75"}`}
+                className={`fill-[var(--zen-cyan)] animate-pulse ${
+                  i === 2 ? "w-5 h-5 opacity-100" : "w-4 h-4 opacity-75"
+                }`}
                 style={{ animationDuration: "3s", animationDelay: `${delay}s` }}
               >
                 <path d="M12 0L14.8 9.2L24 12L14.8 14.8L12 24L9.2 14.8L0 12L9.2 9.2Z" />
@@ -294,19 +320,19 @@ export default function HomePage() {
           {/* Telemetry Ribbon with NumberTicker */}
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-mono text-xs tracking-[0.16em] uppercase text-[var(--zen-ink-muted)] mb-8">
             <span className="flex items-center gap-1.5">
-              [ <NumberTicker value={536} className="text-[var(--zen-snow)] font-semibold" /> MONOGRAPHS ]
+              [ <span className="text-amber-400 font-semibold">☀ CS</span> CENTRAL SUN ]
             </span>
             <span className="text-[var(--zen-cyan)]">·</span>
             <span className="flex items-center gap-1.5">
-              [ <NumberTicker value={38} className="text-[var(--zen-snow)] font-semibold" /> MODULES ]
+              [ <NumberTicker value={25} className="text-[var(--zen-snow)] font-semibold" /> SUBJECT STARS ]
             </span>
             <span className="text-[var(--zen-cyan)]">·</span>
             <span className="flex items-center gap-1.5">
-              [ <NumberTicker value={1248} className="text-[var(--zen-snow)] font-semibold" /> CONNECTIONS ]
+              [ <NumberTicker value={539} className="text-[var(--zen-snow)] font-semibold" /> MONOGRAPHS ]
             </span>
             <span className="text-[var(--zen-cyan)]">·</span>
             <span className="flex items-center gap-1.5">
-              [ <NumberTicker value={4} className="text-[var(--zen-snow)] font-semibold" /> CYCLES ]
+              [ <NumberTicker value={4} className="text-[var(--zen-snow)] font-semibold" /> CONSTELLATIONS ]
             </span>
           </div>
         </motion.div>
@@ -318,8 +344,16 @@ export default function HomePage() {
           aria-hidden="true"
         >
           <svg viewBox="0 0 1440 260" preserveAspectRatio="none" className="w-full h-full">
-            <path d="M0,260 L0,150 Q160,80 320,130 T680,60 T1040,110 T1440,80 L1440,260 Z" fill="var(--zen-slate-deep)" opacity="0.4" />
-            <path d="M0,260 L0,180 Q220,110 440,160 T860,90 T1220,150 T1440,130 L1440,260 Z" fill="var(--zen-void)" opacity="0.95" />
+            <path
+              d="M0,260 L0,150 Q160,80 320,130 T680,60 T1040,110 T1440,80 L1440,260 Z"
+              fill="var(--zen-slate-deep)"
+              opacity="0.4"
+            />
+            <path
+              d="M0,260 L0,180 Q220,110 440,160 T860,90 T1220,150 T1440,130 L1440,260 Z"
+              fill="var(--zen-void)"
+              opacity="0.95"
+            />
           </svg>
         </motion.div>
       </section>
@@ -348,7 +382,7 @@ export default function HomePage() {
       </section>
 
       {/* ======================================================================
-          DUAL GATEWAY CARDS: GRAPH VS. ARCHIVE
+          DUAL GATEWAY CARDS: HELIOCENTRIC STAR GRAPH VS. STAR ARCHIVE
           ====================================================================== */}
       <section className="relative z-20 max-w-7xl mx-auto px-6 py-16" id="gateways">
         <div className="text-center mb-12">
@@ -367,14 +401,13 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Gateway 1: The Knowledge Graph */}
+          {/* Gateway 1: The Heliocentric Star Graph */}
           <div
             onMouseMove={handleTilt}
             onMouseLeave={resetTilt}
             className="relative group p-8 sm:p-10 min-h-[420px] flex flex-col justify-between bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-none overflow-hidden transition-all duration-300 shadow-2xl"
             style={{ transformStyle: "preserve-3d" }}
           >
-            {/* Dynamic Foil Glint Overlay */}
             <div
               className="pointer-events-none absolute -inset-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
               style={{
@@ -384,7 +417,6 @@ export default function HomePage() {
               aria-hidden="true"
             />
 
-            {/* Inner Filigree Border */}
             <svg
               className="pointer-events-none absolute inset-3 w-[calc(100%-24px)] h-[calc(100%-24px)] z-10"
               viewBox="0 0 300 400"
@@ -399,7 +431,6 @@ export default function HomePage() {
               />
             </svg>
 
-            {/* Background Kanji Watermark */}
             <span
               className="pointer-events-none absolute top-8 right-8 text-6xl text-[var(--zen-snow)] opacity-5 group-hover:opacity-10 transition-opacity z-0"
               style={{
@@ -411,12 +442,11 @@ export default function HomePage() {
               星図
             </span>
 
-            {/* BorderBeam Flow Effect */}
             <BorderBeam size={120} duration={8} colorFrom="#00E5FF" colorTo="var(--zen-slate-edge)" />
 
             <div className="relative z-20">
               <span className="inline-block px-2.5 py-1 text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/30 uppercase mb-4 font-semibold">
-                TOPOLOGICAL GRAPH
+                HELIOCENTRIC STAR SYSTEM
               </span>
               <h3
                 className="text-2xl sm:text-3xl tracking-[0.16em] font-semibold text-[var(--zen-snow)] uppercase mb-3"
@@ -425,7 +455,7 @@ export default function HomePage() {
                 THE KNOWLEDGE GRAPH
               </h3>
               <p className="text-sm sm:text-base text-[var(--zen-frost)] opacity-80 leading-relaxed max-w-md">
-                Explore an interactive 3D concept graph charting 519 nodes and 1,200+ relational dependencies across the computer science curriculum.
+                Navigate an interactive solar system where Computer Science anchors the gravitational center, surrounded by 25 interconnected Subject Stars and 539 orbiting monographs.
               </p>
             </div>
 
@@ -434,20 +464,19 @@ export default function HomePage() {
                 href="/notes?view=graph"
                 className="inline-flex items-center gap-3 px-6 py-3 border border-[var(--zen-border)] bg-[var(--zen-void)] hover:border-[var(--zen-cyan)] text-xs font-mono tracking-widest text-[var(--zen-snow)] hover:text-[var(--zen-cyan)] transition-all shadow-md"
               >
-                <span>ENTER RELATIONAL GRAPH</span>
+                <span>ENTER STAR SYSTEM</span>
                 <span>→</span>
               </Link>
             </div>
           </div>
 
-          {/* Gateway 2: The Academic Archive */}
+          {/* Gateway 2: The Subject Star Archive */}
           <div
             onMouseMove={handleTilt}
             onMouseLeave={resetTilt}
             className="relative group p-8 sm:p-10 min-h-[420px] flex flex-col justify-between bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-none overflow-hidden transition-all duration-300 shadow-2xl"
             style={{ transformStyle: "preserve-3d" }}
           >
-            {/* Dynamic Foil Glint Overlay */}
             <div
               className="pointer-events-none absolute -inset-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"
               style={{
@@ -457,7 +486,6 @@ export default function HomePage() {
               aria-hidden="true"
             />
 
-            {/* Inner Filigree Border */}
             <svg
               className="pointer-events-none absolute inset-3 w-[calc(100%-24px)] h-[calc(100%-24px)] z-10"
               viewBox="0 0 300 400"
@@ -472,7 +500,6 @@ export default function HomePage() {
               />
             </svg>
 
-            {/* Background Kanji Watermark */}
             <span
               className="pointer-events-none absolute top-8 right-8 text-6xl text-[var(--zen-snow)] opacity-5 group-hover:opacity-10 transition-opacity z-0"
               style={{
@@ -484,12 +511,11 @@ export default function HomePage() {
               目録
             </span>
 
-            {/* BorderBeam Flow Effect */}
             <BorderBeam size={120} duration={8} colorFrom="#00E5FF" colorTo="var(--zen-slate-edge)" delay={4} />
 
             <div className="relative z-20">
               <span className="inline-block px-2.5 py-1 text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/30 uppercase mb-4 font-semibold">
-                CURRICULAR INDEX
+                TRACK-AGNOSTIC INDEX
               </span>
               <h3
                 className="text-2xl sm:text-3xl tracking-[0.16em] font-semibold text-[var(--zen-snow)] uppercase mb-3"
@@ -498,7 +524,7 @@ export default function HomePage() {
                 THE ACADEMIC ARCHIVE
               </h3>
               <p className="text-sm sm:text-base text-[var(--zen-frost)] opacity-80 leading-relaxed max-w-md">
-                Browse structured coursework across 4 years and 38 modules organized into classified monographs, problem sets, and review outlines.
+                Browse pure subject stars across Systems, Theory & Math, Networks & Security, and Software Engineering — decoupled from rigid year flowcharts to unite Core CS, NIS, and ST coursework.
               </p>
             </div>
 
@@ -507,7 +533,7 @@ export default function HomePage() {
                 href="/notes?view=directory"
                 className="inline-flex items-center gap-3 px-6 py-3 border border-[var(--zen-border)] bg-[var(--zen-void)] hover:border-[var(--zen-cyan)] text-xs font-mono tracking-widest text-[var(--zen-snow)] hover:text-[var(--zen-cyan)] transition-all shadow-md"
               >
-                <span>OPEN ARCHIVAL DIRECTORY</span>
+                <span>OPEN STAR DIRECTORY</span>
                 <span>→</span>
               </Link>
             </div>
@@ -516,7 +542,7 @@ export default function HomePage() {
       </section>
 
       {/* ======================================================================
-          CURRICULAR TAXONOMY BENTO GRID (#curriculum) — ALL 23 COURSES & 519 NOTES
+          SUBJECT STAR CONSTELLATION MATRIX (#curriculum) — PURE TOPIC/SUBJECT STARS
           ====================================================================== */}
       <section className="relative z-20 max-w-7xl mx-auto px-6 py-20" id="curriculum">
         <div className="text-center mb-10">
@@ -524,55 +550,58 @@ export default function HomePage() {
             className="text-xs tracking-[0.4em] text-[var(--zen-ink-muted)] uppercase block mb-2"
             style={{ fontFamily: "var(--font-zen-serif, serif)" }}
           >
-            四箇年課程録 // COMPLETE CURRICULAR MATRIX
+            恒星群体系 // HELIOCENTRIC SUBJECT CONSTELLATIONS
           </span>
           <h2
             className="text-2xl sm:text-4xl tracking-[0.2em] font-bold text-[var(--zen-snow)] uppercase"
             style={{ fontFamily: "var(--font-zen-display, serif)" }}
           >
-            ACADEMIC PROGRESSION MATRIX
+            SUBJECT STAR MATRIX
           </h2>
           <p className="mt-2 text-xs font-mono tracking-wider text-[var(--zen-ink-muted)]">
-            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} ACTIVE MODULES · 536 MONOGRAPHS TOTAL
+            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} SUBJECT STARS · ORBITING ☀ COMPUTER SCIENCE
           </p>
         </div>
 
-        {/* Primary Year Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+        {/* Primary Constellation Domain Tabs (Replaces 4-Year Tabs) */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-5">
           {[
-            { id: "all", label: "ALL YEARS // 全期" },
-            { id: 1, label: "YEAR 1 // 初年" },
-            { id: 2, label: "YEAR 2 // 二年" },
-            { id: 3, label: "YEAR 3 // 三年" },
+            { id: "all", label: "ALL CONSTELLATIONS // 全恒星", color: "#00E5FF" },
+            { id: "systems", label: "SYSTEMS & ARCH // 統", color: STAR_DOMAINS.systems.color },
+            { id: "theory", label: "THEORY & MATH // 論", color: STAR_DOMAINS.theory.color },
+            { id: "security", label: "NET & SECURITY // 防", color: STAR_DOMAINS.security.color },
+            { id: "software", label: "SOFTWARE & AI // 創", color: STAR_DOMAINS.software.color },
           ].map((tab) => (
             <button
               key={tab.id}
-              onClick={() => setActiveYear(tab.id as any)}
-              className={`px-4 py-2 text-xs font-mono tracking-wider transition-all rounded-md border ${
-                activeYear === tab.id
+              onClick={() => setActiveDomain(tab.id as any)}
+              className={`px-4 py-2 text-xs font-mono tracking-wider transition-all rounded-md border flex items-center gap-2 ${
+                activeDomain === tab.id
                   ? "border-[var(--zen-cyan)] text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/10 shadow-[0_0_15px_rgba(0,229,255,0.2)] font-semibold"
                   : "border-[var(--zen-border)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] bg-[var(--zen-card)] hover:border-[var(--zen-border)]"
               }`}
             >
-              {tab.label}
+              <span
+                className="w-2 h-2 rounded-full shrink-0"
+                style={{ backgroundColor: tab.color }}
+              />
+              <span>{tab.label}</span>
             </button>
           ))}
         </div>
 
-        {/* Secondary Domain Filter Chips */}
+        {/* Secondary Track Filter Chips (Core CS / NIS / ST-ready) */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {[
-            { id: "all", label: "ALL DOMAINS" },
-            { id: "systems", label: "SYSTEMS & ARCHITECTURE" },
-            { id: "security", label: "NETWORK SECURITY" },
-            { id: "theory", label: "THEORY & MATH" },
-            { id: "software", label: "SOFTWARE & AI" },
+            { id: "all", label: "ALL TRACKS" },
+            { id: "Core CS", label: "CORE COMPUTER SCIENCE" },
+            { id: "NIS", label: "NIS · NETWORK & INFORMATION SECURITY" },
           ].map((chip) => (
             <button
               key={chip.id}
-              onClick={() => setActiveDomain(chip.id)}
+              onClick={() => setActiveTrack(chip.id as any)}
               className={`px-3 py-1.5 text-[11px] font-mono tracking-wider transition-all rounded-full border ${
-                activeDomain === chip.id
+                activeTrack === chip.id
                   ? "border-[var(--zen-cyan)]/80 text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 font-medium"
                   : "border-[var(--zen-border)]/60 text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] bg-[var(--zen-card)]/50"
               }`}
@@ -582,11 +611,11 @@ export default function HomePage() {
           ))}
         </div>
 
-        {/* Carousel / Paginated Bento Grid (Max 7 modules: 4 top, 3 bot) */}
+        {/* Carousel / Paginated Bento Grid (Max 7 Subject Stars per page) */}
         <div className="relative min-h-[460px]">
           <AnimatePresence mode="wait">
             <motion.div
-              key={`${activeYear}-${activeDomain}-${currentPage}`}
+              key={`${activeDomain}-${activeTrack}-${currentPage}`}
               initial={{ opacity: 0, y: 12, filter: "blur(4px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               exit={{ opacity: 0, y: -12, filter: "blur(4px)" }}
@@ -595,6 +624,7 @@ export default function HomePage() {
             >
               {currentCourses.map((course, index) => {
                 const bento = getBentoLayout(index, currentCourses.length);
+                const domainMeta = STAR_DOMAINS[course.category] || STAR_DOMAINS.systems;
 
                 if (bento.isWide) {
                   return (
@@ -602,7 +632,11 @@ export default function HomePage() {
                       key={course.code}
                       initial={{ opacity: 0, y: 14 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.03, ease: [0.16, 1, 0.3, 1] }}
+                      transition={{
+                        duration: 0.3,
+                        delay: index * 0.03,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
                       className={`h-full ${bento.spanClass}`}
                     >
                       {/* Double-Bezel Architecture: Featured Wide Bento Shell */}
@@ -610,7 +644,7 @@ export default function HomePage() {
                         <Link
                           href={course.href}
                           className="h-full rounded-[15px] bg-[var(--zen-midnight)]/90 hover:bg-[var(--zen-card-hover)] p-6 sm:p-7 flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative overflow-hidden transition-colors duration-200"
-                          aria-label={`${course.code}: ${course.name} - ${course.yearLabel} ${course.termFull}, ${course.count} monographs`}
+                          aria-label={`${course.code}: ${course.name} - ${course.categoryLabel} (${course.track}), ${course.count} monographs`}
                         >
                           {/* Background Category Kanji Seal Watermark */}
                           <span
@@ -618,7 +652,7 @@ export default function HomePage() {
                             style={{ fontFamily: "var(--font-zen-brush, serif)" }}
                             aria-hidden="true"
                           >
-                            {course.category === "systems" ? "統" : course.category === "security" ? "防" : course.category === "theory" ? "論" : "創"}
+                            {domainMeta.kanji}
                           </span>
 
                           {/* Ambient Corner Cyan Sheen */}
@@ -628,17 +662,20 @@ export default function HomePage() {
                           />
 
                           {/* Left Content Column */}
-                          <div className="flex-1 min-w-0 pr-0 lg:pr-4 relative z-10" aria-hidden="true">
+                          <div
+                            className="flex-1 min-w-0 pr-0 lg:pr-4 relative z-10"
+                            aria-hidden="true"
+                          >
                             {/* Badges / Header Strip */}
                             <div className="flex flex-wrap items-center gap-2 mb-3">
                               <span className="px-2.5 py-0.5 text-[11px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/50 bg-[var(--zen-cyan)]/10 font-bold uppercase shadow-[0_0_10px_rgba(0,229,255,0.15)]">
-                                {course.code}
+                                ★ {course.code}
                               </span>
                               <span className="px-2 py-0.5 text-[10px] font-mono tracking-wider text-[var(--zen-ink-muted)] border border-[var(--zen-border)] bg-[var(--zen-card)]/60 uppercase">
                                 {course.categoryLabel}
                               </span>
-                              <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] uppercase tracking-wider">
-                                {course.yearLabel} · {course.termFull}
+                              <span className="px-2 py-0.5 text-[10px] font-mono text-[var(--zen-frost)] border border-[var(--zen-border)]/60 uppercase tracking-wider">
+                                {course.track}
                               </span>
                             </div>
 
@@ -651,9 +688,26 @@ export default function HomePage() {
                             </h4>
 
                             {/* Description */}
-                            <p className="text-xs sm:text-sm text-[var(--zen-ink-muted)] leading-relaxed line-clamp-2 max-w-xl">
+                            <p className="text-xs sm:text-sm text-[var(--zen-ink-muted)] leading-relaxed line-clamp-2 max-w-xl mb-3">
                               {course.desc}
                             </p>
+
+                            {/* Connected Constellation Stars */}
+                            {course.relatedCourses.length > 0 && (
+                              <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-mono text-[var(--zen-ink-muted)]">
+                                <span className="text-[var(--zen-cyan)]/80 uppercase">
+                                  BRIDGES:
+                                </span>
+                                {course.relatedCourses.slice(0, 4).map((rel) => (
+                                  <span
+                                    key={rel}
+                                    className="px-1.5 py-0.5 rounded border border-[var(--zen-border)] bg-[var(--zen-card)]/60 text-[var(--zen-frost)]"
+                                  >
+                                    {rel}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
                           </div>
 
                           {/* Right Telemetry Column & Action */}
@@ -671,13 +725,15 @@ export default function HomePage() {
                                 </span>
                               </div>
                               <span className="text-[9px] font-mono tracking-wider text-[var(--zen-cyan)]/80 uppercase block mt-0.5">
-                                CORE MODULE // 必修
+                                SUBJECT STAR // 恒星
                               </span>
                             </div>
 
                             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[var(--zen-border)] bg-[var(--zen-card)] group-hover:border-[var(--zen-cyan)] group-hover:bg-[var(--zen-cyan)] group-hover:text-[var(--zen-void)] text-xs font-mono tracking-wider text-[var(--zen-snow)] transition-all duration-200">
                               <span>EXPLORE</span>
-                              <span className="text-[11px] group-hover:translate-x-0.5 transition-transform">→</span>
+                              <span className="text-[11px] group-hover:translate-x-0.5 transition-transform">
+                                →
+                              </span>
                             </div>
                           </div>
                         </Link>
@@ -691,7 +747,11 @@ export default function HomePage() {
                     key={course.code}
                     initial={{ opacity: 0, y: 14 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.03, ease: [0.16, 1, 0.3, 1] }}
+                    transition={{
+                      duration: 0.3,
+                      delay: index * 0.03,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
                     className={`h-full ${bento.spanClass}`}
                   >
                     {/* Double-Bezel Architecture: Standard Bento Shell */}
@@ -699,7 +759,7 @@ export default function HomePage() {
                       <Link
                         href={course.href}
                         className="h-full rounded-[15px] bg-[var(--zen-midnight)]/80 hover:bg-[var(--zen-card-hover)] p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden transition-colors duration-200"
-                        aria-label={`${course.code}: ${course.name} - ${course.yearLabel} ${course.termFull}, ${course.count} monographs`}
+                        aria-label={`${course.code}: ${course.name} - ${course.categoryLabel} (${course.track}), ${course.count} monographs`}
                       >
                         {/* Background Category Kanji Seal Watermark */}
                         <span
@@ -707,17 +767,17 @@ export default function HomePage() {
                           style={{ fontFamily: "var(--font-zen-brush, serif)" }}
                           aria-hidden="true"
                         >
-                          {course.category === "systems" ? "統" : course.category === "security" ? "防" : course.category === "theory" ? "論" : "創"}
+                          {domainMeta.kanji}
                         </span>
 
                         <div aria-hidden="true">
-                          {/* Top Code & Term Ribbon */}
+                          {/* Top Code & Track Ribbon */}
                           <div className="flex items-center justify-between mb-3">
                             <span className="px-2 py-0.5 text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/5 font-semibold">
-                              {course.code}
+                              ★ {course.code}
                             </span>
                             <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] uppercase">
-                              {course.yearLabel} · {course.termFull}
+                              {course.track} · {domainMeta.shortLabel}
                             </span>
                           </div>
 
@@ -741,7 +801,7 @@ export default function HomePage() {
                           aria-hidden="true"
                         >
                           <span className="font-mono text-[10px] text-[var(--zen-ink-muted)] font-medium tracking-wider">
-                            {course.count} MONOGRAPHS
+                            {course.count} MONOGRAPHS · {course.relatedCourses.length} LINKS
                           </span>
 
                           {/* Button-in-Button Trailing Icon */}
@@ -758,18 +818,20 @@ export default function HomePage() {
           </AnimatePresence>
         </div>
 
-        {/* Carousel Pagination Controller Deck (On the bottom with arrows) */}
+        {/* Carousel Pagination Controller Deck */}
         {totalPages > 1 && (
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[var(--zen-border)]/60 pt-6 px-2">
             {/* Left: Telemetry Counter */}
             <div className="flex items-center gap-2 text-xs font-mono text-[var(--zen-ink-muted)]">
               <span className="w-1.5 h-1.5 rotate-45 bg-[var(--zen-cyan)] shadow-[0_0_8px_rgba(0,229,255,0.4)]" />
               <span>
-                DISPLAYING {currentPage * ITEMS_PER_PAGE + 1}–{Math.min((currentPage + 1) * ITEMS_PER_PAGE, filteredCourses.length)} OF {filteredCourses.length} MODULES
+                DISPLAYING {currentPage * ITEMS_PER_PAGE + 1}–
+                {Math.min((currentPage + 1) * ITEMS_PER_PAGE, filteredCourses.length)} OF{" "}
+                {filteredCourses.length} SUBJECT STARS
               </span>
               <span className="text-[var(--zen-slate-edge)] hidden md:inline">|</span>
               <span className="text-[10px] tracking-wider uppercase text-[var(--zen-cyan)] hidden md:inline">
-                PAGE {currentPage + 1} // 全{totalPages}葉
+                SECTOR {currentPage + 1} // 全{totalPages}星域
               </span>
             </div>
 
@@ -832,8 +894,20 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto flex flex-col items-center">
           {/* Hanko Seal SVG */}
           <svg className="w-12 h-12 mb-4" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-            <circle cx="24" cy="24" r="20" stroke="var(--zen-steel)" strokeWidth="1.2" strokeDasharray="6 3" />
-            <polygon points="24,6 38,24 24,42 10,24" fill="var(--zen-card)" stroke="var(--zen-cyan)" strokeWidth="1.5" />
+            <circle
+              cx="24"
+              cy="24"
+              r="20"
+              stroke="var(--zen-steel)"
+              strokeWidth="1.2"
+              strokeDasharray="6 3"
+            />
+            <polygon
+              points="24,6 38,24 24,42 10,24"
+              fill="var(--zen-card)"
+              stroke="var(--zen-cyan)"
+              strokeWidth="1.5"
+            />
             <circle cx="24" cy="24" r="4" fill="var(--zen-snow)" />
           </svg>
 
@@ -851,12 +925,18 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6 font-mono text-[10px] tracking-widest text-[var(--zen-ink-muted)]">
-            <Link href="/notes?view=graph" className="hover:text-[var(--zen-cyan)] transition-colors">
-              GRAPH
+            <Link
+              href="/notes?view=graph"
+              className="hover:text-[var(--zen-cyan)] transition-colors"
+            >
+              STAR GRAPH
             </Link>
             <span>·</span>
-            <Link href="/notes?view=directory" className="hover:text-[var(--zen-cyan)] transition-colors">
-              DIRECTORY
+            <Link
+              href="/notes?view=directory"
+              className="hover:text-[var(--zen-cyan)] transition-colors"
+            >
+              STAR DIRECTORY
             </Link>
             <span>·</span>
             <a
