@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useRouter, usePathname } from "next/navigation";
+import { STAR_DOMAINS, type StarDomainId } from "@/lib/course-registry";
 
 function isAncestorOfActive(folderPath: string, activePath: string) {
   if (!activePath || !folderPath) return false;
@@ -11,22 +12,42 @@ function isAncestorOfActive(folderPath: string, activePath: string) {
   return cleanActive.startsWith(cleanFolder + "/") || cleanActive === cleanFolder;
 }
 
-function filterTree(node: any, query: string): { folders: any[]; files: any[] } {
-  if (!query.trim()) return node;
+function filterTree(
+  node: any,
+  query: string,
+  domainFilter: StarDomainId | "all"
+): { folders: any[]; files: any[] } {
   const lower = query.toLowerCase().trim();
 
   const filteredFiles = (node.files || []).filter((f: any) =>
-    f.name.toLowerCase().includes(lower)
+    !lower ? true : f.name.toLowerCase().includes(lower)
   );
 
   const filteredFolders = (node.folders || [])
     .map((folder: any) => {
-      const nameMatches = folder.name.toLowerCase().includes(lower);
-      const filteredChildren = filterTree(folder.children, query);
+      if (domainFilter !== "all" && folder.domain && folder.domain !== domainFilter) {
+        return null;
+      }
+
+      const nameMatches =
+        !lower ||
+        folder.name.toLowerCase().includes(lower) ||
+        (folder.courseTitle && folder.courseTitle.toLowerCase().includes(lower));
+
+      const filteredChildren = folder.children
+        ? filterTree(
+            folder.children,
+            nameMatches && lower && folder.name.toLowerCase().includes(lower)
+              ? ""
+              : query,
+            "all"
+          )
+        : { folders: [], files: [] };
+
       const hasChildren =
         filteredChildren.folders.length > 0 || filteredChildren.files.length > 0;
 
-      if (nameMatches || hasChildren) {
+      if (!lower || nameMatches || hasChildren) {
         return {
           ...folder,
           children: filteredChildren,
@@ -50,6 +71,7 @@ export default function DirectoryView() {
   const [loading, setLoading] = useState(true);
   const [rawQuery, setRawQuery] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
+  const [domainFilter, setDomainFilter] = useState<StarDomainId | "all">("all");
   const pathname = usePathname();
   const activePath = decodeURIComponent(pathname || "");
 
@@ -64,13 +86,13 @@ export default function DirectoryView() {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setSearchQuery(rawQuery), 200);
+    const timer = setTimeout(() => setSearchQuery(rawQuery), 180);
     return () => clearTimeout(timer);
   }, [rawQuery]);
 
   const filteredTree = useMemo(() => {
-    return filterTree(tree, searchQuery);
-  }, [tree, searchQuery]);
+    return filterTree(tree, searchQuery, domainFilter);
+  }, [tree, searchQuery, domainFilter]);
 
   const matchCount = useMemo(() => {
     const count = (n: { folders: any[]; files: any[] }): number => {
@@ -100,7 +122,7 @@ export default function DirectoryView() {
         <div className="flex flex-col items-center gap-3">
           <div className="w-6 h-6 border-t-2 border-[var(--zen-cyan)] rounded-full animate-spin" />
           <span className="font-mono text-xs text-[var(--zen-ink-muted)] tracking-widest uppercase">
-            PARSING TREE...
+            MAPPING STAR ARCHIVE...
           </span>
         </div>
       </div>
@@ -111,8 +133,8 @@ export default function DirectoryView() {
 
   return (
     <div className="w-full h-full flex flex-col min-h-0 text-[var(--zen-frost)]">
-      {/* Transferred Omnibar Fast Search with Japanese Corner Brackets 『 』 */}
-      <div className="mb-4 shrink-0">
+      {/* Omnibar Fast Search with Japanese Corner Brackets 『 』 */}
+      <div className="mb-3 shrink-0 space-y-2.5">
         <div className="relative w-full">
           <span
             className="pointer-events-none absolute -left-2 -top-2.5 font-mono text-base text-[var(--zen-cyan)] select-none z-10"
@@ -144,8 +166,8 @@ export default function DirectoryView() {
               type="text"
               value={rawQuery}
               onChange={(e) => setRawQuery(e.target.value)}
-              placeholder="Filter monographs..."
-              aria-label="Filter monographs"
+              placeholder="Filter stars or monographs..."
+              aria-label="Filter stars or monographs"
               className="w-full pl-9 pr-8 py-2 bg-[var(--zen-card)] border border-[var(--zen-border)] text-xs font-mono tracking-wide text-[var(--zen-snow)] placeholder-[var(--zen-ink-muted)] rounded-none backdrop-blur-xl focus:outline-none focus:border-[var(--zen-cyan)] focus:ring-1 focus:ring-[var(--zen-cyan)]/40 transition-all shadow-sm"
             />
             {rawQuery && (
@@ -158,41 +180,71 @@ export default function DirectoryView() {
               </button>
             )}
           </div>
+        </div>
 
-          {/* Quick Telemetry Indicator */}
-          <div className="flex items-center justify-between mt-1 px-1 text-[10px] font-mono tracking-wider text-[var(--zen-ink-muted)] select-none">
-            <span className="flex items-center gap-1.5">
-              <span className="text-[var(--zen-cyan)] text-[9px]">◇</span>
-              <span>{rawQuery.trim() ? `${matchCount} MATCHES` : `${totalCount || 519} MONOGRAPHS`}</span>
+        {/* Constellation Domain Filter Strip */}
+        <div className="flex flex-wrap items-center gap-1">
+          {[
+            { id: "all", label: "ALL STARS" },
+            { id: "systems", label: "SYSTEMS" },
+            { id: "theory", label: "THEORY" },
+            { id: "security", label: "SECURITY" },
+            { id: "software", label: "SOFTWARE" },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setDomainFilter(tab.id as any)}
+              className={`px-2 py-0.5 text-[9px] font-mono tracking-wider rounded border transition-all ${
+                domainFilter === tab.id
+                  ? "border-[var(--zen-cyan)] text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 font-semibold"
+                  : "border-[var(--zen-border)]/60 text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] bg-[var(--zen-card)]/40"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Quick Telemetry Indicator */}
+        <div className="flex items-center justify-between px-1 text-[10px] font-mono tracking-wider text-[var(--zen-ink-muted)] select-none">
+          <span className="flex items-center gap-1.5">
+            <span className="text-[var(--zen-cyan)] text-[9px]">★</span>
+            <span>
+              {rawQuery.trim() || domainFilter !== "all"
+                ? `${filteredTree.folders.length} STARS · ${matchCount} NOTES`
+                : `${tree.folders.length} COURSE STARS · ${totalCount || 527} NOTES`}
             </span>
-            {rawQuery && (
-              <button
-                onClick={() => setRawQuery("")}
-                className="text-[var(--zen-cyan)] hover:underline uppercase text-[9px]"
-              >
-                CLEAR
-              </button>
-            )}
-          </div>
+          </span>
+          {(rawQuery || domainFilter !== "all") && (
+            <button
+              onClick={() => {
+                setRawQuery("");
+                setDomainFilter("all");
+              }}
+              className="text-[var(--zen-cyan)] hover:underline uppercase text-[9px]"
+            >
+              RESET
+            </button>
+          )}
         </div>
       </div>
 
-      {/* Bamboo Scroll Tree Container */}
+      {/* Star Directory Tree Container */}
       <div className="flex-1 overflow-y-auto overflow-x-hidden pr-2 pb-16 custom-scrollbar">
         {isEmpty ? (
           <div className="text-center py-12 px-4 flex flex-col items-center gap-2 text-[var(--zen-ink-muted)]">
             <span className="text-base text-[var(--zen-cyan)]">◇</span>
             <p className="font-mono text-xs tracking-wider text-[var(--zen-snow)] uppercase">
-              NO MONOGRAPHS MATCHING &ldquo;{searchQuery}&rdquo;
-            </p>
-            <p className="text-[11px] font-mono text-[var(--zen-ink-muted)]">
-              // 該当目録なし
+              NO STARS OR MONOGRAPHS MATCHING &ldquo;{searchQuery}&rdquo;
             </p>
             <button
-              onClick={() => setRawQuery("")}
+              onClick={() => {
+                setRawQuery("");
+                setDomainFilter("all");
+              }}
               className="mt-3 px-3 py-1 border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] text-[11px] font-mono text-[var(--zen-cyan)] bg-[var(--zen-void)] transition-all"
             >
-              CLEAR QUERY
+              CLEAR FILTERS
             </button>
           </div>
         ) : (
@@ -235,10 +287,12 @@ function FolderNode({
   activePath: string;
   isSearching: boolean;
 }) {
+  const router = useRouter();
   const isAncestor = isAncestorOfActive(folder.path, activePath);
-  const [isOpen, setIsOpen] = useState(isAncestor || depth === 0 || isSearching);
+  const [isOpen, setIsOpen] = useState(isAncestor || isSearching);
   const hasChildren =
-    (folder.children?.folders?.length || 0) > 0 || (folder.children?.files?.length || 0) > 0;
+    (folder.children?.folders?.length || 0) > 0 ||
+    (folder.children?.files?.length || 0) > 0;
 
   useEffect(() => {
     if (isAncestor) {
@@ -252,46 +306,100 @@ function FolderNode({
     }
   }, [isSearching]);
 
+  const domainColor =
+    folder.domain && STAR_DOMAINS[folder.domain as StarDomainId]
+      ? STAR_DOMAINS[folder.domain as StarDomainId].color
+      : "var(--zen-cyan)";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 4 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.02 }}
+      transition={{ delay: Math.min(index * 0.015, 0.25), ease: [0.16, 1, 0.3, 1] }}
       className="w-full"
     >
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        aria-expanded={isOpen}
-        className={`w-full flex items-center justify-between py-2 px-2.5 rounded-lg border transition-all duration-200 group text-left ${
+      <div
+        className={`w-full flex items-center justify-between py-2 px-2.5 rounded-lg border transition-all duration-200 group ${
           isAncestor
             ? "border-[var(--zen-cyan)]/50 bg-[var(--zen-cyan)]/10 text-[var(--zen-snow)]"
             : depth === 0
-            ? "border-[var(--zen-border)] bg-[var(--zen-card)] hover:border-[var(--zen-border)] text-[var(--zen-frost)]"
+            ? "border-[var(--zen-border)] bg-[var(--zen-card)] hover:border-[var(--zen-cyan)]/40 text-[var(--zen-frost)]"
             : "border-transparent hover:bg-[var(--zen-card-hover)] text-[var(--zen-frost)] hover:text-[var(--zen-snow)]"
         }`}
       >
-        <div className="flex items-center gap-2 min-w-0 truncate">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          className="flex-1 flex items-center gap-2 min-w-0 text-left"
+        >
           <motion.span
             animate={{ rotate: isOpen ? 90 : 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className={`text-[10px] shrink-0 ${
-              isAncestor ? "text-[var(--zen-cyan)]" : "text-[var(--zen-ink-muted)] group-hover:text-[var(--zen-cyan)]"
+              isAncestor
+                ? "text-[var(--zen-cyan)]"
+                : "text-[var(--zen-ink-muted)] group-hover:text-[var(--zen-cyan)]"
             }`}
           >
             ▶
           </motion.span>
-          <span
-            className={`font-mono tracking-wider truncate ${
-              depth === 0 ? "text-xs font-semibold" : "text-xs font-normal"
-            } ${isAncestor ? "text-[var(--zen-cyan)] font-semibold" : ""}`}
+
+          {depth === 0 ? (
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center gap-2">
+                <span
+                  className="w-2 h-2 rounded-full shrink-0"
+                  style={{ backgroundColor: domainColor }}
+                />
+                <span
+                  className={`font-mono text-xs font-bold tracking-wider ${
+                    isAncestor ? "text-[var(--zen-cyan)]" : "text-[var(--zen-snow)]"
+                  }`}
+                >
+                  {folder.name}
+                </span>
+                {folder.track && (
+                  <span className="text-[9px] font-mono px-1.5 py-0.2 rounded border border-[var(--zen-border)] text-[var(--zen-ink-muted)] uppercase">
+                    {folder.track}
+                  </span>
+                )}
+              </div>
+              {folder.courseTitle && (
+                <p className="text-[11px] text-[var(--zen-ink-muted)] truncate mt-0.5">
+                  {folder.courseTitle}
+                </p>
+              )}
+            </div>
+          ) : (
+            <span
+              className={`font-mono tracking-wider truncate text-xs ${
+                isAncestor ? "text-[var(--zen-cyan)] font-semibold" : ""
+              }`}
+            >
+              {folder.name.toUpperCase()}
+            </span>
+          )}
+        </button>
+
+        <div className="flex items-center gap-1.5 shrink-0 pl-2">
+          {depth === 0 && (
+            <button
+              onClick={() => router.push(folder.path)}
+              title={`Open ${folder.name} Star Hub`}
+              className="px-1.5 py-0.5 text-[9px] font-mono rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)] transition-colors uppercase"
+            >
+              HUB →
+            </button>
+          )}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Collapse folder" : "Expand folder"}
+            className="font-mono text-xs text-[var(--zen-ink-muted)] hover:text-[var(--zen-frost)] px-1"
           >
-            {folder.name.toUpperCase()}
-          </span>
+            {isOpen ? "−" : "+"}
+          </button>
         </div>
-        <span className="font-mono text-[9px] text-[var(--zen-ink-muted)] shrink-0 pl-2 group-hover:text-[var(--zen-frost)]">
-          {isOpen ? "−" : "+"}
-        </span>
-      </button>
+      </div>
 
       <AnimatePresence>
         {isOpen && hasChildren && (
@@ -299,7 +407,7 @@ function FolderNode({
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden border-l border-[var(--zen-border)] ml-3 pl-2.5 mt-1 space-y-1"
           >
             {folder.children.folders?.map((subFolder: any, i: number) => (
@@ -357,7 +465,7 @@ function FileNode({
       ref={fileRef}
       initial={{ opacity: 0, x: -4 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: index * 0.015 }}
+      transition={{ delay: Math.min(index * 0.012, 0.2), ease: [0.16, 1, 0.3, 1] }}
       className="w-full"
     >
       <button
