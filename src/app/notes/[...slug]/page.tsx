@@ -240,7 +240,7 @@ export default async function NotePage({
           <div className="border-b border-[var(--zen-border)] pb-6 mb-8">
             <div className="flex flex-wrap items-center gap-2 mb-3">
               <span className="px-2.5 py-0.5 text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/50 bg-[var(--zen-cyan)]/10 font-bold uppercase">
-                ★ {resolved.courseCode}
+                {resolved.courseCode}
               </span>
               {courseMeta && (
                 <>
@@ -286,17 +286,17 @@ export default async function NotePage({
                       href={`/notes/${relCode}`}
                       className="px-2.5 py-1 text-[10px] font-mono tracking-wider rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] bg-[var(--zen-card)] text-[var(--zen-frost)] hover:text-[var(--zen-cyan)] transition-all"
                     >
-                      ★ {relCode} →
+                      {relCode} →
                     </Link>
                   ))}
                 </div>
               )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 universe-bento-grid">
             {resolved.items.map((item) => (
               <Link key={item.path} href={item.path}>
-                <div className="p-4 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)]/60 bg-[var(--zen-card)] hover:bg-[var(--zen-card-hover)] transition-all duration-300 group flex items-center justify-between shadow-lg hover:shadow-[0_0_15px_rgba(0,229,255,0.15)] hover:-translate-y-0.5">
+                <div className="universe-card p-4 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)]/60 bg-[var(--zen-card)] hover:bg-[var(--zen-card-hover)] transition-all duration-300 group flex items-center justify-between shadow-lg hover:shadow-[0_0_15px_rgba(0,229,255,0.15)] hover:-translate-y-0.5">
                   <div className="flex items-center gap-2.5 min-w-0">
                     <span className="text-[var(--zen-cyan)] text-xs shrink-0">
                       {item.isDir ? "▸" : "◇"}

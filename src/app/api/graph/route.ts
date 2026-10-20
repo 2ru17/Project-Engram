@@ -49,17 +49,17 @@ export async function GET() {
     links.push({ source, target, kind });
   };
 
-  // 1. Central Star / Sun: COMPUTER SCIENCE pinned at (0, 0)
+  // 1. Central Black Hole Singularity: COMPUTER SCIENCE pinned at (0, 0)
   const sunId = "sun:computer-science";
   nodes.push({
     id: sunId,
     name: "COMPUTER SCIENCE",
-    subtitle: "Central Knowledge Star // 中枢恒星",
+    subtitle: "Gravitational Singularity // 事象の地平線",
     tier: "sun",
     group: 0,
     path: "/notes?view=directory",
     excerpt:
-      "The Central Sun of Project Engram — gravitational core uniting Systems & Architecture, Algorithms & Theory, Networks & Cybersecurity, and Software Engineering stars across all tracks (Core CS, NIS, ST).",
+      "The Central Black Hole Singularity of Project Engram — gravitational event horizon uniting Systems & Architecture, Algorithms & Theory, Networks & Cybersecurity, and Software Engineering stars across all tracks (Core CS, NIS, ST).",
     noteCount: index.notes.length,
     fx: 0,
     fy: 0,

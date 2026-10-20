@@ -279,7 +279,7 @@ export default function HomePage() {
 
           {/* Sub-tagline */}
           <p className="font-mono text-xs sm:text-sm tracking-[0.22em] text-[var(--zen-cyan)] uppercase mt-1 font-semibold">
-            Heliocentric Computer Science Knowledge Universe
+            Gravitational Computer Science Knowledge Universe
           </p>
 
           {/* Katana Blade Divider SVG with Anime.js hook */}
@@ -320,7 +320,7 @@ export default function HomePage() {
           {/* Telemetry Ribbon with NumberTicker */}
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-mono text-xs tracking-[0.16em] uppercase text-[var(--zen-ink-muted)] mb-8">
             <span className="flex items-center gap-1.5">
-              [ <span className="text-amber-400 font-semibold">☀ CS</span> CENTRAL SUN ]
+              [ <span className="text-[var(--zen-cyan)] font-semibold">CS</span> SINGULARITY ]
             </span>
             <span className="text-[var(--zen-cyan)]">·</span>
             <span className="flex items-center gap-1.5">
@@ -332,7 +332,7 @@ export default function HomePage() {
             </span>
             <span className="text-[var(--zen-cyan)]">·</span>
             <span className="flex items-center gap-1.5">
-              [ <NumberTicker value={4} className="text-[var(--zen-snow)] font-semibold" /> CONSTELLATIONS ]
+              [ <NumberTicker value={5} className="text-[var(--zen-snow)] font-semibold" /> UNIVERSES ]
             </span>
           </div>
         </motion.div>
@@ -400,12 +400,12 @@ export default function HomePage() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Gateway 1: The Heliocentric Star Graph */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 universe-bento-grid">
+          {/* Gateway 1: The Singularity Star Graph */}
           <div
             onMouseMove={handleTilt}
             onMouseLeave={resetTilt}
-            className="relative group p-8 sm:p-10 min-h-[420px] flex flex-col justify-between bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-none overflow-hidden transition-all duration-300 shadow-2xl"
+            className="universe-card relative group p-8 sm:p-10 min-h-[420px] flex flex-col justify-between bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-none overflow-hidden transition-all duration-300 shadow-2xl"
             style={{ transformStyle: "preserve-3d" }}
           >
             <div
@@ -446,7 +446,7 @@ export default function HomePage() {
 
             <div className="relative z-20">
               <span className="inline-block px-2.5 py-1 text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/30 uppercase mb-4 font-semibold">
-                HELIOCENTRIC STAR SYSTEM
+                SINGULARITY STAR SYSTEM
               </span>
               <h3
                 className="text-2xl sm:text-3xl tracking-[0.16em] font-semibold text-[var(--zen-snow)] uppercase mb-3"
@@ -455,7 +455,7 @@ export default function HomePage() {
                 THE KNOWLEDGE GRAPH
               </h3>
               <p className="text-sm sm:text-base text-[var(--zen-frost)] opacity-80 leading-relaxed max-w-md">
-                Navigate an interactive solar system where Computer Science anchors the gravitational center, surrounded by 25 interconnected Subject Stars and 539 orbiting monographs.
+                Navigate an interactive gravitational star system where the Computer Science Singularity anchors the event horizon, surrounded by 25 interconnected Subject Stars and 539 orbiting monographs.
               </p>
             </div>
 
@@ -474,7 +474,7 @@ export default function HomePage() {
           <div
             onMouseMove={handleTilt}
             onMouseLeave={resetTilt}
-            className="relative group p-8 sm:p-10 min-h-[420px] flex flex-col justify-between bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-none overflow-hidden transition-all duration-300 shadow-2xl"
+            className="universe-card relative group p-8 sm:p-10 min-h-[420px] flex flex-col justify-between bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-none overflow-hidden transition-all duration-300 shadow-2xl"
             style={{ transformStyle: "preserve-3d" }}
           >
             <div
@@ -559,7 +559,7 @@ export default function HomePage() {
             SUBJECT STAR MATRIX
           </h2>
           <p className="mt-2 text-xs font-mono tracking-wider text-[var(--zen-ink-muted)]">
-            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} SUBJECT STARS · ORBITING ☀ COMPUTER SCIENCE
+            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} SUBJECT STARS · ORBITING CS SINGULARITY
           </p>
         </div>
 
@@ -620,7 +620,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               exit={{ opacity: 0, y: -12, filter: "blur(4px)" }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 universe-bento-grid"
             >
               {currentCourses.map((course, index) => {
                 const bento = getBentoLayout(index, currentCourses.length);
@@ -640,7 +640,7 @@ export default function HomePage() {
                       className={`h-full ${bento.spanClass}`}
                     >
                       {/* Double-Bezel Architecture: Featured Wide Bento Shell */}
-                      <div className="h-full p-[1px] rounded-2xl bg-gradient-to-br from-[var(--zen-border)] via-[var(--zen-border)]/60 to-[var(--zen-cyan)]/25 hover:from-[var(--zen-cyan)]/50 hover:to-[var(--zen-cyan)]/80 transition-all duration-300 shadow-xl group flex flex-col">
+                      <div className="universe-card h-full p-[1px] rounded-2xl bg-gradient-to-br from-[var(--zen-border)] via-[var(--zen-border)]/60 to-[var(--zen-cyan)]/25 hover:from-[var(--zen-cyan)]/50 hover:to-[var(--zen-cyan)]/80 transition-all duration-300 shadow-xl group flex flex-col">
                         <Link
                           href={course.href}
                           className="h-full rounded-[15px] bg-[var(--zen-midnight)]/90 hover:bg-[var(--zen-card-hover)] p-6 sm:p-7 flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative overflow-hidden transition-colors duration-200"
@@ -669,7 +669,7 @@ export default function HomePage() {
                             {/* Badges / Header Strip */}
                             <div className="flex flex-wrap items-center gap-2 mb-3">
                               <span className="px-2.5 py-0.5 text-[11px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/50 bg-[var(--zen-cyan)]/10 font-bold uppercase shadow-[0_0_10px_rgba(0,229,255,0.15)]">
-                                ★ {course.code}
+                                {course.code}
                               </span>
                               <span className="px-2 py-0.5 text-[10px] font-mono tracking-wider text-[var(--zen-ink-muted)] border border-[var(--zen-border)] bg-[var(--zen-card)]/60 uppercase">
                                 {course.categoryLabel}
@@ -755,7 +755,7 @@ export default function HomePage() {
                     className={`h-full ${bento.spanClass}`}
                   >
                     {/* Double-Bezel Architecture: Standard Bento Shell */}
-                    <div className="h-full p-[1px] rounded-2xl bg-gradient-to-b from-[var(--zen-border)] to-[var(--zen-border)]/40 hover:from-[var(--zen-cyan)]/40 hover:to-[var(--zen-cyan)]/20 transition-all duration-300 shadow-md group flex flex-col justify-between">
+                    <div className="universe-card h-full p-[1px] rounded-2xl bg-gradient-to-b from-[var(--zen-border)] to-[var(--zen-border)]/40 hover:from-[var(--zen-cyan)]/40 hover:to-[var(--zen-cyan)]/20 transition-all duration-300 shadow-md group flex flex-col justify-between">
                       <Link
                         href={course.href}
                         className="h-full rounded-[15px] bg-[var(--zen-midnight)]/80 hover:bg-[var(--zen-card-hover)] p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden transition-colors duration-200"
@@ -774,7 +774,7 @@ export default function HomePage() {
                           {/* Top Code & Track Ribbon */}
                           <div className="flex items-center justify-between mb-3">
                             <span className="px-2 py-0.5 text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/5 font-semibold">
-                              ★ {course.code}
+                              {course.code}
                             </span>
                             <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] uppercase">
                               {course.track} · {domainMeta.shortLabel}

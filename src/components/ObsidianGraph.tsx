@@ -45,8 +45,13 @@ const DOMAIN_ANGLES: Record<StarDomainId, [number, number]> = {
 };
 
 export default function ObsidianGraph() {
-  const { theme, isLite } = useTheme();
-  const isLight = theme === "light";
+  const { theme, universe, isLite } = useTheme();
+  const isLightSurface =
+    (universe === "cyber-zen" && theme === "light") ||
+    universe === "neo-brutalism" ||
+    universe === "minimalism" ||
+    universe === "broken-grid";
+
   const [rawData, setRawData] = useState<{ nodes: GraphNode[]; links: GraphLink[] }>({
     nodes: [],
     links: [],
@@ -74,7 +79,7 @@ export default function ObsidianGraph() {
           degreeMap.set(tgt, (degreeMap.get(tgt) || 0) + 1);
         });
 
-        // Position Course Stars in radial sectors around the Central CS Sun (0,0)
+        // Position Course Stars in radial sectors around the Central Singularity (0,0)
         const starPositions = new Map<string, { x: number; y: number; angle: number }>();
         const domainBuckets: Record<StarDomainId, GraphNode[]> = {
           systems: [],
@@ -192,7 +197,7 @@ export default function ObsidianGraph() {
     };
   }, [rawData, activeDomain, starsOnly]);
 
-  // Configure Heliocentric Orbital Forces
+  // Configure Gravitational Orbital Forces around the Singularity
   useEffect(() => {
     if (fgRef.current && graphData.nodes.length > 0) {
       const d3 = require("d3-force");
@@ -268,13 +273,17 @@ export default function ObsidianGraph() {
   const getNodeColor = useCallback(
     (node: GraphNode) => {
       if (node.tier === "sun") {
-        return isLight ? "#D97706" : "#FFB800";
+        if (universe === "neo-brutalism") return "#FF4D00";
+        if (universe === "broken-grid") return "#D9381E";
+        if (universe === "parallax") return "#E5A93C";
+        if (universe === "minimalism") return "#111111";
+        return isLightSurface ? "#0284C7" : "#00E5FF";
       }
       const dom: StarDomainId = node.domain || "systems";
       const domainMeta = STAR_DOMAINS[dom] || STAR_DOMAINS.systems;
-      return isLight ? domainMeta.lightColor : domainMeta.color;
+      return isLightSurface ? domainMeta.lightColor : domainMeta.color;
     },
-    [isLight]
+    [isLightSurface, universe]
   );
 
   const getLinkColor = useCallback(
@@ -287,21 +296,24 @@ export default function ObsidianGraph() {
         selectedNode && (selectedNode.id === srcId || selectedNode.id === tgtId);
 
       if (isConnectedToSelect || isConnectedToHover) {
-        return isLight ? "rgba(2, 132, 199, 0.85)" : "rgba(0, 229, 255, 0.88)";
+        if (universe === "neo-brutalism") return "rgba(255, 77, 0, 0.92)";
+        if (universe === "broken-grid") return "rgba(217, 56, 30, 0.92)";
+        if (universe === "parallax") return "rgba(229, 169, 60, 0.92)";
+        return isLightSurface ? "rgba(2, 132, 199, 0.85)" : "rgba(0, 229, 255, 0.88)";
       }
 
       if (link.kind === "solar") {
-        return isLight ? "rgba(217, 119, 6, 0.28)" : "rgba(255, 184, 0, 0.26)";
+        return isLightSurface ? "rgba(15, 23, 42, 0.24)" : "rgba(229, 169, 60, 0.28)";
       }
       if (link.kind === "constellation") {
-        return isLight ? "rgba(75, 94, 120, 0.34)" : "rgba(0, 229, 255, 0.25)";
+        return isLightSurface ? "rgba(75, 94, 120, 0.34)" : "rgba(0, 229, 255, 0.25)";
       }
       if (link.kind === "orbital") {
-        return isLight ? "rgba(75, 94, 120, 0.22)" : "rgba(148, 163, 184, 0.20)";
+        return isLightSurface ? "rgba(75, 94, 120, 0.24)" : "rgba(148, 163, 184, 0.20)";
       }
-      return isLight ? "rgba(100, 116, 139, 0.16)" : "rgba(75, 94, 120, 0.20)";
+      return isLightSurface ? "rgba(100, 116, 139, 0.20)" : "rgba(75, 94, 120, 0.20)";
     },
-    [hoverNode, selectedNode, isLight]
+    [hoverNode, selectedNode, isLightSurface, universe]
   );
 
   const getLinkWidth = useCallback(
@@ -330,13 +342,13 @@ export default function ObsidianGraph() {
       const baseColor = getNodeColor(node);
       const rgb = hexToRgb(baseColor);
 
-      // ─── 1. CENTRAL STAR / SUN ("COMPUTER SCIENCE") ──────────────────────────
+      // ─── 1. CENTRAL BLACK HOLE SINGULARITY ("COMPUTER SCIENCE") ──────────────
       if (node.tier === "sun") {
-        // Draw heliocentric orbital guide rings centered on (0,0)
+        // Draw gravitational orbital guide rings centered on (0,0)
         ctx.save();
-        ctx.strokeStyle = isLight
-          ? "rgba(75, 94, 120, 0.14)"
-          : "rgba(0, 229, 255, 0.10)";
+        ctx.strokeStyle = isLightSurface
+          ? "rgba(15, 23, 42, 0.16)"
+          : "rgba(0, 229, 255, 0.12)";
         ctx.lineWidth = Math.max(0.5, 1 / globalScale);
         ctx.setLineDash([6 / globalScale, 6 / globalScale]);
         [230, 410].forEach((orbitR) => {
@@ -346,70 +358,122 @@ export default function ObsidianGraph() {
         });
         ctx.restore();
 
-        const sunRadius = isHovered || isSelected ? 22 : 19;
+        const horizonRadius = isHovered || isSelected ? 21 : 18;
+        const primaryRingHex =
+          universe === "neo-brutalism"
+            ? "#FF4D00"
+            : universe === "broken-grid"
+            ? "#D9381E"
+            : universe === "parallax"
+            ? "#E5A93C"
+            : "#00E5FF";
+        const secondaryRingHex =
+          universe === "parallax"
+            ? "#38BDF8"
+            : universe === "minimalism"
+            ? "#475569"
+            : "#FF7B00";
+        const primaryRgb = hexToRgb(primaryRingHex);
+        const secondaryRgb = hexToRgb(secondaryRingHex);
 
-        // Outer solar corona glow
-        const grad = ctx.createRadialGradient(
+        // A. Gravitational Lensing Halo (Outer distortion field)
+        const lensGrad = ctx.createRadialGradient(
           node.x,
           node.y,
-          sunRadius * 0.3,
+          horizonRadius * 0.85,
           node.x,
           node.y,
-          sunRadius * 3.2
+          horizonRadius * 3.6
         );
-        grad.addColorStop(0, "rgba(255, 196, 46, 0.85)");
-        grad.addColorStop(0.45, "rgba(0, 229, 255, 0.28)");
-        grad.addColorStop(1, "rgba(0, 229, 255, 0)");
+        lensGrad.addColorStop(0, `rgba(${primaryRgb}, 0.65)`);
+        lensGrad.addColorStop(0.35, `rgba(${secondaryRgb}, 0.28)`);
+        lensGrad.addColorStop(0.7, `rgba(${primaryRgb}, 0.08)`);
+        lensGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
+
         ctx.beginPath();
-        ctx.arc(node.x, node.y, sunRadius * 3.2, 0, Math.PI * 2);
-        ctx.fillStyle = grad;
+        ctx.arc(node.x, node.y, horizonRadius * 3.6, 0, Math.PI * 2);
+        ctx.fillStyle = lensGrad;
         ctx.fill();
 
-        // 8-Point Solar Astrolabe Rays
-        const rayLen = sunRadius * 2.1;
-        ctx.strokeStyle = isLight
-          ? "rgba(217, 119, 6, 0.75)"
-          : "rgba(255, 200, 55, 0.85)";
-        ctx.lineWidth = Math.max(1, 1.5 / globalScale);
-        for (let i = 0; i < 4; i++) {
-          const a = (i * Math.PI) / 4;
-          ctx.beginPath();
-          ctx.moveTo(node.x - Math.cos(a) * rayLen, node.y - Math.sin(a) * rayLen);
-          ctx.lineTo(node.x + Math.cos(a) * rayLen, node.y + Math.sin(a) * rayLen);
-          ctx.stroke();
-        }
-
-        // Sun Core
+        // B. Outer Einstein Gravitational Lensing Ring
+        ctx.save();
         ctx.beginPath();
-        ctx.arc(node.x, node.y, sunRadius, 0, Math.PI * 2);
-        ctx.fillStyle = isHovered || isSelected ? "#FFFFFF" : "#FFC72C";
-        ctx.fill();
-        ctx.lineWidth = 2 / globalScale;
-        ctx.strokeStyle = "#00E5FF";
+        ctx.arc(node.x, node.y, horizonRadius * 2.15, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(${primaryRgb}, ${isHovered || isSelected ? 0.55 : 0.3})`;
+        ctx.lineWidth = Math.max(0.8, 1.1 / globalScale);
+        ctx.stroke();
+        ctx.restore();
+
+        // C. Relativistic Tilted Accretion Disk (Back / Lensed Upper Arc + Front Doppler Disk)
+        ctx.save();
+        ctx.translate(node.x, node.y);
+        ctx.rotate(-Math.PI / 7);
+
+        // Outer relativistic plasma disk
+        ctx.beginPath();
+        ctx.ellipse(0, 0, horizonRadius * 2.75, horizonRadius * 0.72, 0, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(${secondaryRgb}, ${isHovered || isSelected ? 0.85 : 0.6})`;
+        ctx.lineWidth = Math.max(1.8, 3.6 / globalScale);
         ctx.stroke();
 
-        // Sun Label Pill
-        const fontSize = Math.max(9, 13 / globalScale);
-        ctx.font = `700 ${fontSize}px sans-serif`;
+        // Inner high-velocity accretion stream
+        ctx.beginPath();
+        ctx.ellipse(0, 0, horizonRadius * 2.1, horizonRadius * 0.5, 0, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(${primaryRgb}, 0.9)`;
+        ctx.lineWidth = Math.max(1.2, 2.0 / globalScale);
+        ctx.stroke();
+        ctx.restore();
+
+        // D. Event Horizon Shadow Core (Absolute Black Singularity)
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, horizonRadius, 0, Math.PI * 2);
+        ctx.fillStyle = "#030407";
+        ctx.fill();
+
+        // E. Photon Sphere Razor Rim (Glowing boundary at the event horizon)
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, horizonRadius, 0, Math.PI * 2);
+        ctx.lineWidth = Math.max(1.4, 2.2 / globalScale);
+        ctx.strokeStyle = isHovered || isSelected ? "#FFFFFF" : primaryRingHex;
+        ctx.stroke();
+
+        // Inner photon ring hairline
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, horizonRadius * 0.84, 0, Math.PI * 2);
+        ctx.lineWidth = Math.max(0.6, 0.9 / globalScale);
+        ctx.strokeStyle = `rgba(${secondaryRgb}, 0.75)`;
+        ctx.stroke();
+
+        // F. Singularity Label Pill
+        const fontSize = Math.max(8.5, 12 / globalScale);
+        ctx.font = `700 ${fontSize}px monospace`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        const label = "☀ COMPUTER SCIENCE";
+        const label = "COMPUTER SCIENCE // SINGULARITY";
         const textWidth = ctx.measureText(label).width;
         const padX = fontSize * 0.65;
         const padY = fontSize * 0.4;
         const boxW = textWidth + padX * 2;
         const boxH = fontSize + padY * 2;
-        const yOff = sunRadius + boxH / 2 + 6;
+        const yOff = horizonRadius + boxH / 2 + 9;
 
-        ctx.fillStyle = isLight ? "rgba(255, 255, 255, 0.96)" : "rgba(13, 16, 23, 0.94)";
+        ctx.fillStyle = isLightSurface
+          ? "rgba(255, 255, 255, 0.96)"
+          : "rgba(9, 12, 18, 0.94)";
         ctx.beginPath();
-        ctx.roundRect(node.x - boxW / 2, node.y + yOff - boxH / 2, boxW, boxH, 4);
+        ctx.roundRect(
+          node.x - boxW / 2,
+          node.y + yOff - boxH / 2,
+          boxW,
+          boxH,
+          universe === "neo-brutalism" || universe === "broken-grid" ? 0 : 4
+        );
         ctx.fill();
-        ctx.strokeStyle = "rgba(255, 199, 44, 0.85)";
+        ctx.strokeStyle = primaryRingHex;
         ctx.lineWidth = 1.2 / globalScale;
         ctx.stroke();
 
-        ctx.fillStyle = isLight ? "#B45309" : "#FFD166";
+        ctx.fillStyle = isLightSurface ? "#0F172A" : "#F8FAFC";
         ctx.fillText(label, node.x, node.y + yOff);
         return;
       }
@@ -440,7 +504,7 @@ export default function ObsidianGraph() {
 
         // 4-Point Star Flare
         const flare = starRadius * (isHovered || isSelected ? 2.3 : 1.75);
-        ctx.strokeStyle = isHovered || isSelected ? "#00E5FF" : `rgba(${rgb}, 0.75)`;
+        ctx.strokeStyle = isHovered || isSelected ? baseColor : `rgba(${rgb}, 0.75)`;
         ctx.lineWidth = Math.max(0.8, 1.2 / globalScale);
         ctx.beginPath();
         ctx.moveTo(node.x - flare, node.y);
@@ -452,10 +516,10 @@ export default function ObsidianGraph() {
         // Star Core
         ctx.beginPath();
         ctx.arc(node.x, node.y, starRadius, 0, Math.PI * 2);
-        ctx.fillStyle = isHovered || isSelected ? "#FFFFFF" : baseColor;
+        ctx.fillStyle = isHovered || isSelected ? (isLightSurface ? "#0F172A" : "#FFFFFF") : baseColor;
         ctx.fill();
 
-        // Course Star Label (Always visible when globalScale >= 0.45)
+        // Course Star Label (Always visible when globalScale >= 0.42)
         if (globalScale >= 0.42 || isHovered || isSelected) {
           const fontSize =
             isHovered || isSelected
@@ -472,22 +536,28 @@ export default function ObsidianGraph() {
           const bH = fontSize + padY * 2;
           const yOffset = starRadius + bH / 2 + 4;
 
-          ctx.fillStyle = isLight
+          ctx.fillStyle = isLightSurface
             ? "rgba(255, 255, 255, 0.94)"
             : "rgba(13, 16, 23, 0.90)";
           ctx.beginPath();
-          ctx.roundRect(node.x - bW / 2, node.y + yOffset - bH / 2, bW, bH, 3);
+          ctx.roundRect(
+            node.x - bW / 2,
+            node.y + yOffset - bH / 2,
+            bW,
+            bH,
+            universe === "neo-brutalism" || universe === "broken-grid" ? 0 : 3
+          );
           ctx.fill();
 
           ctx.strokeStyle =
-            isHovered || isSelected ? "#00E5FF" : `rgba(${rgb}, 0.55)`;
+            isHovered || isSelected ? baseColor : `rgba(${rgb}, 0.55)`;
           ctx.lineWidth = Math.max(0.6, 1 / globalScale);
           ctx.stroke();
 
           ctx.fillStyle =
             isHovered || isSelected
-              ? isLight
-                ? "#0284C7"
+              ? isLightSurface
+                ? "#0F172A"
                 : "#FFFFFF"
               : baseColor;
           ctx.fillText(label, node.x, node.y + yOffset);
@@ -507,7 +577,11 @@ export default function ObsidianGraph() {
       ctx.beginPath();
       ctx.arc(node.x, node.y, satRadius, 0, Math.PI * 2);
       ctx.fillStyle =
-        isHovered || isSelected ? "#FFFFFF" : `rgba(${rgb}, 0.85)`;
+        isHovered || isSelected
+          ? isLightSurface
+            ? "#0F172A"
+            : "#FFFFFF"
+          : `rgba(${rgb}, 0.85)`;
       ctx.fill();
 
       const showSatLabel = isHovered || isSelected || globalScale >= 2.1;
@@ -527,23 +601,29 @@ export default function ObsidianGraph() {
         const bH = fontSize + padY * 2;
         const yOffset = satRadius + bH / 2 + 3;
 
-        ctx.fillStyle = isLight
+        ctx.fillStyle = isLightSurface
           ? "rgba(255, 255, 255, 0.94)"
           : "rgba(13, 16, 23, 0.88)";
         ctx.beginPath();
-        ctx.roundRect(node.x - bW / 2, node.y + yOffset - bH / 2, bW, bH, 3);
+        ctx.roundRect(
+          node.x - bW / 2,
+          node.y + yOffset - bH / 2,
+          bW,
+          bH,
+          universe === "neo-brutalism" || universe === "broken-grid" ? 0 : 3
+        );
         ctx.fill();
 
         ctx.strokeStyle =
-          isHovered || isSelected ? "#00E5FF" : `rgba(${rgb}, 0.4)`;
+          isHovered || isSelected ? baseColor : `rgba(${rgb}, 0.4)`;
         ctx.lineWidth = Math.max(0.5, 0.8 / globalScale);
         ctx.stroke();
 
-        ctx.fillStyle = isLight ? "#0F172A" : "#E2E8F0";
+        ctx.fillStyle = isLightSurface ? "#0F172A" : "#E2E8F0";
         ctx.fillText(label, node.x, node.y + yOffset);
       }
     },
-    [hoverNode, selectedNode, isLight, getNodeColor]
+    [hoverNode, selectedNode, isLightSurface, universe, getNodeColor]
   );
 
   const starCount = useMemo(
@@ -569,7 +649,7 @@ export default function ObsidianGraph() {
             <div className="flex flex-col items-center gap-4">
               <div className="w-8 h-8 border-t-2 border-[var(--zen-cyan)] rounded-full animate-spin" />
               <p className="font-mono text-xs tracking-[0.3em] text-[var(--zen-cyan)]/80 uppercase">
-                CALIBRATING HELIOCENTRIC STAR SYSTEM...
+                CALIBRATING SINGULARITY GRAVITY WELL...
               </p>
             </div>
           </motion.div>
@@ -577,7 +657,7 @@ export default function ObsidianGraph() {
       </AnimatePresence>
 
       {/* Top-Left Constellation Domain Filter & Orbit Controls */}
-      <div className="absolute top-4 left-4 right-4 sm:right-auto z-20 flex flex-wrap items-center gap-1.5 p-2 rounded-xl backdrop-blur-xl bg-[var(--zen-card)]/90 border border-[var(--zen-border)] shadow-xl">
+      <div className="absolute top-4 left-4 right-4 sm:right-auto z-20 flex flex-wrap items-center gap-1.5 p-2 rounded-xl backdrop-blur-xl bg-[var(--zen-card)]/90 border border-[var(--zen-border)] shadow-xl universe-card">
         {[
           { id: "all", label: "ALL CONSTELLATIONS", color: "#00E5FF" },
           { id: "systems", label: "SYSTEMS", color: STAR_DOMAINS.systems.color },
@@ -611,20 +691,20 @@ export default function ObsidianGraph() {
           onClick={() => setStarsOnly((prev) => !prev)}
           className={`px-2.5 py-1 rounded text-[10px] font-mono tracking-wider border transition-all ${
             starsOnly
-              ? "border-amber-400/60 bg-amber-400/15 text-amber-300 font-semibold"
+              ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 text-[var(--zen-cyan)] font-semibold"
               : "border-[var(--zen-border)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)]"
           }`}
           title="Toggle between Macro Star View and Full Satellite View"
         >
-          {starsOnly ? "★ STARS ONLY" : "✦ STARS + NOTES"}
+          {starsOnly ? "[ STARS ONLY ]" : "[ STARS + NOTES ]"}
         </button>
       </div>
 
       {/* Bottom-Right Spatial HUD Overlay */}
-      <div className="absolute bottom-6 right-6 z-20 flex items-center gap-4 backdrop-blur-xl rounded-lg px-4 py-2 shadow-2xl bg-[var(--zen-card)] border border-[var(--zen-border)]">
+      <div className="absolute bottom-6 right-6 z-20 flex items-center gap-4 backdrop-blur-xl rounded-lg px-4 py-2 shadow-2xl bg-[var(--zen-card)] border border-[var(--zen-border)] universe-card">
         <div className="flex gap-3 text-[10px] font-mono text-[var(--zen-frost)]">
           <span>
-            <strong className="text-amber-400">1</strong> SUN
+            <strong className="text-[var(--zen-cyan)]">1</strong> SINGULARITY
           </span>
           <span>
             <strong className="text-[var(--zen-cyan)]">{starCount}</strong> STARS
@@ -641,9 +721,9 @@ export default function ObsidianGraph() {
             fgRef.current?.centerAt(0, 0, 500);
             fgRef.current?.zoom(0.85, 500);
           }}
-          className="text-[10px] font-mono tracking-wider text-amber-400 hover:text-[var(--zen-cyan)] transition-colors uppercase"
+          className="text-[10px] font-mono tracking-wider text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] transition-colors uppercase"
         >
-          [ ☀ CS SUN ]
+          [ SINGULARITY ]
         </button>
         <button
           onClick={() => fgRef.current?.zoomToFit(450, 45)}
@@ -661,17 +741,17 @@ export default function ObsidianGraph() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-auto sm:w-96 bg-[var(--zen-card)] backdrop-blur-2xl border border-[var(--zen-border)] p-5 rounded-xl shadow-2xl z-50 flex flex-col pointer-events-auto"
+            className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-auto sm:w-96 bg-[var(--zen-card)] backdrop-blur-2xl border border-[var(--zen-border)] p-5 rounded-xl shadow-2xl z-50 flex flex-col pointer-events-auto universe-card"
           >
             <div className="flex justify-between items-start mb-3 border-b border-[var(--zen-border)] pb-3">
               <div className="min-w-0 pr-2">
                 <div className="flex items-center gap-2 mb-1">
                   <span className="px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase rounded border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/10 text-[var(--zen-cyan)] font-semibold">
                     {selectedNode.tier === "sun"
-                      ? "☀ CENTRAL STAR"
+                      ? "EVENT HORIZON SINGULARITY"
                       : selectedNode.tier === "star"
-                      ? `★ COURSE STAR · ${selectedNode.track || "CORE CS"}`
-                      : `◇ MONOGRAPH · ${selectedNode.courseCode || "CS"}`}
+                      ? `COURSE STAR · ${selectedNode.track || "CORE CS"}`
+                      : `MONOGRAPH · ${selectedNode.courseCode || "CS"}`}
                   </span>
                   {selectedNode.domainLabel && (
                     <span className="text-[9px] font-mono text-[var(--zen-ink-muted)] truncate">
@@ -702,7 +782,7 @@ export default function ObsidianGraph() {
 
             <p className="text-[var(--zen-frost)] text-xs leading-relaxed mb-4 line-clamp-4 min-h-[2.5rem]">
               {selectedNode.excerpt ||
-                "Academic monograph indexed in the Project Engram Heliocentric Star System."}
+                "Academic monograph indexed in the Project Engram Singularity Star System."}
             </p>
 
             <div className="flex items-center justify-between mb-4 px-3 py-1.5 bg-[var(--zen-cyan)]/5 rounded border border-[var(--zen-cyan)]/20 text-[10px] font-mono">
@@ -759,7 +839,17 @@ export default function ObsidianGraph() {
         }}
         linkDirectionalParticleWidth={2.2}
         linkDirectionalParticleSpeed={0.012}
-        linkDirectionalParticleColor={() => (isLight ? "#0284C7" : "#00E5FF")}
+        linkDirectionalParticleColor={() =>
+          universe === "neo-brutalism"
+            ? "#FF4D00"
+            : universe === "broken-grid"
+            ? "#D9381E"
+            : universe === "parallax"
+            ? "#E5A93C"
+            : isLightSurface
+            ? "#0284C7"
+            : "#00E5FF"
+        }
         d3AlphaDecay={isLite ? 0.035 : 0.012}
         d3VelocityDecay={0.28}
         warmupTicks={100}

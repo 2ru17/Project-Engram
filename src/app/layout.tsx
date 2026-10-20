@@ -7,6 +7,8 @@ import {
   Yuji_Boku,
   Cormorant_Garamond,
   Geist,
+  Space_Grotesk,
+  JetBrains_Mono,
 } from "next/font/google";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
@@ -18,6 +20,18 @@ import { cn } from "@/lib/utils";
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-sans",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "700"],
+  variable: "--font-grotesk",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-mono-code",
 });
 
 const cinzel = Cinzel({
@@ -123,6 +137,8 @@ export default function RootLayout({
       className={cn(
         "font-sans",
         geist.variable,
+        spaceGrotesk.variable,
+        jetbrainsMono.variable,
         cinzel.variable,
         cinzelDecorative.variable,
         shipporiMincho.variable,
@@ -138,9 +154,14 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
+                  var u = localStorage.getItem('engram-universe') || 'cyber-zen';
                   var t = localStorage.getItem('engram-theme') || 'dark';
                   var p = localStorage.getItem('engram-perf') || 'full';
-                  document.documentElement.setAttribute('data-theme', t);
+                  var lightUniverses = { 'neo-brutalism': true, 'minimalism': true, 'broken-grid': true };
+                  var darkUniverses = { 'parallax': true };
+                  var effectiveTheme = lightUniverses[u] ? 'light' : (darkUniverses[u] ? 'dark' : t);
+                  document.documentElement.setAttribute('data-universe', u);
+                  document.documentElement.setAttribute('data-theme', effectiveTheme);
                   document.documentElement.setAttribute('data-perf', p);
                 } catch (e) {}
               })();
