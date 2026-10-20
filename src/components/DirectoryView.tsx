@@ -6,6 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { STAR_DOMAINS, type StarDomainId } from "@/lib/course-registry";
 import { useStudyPlan } from "@/components/StudyPlanProvider";
 import { matchesStudyPlanTier } from "@/lib/study-plans";
+import { useTheme } from "@/components/ThemeProvider";
 
 function isAncestorOfActive(folderPath: string, activePath: string) {
   if (!activePath || !folderPath) return false;
@@ -74,6 +75,7 @@ export default function DirectoryView() {
   const [rawQuery, setRawQuery] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [domainFilter, setDomainFilter] = useState<StarDomainId | "all">("all");
+  const { universe } = useTheme();
   const pathname = usePathname();
   const activePath = decodeURIComponent(pathname || "");
 
@@ -135,21 +137,25 @@ export default function DirectoryView() {
 
   return (
     <div className="w-full h-full flex flex-col min-h-0 text-[var(--zen-frost)]">
-      {/* Omnibar Fast Search with Japanese Corner Brackets 『 』 */}
+      {/* Omnibar Fast Search */}
       <div className="mb-3 shrink-0 space-y-2.5">
         <div className="relative w-full">
-          <span
-            className="pointer-events-none absolute -left-2 -top-2.5 font-mono text-base text-[var(--zen-cyan)] select-none z-10"
-            aria-hidden="true"
-          >
-            『
-          </span>
-          <span
-            className="pointer-events-none absolute -right-2 -bottom-2.5 font-mono text-base text-[var(--zen-cyan)] select-none z-10"
-            aria-hidden="true"
-          >
-            』
-          </span>
+          {universe === "cyber-zen" && (
+            <>
+              <span
+                className="pointer-events-none absolute -left-2 -top-2.5 font-mono text-base text-[var(--zen-cyan)] select-none z-10"
+                aria-hidden="true"
+              >
+                『
+              </span>
+              <span
+                className="pointer-events-none absolute -right-2 -bottom-2.5 font-mono text-base text-[var(--zen-cyan)] select-none z-10"
+                aria-hidden="true"
+              >
+                』
+              </span>
+            </>
+          )}
 
           <div className="relative flex items-center">
             <svg
@@ -480,7 +486,7 @@ function FileNode({
         onClick={() => router.push(file.path)}
         className={`flex items-center gap-2 group text-left w-full px-2.5 py-1.5 rounded-md transition-all duration-200 ${
           isActive
-            ? "bg-[var(--zen-cyan)]/15 text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/50 shadow-[0_0_12px_rgba(0,229,255,0.2)] font-medium"
+            ? "bg-[var(--zen-cyan)]/15 text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/50 font-medium"
             : completed
             ? "text-[var(--zen-cyan)]/90 hover:text-[var(--zen-snow)] hover:bg-[var(--zen-card-hover)] border border-transparent"
             : "text-[var(--zen-frost)] hover:text-[var(--zen-snow)] hover:bg-[var(--zen-card-hover)] border border-transparent"

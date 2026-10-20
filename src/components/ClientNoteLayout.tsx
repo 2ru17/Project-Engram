@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useRouter, usePathname } from "next/navigation";
 import DirectoryView from "./DirectoryView";
 import { useStudyPlan } from "./StudyPlanProvider";
+import { useTheme } from "./ThemeProvider";
 
 interface TocItem {
   text: string;
@@ -41,6 +42,7 @@ export default function ClientNoteLayout({
     markNoteVisited,
     setSyncModalOpen,
   } = useStudyPlan();
+  const { universe } = useTheme();
 
   const decodedPath = decodeURIComponent(pathname || "");
   const completed = isMonograph && decodedPath ? isNoteCompleted(decodedPath) : false;
@@ -89,11 +91,13 @@ export default function ClientNoteLayout({
 
   return (
     <div className="min-h-screen bg-[var(--zen-void)] text-[var(--zen-frost)] relative selection:bg-[var(--zen-cyan)]/20 selection:text-[var(--zen-cyan)] transition-colors duration-500">
-      {/* Background Subtle Radial Vignette */}
-      <div
-        className="fixed inset-0 pointer-events-none z-0 opacity-20 bg-[radial-gradient(circle_at_50%_15%,var(--zen-cyan)_0%,transparent_60%)]"
-        aria-hidden="true"
-      />
+      {/* Background Subtle Radial Vignette (Cyber-Zen & Parallax only) */}
+      {(universe === "cyber-zen" || universe === "parallax") && (
+        <div
+          className="fixed inset-0 pointer-events-none z-0 opacity-20 bg-[radial-gradient(circle_at_50%_15%,var(--zen-cyan)_0%,transparent_60%)]"
+          aria-hidden="true"
+        />
+      )}
 
       {/* Sub-Header Ribbon: Note Studio Command Strip (Docks right below TopNav at sticky top-[53px]) */}
       <div className="sticky top-[53px] left-0 w-full z-30 px-4 sm:px-8 py-2.5 bg-[var(--zen-void)]/90 backdrop-blur-xl border-b border-[var(--zen-border)] transition-colors duration-500">
@@ -122,7 +126,7 @@ export default function ClientNoteLayout({
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
               className={`flex items-center gap-2 px-3 py-1.5 rounded border text-xs font-mono tracking-wider transition-all ${
                 isSidebarOpen
-                  ? "border-[var(--zen-cyan)] text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 shadow-[0_0_12px_rgba(0,229,255,0.2)] font-semibold"
+                  ? "border-[var(--zen-cyan)] text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 font-semibold"
                   : "border-[var(--zen-border)] text-[var(--zen-frost)] hover:border-[var(--zen-cyan)] hover:text-[var(--zen-cyan)] bg-[var(--zen-card)]"
               }`}
               title={isSidebarOpen ? "Collapse Explorer (Hide Sidebar)" : "Expand Explorer (Show Sidebar)"}
@@ -133,7 +137,9 @@ export default function ClientNoteLayout({
                 <line x1="9" y1="3" x2="9" y2="21" />
               </svg>
               <span>{isSidebarOpen ? "HIDE EXPLORER" : "EXPLORER"}</span>
-              <span className="text-[10px] text-[var(--zen-ink-muted)] font-serif">目録</span>
+              {universe === "cyber-zen" && (
+                <span className="text-[10px] text-[var(--zen-ink-muted)] font-serif">目録</span>
+              )}
             </button>
 
             {/* Note Title & Badge */}
@@ -217,7 +223,7 @@ export default function ClientNoteLayout({
                       VAULT EXPLORER
                     </h2>
                     <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] tracking-wider">
-                      CURRICULAR DIRECTORY // 目録
+                      {universe === "cyber-zen" ? "CURRICULAR DIRECTORY // 目録" : "CURRICULAR DIRECTORY"}
                     </span>
                   </div>
                 </div>
@@ -258,7 +264,9 @@ export default function ClientNoteLayout({
                   >
                     VAULT EXPLORER
                   </span>
-                  <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] uppercase shrink-0">目録</span>
+                  {universe === "cyber-zen" && (
+                    <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] uppercase shrink-0">目録</span>
+                  )}
                 </div>
                 <button
                   onClick={() => setIsSidebarOpen(false)}
@@ -331,7 +339,9 @@ export default function ClientNoteLayout({
                 >
                   OUTLINE
                 </span>
-                <span className="text-[10px] font-mono text-[var(--zen-ink-muted)]">目次 · {toc.length} SECTIONS</span>
+                <span className="text-[10px] font-mono text-[var(--zen-ink-muted)]">
+                  {universe === "cyber-zen" ? `目次 · ${toc.length} SECTIONS` : `${toc.length} SECTIONS`}
+                </span>
               </div>
               <nav className="space-y-2.5" aria-label="Table of contents">
                 {toc.map((heading, i) => {
