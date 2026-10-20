@@ -100,7 +100,7 @@
     --border-panel: rgba(200, 190, 170, 0.6);
   }
 
-  /* === U-02 NEO-BRUTALISM (SINGLE MODE — neubrutalism.com / Swiss Industrial Print) === */
+  /* === U-02 NEO-BRUTALISM (SINGLE MODE - neubrutalism.com / Swiss Industrial Print) === */
   [data-universe="neo-brutalism"] {
     --zen-void: #F4F3EE;
     --zen-abyss: #EAE8E1;
@@ -130,7 +130,7 @@
     --font-zen-decor: var(--font-grotesk, sans-serif);
   }
 
-  /* === U-03 MINIMALISM (SINGLE MODE — kickpush.co / Editorial Warm Monochrome) === */
+  /* === U-03 MINIMALISM (SINGLE MODE - kickpush.co / Editorial Warm Monochrome) === */
   [data-universe="minimalism"] {
     --zen-void: #F7F6F3;
     --zen-abyss: #FFFFFF;
@@ -160,7 +160,7 @@
     --font-zen-decor: var(--font-wuxia-primary, serif);
   }
 
-  /* === U-04 PARALLAX (SINGLE MODE — beargrylls.com / Deep Horizon Expedition) === */
+  /* === U-04 PARALLAX (SINGLE MODE - beargrylls.com / Deep Horizon Expedition) === */
   [data-universe="parallax"] {
     --zen-void: #070B12;
     --zen-abyss: #04070C;
@@ -189,7 +189,7 @@
     --font-zen-display: var(--font-grotesk, sans-serif);
   }
 
-  /* === U-05 BROKEN GRID (SINGLE MODE — dau.lt / Asymmetric Architectural Blueprint) === */
+  /* === U-05 BROKEN GRID (SINGLE MODE - dau.lt / Asymmetric Architectural Blueprint) === */
   [data-universe="broken-grid"] {
     --zen-void: #ECE9E2;
     --zen-abyss: #E3DFD6;

@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import DirectoryView from "./DirectoryView";
+import { useStudyPlan } from "./StudyPlanProvider";
 
 interface TocItem {
   text: string;
@@ -17,6 +18,8 @@ interface ClientNoteLayoutProps {
   parentUrl: string;
   toc?: TocItem[];
   lastUpdated?: string | null;
+  isMonograph?: boolean;
+  courseCode?: string;
 }
 
 export default function ClientNoteLayout({
@@ -25,10 +28,29 @@ export default function ClientNoteLayout({
   parentUrl,
   toc = [],
   lastUpdated,
+  isMonograph = false,
+  courseCode,
 }: ClientNoteLayoutProps) {
   const router = useRouter();
+  const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [activeTocSlug, setActiveTocSlug] = useState<string>("");
+  const {
+    isNoteCompleted,
+    toggleNoteCompleted,
+    markNoteVisited,
+    setSyncModalOpen,
+  } = useStudyPlan();
+
+  const decodedPath = decodeURIComponent(pathname || "");
+  const completed = isMonograph && decodedPath ? isNoteCompleted(decodedPath) : false;
+
+  // Record last visited monograph for stateless EG2 code and Study Plan resume
+  useEffect(() => {
+    if (isMonograph && decodedPath && title) {
+      markNoteVisited(decodedPath, title, courseCode);
+    }
+  }, [isMonograph, decodedPath, title, courseCode, markNoteVisited]);
 
   // Default to closed on mobile/tablets so drawer does not block initial reading
   useEffect(() => {
@@ -128,13 +150,39 @@ export default function ClientNoteLayout({
             </div>
           </div>
 
-          {/* Right: Telemetry / Date */}
-          {lastUpdated && (
-            <div className="hidden sm:flex items-center gap-2 text-[10px] font-mono text-[var(--zen-ink-muted)] shrink-0">
-              <span>COMPILED:</span>
-              <span className="text-[var(--zen-frost)] font-semibold">{lastUpdated}</span>
-            </div>
-          )}
+          {/* Right: Completion Toggle, Sync Trigger & Date */}
+          <div className="flex items-center gap-2.5 shrink-0">
+            {isMonograph && decodedPath && (
+              <button
+                onClick={() => toggleNoteCompleted(decodedPath, title)}
+                className={`px-2.5 py-1 rounded border text-[10px] font-mono tracking-wider uppercase transition-all ${
+                  completed
+                    ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)] text-[var(--zen-void)] font-bold"
+                    : "border-[var(--zen-border)] hover:border-[var(--zen-cyan)] text-[var(--zen-frost)] hover:text-[var(--zen-cyan)] bg-[var(--zen-card)]"
+                }`}
+                title="Toggle completion status in your Study Plan"
+              >
+                {completed ? "[x] COMPLETED" : "[ ] MARK COMPLETE"}
+              </button>
+            )}
+
+            <button
+              onClick={() => setSyncModalOpen(true)}
+              className="hidden md:inline-flex px-2.5 py-1 rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] bg-[var(--zen-card)] text-[10px] font-mono tracking-wider text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)] transition-colors uppercase"
+              title="Open Study Plan and EG2 Sync Code"
+            >
+              STUDY PLAN
+            </button>
+
+            {lastUpdated && (
+              <div className="hidden lg:flex items-center gap-2 text-[10px] font-mono text-[var(--zen-ink-muted)] pl-2 border-l border-[var(--zen-border)]">
+                <span>COMPILED:</span>
+                <span className="text-[var(--zen-frost)] font-semibold">
+                  {lastUpdated}
+                </span>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -236,6 +284,39 @@ export default function ClientNoteLayout({
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             {children}
+
+            {isMonograph && decodedPath && (
+              <div className="mt-12 pt-6 border-t border-[var(--zen-border)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                  <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--zen-ink-muted)] block">
+                    STUDY PROGRESS TRACKER
+                  </span>
+                  <p className="text-xs text-[var(--zen-frost)] mt-0.5">
+                    {completed
+                      ? "This monograph is recorded as completed in your local profile and EG2 sync code."
+                      : "Finished reviewing this monograph? Mark it complete to update your study plan progress."}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    onClick={() => toggleNoteCompleted(decodedPath, title)}
+                    className={`px-4 py-2 rounded border text-xs font-mono tracking-wider uppercase transition-all ${
+                      completed
+                        ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)] text-[var(--zen-void)] font-bold"
+                        : "border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/10 hover:bg-[var(--zen-cyan)]/20 text-[var(--zen-cyan)] font-semibold"
+                    }`}
+                  >
+                    {completed ? "[x] COMPLETED" : "MARK AS COMPLETED"}
+                  </button>
+                  <button
+                    onClick={() => setSyncModalOpen(true)}
+                    className="px-3 py-2 rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] bg-[var(--zen-card)] text-xs font-mono tracking-wider text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] transition-colors"
+                  >
+                    EG2 CODE
+                  </button>
+                </div>
+              </div>
+            )}
           </motion.div>
         </main>
 

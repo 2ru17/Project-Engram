@@ -6,6 +6,8 @@ import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
 import { animate } from "animejs";
 import { NumberTicker } from "@/components/ui/number-ticker";
 import { BorderBeam } from "@/components/ui/border-beam";
+import { useStudyPlan } from "@/components/StudyPlanProvider";
+import { STUDY_PLAN_TIER_LIST, STUDY_PLAN_TIERS } from "@/lib/study-plans";
 import {
   COURSE_REGISTRY,
   STAR_DOMAINS,
@@ -121,6 +123,7 @@ export default function HomePage() {
   const [activeTrack, setActiveTrack] = useState<CourseTrack | "all">("all");
   const [currentPage, setCurrentPage] = useState(0);
   const ITEMS_PER_PAGE = 7;
+  const { tier, setTier, completedCount, setSyncModalOpen } = useStudyPlan();
 
   // Reset page when switching constellation domain or track filters
   useEffect(() => {
@@ -279,7 +282,7 @@ export default function HomePage() {
 
           {/* Sub-tagline */}
           <p className="font-mono text-xs sm:text-sm tracking-[0.22em] text-[var(--zen-cyan)] uppercase mt-1 font-semibold">
-            Gravitational Computer Science Knowledge Universe
+            Computer Science Academic Archive &amp; Knowledge Graph
           </p>
 
           {/* Katana Blade Divider SVG with Anime.js hook */}
@@ -320,11 +323,11 @@ export default function HomePage() {
           {/* Telemetry Ribbon with NumberTicker */}
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-mono text-xs tracking-[0.16em] uppercase text-[var(--zen-ink-muted)] mb-8">
             <span className="flex items-center gap-1.5">
-              [ <span className="text-[var(--zen-cyan)] font-semibold">CS</span> SINGULARITY ]
+              [ <span className="text-[var(--zen-cyan)] font-semibold">COMPUTER SCIENCE</span> ]
             </span>
             <span className="text-[var(--zen-cyan)]">·</span>
             <span className="flex items-center gap-1.5">
-              [ <NumberTicker value={25} className="text-[var(--zen-snow)] font-semibold" /> SUBJECT STARS ]
+              [ <NumberTicker value={25} className="text-[var(--zen-snow)] font-semibold" /> COURSES ]
             </span>
             <span className="text-[var(--zen-cyan)]">·</span>
             <span className="flex items-center gap-1.5">
@@ -332,7 +335,7 @@ export default function HomePage() {
             </span>
             <span className="text-[var(--zen-cyan)]">·</span>
             <span className="flex items-center gap-1.5">
-              [ <NumberTicker value={5} className="text-[var(--zen-snow)] font-semibold" /> UNIVERSES ]
+              [ <NumberTicker value={4} className="text-[var(--zen-snow)] font-semibold" /> DOMAINS ]
             </span>
           </div>
         </motion.div>
@@ -446,7 +449,7 @@ export default function HomePage() {
 
             <div className="relative z-20">
               <span className="inline-block px-2.5 py-1 text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/30 uppercase mb-4 font-semibold">
-                SINGULARITY STAR SYSTEM
+                INTERACTIVE TOPOLOGY
               </span>
               <h3
                 className="text-2xl sm:text-3xl tracking-[0.16em] font-semibold text-[var(--zen-snow)] uppercase mb-3"
@@ -455,7 +458,7 @@ export default function HomePage() {
                 THE KNOWLEDGE GRAPH
               </h3>
               <p className="text-sm sm:text-base text-[var(--zen-frost)] opacity-80 leading-relaxed max-w-md">
-                Navigate an interactive gravitational star system where the Computer Science Singularity anchors the event horizon, surrounded by 25 interconnected Subject Stars and 539 orbiting monographs.
+                Explore an interactive force-directed graph where Computer Science anchors the core, linking 25 courses and 539 academic monographs across domains.
               </p>
             </div>
 
@@ -464,13 +467,13 @@ export default function HomePage() {
                 href="/notes?view=graph"
                 className="inline-flex items-center gap-3 px-6 py-3 border border-[var(--zen-border)] bg-[var(--zen-void)] hover:border-[var(--zen-cyan)] text-xs font-mono tracking-widest text-[var(--zen-snow)] hover:text-[var(--zen-cyan)] transition-all shadow-md"
               >
-                <span>ENTER STAR SYSTEM</span>
+                <span>OPEN KNOWLEDGE GRAPH</span>
                 <span>→</span>
               </Link>
             </div>
           </div>
 
-          {/* Gateway 2: The Subject Star Archive */}
+          {/* Gateway 2: The Academic Archive */}
           <div
             onMouseMove={handleTilt}
             onMouseLeave={resetTilt}
@@ -515,7 +518,7 @@ export default function HomePage() {
 
             <div className="relative z-20">
               <span className="inline-block px-2.5 py-1 text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/30 uppercase mb-4 font-semibold">
-                TRACK-AGNOSTIC INDEX
+                STRUCTURED INDEX
               </span>
               <h3
                 className="text-2xl sm:text-3xl tracking-[0.16em] font-semibold text-[var(--zen-snow)] uppercase mb-3"
@@ -524,7 +527,7 @@ export default function HomePage() {
                 THE ACADEMIC ARCHIVE
               </h3>
               <p className="text-sm sm:text-base text-[var(--zen-frost)] opacity-80 leading-relaxed max-w-md">
-                Browse pure subject stars across Systems, Theory & Math, Networks & Security, and Software Engineering — decoupled from rigid year flowcharts to unite Core CS, NIS, and ST coursework.
+                Browse courses across Systems, Theory &amp; Math, Networks &amp; Security, and Software Engineering, organized by domain across Core CS, NIS, and ST coursework.
               </p>
             </div>
 
@@ -533,7 +536,7 @@ export default function HomePage() {
                 href="/notes?view=directory"
                 className="inline-flex items-center gap-3 px-6 py-3 border border-[var(--zen-border)] bg-[var(--zen-void)] hover:border-[var(--zen-cyan)] text-xs font-mono tracking-widest text-[var(--zen-snow)] hover:text-[var(--zen-cyan)] transition-all shadow-md"
               >
-                <span>OPEN STAR DIRECTORY</span>
+                <span>OPEN DIRECTORY</span>
                 <span>→</span>
               </Link>
             </div>
@@ -542,7 +545,7 @@ export default function HomePage() {
       </section>
 
       {/* ======================================================================
-          SUBJECT STAR CONSTELLATION MATRIX (#curriculum) — PURE TOPIC/SUBJECT STARS
+          COURSE CURRICULUM MATRIX (#curriculum)
           ====================================================================== */}
       <section className="relative z-20 max-w-7xl mx-auto px-6 py-20" id="curriculum">
         <div className="text-center mb-10">
@@ -550,23 +553,52 @@ export default function HomePage() {
             className="text-xs tracking-[0.4em] text-[var(--zen-ink-muted)] uppercase block mb-2"
             style={{ fontFamily: "var(--font-zen-serif, serif)" }}
           >
-            恒星群体系 // HELIOCENTRIC SUBJECT CONSTELLATIONS
+            体系的課程 // SUBJECT CURRICULUM
           </span>
           <h2
             className="text-2xl sm:text-4xl tracking-[0.2em] font-bold text-[var(--zen-snow)] uppercase"
             style={{ fontFamily: "var(--font-zen-display, serif)" }}
           >
-            SUBJECT STAR MATRIX
+            COURSE CURRICULUM
           </h2>
           <p className="mt-2 text-xs font-mono tracking-wider text-[var(--zen-ink-muted)]">
-            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} SUBJECT STARS · ORBITING CS SINGULARITY
+            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} COURSES · 539 MONOGRAPHS
           </p>
         </div>
 
-        {/* Primary Constellation Domain Tabs (Replaces 4-Year Tabs) */}
+        {/* Study Plan Tier & Stateless EG2 Sync Bar */}
+        <div className="max-w-4xl mx-auto mb-8 p-3.5 rounded-xl border border-[var(--zen-border)] bg-[var(--zen-card)] flex flex-col sm:flex-row items-center justify-between gap-3 universe-card">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+            <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--zen-ink-muted)] mr-1">
+              STUDY PLAN:
+            </span>
+            {STUDY_PLAN_TIER_LIST.map((plan) => (
+              <button
+                key={plan.id}
+                onClick={() => setTier(plan.id)}
+                className={`px-2.5 py-1 text-[10px] font-mono tracking-wider rounded border transition-all ${
+                  tier === plan.id
+                    ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 text-[var(--zen-cyan)] font-semibold"
+                    : "border-[var(--zen-border)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] bg-[var(--zen-void)]/50"
+                }`}
+              >
+                {plan.shortLabel}
+              </button>
+            ))}
+          </div>
+
+          <button
+            onClick={() => setSyncModalOpen(true)}
+            className="px-3.5 py-1.5 rounded border border-[var(--zen-cyan)]/50 hover:border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/10 text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] text-[10px] font-mono tracking-wider uppercase transition-all shrink-0"
+          >
+            {STUDY_PLAN_TIERS[tier].shortLabel} · {completedCount} DONE // SYNC CODE
+          </button>
+        </div>
+
+        {/* Primary Domain Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-5">
           {[
-            { id: "all", label: "ALL CONSTELLATIONS // 全恒星", color: "#00E5FF" },
+            { id: "all", label: "ALL DOMAINS // 全領域", color: "#00E5FF" },
             { id: "systems", label: "SYSTEMS & ARCH // 統", color: STAR_DOMAINS.systems.color },
             { id: "theory", label: "THEORY & MATH // 論", color: STAR_DOMAINS.theory.color },
             { id: "security", label: "NET & SECURITY // 防", color: STAR_DOMAINS.security.color },
@@ -692,11 +724,11 @@ export default function HomePage() {
                               {course.desc}
                             </p>
 
-                            {/* Connected Constellation Stars */}
+                            {/* Related Courses */}
                             {course.relatedCourses.length > 0 && (
                               <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-mono text-[var(--zen-ink-muted)]">
                                 <span className="text-[var(--zen-cyan)]/80 uppercase">
-                                  BRIDGES:
+                                  RELATED:
                                 </span>
                                 {course.relatedCourses.slice(0, 4).map((rel) => (
                                   <span
@@ -725,7 +757,7 @@ export default function HomePage() {
                                 </span>
                               </div>
                               <span className="text-[9px] font-mono tracking-wider text-[var(--zen-cyan)]/80 uppercase block mt-0.5">
-                                SUBJECT STAR // 恒星
+                                COURSE // 科目
                               </span>
                             </div>
 
@@ -825,13 +857,13 @@ export default function HomePage() {
             <div className="flex items-center gap-2 text-xs font-mono text-[var(--zen-ink-muted)]">
               <span className="w-1.5 h-1.5 rotate-45 bg-[var(--zen-cyan)] shadow-[0_0_8px_rgba(0,229,255,0.4)]" />
               <span>
-                DISPLAYING {currentPage * ITEMS_PER_PAGE + 1}–
+                DISPLAYING {currentPage * ITEMS_PER_PAGE + 1}-
                 {Math.min((currentPage + 1) * ITEMS_PER_PAGE, filteredCourses.length)} OF{" "}
-                {filteredCourses.length} SUBJECT STARS
+                {filteredCourses.length} COURSES
               </span>
               <span className="text-[var(--zen-slate-edge)] hidden md:inline">|</span>
               <span className="text-[10px] tracking-wider uppercase text-[var(--zen-cyan)] hidden md:inline">
-                SECTOR {currentPage + 1} // 全{totalPages}星域
+                PAGE {currentPage + 1} // 全{totalPages}頁
               </span>
             </div>
 
@@ -929,14 +961,14 @@ export default function HomePage() {
               href="/notes?view=graph"
               className="hover:text-[var(--zen-cyan)] transition-colors"
             >
-              STAR GRAPH
+              KNOWLEDGE GRAPH
             </Link>
             <span>·</span>
             <Link
               href="/notes?view=directory"
               className="hover:text-[var(--zen-cyan)] transition-colors"
             >
-              STAR DIRECTORY
+              COURSE DIRECTORY
             </Link>
             <span>·</span>
             <a

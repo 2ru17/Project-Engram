@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import MarkdownRender from "@/components/MarkdownRender";
 import ClientNoteLayout from "@/components/ClientNoteLayout";
+import CourseDirectoryFilter from "@/components/CourseDirectoryFilter";
 import Link from "next/link";
 import GithubSlugger from "github-slugger";
 import { execFile } from "child_process";
@@ -35,7 +36,7 @@ export async function generateMetadata({
       ? `Structural Virtual Concept Hub connecting relational records in Project Engram for ${title}.`
       : resolved.kind === "directory"
       ? getCourseInfo(resolved.courseCode)?.desc ||
-        `Course Star directory and module index in Project Engram for ${title}.`
+        `Course directory and module index in Project Engram for ${title}.`
       : resolved.note?.excerpt ||
         `Curated academic monograph and study reference in Project Engram for ${title}.`;
 
@@ -165,6 +166,8 @@ export default async function NotePage({
       parentUrl={parentUrl}
       toc={toc}
       lastUpdated={lastUpdated}
+      isMonograph={resolved.kind === "note"}
+      courseCode={resolved.kind !== "virtual" ? resolved.courseCode : undefined}
     >
       <script
         type="application/ld+json"
@@ -185,7 +188,7 @@ export default async function NotePage({
             </h1>
             <p className="text-[var(--zen-ink-muted)] max-w-lg leading-relaxed text-sm">
               Structural Virtual Concept Hub connecting relational records across the
-              Heliocentric Star System.
+              Project Engram Knowledge Graph.
             </p>
           </div>
 
@@ -199,10 +202,10 @@ export default async function NotePage({
                   関連記録
                 </span>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 universe-bento-grid">
                 {resolved.backlinks.map((item) => (
                   <Link key={item.path} href={item.path}>
-                    <div className="p-4 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)]/60 bg-[var(--zen-card)] hover:bg-[var(--zen-card-hover)] transition-all duration-300 group flex items-center justify-between shadow-lg hover:shadow-[0_0_15px_rgba(0,229,255,0.15)] hover:-translate-y-0.5">
+                    <div className="universe-card p-4 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)]/60 bg-[var(--zen-card)] hover:bg-[var(--zen-card-hover)] transition-all duration-300 group flex items-center justify-between shadow-lg hover:shadow-[0_0_15px_rgba(0,229,255,0.15)] hover:-translate-y-0.5">
                       <div className="flex items-center gap-3 min-w-0">
                         <span className="px-1.5 py-0.5 text-[9px] font-mono rounded border border-[var(--zen-cyan)]/40 text-[var(--zen-cyan)] shrink-0">
                           {item.courseCode}
@@ -228,7 +231,7 @@ export default async function NotePage({
                 href="/notes?view=graph"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded border border-[var(--zen-cyan)]/40 hover:border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/10 text-xs font-mono tracking-wider text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] transition-all shadow-[0_0_15px_rgba(0,229,255,0.15)]"
               >
-                <span>RETURN TO STAR GRAPH</span>
+                <span>RETURN TO KNOWLEDGE GRAPH</span>
                 <span>→</span>
               </Link>
             </div>
@@ -236,8 +239,8 @@ export default async function NotePage({
         </div>
       ) : resolved.kind === "directory" ? (
         <div className="space-y-6">
-          {/* Course Star / Module Header Banner */}
-          <div className="border-b border-[var(--zen-border)] pb-6 mb-8">
+          {/* Course / Module Header Banner */}
+          <div className="border-b border-[var(--zen-border)] pb-6 mb-6">
             <div className="flex flex-wrap items-center gap-2 mb-3">
               <span className="px-2.5 py-0.5 text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/50 bg-[var(--zen-cyan)]/10 font-bold uppercase">
                 {resolved.courseCode}
@@ -262,7 +265,7 @@ export default async function NotePage({
                 {title.toUpperCase()}
               </h1>
               <span className="text-xs font-mono text-[var(--zen-ink-muted)] uppercase shrink-0">
-                恒星目録
+                科目目録
               </span>
             </div>
 
@@ -272,13 +275,13 @@ export default async function NotePage({
               </p>
             )}
 
-            {/* Connected Course Stars (Constellation Bridges) */}
+            {/* Related Courses */}
             {courseMeta &&
               courseMeta.relatedCourses.length > 0 &&
               resolved.canonicalSlugArray.length === 1 && (
                 <div className="mt-4 pt-4 border-t border-[var(--zen-border)]/50 flex flex-wrap items-center gap-2">
                   <span className="text-[10px] font-mono tracking-widest text-[var(--zen-ink-muted)] uppercase mr-1">
-                    CONNECTED STARS:
+                    RELATED COURSES:
                   </span>
                   {courseMeta.relatedCourses.map((relCode) => (
                     <Link
@@ -293,25 +296,10 @@ export default async function NotePage({
               )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 universe-bento-grid">
-            {resolved.items.map((item) => (
-              <Link key={item.path} href={item.path}>
-                <div className="universe-card p-4 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)]/60 bg-[var(--zen-card)] hover:bg-[var(--zen-card-hover)] transition-all duration-300 group flex items-center justify-between shadow-lg hover:shadow-[0_0_15px_rgba(0,229,255,0.15)] hover:-translate-y-0.5">
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <span className="text-[var(--zen-cyan)] text-xs shrink-0">
-                      {item.isDir ? "▸" : "◇"}
-                    </span>
-                    <span className="text-sm font-medium text-[var(--zen-snow)] group-hover:text-[var(--zen-cyan)] transition-colors truncate">
-                      {item.name}
-                    </span>
-                  </div>
-                  <span className="text-[var(--zen-cyan)] text-xs opacity-0 group-hover:opacity-100 transition-opacity pl-2">
-                    →
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
+          <CourseDirectoryFilter
+            courseCode={resolved.courseCode}
+            items={resolved.items}
+          />
         </div>
       ) : (
         <MarkdownRender content={fileContent} />

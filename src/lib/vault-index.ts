@@ -538,7 +538,7 @@ export async function resolveVaultSlug(
 
         const title =
           subSegments.length === 0
-            ? `${courseDir.courseCode} — ${
+            ? `${courseDir.courseCode}: ${
                 getCourseInfo(courseDir.courseCode)?.name || courseDir.courseCode
               }`
             : subSegments[subSegments.length - 1];

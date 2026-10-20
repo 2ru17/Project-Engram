@@ -13,6 +13,8 @@ import {
 import "./globals.css";
 import TopNav from "@/components/TopNav";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { StudyPlanProvider } from "@/components/StudyPlanProvider";
+import ProgressCodeModal from "@/components/ProgressCodeModal";
 import { AtmosphereProvider } from "@/components/atmosphere/AtmosphereProvider";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { cn } from "@/lib/utils";
@@ -71,7 +73,7 @@ export const metadata: Metadata = {
     default: "PROJECT ENGRAM // 銘印",
   },
   description:
-    "Project Engram — Academic Knowledge Vault, Relational Concept Graph, and Computer Science Monograph Archive",
+    "Project Engram: Academic Knowledge Vault, Relational Concept Graph, and Computer Science Monograph Archive",
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "https://2ru17-project-engram.vercel.app"
   ),
@@ -184,10 +186,13 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider>
-          <ScrollProgress />
-          <AtmosphereProvider />
-          <TopNav />
-          {children}
+          <StudyPlanProvider>
+            <ScrollProgress />
+            <AtmosphereProvider />
+            <TopNav />
+            <ProgressCodeModal />
+            {children}
+          </StudyPlanProvider>
         </ThemeProvider>
       </body>
     </html>
