@@ -51,13 +51,57 @@ export default function TopNav() {
   }, []);
 
   const leftLinks = [
-    { label: "HOME", sub: "首頁", href: "/" },
-    { label: "CURRICULUM", sub: "課程", href: "/#curriculum" },
+    {
+      label: "HOME",
+      sub:
+        universe === "cyber-zen"
+          ? "首頁"
+          : universe === "broken-grid"
+          ? "01"
+          : universe === "parallax"
+          ? "SEC.01"
+          : "",
+      href: "/",
+    },
+    {
+      label: "CURRICULUM",
+      sub:
+        universe === "cyber-zen"
+          ? "課程"
+          : universe === "broken-grid"
+          ? "02"
+          : universe === "parallax"
+          ? "SEC.02"
+          : "",
+      href: "/#curriculum",
+    },
   ];
 
   const rightLinks = [
-    { label: "GRAPH", sub: "星図", href: "/notes?view=graph" },
-    { label: "ARCHIVE", sub: "目録", href: "/notes?view=directory" },
+    {
+      label: "GRAPH",
+      sub:
+        universe === "cyber-zen"
+          ? "星図"
+          : universe === "broken-grid"
+          ? "03"
+          : universe === "parallax"
+          ? "SEC.03"
+          : "",
+      href: "/notes?view=graph",
+    },
+    {
+      label: "ARCHIVE",
+      sub:
+        universe === "cyber-zen"
+          ? "目録"
+          : universe === "broken-grid"
+          ? "04"
+          : universe === "parallax"
+          ? "SEC.04"
+          : "",
+      href: "/notes?view=directory",
+    },
   ];
 
   const handleSelectUniverse = (id: UniverseId) => {
@@ -92,12 +136,14 @@ export default function TopNav() {
                   }}
                 >
                   <span>{link.label}</span>
-                  <span
-                    className="text-[10px] tracking-[0.4em] text-[var(--zen-ink-muted)] opacity-70 group-hover:text-[var(--zen-cyan)] transition-colors mt-0.5"
-                    style={{ fontFamily: "var(--font-zen-serif, serif)" }}
-                  >
-                    {link.sub}
-                  </span>
+                  {link.sub && (
+                    <span
+                      className="text-[10px] tracking-[0.4em] text-[var(--zen-ink-muted)] opacity-70 group-hover:text-[var(--zen-cyan)] transition-colors mt-0.5"
+                      style={{ fontFamily: "var(--font-zen-serif, serif)" }}
+                    >
+                      {link.sub}
+                    </span>
+                  )}
                 </Link>
               );
             })}
@@ -127,18 +173,20 @@ export default function TopNav() {
             >
               ENGRAM
             </span>
-            <svg
-              className="w-28 h-2 mt-0.5"
-              viewBox="0 0 140 8"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M0,4 L55,4 L70,1 L85,4 L140,4 L85,4 L70,7 L55,4 Z"
-                fill="currentColor"
-                className="text-[var(--zen-steel)] group-hover:text-[var(--zen-cyan)] transition-colors"
-              />
-            </svg>
+            {universe === "cyber-zen" && (
+              <svg
+                className="w-28 h-2 mt-0.5"
+                viewBox="0 0 140 8"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M0,4 L55,4 L70,1 L85,4 L140,4 L85,4 L70,7 L55,4 Z"
+                  fill="currentColor"
+                  className="text-[var(--zen-steel)] group-hover:text-[var(--zen-cyan)] transition-colors"
+                />
+              </svg>
+            )}
           </Link>
 
           {/* Right Nav Links & Controls */}
@@ -167,12 +215,14 @@ export default function TopNav() {
                     }}
                   >
                     <span>{link.label}</span>
-                    <span
-                      className="text-[10px] tracking-[0.4em] text-[var(--zen-ink-muted)] opacity-70 group-hover:text-[var(--zen-cyan)] transition-colors mt-0.5"
-                      style={{ fontFamily: "var(--font-zen-serif, serif)" }}
-                    >
-                      {link.sub}
-                    </span>
+                    {link.sub && (
+                      <span
+                        className="text-[10px] tracking-[0.4em] text-[var(--zen-ink-muted)] opacity-70 group-hover:text-[var(--zen-cyan)] transition-colors mt-0.5"
+                        style={{ fontFamily: "var(--font-zen-serif, serif)" }}
+                      >
+                        {link.sub}
+                      </span>
+                    )}
                   </Link>
                 );
               })}
@@ -429,11 +479,13 @@ export default function TopNav() {
           </div>
         </div>
 
-        {/* Center Hairline Underline Accent */}
-        <div
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-[1px] bg-gradient-to-r from-transparent via-[var(--zen-cyan)]/60 to-transparent pointer-events-none"
-          aria-hidden="true"
-        />
+        {/* Center Hairline Underline Accent (Cyber-Zen & Parallax only) */}
+        {(universe === "cyber-zen" || universe === "parallax") && (
+          <div
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-80 h-[1px] bg-gradient-to-r from-transparent via-[var(--zen-cyan)]/60 to-transparent pointer-events-none"
+            aria-hidden="true"
+          />
+        )}
       </header>
 
       {/* Mobile Drawer Sheet */}

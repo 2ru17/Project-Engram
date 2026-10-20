@@ -177,7 +177,7 @@ export default async function NotePage({
       {resolved.kind === "virtual" ? (
         <div className="py-8">
           <div className="flex flex-col items-center justify-center text-center mb-12">
-            <div className="w-12 h-12 rounded-full border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/10 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(0,229,255,0.25)]">
+            <div className="w-12 h-12 rounded-full border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/10 flex items-center justify-center mb-6">
               <span className="text-[var(--zen-cyan)] text-xl">◇</span>
             </div>
             <h1
@@ -199,13 +199,13 @@ export default async function NotePage({
                   CONNECTED ARCHIVE ENTRIES ({resolved.backlinks.length})
                 </span>
                 <span className="text-[10px] font-mono text-[var(--zen-ink-muted)]">
-                  関連記録
+                  RELATIONAL INDEX
                 </span>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 universe-bento-grid">
                 {resolved.backlinks.map((item) => (
                   <Link key={item.path} href={item.path}>
-                    <div className="universe-card p-4 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)]/60 bg-[var(--zen-card)] hover:bg-[var(--zen-card-hover)] transition-all duration-300 group flex items-center justify-between shadow-lg hover:shadow-[0_0_15px_rgba(0,229,255,0.15)] hover:-translate-y-0.5">
+                    <div className="universe-card p-4 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)]/60 bg-[var(--zen-card)] hover:bg-[var(--zen-card-hover)] transition-all duration-300 group flex items-center justify-between shadow-lg hover:-translate-y-0.5">
                       <div className="flex items-center gap-3 min-w-0">
                         <span className="px-1.5 py-0.5 text-[9px] font-mono rounded border border-[var(--zen-cyan)]/40 text-[var(--zen-cyan)] shrink-0">
                           {item.courseCode}
@@ -229,7 +229,7 @@ export default async function NotePage({
               </p>
               <Link
                 href="/notes?view=graph"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded border border-[var(--zen-cyan)]/40 hover:border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/10 text-xs font-mono tracking-wider text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] transition-all shadow-[0_0_15px_rgba(0,229,255,0.15)]"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded border border-[var(--zen-cyan)]/40 hover:border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/10 text-xs font-mono tracking-wider text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] transition-all"
               >
                 <span>RETURN TO KNOWLEDGE GRAPH</span>
                 <span>→</span>
@@ -265,7 +265,7 @@ export default async function NotePage({
                 {title.toUpperCase()}
               </h1>
               <span className="text-xs font-mono text-[var(--zen-ink-muted)] uppercase shrink-0">
-                科目目録
+                COURSE DIRECTORY
               </span>
             </div>
 
