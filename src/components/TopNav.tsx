@@ -10,6 +10,8 @@ import {
   UNIVERSE_REGISTRY,
   type UniverseId,
 } from "@/components/ThemeProvider";
+import { useStudyPlan } from "@/components/StudyPlanProvider";
+import { STUDY_PLAN_TIERS } from "@/lib/study-plans";
 
 export default function TopNav() {
   const pathname = usePathname();
@@ -28,6 +30,8 @@ export default function TopNav() {
     toggleTheme,
     togglePerfMode,
   } = useTheme();
+
+  const { tier, completedCount, setSyncModalOpen } = useStudyPlan();
 
   const currentUniverseMeta =
     UNIVERSE_REGISTRY[universe] || UNIVERSE_REGISTRY["cyber-zen"];
@@ -48,7 +52,7 @@ export default function TopNav() {
 
   const leftLinks = [
     { label: "HOME", sub: "首頁", href: "/" },
-    { label: "CONSTELLATIONS", sub: "恒星群", href: "/#curriculum" },
+    { label: "CURRICULUM", sub: "課程", href: "/#curriculum" },
   ];
 
   const rightLinks = [
@@ -176,6 +180,25 @@ export default function TopNav() {
 
             {/* Integrated Controls (Zero emojis) */}
             <div className="flex items-center gap-2 pl-4 border-l border-[var(--zen-border)]">
+              {/* Study Plan & Stateless EG2 Sync Trigger */}
+              <button
+                onClick={() => setSyncModalOpen(true)}
+                aria-label="Open Study Plan and Profile Code Sync"
+                className="px-2.5 py-1 text-[10px] font-mono tracking-wider rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] text-[var(--zen-snow)] hover:text-[var(--zen-cyan)] bg-[var(--zen-card)] transition-all flex items-center gap-1.5"
+                title="Study Plan & Stateless Profile Code Sync (EG2-...)"
+              >
+                <span className="text-[var(--zen-cyan)] font-bold">
+                  {STUDY_PLAN_TIERS[tier].id.toUpperCase()}
+                </span>
+                <span className="text-[var(--zen-ink-muted)]">//</span>
+                <span>SYNC</span>
+                {completedCount > 0 && (
+                  <span className="px-1 py-0.2 text-[9px] rounded bg-[var(--zen-cyan)]/20 text-[var(--zen-cyan)] font-bold">
+                    {completedCount}
+                  </span>
+                )}
+              </button>
+
               {/* 5-Universe Switcher Dropdown with 2s Cooldown Ring */}
               <div className="relative" ref={dropdownRef}>
                 <button
@@ -465,6 +488,21 @@ export default function TopNav() {
                   </button>
                 ))}
               </div>
+            </div>
+
+            <div className="flex items-center justify-between pt-1">
+              <span className="text-xs text-[var(--zen-ink-muted)] font-mono">
+                STUDY PLAN &amp; SYNC:
+              </span>
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setSyncModalOpen(true);
+                }}
+                className="px-3 py-1 text-xs font-mono rounded border border-[var(--zen-cyan)] text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/10"
+              >
+                {STUDY_PLAN_TIERS[tier].shortLabel} ({completedCount})
+              </button>
             </div>
 
             <div className="flex items-center justify-between pt-1">

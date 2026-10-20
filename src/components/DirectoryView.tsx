@@ -4,6 +4,8 @@ import { useEffect, useState, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useRouter, usePathname } from "next/navigation";
 import { STAR_DOMAINS, type StarDomainId } from "@/lib/course-registry";
+import { useStudyPlan } from "@/components/StudyPlanProvider";
+import { matchesStudyPlanTier } from "@/lib/study-plans";
 
 function isAncestorOfActive(folderPath: string, activePath: string) {
   if (!activePath || !folderPath) return false;
@@ -122,7 +124,7 @@ export default function DirectoryView() {
         <div className="flex flex-col items-center gap-3">
           <div className="w-6 h-6 border-t-2 border-[var(--zen-cyan)] rounded-full animate-spin" />
           <span className="font-mono text-xs text-[var(--zen-ink-muted)] tracking-widest uppercase">
-            MAPPING STAR ARCHIVE...
+            LOADING ARCHIVE...
           </span>
         </div>
       </div>
@@ -166,8 +168,8 @@ export default function DirectoryView() {
               type="text"
               value={rawQuery}
               onChange={(e) => setRawQuery(e.target.value)}
-              placeholder="Filter stars or monographs..."
-              aria-label="Filter stars or monographs"
+              placeholder="Filter courses or monographs..."
+              aria-label="Filter courses or monographs"
               className="w-full pl-9 pr-8 py-2 bg-[var(--zen-card)] border border-[var(--zen-border)] text-xs font-mono tracking-wide text-[var(--zen-snow)] placeholder-[var(--zen-ink-muted)] rounded-none backdrop-blur-xl focus:outline-none focus:border-[var(--zen-cyan)] focus:ring-1 focus:ring-[var(--zen-cyan)]/40 transition-all shadow-sm"
             />
             {rawQuery && (
@@ -182,10 +184,10 @@ export default function DirectoryView() {
           </div>
         </div>
 
-        {/* Constellation Domain Filter Strip */}
+        {/* Domain Filter Strip */}
         <div className="flex flex-wrap items-center gap-1">
           {[
-            { id: "all", label: "ALL STARS" },
+            { id: "all", label: "ALL" },
             { id: "systems", label: "SYSTEMS" },
             { id: "theory", label: "THEORY" },
             { id: "security", label: "SECURITY" },
@@ -211,8 +213,8 @@ export default function DirectoryView() {
             <span className="text-[var(--zen-cyan)] text-[9px]">◇</span>
             <span>
               {rawQuery.trim() || domainFilter !== "all"
-                ? `${filteredTree.folders.length} STARS · ${matchCount} NOTES`
-                : `${tree.folders.length} COURSE STARS · ${totalCount || 527} NOTES`}
+                ? `${filteredTree.folders.length} COURSES · ${matchCount} NOTES`
+                : `${tree.folders.length} COURSES · ${totalCount || 527} NOTES`}
             </span>
           </span>
           {(rawQuery || domainFilter !== "all") && (
@@ -235,7 +237,7 @@ export default function DirectoryView() {
           <div className="text-center py-12 px-4 flex flex-col items-center gap-2 text-[var(--zen-ink-muted)]">
             <span className="text-base text-[var(--zen-cyan)]">◇</span>
             <p className="font-mono text-xs tracking-wider text-[var(--zen-snow)] uppercase">
-              NO STARS OR MONOGRAPHS MATCHING &ldquo;{searchQuery}&rdquo;
+              NO COURSES OR MONOGRAPHS MATCHING &ldquo;{searchQuery}&rdquo;
             </p>
             <button
               onClick={() => {
@@ -446,10 +448,12 @@ function FileNode({
 }) {
   const router = useRouter();
   const fileRef = useRef<HTMLDivElement>(null);
+  const { isNoteCompleted, tier } = useStudyPlan();
 
   const cleanActive = (activePath || "").replace(/\/$/, "").toLowerCase();
   const cleanFile = file.path.replace(/\/$/, "").toLowerCase();
   const isActive = cleanActive === cleanFile;
+  const completed = isNoteCompleted(file.path);
 
   useEffect(() => {
     if (isActive && fileRef.current) {
@@ -459,6 +463,10 @@ function FileNode({
       return () => clearTimeout(timer);
     }
   }, [isActive]);
+
+  if (!matchesStudyPlanTier(file.name, file.path, tier, index)) {
+    return null;
+  }
 
   return (
     <motion.div
@@ -473,17 +481,19 @@ function FileNode({
         className={`flex items-center gap-2 group text-left w-full px-2.5 py-1.5 rounded-md transition-all duration-200 ${
           isActive
             ? "bg-[var(--zen-cyan)]/15 text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/50 shadow-[0_0_12px_rgba(0,229,255,0.2)] font-medium"
+            : completed
+            ? "text-[var(--zen-cyan)]/90 hover:text-[var(--zen-snow)] hover:bg-[var(--zen-card-hover)] border border-transparent"
             : "text-[var(--zen-frost)] hover:text-[var(--zen-snow)] hover:bg-[var(--zen-card-hover)] border border-transparent"
         }`}
       >
         <span
-          className={`text-[9px] shrink-0 transition-transform ${
-            isActive
-              ? "text-[var(--zen-cyan)] scale-125"
+          className={`text-[9px] font-mono shrink-0 transition-transform ${
+            isActive || completed
+              ? "text-[var(--zen-cyan)] font-bold"
               : "text-[var(--zen-ink-muted)] group-hover:text-[var(--zen-cyan)]"
           }`}
         >
-          ◇
+          {completed ? "[x]" : "◇"}
         </span>
         <span className="text-xs font-sans leading-snug break-words truncate">
           {file.name}

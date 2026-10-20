@@ -4,6 +4,7 @@ import { useEffect, useState, useRef, useCallback, useMemo } from "react";
 import ForceGraph2D from "react-force-graph-2d";
 import { useRouter } from "next/navigation";
 import { useTheme } from "@/components/ThemeProvider";
+import { useStudyPlan } from "@/components/StudyPlanProvider";
 import { motion, AnimatePresence } from "motion/react";
 import { STAR_DOMAINS, type StarDomainId } from "@/lib/course-registry";
 
@@ -46,6 +47,7 @@ const DOMAIN_ANGLES: Record<StarDomainId, [number, number]> = {
 
 export default function ObsidianGraph() {
   const { theme, universe, isLite } = useTheme();
+  const { isNoteCompleted, toggleNoteCompleted } = useStudyPlan();
   const isLightSurface =
     (universe === "cyber-zen" && theme === "light") ||
     universe === "neo-brutalism" ||
@@ -444,12 +446,12 @@ export default function ObsidianGraph() {
         ctx.strokeStyle = `rgba(${secondaryRgb}, 0.75)`;
         ctx.stroke();
 
-        // F. Singularity Label Pill
+        // F. Core Label Pill
         const fontSize = Math.max(8.5, 12 / globalScale);
         ctx.font = `700 ${fontSize}px monospace`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        const label = "COMPUTER SCIENCE // SINGULARITY";
+        const label = "COMPUTER SCIENCE";
         const textWidth = ctx.measureText(label).width;
         const padX = fontSize * 0.65;
         const padY = fontSize * 0.4;
@@ -566,12 +568,21 @@ export default function ObsidianGraph() {
       }
 
       // ─── 3. TOPIC / NOTE SATELLITES ──────────────────────────────────────────
-      const satRadius = isHovered || isSelected ? 4.8 : 3.0;
-      if (isHovered || isSelected) {
+      const isDone = node.path ? isNoteCompleted(node.path) : false;
+      const satRadius = isHovered || isSelected ? 4.8 : isDone ? 3.8 : 3.0;
+      if (isHovered || isSelected || isDone) {
         ctx.beginPath();
-        ctx.arc(node.x, node.y, satRadius * 2.2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${rgb}, 0.35)`;
+        ctx.arc(node.x, node.y, satRadius * 2.1, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${rgb}, ${isHovered || isSelected ? 0.35 : 0.22})`;
         ctx.fill();
+      }
+
+      if (isDone) {
+        ctx.beginPath();
+        ctx.arc(node.x, node.y, satRadius * 1.55, 0, Math.PI * 2);
+        ctx.strokeStyle = baseColor;
+        ctx.lineWidth = Math.max(0.7, 1.1 / globalScale);
+        ctx.stroke();
       }
 
       ctx.beginPath();
@@ -623,7 +634,7 @@ export default function ObsidianGraph() {
         ctx.fillText(label, node.x, node.y + yOffset);
       }
     },
-    [hoverNode, selectedNode, isLightSurface, universe, getNodeColor]
+    [hoverNode, selectedNode, isLightSurface, universe, getNodeColor, isNoteCompleted]
   );
 
   const starCount = useMemo(
@@ -634,6 +645,11 @@ export default function ObsidianGraph() {
     () => graphData.nodes.filter((n) => n.tier === "satellite").length,
     [graphData.nodes]
   );
+
+  const selectedIsCompleted =
+    selectedNode?.tier === "satellite" && selectedNode.path
+      ? isNoteCompleted(selectedNode.path)
+      : false;
 
   return (
     <div ref={containerRef} className="w-full h-full relative overflow-hidden bg-transparent">
@@ -649,17 +665,17 @@ export default function ObsidianGraph() {
             <div className="flex flex-col items-center gap-4">
               <div className="w-8 h-8 border-t-2 border-[var(--zen-cyan)] rounded-full animate-spin" />
               <p className="font-mono text-xs tracking-[0.3em] text-[var(--zen-cyan)]/80 uppercase">
-                CALIBRATING SINGULARITY GRAVITY WELL...
+                INITIALIZING KNOWLEDGE GRAPH...
               </p>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Top-Left Constellation Domain Filter & Orbit Controls */}
+      {/* Top-Left Domain Filter & Graph Controls */}
       <div className="absolute top-4 left-4 right-4 sm:right-auto z-20 flex flex-wrap items-center gap-1.5 p-2 rounded-xl backdrop-blur-xl bg-[var(--zen-card)]/90 border border-[var(--zen-border)] shadow-xl universe-card">
         {[
-          { id: "all", label: "ALL CONSTELLATIONS", color: "#00E5FF" },
+          { id: "all", label: "ALL DOMAINS", color: "#00E5FF" },
           { id: "systems", label: "SYSTEMS", color: STAR_DOMAINS.systems.color },
           { id: "theory", label: "THEORY & MATH", color: STAR_DOMAINS.theory.color },
           { id: "security", label: "NET & SECURITY", color: STAR_DOMAINS.security.color },
@@ -694,9 +710,9 @@ export default function ObsidianGraph() {
               ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 text-[var(--zen-cyan)] font-semibold"
               : "border-[var(--zen-border)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)]"
           }`}
-          title="Toggle between Macro Star View and Full Satellite View"
+          title="Toggle between Macro Course View and Full Monograph View"
         >
-          {starsOnly ? "[ STARS ONLY ]" : "[ STARS + NOTES ]"}
+          {starsOnly ? "[ COURSES ONLY ]" : "[ COURSES + NOTES ]"}
         </button>
       </div>
 
@@ -704,10 +720,10 @@ export default function ObsidianGraph() {
       <div className="absolute bottom-6 right-6 z-20 flex items-center gap-4 backdrop-blur-xl rounded-lg px-4 py-2 shadow-2xl bg-[var(--zen-card)] border border-[var(--zen-border)] universe-card">
         <div className="flex gap-3 text-[10px] font-mono text-[var(--zen-frost)]">
           <span>
-            <strong className="text-[var(--zen-cyan)]">1</strong> SINGULARITY
+            <strong className="text-[var(--zen-cyan)]">1</strong> CORE
           </span>
           <span>
-            <strong className="text-[var(--zen-cyan)]">{starCount}</strong> STARS
+            <strong className="text-[var(--zen-cyan)]">{starCount}</strong> COURSES
           </span>
           {!starsOnly && (
             <span>
@@ -723,13 +739,13 @@ export default function ObsidianGraph() {
           }}
           className="text-[10px] font-mono tracking-wider text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] transition-colors uppercase"
         >
-          [ SINGULARITY ]
+          [ CENTER ]
         </button>
         <button
           onClick={() => fgRef.current?.zoomToFit(450, 45)}
           className="text-[10px] font-mono tracking-wider text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)] transition-colors uppercase"
         >
-          [ FIT ORBIT ]
+          [ FIT GRAPH ]
         </button>
       </div>
 
@@ -748,9 +764,9 @@ export default function ObsidianGraph() {
                 <div className="flex items-center gap-2 mb-1">
                   <span className="px-2 py-0.5 text-[9px] font-mono tracking-widest uppercase rounded border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/10 text-[var(--zen-cyan)] font-semibold">
                     {selectedNode.tier === "sun"
-                      ? "EVENT HORIZON SINGULARITY"
+                      ? "CORE DISCIPLINE"
                       : selectedNode.tier === "star"
-                      ? `COURSE STAR · ${selectedNode.track || "CORE CS"}`
+                      ? `COURSE · ${selectedNode.track || "CORE CS"}`
                       : `MONOGRAPH · ${selectedNode.courseCode || "CS"}`}
                   </span>
                   {selectedNode.domainLabel && (
@@ -782,12 +798,12 @@ export default function ObsidianGraph() {
 
             <p className="text-[var(--zen-frost)] text-xs leading-relaxed mb-4 line-clamp-4 min-h-[2.5rem]">
               {selectedNode.excerpt ||
-                "Academic monograph indexed in the Project Engram Singularity Star System."}
+                "Academic monograph indexed in the Project Engram Knowledge Graph."}
             </p>
 
             <div className="flex items-center justify-between mb-4 px-3 py-1.5 bg-[var(--zen-cyan)]/5 rounded border border-[var(--zen-cyan)]/20 text-[10px] font-mono">
               <span className="text-[var(--zen-ink-muted)] uppercase">
-                {selectedNode.tier === "star" ? "ORBITING MONOGRAPHS" : "GRAVITATIONAL LINKS"}
+                {selectedNode.tier === "star" ? "INDEXED MONOGRAPHS" : "RELATIONAL LINKS"}
               </span>
               <span className="font-bold text-[var(--zen-cyan)]">
                 {selectedNode.tier === "star"
@@ -797,19 +813,35 @@ export default function ObsidianGraph() {
             </div>
 
             {selectedNode.path && (
-              <button
-                onClick={() => router.push(selectedNode.path)}
-                className="w-full py-2.5 bg-[var(--zen-cyan)]/10 hover:bg-[var(--zen-cyan)]/20 border border-[var(--zen-cyan)]/40 hover:border-[var(--zen-cyan)] text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] font-mono text-xs tracking-[0.2em] uppercase transition-all rounded shadow-[0_0_15px_rgba(0,229,255,0.15)] flex items-center justify-center gap-2"
-              >
-                <span>
-                  {selectedNode.tier === "sun"
-                    ? "OPEN STAR DIRECTORY"
-                    : selectedNode.tier === "star"
-                    ? `EXPLORE ${selectedNode.name} STAR`
-                    : "OPEN MONOGRAPH"}
-                </span>
-                <span>→</span>
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => router.push(selectedNode.path)}
+                  className="flex-1 py-2.5 bg-[var(--zen-cyan)]/10 hover:bg-[var(--zen-cyan)]/20 border border-[var(--zen-cyan)]/40 hover:border-[var(--zen-cyan)] text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] font-mono text-xs tracking-[0.2em] uppercase transition-all rounded shadow-[0_0_15px_rgba(0,229,255,0.15)] flex items-center justify-center gap-2"
+                >
+                  <span>
+                    {selectedNode.tier === "sun"
+                      ? "OPEN DIRECTORY"
+                      : selectedNode.tier === "star"
+                      ? `OPEN ${selectedNode.name}`
+                      : "OPEN MONOGRAPH"}
+                  </span>
+                  <span>→</span>
+                </button>
+                {selectedNode.tier === "satellite" && (
+                  <button
+                    onClick={() =>
+                      toggleNoteCompleted(selectedNode.path, selectedNode.name)
+                    }
+                    className={`px-3 py-2.5 rounded border font-mono text-[10px] tracking-wider uppercase transition-all shrink-0 ${
+                      selectedIsCompleted
+                        ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)] text-[var(--zen-void)] font-bold"
+                        : "border-[var(--zen-border)] hover:border-[var(--zen-cyan)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)]"
+                    }`}
+                  >
+                    {selectedIsCompleted ? "DONE" : "MARK"}
+                  </button>
+                )}
+              </div>
             )}
           </motion.div>
         )}

@@ -49,17 +49,17 @@ export async function GET() {
     links.push({ source, target, kind });
   };
 
-  // 1. Central Black Hole Singularity: COMPUTER SCIENCE pinned at (0, 0)
+  // 1. Central Core Node: COMPUTER SCIENCE pinned at (0, 0)
   const sunId = "sun:computer-science";
   nodes.push({
     id: sunId,
     name: "COMPUTER SCIENCE",
-    subtitle: "Gravitational Singularity // 事象の地平線",
+    subtitle: "Core Academic Discipline // 計算機科学",
     tier: "sun",
     group: 0,
     path: "/notes?view=directory",
     excerpt:
-      "The Central Black Hole Singularity of Project Engram — gravitational event horizon uniting Systems & Architecture, Algorithms & Theory, Networks & Cybersecurity, and Software Engineering stars across all tracks (Core CS, NIS, ST).",
+      "The central core of Project Engram uniting Systems & Architecture, Algorithms & Theory, Networks & Cybersecurity, and Software Engineering courses across Core CS, NIS, and ST tracks.",
     noteCount: index.notes.length,
     fx: 0,
     fy: 0,
@@ -103,7 +103,7 @@ export async function GET() {
       path: `/notes/${code}`,
       excerpt:
         info?.desc ||
-        `Subject Star for ${code} indexing ${noteCount} academic monographs.`,
+        `Course directory for ${code} indexing ${noteCount} academic monographs.`,
       noteCount,
     });
     nodeIds.add(starId);
