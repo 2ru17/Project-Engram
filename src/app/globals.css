@@ -171,6 +171,16 @@
   transition-duration: 0.05s !important;
 }
 
+/* Mermaid measures label boxes synchronously; a non-zero transition-duration makes
+   getBoundingClientRect() return mid-transition sizes and inflates the Dagre layout. */
+[data-perf="lite"] [id^="dmermaid"],
+[data-perf="lite"] [id^="dmermaid"] *,
+[data-perf="lite"] .mermaid-svg-container,
+[data-perf="lite"] .mermaid-svg-container * {
+  transition: none !important;
+  transition-duration: 0s !important;
+}
+
 [data-perf="lite"] .backdrop-blur-sm,
 [data-perf="lite"] .backdrop-blur-md,
 [data-perf="lite"] .backdrop-blur-xl,
