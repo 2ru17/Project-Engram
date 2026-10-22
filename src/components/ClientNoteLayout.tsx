@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "motion/react";
 import { useRouter, usePathname } from "next/navigation";
 import DirectoryView from "./DirectoryView";
 import { useStudyPlan } from "./StudyPlanProvider";
-import { useTheme } from "./ThemeProvider";
+import { useTheme, UNIVERSE_REGISTRY } from "./ThemeProvider";
+import ExportMenu from "./ExportMenu";
 
 interface TocItem {
   text: string;
@@ -21,6 +22,7 @@ interface ClientNoteLayoutProps {
   lastUpdated?: string | null;
   isMonograph?: boolean;
   courseCode?: string;
+  rawMarkdown?: string;
 }
 
 export default function ClientNoteLayout({
@@ -31,6 +33,7 @@ export default function ClientNoteLayout({
   lastUpdated,
   isMonograph = false,
   courseCode,
+  rawMarkdown,
 }: ClientNoteLayoutProps) {
   const router = useRouter();
   const pathname = usePathname();
@@ -94,13 +97,13 @@ export default function ClientNoteLayout({
       {/* Background Subtle Radial Vignette (Cyber-Zen & Parallax only) */}
       {(universe === "cyber-zen" || universe === "parallax") && (
         <div
-          className="fixed inset-0 pointer-events-none z-0 opacity-20 bg-[radial-gradient(circle_at_50%_15%,var(--zen-cyan)_0%,transparent_60%)]"
+          className="fixed inset-0 pointer-events-none z-0 opacity-20 bg-[radial-gradient(circle_at_50%_15%,var(--zen-cyan)_0%,transparent_60%)] print:hidden"
           aria-hidden="true"
         />
       )}
 
       {/* Sub-Header Ribbon: Note Studio Command Strip (Docks right below TopNav at sticky top-[53px]) */}
-      <div className="sticky top-[53px] left-0 w-full z-30 px-4 sm:px-8 py-2.5 bg-[var(--zen-void)]/90 backdrop-blur-xl border-b border-[var(--zen-border)] transition-colors duration-500">
+      <div className="sticky top-[53px] left-0 w-full z-30 px-4 sm:px-8 py-2.5 bg-[var(--zen-void)]/90 backdrop-blur-xl border-b border-[var(--zen-border)] transition-colors duration-500 print:hidden">
         <div className="max-w-[1600px] mx-auto flex items-center justify-between gap-4">
           {/* Left: Return & Module Trigger */}
           <div className="flex items-center gap-3 min-w-0">
@@ -156,8 +159,17 @@ export default function ClientNoteLayout({
             </div>
           </div>
 
-          {/* Right: Completion Toggle, Sync Trigger & Date */}
+          {/* Right: Completion Toggle, Export, Sync Trigger & Date */}
           <div className="flex items-center gap-2.5 shrink-0">
+            {isMonograph && (
+              <ExportMenu
+                title={title}
+                courseCode={courseCode}
+                rawMarkdown={rawMarkdown}
+                lastUpdated={lastUpdated}
+              />
+            )}
+
             {isMonograph && decodedPath && (
               <button
                 onClick={() => toggleNoteCompleted(decodedPath, title)}
@@ -195,7 +207,7 @@ export default function ClientNoteLayout({
       {/* Slide-out Mobile & Tablet Drawer (Only active below 2xl) */}
       <AnimatePresence>
         {isSidebarOpen && (
-          <div className="2xl:hidden">
+          <div className="2xl:hidden print:hidden">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -244,7 +256,7 @@ export default function ClientNoteLayout({
       </AnimatePresence>
 
       {/* Main Reading Studio Layout: 3-Column Architecture */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 py-8 lg:py-12 relative z-10 flex gap-8 justify-center">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 py-8 lg:py-12 relative z-10 flex gap-8 justify-center print:p-0 print:max-w-none print:block">
         {/* Left Rail: Desktop Docked Explorer (Fully collapsible on 2xl+ screens) */}
         <AnimatePresence initial={false}>
           {isSidebarOpen && (
@@ -253,7 +265,7 @@ export default function ClientNoteLayout({
               animate={{ width: "18rem", opacity: 1 }}
               exit={{ width: 0, opacity: 0 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-              className="hidden 2xl:flex w-72 shrink-0 self-start sticky top-[110px] h-[calc(100vh-140px)] p-4 rounded-xl border border-[var(--zen-border)] bg-[var(--zen-card)] backdrop-blur-xl shadow-xl flex-col overflow-hidden"
+              className="hidden 2xl:flex print:!hidden w-72 shrink-0 self-start sticky top-[110px] h-[calc(100vh-140px)] p-4 rounded-xl border border-[var(--zen-border)] bg-[var(--zen-card)] backdrop-blur-xl shadow-xl flex-col overflow-hidden"
             >
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-[var(--zen-border)] shrink-0">
                 <div className="flex items-center gap-2 min-w-0">
@@ -285,7 +297,26 @@ export default function ClientNoteLayout({
         </AnimatePresence>
 
         {/* Center Column: Reading Canvas */}
-        <main className="w-full max-w-3xl min-w-0 transition-all duration-300">
+        <main className="w-full max-w-3xl min-w-0 transition-all duration-300 print:max-w-none print:w-full">
+          {/* Print-Only Academic Masthead */}
+          <div className="hidden print:block mb-8 pb-4 border-b-2 border-[var(--zen-border)]">
+            <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-widest text-[var(--zen-ink-muted)] mb-2">
+              <span>
+                PROJECT ENGRAM // {courseCode ? `${courseCode} MONOGRAPH` : "ACADEMIC ARCHIVE"}
+              </span>
+              <span>
+                DESIGN: {UNIVERSE_REGISTRY[universe]?.label.toUpperCase() || "CYBER-ZEN"}
+                {lastUpdated ? ` · REV ${lastUpdated}` : ""}
+              </span>
+            </div>
+            <h1
+              className="text-2xl font-bold tracking-wider uppercase text-[var(--zen-snow)]"
+              style={{ fontFamily: "var(--font-zen-display, serif)" }}
+            >
+              {title}
+            </h1>
+          </div>
+
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -294,7 +325,7 @@ export default function ClientNoteLayout({
             {children}
 
             {isMonograph && decodedPath && (
-              <div className="mt-12 pt-6 border-t border-[var(--zen-border)] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div className="mt-12 pt-6 border-t border-[var(--zen-border)] flex flex-col sm:flex-row sm:items-center justify-between gap-4 print:hidden">
                 <div>
                   <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--zen-ink-muted)] block">
                     STUDY PROGRESS TRACKER
@@ -306,6 +337,12 @@ export default function ClientNoteLayout({
                   </p>
                 </div>
                 <div className="flex items-center gap-2 shrink-0">
+                  <ExportMenu
+                    title={title}
+                    courseCode={courseCode}
+                    rawMarkdown={rawMarkdown}
+                    lastUpdated={lastUpdated}
+                  />
                   <button
                     onClick={() => toggleNoteCompleted(decodedPath, title)}
                     className={`px-4 py-2 rounded border text-xs font-mono tracking-wider uppercase transition-all ${
@@ -330,7 +367,7 @@ export default function ClientNoteLayout({
 
         {/* Right Rail: Table of Contents & Navigation */}
         {toc.length > 0 && (
-          <aside className="hidden xl:block w-64 shrink-0 pl-4 self-start sticky top-[110px] max-h-[calc(100vh-140px)] overflow-y-auto custom-scrollbar">
+          <aside className="hidden xl:block print:!hidden w-64 shrink-0 pl-4 self-start sticky top-[110px] max-h-[calc(100vh-140px)] overflow-y-auto custom-scrollbar">
             <div className="border-l border-[var(--zen-border)] pl-4 py-1">
               <div className="flex items-center justify-between mb-4 pb-2 border-b border-[var(--zen-border)]/50">
                 <span

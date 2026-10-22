@@ -112,7 +112,7 @@ export default function TopNav() {
 
   return (
     <>
-      <header className="sticky top-0 left-0 w-full z-40 px-4 sm:px-8 lg:px-12 py-3 bg-[var(--zen-void)]/90 backdrop-blur-2xl border-b border-[var(--zen-border)] transition-colors duration-500">
+      <header className="sticky top-0 left-0 w-full z-40 px-4 sm:px-8 lg:px-12 py-3 bg-[var(--zen-void)]/90 backdrop-blur-2xl border-b border-[var(--zen-border)] transition-colors duration-500 print:hidden">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Left Nav Links */}
           <nav

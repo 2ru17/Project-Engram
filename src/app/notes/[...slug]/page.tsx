@@ -168,6 +168,7 @@ export default async function NotePage({
       lastUpdated={lastUpdated}
       isMonograph={resolved.kind === "note"}
       courseCode={resolved.kind !== "virtual" ? resolved.courseCode : undefined}
+      rawMarkdown={resolved.kind === "note" ? fileContent : undefined}
     >
       <script
         type="application/ld+json"

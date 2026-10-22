@@ -579,3 +579,78 @@ html[data-universe="broken-grid"] .universe-card:hover {
 .mermaid-svg-container .flowchart-link {
   stroke: var(--zen-cyan) !important;
 }
+.mermaid-svg-container foreignObject {
+  overflow: visible;
+}
+.mermaid-svg-container foreignObject > div {
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ─── PHASE 4: DUAL EXPORT ENGINE (@media print) ─────────────── */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 16mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Ink-Saver Academic Paper Override when selected in ExportMenu */
+  html[data-print-mode="paper"],
+  html[data-print-mode="paper"] body {
+    --zen-void: #FFFFFF !important;
+    --zen-abyss: #FFFFFF !important;
+    --zen-midnight: #F8FAFC !important;
+    --zen-lampblack: #F1F5F9 !important;
+    --zen-slate-deep: #E2E8F0 !important;
+    --zen-slate-mid: #CBD5E1 !important;
+    --zen-slate-edge: #94A3B8 !important;
+    --zen-frost: #1E293B !important;
+    --zen-snow: #09090B !important;
+    --zen-ink-muted: #475569 !important;
+    --zen-cyan: #0F172A !important;
+    --zen-border: #CBD5E1 !important;
+    --zen-card: #FFFFFF !important;
+    --zen-card-hover: #F8FAFC !important;
+    --bg-body: #FFFFFF !important;
+    --bg-card: #FFFFFF !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #09090B !important;
+  }
+
+  /* Hide MCQ explanation blocks when user checks "Hide MCQ Explanations" */
+  html[data-print-hide-answers="true"] .mcq-print-explanation {
+    display: none !important;
+  }
+
+  /* Prevent awkward page slicing across diagrams, code blocks, tables, and MCQ cards */
+  pre,
+  blockquote,
+  table,
+  figure,
+  .mermaid-svg-container,
+  .mcq-card,
+  .universe-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Ensure scrollable code blocks and tables wrap cleanly in PDF */
+  pre,
+  pre code {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-x: visible !important;
+  }
+}
