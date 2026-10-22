@@ -302,3 +302,11 @@
 .mermaid-svg-container .flowchart-link {
   stroke: var(--zen-cyan) !important;
 }
+.mermaid-svg-container foreignObject {
+  overflow: visible;
+}
+.mermaid-svg-container foreignObject > div {
+  width: 100% !important;
+  height: 100% !important;
+  box-sizing: border-box !important;
+}

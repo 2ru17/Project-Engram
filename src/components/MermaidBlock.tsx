@@ -138,36 +138,47 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
         `,
       });
 
+      // Ensure web fonts are loaded before Dagre measures node labels
+      if (typeof document !== "undefined" && document.fonts?.ready) {
+        await document.fonts.ready;
+      }
+
       const renderId = `mermaid_${uniqueId}_${Date.now()}`;
       const { svg } = await mermaid.render(renderId, chart);
 
       if (!containerRef.current) return;
 
-      // Extract natural width from viewBox so small diagrams are never stretched to 800px
-      const viewBoxMatch = svg.match(/viewBox="([^"]+)"/);
-      let intrinsicWidth = 650;
-      if (viewBoxMatch) {
-        const parts = viewBoxMatch[1].trim().split(/[\s,]+/);
-        if (parts.length === 4) {
-          const parsed = parseFloat(parts[2]);
-          if (!isNaN(parsed) && parsed > 50) {
-            intrinsicWidth = parsed;
+      // Safely modify ONLY the root <svg> element via DOMParser without corrupting child elements
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(svg, "image/svg+xml");
+      const svgEl = doc.querySelector("svg");
+
+      if (svgEl) {
+        const viewBox = svgEl.getAttribute("viewBox");
+        let intrinsicWidth = 650;
+        if (viewBox) {
+          const parts = viewBox.trim().split(/[\s,]+/);
+          if (parts.length === 4) {
+            const parsed = parseFloat(parts[2]);
+            if (!isNaN(parsed) && parsed > 50) {
+              intrinsicWidth = parsed;
+            }
           }
         }
+
+        // Clean root svg dimensions safely
+        svgEl.removeAttribute("height");
+        svgEl.removeAttribute("width");
+        svgEl.style.maxWidth = `min(100%, ${Math.ceil(intrinsicWidth)}px)`;
+        svgEl.style.width = "100%";
+        svgEl.style.height = "auto";
+        svgEl.style.display = "block";
+        svgEl.style.margin = "0 auto";
+
+        containerRef.current.innerHTML = svgEl.outerHTML;
+      } else {
+        containerRef.current.innerHTML = svg;
       }
-
-      // Responsive SVG that respects intrinsic proportions without exploding box dimensions
-      let responsiveSvg = svg;
-      // Strip inline width/height/style that would force distortion
-      responsiveSvg = responsiveSvg.replace(/\sheight="[^"]*"/, "");
-      responsiveSvg = responsiveSvg.replace(/\swidth="[^"]*"/, "");
-      responsiveSvg = responsiveSvg.replace(/\sstyle="[^"]*"/, "");
-      responsiveSvg = responsiveSvg.replace(
-        /<svg([^>]*)>/,
-        `<svg$1 style="max-width: min(100%, ${Math.ceil(intrinsicWidth)}px); width: 100%; height: auto; display: block; margin: 0 auto;">`
-      );
-
-      containerRef.current.innerHTML = responsiveSvg;
       setError(null);
     } catch (e: unknown) {
       if (!containerRef.current) return;
