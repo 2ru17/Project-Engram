@@ -448,6 +448,23 @@ html[data-universe="broken-grid"] .universe-card:hover {
   transition-duration: 0.05s !important;
 }
 
+/* Cyber-Zen screen vignette: full strength on desktop, lighter and shorter on small
+   viewports so it does not swallow the reading column. Hidden entirely in print. */
+.screen-vignette {
+  box-shadow: inset 0 0 180px 70px var(--zen-vignette, rgba(0, 0, 0, 0.95));
+}
+@media (max-width: 768px) {
+  .screen-vignette {
+    box-shadow: inset 0 0 70px 14px var(--zen-vignette, rgba(0, 0, 0, 0.6));
+  }
+}
+@media print {
+  .screen-vignette {
+    display: none !important;
+    box-shadow: none !important;
+  }
+}
+
 /* Mermaid measures label boxes synchronously; a non-zero transition-duration makes
    getBoundingClientRect() return mid-transition sizes and inflates the Dagre layout. */
 [data-perf="lite"] [id^="dmermaid"],

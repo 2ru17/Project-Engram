@@ -34,13 +34,13 @@ export function ToriiPillarBorders() {
   return (
     <>
       <div
-        className="pointer-events-none fixed bottom-0 left-[10px] top-0 z-[35] hidden w-10 flex-col items-center justify-between py-8 opacity-40 lg:flex"
+        className="pointer-events-none fixed bottom-0 left-[10px] top-0 z-[35] hidden w-10 flex-col items-center justify-between py-8 opacity-40 lg:flex print:hidden"
         aria-hidden="true"
       >
         {borderSVG}
       </div>
       <div
-        className="pointer-events-none fixed bottom-0 right-[10px] top-0 z-[35] hidden w-10 -scale-x-100 flex-col items-center justify-between py-8 opacity-40 lg:flex"
+        className="pointer-events-none fixed bottom-0 right-[10px] top-0 z-[35] hidden w-10 -scale-x-100 flex-col items-center justify-between py-8 opacity-40 lg:flex print:hidden"
         aria-hidden="true"
       >
         {borderSVG}
