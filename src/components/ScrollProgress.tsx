@@ -7,7 +7,7 @@ export function ScrollProgress() {
 
   return (
     <motion.div
-      className="pointer-events-none fixed left-0 top-0 right-0 z-[100] h-[2px] origin-left bg-[var(--zen-cyan)]"
+      className="pointer-events-none fixed left-0 top-0 right-0 z-[100] h-[2px] origin-left bg-[var(--zen-cyan)] print:hidden"
       style={{
         scaleX: scrollYProgress,
         boxShadow: "var(--universe-progress-glow, none)",

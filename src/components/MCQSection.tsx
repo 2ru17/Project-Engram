@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { useTheme } from "@/components/ThemeProvider";
 
 export interface MCQItem {
   id: number;
@@ -19,6 +20,7 @@ interface MCQSectionProps {
 export function MCQSection({ items, renderMarkdown }: MCQSectionProps) {
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, string>>({});
   const [showExplanations, setShowExplanations] = useState<Record<number, boolean>>({});
+  const { universe } = useTheme();
 
   const handleSelect = (questionId: number, optionKey: string) => {
     setSelectedAnswers((prev) => ({ ...prev, [questionId]: optionKey }));
@@ -35,7 +37,7 @@ export function MCQSection({ items, renderMarkdown }: MCQSectionProps) {
           className="text-xs font-mono tracking-[0.3em] text-[var(--zen-cyan)] uppercase block mb-1 font-semibold"
           style={{ fontFamily: "var(--font-zen-display, serif)" }}
         >
-          CONFIRMATION // 理解度の確認
+          {universe === "cyber-zen" ? "CONFIRMATION // 理解度の確認" : "CONFIRMATION // SELF-ASSESSMENT"}
         </span>
         <h3
           className="text-xl sm:text-2xl font-semibold tracking-wider text-[var(--zen-snow)] uppercase"
@@ -58,7 +60,7 @@ export function MCQSection({ items, renderMarkdown }: MCQSectionProps) {
           return (
             <div
               key={item.id}
-              className="p-6 sm:p-7 bg-[var(--zen-card)] border border-[var(--zen-border)] shadow-xl relative rounded-sm"
+              className="universe-card mcq-card p-6 sm:p-7 bg-[var(--zen-card)] border border-[var(--zen-border)] shadow-xl relative rounded-sm break-inside-avoid"
             >
               {/* Question Number & Text with high contrast */}
               <div className="mb-5 flex items-start gap-3">
@@ -125,7 +127,7 @@ export function MCQSection({ items, renderMarkdown }: MCQSectionProps) {
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                    className="overflow-hidden mt-6"
+                    className="overflow-hidden mt-6 print:hidden"
                   >
                     <div
                       className={`p-5 rounded border ${
@@ -150,6 +152,16 @@ export function MCQSection({ items, renderMarkdown }: MCQSectionProps) {
                   </motion.div>
                 )}
               </AnimatePresence>
+
+              {/* Print-Only Answer Key Block (Hidden when data-print-hide-answers="true") */}
+              <div className="hidden print:block mcq-print-explanation mt-4 pt-3 border-t border-[var(--zen-border)] text-xs">
+                <div className="font-mono font-bold text-[var(--zen-cyan)] uppercase mb-1">
+                  ANSWER KEY: {item.answerKey}
+                </div>
+                <div className="text-[var(--zen-snow)] leading-relaxed">
+                  {renderMarkdown ? renderMarkdown(item.explanation, false) : item.explanation}
+                </div>
+              </div>
             </div>
           );
         })}
