@@ -51,9 +51,9 @@ $ A + B = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix} $
 
 ## Multiple Choice Questions
 
-1. According to the document's definitions, what do matrix and vector operations serve as in linear algebra?
-    - **A)** Advanced theoretical abstractions.
-    - **B)** Essential building blocks for linear algebra operations.
+1. In 3-dimensional Euclidean space $\mathbb{R}^3$, what algebraic role do vector addition and scalar multiplication play?
+    - **A)** Advanced theoretical abstractions without geometric meaning.
+    - **B)** Fundamental linear operations satisfying closure, commutativity, associativity, and distributivity.
     - **C)** Outdated methods for solving calculus problems.
     - **D)** Substitutes for Gaussian elimination.
 
@@ -71,7 +71,7 @@ $ A + B = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix} $
 
 ### Answer Key & Explanations
 
-1. **B**. The key definitions section explicitly states that matrix and vector operations are the "essential building blocks for linear algebra operations."
+1. **B**. Vector addition and scalar multiplication form the axiomatic algebraic foundation of Euclidean space $\mathbb{R}^3$, providing linear combination closure and geometric vector translation.
 2. **C**. The text describes that linear equations can be represented as the matrix-vector multiplication equation $Ax = b$.
 3. **A**. The theoretical framework explains that employing these methods allows us to understand the properties of linear equations and their underlying structures.
 

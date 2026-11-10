@@ -55,7 +55,7 @@ If A is symmetric, it must be a square matrix (since A and A⊤ must have the sa
     - **C)** $a_{ij} = a_{ji}$ for all indices $i, j$
     - **D)** $a_{ii} = 1$ for all indices $i$
 
-3. According to the notes, which of the following matrix expressions always results in a symmetric matrix, regardless of the original dimensions of matrix $A$?
+3. For any real $m \times n$ matrix $A$, which of the following matrix expressions is guaranteed to yield a symmetric matrix?
     - **A)** $A - A^T$
     - **B)** $A^T A$ and $A A^T$
     - **C)** $A^2$

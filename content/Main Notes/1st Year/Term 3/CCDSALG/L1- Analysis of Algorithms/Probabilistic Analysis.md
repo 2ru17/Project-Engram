@@ -59,7 +59,7 @@ status: completed
     - **C)** Average-case assumes a distribution over inputs; probabilistic analysis can also study randomized algorithms for ANY input.
     - **D)** Probabilistic analysis only applies to worst-case inputs.
 
-3. Which of the following is a common application of probabilistic analysis mentioned in the notes?
+3. Which of the following is a primary application of probabilistic analysis in algorithm design?
     - **A)** Analyzing the exact lower bound of Merge Sort.
     - **B)** Analyzing the expected height of a randomly built binary search tree.
     - **C)** Analyzing the space complexity of an array.

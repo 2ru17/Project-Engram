@@ -88,7 +88,7 @@ Example: If $$A=\begin{bmatrix}
     - **C)** A row matrix
     - **D)** A singular matrix
 
-5. According to the note, what specific role does the zero matrix $O$ play in matrix addition?
+5. What algebraic role does the zero matrix $O$ play under matrix addition?
     - **A)** It acts as the multiplicative identity.
     - **B)** It acts as the additive identity, where $A + O = A$.
     - **C)** It inverses the matrix it is added to.

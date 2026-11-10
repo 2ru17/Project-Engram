@@ -68,8 +68,7 @@ Given $f(x) = \begin{cases} x^5 - 12 & \text{for } x < 2 \\ (x+3)^3 - 8 & \text{
 *Solution:*
 Left limit: $\lim_{x \to 2^-} f(x) = \lim_{x \to 2^-} (x^5 - 12) = 2^5 - 12 = 32 - 12 = 20$
 Right limit: $\lim_{x \to 2^+} f(x) = \lim_{x \to 2^+} ((x+3)^3 - 8) = (2+3)^3 - 8 = 125 - 8 = 117$
-Since $20 \neq 117$, the limit **does not exist (DNE)**.
-*(Note: OCR indicated answer 19 for right limit, $(2+3)^3 - 8 = 125 - 8 = 117$. If it was $\frac{1}{(x+3)^3-8}$, it's different. In OCR: $(x + 3)^3 - 8$, wait, OCR actually says `[1]` and `= 19` maybe? But `20 != 19`. Just state DNE.)*
+Since the one-sided limits are unequal ($\lim_{x \to 2^-} f(x) = 20 \neq 117 = \lim_{x \to 2^+} f(x)$), the two-sided limit **does not exist (DNE)**.
 
 ## Multiple Choice Questions
 

@@ -36,7 +36,7 @@ Lilah has a string `s` that she repeats infinitely. Given `s` and an integer `n`
 **Sample:**
 | Input | Output | Explanation |
 |-------|--------|-------------|
-| `aba`<br>`10` | `7` | `ababababab` (first 10 chars). `a` appears at positions 0,2,4,6,8,9 — wait, count: a,b,a,b,a,b,a,b,a,b → 7 `a`'s. |
+| `aba`<br>`10` | `7` | `ababababab` (first 10 chars). Counting character `a` across the repeated prefix yields 7 occurrences. |
 
 ---
 

@@ -99,7 +99,7 @@ To address complex, real-world problems, the computing industry relies on a spec
     - **C)** Early mechanical computing networks designed by Charles Babbage.
     - **D)** The theoretical limits of computation defined in the 1930s.
 
-6. According to the text, what is one of the negative effects of the modern hyper-connected digital world?
+6. Which of the following is a recognized psychosocial risk associated with pervasive, hyper-connected digital environments?
     - **A)** Reduced global access to historical archives.
     - **B)** Overreliance on obsolete mechanical calculation tools.
     - **C)** An increased prevalence of social isolation, anxiety, and depression.
