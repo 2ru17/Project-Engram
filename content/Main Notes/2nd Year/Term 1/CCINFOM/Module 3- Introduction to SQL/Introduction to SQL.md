@@ -20,6 +20,10 @@ status: completed
 ## Overview
 Structured Query Language (SQL) serves as the universal vernacular for interacting with Relational Database Management Systems (RDBMS). It is a comprehensive standard that specifies the exact syntax and semantics required to define data structures, manipulate stored information, and exert rigorous control over data access. Understanding SQL is essential for any database practitioner, as it forms the bedrock for communicating with complex data repositories, enabling everything from structural database design to intricate data analysis.
 
+> [!simulator] Interactive SQL Query Optimizer
+> Translate SQL expressions into relational algebra trees and compare index scan vs table scan costs:
+> [Launch Relational Algebra & SQL Query Optimizer](/simulators?id=db-web-lab)
+
 ## Key Definitions
 - **SQL (Structured Query Language)**: The standardized programming language utilized to manage, query, and design relational databases.
 - **DDL (Data Definition Language)**: The subset of SQL commands used to define, modify, or destroy the structural framework of a database (e.g., tables, views, indexes).
@@ -30,7 +34,7 @@ Structured Query Language (SQL) serves as the universal vernacular for interacti
 
 ### SQL Environment Components
 The SQL environment is broadly divided into distinct sub-languages based on their functional purpose:
-1. **Data Definition Language (DDL)**: This includes commands like `CREATE`, `ALTER`, and `DROP`. DDL is strictly concerned with the schema—the blueprints of the database. When you execute a DDL command, you are physically changing the structure of the database rather than the data housed within it.
+1. **Data Definition Language (DDL)**: This includes commands like `CREATE`, `ALTER`, and `DROP`. DDL is strictly concerned with the schema - the blueprints of the database. When you execute a DDL command, you are physically changing the structure of the database rather than the data housed within it.
 2. **Data Manipulation Language (DML)**: Comprising commands such as `SELECT`, `INSERT`, `UPDATE`, and `DELETE`, DML is what users and applications utilize most frequently. It governs the insertion of new records, the modification of existing data, and the execution of queries to retrieve specific datasets.
 3. **Data Control Language (DCL)**: While not the primary focus of initial database modeling, DCL (including `GRANT` and `REVOKE`) is critical for security, determining which users have the authority to view or manipulate data.
 

@@ -21,6 +21,10 @@ status: completed
 
 This document covers basic algorithms for searching a graph: Breadth-First Search (BFS) and Depth-First Search (DFS). BFS explores edges out of a vertex systemically layer by layer and produces a breadth-first tree. DFS explores as deeply as possible along each branch before backtracking.
 
+> [!simulator] Interactive Graph Pathfinding Studio
+> Step through BFS, DFS, Dijkstra, and A* pathfinding heuristics with real-time priority queues:
+> [Launch Graph Traversal & Shortest Path Studio](/simulators?id=algo-visualizer)
+
 ## Important Formulas
 
 **Algorithmic Properties & Complexities:**

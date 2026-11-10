@@ -26,6 +26,10 @@ The primary algorithms discussed include:
 2. **Insertion Sort**: Builds the final sorted array one item at a time by repeatedly taking the next element and inserting it into its correct position among the already-sorted elements.
 3. **Merge Sort**: A divide-and-conquer algorithm that recursively splits the array in half until each sub-array contains a single element, and then merges the sub-arrays in sorted order.
 
+> [!simulator] Interactive Sorting Visualizer & Comparator
+> Step through QuickSort, MergeSort, HeapSort, and InsertionSort with live array bar charts and Big-O complexity counters:
+> [Launch Sorting Algorithms & Complexity Studio](/simulators?id=sorting-bench)
+
 ## Theoretical Framework: Divide-and-Conquer Call Tree
 
 ```mermaid

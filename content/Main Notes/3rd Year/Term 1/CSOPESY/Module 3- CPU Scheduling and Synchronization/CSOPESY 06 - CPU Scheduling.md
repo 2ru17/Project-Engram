@@ -18,6 +18,10 @@ status: completed
 ## Overview
 In a multiprogrammed system, multiple processes reside in memory simultaneously, actively competing for the CPU. The **CPU Scheduler** (Short-Term Scheduler) is the critical operating system component responsible for determining which process in the ready queue gets executed next. Proper scheduling is paramount for maintaining system responsiveness, maximizing CPU utilization, and enforcing fairness among users and processes.
 
+> [!simulator] Interactive Process Scheduler Workbench
+> Simulate FCFS, SJF, Round Robin, and Priority scheduling algorithms with visual Gantt charts and turnaround time calculations:
+> [Launch OS Process Scheduler & Deadlock Banker](/simulators?id=cpu-scheduler)
+
 ## Key Concepts
 
 ### CPU-I/O Burst Cycle

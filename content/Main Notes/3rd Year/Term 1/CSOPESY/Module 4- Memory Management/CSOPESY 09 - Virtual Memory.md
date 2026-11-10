@@ -20,7 +20,11 @@ status: completed
 ## Overview
 Virtual Memory is a revolutionary technique that entirely separates the logical memory (as seen by a process) from the physical memory (the actual RAM hardware). By doing so, a program can possess a virtual address space that is substantially larger than the available physical memory. Only the active portions of the program are loaded into RAM. 
 
-This note covers the mechanisms that make virtual memory possible—specifically **Demand Paging**—and delves into page fault handling, the powerful **Copy-on-Write** optimization, various **Page Replacement Algorithms**, and the catastrophic performance collapse known as **Thrashing**.
+This note covers the mechanisms that make virtual memory possible (specifically **Demand Paging**) and delves into page fault handling, the powerful **Copy-on-Write** optimization, various **Page Replacement Algorithms**, and the catastrophic performance collapse known as **Thrashing**.
+
+> [!simulator] Interactive Page Replacement Studio
+> Step through FIFO, LRU, and Belady's Optimal page replacement algorithms with live frame allocation tables:
+> [Launch Virtual Memory & Page Replacement Studio](/simulators?id=page-replacement)
 
 ## Key Concepts
 

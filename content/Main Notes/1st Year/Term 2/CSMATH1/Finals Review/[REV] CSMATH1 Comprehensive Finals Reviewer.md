@@ -23,12 +23,12 @@ This reviewer consolidates the core concepts of Differential Calculus (CSMATH1):
 
 ```mermaid
 flowchart TD
-    Limits["Limits & Continuity (Epsilon-Delta, L'Hopital)"] --> Deriv["Definition of Derivative: f'(x) = lim (f(x+h)-f(x))/h"]
+    Limits["Limits & Continuity (Epsilon-Delta, L'Hopital)"] --> Deriv["Definition of Derivative: $f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}$"]
     Deriv --> Rules["Differentiation Rules: Product, Quotient, Chain"]
     Rules --> Apps["Applications of Derivatives"]
     Apps --> Rates["Related Rates (Geometric Constraints)"]
     Apps --> Opt["Optimization & Extreme Value Theorem"]
-    Apps --> Curve["Curve Sketching (f', f'' Tests)"]
+    Apps --> Curve["Curve Sketching ($f'$, $f''$ Tests)"]
 ```
 
 ---
@@ -65,8 +65,8 @@ flowchart TD
 ```mermaid
 graph LR
     Constraint["Identify Geometric Constraint (e.g., Perimeter, Area, Volume)"] --> Eliminate["Express Objective Function in Single Variable"]
-    Eliminate --> Differentiate["Differentiate and Set f'(x) = 0"]
-    Differentiate --> Classify["Classify Extrema using Second Derivative Test f''(x)"]
+    Eliminate --> Differentiate["Differentiate and Set $f'(x) = 0$"]
+    Differentiate --> Classify["Classify Extrema using Second Derivative Test $f''(x)$"]
 ```
 
 - **Open-Top Box**: Sheet $L \times W$, cut squares of side $x$: $V(x) = x(L - 2x)(W - 2x)$.

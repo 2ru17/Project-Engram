@@ -15,6 +15,7 @@ import * as prod from "react/jsx-runtime";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { MCQSection, type MCQItem } from "@/components/MCQSection";
+import { SimulatorRenderer } from "@/components/simulators/SimulatorRenderer";
 
 const MermaidBlock = dynamic(() => import("@/components/MermaidBlock"), { ssr: false });
 
@@ -83,6 +84,28 @@ function CodeBlockPre({ children, ...props }: any) {
     };
     const chart = extractText(child.props.children).trim();
     return <MermaidBlock chart={chart} />;
+  }
+
+  const isSimulator =
+    typeof child?.props?.className === "string" &&
+    child.props.className.includes("language-simulator");
+
+  if (isSimulator) {
+    const classStr = child.props.className || "";
+    const match = classStr.match(/language-simulator[:-]([\w-]+)/);
+    const extractText = (node: any): string => {
+      if (typeof node === "string") return node;
+      if (Array.isArray(node)) return node.map(extractText).join("");
+      if (node?.props?.children) return extractText(node.props.children);
+      return "";
+    };
+    const bodyText = extractText(child.props.children).trim();
+    const simId = match ? match[1] : bodyText || "digital-logic";
+    return (
+      <div className="my-8 print:hidden">
+        <SimulatorRenderer simulatorId={simId} />
+      </div>
+    );
   }
 
   const rawCode = (() => {
@@ -233,6 +256,22 @@ const components = {
         </Link>
       );
     }
+
+    if (typeof href === "string" && (href.startsWith("/simulators") || href.includes("/simulators?id="))) {
+      return (
+        <Link
+          href={href}
+          className="inline-flex items-center gap-2 px-3 py-1.5 my-2 rounded-lg border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/10 hover:bg-[var(--zen-cyan)]/25 hover:border-[var(--zen-cyan)] text-[var(--zen-snow)] font-mono text-xs tracking-wider uppercase transition-all shadow-[0_0_12px_rgba(0,229,255,0.15)] group"
+        >
+          <span className="w-2 h-2 rounded-full bg-[var(--zen-cyan)] animate-pulse" />
+          <span className="font-semibold text-[var(--zen-cyan)] group-hover:text-[var(--zen-snow)]">
+            {children}
+          </span>
+          <span className="text-[var(--zen-cyan)] text-xs">↗</span>
+        </Link>
+      );
+    }
+
     return (
       <a
         className="text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] transition-colors underline decoration-[var(--zen-cyan)]/40 underline-offset-4"
@@ -270,7 +309,13 @@ const components = {
       let textColor = "text-[var(--zen-cyan)]";
       let bgColor = "bg-[var(--zen-cyan)]/5";
 
-      if (type === "tip" || type === "summary" || type === "success") {
+      if (type === "simulator" || type === "lab" || type === "workbench") {
+        title = "INTERACTIVE ENGINEERING SIMULATOR // 試作";
+        seal = "試";
+        borderColor = "border-[var(--zen-cyan)]";
+        textColor = "text-[var(--zen-cyan)]";
+        bgColor = "bg-[var(--zen-cyan)]/10";
+      } else if (type === "tip" || type === "summary" || type === "success") {
         title = "ENGINEERING INSIGHT // 知見";
         seal = "知";
         borderColor = "border-[#10B981]";
