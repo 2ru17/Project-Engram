@@ -119,7 +119,7 @@ Perform $(+2) - (+6)$ using $8$-bit 2's complement strings. Equivalent to $(+2) 
 ### Answer Key & Explanations
 
 1. **B**. The binary addition rule states that 1 + 1 = 0 with a carry of 1.
-2. **C**. The note states that subtraction is universally handled by negating the subtrahend (complementing it) and then performing addition: A + (-B).
+2. **C**. In digital arithmetic logic units, binary subtraction is universally executed by taking the two's complement of the subtrahend and adding it to the minuend: $A - B = A + (-B)$.
 3. **B**. In 1's complement addition, a final carry-out bit is added back into the intermediate result, known as an end-around carry.
 4. **C**. The binary subtraction rule states that 0 - 1 = 1 with a borrow of 1 (equivalent to borrowing 2 from the next higher column).
 5. **C**. In 2's complement addition, if there is a final carry-out bit, it is simply discarded.

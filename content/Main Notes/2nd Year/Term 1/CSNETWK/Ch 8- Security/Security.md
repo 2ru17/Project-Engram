@@ -61,8 +61,8 @@ Because RSA exponentiation is computationally intensive, it is typically used on
 1. Choose primes $p = 5$ and $q = 7$.
 2. Compute $n = 5 \times 7 = 35$ and $z = (5-1)(7-1) = 24$.
 3. Choose $e = 5$ (since 5 and 24 are relatively prime).
-4. Find $d$ such that $5d \pmod{24} = 1$. Let's test values: $5 \times 5 = 25 \pmod{24} = 1$. So, $d = 5$. (Wait, the notes used $d=29$ because $29 \times 5 = 145 = 6 \times 24 + 1$). Let's use $d = 29$.
-5. Public key is $(35, 5)$, Private key is $(35, 29)$.
+4. Find private exponent $d$ such that $e \cdot d \equiv 1 \pmod{z}$, which gives $5d \equiv 1 \pmod{24}$. Testing values yields $d = 5$ (or equivalently $d = 29$, since $29 \times 5 = 145 = 6 \times 24 + 1$). Choosing $d = 29$:
+5. Public key is $(n=35, e=5)$, Private key is $(n=35, d=29)$.
 *Encryption:* If message $m = 12$:
 $c = 12^5 \pmod{35} = 248832 \pmod{35} = 17$
 *Decryption:*

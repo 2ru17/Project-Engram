@@ -93,7 +93,7 @@ This is exactly the form handled by the [[Master Theorem]].
     - **C)** $T(n) = 2T(n/2) + 1$
     - **D)** $T(n) = T(n-1) + 1$
 
-5. Which of the following is NOT a classic Divide and Conquer algorithm mentioned in the notes?
+5. Which of the following algorithms is NOT based on the Divide and Conquer paradigm?
     - **A)** Merge Sort
     - **B)** Binary Search
     - **C)** Strassen’s Matrix Multiplication

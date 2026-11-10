@@ -126,7 +126,7 @@ In modern web development, particularly for mobile devices, maximizing available
     - **C)** It triggers the appropriate virtual keyboard on mobile devices, enhancing user experience.
     - **D)** It prevents hackers from accessing the form.
 
-9. Which of the following is an example of a programming language mentioned in the text?
+9. Which of the following is an example of a compiled general-purpose programming language rather than a markup language?
     - **A)** XML
     - **B)** CityGML
     - **C)** XHTML

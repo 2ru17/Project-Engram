@@ -60,7 +60,7 @@ status: completed
     - **C)** For recursive algorithms without base cases
     - **D)** For data structures with occasional costly maintenance operations
 
-4. Which of the following is a common pitfall mentioned in the text?
+4. Which of the following is a common analytical pitfall when evaluating algorithmic complexity?
     - **A)** Applying amortized analysis to single operations instead of sequences
     - **B)** Using recurrences with correct base cases
     - **C)** Focusing heavily on best-case running time

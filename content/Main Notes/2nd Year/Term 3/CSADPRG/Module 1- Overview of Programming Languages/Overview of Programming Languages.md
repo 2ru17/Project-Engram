@@ -76,9 +76,9 @@ The interaction with computers happens through machine language, executed by the
 
 ## Multiple Choice Questions
 
-1. Which of the following describes the skill of programming as discussed in the overview?
+1. Which of the following best defines the core competencies required for programming language proficiency?
     - **A)** Exclusively understanding mathematical formulas
-    - **B)** Developing knowledge in both logic and syntax
+    - **B)** Developing knowledge in both algorithmic logic and syntax rules
     - **C)** Memorizing various machine languages
     - **D)** Learning how to configure hardware systems
 
@@ -130,7 +130,7 @@ The interaction with computers happens through machine language, executed by the
     - **C)** Type Checking
     - **D)** Expressivity
 
-10. Which of the following is an example of operator overloading in Python as mentioned in the text?
+10. In Python, which of the following is a classic example of built-in operator overloading?
     - **A)** The `<<` symbol used for bitwise shift and output stream.
     - **B)** The `+` symbol used for addition and string concatenation.
     - **C)** The `++` operator used for incrementing a variable.
@@ -143,9 +143,9 @@ The interaction with computers happens through machine language, executed by the
 3. **D**. Aliasing is defined as referring to a memory cell using multiple names.
 4. **A**. The Scientific programming domain is driven by simple data structures and intense floating-point computations.
 5. **B**. Feature multiplicity is described as having more than one way to accomplish an operation, which affects readability.
-6. **C**. The text notes that Java checks array indices for reliability, adding to execution cost, whereas C does not, making it faster but potentially less reliable.
+6. **C**. Java enforces runtime array bounds checks for memory safety and reliability, adding execution cost, whereas C omits runtime bounds checks to prioritize raw performance.
 7. **B**. Compilation translates source code to machine language before execution.
-8. **C**. Pure interpretation interprets source code without translation, which the text states is 10 to 100 times slower than compiled systems.
+8. **C**. Pure interpretation decodes and executes source code dynamically at runtime without ahead-of-time translation, typically executing 10 to 100 times slower than compiled native binaries.
 9. **A**. Orthogonality refers to a language having a relatively small set of primitive constructs that can be combined in a small number of ways to build structures.
 10. **B**. In Python, the `+` operator is overloaded to handle both addition and string concatenation, as shown in the examples section.
 

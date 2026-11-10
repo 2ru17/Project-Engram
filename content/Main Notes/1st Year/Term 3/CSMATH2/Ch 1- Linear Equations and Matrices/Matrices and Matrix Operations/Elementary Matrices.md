@@ -75,7 +75,7 @@ Inverse of Ri​+kRj​→Ri​ is Ri​−kRj​→Ri​. **Theorem:** A square
 ### Answer Key & Explanations
 
 1. **C**. An $n \times n$ matrix is an elementary matrix if it is obtained from the identity matrix $I_n$ by performing a single elementary row operation.
-2. **B**. The note states that elementary matrices are always nonsingular (invertible) and their inverses are also elementary matrices.
+2. **B**. Elementary matrices are always nonsingular (invertible), and their inverses are also elementary matrices corresponding to the inverse row operation.
 3. **A**. One of the equivalent statements for a nonsingular square matrix is that it can be expressed as a product of elementary matrices.
 
 ## References & Navigation

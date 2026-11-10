@@ -140,7 +140,7 @@ Java is similar to C++ but has notable differences:
     - **C)** Ada
     - **D)** Java
 
-6. Which of the following is NOT one of the primary benefits of abstraction mentioned in the text?
+6. Which of the following is an Object-Oriented mechanism rather than a direct fundamental benefit of data abstraction?
     - **A)** Reliability
     - **B)** Simplicity
     - **C)** Inheritance
@@ -173,11 +173,11 @@ Java is similar to C++ but has notable differences:
 ### Answer Key & Explanations
 
 1. **B**. Information hiding means the actual data representation is concealed from the user, ensuring manipulation is only done via specified operations.
-2. **C**. The text states user-defined ADTs must have a hidden representation and be contained within a single syntactic unit.
+2. **C**. User-defined ADTs encapsulate data representations within a single syntactic unit while exposing only operational interfaces to client code.
 3. **D**. C++ uses "friend" functions/classes to selectively grant access to private members for specific, unrelated units.
 4. **B**. Unlike C++, Java requires all objects to be heap-allocated and accessed exclusively through reference variables.
 5. **D**. Java uses package scoping, where entities in the same package lacking explicit access modifiers are mutually visible, replacing C++'s "friend" mechanism.
-6. **C**. The benefits of abstraction listed in the text are reliability, simplicity, and flexibility; inheritance is not mentioned.
+6. **C**. The core benefits of data abstraction are reliability, reduced complexity, and implementation flexibility; inheritance is a separate object-oriented code-reuse mechanism.
 7. **B**. Abstraction is defined as a view or representation that includes only the most significant attributes, hiding irrelevant details.
 8. **B**. In C++, instances maintain their own copies of data members, but they all share a single copy of the member functions to conserve memory.
 9. **C**. The text explicitly lists "Packages" as the encapsulation mechanism used in Ada.

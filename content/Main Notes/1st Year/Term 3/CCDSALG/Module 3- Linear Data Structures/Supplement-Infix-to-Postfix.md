@@ -106,7 +106,7 @@ flowchart TD
 
 ### Answer Key & Explanations
 
-1. **B**. The document specifically notes that Dijkstra's Shunting Yard algorithm is the established method for this conversion.
+1. **B**. Dijkstra's Shunting-Yard algorithm is the standard stack-based algorithmic method for this conversion.
 2. **D**. Stacks are perfect for holding operators and operands temporarily while waiting for precedence rules to be resolved.
 3. **A**. In postfix, operators follow their operands. Since addition and subtraction have equal precedence, it evaluates left-to-right: add `1` and `2`, then subtract `3`.
 4. **B**. The parentheses force the addition to happen first. So you push `1` and `2`, apply `+`, and then multiply that result by `3`.

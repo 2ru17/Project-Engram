@@ -172,11 +172,11 @@ while ((ch = getchar()) != EOF) {
 
 ### Answer Key & Explanations
 
-1. **C**. The document defines an expression as a foundational construct used to specify computations, consisting of operators, operands, etc.
+1. **C**. An expression is a fundamental language construct used to specify computations, consisting of operators, operands, parentheses, and function calls.
 2. **B**. Operator precedence defines the rules that dictate the order in which adjacent operators of different precedence levels are evaluated.
 3. **C**. A function side effect occurs when a function modifies one of its parameters or a global variable, potentially altering expression outcomes.
 4. **A**. Overloading refers to using a single operator symbol for multiple purposes, such as using `+` for addition and string concatenation.
-5. **B**. The text states that a widening conversion (e.g., `int` to `float`) is generally safe, unlike a narrowing conversion which is unsafe.
+5. **B**. A widening type conversion (e.g. `int` to `float`) preserves magnitude and is generally safe, unlike a narrowing conversion which can truncate precision or overflow.
 6. **D**. Short-circuit evaluation determines the result without evaluating all operands, improving efficiency and preventing certain runtime errors.
 7. **C**. Fetching an operand before a modifying function call causes side effects, where the result differs depending on the evaluation order.
 8. **C**. Relational expressions compare operands to evaluate to a Boolean value and generally possess lower precedence than arithmetic operators.

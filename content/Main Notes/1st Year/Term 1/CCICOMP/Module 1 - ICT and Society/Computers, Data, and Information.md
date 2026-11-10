@@ -137,7 +137,7 @@ Computers are typically categorized based on their intended use, scale, and proc
 ### Answer Key & Explanations
 
 1. **B**. The note defines a computer as a data processing device that performs four major functions: Input, Process, Output, and Storage.
-2. **C**. The note states that data is a representation of a raw fact with little meaning, while information is data that has been organized or presented in a useful fashion.
+2. **C**. Data represents raw, unorganized facts with minimal standalone meaning, while information is data that has been processed, organized, and presented in a purposeful and useful context.
 3. **D**. Primary storage (RAM) is explicitly described as a volatile storage medium that holds instructions and data for currently running programs, losing contents when powered off.
 4. **A**. Binary is defined as the fundamental language of computers, representing off/on electrical states with 0s and 1s.
 5. **B**. A Kilobyte (KB) is defined as exactly 1024 bytes.
