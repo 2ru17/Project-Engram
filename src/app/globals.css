@@ -469,7 +469,6 @@ html[data-universe="broken-grid"] .universe-card:hover {
     box-shadow: none !important;
   }
 }
-
 /* Mermaid measures label boxes synchronously; a non-zero transition-duration makes
    getBoundingClientRect() return mid-transition sizes and inflates the Dagre layout. */
 [data-perf="lite"] [id^="dmermaid"],
@@ -620,7 +619,7 @@ html[data-universe="broken-grid"] .universe-card:hover {
   box-sizing: border-box !important;
 }
 
-/* ─── PHASE 4: DUAL EXPORT ENGINE (@media print) ─────────────── */
+/* --- PHASE 4: DUAL EXPORT ENGINE (@media print) --- */
 @media print {
   @page {
     size: A4 portrait;
