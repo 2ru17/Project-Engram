@@ -477,6 +477,7 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
           }
         }
 
+        // Clean root svg dimensions safely
         svgEl.removeAttribute("height");
         svgEl.removeAttribute("width");
         svgEl.style.maxWidth = `min(100%, ${Math.ceil(intrinsicWidth)}px)`;
