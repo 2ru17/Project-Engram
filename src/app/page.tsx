@@ -195,8 +195,8 @@ export default function HomePage() {
       {universe === "neo-brutalism" && (
         <section className="relative pt-10 pb-16 px-4 sm:px-8 max-w-7xl mx-auto">
           {/* Brutalist Ticker Banner */}
-          <div className="w-full border-[3px] border-[#0A0A0A] bg-[#FFDE59] text-[#0A0A0A] px-4 py-2 mb-8 shadow-[5px_5px_0px_#0A0A0A] flex flex-wrap items-center justify-between gap-2 font-mono text-xs font-bold uppercase tracking-wider">
-            <span>SYS.ENGRAM // V2.0 BRUTALIST EDITION</span>
+          <div className="w-full border-[3px] border-[#0A0A0A] bg-[#0A0A0A] text-[#F4F3EE] px-4 py-2 mb-8 shadow-[5px_5px_0px_#C5221F] flex flex-wrap items-center justify-between gap-2 font-mono text-xs font-bold uppercase tracking-wider">
+            <span>SYS.ENGRAM // V2.0 BAUHAUS EDITION</span>
             <span>25 COURSES // 539 MONOGRAPHS // ZERO ACCOUNTS</span>
             <span>OPEN SOURCE MIT</span>
           </div>
@@ -205,7 +205,7 @@ export default function HomePage() {
             {/* Left Brutalist Headline Block */}
             <div className="lg:col-span-8 border-[3px] border-[#0A0A0A] bg-[#FFFFFF] p-8 sm:p-12 shadow-[8px_8px_0px_#0A0A0A] flex flex-col justify-between">
               <div>
-                <div className="inline-block bg-[#FF4D00] text-[#FFFFFF] border-[2px] border-[#0A0A0A] px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest mb-6 shadow-[3px_3px_0px_#0A0A0A]">
+                <div className="inline-block bg-[#C5221F] text-[#FFFFFF] border-[2px] border-[#0A0A0A] px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest mb-6 shadow-[3px_3px_0px_#0A0A0A]">
                   COMPUTER SCIENCE ARCHIVE &amp; TOPOLOGY
                 </div>
                 <h1 className="text-5xl sm:text-7xl font-black uppercase tracking-tight text-[#0A0A0A] leading-[0.95] mb-6">
@@ -213,7 +213,7 @@ export default function HomePage() {
                   <br />
                   ENGRAM.
                 </h1>
-                <p className="font-mono text-sm sm:text-base text-[#111111] max-w-2xl leading-relaxed border-l-[4px] border-[#FF4D00] pl-4">
+                <p className="font-mono text-sm sm:text-base text-[#111111] max-w-2xl leading-relaxed border-l-[4px] border-[#C5221F] pl-4">
                   Unabridged Computer Science monographs, relational knowledge graph, and interactive simulators across Systems, Theory, Security, and Software Engineering.
                 </p>
               </div>
@@ -221,13 +221,13 @@ export default function HomePage() {
               <div className="mt-10 pt-6 border-t-[3px] border-[#0A0A0A] flex flex-wrap items-center gap-4">
                 <Link
                   href="/notes?view=graph"
-                  className="px-6 py-3.5 bg-[#FF4D00] hover:bg-[#FFDE59] text-[#FFFFFF] hover:text-[#0A0A0A] border-[3px] border-[#0A0A0A] font-mono text-xs font-bold uppercase tracking-widest shadow-[4px_4px_0px_#0A0A0A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#0A0A0A] transition-all"
+                  className="px-6 py-3.5 bg-[#C5221F] hover:bg-[#0A0A0A] text-[#FFFFFF] border-[3px] border-[#0A0A0A] font-mono text-xs font-bold uppercase tracking-widest shadow-[4px_4px_0px_#0A0A0A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#0A0A0A] transition-all"
                 >
                   LAUNCH KNOWLEDGE GRAPH →
                 </Link>
                 <Link
                   href="/notes?view=directory"
-                  className="px-6 py-3.5 bg-[#FFFFFF] hover:bg-[#FFDE59] text-[#0A0A0A] border-[3px] border-[#0A0A0A] font-mono text-xs font-bold uppercase tracking-widest shadow-[4px_4px_0px_#0A0A0A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#0A0A0A] transition-all"
+                  className="px-6 py-3.5 bg-[#FFFFFF] hover:bg-[#F4F3EE] text-[#0A0A0A] border-[3px] border-[#0A0A0A] font-mono text-xs font-bold uppercase tracking-widest shadow-[4px_4px_0px_#0A0A0A] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#0A0A0A] transition-all"
                 >
                   BROWSE COURSE ARCHIVE →
                 </Link>
@@ -236,15 +236,15 @@ export default function HomePage() {
 
             {/* Right Brutalist Telemetry Stack */}
             <div className="lg:col-span-4 flex flex-col gap-6">
-              <div className="flex-1 border-[3px] border-[#0A0A0A] bg-[#FFDE59] p-6 shadow-[8px_8px_0px_#0A0A0A] flex flex-col justify-between text-[#0A0A0A]">
-                <span className="font-mono text-xs font-bold uppercase tracking-widest border-b-[2px] border-[#0A0A0A] pb-2">
+              <div className="flex-1 border-[3px] border-[#0A0A0A] bg-[#FFFFFF] p-6 shadow-[8px_8px_0px_#0A0A0A] flex flex-col justify-between text-[#0A0A0A]">
+                <span className="font-mono text-xs font-bold uppercase tracking-widest border-b-[2px] border-[#0A0A0A] pb-2 text-[#C5221F]">
                   INDEX METRICS // LIVE
                 </span>
                 <div className="my-4">
-                  <div className="text-5xl font-black font-mono leading-none">
+                  <div className="text-5xl font-black font-mono leading-none text-[#0A0A0A]">
                     539
                   </div>
-                  <div className="font-mono text-xs font-bold uppercase mt-1">
+                  <div className="font-mono text-xs font-bold uppercase mt-1 text-[#2D2D2A]">
                     ACADEMIC MONOGRAPHS
                   </div>
                 </div>
@@ -254,8 +254,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="border-[3px] border-[#0A0A0A] bg-[#0A0A0A] text-[#F4F3EE] p-6 shadow-[8px_8px_0px_#FF4D00]">
-                <span className="font-mono text-[11px] text-[#FFDE59] uppercase tracking-widest block mb-2">
+              <div className="border-[3px] border-[#0A0A0A] bg-[#0A0A0A] text-[#F4F3EE] p-6 shadow-[8px_8px_0px_#C5221F]">
+                <span className="font-mono text-[11px] text-[#C5221F] uppercase tracking-widest block mb-2 font-bold">
                   MANIFESTO // DIRECTIVE
                 </span>
                 <p className="font-mono text-sm font-bold leading-snug">
@@ -311,8 +311,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 relative">
             {/* Asymmetric Left Blueprint Frame */}
             <div className="lg:col-span-8 border border-[#141413]/40 bg-[#F4F1EA] p-8 sm:p-14 relative z-10 shadow-[6px_6px_0px_rgba(20,20,19,0.12)]">
-              <div className="absolute -top-3 left-6 bg-[#D9381E] text-[#FFFFFF] px-2.5 py-0.5 font-mono text-[10px] tracking-widest uppercase font-bold">
-                FIG. 00 // ARCHITECTURAL BLUEPRINT
+              <div className="absolute -top-3 left-6 bg-[#0D5C3A] text-[#FFFFFF] px-2.5 py-0.5 font-mono text-[10px] tracking-widest uppercase font-bold">
+                FIG. 00 // ARCHITECTURAL DRAFTING
               </div>
               <div className="flex items-center justify-between text-[10px] font-mono text-[#545049] mb-8 pb-3 border-b border-[#141413]/20">
                 <span>COORD: X-00.0 // Y-14.2</span>
@@ -322,7 +322,7 @@ export default function HomePage() {
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-[-0.03em] text-[#0A0A09] leading-[0.96] mb-6">
                 PROJECT
                 <br />
-                <span className="text-[#D9381E]">ENGRAM</span> // ARCHIVE
+                <span className="text-[#0D5C3A]">ENGRAM</span> // ARCHIVE
               </h1>
 
               <p className="text-sm sm:text-base text-[#1A1917] max-w-xl leading-relaxed font-mono">
@@ -331,8 +331,8 @@ export default function HomePage() {
             </div>
 
             {/* Asymmetric Overlapping Right Specification Block */}
-            <div className="lg:col-span-5 lg:-ml-12 lg:mt-16 border border-[#141413] bg-[#EAE6DF] p-7 sm:p-9 relative z-20 shadow-[8px_8px_0px_#D9381E] flex flex-col justify-between">
-              <div className="flex items-center justify-between text-[10px] font-mono text-[#D9381E] font-bold uppercase tracking-widest mb-4">
+            <div className="lg:col-span-5 lg:-ml-12 lg:mt-16 border border-[#141413] bg-[#EAE6DF] p-7 sm:p-9 relative z-20 shadow-[8px_8px_0px_#0D5C3A] flex flex-col justify-between">
+              <div className="flex items-center justify-between text-[10px] font-mono text-[#0D5C3A] font-bold uppercase tracking-widest mb-4">
                 <span>SPECIFICATION // V2</span>
                 <span>[ DAU-GRID ]</span>
               </div>
@@ -355,13 +355,13 @@ export default function HomePage() {
               <div className="pt-4 flex flex-wrap gap-3">
                 <Link
                   href="/notes?view=graph"
-                  className="px-4 py-2.5 bg-[#D9381E] text-[#FFFFFF] font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#141413] transition-colors"
+                  className="px-4 py-2.5 bg-[#0D5C3A] text-[#FFFFFF] font-mono text-xs uppercase tracking-widest font-bold hover:bg-[#141413] transition-colors"
                 >
                   [ 01. TOPOLOGY ]
                 </Link>
                 <Link
                   href="/notes?view=directory"
-                  className="px-4 py-2.5 border border-[#141413] bg-[#F4F1EA] text-[#141413] font-mono text-xs uppercase tracking-widest font-bold hover:border-[#D9381E] hover:text-[#D9381E] transition-colors"
+                  className="px-4 py-2.5 border border-[#141413] bg-[#F4F1EA] text-[#141413] font-mono text-xs uppercase tracking-widest font-bold hover:border-[#0D5C3A] hover:text-[#0D5C3A] transition-colors"
                 >
                   [ 02. DIRECTORY ]
                 </Link>
@@ -671,18 +671,18 @@ export default function HomePage() {
           >
             {/* Neo-Brutalist Window Header Bar */}
             {universe === "neo-brutalism" && (
-              <div className="w-full px-5 py-2.5 bg-[#FFDE59] border-b-[3px] border-[#0A0A0A] flex items-center justify-between font-mono text-xs font-bold text-[#0A0A0A]">
+              <div className="w-full px-5 py-2.5 bg-[#0A0A0A] border-b-[3px] border-[#0A0A0A] flex items-center justify-between font-mono text-xs font-bold text-[#F4F3EE]">
                 <span>[ SYS.01 // TOPOLOGY.EXE ]</span>
                 <div className="flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 border-[2px] border-[#0A0A0A] bg-[#FFFFFF]" />
-                  <span className="w-2.5 h-2.5 border-[2px] border-[#0A0A0A] bg-[#FF4D00]" />
+                  <span className="w-2.5 h-2.5 border-[2px] border-[#0A0A0A] bg-[#C5221F]" />
                 </div>
               </div>
             )}
 
             {/* Broken-Grid Protruding Figure Label */}
             {universe === "broken-grid" && (
-              <div className="absolute -top-3 left-6 bg-[#D9381E] text-[#FFFFFF] px-2.5 py-0.5 font-mono text-[10px] tracking-widest uppercase font-bold z-30">
+              <div className="absolute -top-3 left-6 bg-[#0D5C3A] text-[#FFFFFF] px-2.5 py-0.5 font-mono text-[10px] tracking-widest uppercase font-bold z-30">
                 FIG. 01 // FORCE-DIRECTED TOPOLOGY
               </div>
             )}
@@ -718,7 +718,7 @@ export default function HomePage() {
                 <BorderBeam
                   size={120}
                   duration={8}
-                  colorFrom={universe === "parallax" ? "#E5A93C" : "#00E5FF"}
+                  colorFrom={universe === "parallax" ? "#8B5CF6" : "#00E5FF"}
                   colorTo="var(--zen-slate-edge)"
                 />
               </>
@@ -753,7 +753,7 @@ export default function HomePage() {
                   <span
                     className={`inline-block px-2.5 py-1 text-[10px] font-mono tracking-widest uppercase mb-4 font-semibold ${
                       universe === "neo-brutalism"
-                        ? "bg-[#0A0A0A] text-[#FFDE59] border-2 border-[#0A0A0A]"
+                        ? "bg-[#0A0A0A] text-[#FFFFFF] border-2 border-[#0A0A0A]"
                         : "text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/40"
                     }`}
                   >
@@ -777,7 +777,7 @@ export default function HomePage() {
                   href="/notes?view=graph"
                   className={
                     universe === "neo-brutalism"
-                      ? "inline-flex items-center gap-3 px-6 py-3 bg-[#FF4D00] hover:bg-[#0A0A0A] text-[#FFFFFF] border-[3px] border-[#0A0A0A] text-xs font-mono font-bold tracking-widest uppercase shadow-[4px_4px_0px_#0A0A0A] transition-all"
+                      ? "inline-flex items-center gap-3 px-6 py-3 bg-[#C5221F] hover:bg-[#0A0A0A] text-[#FFFFFF] border-[3px] border-[#0A0A0A] text-xs font-mono font-bold tracking-widest uppercase shadow-[4px_4px_0px_#0A0A0A] transition-all"
                       : universe === "minimalism"
                       ? "inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[var(--zen-snow)] pb-1 border-b border-[var(--zen-snow)] hover:opacity-60 transition-opacity"
                       : "inline-flex items-center gap-3 px-6 py-3 border border-[var(--zen-border)] bg-[var(--zen-void)] hover:border-[var(--zen-cyan)] text-xs font-mono tracking-widest text-[var(--zen-snow)] hover:text-[var(--zen-cyan)] transition-all"
@@ -806,18 +806,18 @@ export default function HomePage() {
           >
             {/* Neo-Brutalist Window Header Bar */}
             {universe === "neo-brutalism" && (
-              <div className="w-full px-5 py-2.5 bg-[#FF4D00] border-b-[3px] border-[#0A0A0A] flex items-center justify-between font-mono text-xs font-bold text-[#FFFFFF]">
+              <div className="w-full px-5 py-2.5 bg-[#C5221F] border-b-[3px] border-[#0A0A0A] flex items-center justify-between font-mono text-xs font-bold text-[#FFFFFF]">
                 <span>[ SYS.02 // ARCHIVE.DB ]</span>
                 <div className="flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 border-[2px] border-[#0A0A0A] bg-[#FFFFFF]" />
-                  <span className="w-2.5 h-2.5 border-[2px] border-[#0A0A0A] bg-[#FFDE59]" />
+                  <span className="w-2.5 h-2.5 border-[2px] border-[#0A0A0A] bg-[#0A0A0A]" />
                 </div>
               </div>
             )}
 
             {/* Broken-Grid Protruding Figure Label */}
             {universe === "broken-grid" && (
-              <div className="absolute -top-3 left-6 bg-[#141413] text-[#FFFFFF] px-2.5 py-0.5 font-mono text-[10px] tracking-widest uppercase font-bold z-30">
+              <div className="absolute -top-3 left-6 bg-[#0D5C3A] text-[#FFFFFF] px-2.5 py-0.5 font-mono text-[10px] tracking-widest uppercase font-bold z-30">
                 FIG. 02 // STRUCTURED COURSE INDEX
               </div>
             )}
@@ -852,7 +852,7 @@ export default function HomePage() {
                 <BorderBeam
                   size={120}
                   duration={8}
-                  colorFrom={universe === "parallax" ? "#E5A93C" : "#00E5FF"}
+                  colorFrom={universe === "parallax" ? "#8B5CF6" : "#00E5FF"}
                   colorTo="var(--zen-slate-edge)"
                   delay={4}
                 />
@@ -911,7 +911,7 @@ export default function HomePage() {
                   href="/notes?view=directory"
                   className={
                     universe === "neo-brutalism"
-                      ? "inline-flex items-center gap-3 px-6 py-3 bg-[#FFDE59] hover:bg-[#0A0A0A] text-[#0A0A0A] hover:text-[#FFFFFF] border-[3px] border-[#0A0A0A] text-xs font-mono font-bold tracking-widest uppercase shadow-[4px_4px_0px_#0A0A0A] transition-all"
+                      ? "inline-flex items-center gap-3 px-6 py-3 bg-[#0A0A0A] hover:bg-[#C5221F] text-[#FFFFFF] border-[3px] border-[#0A0A0A] text-xs font-mono font-bold tracking-widest uppercase shadow-[4px_4px_0px_#C5221F] transition-all"
                       : universe === "minimalism"
                       ? "inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[var(--zen-snow)] pb-1 border-b border-[var(--zen-snow)] hover:opacity-60 transition-opacity"
                       : "inline-flex items-center gap-3 px-6 py-3 border border-[var(--zen-border)] bg-[var(--zen-void)] hover:border-[var(--zen-cyan)] text-xs font-mono tracking-widest text-[var(--zen-snow)] hover:text-[var(--zen-cyan)] transition-all"
@@ -1007,7 +1007,7 @@ export default function HomePage() {
               className={`px-4 py-2 text-xs font-mono tracking-wider transition-all rounded-md border flex items-center gap-2 ${
                 activeDomain === tab.id
                   ? universe === "neo-brutalism"
-                    ? "border-[2px] border-[#0A0A0A] bg-[#FFDE59] text-[#0A0A0A] font-bold shadow-[3px_3px_0px_#0A0A0A]"
+                    ? "border-[2px] border-[#0A0A0A] bg-[#C5221F] text-[#FFFFFF] font-bold shadow-[3px_3px_0px_#0A0A0A]"
                     : "border-[var(--zen-cyan)] text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/10 font-semibold"
                   : "border-[var(--zen-border)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] bg-[var(--zen-card)]"
               }`}
@@ -1085,7 +1085,7 @@ export default function HomePage() {
                         }
                       >
                         {universe === "neo-brutalism" && (
-                          <div className="px-5 py-1.5 bg-[#FFDE59] border-b-[2px] border-[#0A0A0A] flex items-center justify-between font-mono text-[10px] font-bold text-[#0A0A0A]">
+                          <div className="px-5 py-1.5 bg-[#0A0A0A] border-b-[2px] border-[#0A0A0A] flex items-center justify-between font-mono text-[10px] font-bold text-[#FFFFFF]">
                             <span>MODULE // {formattedIdx}</span>
                             <span>{course.categoryLabel.toUpperCase()}</span>
                           </div>
@@ -1187,7 +1187,7 @@ export default function HomePage() {
                             <div
                               className={
                                 universe === "neo-brutalism"
-                                  ? "inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#FF4D00] text-[#FFFFFF] border-[2px] border-[#0A0A0A] text-xs font-mono font-bold tracking-wider"
+                                  ? "inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#C5221F] text-[#FFFFFF] border-[2px] border-[#0A0A0A] text-xs font-mono font-bold tracking-wider"
                                   : "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[var(--zen-border)] bg-[var(--zen-void)] group-hover:border-[var(--zen-cyan)] group-hover:bg-[var(--zen-cyan)] group-hover:text-[var(--zen-void)] text-xs font-mono tracking-wider text-[var(--zen-snow)] transition-all duration-200"
                               }
                             >
@@ -1247,7 +1247,7 @@ export default function HomePage() {
                             <span
                               className={`px-2 py-0.5 text-[10px] font-mono tracking-widest font-semibold ${
                                 universe === "neo-brutalism"
-                                  ? "bg-[#0A0A0A] text-[#FFDE59]"
+                                  ? "bg-[#0A0A0A] text-[#FFFFFF]"
                                   : "text-[var(--zen-cyan)] border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/5"
                               }`}
                             >
@@ -1439,7 +1439,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-[11px] text-[var(--zen-ink-muted)]/70 max-w-lg mt-6 leading-relaxed font-mono">
-            Open-source under MIT License. Curated academic monographs for pedagogical and research reference. Zero tracking cookies, zero telemetry.
+            Open-source under MIT License. Curated academic monographs for pedagogical and research reference. Local performance caching and anonymous runtime telemetry enabled.
           </p>
         </div>
       </footer>

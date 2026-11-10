@@ -183,7 +183,7 @@ export default function ExportMenu({
                 className="w-6 h-6 rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] flex items-center justify-center text-[10px] font-mono text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)]"
                 aria-label="Close export menu"
               >
-                ✕
+                [x]
               </button>
             </div>
 

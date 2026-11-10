@@ -156,7 +156,7 @@ export default function ProgressCodeModal() {
                 className="px-2.5 py-1 rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] text-xs font-mono text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] transition-colors"
                 aria-label="Close Study Plan modal"
               >
-                ESC // ✕
+                ESC // [x]
               </button>
             </div>
 

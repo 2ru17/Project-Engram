@@ -7,6 +7,7 @@ import DirectoryView from "./DirectoryView";
 import { useStudyPlan } from "./StudyPlanProvider";
 import { useTheme, UNIVERSE_REGISTRY } from "./ThemeProvider";
 import ExportMenu from "./ExportMenu";
+import { CourseSimulatorDock } from "./simulators/CourseSimulatorDock";
 
 interface TocItem {
   text: string;
@@ -244,7 +245,7 @@ export default function ClientNoteLayout({
                   className="w-7 h-7 rounded flex items-center justify-center border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)] transition-colors text-xs font-mono"
                   aria-label="Close Explorer"
                 >
-                  ✕
+                  [x]
                 </button>
               </div>
               <div className="flex-1 overflow-hidden">
@@ -286,7 +287,7 @@ export default function ClientNoteLayout({
                   title="Collapse Explorer"
                   aria-label="Collapse explorer sidebar"
                 >
-                  ✕
+                  [x]
                 </button>
               </div>
               <div className="flex-1 overflow-hidden">
@@ -322,6 +323,11 @@ export default function ClientNoteLayout({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
+            {courseCode && (
+              <div className="print:hidden">
+                <CourseSimulatorDock courseCode={courseCode} />
+              </div>
+            )}
             {children}
 
             {isMonograph && decodedPath && (

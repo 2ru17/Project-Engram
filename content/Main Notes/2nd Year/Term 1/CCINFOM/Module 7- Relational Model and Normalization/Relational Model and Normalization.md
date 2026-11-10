@@ -20,6 +20,10 @@ status: completed
 ## Key Definitions
  **Relation**: A 2-dimensional table with columns (attributes) and rows (tuples). **Domain**: The allowable values for one or more attributes. **Degree**: The number of attributes (columns) in a relation. **Cardinality**: The number of tuples (rows) in a relation. **Functional Dependency**: The value of one attribute (the determinant) determines the value of another attribute.
 
+> [!simulator] Interactive Normalization & FD Studio
+> Compute attribute closures (X+), test candidate keys, and validate 1NF, 2NF, 3NF, and BCNF decompositions:
+> [Launch Relational Normalization & FD Closure Studio](/simulators?id=relational-normalization)
+
 ## Theoretical Framework
 
 ### Properties of a Relation

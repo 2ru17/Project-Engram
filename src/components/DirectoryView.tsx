@@ -184,7 +184,7 @@ export default function DirectoryView() {
                 className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs font-mono text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)] transition-colors"
                 aria-label="Clear search query"
               >
-                ✕
+                [x]
               </button>
             )}
           </div>

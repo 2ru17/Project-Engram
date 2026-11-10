@@ -23,12 +23,12 @@ This reviewer consolidates Linear Algebra and Matrix Theory (CSMATH2). Core subj
 
 ```mermaid
 flowchart TD
-    SLE["Systems of Linear Equations: Ax = b"] --> ERO["Elementary Row Operations -> REF / RREF"]
-    ERO --> Inverse["Matrix Invertibility: [A | I] -> [I | A^-1]"]
-    ERO --> Det["Determinants: det(A) via Cofactor / Row Ops"]
+    SLE["Systems of Linear Equations: $A\mathbf{x} = \mathbf{b}$"] --> ERO["Elementary Row Operations -> REF / RREF"]
+    ERO --> Inverse["Matrix Invertibility: $[A \mid I] \to [I \mid A^{-1}]$"]
+    ERO --> Det["Determinants: $\det(A)$ via Cofactor / Row Ops"]
     Inverse --> VecSpace["Vector Spaces: Span, Independence, Basis & Rank"]
-    VecSpace --> Eigen["Spectral Theory: det(A - lambda I) = 0 -> Eigenvalues/Eigenvectors"]
-    Eigen --> Diag["Diagonalization: P^-1 A P = D"]
+    VecSpace --> Eigen["Spectral Theory: $\det(A - \lambda I) = 0$"]
+    Eigen --> Diag["Diagonalization: $P^{-1} A P = D$"]
 ```
 
 ---
@@ -50,9 +50,9 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    R1["Row Swap: R_i <-> R_j"] --> E1["Determinant: Multiplies by -1"]
-    R2["Row Scaling: c * R_i"] --> E2["Determinant: Multiplies by c"]
-    R3["Row Addition: R_i + c * R_j -> R_i"] --> E3["Determinant: Unchanged!"]
+    R1["Row Swap: $R_i \leftrightarrow R_j$"] --> E1["Determinant: Multiplies by $-1$"]
+    R2["Row Scaling: $c \cdot R_i$"] --> E2["Determinant: Multiplies by $c$"]
+    R3["Row Addition: $R_i + c R_j \to R_i$"] --> E3["Determinant: Unchanged!"]
 ```
 
 ---

@@ -207,8 +207,8 @@ function parseNoteMetadata(rawContent: string, fileName: string) {
   const cleanBody = withoutFrontmatter
     .replace(/> \[!info\] Document Metadata[\s\S]*?(?=\n\n[^>]|$)/i, "")
     .replace(/##\s+Multiple Choice Questions[\s\S]*$/i, "")
-    .replace(/🏷️\s*Tags:.*?\n/gi, "")
-    .replace(/\*\*🏷️\s*Tags:\*\*.*?\n/gi, "")
+    .replace(/\u{1F3F7}\uFE0F\s*Tags:.*?\n/giu, "")
+    .replace(/\*\*\u{1F3F7}\uFE0F\s*Tags:\*\*.*?\n/giu, "")
     .replace(/[#*`_\[\]>]/g, "")
     .trim();
 

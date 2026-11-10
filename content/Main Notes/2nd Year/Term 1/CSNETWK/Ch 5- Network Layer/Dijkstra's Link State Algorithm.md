@@ -58,13 +58,13 @@ graph LR
 
 ```mermaid
 flowchart TD
-    Init["Initialize:<br/>D(u) = 0; D(v) = infinity for all v != u<br/>N' = {u} (Confirmed shortest path set)"] --> CheckDone{"Is N' == V (All nodes visited)?"}
-    CheckDone -- "No" --> PickMin["Find unvisited node w not in N' with minimum D(w)"]
-    PickMin --> AddN["Add w to N' (D(w) is permanently frozen)"]
-    AddN --> ForNeighbors["For each neighbor v of w not in N':<br/>Evaluate edge relaxation"]
-    ForNeighbors --> RelaxCheck{"D(w) + c(w, v) < D(v)?"}
-    RelaxCheck -- "Yes (Shorter path found)" --> UpdateD["D(v) = D(w) + c(w, v)<br/>p(v) = w (predecessor updated)"]
-    RelaxCheck -- "No (Existing path better)" --> SkipD["Retain previous D(v) and p(v)"]
+    Init["Initialize:<br/>$D(u) = 0$; $D(v) = \infty$ for all $v \ne u$<br/>$N' = \{u\}$ (Confirmed shortest path set)"] --> CheckDone{"Is $N' = V$ (All nodes visited)?"}
+    CheckDone -- "No" --> PickMin["Find unvisited node $w \notin N'$ with minimum $D(w)$"]
+    PickMin --> AddN["Add $w$ to $N'$ ($D(w)$ is permanently frozen)"]
+    AddN --> ForNeighbors["For each neighbor $v$ of $w$ ($v \notin N'$):<br/>Evaluate edge relaxation"]
+    ForNeighbors --> RelaxCheck{"$D(w) + c(w, v) < D(v)$?"}
+    RelaxCheck -- "Yes (Shorter path found)" --> UpdateD["$D(v) = D(w) + c(w, v)$<br/>$p(v) = w$ (predecessor updated)"]
+    RelaxCheck -- "No (Existing path better)" --> SkipD["Retain previous $D(v)$ and $p(v)$"]
     UpdateD --> ForNeighbors
     SkipD --> ForNeighbors
     ForNeighbors -- "All adjacent edges processed" --> CheckDone
@@ -169,11 +169,11 @@ Y $\rightarrow$ Z: Cost is $11 + 8 = 19$. (Old cost 14 is better).
 **Algorithm Tip:** Always explore the node with the _lowest current cost_ first.
 
 ## Common Pitfalls
- Not always expanding the **cheapest unvisited** node next — Dijkstra is a greedy algorithm. Forgetting to update (relax) neighbors when a cheaper path is found through the newly expanded node. Assuming the algorithm works with negative edge weights — it does **not**; use Bellman-Ford instead.
+ Not always expanding the **cheapest unvisited** node next: Dijkstra is a greedy algorithm. Forgetting to update (relax) neighbors when a cheaper path is found through the newly expanded node. Assuming the algorithm works with negative edge weights: it does **not**; use Bellman-Ford instead.
 
 ## Summary
 
-> TL;DR — Dijkstra’s algorithm computes shortest paths from a source by greedily expanding the lowest-cost unvisited node and relaxing its neighbors. It requires non-negative edge weights and runs in $O(n^2)$ or $O(n \log n)$ with a priority queue.
+> TL;DR: Dijkstra's algorithm computes shortest paths from a source by greedily expanding the lowest-cost unvisited node and relaxing its neighbors. It requires non-negative edge weights and runs in $O(n^2)$ or $O(n \log n)$ with a priority queue.
 
 ## Links
  **Related:** - [[Pasted image 20251121093234.png]] **Source / Reference:**

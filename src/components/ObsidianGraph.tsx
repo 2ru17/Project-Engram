@@ -275,9 +275,9 @@ export default function ObsidianGraph() {
   const getNodeColor = useCallback(
     (node: GraphNode) => {
       if (node.tier === "sun") {
-        if (universe === "neo-brutalism") return "#FF4D00";
-        if (universe === "broken-grid") return "#D9381E";
-        if (universe === "parallax") return "#E5A93C";
+        if (universe === "neo-brutalism") return "#C5221F";
+        if (universe === "broken-grid") return "#0D5C3A";
+        if (universe === "parallax") return "#8B5CF6";
         if (universe === "minimalism") return "#111111";
         return isLightSurface ? "#0284C7" : "#00E5FF";
       }
@@ -298,14 +298,14 @@ export default function ObsidianGraph() {
         selectedNode && (selectedNode.id === srcId || selectedNode.id === tgtId);
 
       if (isConnectedToSelect || isConnectedToHover) {
-        if (universe === "neo-brutalism") return "rgba(255, 77, 0, 0.92)";
-        if (universe === "broken-grid") return "rgba(217, 56, 30, 0.92)";
-        if (universe === "parallax") return "rgba(229, 169, 60, 0.92)";
+        if (universe === "neo-brutalism") return "rgba(197, 34, 31, 0.92)";
+        if (universe === "broken-grid") return "rgba(13, 92, 58, 0.92)";
+        if (universe === "parallax") return "rgba(139, 92, 246, 0.92)";
         return isLightSurface ? "rgba(2, 132, 199, 0.85)" : "rgba(0, 229, 255, 0.88)";
       }
 
       if (link.kind === "solar") {
-        return isLightSurface ? "rgba(15, 23, 42, 0.24)" : "rgba(229, 169, 60, 0.28)";
+        return isLightSurface ? "rgba(15, 23, 42, 0.24)" : "rgba(56, 189, 248, 0.28)";
       }
       if (link.kind === "constellation") {
         return isLightSurface ? "rgba(75, 94, 120, 0.34)" : "rgba(0, 229, 255, 0.25)";
@@ -344,13 +344,15 @@ export default function ObsidianGraph() {
       const baseColor = getNodeColor(node);
       const rgb = hexToRgb(baseColor);
 
-      // ─── 1. CENTRAL BLACK HOLE SINGULARITY ("COMPUTER SCIENCE") ──────────────
+      // ─── 1. CENTRAL SIGNATURE DISCIPLINE EMBLEM ("COMPUTER SCIENCE") ──────
       if (node.tier === "sun") {
-        // Draw gravitational orbital guide rings centered on (0,0)
+        // Universal orbital guide rings centered on (0,0)
         ctx.save();
         ctx.strokeStyle = isLightSurface
           ? "rgba(15, 23, 42, 0.16)"
-          : "rgba(0, 229, 255, 0.12)";
+          : (universe as string) === "broken-grid"
+          ? "rgba(0, 220, 255, 0.18)"
+          : "rgba(0, 229, 255, 0.14)";
         ctx.lineWidth = Math.max(0.5, 1 / globalScale);
         ctx.setLineDash([6 / globalScale, 6 / globalScale]);
         [230, 410].forEach((orbitR) => {
@@ -360,93 +362,318 @@ export default function ObsidianGraph() {
         });
         ctx.restore();
 
-        const horizonRadius = isHovered || isSelected ? 21 : 18;
         const primaryRingHex =
           universe === "neo-brutalism"
-            ? "#FF4D00"
+            ? "#C5221F"
             : universe === "broken-grid"
-            ? "#D9381E"
+            ? "#0D5C3A"
             : universe === "parallax"
-            ? "#E5A93C"
+            ? "#8B5CF6"
+            : universe === "minimalism"
+            ? "#18181B"
             : "#00E5FF";
         const secondaryRingHex =
           universe === "parallax"
-            ? "#38BDF8"
+            ? "#C4B5FD"
             : universe === "minimalism"
             ? "#475569"
-            : "#FF7B00";
+            : universe === "broken-grid"
+            ? "#11281F"
+            : "#0A0A0A";
         const primaryRgb = hexToRgb(primaryRingHex);
         const secondaryRgb = hexToRgb(secondaryRingHex);
 
-        // A. Gravitational Lensing Halo (Outer distortion field)
-        const lensGrad = ctx.createRadialGradient(
-          node.x,
-          node.y,
-          horizonRadius * 0.85,
-          node.x,
-          node.y,
-          horizonRadius * 3.6
-        );
-        lensGrad.addColorStop(0, `rgba(${primaryRgb}, 0.65)`);
-        lensGrad.addColorStop(0.35, `rgba(${secondaryRgb}, 0.28)`);
-        lensGrad.addColorStop(0.7, `rgba(${primaryRgb}, 0.08)`);
-        lensGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
-
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, horizonRadius * 3.6, 0, Math.PI * 2);
-        ctx.fillStyle = lensGrad;
-        ctx.fill();
-
-        // B. Outer Einstein Gravitational Lensing Ring
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, horizonRadius * 2.15, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(${primaryRgb}, ${isHovered || isSelected ? 0.55 : 0.3})`;
-        ctx.lineWidth = Math.max(0.8, 1.1 / globalScale);
-        ctx.stroke();
-        ctx.restore();
-
-        // C. Relativistic Tilted Accretion Disk (Back / Lensed Upper Arc + Front Doppler Disk)
         ctx.save();
         ctx.translate(node.x, node.y);
-        ctx.rotate(-Math.PI / 7);
 
-        // Outer relativistic plasma disk
-        ctx.beginPath();
-        ctx.ellipse(0, 0, horizonRadius * 2.75, horizonRadius * 0.72, 0, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(${secondaryRgb}, ${isHovered || isSelected ? 0.85 : 0.6})`;
-        ctx.lineWidth = Math.max(1.8, 3.6 / globalScale);
-        ctx.stroke();
+        // ── EMBLEM A: CYBER-ZEN (Celestial Astrolabe & Hanko Seal) ──
+        if (universe === "cyber-zen") {
+          const coreR = isHovered || isSelected ? 24 : 20;
 
-        // Inner high-velocity accretion stream
-        ctx.beginPath();
-        ctx.ellipse(0, 0, horizonRadius * 2.1, horizonRadius * 0.5, 0, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(${primaryRgb}, 0.9)`;
-        ctx.lineWidth = Math.max(1.2, 2.0 / globalScale);
-        ctx.stroke();
+          // Celestial Glow
+          const auraGrad = ctx.createRadialGradient(0, 0, coreR * 0.5, 0, 0, coreR * 3.2);
+          auraGrad.addColorStop(0, "rgba(0, 229, 255, 0.45)");
+          auraGrad.addColorStop(0.5, "rgba(230, 57, 70, 0.20)");
+          auraGrad.addColorStop(1, "rgba(0, 0, 0, 0)");
+          ctx.beginPath();
+          ctx.arc(0, 0, coreR * 3.2, 0, Math.PI * 2);
+          ctx.fillStyle = auraGrad;
+          ctx.fill();
+
+          // Outer Calibrated Astrolabe Ring
+          ctx.beginPath();
+          ctx.arc(0, 0, coreR * 2.2, 0, Math.PI * 2);
+          ctx.strokeStyle = "rgba(0, 229, 255, 0.65)";
+          ctx.lineWidth = Math.max(1, 1.4 / globalScale);
+          ctx.stroke();
+
+          // Astrolabe 12 Degree Graduation Ticks
+          for (let i = 0; i < 12; i++) {
+            const angle = (i * Math.PI) / 6;
+            const innerR = coreR * 1.95;
+            const outerR = coreR * 2.2;
+            ctx.beginPath();
+            ctx.moveTo(Math.cos(angle) * innerR, Math.sin(angle) * innerR);
+            ctx.lineTo(Math.cos(angle) * outerR, Math.sin(angle) * outerR);
+            ctx.strokeStyle = i % 3 === 0 ? "#00E5FF" : "rgba(0, 229, 255, 0.45)";
+            ctx.lineWidth = Math.max(0.7, 1.2 / globalScale);
+            ctx.stroke();
+          }
+
+          // 4 Cardinal Axes with Diamond Tips
+          const axisLen = coreR * 2.8;
+          ctx.strokeStyle = "rgba(0, 229, 255, 0.75)";
+          ctx.lineWidth = Math.max(0.8, 1.2 / globalScale);
+          ctx.beginPath();
+          ctx.moveTo(-axisLen, 0);
+          ctx.lineTo(axisLen, 0);
+          ctx.moveTo(0, -axisLen);
+          ctx.lineTo(0, axisLen);
+          ctx.stroke();
+
+          // Inner Hanko Crimson Diamond Seal
+          const sealSize = coreR * 0.95;
+          ctx.save();
+          ctx.rotate(Math.PI / 4);
+          ctx.fillStyle = "#E63946";
+          ctx.fillRect(-sealSize / 2, -sealSize / 2, sealSize, sealSize);
+          ctx.strokeStyle = "#FFFFFF";
+          ctx.lineWidth = Math.max(0.8, 1.2 / globalScale);
+          ctx.strokeRect(-sealSize / 2, -sealSize / 2, sealSize, sealSize);
+          ctx.restore();
+
+          // Radiant Core Dot
+          ctx.beginPath();
+          ctx.arc(0, 0, Math.max(2.5, 3.5 / globalScale), 0, Math.PI * 2);
+          ctx.fillStyle = "#FFFFFF";
+          ctx.fill();
+        }
+
+        // ── EMBLEM B: NEO-BRUTALISM (Isometric 3D Cube & Industrial Crosshairs) ──
+        else if (universe === "neo-brutalism") {
+          const size = isHovered || isSelected ? 22 : 18;
+
+          // Industrial Coordinate Crosshairs
+          const ext = size * 2.5;
+          ctx.strokeStyle = "#0A0A0A";
+          ctx.lineWidth = Math.max(1.5, 2.2 / globalScale);
+          ctx.beginPath();
+          ctx.moveTo(-ext, 0);
+          ctx.lineTo(ext, 0);
+          ctx.moveTo(0, -ext);
+          ctx.lineTo(0, ext);
+          ctx.stroke();
+
+          // Millimeter graduation ticks along axes
+          [-size * 1.8, -size * 1.2, size * 1.2, size * 1.8].forEach((pos) => {
+            ctx.beginPath();
+            ctx.moveTo(pos, -4);
+            ctx.lineTo(pos, 4);
+            ctx.moveTo(-4, pos);
+            ctx.lineTo(4, pos);
+            ctx.stroke();
+          });
+
+          // Hard Offset Drop Shadow for Cube
+          const h = size * 0.866;
+          ctx.save();
+          ctx.translate(5, 5);
+          ctx.beginPath();
+          ctx.moveTo(0, -size);
+          ctx.lineTo(size, -size / 2);
+          ctx.lineTo(size, size / 2);
+          ctx.lineTo(0, size);
+          ctx.lineTo(-size, size / 2);
+          ctx.lineTo(-size, -size / 2);
+          ctx.closePath();
+          ctx.fillStyle = "#0A0A0A";
+          ctx.fill();
+          ctx.restore();
+
+          // 3D Isometric Cube Faces
+          // Top Face: Warm Putty Kraft Paper
+          ctx.beginPath();
+          ctx.moveTo(0, -size);
+          ctx.lineTo(size, -size / 2);
+          ctx.lineTo(0, 0);
+          ctx.lineTo(-size, -size / 2);
+          ctx.closePath();
+          ctx.fillStyle = "#E5E0D5";
+          ctx.fill();
+          ctx.strokeStyle = "#0A0A0A";
+          ctx.lineWidth = Math.max(1.8, 2.6 / globalScale);
+          ctx.stroke();
+
+          // Left Face: Pitch White
+          ctx.beginPath();
+          ctx.moveTo(-size, -size / 2);
+          ctx.lineTo(0, 0);
+          ctx.lineTo(0, size);
+          ctx.lineTo(-size, size / 2);
+          ctx.closePath();
+          ctx.fillStyle = "#FFFFFF";
+          ctx.fill();
+          ctx.stroke();
+
+          // Right Face: Bauhaus Crimson
+          ctx.beginPath();
+          ctx.moveTo(0, 0);
+          ctx.lineTo(size, -size / 2);
+          ctx.lineTo(size, size / 2);
+          ctx.lineTo(0, size);
+          ctx.closePath();
+          ctx.fillStyle = "#C5221F";
+          ctx.fill();
+          ctx.stroke();
+        }
+
+        // ── EMBLEM C: MINIMALISM (Swiss Precision Compass Rose & Datum Core) ──
+        else if (universe === "minimalism") {
+          const r = isHovered || isSelected ? 22 : 18;
+
+          // Outer Swiss Hairline Calibrations
+          ctx.beginPath();
+          ctx.arc(0, 0, r * 2.1, 0, Math.PI * 2);
+          ctx.strokeStyle = "rgba(24, 24, 27, 0.25)";
+          ctx.lineWidth = Math.max(0.6, 0.9 / globalScale);
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(0, 0, r * 1.5, 0, Math.PI * 2);
+          ctx.strokeStyle = "rgba(24, 24, 27, 0.15)";
+          ctx.stroke();
+
+          // 8 Micro Datum Dots
+          for (let i = 0; i < 8; i++) {
+            const a = (i * Math.PI) / 4;
+            ctx.beginPath();
+            ctx.arc(Math.cos(a) * r * 2.1, Math.sin(a) * r * 2.1, 1.2, 0, Math.PI * 2);
+            ctx.fillStyle = "#18181B";
+            ctx.fill();
+          }
+
+          // 4 Razor Needle Hairlines
+          const needleLen = r * 2.6;
+          ctx.strokeStyle = "#18181B";
+          ctx.lineWidth = Math.max(0.8, 1.1 / globalScale);
+          ctx.beginPath();
+          ctx.moveTo(-needleLen, 0);
+          ctx.lineTo(needleLen, 0);
+          ctx.moveTo(0, -needleLen);
+          ctx.lineTo(0, needleLen);
+          ctx.stroke();
+
+          // Center Solid Alabaster Core Disk
+          ctx.beginPath();
+          ctx.arc(0, 0, r * 0.75, 0, Math.PI * 2);
+          ctx.fillStyle = "#FFFFFF";
+          ctx.fill();
+          ctx.strokeStyle = "#18181B";
+          ctx.lineWidth = Math.max(1.2, 1.6 / globalScale);
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(0, 0, r * 0.25, 0, Math.PI * 2);
+          ctx.fillStyle = "#18181B";
+          ctx.fill();
+        }
+
+        // ── EMBLEM D: PARALLAX (Topographic Heliocentric Sun & Altitude Rays) ──
+        else if (universe === "parallax") {
+          const r = isHovered || isSelected ? 22 : 18;
+
+          // 3 Nested Topographic Elevation Contours
+          [r * 2.6, r * 1.9, r * 1.3].forEach((radius, idx) => {
+            ctx.beginPath();
+            ctx.arc(0, 0, radius, 0, Math.PI * 2);
+            ctx.strokeStyle = idx === 0 ? "rgba(196, 181, 253, 0.35)" : "rgba(139, 92, 246, 0.45)";
+            ctx.lineWidth = Math.max(0.8, 1.2 / globalScale);
+            ctx.stroke();
+          });
+
+          // 8 Radial Expedition Rays
+          for (let i = 0; i < 8; i++) {
+            const a = (i * Math.PI) / 4;
+            const r1 = r * 1.3;
+            const r2 = r * 2.6;
+            ctx.beginPath();
+            ctx.moveTo(Math.cos(a) * r1, Math.sin(a) * r1);
+            ctx.lineTo(Math.cos(a) * r2, Math.sin(a) * r2);
+            ctx.strokeStyle = i % 2 === 0 ? "#C4B5FD" : "#8B5CF6";
+            ctx.lineWidth = Math.max(0.7, 1.1 / globalScale);
+            ctx.stroke();
+          }
+
+          // Luminous Cosmic Nebula Sun Core
+          const sunGrad = ctx.createRadialGradient(0, 0, 0, 0, 0, r);
+          sunGrad.addColorStop(0, "#FAF5FF");
+          sunGrad.addColorStop(0.4, "#8B5CF6");
+          sunGrad.addColorStop(1, "#4C1D95");
+          ctx.beginPath();
+          ctx.arc(0, 0, r, 0, Math.PI * 2);
+          ctx.fillStyle = sunGrad;
+          ctx.fill();
+          ctx.strokeStyle = "#FAF5FF";
+          ctx.lineWidth = Math.max(1.2, 1.8 / globalScale);
+          ctx.stroke();
+        }
+
+        // ── EMBLEM E: BROKEN-GRID (Architectural Blueprint Datum Grid & Registration Origin) ──
+        else {
+          const s = isHovered || isSelected ? 22 : 18;
+
+          // Broken Drafting Axes with Extension Marks
+          const ext = s * 2.8;
+          ctx.strokeStyle = "rgba(17, 40, 31, 0.45)";
+          ctx.lineWidth = Math.max(0.9, 1.3 / globalScale);
+          ctx.setLineDash([8 / globalScale, 4 / globalScale]);
+          ctx.beginPath();
+          ctx.moveTo(-ext, 0);
+          ctx.lineTo(ext, 0);
+          ctx.moveTo(0, -ext);
+          ctx.lineTo(0, ext);
+          ctx.stroke();
+          ctx.setLineDash([]);
+
+          // Blueprint Coordinate Callout
+          const fontSz = Math.max(6, 8.5 / globalScale);
+          ctx.font = `600 ${fontSz}px monospace`;
+          ctx.fillStyle = "#0D5C3A";
+          ctx.fillText("[00//00]", s * 1.3, -s * 1.1);
+
+          // Octagonal Drafting Origin Box
+          ctx.beginPath();
+          const d = s * 0.9;
+          const c = d * 0.35;
+          ctx.moveTo(-d + c, -d);
+          ctx.lineTo(d - c, -d);
+          ctx.lineTo(d, -d + c);
+          ctx.lineTo(d, d - c);
+          ctx.lineTo(d - c, d);
+          ctx.lineTo(-d + c, d);
+          ctx.lineTo(-d, d - c);
+          ctx.lineTo(-d, -d + c);
+          ctx.closePath();
+          ctx.fillStyle = "#ECE8E1";
+          ctx.fill();
+          ctx.strokeStyle = "#11281F";
+          ctx.lineWidth = Math.max(1.4, 2.0 / globalScale);
+          ctx.stroke();
+
+          // Technical Forest Registration Cross
+          ctx.strokeStyle = "#0D5C3A";
+          ctx.lineWidth = Math.max(1.2, 1.8 / globalScale);
+          ctx.beginPath();
+          ctx.moveTo(-d * 0.65, 0);
+          ctx.lineTo(d * 0.65, 0);
+          ctx.moveTo(0, -d * 0.65);
+          ctx.lineTo(0, d * 0.65);
+          ctx.stroke();
+        }
+
         ctx.restore();
 
-        // D. Event Horizon Shadow Core (Absolute Black Singularity)
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, horizonRadius, 0, Math.PI * 2);
-        ctx.fillStyle = "#030407";
-        ctx.fill();
-
-        // E. Photon Sphere Razor Rim (Glowing boundary at the event horizon)
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, horizonRadius, 0, Math.PI * 2);
-        ctx.lineWidth = Math.max(1.4, 2.2 / globalScale);
-        ctx.strokeStyle = isHovered || isSelected ? "#FFFFFF" : primaryRingHex;
-        ctx.stroke();
-
-        // Inner photon ring hairline
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, horizonRadius * 0.84, 0, Math.PI * 2);
-        ctx.lineWidth = Math.max(0.6, 0.9 / globalScale);
-        ctx.strokeStyle = `rgba(${secondaryRgb}, 0.75)`;
-        ctx.stroke();
-
-        // F. Core Label Pill
+        // ── CORE LABEL PILL ──
         const fontSize = Math.max(8.5, 12 / globalScale);
         ctx.font = `700 ${fontSize}px monospace`;
         ctx.textAlign = "center";
@@ -457,7 +684,7 @@ export default function ObsidianGraph() {
         const padY = fontSize * 0.4;
         const boxW = textWidth + padX * 2;
         const boxH = fontSize + padY * 2;
-        const yOff = horizonRadius + boxH / 2 + 9;
+        const yOff = 34 + boxH / 2;
 
         ctx.fillStyle = isLightSurface
           ? "rgba(255, 255, 255, 0.96)"
@@ -472,10 +699,15 @@ export default function ObsidianGraph() {
         );
         ctx.fill();
         ctx.strokeStyle = primaryRingHex;
-        ctx.lineWidth = 1.2 / globalScale;
+        ctx.lineWidth = universe === "neo-brutalism" ? 2.5 / globalScale : 1.2 / globalScale;
         ctx.stroke();
 
-        ctx.fillStyle = isLightSurface ? "#0F172A" : "#F8FAFC";
+        ctx.fillStyle =
+          universe === "neo-brutalism"
+            ? "#0A0A0A"
+            : isLightSurface
+            ? "#0F172A"
+            : "#F8FAFC";
         ctx.fillText(label, node.x, node.y + yOff);
         return;
       }
@@ -485,41 +717,113 @@ export default function ObsidianGraph() {
         const noteCount = node.noteCount || 10;
         const starRadius = Math.min(13, Math.max(8, 6.5 + Math.log(noteCount + 1) * 1.6));
 
-        // Star Halo
-        ctx.beginPath();
-        ctx.arc(
-          node.x,
-          node.y,
-          starRadius * (isHovered || isSelected ? 2.4 : 1.85),
-          0,
-          Math.PI * 2
-        );
-        ctx.fillStyle = `rgba(${rgb}, ${isHovered || isSelected ? 0.32 : 0.16})`;
-        ctx.fill();
+        // ── NEO-BRUTALISM: Rotated Square with Hard Black Shadow ──
+        if (universe === "neo-brutalism") {
+          const s = starRadius * 1.1;
+          ctx.save();
+          ctx.translate(node.x, node.y);
+          ctx.fillStyle = "#0A0A0A";
+          ctx.fillRect(-s + 3, -s + 3, s * 2, s * 2);
+          ctx.fillStyle = isHovered || isSelected ? "#C5221F" : baseColor;
+          ctx.fillRect(-s, -s, s * 2, s * 2);
+          ctx.strokeStyle = "#0A0A0A";
+          ctx.lineWidth = Math.max(1.8, 2.5 / globalScale);
+          ctx.strokeRect(-s, -s, s * 2, s * 2);
+          ctx.restore();
+        }
+        // ── BROKEN-GRID: Octagonal Drafting Box with Architectural Brackets ──
+        else if (universe === "broken-grid") {
+          const s = starRadius * 1.05;
+          ctx.save();
+          ctx.translate(node.x, node.y);
+          const c = s * 0.35;
+          ctx.beginPath();
+          ctx.moveTo(-s + c, -s);
+          ctx.lineTo(s - c, -s);
+          ctx.lineTo(s, -s + c);
+          ctx.lineTo(s, s - c);
+          ctx.lineTo(s - c, s);
+          ctx.lineTo(-s + c, s);
+          ctx.lineTo(-s, s - c);
+          ctx.lineTo(-s, -s + c);
+          ctx.closePath();
+          ctx.fillStyle = isHovered || isSelected ? "#0D5C3A" : baseColor;
+          ctx.fill();
+          ctx.strokeStyle = isHovered || isSelected ? "#0D5C3A" : "rgba(17, 40, 31, 0.75)";
+          ctx.lineWidth = Math.max(1.2, 1.8 / globalScale);
+          ctx.stroke();
+          const b = s * 1.4;
+          ctx.strokeStyle = "rgba(17, 40, 31, 0.45)";
+          ctx.lineWidth = Math.max(0.6, 1 / globalScale);
+          ctx.beginPath();
+          ctx.moveTo(-b, -b + 4);
+          ctx.lineTo(-b, -b);
+          ctx.lineTo(-b + 4, -b);
+          ctx.moveTo(b, -b + 4);
+          ctx.lineTo(b, -b);
+          ctx.lineTo(b - 4, -b);
+          ctx.moveTo(-b, b - 4);
+          ctx.lineTo(-b, b);
+          ctx.lineTo(-b + 4, b);
+          ctx.moveTo(b, b - 4);
+          ctx.lineTo(b, b);
+          ctx.lineTo(b - 4, b);
+          ctx.stroke();
+          ctx.restore();
+        }
+        // ── MINIMALISM: Swiss Precision Disc with Clean Hairline Ring ──
+        else if (universe === "minimalism") {
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, starRadius * 1.5, 0, Math.PI * 2);
+          ctx.strokeStyle = "rgba(24, 24, 27, 0.25)";
+          ctx.lineWidth = Math.max(0.6, 0.9 / globalScale);
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, starRadius, 0, Math.PI * 2);
+          ctx.fillStyle = isHovered || isSelected ? "#18181B" : baseColor;
+          ctx.fill();
+          ctx.strokeStyle = "#18181B";
+          ctx.lineWidth = Math.max(1, 1.4 / globalScale);
+          ctx.stroke();
+        }
+        // ── PARALLAX & CYBER-ZEN: Celestial Flare & Luminous Halo ──
+        else {
+          // Star Halo
+          ctx.beginPath();
+          ctx.arc(
+            node.x,
+            node.y,
+            starRadius * (isHovered || isSelected ? 2.4 : 1.85),
+            0,
+            Math.PI * 2
+          );
+          ctx.fillStyle = `rgba(${rgb}, ${isHovered || isSelected ? 0.32 : 0.16})`;
+          ctx.fill();
 
-        // Orbital Ring around Course Star
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, starRadius * 1.45, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(${rgb}, ${isHovered || isSelected ? 0.85 : 0.4})`;
-        ctx.lineWidth = Math.max(0.7, 1.1 / globalScale);
-        ctx.stroke();
+          // Orbital Ring around Course Star
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, starRadius * 1.45, 0, Math.PI * 2);
+          ctx.strokeStyle = `rgba(${rgb}, ${isHovered || isSelected ? 0.85 : 0.4})`;
+          ctx.lineWidth = Math.max(0.7, 1.1 / globalScale);
+          ctx.stroke();
 
-        // 4-Point Star Flare
-        const flare = starRadius * (isHovered || isSelected ? 2.3 : 1.75);
-        ctx.strokeStyle = isHovered || isSelected ? baseColor : `rgba(${rgb}, 0.75)`;
-        ctx.lineWidth = Math.max(0.8, 1.2 / globalScale);
-        ctx.beginPath();
-        ctx.moveTo(node.x - flare, node.y);
-        ctx.lineTo(node.x + flare, node.y);
-        ctx.moveTo(node.x, node.y - flare);
-        ctx.lineTo(node.x, node.y + flare);
-        ctx.stroke();
+          // 4-Point Star Flare
+          const flare = starRadius * (isHovered || isSelected ? 2.3 : 1.75);
+          ctx.strokeStyle = isHovered || isSelected ? baseColor : `rgba(${rgb}, 0.75)`;
+          ctx.lineWidth = Math.max(0.8, 1.2 / globalScale);
+          ctx.beginPath();
+          ctx.moveTo(node.x - flare, node.y);
+          ctx.lineTo(node.x + flare, node.y);
+          ctx.moveTo(node.x, node.y - flare);
+          ctx.lineTo(node.x + flare, node.y);
+          ctx.stroke();
 
-        // Star Core
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, starRadius, 0, Math.PI * 2);
-        ctx.fillStyle = isHovered || isSelected ? (isLightSurface ? "#0F172A" : "#FFFFFF") : baseColor;
-        ctx.fill();
+          // Star Core
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, starRadius, 0, Math.PI * 2);
+          ctx.fillStyle = isHovered || isSelected ? (isLightSurface ? "#0F172A" : "#FFFFFF") : baseColor;
+          ctx.fill();
+        }
 
         // Course Star Label (Always visible when globalScale >= 0.42)
         if (globalScale >= 0.42 || isHovered || isSelected) {
@@ -570,30 +874,49 @@ export default function ObsidianGraph() {
       // ─── 3. TOPIC / NOTE SATELLITES ──────────────────────────────────────────
       const isDone = node.path ? isNoteCompleted(node.path) : false;
       const satRadius = isHovered || isSelected ? 4.8 : isDone ? 3.8 : 3.0;
-      if (isHovered || isSelected || isDone) {
+      // Neo-Brutalism Satellites: Sharp Square Dots
+      if (universe === "neo-brutalism") {
+        ctx.fillStyle = isHovered || isSelected ? "#C5221F" : isDone ? "#0D5C3A" : baseColor;
+        ctx.fillRect(node.x - satRadius, node.y - satRadius, satRadius * 2, satRadius * 2);
+        ctx.strokeStyle = "#0A0A0A";
+        ctx.lineWidth = Math.max(1, 1.4 / globalScale);
+        ctx.strokeRect(node.x - satRadius, node.y - satRadius, satRadius * 2, satRadius * 2);
+      }
+      // Broken-Grid Satellites: Technical Micro-Squares
+      else if (universe === "broken-grid") {
+        ctx.fillStyle = isHovered || isSelected ? "#0D5C3A" : isDone ? "#166534" : baseColor;
+        ctx.fillRect(node.x - satRadius, node.y - satRadius, satRadius * 2, satRadius * 2);
+        ctx.strokeStyle = "rgba(17, 40, 31, 0.6)";
+        ctx.lineWidth = Math.max(0.8, 1.1 / globalScale);
+        ctx.strokeRect(node.x - satRadius, node.y - satRadius, satRadius * 2, satRadius * 2);
+      }
+      // Standard Circular Satellites (Cyber-Zen, Minimalism, Parallax)
+      else {
+        if (isHovered || isSelected || isDone) {
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, satRadius * 2.1, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(${rgb}, ${isHovered || isSelected ? 0.35 : 0.22})`;
+          ctx.fill();
+        }
+
+        if (isDone) {
+          ctx.beginPath();
+          ctx.arc(node.x, node.y, satRadius * 1.55, 0, Math.PI * 2);
+          ctx.strokeStyle = baseColor;
+          ctx.lineWidth = Math.max(0.7, 1.1 / globalScale);
+          ctx.stroke();
+        }
+
         ctx.beginPath();
-        ctx.arc(node.x, node.y, satRadius * 2.1, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${rgb}, ${isHovered || isSelected ? 0.35 : 0.22})`;
+        ctx.arc(node.x, node.y, satRadius, 0, Math.PI * 2);
+        ctx.fillStyle =
+          isHovered || isSelected
+            ? isLightSurface
+              ? "#0F172A"
+              : "#FFFFFF"
+            : `rgba(${rgb}, 0.85)`;
         ctx.fill();
       }
-
-      if (isDone) {
-        ctx.beginPath();
-        ctx.arc(node.x, node.y, satRadius * 1.55, 0, Math.PI * 2);
-        ctx.strokeStyle = baseColor;
-        ctx.lineWidth = Math.max(0.7, 1.1 / globalScale);
-        ctx.stroke();
-      }
-
-      ctx.beginPath();
-      ctx.arc(node.x, node.y, satRadius, 0, Math.PI * 2);
-      ctx.fillStyle =
-        isHovered || isSelected
-          ? isLightSurface
-            ? "#0F172A"
-            : "#FFFFFF"
-          : `rgba(${rgb}, 0.85)`;
-      ctx.fill();
 
       const showSatLabel = isHovered || isSelected || globalScale >= 2.1;
       if (showSatLabel) {
@@ -792,7 +1115,7 @@ export default function ObsidianGraph() {
                 className="text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] transition-colors p-1 text-xs font-mono shrink-0"
                 aria-label="Close card"
               >
-                ✕
+                [x]
               </button>
             </div>
 
@@ -873,11 +1196,11 @@ export default function ObsidianGraph() {
         linkDirectionalParticleSpeed={0.012}
         linkDirectionalParticleColor={() =>
           universe === "neo-brutalism"
-            ? "#FF4D00"
+            ? "#C5221F"
             : universe === "broken-grid"
-            ? "#D9381E"
+            ? "#0D5C3A"
             : universe === "parallax"
-            ? "#E5A93C"
+            ? "#8B5CF6"
             : isLightSurface
             ? "#0284C7"
             : "#00E5FF"

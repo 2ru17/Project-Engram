@@ -17,6 +17,8 @@ import { StudyPlanProvider } from "@/components/StudyPlanProvider";
 import ProgressCodeModal from "@/components/ProgressCodeModal";
 import { AtmosphereProvider } from "@/components/atmosphere/AtmosphereProvider";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { CookieTelemetryNotice } from "@/components/CookieTelemetryNotice";
+import { Analytics } from "@vercel/analytics/react";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({
@@ -192,6 +194,8 @@ export default function RootLayout({
             <TopNav />
             <ProgressCodeModal />
             {children}
+            <CookieTelemetryNotice />
+            <Analytics />
           </StudyPlanProvider>
         </ThemeProvider>
       </body>
