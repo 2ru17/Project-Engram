@@ -2,10 +2,274 @@
 
 import { useEffect, useRef, useState, useId, useCallback } from "react";
 import mermaid from "mermaid";
+import katex from "katex";
 import { useTheme } from "@/components/ThemeProvider";
 
 interface MermaidBlockProps {
   chart: string;
+}
+
+// Pre-process Mermaid chart syntax to ensure unquoted labels containing LaTeX or parentheses do not crash the parser
+function preprocessMermaidChart(rawChart: string): string {
+  const chart = rawChart.replace(/^```mermaid\s*/i, "").replace(/```$/i, "").trim();
+  const lines = chart.split("\n");
+
+  const processed = lines.map((line) => {
+    if (/^\s*%%/.test(line) || !line.trim()) return line;
+    let out = "";
+    let i = 0;
+
+    while (i < line.length) {
+      // If we encounter a double-quoted string, preserve it and advance past closing quote
+      if (line[i] === '"') {
+        let j = i + 1;
+        while (j < line.length && line[j] !== '"') {
+          if (line[j] === "\\") j++;
+          j++;
+        }
+        out += line.slice(i, Math.min(j + 1, line.length));
+        i = j + 1;
+        continue;
+      }
+
+      // Check for edge label: | ... | that contains $ but is not quoted
+      const isConnector = /(?:-->|---|-.->|-.-|==>|===|<-->|<---|~~~|--)\s*$/.test(out);
+      if (line[i] === "|" && isConnector) {
+        const endIdx = line.indexOf("|", i + 1);
+        if (endIdx !== -1) {
+          const content = line.slice(i + 1, endIdx);
+          const trimmed = content.trim();
+          if (trimmed.includes("$") && !trimmed.startsWith('"')) {
+            out += `|"${trimmed.replace(/"/g, "&quot;")}"|`;
+            i = endIdx + 1;
+            continue;
+          }
+        }
+      }
+
+      // Check for node label opening: [, (, {, ([ , [( , [[ , (( , {{, [/, [\
+      const idMatch = out.match(/([a-zA-Z0-9_.-]+)\s*$/);
+      if (idMatch) {
+        const twoChar = line.slice(i, i + 2);
+        const pairs = [
+          { open: "([", close: "])" },
+          { open: "[(", close: ")]" },
+          { open: "[[", close: "]]" },
+          { open: "((", close: "))" },
+          { open: "{{", close: "}}" },
+          { open: "[/", close: "/]" },
+          { open: "[\\", close: "\\]" },
+        ];
+        const foundPair = pairs.find((p) => p.open === twoChar);
+        let openDelim = foundPair ? foundPair.open : null;
+        let closeDelim = foundPair ? foundPair.close : null;
+
+        if (!foundPair) {
+          if (line[i] === "[") {
+            openDelim = "[";
+            closeDelim = "]";
+          } else if (line[i] === "{") {
+            openDelim = "{";
+            closeDelim = "}";
+          } else if (line[i] === "(") {
+            openDelim = "(";
+            closeDelim = ")";
+          }
+        }
+
+        if (openDelim && closeDelim) {
+          const startContent = i + openDelim.length;
+          let closeIdx = -1;
+
+          if (openDelim === "(" && closeDelim === ")") {
+            let depth = 1;
+            for (let j = startContent; j < line.length; j++) {
+              if (line[j] === "(") depth++;
+              else if (line[j] === ")") {
+                depth--;
+                if (depth === 0) {
+                  closeIdx = j;
+                  break;
+                }
+              }
+            }
+          } else if (openDelim === "[" && closeDelim === "]") {
+            let depth = 1;
+            for (let j = startContent; j < line.length; j++) {
+              if (line[j] === "[") depth++;
+              else if (line[j] === "]") {
+                depth--;
+                if (depth === 0) {
+                  closeIdx = j;
+                  break;
+                }
+              }
+            }
+          } else if (openDelim === "{" && closeDelim === "}") {
+            let depth = 1;
+            for (let j = startContent; j < line.length; j++) {
+              if (line[j] === "{") depth++;
+              else if (line[j] === "}") {
+                depth--;
+                if (depth === 0) {
+                  closeIdx = j;
+                  break;
+                }
+              }
+            }
+          } else {
+            closeIdx = line.indexOf(closeDelim, startContent);
+          }
+
+          if (closeIdx !== -1) {
+            const inner = line.slice(startContent, closeIdx);
+            const trimmedInner = inner.trim();
+            if (trimmedInner.includes("$") && !trimmedInner.startsWith('"')) {
+              const safeInner = trimmedInner.replace(/"/g, "&quot;");
+              out += `${openDelim}"${safeInner}"${closeDelim}`;
+              i = closeIdx + closeDelim.length;
+              continue;
+            }
+          }
+        }
+      }
+
+      out += line[i];
+      i++;
+    }
+    return out;
+  });
+
+  return processed.join("\n");
+}
+
+// Post-process rendered Mermaid DOM/SVG to typeset inline $...$ and block $$...$$ formulas via KaTeX
+function renderKatexInContainer(container: HTMLElement) {
+  const k = (katex as any)?.default?.renderToString ? (katex as any).default : katex;
+
+  // 1. Convert SVG text elements containing $ to foreignObject so KaTeX HTML renders properly
+  const textElements = Array.from(container.querySelectorAll("text"));
+  for (const textEl of textElements) {
+    if (textEl.closest("style") || textEl.closest("script") || textEl.querySelector(".katex")) {
+      continue;
+    }
+    const raw = textEl.textContent || "";
+    if (/\$(?:\\\$|[^\$\n])+\$/.test(raw)) {
+      const rawX = parseFloat(textEl.getAttribute("x") || "0");
+      const rawY = parseFloat(textEl.getAttribute("y") || "0");
+      const textAnchor = textEl.getAttribute("text-anchor") || "start";
+      const dominantBaseline = textEl.getAttribute("dominant-baseline") || "";
+      const fontSize = window.getComputedStyle(textEl).fontSize || "13px";
+      const fontSizeNum = parseFloat(fontSize) || 13;
+
+      const foWidth = 320;
+      const foHeight = 60;
+
+      let foX = rawX;
+      let textAlign: "left" | "center" | "right" = "left";
+      if (textAnchor === "middle") {
+        foX = rawX - foWidth / 2;
+        textAlign = "center";
+      } else if (textAnchor === "end") {
+        foX = rawX - foWidth;
+        textAlign = "right";
+      }
+
+      let foY = rawY;
+      if (dominantBaseline === "middle" || dominantBaseline === "central") {
+        foY = rawY - foHeight / 2;
+      } else {
+        foY = rawY - fontSizeNum * 1.1;
+      }
+
+      const fo = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
+      fo.setAttribute("x", String(foX));
+      fo.setAttribute("y", String(foY));
+      fo.setAttribute("width", String(foWidth));
+      fo.setAttribute("height", String(foHeight));
+      fo.setAttribute("overflow", "visible");
+
+      const div = document.createElement("div");
+      div.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+      div.style.display = "block";
+      div.style.textAlign = textAlign;
+      div.style.fontFamily = "ui-sans-serif, system-ui, sans-serif";
+      div.style.fontSize = fontSize;
+      div.style.color = "inherit";
+
+      const parts = raw.split(/(\$\$[\s\S]+?\$\$|\$(?:\\\$|[^\$\n])+?\$)/g);
+      for (const part of parts) {
+        if (part.startsWith("$") && part.endsWith("$")) {
+          const isBlock = part.startsWith("$$");
+          const math = part.replace(/^\$+|\$+$/g, "").trim();
+          try {
+            const span = document.createElement("span");
+            span.className = isBlock ? "mermaid-katex-block" : "mermaid-katex-inline";
+            span.innerHTML = k.renderToString(math, {
+              displayMode: isBlock,
+              throwOnError: false,
+            });
+            div.appendChild(span);
+          } catch {
+            div.appendChild(document.createTextNode(part));
+          }
+        } else if (part) {
+          div.appendChild(document.createTextNode(part));
+        }
+      }
+      fo.appendChild(div);
+      textEl.parentNode?.replaceChild(fo, textEl);
+    }
+  }
+
+  // 2. Render math inside HTML elements within foreignObject
+  const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT, null);
+  const textNodes: Text[] = [];
+  let cur: Node | null;
+  while ((cur = walker.nextNode())) {
+    const parentEl = cur.parentElement;
+    if (
+      parentEl &&
+      (parentEl.closest(".katex") ||
+        parentEl.closest(".mermaid-katex-inline") ||
+        parentEl.closest("style") ||
+        parentEl.closest("script"))
+    ) {
+      continue;
+    }
+    if (cur.nodeValue && /\$(?:\\\$|[^\$\n])+\$/.test(cur.nodeValue)) {
+      textNodes.push(cur as Text);
+    }
+  }
+
+  for (const node of textNodes) {
+    const parent = node.parentNode;
+    if (!parent) continue;
+    const parts = (node.nodeValue || "").split(/(\$\$[\s\S]+?\$\$|\$(?:\\\$|[^\$\n])+?\$)/g);
+    if (parts.length <= 1) continue;
+
+    const frag = document.createDocumentFragment();
+    for (const part of parts) {
+      if (part.startsWith("$") && part.endsWith("$")) {
+        const isBlock = part.startsWith("$$");
+        const math = part.replace(/^\$+|\$+$/g, "").trim();
+        try {
+          const span = document.createElement("span");
+          span.className = isBlock ? "mermaid-katex-block" : "mermaid-katex-inline";
+          span.innerHTML = k.renderToString(math, {
+            displayMode: isBlock,
+            throwOnError: false,
+          });
+          frag.appendChild(span);
+        } catch {
+          frag.appendChild(document.createTextNode(part));
+        }
+      } else if (part) {
+        frag.appendChild(document.createTextNode(part));
+      }
+    }
+    parent.replaceChild(frag, node);
+  }
 }
 
 export default function MermaidBlock({ chart }: MermaidBlockProps) {
@@ -14,11 +278,28 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
   const [copied, setCopied] = useState(false);
   const [zoom, setZoom] = useState(1);
   const uniqueId = useId().replace(/:/g, "_");
-  const { theme } = useTheme();
-  const isLight = theme === "light";
+  const { theme, universe } = useTheme();
+  const isLight =
+    universe === "neo-brutalism" ||
+    universe === "minimalism" ||
+    universe === "broken-grid" ||
+    (universe === "cyber-zen" && theme === "light");
+  const accentColor =
+    universe === "neo-brutalism"
+      ? "#C5221F"
+      : universe === "minimalism"
+      ? "#111111"
+      : universe === "parallax"
+      ? "#8B5CF6"
+      : universe === "broken-grid"
+      ? "#0D5C3A"
+      : isLight
+      ? "#0284C7"
+      : "#00E5FF";
 
   const renderChart = useCallback(async () => {
     if (!containerRef.current) return;
+    let renderId = "";
 
     try {
       // Configure Mermaid for current theme
@@ -37,17 +318,17 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
           ? {
               darkMode: false,
               background: "transparent",
-              mainBkg: "#FFFDF7",
-              nodeBorder: "#0284C7",
+              mainBkg: universe === "neo-brutalism" ? "#FFFFFF" : "#FFFDF7",
+              nodeBorder: universe === "neo-brutalism" ? "#0A0A0A" : accentColor,
               textColor: "#09090B",
               nodeTextColor: "#09090B",
-              lineColor: "#0284C7",
+              lineColor: universe === "neo-brutalism" ? "#0A0A0A" : accentColor,
               edgeLabelBackground: "#F8F5EC",
               clusterBkg: "#F0ECE1",
               clusterBorder: "#C0B5A3",
               primaryColor: "#FFFDF7",
               primaryTextColor: "#09090B",
-              primaryBorderColor: "#0284C7",
+              primaryBorderColor: universe === "neo-brutalism" ? "#0A0A0A" : accentColor,
               secondaryColor: "#F8F5EC",
               secondaryTextColor: "#09090B",
               secondaryBorderColor: "#C0B5A3",
@@ -74,16 +355,16 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
               darkMode: true,
               background: "transparent",
               mainBkg: "#080d17",
-              nodeBorder: "#00E5FF",
+              nodeBorder: accentColor,
               textColor: "#f8fafc",
               nodeTextColor: "#f8fafc",
-              lineColor: "#00E5FF",
+              lineColor: accentColor,
               edgeLabelBackground: "#05080f",
               clusterBkg: "#05080f",
               clusterBorder: "#1e304d",
               primaryColor: "#080d17",
               primaryTextColor: "#f8fafc",
-              primaryBorderColor: "#00E5FF",
+              primaryBorderColor: accentColor,
               secondaryColor: "#0c1422",
               secondaryTextColor: "#f8fafc",
               secondaryBorderColor: "#1e304d",
@@ -128,23 +409,53 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
             border-radius: 4px !important;
           }
           .flowchart-link {
-            stroke: ${isLight ? "#0284C7" : "#00E5FF"} !important;
+            stroke: ${universe === "neo-brutalism" ? "#0A0A0A" : accentColor} !important;
             stroke-width: 1.5px !important;
           }
           .marker {
-            fill: ${isLight ? "#0284C7" : "#00E5FF"} !important;
-            stroke: ${isLight ? "#0284C7" : "#00E5FF"} !important;
+            fill: ${universe === "neo-brutalism" ? "#0A0A0A" : accentColor} !important;
+            stroke: ${universe === "neo-brutalism" ? "#0A0A0A" : accentColor} !important;
+          }
+          .node .katex, .edgeLabel .katex, .mermaid-katex-inline .katex {
+            color: inherit !important;
+            font-size: 1.02em !important;
+          }
+          .mermaid-katex-inline {
+            display: inline-block;
+            vertical-align: baseline;
+            margin: 0 1px;
+          }
+          .mermaid-katex-block {
+            display: block;
+            margin: 4px 0;
+            text-align: center;
           }
         `,
       });
+
+      if (typeof window !== "undefined") {
+        (window as any).katex = katex;
+      }
 
       // Ensure web fonts are loaded before Dagre measures node labels
       if (typeof document !== "undefined" && document.fonts?.ready) {
         await document.fonts.ready;
       }
 
-      const renderId = `mermaid_${uniqueId}_${Date.now()}`;
-      const { svg } = await mermaid.render(renderId, chart);
+      renderId = `mermaid_${uniqueId}_${Date.now()}`;
+      const safeChart = preprocessMermaidChart(chart);
+      let svg = "";
+      try {
+        const res = await mermaid.render(renderId, safeChart);
+        svg = res.svg;
+      } catch (err: unknown) {
+        try {
+          const res = await mermaid.render(renderId + "_raw", chart);
+          svg = res.svg;
+        } catch {
+          throw err;
+        }
+      }
 
       if (!containerRef.current) return;
 
@@ -179,12 +490,19 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
       } else {
         containerRef.current.innerHTML = svg;
       }
+
+      // Post-process to render KaTeX math in node labels, edge labels and foreignObjects
+      renderKatexInContainer(containerRef.current);
       setError(null);
     } catch (e: unknown) {
+      if (typeof document !== "undefined" && renderId) {
+        document.getElementById(renderId)?.remove();
+        document.getElementById("d" + renderId)?.remove();
+      }
       if (!containerRef.current) return;
       setError(e instanceof Error ? e.message : "Mermaid render error");
     }
-  }, [chart, isLight, uniqueId]);
+  }, [chart, isLight, universe, accentColor, uniqueId]);
 
   useEffect(() => {
     let isMounted = true;
@@ -205,14 +523,18 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
   const handleResetZoom = () => setZoom(1);
 
   return (
-    <div className="relative my-8 border border-[var(--zen-border)] bg-[var(--zen-card)] group shadow-xl overflow-hidden transition-colors duration-300">
-      {/* Corner Brackets */}
-      <span className="pointer-events-none absolute -top-2 -left-1 font-mono text-xs text-[var(--zen-cyan)] select-none z-10">
-        『
-      </span>
-      <span className="pointer-events-none absolute -bottom-2 -right-1 font-mono text-xs text-[var(--zen-cyan)] select-none z-10">
-        』
-      </span>
+    <div className="universe-card relative my-8 border border-[var(--zen-border)] bg-[var(--zen-card)] group shadow-xl overflow-hidden transition-colors duration-300 break-inside-avoid">
+      {/* Corner Brackets (Cyber-Zen only) */}
+      {universe === "cyber-zen" && (
+        <>
+          <span className="pointer-events-none absolute -top-2 -left-1 font-mono text-xs text-[var(--zen-cyan)] select-none z-10">
+            『
+          </span>
+          <span className="pointer-events-none absolute -bottom-2 -right-1 font-mono text-xs text-[var(--zen-cyan)] select-none z-10">
+            』
+          </span>
+        </>
+      )}
 
       {/* Header Bar */}
       <div className="flex items-center justify-between px-4 py-2 border-b border-[var(--zen-border)] bg-[var(--zen-void)]/70 text-xs font-mono select-none">
@@ -221,11 +543,11 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
             TOPOLOGY
           </span>
           <span className="text-[10px] tracking-wider text-[var(--zen-ink-muted)] hidden sm:inline">
-            // 構造図
+            {universe === "cyber-zen" ? "// 構造図" : "// ARCHITECTURAL DIAGRAM"}
           </span>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 print:hidden">
           {/* Zoom Controls */}
           <div className="flex items-center gap-1 border border-[var(--zen-border)] rounded px-1.5 py-0.5 bg-[var(--zen-card)]">
             <button

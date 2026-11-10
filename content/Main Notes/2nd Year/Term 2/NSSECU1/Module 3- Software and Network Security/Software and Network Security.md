@@ -18,6 +18,10 @@ status: completed
 ## Overview
 This module bridges the gap between securing software applications and protecting the networks they traverse. Network security involves defending against unauthorized access to corporate networks, while software security (AppSec) focuses on embedding security within the Software Development Life Cycle (SDLC) to prevent vulnerabilities like injection and cross-site scripting.
 
+> [!simulator] Interactive AppSec Sanitizer Studio
+> Test OWASP Top 10 attack payloads (SQLi, XSS, Command Injection) against vulnerable vs hardened defensive pipelines:
+> [Launch OWASP Exploit Sanitizer & Defense Studio](/simulators?id=appsec-sanitizer)
+
 ## Key Definitions
 - **Firewall:** A network security device that monitors and filters incoming and outgoing network traffic based on an organization's previously established security policies.
 - **IDS/IPS:** Intrusion Detection System (monitors and alerts) and Intrusion Prevention System (blocks active threats).
@@ -41,7 +45,7 @@ This module bridges the gap between securing software applications and protectin
 ### TCP Three-Way Handshake & SYN Flood
 1. **Normal Handshake:** Client sends `SYN`, Server replies `SYN-ACK`, Client replies `ACK`.
 2. **SYN Flood Attack:** Attacker sends thousands of spoofed `SYN` packets. Server allocates memory and replies with `SYN-ACK`, waiting for `ACK`s that never arrive, leading to resource exhaustion.
-3. **Mitigation:** SYN Cookies — Server encodes the state into the TCP sequence number rather than allocating memory.
+3. **Mitigation:** SYN Cookies: Server encodes the state into the TCP sequence number rather than allocating memory.
 
 ### SQL Injection Example
 - Vulnerable Query: `SELECT * FROM users WHERE username = '$user' AND password = '$pass'`

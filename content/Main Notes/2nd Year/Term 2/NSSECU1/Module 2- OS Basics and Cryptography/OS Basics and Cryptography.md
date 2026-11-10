@@ -18,6 +18,10 @@ status: completed
 ## Overview
 This module explores the fundamental security mechanisms within Operating Systems (Windows and Linux) and the principles of modern cryptography. Understanding OS internals is critical for both offensive and defensive security. Cryptography forms the mathematical foundation for securing data at rest, in transit, and in use.
 
+> [!simulator] Interactive Cryptography & Cipher Studio
+> Experiment with Caesar, Vigenere, AES round permutations, and RSA modular exponentiation:
+> [Launch Cryptographic Cipher & Packet Inspector](/simulators?id=security-lab)
+
 ## Key Definitions
 - **Kernel:** The core component of an operating system that manages system resources and hardware communication.
 - **Symmetric Encryption:** A cryptographic method where the same key is used for both encryption and decryption.

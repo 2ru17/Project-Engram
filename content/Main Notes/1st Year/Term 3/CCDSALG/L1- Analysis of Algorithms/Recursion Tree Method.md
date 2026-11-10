@@ -28,26 +28,26 @@ status: completed
 
 ### How It Works
 
-1. **Draw the recursion tree** — each node represents the cost of a single recursive call (excluding its children’s costs).
-2. **Determine cost per level** — sum all node costs at each depth level.
-3. **Count the number of levels** — the tree has depth $\log_b n$ for a recurrence that divides by $b$.
+1. **Draw the recursion tree**: each node represents the cost of a single recursive call (excluding its children's costs).
+2. **Determine cost per level**: sum all node costs at each depth level.
+3. **Count the number of levels**: the tree has depth $\log_b n$ for a recurrence that divides by $b$.
 4. **Sum across all levels** to get the total cost $T(n)$.
 
 ### Worked Example: $T(n) = 2T(n/2) + n$
 
 ```mermaid
 graph TD
-    subgraph RecTree["Recursion Tree for T(n) = 2T(n/2) + cn"]
-        L0["Root: cn <br/>[Level 0 Sum = cn]"] --> L1_1["c(n/2)"]
-        L0 --> L1_2["c(n/2)"]
-        L1_1 --> L2_1["c(n/4)"]
-        L1_1 --> L2_2["c(n/4)"]
-        L1_2 --> L2_3["c(n/4)"]
-        L1_2 --> L2_4["c(n/4)"]
-        L2_1 -.- Leaf1["Theta(1)"]
-        L2_2 -.- Leaf2["Theta(1)"]
-        L2_3 -.- Leaf3["Theta(1)"]
-        L2_4 -.- Leaf4["Theta(1)"]
+    subgraph RecTree["Recursion Tree for $T(n) = 2T(n/2) + cn$"]
+        L0["Root: $cn$<br/>[Level 0 Sum = $cn$]"] --> L1_1["$c(n/2)$"]
+        L0 --> L1_2["$c(n/2)$"]
+        L1_1 --> L2_1["$c(n/4)$"]
+        L1_1 --> L2_2["$c(n/4)$"]
+        L1_2 --> L2_3["$c(n/4)$"]
+        L1_2 --> L2_4["$c(n/4)$"]
+        L2_1 -.- Leaf1["$\Theta(1)$"]
+        L2_2 -.- Leaf2["$\Theta(1)$"]
+        L2_3 -.- Leaf3["$\Theta(1)$"]
+        L2_4 -.- Leaf4["$\Theta(1)$"]
     end
 ```
 
@@ -67,10 +67,10 @@ $$T(n) = \sum_{k=0}^{\log_2 n - 1} cn + \Theta(n) = cn \log_2 n + \Theta(n) = \T
 
 ```mermaid
 flowchart TD
-    RecCheck["Recurrence: T(n) = a*T(n/b) + f(n)"] --> TreeType{"Per-Level Cost Ratio r"}
-    TreeType -- "r < 1 (Decreasing)" --> Case3["Top-Heavy Tree<br/>Root dominates total runtime<br/>T(n) = Theta(f(n))"]
-    TreeType -- "r = 1 (Equal across levels)" --> Case2["Balanced Tree<br/>Work distributed evenly across all levels<br/>T(n) = Theta(f(n) * log_b n)"]
-    TreeType -- "r > 1 (Increasing)" --> Case1["Bottom-Heavy Tree<br/>Leaves dominate total runtime<br/>T(n) = Theta(n^(log_b a))"]
+    RecCheck["Recurrence: $T(n) = a \cdot T(n/b) + f(n)$"] --> TreeType{"Per-Level Cost Ratio $r$"}
+    TreeType -- "$r < 1$ (Decreasing)" --> Case3["Top-Heavy Tree<br/>Root dominates total runtime<br/>$T(n) = \Theta(f(n))$"]
+    TreeType -- "$r = 1$ (Equal across levels)" --> Case2["Balanced Tree<br/>Work distributed evenly across all levels<br/>$T(n) = \Theta(f(n) \cdot \log_b n)$"]
+    TreeType -- "$r > 1$ (Increasing)" --> Case1["Bottom-Heavy Tree<br/>Leaves dominate total runtime<br/>$T(n) = \Theta(n^{\log_b a})$"]
 ```
 
 ### Worked Example: $T(n) = 3T(n/4) + cn^2$
@@ -83,7 +83,7 @@ flowchart TD
 This is a strictly decreasing geometric series with common ratio $r = 3/16 < 1$. Sum of infinite geometric series yields:
 $$T(n) \le cn^2 \sum_{k=0}^{\infty} \left(\frac{3}{16}\right)^k = cn^2 \cdot \frac{1}{1 - 3/16} = \frac{16}{13} cn^2 = O(n^2)$$
 
-The root level dominates (top-heavy tree) — directly consistent with Master Theorem Case 3.
+The root level dominates (top-heavy tree) - directly consistent with Master Theorem Case 3.
 
 ### When to Use This Method
  When you want a visual/intuitive understanding of the recurrence. To generate a "guess" for the [[Substitution Method]]. When the [[Master Theorem]] doesn’t directly apply.
@@ -93,10 +93,10 @@ The root level dominates (top-heavy tree) — directly consistent with Master Th
 
 ## Summary
 
-> TL;DR — The Recursion Tree Method draws out recursive calls as a tree, sums costs per level, and totals them to solve the recurrence. It’s especially useful for intuition and as a precursor to formal proofs.
+> TL;DR: The Recursion Tree Method draws out recursive calls as a tree, sums costs per level, and totals them to solve the recurrence. It is especially useful for intuition and as a precursor to formal proofs.
 
 ## Links
- **Related:** [[Master Theorem]] — [[Substitution Method]] — [[Divide and Conquer]] — [[Asymptotic Notation]] — [[Recursion]] **Source / Reference:** Handout 03
+ **Related:** [[Master Theorem]] | [[Substitution Method]] | [[Divide and Conquer]] | [[Asymptotic Notation]] | [[Recursion]] **Source / Reference:** Handout 03
 
 ## Multiple Choice Questions
 
@@ -170,7 +170,7 @@ The root level dominates (top-heavy tree) — directly consistent with Master Th
 6. **A**. Because the ratio of the geometric series is less than 1 ($3/16$), the terms shrink rapidly, meaning the very first term (the root) holds the vast majority of the cost.
 7. **B**. Finding the exact sum of a recursion tree can be algebraically messy, so it's often used to just estimate the bound (guess) and then formally prove it using substitution.
 8. **A**. It is easy to sum up the internal nodes and completely forget that the massive row of base-case leaves at the very bottom also contributes $\Theta(n^{\log_b a})$ work.
-9. **B**. The variable $a$ dictates the branching factor—how many child subproblems each parent spawns.
+9. **B**. The variable $a$ dictates the branching factor: how many child subproblems each parent spawns.
 10. **B**. The Master Theorem has strict structural requirements. The tree method is flexible enough to handle bizarre recurrences and provides deep intuition about where the algorithm spends its time.
 
 ## References & Navigation

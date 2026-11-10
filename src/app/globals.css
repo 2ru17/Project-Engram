@@ -13,7 +13,7 @@
   --font-wuxia-primary: var(--font-zen-display, var(--font-wuxia-primary));
   --font-wuxia-body: var(--font-zen-serif, var(--font-wuxia-body));
 
-  /* === DYNAMIC JAPANESE ZEN PALETTE TOKENS === */
+  /* === DYNAMIC UNIVERSE PALETTE TOKENS === */
   --color-zen-void: var(--zen-void);
   --color-zen-abyss: var(--zen-abyss);
   --color-zen-midnight: var(--zen-midnight);
@@ -42,63 +42,217 @@
   --color-wuxia-paper: var(--zen-frost);
 }
 
+/* ============================================================================
+   5-UNIVERSE PALETTE & TYPOGRAPHY DEFINITIONS
+   Placed outside @layer base with html[...] selector so they override Next.js
+   font utility classes attached to the <html> element.
+   ============================================================================ */
+
+:root,
+html[data-universe="cyber-zen"][data-theme="dark"] {
+  /* === U-01 CYBER-ZEN: PURE OLED VANTABLACK DARK MODE (DEFAULT) === */
+  --zen-void: #000000;
+  --zen-abyss: #020407;
+  --zen-midnight: #05080f;
+  --zen-lampblack: #080d17;
+  --zen-slate-deep: #0c1422;
+  --zen-slate-mid: #121e33;
+  --zen-slate-edge: #1e304d;
+  --zen-steel: #344c6e;
+  --zen-moon-silver: #8ba6c4;
+  --zen-frost: #e2e8f0;
+  --zen-snow: #f8fafc;
+  --zen-ink-muted: #94a3b8;
+  --zen-ink-dim: #223247;
+  --zen-cyan: #00E5FF;
+  --zen-hanko: #E63946;
+  --zen-emerald: #10B981;
+  --zen-amber: #F59E0B;
+  --zen-border: rgba(255, 255, 255, 0.12);
+  --zen-card: rgba(8, 13, 23, 0.88);
+  --zen-card-hover: rgba(12, 20, 34, 0.96);
+  --zen-vignette: rgba(0, 0, 0, 0.95);
+  --bg-body: radial-gradient(circle at 65% 18%, #081224 0%, #020408 45%, #000000 100%);
+  --bg-card: linear-gradient(180deg, rgba(8, 14, 25, 0.94) 0%, rgba(3, 6, 12, 0.98) 100%);
+  --border-panel: rgba(52, 76, 110, 0.35);
+  --universe-spotlight: rgba(0, 229, 255, 0.16);
+  --universe-glow-sm: 0 0 12px rgba(0, 229, 255, 0.2);
+  --universe-glow-md: 0 0 18px rgba(0, 229, 255, 0.25);
+  --universe-progress-glow: 0 0 12px rgba(0, 229, 255, 0.85);
+}
+
+html[data-universe="cyber-zen"][data-theme="light"] {
+  /* === U-01 CYBER-ZEN: ECHIZEN WASHI LIGHT MODE === */
+  --zen-void: #F8F5EC;
+  --zen-abyss: #FFFDF7;
+  --zen-midnight: #F0ECE1;
+  --zen-lampblack: #EAE4D5;
+  --zen-slate-deep: #E2DBD0;
+  --zen-slate-mid: #D5CCC0;
+  --zen-slate-edge: #C0B5A3;
+  --zen-steel: #7E7667;
+  --zen-moon-silver: #4B4539;
+  --zen-frost: #27272A;
+  --zen-snow: #09090B;
+  --zen-ink-muted: #57534E;
+  --zen-ink-dim: #A8A29E;
+  --zen-cyan: #0284C7;
+  --zen-hanko: #DC2626;
+  --zen-emerald: #059669;
+  --zen-amber: #D97706;
+  --zen-border: rgba(120, 113, 108, 0.22);
+  --zen-card: rgba(255, 253, 247, 0.92);
+  --zen-card-hover: rgba(240, 236, 225, 0.98);
+  --zen-vignette: rgba(168, 162, 158, 0.08);
+  --bg-body: radial-gradient(circle at 65% 18%, #FFFDF7 0%, #F8F5EC 45%, #F0ECE1 100%);
+  --bg-card: linear-gradient(180deg, rgba(255, 253, 247, 0.96) 0%, rgba(248, 245, 236, 0.92) 100%);
+  --border-panel: rgba(200, 190, 170, 0.6);
+  --universe-spotlight: rgba(2, 132, 199, 0.10);
+  --universe-glow-sm: 0 2px 8px rgba(2, 132, 199, 0.12);
+  --universe-glow-md: 0 4px 14px rgba(2, 132, 199, 0.16);
+  --universe-progress-glow: none;
+}
+
+/* === U-02 NEO-BRUTALISM (SINGLE MODE - Swiss Bauhaus Graphic Print) === */
+html[data-universe="neo-brutalism"] {
+  --zen-void: #F4F3EE;
+  --zen-abyss: #EAE8E1;
+  --zen-midnight: #FFFFFF;
+  --zen-lampblack: #E8E5DD;
+  --zen-slate-deep: #E5E2D9;
+  --zen-slate-mid: #D4D0C4;
+  --zen-slate-edge: #0A0A0A;
+  --zen-steel: #0A0A0A;
+  --zen-moon-silver: #1C1C1C;
+  --zen-frost: #111111;
+  --zen-snow: #050505;
+  --zen-ink-muted: #2D2D2A;
+  --zen-ink-dim: #5C5B55;
+  --zen-cyan: #C5221F;
+  --zen-hanko: #0A0A0A;
+  --zen-emerald: #0D5C3A;
+  --zen-amber: #C5221F;
+  --zen-border: #0A0A0A;
+  --zen-card: #FFFFFF;
+  --zen-card-hover: #F9F8F5;
+  --zen-vignette: rgba(0, 0, 0, 0);
+  --bg-body: #F4F3EE;
+  --bg-card: #FFFFFF;
+  --border-panel: #0A0A0A;
+  --universe-spotlight: transparent;
+  --universe-glow-sm: 3px 3px 0px #0A0A0A;
+  --universe-glow-md: 5px 5px 0px #0A0A0A;
+  --universe-progress-glow: none;
+  --font-zen-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-decor: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-serif: var(--font-mono-code), ui-monospace, monospace !important;
+}
+
+/* === U-03 MINIMALISM (SINGLE MODE - kickpush.co / Editorial Warm Monochrome) === */
+html[data-universe="minimalism"] {
+  --zen-void: #F6F5F2;
+  --zen-abyss: #FFFFFF;
+  --zen-midnight: #FFFFFF;
+  --zen-lampblack: #EFECE6;
+  --zen-slate-deep: #E8E5DF;
+  --zen-slate-mid: #DDD9D0;
+  --zen-slate-edge: #C8C4BA;
+  --zen-steel: #78756E;
+  --zen-moon-silver: #4A4843;
+  --zen-frost: #262523;
+  --zen-snow: #0F0F0E;
+  --zen-ink-muted: #6E6C66;
+  --zen-ink-dim: #9E9B94;
+  --zen-cyan: #111111;
+  --zen-hanko: #78756E;
+  --zen-emerald: #2E5A36;
+  --zen-amber: #6E6C66;
+  --zen-border: #DEDBD3;
+  --zen-card: #FFFFFF;
+  --zen-card-hover: #F0EFEA;
+  --zen-vignette: rgba(0, 0, 0, 0);
+  --bg-body: #F6F5F2;
+  --bg-card: #FFFFFF;
+  --border-panel: #DEDBD3;
+  --universe-spotlight: transparent;
+  --universe-glow-sm: none;
+  --universe-glow-md: none;
+  --universe-progress-glow: none;
+  --font-zen-display: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-decor: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-serif: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* === U-04 PARALLAX (SINGLE MODE - Deep Nebula Observatory & Starlight Cartography) === */
+html[data-universe="parallax"] {
+  --zen-void: #090514;
+  --zen-abyss: #05030B;
+  --zen-midnight: #120A24;
+  --zen-lampblack: #1A0F33;
+  --zen-slate-deep: #221442;
+  --zen-slate-mid: #2F1E59;
+  --zen-slate-edge: #473278;
+  --zen-steel: #735BA3;
+  --zen-moon-silver: #C4B5FD;
+  --zen-frost: #EDE9FE;
+  --zen-snow: #F5F3FF;
+  --zen-ink-muted: #A78BFA;
+  --zen-ink-dim: #6D5B96;
+  --zen-cyan: #8B5CF6;
+  --zen-hanko: #C4B5FD;
+  --zen-emerald: #10B981;
+  --zen-amber: #A78BFA;
+  --zen-border: rgba(139, 92, 246, 0.28);
+  --zen-card: rgba(18, 10, 36, 0.90);
+  --zen-card-hover: rgba(28, 16, 54, 0.96);
+  --zen-vignette: rgba(5, 3, 11, 0.94);
+  --bg-body: radial-gradient(circle at 50% 0%, #1F103D 0%, #090514 60%, #040208 100%);
+  --bg-card: linear-gradient(180deg, rgba(24, 14, 46, 0.94) 0%, rgba(12, 7, 24, 0.98) 100%);
+  --border-panel: rgba(139, 92, 246, 0.38);
+  --universe-spotlight: rgba(139, 92, 246, 0.16);
+  --universe-glow-sm: 0 0 14px rgba(139, 92, 246, 0.25);
+  --universe-glow-md: 0 0 24px rgba(139, 92, 246, 0.32);
+  --universe-progress-glow: 0 0 12px rgba(139, 92, 246, 0.85);
+  --font-zen-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-decor: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* === U-05 BROKEN GRID (SINGLE MODE - Architectural Drafting Vellum & CAD Blueprint) === */
+html[data-universe="broken-grid"] {
+  --zen-void: #ECE8E1;
+  --zen-abyss: #E4E0D7;
+  --zen-midnight: #F5F3EC;
+  --zen-lampblack: #DCD8CD;
+  --zen-slate-deep: #D0CCC0;
+  --zen-slate-mid: #B6B2A4;
+  --zen-slate-edge: #11281F;
+  --zen-steel: #1D3B2E;
+  --zen-moon-silver: #11281F;
+  --zen-frost: #11281F;
+  --zen-snow: #06140E;
+  --zen-ink-muted: #3D5A4C;
+  --zen-ink-dim: #5C7A6D;
+  --zen-cyan: #0D5C3A;
+  --zen-hanko: #11281F;
+  --zen-emerald: #0D5C3A;
+  --zen-amber: #166534;
+  --zen-border: rgba(17, 40, 31, 0.26);
+  --zen-card: #F7F5EE;
+  --zen-card-hover: #FFFFFF;
+  --zen-vignette: rgba(0, 0, 0, 0);
+  --bg-body: #ECE8E1;
+  --bg-card: #F7F5EE;
+  --border-panel: rgba(17, 40, 31, 0.32);
+  --universe-spotlight: rgba(13, 92, 58, 0.08);
+  --universe-glow-sm: 2px 2px 0px rgba(17, 40, 31, 0.18);
+  --universe-glow-md: 4px 4px 0px rgba(17, 40, 31, 0.22);
+  --universe-progress-glow: 0 0 10px rgba(13, 92, 58, 0.45);
+  --font-zen-display: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-decor: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  --font-zen-serif: var(--font-mono-code), ui-monospace, monospace !important;
+}
+
 @layer base {
-  :root {
-    /* === PURE OLED VANTABLACK DARK MODE (DEFAULT) === */
-    --zen-void: #000000;
-    --zen-abyss: #020407;
-    --zen-midnight: #05080f;
-    --zen-lampblack: #080d17;
-    --zen-slate-deep: #0c1422;
-    --zen-slate-mid: #121e33;
-    --zen-slate-edge: #1e304d;
-    --zen-steel: #344c6e;
-    --zen-moon-silver: #8ba6c4;
-    --zen-frost: #e2e8f0;
-    --zen-snow: #f8fafc;
-    --zen-ink-muted: #94a3b8;
-    --zen-ink-dim: #223247;
-    --zen-cyan: #00E5FF;
-    --zen-hanko: #E63946;
-    --zen-emerald: #10B981;
-    --zen-amber: #F59E0B;
-    --zen-border: rgba(255, 255, 255, 0.12);
-    --zen-card: rgba(8, 13, 23, 0.88);
-    --zen-card-hover: rgba(12, 20, 34, 0.96);
-    --zen-vignette: rgba(0, 0, 0, 0.95);
-    --bg-body: radial-gradient(circle at 65% 18%, #081224 0%, #020408 45%, #000000 100%);
-    --bg-card: linear-gradient(180deg, rgba(8, 14, 25, 0.94) 0%, rgba(3, 6, 12, 0.98) 100%);
-    --border-panel: rgba(52, 76, 110, 0.35);
-  }
-
-  [data-theme="light"] {
-    /* === ECHIZEN WASHI (和紙) LIGHT MODE === */
-    --zen-void: #F8F5EC;
-    --zen-abyss: #FFFDF7;
-    --zen-midnight: #F0ECE1;
-    --zen-lampblack: #EAE4D5;
-    --zen-slate-deep: #E2DBD0;
-    --zen-slate-mid: #D5CCC0;
-    --zen-slate-edge: #C0B5A3;
-    --zen-steel: #7E7667;
-    --zen-moon-silver: #4B4539;
-    --zen-frost: #27272A; /* Pure Sumi charcoal body ink */
-    --zen-snow: #09090B;  /* Deepest calligraphy heading ink */
-    --zen-ink-muted: #57534E;
-    --zen-ink-dim: #A8A29E;
-    --zen-cyan: #0284C7; /* Refined Indigo Azure */
-    --zen-hanko: #DC2626; /* Vermilion Seal */
-    --zen-emerald: #059669;
-    --zen-amber: #D97706;
-    --zen-border: rgba(120, 113, 108, 0.22);
-    --zen-card: rgba(255, 253, 247, 0.92);
-    --zen-card-hover: rgba(240, 236, 225, 0.98);
-    --zen-vignette: rgba(168, 162, 158, 0.08);
-    --bg-body: radial-gradient(circle at 65% 18%, #FFFDF7 0%, #F8F5EC 45%, #F0ECE1 100%);
-    --bg-card: linear-gradient(180deg, rgba(255, 253, 247, 0.96) 0%, rgba(248, 245, 236, 0.92) 100%);
-    --border-panel: rgba(200, 190, 170, 0.6);
-  }
-
   body {
     background: var(--bg-body);
     background-color: var(--zen-void);
@@ -106,7 +260,7 @@
     font-family: ui-sans-serif, system-ui, sans-serif;
     line-height: 1.65;
     overflow-x: hidden;
-    transition: background 0.6s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.6s cubic-bezier(0.16, 1, 0.3, 1), color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: background 0.5s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   ::selection {
@@ -117,10 +271,10 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-zen-display, serif);
     font-weight: 600;
-    letter-spacing: 0.15em;
-    line-height: 1.25;
+    letter-spacing: 0.12em;
+    line-height: 1.2;
     color: var(--zen-snow);
-    transition: color 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   hr {
@@ -163,6 +317,134 @@
   }
 }
 
+/* ============================================================================
+   UNIVERSE-SPECIFIC STRUCTURAL SIGNATURES & OVERRIDES
+   Each universe enforces its own geometry, shadows, borders, and typography.
+   ============================================================================ */
+
+/* --- U-02 NEO-BRUTALISM (neubrutalism.com) --- */
+html[data-universe="neo-brutalism"] h1,
+html[data-universe="neo-brutalism"] h2,
+html[data-universe="neo-brutalism"] h3,
+html[data-universe="neo-brutalism"] h4,
+html[data-universe="neo-brutalism"] h5,
+html[data-universe="neo-brutalism"] h6 {
+  font-family: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: -0.025em !important;
+  font-weight: 800 !important;
+}
+
+html[data-universe="neo-brutalism"] * {
+  border-radius: 0px !important;
+}
+
+html[data-universe="neo-brutalism"] .universe-card {
+  border: 3px solid #0A0A0A !important;
+  box-shadow: 6px 6px 0px #0A0A0A !important;
+  background: #FFFFFF !important;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+html[data-universe="neo-brutalism"] .universe-card:hover {
+  transform: translate(-3px, -3px) !important;
+  box-shadow: 9px 9px 0px #0A0A0A !important;
+}
+
+/* --- U-03 MINIMALISM (kickpush.co) --- */
+html[data-universe="minimalism"] h1,
+html[data-universe="minimalism"] h2,
+html[data-universe="minimalism"] h3,
+html[data-universe="minimalism"] h4,
+html[data-universe="minimalism"] h5,
+html[data-universe="minimalism"] h6 {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: -0.03em !important;
+  font-weight: 500 !important;
+}
+
+html[data-universe="minimalism"] * {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html[data-universe="minimalism"] .universe-card {
+  border: 1px solid #DEDBD3 !important;
+  border-radius: 0px !important;
+  background: #FFFFFF !important;
+}
+
+html[data-universe="minimalism"] .universe-card:hover {
+  background: #F0EFEA !important;
+  border-color: #111111 !important;
+}
+
+/* --- U-04 PARALLAX (beargrylls.com) --- */
+html[data-universe="parallax"] h1,
+html[data-universe="parallax"] h2,
+html[data-universe="parallax"] h3,
+html[data-universe="parallax"] h4 {
+  font-family: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: 0.14em !important;
+  font-weight: 700 !important;
+}
+
+html[data-universe="parallax"] .universe-card {
+  border: 1px solid rgba(139, 92, 246, 0.28) !important;
+  background: linear-gradient(180deg, rgba(20, 12, 38, 0.92) 0%, rgba(10, 6, 20, 0.98) 100%) !important;
+  box-shadow: 0 18px 40px -15px rgba(0, 0, 0, 0.85) !important;
+}
+
+html[data-universe="parallax"] .universe-card:hover {
+  border-color: #8B5CF6 !important;
+  box-shadow: 0 22px 48px -12px rgba(139, 92, 246, 0.35) !important;
+}
+
+/* --- U-05 BROKEN GRID (Architectural Drafting Vellum) --- */
+html[data-universe="broken-grid"] h1,
+html[data-universe="broken-grid"] h2,
+html[data-universe="broken-grid"] h3,
+html[data-universe="broken-grid"] h4 {
+  font-family: var(--font-grotesk), ui-sans-serif, system-ui, sans-serif !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 700 !important;
+  color: #11281F !important;
+}
+
+html[data-universe="broken-grid"] .rounded-2xl,
+html[data-universe="broken-grid"] .rounded-xl,
+html[data-universe="broken-grid"] .rounded-lg,
+html[data-universe="broken-grid"] .rounded-md,
+html[data-universe="broken-grid"] .rounded,
+html[data-universe="broken-grid"] .rounded-\[15px\] {
+  border-radius: 0px !important;
+}
+
+html[data-universe="broken-grid"] .universe-card {
+  border: 1.5px solid #11281F !important;
+  background: #F7F5EE !important;
+  box-shadow: 4px 4px 0px rgba(17, 40, 31, 0.18) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative;
+}
+
+html[data-universe="broken-grid"] .universe-card:hover {
+  border-color: #0D5C3A !important;
+  box-shadow: 6px 6px 0px #0D5C3A !important;
+  transform: translate(-3px, -3px);
+}
+
+@media (min-width: 1024px) {
+  html[data-universe="broken-grid"] .universe-bento-grid > div:nth-child(2n) {
+    transform: translateY(28px) translateX(-6px);
+  }
+  html[data-universe="broken-grid"] .universe-bento-grid > div:nth-child(3n) {
+    transform: translateY(-16px) translateX(8px);
+  }
+  html[data-universe="broken-grid"] .universe-bento-grid > div:nth-child(4n) {
+    transform: translateY(12px);
+  }
+}
+
 /* ─── LITE MODE OPTIMIZATIONS ─────────────────────────────────────── */
 [data-perf="lite"] * {
   animation-duration: 0.001ms !important;
@@ -171,6 +453,22 @@
   transition-duration: 0.05s !important;
 }
 
+/* Cyber-Zen screen vignette: full strength on desktop, lighter and shorter on small
+   viewports so it does not swallow the reading column. Hidden entirely in print. */
+.screen-vignette {
+  box-shadow: inset 0 0 180px 70px var(--zen-vignette, rgba(0, 0, 0, 0.95));
+}
+@media (max-width: 768px) {
+  .screen-vignette {
+    box-shadow: inset 0 0 70px 14px var(--zen-vignette, rgba(0, 0, 0, 0.6));
+  }
+}
+@media print {
+  .screen-vignette {
+    display: none !important;
+    box-shadow: none !important;
+  }
+}
 /* Mermaid measures label boxes synchronously; a non-zero transition-duration makes
    getBoundingClientRect() return mid-transition sizes and inflates the Dagre layout. */
 [data-perf="lite"] [id^="dmermaid"],
@@ -230,7 +528,7 @@
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-xl: var(--radius);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
@@ -319,4 +617,71 @@
   width: 100% !important;
   height: 100% !important;
   box-sizing: border-box !important;
+}
+
+/* --- PHASE 4: DUAL EXPORT ENGINE (@media print) --- */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 14mm 16mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Ink-Saver Academic Paper Override when selected in ExportMenu */
+  html[data-print-mode="paper"],
+  html[data-print-mode="paper"] body {
+    --zen-void: #FFFFFF !important;
+    --zen-abyss: #FFFFFF !important;
+    --zen-midnight: #F8FAFC !important;
+    --zen-lampblack: #F1F5F9 !important;
+    --zen-slate-deep: #E2E8F0 !important;
+    --zen-slate-mid: #CBD5E1 !important;
+    --zen-slate-edge: #94A3B8 !important;
+    --zen-frost: #1E293B !important;
+    --zen-snow: #09090B !important;
+    --zen-ink-muted: #475569 !important;
+    --zen-cyan: #0F172A !important;
+    --zen-border: #CBD5E1 !important;
+    --zen-card: #FFFFFF !important;
+    --zen-card-hover: #F8FAFC !important;
+    --bg-body: #FFFFFF !important;
+    --bg-card: #FFFFFF !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    color: #09090B !important;
+  }
+
+  /* Hide MCQ explanation blocks when user checks "Hide MCQ Explanations" */
+  html[data-print-hide-answers="true"] .mcq-print-explanation {
+    display: none !important;
+  }
+
+  /* Prevent awkward page slicing across diagrams, code blocks, tables, and MCQ cards */
+  pre,
+  blockquote,
+  table,
+  figure,
+  .mermaid-svg-container,
+  .mcq-card,
+  .universe-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  /* Ensure scrollable code blocks and tables wrap cleanly in PDF */
+  pre,
+  pre code {
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-x: visible !important;
+  }
 }
