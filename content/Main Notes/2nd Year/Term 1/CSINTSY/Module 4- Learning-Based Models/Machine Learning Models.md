@@ -21,6 +21,10 @@ status: completed
 
 Unlike traditional AI (symbolic AI) that uses a top-down approach by modeling rules to process data, Machine Learning employs a bottom-up approach. It feeds data and expected outputs into an algorithm to discover the underlying rules. A machine learning model acts as a hypothesis function that transforms input features $X$ into an output $y$.
 
+> [!simulator] Interactive Perceptron & Decision Boundary Studio
+> Experiment with 2D linear classifiers, weight and bias adjustments, and live confusion matrix metrics:
+> [Launch Perceptron Decision Boundary & Neural Studio](/simulators?id=neural-perceptron)
+
 **Types of Machine Learning:**
 1. **Supervised Learning**: Models learn from labeled data to predict target variables.
 *Classification*: Predicts categorical variables (e.g., binary, multi-class).

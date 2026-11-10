@@ -19,7 +19,11 @@ status: completed
 
 ## Overview
 
-> Scientific computing and physical simulations require representing numbers spanning massive dynamic ranges—from subatomic Planck constants ($\approx 10^{-34}$) to cosmological distances ($\approx 10^{26}$). Fixed-point binary notation cannot simultaneously accommodate such extremes without requiring impractically wide bit registers. The **IEEE 754 Floating-Point Standard** solves this by establishing normalized scientific notation in base 2. This module examines the architectural bit-field structures for **Single Precision (32-bit)** and **Double Precision (64-bit)** formats, formalizes biased exponent mathematics, and analyzes all IEEE 754 special cases: signed zeros, infinities, quiet/signaling NaNs, and denormalized numbers enabling gradual underflow.
+> Scientific computing and physical simulations require representing numbers spanning massive dynamic ranges, from subatomic Planck constants ($\approx 10^{-34}$) to cosmological distances ($\approx 10^{26}$). Fixed-point binary notation cannot simultaneously accommodate such extremes without requiring impractically wide bit registers. The **IEEE 754 Floating-Point Standard** solves this by establishing normalized scientific notation in base 2. This module examines the architectural bit-field structures for **Single Precision (32-bit)** and **Double Precision (64-bit)** formats, formalizes biased exponent mathematics, and analyzes all IEEE 754 special cases: signed zeros, infinities, quiet/signaling NaNs, and denormalized numbers enabling gradual underflow.
+
+> [!simulator] Interactive Lab Workbench
+> Experiment directly with real-time 32-bit single precision bit toggling, biased exponent calculation, and subnormal representation:
+> [Launch IEEE 754 Floating-Point Studio](/simulators?id=ieee754-float)
 
 ## Key Definitions
 

@@ -91,14 +91,26 @@ export default function TopNav() {
       href: "/notes?view=graph",
     },
     {
+      label: "SIMULATORS",
+      sub:
+        universe === "cyber-zen"
+          ? "演習"
+          : universe === "broken-grid"
+          ? "04"
+          : universe === "parallax"
+          ? "SEC.04"
+          : "",
+      href: "/simulators",
+    },
+    {
       label: "ARCHIVE",
       sub:
         universe === "cyber-zen"
           ? "目録"
           : universe === "broken-grid"
-          ? "04"
+          ? "05"
           : universe === "parallax"
-          ? "SEC.04"
+          ? "SEC.05"
           : "",
       href: "/notes?view=directory",
     },

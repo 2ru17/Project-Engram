@@ -23,6 +23,10 @@ The Network Layer encapsulates transport-layer segments into datagrams and trans
 1. **Forwarding (Data Plane):** The local, per-router process of moving an arriving packet from an input link to the appropriate output link using a forwarding table. It is implemented in hardware (nanosecond timeframe).
 2. **Routing (Control Plane):** The network-wide logic that determines the end-to-end path packets take from source to destination using routing algorithms. It is implemented in software (millisecond timeframe).
 
+> [!simulator] Interactive Subnet & Routing Workbench
+> Calculate CIDR subnet boundaries, VLSM host ranges, and inspect longest-prefix routing table lookup:
+> [Launch Subnet Calculator & Packet Routing Trace](/simulators?id=network-lab)
+
 ### Router Architecture
 A router consists of input ports, a switching fabric, output ports, and a routing processor. **Input ports:** Perform physical layer reception, link layer protocol handling, and decentralized switching (lookup, forwarding, queueing). **Longest Prefix Matching:** When looking for a forwarding table entry for a destination IP address, the router uses the longest address prefix that matches. This is often performed using Ternary Content Addressable Memory (TCAM).
 
@@ -76,7 +80,7 @@ Since Prefix B is a longer match (24 bits vs 21 bits), the router forwards the p
     - **C)** It specifies the TCP window size in kilobytes.
     - **D)** Every router along the path decrements the TTL field by $1$ before forwarding; if TTL reaches $0$, the router **drops the datagram** and sends an ICMP *Time Exceeded* (Type 11, Code 0) message back to the source, preventing packets caught in transient routing loops from circulating forever.
 
-5. Among the three internal router **switching fabric** designs—**Switching via Memory**, **Switching via a Shared Bus**, and **Switching via an Interconnection Network (Crossbar)**—which design allows multiple packets to be forwarded in parallel simultaneously?
+5. Among the three internal router **switching fabric** designs - **Switching via Memory**, **Switching via a Shared Bus**, and **Switching via an Interconnection Network (Crossbar)** - which design allows multiple packets to be forwarded in parallel simultaneously?
     - **A)** Switching via Memory (limited by memory bus bandwidth to 1 packet at a time)
     - **B)** **Crossbar / Banyan Interconnection Network**, which can transfer multiple packets concurrently across disjoint input-to-output paths as long as they target different output ports.
     - **C)** Switching via a Shared Bus (limited by bus contention to 1 packet at a time)

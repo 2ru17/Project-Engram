@@ -21,6 +21,10 @@ status: completed
 This sub-module discusses the logic gates used in digital systems.
 Objective: Learn the different logic gates used in digital logic systems.
 
+> [!simulator] Interactive Logic Gate Studio
+> Experiment with 2-to-4 input digital logic gates, truth table generator, and Karnaugh map minimizer:
+> [Launch Logic Gate & Boolean Minimizer Studio](/simulators?id=digital-logic)
+
 ## Key Definitions
 
 ### Logic Gates & Boolean Expressions

@@ -31,6 +31,10 @@ UDP is a bare-bones, connectionless transport protocol providing "best effort" s
 ### TCP: Transmission Control Protocol
 TCP provides a connection-oriented, reliable, and in-order byte stream.  **Features:** Pipelining, flow control (prevents sender from overwhelming receiver), congestion control, cumulative ACKs, full-duplex data. **TCP Segment Structure:** Includes source/dest ports, sequence number (byte stream number of the first byte of data), acknowledgment number (sequence number of the next expected byte), receive window (`rwnd`), header length, and checksum. **Connection Management:** Uses a **3-way handshake** (SYN, SYN-ACK, ACK) to establish a connection safely, agreeing on initial sequence numbers. A connection is closed using segments with the FIN bit set. **Flow Control:** The receiver advertises its free buffer space in the `rwnd` field of the TCP header. The sender limits unACKed data to this value, guaranteeing the receiver's buffer won't overflow. **Reliable Data Transfer:** TCP uses timeouts and fast retransmit. If a segment's timer expires, it is retransmitted. If the sender receives **3 duplicate ACKs** for the same data (indicating a gap), it performs a **Fast Retransmit**, resending the unACKed segment with the smallest sequence number before the timeout occurs.
 
+> [!simulator] Interactive TCP Flow Studio
+> Step through the 3-Way Handshake, Sliding Window buffer frames, and AIMD congestion control dynamics:
+> [Launch TCP 3-Way Handshake & Sliding Window Studio](/simulators?id=tcp-flow)
+
 ### RTT and Timeout Estimation
 TCP dynamically adjusts its timeout interval based on measured Round Trip Times (`SampleRTT`). It uses an Exponential Weighted Moving Average (EWMA) to calculate an `EstimatedRTT` and estimates the variance (`DevRTT`). The `TimeoutInterval` is then set to the estimate plus a safety margin.
 
