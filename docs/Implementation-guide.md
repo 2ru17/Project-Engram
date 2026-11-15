@@ -135,9 +135,10 @@ To guarantee $100\%$ mount reliability for `MCQSection.tsx` across all 539+ mono
    const mcqSectionRegex =
      /^##+\s*Multiple Choice Questions[^\n]*\n([\s\S]*?)(?=^##+\s*References\s*&\s*Navigation|^##\s+(?!#)|^---\s*$|\Z)/m;
    ```
-2. **Option & Answer Key Tolerance**:
+2. **Option, Question-Type & Answer Key Tolerance**:
+   * Supports four deterministic question types: standard single-choice (`A)-D)`), multiple-select (`[MSQ]`), exact text/numeric solving (`[INPUT]`), and inline/table fill-in-the-blanks (`[BLANK]`).
    * While vault files are standardized to 4-space indented options (`    - **A)** `), the parser regex must tolerate $2\text{–}4$ spaces or a tab (`^[ \t]{2,4}[-*]\s+\*\*([A-D])[).]\*\*\s+(.+)$`).
-   * Match each question index $i \in \{1, \dots, N\}$ with its corresponding explanation in `### Answer Key & Explanations` (`^(\d+)\.\s+\*\*([A-D])[).]\*\*\s+([\s\S]+?)(?=^\d+\.\s+\*\*|\Z)`).
+   * Match each question index $i \in \{1, \dots, N\}$ with its corresponding explanation in `### Answer Key & Explanations` (`^(\d+)\.\s+\*\*([A-D](?:\s*,\s*[A-D])*|\[[^\]]+\])[).]*\*\*`).
 3. **Diagnostic Warning on Parse Failure**:
    If a standard note contains the string `"Multiple Choice Questions"` but yields `questions.length === 0`, emit `console.warn("[MCQ_PARSE_FAILURE]:", filePath)` so `npm run validate:notes` flags it immediately.
 
@@ -152,19 +153,29 @@ When modifying the Knowledge Graph (`src/components/graph/`):
 
 ---
 
-## 6. Testing & Verification Strategy
+## 6. Workflow E: Direct In-Repo Content Authoring
 
-1. **Automated Vault & MCQ Gate (`npm run validate:notes`)**:
+Monographs live directly inside `./content/Main Notes/` and require no external vault sync step:
+
+1. Edit or create `.md` monographs directly inside `./content/Main Notes/<Year>/<Term>/<COURSE_CODE>/Module XX - <Topic>/` (using any IDE or by opening `./content/Main Notes/` directly as an Obsidian vault — `.obsidian/`, `.trash/`, and `*.excalidraw.bak` are ignored via `.gitignore`).
+2. Run `npm run validate:notes` to verify YAML frontmatter, callout metadata, and interactive assessment syntax (`A)-D)`, `[MSQ]`, `[INPUT]`, `[BLANK]`).
+3. Run `npm run build` to verify static route generation before committing.
+
+---
+
+## 7. Testing & Verification Strategy
+
+1. **Automated Vault & Assessment Gate (`npm run validate:notes`)**:
    * Scans `content/Main Notes/` in under $3\text{ s}$ using `fs.promises`.
-   * Verifies `Module XX - Topic` directory naming, zero Hollow Modules, unique YAML `id` fields, zero emojis (`**Tags:**`), $100\%$ `MCQSection.tsx` parse success on standard notes, zero dummy MCQ regex matches, and valid Mermaid v12 syntax.
+   * Verifies `Module XX - Topic` directory naming, zero Hollow Modules, unique YAML `id` fields, `> [!info] Document Metadata` callouts, zero emojis (`**Tags:**`), $100\%$ `MCQSection.tsx` parse success across `A)-D)`, `[MSQ]`, `[INPUT]`, and `[BLANK]` questions, zero dummy MCQ regex matches, and valid Mermaid v12 syntax.
 2. **Unit Tests (`*.spec.ts`)**:
-   * Test `mcq-parser.ts` against canonical blocks, CRLF line endings, inline LaTeX/code options, and trailing `## References & Navigation` sections (target $< 10\text{ ms}$ per test).
+   * Test `mcq-parser.ts` against canonical blocks, `[MSQ]`/`[INPUT]`/`[BLANK]` variants, CRLF line endings, inline LaTeX/code options, and trailing `## References & Navigation` sections (target $< 10\text{ ms}$ per test).
 3. **Production Build Gate (`npm run build`)**:
    * Confirms all static and dynamic routes (`notes/[...slug]`, `/simulators`), TypeScript types, and JSON-LD structured data compile with zero errors.
 
 ---
 
-## 7. Pull Request Verification Checklist
+## 8. Pull Request Verification Checklist
 
 * [ ] **Async I/O**: Zero `fs.readFileSync`, `fs.readdirSync`, or `fs.statSync` calls in `src/` or `scripts/`.
 * [ ] **XSS Protection**: All rendered HTML is sanitized via `@/lib/sanitize` (`dompurify` client + pure-JS SSR fallback).

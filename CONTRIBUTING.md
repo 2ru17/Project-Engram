@@ -1,6 +1,6 @@
 # Contributing to Project Engram
 
-Thank you for contributing to **Project Engram**. This document details the architectural invariants, 5-Universe design system rules, Obsidian-to-Next.js content workflow, Interactive MCQ contracts, and automated CI/CD checks required to maintain our academic Computer Science knowledge repository.
+Thank you for contributing to **Project Engram**. This document details the architectural invariants, 5-Universe design system rules, direct in-repo content authoring workflow, Interactive Assessment contracts, and automated CI/CD checks required to maintain our academic Computer Science knowledge repository.
 
 For deep architectural context, cross-reference:
 * **[docs/DESIGN.md](./docs/DESIGN.md)** — Clean architectural principles, 5-Universe design system tokens, data flow, and scalability strategies.
@@ -20,9 +20,9 @@ All contributions must strictly respect the core invariants of **Project Engram*
    * **Framer Motion Easing**: All transitions must use the hardware-accelerated tech-noir curve `ease: [0.16, 1, 0.3, 1]`. Never use spring physics. Lists must stagger sequentially with `staggerChildren: 0.05`.
    * **Reading Container**: Long-form rendered markdown must be wrapped in a `max-w-3xl` container using clean sans-serif body typography (`line-height: 1.65`).
 
-2. **Two-Location Content Architecture (Obsidian $\rightarrow$ Next.js)**:
-   * **Source of Truth**: All academic note creation and editing happens first in the **Obsidian Vault** (`$OBSIDIAN_VAULT_PATH/main/Main Notes/`).
-   * **Deployment Mirror**: The Next.js `./content/Main Notes/` directory is a synchronized mirror populated via `rsync`. Never edit files directly in `./content/Main Notes/` without syncing from the Obsidian Vault.
+2. **Direct In-Repo Content Architecture (`./content/Main Notes/`)**:
+   * **Single Source of Truth**: All academic monographs live directly in `./content/Main Notes/` inside this repository. Contributors edit `.md` files in place using any IDE or by opening `./content/Main Notes/` directly as an Obsidian vault (local `.obsidian/`, `.trash/`, and `*.excalidraw.bak` files are excluded via `.gitignore`).
+   * **Runtime Immutability**: The Next.js application treats `./content/Main Notes/` as a static read-only data store during build and server rendering.
 
 3. **Asynchronous I/O, Caching & Security**:
    * **No Sync FS**: Never use `fs.readFileSync`, `fs.readdirSync`, or `fs.statSync` in API routes, Server Components, or build scripts. Always use `fs.promises`.
@@ -54,24 +54,16 @@ npm run dev
 ```
 Access the local development server at `http://localhost:3000`.
 
-### Syncing Content from the Obsidian Vault
-After editing notes in the Obsidian Vault, mirror changes into the Next.js repository from the repository root:
-
-* **One-way clean sync (from Vault to Next.js repo root):**
-```bash
-export OBSIDIAN_VAULT_PATH="/path/to/your/engram-vault"
-rsync -av --delete "$OBSIDIAN_VAULT_PATH/main/Main Notes/" "./content/Main Notes/"
-```
-
-* **Safe two-way contributor sync (without deleting newer files):**
-```bash
-rsync -avu "$OBSIDIAN_VAULT_PATH/main/Main Notes/" "./content/Main Notes/"
-```
+### Content Authoring Workflow (Direct In-Repo Editing)
+1. Edit or create `.md` monographs directly inside `./content/Main Notes/<Year>/<Term>/<COURSE_CODE>/Module XX - <Topic>/` (using any IDE or by opening `./content/Main Notes/` directly as an Obsidian vault).
+2. Run `npm run validate:notes` to verify YAML frontmatter, callout metadata, and interactive assessment syntax (`A)-D)`, `[MSQ]`, `[INPUT]`, `[BLANK]`).
+3. Run `npm run build` to verify static route generation before committing.
 
 ### Pre-Push Verification Suite
 Always run the validation and build pipeline locally before opening a Pull Request:
 ```bash
 npm run validate:notes
+npm run typecheck
 npm run lint
 npm run build
 ```
@@ -152,7 +144,11 @@ Every note must include:
    * **Utility Files**: Include `- **Related Notes:** [[Parent Topic]]`.
 
 ### 4.3 Interactive MCQ Standards & Parser Contract
-All **Standard Notes** must include a `## Multiple Choice Questions` section that mounts cleanly into the **Interactive MCQ Component** (`MCQSection.tsx`) (Utility files must have $0$ MCQs):
+All **Standard Notes** must include a `## Multiple Choice Questions` section that mounts cleanly into the **Interactive Assessment Component** (`MCQSection.tsx`) (Utility files must have $0$ required assessments). The parser (`src/lib/mcq-parser.ts`) supports four deterministic, auto-graded formats:
+* **Standard Single-Choice (`A)-D)`)**: Default 4-option format (`    - **A)**` through `**D)**` with `1. **A)** ...` in the answer key).
+* **Multiple Select (`[MSQ]`)**: Prefix stem with `[MSQ]` and provide comma-separated answer keys (e.g., `2. **B, C)** ...`).
+* **Exact Text / Numeric Solving (`[INPUT]`)**: Prefix stem with `[INPUT]` (no option bullets) and specify semicolon-delimited accepted answers in brackets (e.g., `3. **[5.67; 17/3; 5.67 ms]** ...`).
+* **Table / Inline Fill-in-the-Blanks (`[BLANK]`)**: Prefix stem with `[BLANK]`, place `{{1}}`, `{{2}}` tokens in prose or GFM tables, and map blank IDs in brackets (e.g., `4. **[1: 0/false; 2: 1/true]** ...`).
 
 * **Required Question Counts**:
   * Full notes ($> 2000$ chars body): **10 MCQs**
