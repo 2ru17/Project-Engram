@@ -1,15 +1,5 @@
 import Script from "next/script";
 import type { Metadata, Viewport } from "next";
-import {
-  Cinzel,
-  Cinzel_Decorative,
-  Shippori_Mincho,
-  Yuji_Boku,
-  Cormorant_Garamond,
-  Geist,
-  Space_Grotesk,
-  JetBrains_Mono,
-} from "next/font/google";
 import "./globals.css";
 import TopNav from "@/components/TopNav";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -19,55 +9,6 @@ import { AtmosphereProvider } from "@/components/atmosphere/AtmosphereProvider";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { CookieTelemetryNotice } from "@/components/CookieTelemetryNotice";
 import { Analytics } from "@vercel/analytics/react";
-import { cn } from "@/lib/utils";
-
-const geist = Geist({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["500", "700"],
-  variable: "--font-grotesk",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-mono-code",
-});
-
-const cinzel = Cinzel({
-  variable: "--font-zen-display",
-  weight: ["400", "600", "700"],
-  subsets: ["latin"],
-});
-
-const cinzelDecorative = Cinzel_Decorative({
-  variable: "--font-zen-decor",
-  weight: ["700", "900"],
-  subsets: ["latin"],
-});
-
-const shipporiMincho = Shippori_Mincho({
-  variable: "--font-zen-serif",
-  weight: ["400", "600", "800"],
-  subsets: ["latin"],
-  preload: false,
-});
-
-const yujiBoku = Yuji_Boku({
-  variable: "--font-zen-brush",
-  weight: ["400"],
-  preload: false,
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-wuxia-primary",
-  weight: ["300", "400", "500", "600"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: {
@@ -135,22 +76,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ja"
-      suppressHydrationWarning
-      className={cn(
-        "font-sans",
-        geist.variable,
-        spaceGrotesk.variable,
-        jetbrainsMono.variable,
-        cinzel.variable,
-        cinzelDecorative.variable,
-        shipporiMincho.variable,
-        yujiBoku.variable,
-        cormorant.variable
-      )}
-    >
+    <html lang="ja" suppressHydrationWarning className="font-sans">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Loaded in App Router root layout to bypass Turbopack next/font/google #99114 */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:wght@300;400;500;600&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Shippori+Mincho:wght@400;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Yuji+Boku&display=swap"
+        />
         <Script
           id="theme-init"
           strategy="beforeInteractive"
