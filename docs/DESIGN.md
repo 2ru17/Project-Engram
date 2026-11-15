@@ -15,8 +15,8 @@ The codebase is partitioned into decoupled layers where dependencies point stric
 * **Application & Registry Layer**: Coordinates course indexing, search indexing, and simulator workbench registration (`SIMULATOR_REGISTRY`).
 * **Presentation & Delivery Layer (`src/components/`, `src/app/`)**: Next.js Server and Client Components responsible for rendering the 5-Universe UI, interactive simulators, KaTeX/Mermaid blocks, and the HTML5 Canvas Singularity Graph.
 
-### 2.2 Decoupled Two-Location Content Pipeline
-* **Source of Truth**: Academic monographs are authored in an external Obsidian Vault and mirrored one-way via `rsync -av --delete` into `content/Main Notes/`.
+### 2.2 Direct In-Repo Content Pipeline
+* **In-Repo Source of Truth**: Academic monographs are authored directly inside `./content/Main Notes/` (using any IDE or by opening `./content/Main Notes/` directly as an Obsidian vault; local `.obsidian/`, `.trash/`, and `*.excalidraw.bak` files are excluded via `.gitignore`).
 * **Immutability at Runtime**: The Next.js application treats `content/Main Notes/` as a read-only data store.
 
 ### 2.3 Asynchronous I/O & Content-Hash Caching
@@ -33,12 +33,7 @@ The codebase is partitioned into decoupled layers where dependencies point stric
 
 ```text
 +-------------------------------------------------------------------------+
-|                    Obsidian Vault (Source of Truth)                     |
-+------------------------------------+------------------------------------+
-                                     | One-Way rsync (-av --delete)
-                                     v
-+-------------------------------------------------------------------------+
-|               Repository Mirror (content/Main Notes/**/*.md)            |
+|   In-Repo Academic Vault (content/Main Notes/**/*.md — IDE / Obsidian)  |
 +------------------------------------+------------------------------------+
                                      | Async fs.promises + Content-Hash Cache
                                      v
@@ -115,7 +110,7 @@ Project Engram implements a deterministic 5-Universe theming architecture contro
 
 | ADR # | Decision | Status | Architectural Consequence |
 | :--- | :--- | :--- | :--- |
-| **001** | File-Backed Obsidian $\rightarrow$ Next.js Content Pipeline | Accepted | Eliminates database latency for static monographs; requires strict build-time validation (`validate:notes`). |
+| **001** | File-Backed In-Repo Markdown (`content/Main Notes/`) Pipeline | Accepted | Eliminates database latency and external sync steps for static monographs; requires strict build-time validation (`validate:notes`). |
 | **002** | Asynchronous `fs.promises` + Content-Hash Caching | Accepted | Prevents Next.js serverless bundle bloat and speeds up static/dynamic route generation across 539+ notes. |
 | **003** | Offscreen Sprite Caching & `useCallback` Lock on ForceGraph | Accepted | Sustains locked $60\text{ fps}$ rendering for the Singularity Knowledge Graph even on integrated GPUs. |
 | **004** | Unified `SimulatorWorkbenchShell` & Domain Registry | Accepted | Guarantees consistent UX, keyboard accessibility, and automatic course-page docking across all simulators. |

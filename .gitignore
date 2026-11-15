@@ -40,3 +40,8 @@ AGENTS.md
 audit-report.json
 AUDIT_SUMMARY.md
 *.scratch*
+
+# Obsidian local workspace & backup files
+.obsidian/
+.trash/
+*.excalidraw.bak

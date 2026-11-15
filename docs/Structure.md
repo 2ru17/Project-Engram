@@ -3,7 +3,7 @@
 > **Location:** `docs/Structure.md` | **Pattern:** Feature-Sliced Application + Hierarchical Academic Vault
 
 ## 1. Structural Philosophy
-**Project Engram** follows **Screaming Architecture**: the repository root cleanly separates application source code (`src/`), living architectural documentation (`docs/`), automated validation scripts (`scripts/`), and the academic monograph mirror (`content/Main Notes/`).
+**Project Engram** follows **Screaming Architecture**: the repository root cleanly separates application source code (`src/`), living architectural documentation (`docs/`), automated validation scripts (`scripts/`), and the in-repo academic monograph vault (`content/Main Notes/`).
 
 ---
 
@@ -15,7 +15,7 @@ Project-Engram/
 │   └── workflows/
 │       └── engram-governance.yml      # Automated CI gate (Notes validation, Typecheck, Lint, Build)
 ├── content/
-│   └── Main Notes/                    # Read-only deployment mirror synced from Obsidian Vault
+│   └── Main Notes/                    # In-repo academic monograph vault (source of truth; read-only at runtime)
 │       ├── 1st Year/                  # Term 1 (CCICOMP, CCPROG1), Term 2 (CCDSTRU, CSMATH1), Term 3 (CCDSALG, CCPROG2, CSMATH2, STT101A)
 │       ├── 2nd Year/                  # Term 1 (CCINFOM, CCPROG3, CSINTSY, CSNETWK), Term 2 (CCAPDEV, CSARCH1, NSCOM01, NSSECU1), Term 3 (...)
 │       ├── 3rd Year/                  # Term 1 (CSOPESY, CSSWENG, NSCOM03, NSETRON), Term 2 (NSAPDEV, NSEMBED, NSRESME, NSSECU3), Term 3 (...)
@@ -89,6 +89,11 @@ Every course inside `content/Main Notes/<Year>/<Term>/<COURSE_CODE>/` adheres to
 4. **Intentional Exceptions**:
    * Empty `3rd Year/` and `4th Year/` course folders are preserved as curriculum placeholders.
    * `CCDSTRU Module 02` is intentionally absent (lab-only module).
+
+### 3.2 Standard In-Repo Authoring Workflow
+1. Edit or create `.md` monographs directly inside `./content/Main Notes/<Year>/<Term>/<COURSE_CODE>/Module XX - <Topic>/` (using any IDE or by opening `./content/Main Notes/` directly as an Obsidian vault — `.obsidian/`, `.trash/`, and `*.excalidraw.bak` are ignored in `.gitignore`).
+2. Run `npm run validate:notes` to verify YAML frontmatter, callout metadata, and interactive assessment syntax (`A)-D)`, `[MSQ]`, `[INPUT]`, `[BLANK]`).
+3. Run `npm run build` to verify static route generation before committing.
 
 ---
 

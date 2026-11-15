@@ -62,16 +62,10 @@ Architectural standards, structural boundaries, and implementation workflows are
    ```
    Open `http://localhost:3000` in your browser.
 
-4. **Sync content from the local Obsidian Vault (Authoring Workflow):**
-   - One-way clean sync (from Vault to Next.js repo root):
-     ```bash
-     export OBSIDIAN_VAULT_PATH="/path/to/your/engram-vault"
-     rsync -av --delete "$OBSIDIAN_VAULT_PATH/main/Main Notes/" "./content/Main Notes/"
-     ```
-   - Safe two-way contributor sync (without deleting newer files):
-     ```bash
-     rsync -avu "$OBSIDIAN_VAULT_PATH/main/Main Notes/" "./content/Main Notes/"
-     ```
+4. **Author & validate academic monographs (Direct In-Repo Editing):**
+   1. Edit or create `.md` monographs directly inside `./content/Main Notes/<Year>/<Term>/<COURSE_CODE>/Module XX - <Topic>/` (using any IDE or by opening `./content/Main Notes/` directly as an Obsidian vault — `.obsidian/`, `.trash/`, and `*.excalidraw.bak` are git-ignored).
+   2. Run `npm run validate:notes` to verify YAML frontmatter, callout metadata, and interactive assessment syntax (`A)-D)`, `[MSQ]`, `[INPUT]`, `[BLANK]`).
+   3. Run `npm run build` to verify static route generation before committing.
 
 ---
 
