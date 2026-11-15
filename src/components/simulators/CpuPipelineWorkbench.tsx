@@ -178,7 +178,6 @@ export function CpuPipelineWorkbench() {
                   const currentCC = cIdx + 1;
                   const st = getStageAtCycle(iIdx, currentCC);
                   const isCurrentTick = currentCC === cycle;
-                  const isStall = st === "-";
                   const isDone = st === "DONE";
 
                   return (

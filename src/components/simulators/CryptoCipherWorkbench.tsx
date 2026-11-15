@@ -68,7 +68,8 @@ export function CryptoCipherWorkbench() {
   const gcd = (a: number, b: number): number => (b === 0 ? a : gcd(b, a % b));
 
   const modInverse = (e: number, m: number): number => {
-    let [m0, x0, x1] = [m, 0, 1];
+    const m0 = m;
+    let [x0, x1] = [0, 1];
     if (m === 1) return 0;
     while (e > 1 && m > 0) {
       const q = Math.floor(e / m);
@@ -139,6 +140,7 @@ export function CryptoCipherWorkbench() {
           </label>
           <input
             type="text"
+            aria-label="Plaintext string"
             value={plaintext}
             onChange={(e) => setPlaintext(e.target.value)}
             className="w-full px-3 py-2 rounded-lg border border-[var(--zen-border)] bg-[var(--zen-void)] font-mono text-sm text-[var(--zen-snow)] focus:outline-none focus:border-[var(--zen-cyan)]"
@@ -155,6 +157,7 @@ export function CryptoCipherWorkbench() {
               </span>
               <input
                 type="range"
+                aria-label="Caesar shift offset"
                 min="1"
                 max="25"
                 value={shift}
@@ -172,7 +175,7 @@ export function CryptoCipherWorkbench() {
             </span>
             <span>C = (P + K) mod 26</span>
             <span className="mt-2 text-[10px]">
-              Vulnerable to frequency analysis: the most frequent ciphertext letter correlates to English 'E'.
+              Vulnerable to frequency analysis: the most frequent ciphertext letter correlates to English &apos;E&apos;.
             </span>
           </div>
         </div>
@@ -186,6 +189,7 @@ export function CryptoCipherWorkbench() {
             </label>
             <input
               type="text"
+              aria-label="Vigenere cipher keyword"
               value={vigenereKey}
               onChange={(e) => setVigenereKey(e.target.value)}
               className="w-full px-3 py-1.5 rounded border border-[var(--zen-border)] bg-[var(--zen-midnight)] font-mono text-xs text-[var(--zen-snow)] mb-3"
@@ -239,6 +243,7 @@ export function CryptoCipherWorkbench() {
               {isCustomPrimes ? (
                 <input
                   type="number"
+                  aria-label="RSA prime p"
                   min="3"
                   max="499"
                   value={primeP}
@@ -247,6 +252,7 @@ export function CryptoCipherWorkbench() {
                 />
               ) : (
                 <select
+                  aria-label="Select RSA prime p"
                   value={primeP}
                   onChange={(e) => setPrimeP(parseInt(e.target.value, 10))}
                   className="w-full px-2.5 py-1.5 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-xs font-mono text-[var(--zen-snow)]"
@@ -278,6 +284,7 @@ export function CryptoCipherWorkbench() {
               {isCustomPrimes ? (
                 <input
                   type="number"
+                  aria-label="RSA prime q"
                   min="3"
                   max="499"
                   value={primeQ}
@@ -286,6 +293,7 @@ export function CryptoCipherWorkbench() {
                 />
               ) : (
                 <select
+                  aria-label="Select RSA prime q"
                   value={primeQ}
                   onChange={(e) => setPrimeQ(parseInt(e.target.value, 10))}
                   className="w-full px-2.5 py-1.5 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-xs font-mono text-[var(--zen-snow)]"
@@ -307,6 +315,7 @@ export function CryptoCipherWorkbench() {
               </label>
               <input
                 type="number"
+                aria-label="RSA message M"
                 min="1"
                 max={Math.max(2, n - 1)}
                 value={validMsg}

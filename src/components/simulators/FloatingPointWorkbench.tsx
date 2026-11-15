@@ -2,11 +2,8 @@
 
 import { useState, useId } from "react";
 
-type PrecisionMode = "single" | "double";
-
 export function FloatingPointWorkbench() {
   const numberInputId = useId();
-  const [precision, setPrecision] = useState<PrecisionMode>("single");
   const [inputValue, setInputValue] = useState<string>("3.1415927");
   const [bits32, setBits32] = useState<number[]>(() => {
     const buf = new ArrayBuffer(4);
@@ -229,7 +226,6 @@ export function FloatingPointWorkbench() {
             const bitPos = 31 - idx;
             const isSign = idx === 0;
             const isExp = idx >= 1 && idx <= 8;
-            const isMant = idx >= 9;
 
             let colorClasses = "bg-emerald-500/10 border-emerald-500/40 text-emerald-300 hover:bg-emerald-500/30";
             if (isSign) {

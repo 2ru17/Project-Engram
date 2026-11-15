@@ -70,6 +70,7 @@ export function SubnetRouterWorkbench() {
           </label>
           <input
             type="text"
+            aria-label="Target IPv4 host address"
             value={ip}
             onChange={(e) => setIp(e.target.value)}
             className="w-full px-3 py-2 rounded-lg border border-[var(--zen-border)] bg-[var(--zen-void)] font-mono text-sm text-[var(--zen-snow)] focus:outline-none focus:border-[var(--zen-cyan)]"
@@ -81,6 +82,7 @@ export function SubnetRouterWorkbench() {
             CIDR Prefix (/{cidr})
           </label>
           <select
+            aria-label="CIDR prefix mask"
             value={cidr}
             onChange={(e) => setCidr(parseInt(e.target.value))}
             className="w-full px-3 py-2 rounded-lg border border-[var(--zen-border)] bg-[var(--zen-void)] font-mono text-sm text-[var(--zen-snow)] focus:outline-none focus:border-[var(--zen-cyan)]"

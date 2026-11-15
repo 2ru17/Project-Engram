@@ -137,6 +137,7 @@ export function VirtualMemoryWorkbench() {
           <div className="flex items-center gap-1.5 ml-2">
             <span className="text-xs font-mono text-[var(--zen-ink-muted)]">Frames:</span>
             <select
+              aria-label="Physical frame count"
               value={frameCount}
               onChange={(e) => setFrameCount(parseInt(e.target.value))}
               className="px-2 py-0.5 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-xs font-mono text-[var(--zen-snow)]"
@@ -184,6 +185,7 @@ export function VirtualMemoryWorkbench() {
         </div>
         <input
           type="text"
+          aria-label="Custom page reference string"
           value={rawRefInput}
           onChange={(e) => setRawRefInput(e.target.value)}
           placeholder="Enter comma-separated page numbers (e.g. 7, 0, 1, 2, 0, 3)"

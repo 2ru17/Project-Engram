@@ -1,30 +1,26 @@
 "use client";
 
-import { useState, useEffect, Suspense, useId } from "react";
+import { useState, useMemo, Suspense, useId } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { SIMULATOR_LIST, SimulatorMeta, resolveSimulator } from "@/lib/simulator-registry";
 import { SimulatorRenderer } from "@/components/simulators/SimulatorRenderer";
 
 function SimulatorStudioContent() {
   const searchInputId = useId();
+  const courseFilterId = useId();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [selectedSim, setSelectedSim] = useState<SimulatorMeta>(() =>
-    resolveSimulator(searchParams.get("id"))
-  );
+  const urlParamId = searchParams.get("id") || searchParams.get("sim");
+  const selectedSim = useMemo(() => resolveSimulator(urlParamId), [urlParamId]);
   const [activeDomain, setActiveDomain] = useState<string>("all");
+  const [activeCourse, setActiveCourse] = useState<string>("ALL");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  useEffect(() => {
-    const idFromUrl = searchParams.get("id");
-    if (idFromUrl) {
-      const match = resolveSimulator(idFromUrl);
-      if (match) setSelectedSim(match);
-    }
-  }, [searchParams]);
+  const allCourseCodes = Array.from(
+    new Set(SIMULATOR_LIST.flatMap((s) => s.courses))
+  ).sort();
 
   const handleSelectSim = (sim: SimulatorMeta) => {
-    setSelectedSim(sim);
     router.replace(`/simulators?id=${sim.id}`, { scroll: false });
   };
 
@@ -32,6 +28,9 @@ function SimulatorStudioContent() {
   const filteredSims = SIMULATOR_LIST.filter((sim) => {
     const matchesDomain = activeDomain === "all" || sim.domain === activeDomain;
     if (!matchesDomain) return false;
+    const matchesCourse =
+      activeCourse === "ALL" || sim.courses.includes(activeCourse);
+    if (!matchesCourse) return false;
     if (!q) return true;
     return (
       sim.title.toLowerCase().includes(q) ||
@@ -64,11 +63,11 @@ function SimulatorStudioContent() {
         </p>
 
         {/* Search and Domain Filter Controls */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mt-6">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mt-6">
           {/* Domain Filter Pills */}
           <div className="flex flex-wrap gap-2">
             {[
-              { id: "all", label: "ALL LABS (18)" },
+              { id: "all", label: `ALL LABS (${SIMULATOR_LIST.length})` },
               { id: "systems", label: "SYSTEMS & ARCHITECTURE" },
               { id: "security", label: "NETWORKS & SECURITY" },
               { id: "theory", label: "THEORY & ALGORITHMS" },
@@ -88,17 +87,40 @@ function SimulatorStudioContent() {
             ))}
           </div>
 
-          {/* Quick Filter Input */}
-          <div className="w-full md:w-64">
-            <label htmlFor={searchInputId} className="sr-only">Search Simulators</label>
-            <input
-              id={searchInputId}
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by course or topic..."
-              className="w-full bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-lg px-3 py-1.5 font-mono text-xs text-[var(--zen-snow)] placeholder:text-[var(--zen-ink-muted)] focus:outline-none focus:border-[var(--zen-cyan)]"
-            />
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+            {/* Course Code Filter */}
+            <div>
+              <label htmlFor={courseFilterId} className="sr-only">
+                Filter by Course Code
+              </label>
+              <select
+                id={courseFilterId}
+                aria-label="Filter simulators by course code"
+                value={activeCourse}
+                onChange={(e) => setActiveCourse(e.target.value)}
+                className="w-full sm:w-44 bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-lg px-2.5 py-1.5 font-mono text-xs text-[var(--zen-snow)] focus:outline-none focus:border-[var(--zen-cyan)]"
+              >
+                <option value="ALL">ALL COURSES ({allCourseCodes.length})</option>
+                {allCourseCodes.map((code) => (
+                  <option key={code} value={code}>
+                    COURSE: {code}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Quick Filter Input */}
+            <div className="w-full sm:w-64">
+              <label htmlFor={searchInputId} className="sr-only">Search Simulators</label>
+              <input
+                id={searchInputId}
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search by course or topic..."
+                className="w-full bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-lg px-3 py-1.5 font-mono text-xs text-[var(--zen-snow)] placeholder:text-[var(--zen-ink-muted)] focus:outline-none focus:border-[var(--zen-cyan)]"
+              />
+            </div>
           </div>
         </div>
       </div>
