@@ -14,7 +14,7 @@ import rehypeKatex from "rehype-katex";
 import * as prod from "react/jsx-runtime";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import DOMPurify from "isomorphic-dompurify";
+import { sanitizeHtml } from "@/lib/sanitize";
 import { MCQSection } from "@/components/MCQSection";
 import { parseMCQSection } from "@/lib/mcq-parser";
 import { SimulatorRenderer } from "@/components/simulators/SimulatorRenderer";
@@ -504,7 +504,7 @@ interface AstNode {
   children?: AstNode[];
 }
 
-// Sanitizes standalone HTML nodes using isomorphic-dompurify without corrupting multi-block wrapper tags (<details>)
+// Sanitizes standalone HTML nodes using sanitizeHtml without corrupting multi-block wrapper tags (<details>)
 function remarkSanitizeHtml() {
   return (tree: AstNode) => {
     const visit = (node: AstNode) => {
@@ -512,7 +512,7 @@ function remarkSanitizeHtml() {
         const val = node.value.trim();
         const isWrapperTag = /^<\/?(?:details|summary)\b[^>]*>$/i.test(val);
         if (!isWrapperTag && val.length > 0 && !val.startsWith("<!--")) {
-          node.value = DOMPurify.sanitize(val);
+          node.value = sanitizeHtml(val);
         }
       }
       if (Array.isArray(node.children)) {

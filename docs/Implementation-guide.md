@@ -94,7 +94,7 @@ Never use synchronous `fs` methods (`fs.readFileSync`, `fs.readdirSync`). Always
 ```typescript
 // src/lib/content-loader.ts
 import fs from "fs/promises";
-import DOMPurify from "isomorphic-dompurify";
+import { sanitizeHtml } from "@/lib/sanitize";
 
 interface CachedNoteEntry {
   mtimeMs: number;
@@ -116,7 +116,7 @@ export async function loadMonographByPath(filePath: string): Promise<ParsedMonog
 
   // 1. Parse YAML frontmatter, slice Interactive MCQ block, & render sanitized HTML
   const parsed = await parseMonographMarkdown(normalized);
-  parsed.sanitizedHtml = DOMPurify.sanitize(parsed.rawHtml);
+  parsed.sanitizedHtml = sanitizeHtml(parsed.rawHtml);
 
   monographCache.set(filePath, { mtimeMs: stat.mtimeMs, parsed });
   return parsed;
@@ -167,7 +167,7 @@ When modifying the Knowledge Graph (`src/components/graph/`):
 ## 7. Pull Request Verification Checklist
 
 * [ ] **Async I/O**: Zero `fs.readFileSync`, `fs.readdirSync`, or `fs.statSync` calls in `src/` or `scripts/`.
-* [ ] **XSS Protection**: All rendered HTML is sanitized with `isomorphic-dompurify`.
+* [ ] **XSS Protection**: All rendered HTML is sanitized via `@/lib/sanitize` (`dompurify` client + pure-JS SSR fallback).
 * [ ] **5-Universe & A11y Compliance**: Tested across `cyber-zen`, `neo-brutalism`, `minimalism`, `parallax`, and `broken-grid`; cards follow Fitts's Law (`<a>` wrapper with `aria-label` + inner `<div aria-hidden="true">`); all inputs have `<label>` associations.
 * [ ] **Vault & MCQ Integrity**: `npm run validate:notes` passes with $0$ errors and $100\%$ Interactive MCQ parse rate.
 * [ ] **Clean Repository Tree**: Zero AI-agent config files, scratch dumps, or temporary logs staged in Git.
