@@ -101,7 +101,7 @@ function fromBase64Url(b64url: string): string {
 
 /**
  * Compresses canonical note URLs by grouping them by course prefix
- * so the resulting Valorant-style code stays compact.
+ * so the resulting stateless telemetry vector stays compact.
  */
 function packCompletedNotes(urls: string[]): Record<string, string[]> {
   const grouped: Record<string, string[]> = {};
@@ -142,7 +142,7 @@ function unpackCompletedNotes(grouped: Record<string, string[]> | undefined): st
 }
 
 /**
- * Encodes a ProgressSnapshot into a Valorant crosshair-style stateless string:
+ * Encodes a ProgressSnapshot into a stateless CRC16 telemetry vector string:
  * Format: EG2-<UNIVERSE><MODE>-<TIER>-<FOCUS>-<PAYLOAD_B64URL>-<CRC16>
  * Example: EG2-CZD0-CORE-ALL-eyJ... -4F9A
  */

@@ -11,7 +11,7 @@ export function NeoBrutalismAtmosphere() {
           backgroundSize: "24px 24px",
         }}
       />
-      {/* Corner Registration Crosshairs */}
+      {/* Corner Registration Target Reticles */}
       <div className="absolute top-4 left-4 font-mono text-[10px] font-bold text-[#0A0A0A] tracking-wider opacity-60">
         [+ 00.00]
       </div>

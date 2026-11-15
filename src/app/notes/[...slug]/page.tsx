@@ -10,6 +10,7 @@ import { execFile } from "child_process";
 import { promisify } from "util";
 import { resolveVaultSlug } from "@/lib/vault-index";
 import { getCourseInfo } from "@/lib/course-registry";
+import { parseMCQSection } from "@/lib/mcq-parser";
 
 const execFileAsync = promisify(execFile);
 
@@ -31,7 +32,7 @@ export async function generateMetadata({
   }
 
   const title = resolved.title;
-  let description =
+  const description =
     resolved.kind === "virtual"
       ? `Structural Virtual Concept Hub connecting relational records in Project Engram for ${title}.`
       : resolved.kind === "directory"
@@ -100,10 +101,15 @@ export default async function NotePage({
   const toc: { text: string; depth: number; slug: string }[] = [];
 
   if (resolved.kind === "note") {
-    fileContent = await fs.readFile(
-      /*turbopackIgnore: true*/ resolved.fullPath,
-      "utf-8"
-    );
+    try {
+      fileContent = await fs.readFile(
+        /*turbopackIgnore: true*/ resolved.fullPath,
+        "utf-8"
+      );
+    } catch (err) {
+      console.warn(`[NOTE_READ_ERROR]: Unable to load ${resolved.fullPath}:`, err);
+      notFound();
+    }
 
     try {
       const { stdout } = await execFileAsync("git", [
@@ -120,8 +126,12 @@ export default async function NotePage({
       lastUpdated = new Date().toISOString().split("T")[0];
     }
 
+    const { articleContent } = parseMCQSection(
+      fileContent,
+      resolved.canonicalSlugArray.join("/")
+    );
     const slugger = new GithubSlugger();
-    const lines = fileContent.split("\n");
+    const lines = articleContent.split("\n");
     let inCodeBlock = false;
     for (const line of lines) {
       if (line.trim().startsWith("```")) inCodeBlock = !inCodeBlock;
@@ -205,8 +215,16 @@ export default async function NotePage({
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 universe-bento-grid">
                 {resolved.backlinks.map((item) => (
-                  <Link key={item.path} href={item.path}>
-                    <div className="universe-card p-4 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)]/60 bg-[var(--zen-card)] hover:bg-[var(--zen-card-hover)] transition-all duration-300 group flex items-center justify-between shadow-lg hover:-translate-y-0.5">
+                  <Link
+                    key={item.path}
+                    href={item.path}
+                    aria-label={`Open note ${item.name} in ${item.courseCode}`}
+                    className="block rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)]"
+                  >
+                    <div
+                      aria-hidden="true"
+                      className="universe-card p-4 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)]/60 bg-[var(--zen-card)] hover:bg-[var(--zen-card-hover)] transition-all duration-300 group flex items-center justify-between shadow-lg hover:-translate-y-0.5"
+                    >
                       <div className="flex items-center gap-3 min-w-0">
                         <span className="px-1.5 py-0.5 text-[9px] font-mono rounded border border-[var(--zen-cyan)]/40 text-[var(--zen-cyan)] shrink-0">
                           {item.courseCode}
@@ -303,7 +321,10 @@ export default async function NotePage({
           />
         </div>
       ) : (
-        <MarkdownRender content={fileContent} />
+        <MarkdownRender
+          content={fileContent}
+          filePath={resolved.canonicalSlugArray.join("/")}
+        />
       )}
     </ClientNoteLayout>
   );

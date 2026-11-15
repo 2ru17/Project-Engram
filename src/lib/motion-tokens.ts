@@ -27,10 +27,4 @@ export const motionTokens = {
     pop: 1.04,
   },
   stagger: 0.05, // GEMINI.md: staggerChildren: 0.05
-}
-
-export const springs = {
-  snappy: { type: "spring" as const, stiffness: 300, damping: 30 },
-  gentle: { type: "spring" as const, stiffness: 120, damping: 14 },
-  bouncy: { type: "spring" as const, stiffness: 400, damping: 10 },
-}
+};
