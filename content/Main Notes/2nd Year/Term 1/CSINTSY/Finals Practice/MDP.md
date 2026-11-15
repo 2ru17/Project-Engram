@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 09_MDP
 
 > [!info] Document Metadata
@@ -176,16 +175,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **B**. The Markov Property states that the next state depends only on the current state and action, independent of the sequence of events that preceded it.
-2. **D**. The Transition Function $T(s, a, s')$ or $P(s' | s, a)$ models the probability of reaching state $s'$ given state $s$ and action $a$.
-3. **C**. A discount factor near 0 means the agent heavily discounts future rewards, making it myopic and focused on immediate rewards.
-4. **B**. A policy is a strategy or rule that dictates what action to take in each state ($\pi(s) \to a$).
-5. **B**. The value function tells us the expected cumulative reward starting from state $s$ under a given policy.
-6. **B**. The Bellman equation recursively decomposes a state's value into the immediate reward plus the discounted value of reaching the next state.
-7. **B**. The equation multiplies the transition probability $T(s, a, s')$ by the sum of the reward and discounted next state value, effectively taking an expected value over all possible outcomes.
-8. **C**. The Bellman equation uses a $\max_a$ operator to choose the action that yields the highest expected cumulative return.
-9. **B**. A common pitfall is confusing $T(s,a,s')$ (probability) with $R(s,a,s')$ (immediate reward).
-10. **C**. Value estimates rely on the values of subsequent states, so the values must be iteratively updated until they converge.
+1. **B)** The Markov Property states that the next state depends only on the current state and action, independent of the sequence of events that preceded it.
+2. **D)** The Transition Function $T(s, a, s')$ or $P(s' | s, a)$ models the probability of reaching state $s'$ given state $s$ and action $a$.
+3. **C)** A discount factor near 0 means the agent heavily discounts future rewards, making it myopic and focused on immediate rewards.
+4. **B)** A policy is a strategy or rule that dictates what action to take in each state ($\pi(s) \to a$).
+5. **B)** The value function tells us the expected cumulative reward starting from state $s$ under a given policy.
+6. **B)** The Bellman equation recursively decomposes a state's value into the immediate reward plus the discounted value of reaching the next state.
+7. **B)** The equation multiplies the transition probability $T(s, a, s')$ by the sum of the reward and discounted next state value, effectively taking an expected value over all possible outcomes.
+8. **C)** The Bellman equation uses a $\max_a$ operator to choose the action that yields the highest expected cumulative return.
+9. **B)** A common pitfall is confusing $T(s,a,s')$ (probability) with $R(s,a,s')$ (immediate reward).
+10. **C)** Value estimates rely on the values of subsequent states, so the values must be iteratively updated until they converge.
 
 ## References & Navigation
 

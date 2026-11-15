@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 04_Adversarial_Games
 
 > [!info] Document Metadata
@@ -188,16 +187,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **B**. A zero-sum game is defined as one where the total utility sum is constant, meaning one player's gain is another's loss.
-2. **C**. Terminal states represent the end of the game where outcomes like win, lose, or draw are decided.
-3. **C**. The MAX agent's objective is to maximize the utility value, while MIN tries to minimize it.
-4. **C**. At a MAX node, the algorithm backpropagates values by choosing the child with the maximum utility value.
-5. **B**. The time complexity is $O(b^m)$ because it explores an exponential number of nodes based on branching factor $b$ and depth $m$.
-6. **C**. Alpha-Beta pruning optimizes Minimax by cutting off branches that are guaranteed not to influence the final optimal choice.
-7. **B**. The parameter $\alpha$ specifically tracks the best (highest) value found so far for the MAX player.
-8. **C**. Pruning occurs when $\alpha \ge \beta$ because MAX already has a guaranteed path that is at least as good as the current worst-case for MIN.
-9. **C**. A MIN node updates $\beta$, which tracks the lowest value found so far for MIN.
-10. **A**. Alpha-Beta pruning only saves computation and yields the exact same optimal move as unpruned Minimax.
+1. **B)** A zero-sum game is defined as one where the total utility sum is constant, meaning one player's gain is another's loss.
+2. **C)** Terminal states represent the end of the game where outcomes like win, lose, or draw are decided.
+3. **C)** The MAX agent's objective is to maximize the utility value, while MIN tries to minimize it.
+4. **C)** At a MAX node, the algorithm backpropagates values by choosing the child with the maximum utility value.
+5. **B)** The time complexity is $O(b^m)$ because it explores an exponential number of nodes based on branching factor $b$ and depth $m$.
+6. **C)** Alpha-Beta pruning optimizes Minimax by cutting off branches that are guaranteed not to influence the final optimal choice.
+7. **B)** The parameter $\alpha$ specifically tracks the best (highest) value found so far for the MAX player.
+8. **C)** Pruning occurs when $\alpha \ge \beta$ because MAX already has a guaranteed path that is at least as good as the current worst-case for MIN.
+9. **C)** A MIN node updates $\beta$, which tracks the lowest value found so far for MIN.
+10. **A)** Alpha-Beta pruning only saves computation and yields the exact same optimal move as unpruned Minimax.
 
 ## References & Navigation
 

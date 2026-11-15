@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ status: completed
 
 ### Answer Key & Explanations
 
-1. **B**. A priori probability relies on structural symmetry of the sample space to deduce $P(E) = |E|/|S|$ before any experimental data are collected.
-2. **A**. Unlike a symmetric coin or cube, a thumbtack's center of mass and shape make its two landing states physically unequal in likelihood, invalidating the equiprobable assumption.
-3. **C**. There are $13$ Hearts and $4$ Aces, with $1$ overlap (the Ace of Hearts). Thus $n(H \cup A) = 13 + 4 - 1 = 16$, giving $P(H \cup A) = \frac{16}{52} = \frac{4}{13}$.
-4. **D**. Formulated by Jakob Bernoulli and Pierre-Simon Laplace, the Principle of Indifference assigns uniform probability $1/N$ to symmetric elementary outcomes.
-5. **B**. The Law of Large Numbers bridges classical (a priori) and frequentist (empirical) probability: as $n \to \infty$, $\hat{P}_n(E) = f_n(E)/n \to P(E)$.
+1. **B)** A priori probability relies on structural symmetry of the sample space to deduce $P(E) = |E|/|S|$ before any experimental data are collected.
+2. **A)** Unlike a symmetric coin or cube, a thumbtack's center of mass and shape make its two landing states physically unequal in likelihood, invalidating the equiprobable assumption.
+3. **C)** There are $13$ Hearts and $4$ Aces, with $1$ overlap (the Ace of Hearts). Thus $n(H \cup A) = 13 + 4 - 1 = 16$, giving $P(H \cup A) = \frac{16}{52} = \frac{4}{13}$.
+4. **D)** Formulated by Jakob Bernoulli and Pierre-Simon Laplace, the Principle of Indifference assigns uniform probability $1/N$ to symmetric elementary outcomes.
+5. **B)** The Law of Large Numbers bridges classical (a priori) and frequentist (empirical) probability: as $n \to \infty$, $\hat{P}_n(E) = f_n(E)/n \to P(E)$.
 
 ## References & Navigation
 

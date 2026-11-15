@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -70,11 +69,11 @@ The **Sample Space** (denoted $S$ or $\Omega$) of a statistical experiment is th
 
 ### Answer Key & Explanations
 
-1. **B**. By definition, a sample space $S$ lists all distinct, non-overlapping elementary outcomes (mutually exclusive) such that every trial produces exactly one element $\omega \in S$ (collectively exhaustive).
-2. **A**. The first Head can occur on toss $1, 2, 3, \dots$ with no finite upper bound, forming the countably infinite discrete set $\mathbb{Z}^+$.
-3. **C**. While both sets are valid sample spaces, only the $36$ ordered pairs $(d_1, d_2)$ are symmetric and equiprobable, allowing direct use of the classical formula $P(E) = |E|/36$.
-4. **D**. The unordered pairs are $\{\{A,B\}, \{A,C\}, \{A,D\}, \{B,C\}, \{B,D\}, \{C,D\}\}$, which has cardinality $\binom{4}{2} = 6$.
-5. **B**. Exact waiting time $t \in [0, \infty)$ varies continuously over an uncountable interval of real numbers, whereas customer counts, card hands, and syntax error counts are discrete.
+1. **B)** By definition, a sample space $S$ lists all distinct, non-overlapping elementary outcomes (mutually exclusive) such that every trial produces exactly one element $\omega \in S$ (collectively exhaustive).
+2. **A)** The first Head can occur on toss $1, 2, 3, \dots$ with no finite upper bound, forming the countably infinite discrete set $\mathbb{Z}^+$.
+3. **C)** While both sets are valid sample spaces, only the $36$ ordered pairs $(d_1, d_2)$ are symmetric and equiprobable, allowing direct use of the classical formula $P(E) = |E|/36$.
+4. **D)** The unordered pairs are $\{\{A,B\}, \{A,C\}, \{A,D\}, \{B,C\}, \{B,D\}, \{C,D\}\}$, which has cardinality $\binom{4}{2} = 6$.
+5. **B)** Exact waiting time $t \in [0, \infty)$ varies continuously over an uncountable interval of real numbers, whereas customer counts, card hands, and syntax error counts are discrete.
 
 ## References & Navigation
 

@@ -162,6 +162,7 @@ export function ProbabilityStudioWorkbench() {
             </div>
             <input
               type="range"
+              aria-label="Normal distribution mean mu"
               min="-2"
               max="2"
               step="0.5"
@@ -178,6 +179,7 @@ export function ProbabilityStudioWorkbench() {
             </div>
             <input
               type="range"
+              aria-label="Normal distribution standard deviation sigma"
               min="0.5"
               max="2"
               step="0.1"
@@ -194,6 +196,7 @@ export function ProbabilityStudioWorkbench() {
             </div>
             <input
               type="number"
+              aria-label="Custom query X value"
               step="0.1"
               value={customX}
               onChange={(e) => setCustomX(parseFloat(e.target.value) || 0)}
@@ -213,6 +216,7 @@ export function ProbabilityStudioWorkbench() {
             </div>
             <input
               type="range"
+              aria-label="Binomial trials n"
               min="5"
               max="40"
               step="1"
@@ -233,6 +237,7 @@ export function ProbabilityStudioWorkbench() {
             </div>
             <input
               type="range"
+              aria-label="Binomial success probability p"
               min="0.05"
               max="0.95"
               step="0.05"
@@ -249,6 +254,7 @@ export function ProbabilityStudioWorkbench() {
             </div>
             <input
               type="number"
+              aria-label="Binomial target successes k"
               min="0"
               max={binomN}
               value={binomK}
@@ -269,6 +275,7 @@ export function ProbabilityStudioWorkbench() {
             </div>
             <input
               type="range"
+              aria-label="Poisson rate parameter lambda"
               min="1"
               max="15"
               step="0.5"
@@ -285,6 +292,7 @@ export function ProbabilityStudioWorkbench() {
             </div>
             <input
               type="number"
+              aria-label="Poisson target events k"
               min="0"
               max="30"
               value={poissonK}

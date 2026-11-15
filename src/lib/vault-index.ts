@@ -1,6 +1,8 @@
+import { createHash } from "crypto";
 import { promises as fs } from "fs";
 import path from "path";
 import { COURSE_REGISTRY, getCourseInfo, type StarDomainId } from "./course-registry";
+import { parseMCQSection } from "./mcq-parser";
 
 export interface IndexedNote {
   /** Deterministic 0..N-1 index sorted by canonicalSlug.toLowerCase() */
@@ -75,8 +77,58 @@ const YEAR_FOLDER_REGEX = /^(1st|2nd|3rd|4th)\s+Year$/i;
 const TERM_FOLDER_REGEX = /^Term\s+\d+$/i;
 const UTILITY_PREFIX_REGEX = /^\[(EX|PS|HO|REV|QZ|ANS|SP)\]/i;
 
+type ParsedNoteMetadata = Pick<
+  IndexedNote,
+  | "excerpt"
+  | "wordCount"
+  | "mcqCount"
+  | "estimatedMinutes"
+  | "isUtility"
+  | "wikilinks"
+  | "tags"
+  | "prevTopic"
+  | "nextTopic"
+>;
+
+interface CachedFileEntry {
+  mtimeMs: number;
+  size: number;
+  contentHash: string;
+  meta: ParsedNoteMetadata;
+}
+
+const globalForCache = globalThis as typeof globalThis & {
+  __engramFileParseCache?: Map<string, CachedFileEntry>;
+};
+
+const fileParseCache: Map<string, CachedFileEntry> =
+  globalForCache.__engramFileParseCache ??
+  (globalForCache.__engramFileParseCache = new Map<string, CachedFileEntry>());
+
 let cachedVaultIndex: VaultIndex | null = null;
 let inflightIndexPromise: Promise<VaultIndex> | null = null;
+
+async function mapConcurrent<T, R>(
+  items: T[],
+  concurrency: number,
+  worker: (item: T) => Promise<R>
+): Promise<R[]> {
+  if (items.length === 0) return [];
+  const results = new Array<R>(items.length);
+  let cursor = 0;
+  const workerCount = Math.min(Math.max(1, concurrency), items.length);
+
+  await Promise.all(
+    Array.from({ length: workerCount }, async () => {
+      while (true) {
+        const idx = cursor++;
+        if (idx >= items.length) break;
+        results[idx] = await worker(items[idx]);
+      }
+    })
+  );
+  return results;
+}
 
 export function isLegacyYearSegment(segment: string): boolean {
   return YEAR_FOLDER_REGEX.test(segment.trim());
@@ -158,7 +210,11 @@ async function discoverCourseDirs(baseContentDir: string): Promise<IndexedCourse
   return discovered;
 }
 
-function parseNoteMetadata(rawContent: string, fileName: string) {
+function parseNoteMetadata(
+  rawContent: string,
+  fileName: string,
+  canonicalSlug?: string
+): ParsedNoteMetadata {
   // Strip YAML frontmatter
   const withoutFrontmatter = rawContent.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, "");
 
@@ -193,22 +249,16 @@ function parseNoteMetadata(rawContent: string, fileName: string) {
   );
   if (nextMatch) nextTopic = nextMatch[1].trim();
 
-  // Count MCQs
-  const mcqSectionMatch = withoutFrontmatter.match(
-    /##\s+Multiple Choice Questions([\s\S]*?)(?:###\s+Answer Key|##\s+References|$)/i
-  );
-  let mcqCount = 0;
-  if (mcqSectionMatch) {
-    const qMatches = mcqSectionMatch[1].match(/^\s*\d+\.\s+/gm);
-    mcqCount = qMatches ? qMatches.length : 0;
-  }
+  // Extract assessments via unified Canvas-style parser
+  const { articleContent, mcqItems } = parseMCQSection(withoutFrontmatter, canonicalSlug);
+  const mcqCount = mcqItems.length;
 
   // Clean body for excerpt and word count
-  const cleanBody = withoutFrontmatter
+  const cleanBody = articleContent
     .replace(/> \[!info\] Document Metadata[\s\S]*?(?=\n\n[^>]|$)/i, "")
-    .replace(/##\s+Multiple Choice Questions[\s\S]*$/i, "")
     .replace(/\u{1F3F7}\uFE0F\s*Tags:.*?\n/giu, "")
     .replace(/\*\*\u{1F3F7}\uFE0F\s*Tags:\*\*.*?\n/giu, "")
+    .replace(/\*\*Tags:\*\*.*?\n/gi, "")
     .replace(/[#*`_\[\]>]/g, "")
     .trim();
 
@@ -238,26 +288,96 @@ function parseNoteMetadata(rawContent: string, fileName: string) {
   };
 }
 
+interface DiscoveredNoteFile {
+  courseDir: IndexedCourseDir;
+  fullPath: string;
+  name: string;
+  courseRelPath: string;
+  canonicalSlug: string;
+  legacyRelPath: string;
+}
+
+async function readCachedNoteMetadata(
+  item: DiscoveredNoteFile
+): Promise<Omit<IndexedNote, "bitIndex"> | null> {
+  try {
+    const stat = await fs.stat(/*turbopackIgnore: true*/ item.fullPath);
+    const cached = fileParseCache.get(item.fullPath);
+
+    let meta: ParsedNoteMetadata;
+    if (cached && cached.mtimeMs === stat.mtimeMs && cached.size === stat.size) {
+      meta = cached.meta;
+    } else {
+      const rawContent = await fs.readFile(
+        /*turbopackIgnore: true*/ item.fullPath,
+        "utf-8"
+      );
+      const contentHash = createHash("sha256").update(rawContent).digest("hex");
+
+      if (cached && cached.contentHash === contentHash) {
+        meta = cached.meta;
+        fileParseCache.set(item.fullPath, {
+          mtimeMs: stat.mtimeMs,
+          size: stat.size,
+          contentHash,
+          meta,
+        });
+      } else {
+        meta = parseNoteMetadata(rawContent, item.name, item.canonicalSlug);
+        fileParseCache.set(item.fullPath, {
+          mtimeMs: stat.mtimeMs,
+          size: stat.size,
+          contentHash,
+          meta,
+        });
+      }
+    }
+
+    return {
+      id: item.canonicalSlug.toLowerCase(),
+      name: item.name,
+      courseCode: item.courseDir.courseCode,
+      courseRelPath: item.courseRelPath,
+      canonicalSlug: item.canonicalSlug,
+      canonicalUrl: `/notes/${item.canonicalSlug}`,
+      legacyRelPath: item.legacyRelPath,
+      fullPath: item.fullPath,
+      ...meta,
+    };
+  } catch (err) {
+    console.warn(`[VAULT_INDEX_WARN]: Failed to index ${item.canonicalSlug}:`, err);
+    return null;
+  }
+}
+
 async function buildVaultIndexInternal(): Promise<VaultIndex> {
   const baseContentDir = path.join(process.cwd(), "content", "Main Notes");
   const courses = new Map<string, IndexedCourseDir>();
-  const rawNotes: Omit<IndexedNote, "bitIndex">[] = [];
+  const discoveredFiles: DiscoveredNoteFile[] = [];
 
   const discoveredCourses = await discoverCourseDirs(baseContentDir);
   for (const c of discoveredCourses) {
     courses.set(c.courseCode, c);
   }
 
-  for (const courseDir of discoveredCourses) {
-    async function walkCourse(currentDir: string) {
-      const entries = await fs.readdir(/*turbopackIgnore: true*/ currentDir, {
-        withFileTypes: true,
-      });
+  await mapConcurrent(discoveredCourses, 8, async (courseDir) => {
+    async function collectCourseFiles(currentDir: string): Promise<void> {
+      let entries;
+      try {
+        entries = await fs.readdir(/*turbopackIgnore: true*/ currentDir, {
+          withFileTypes: true,
+        });
+      } catch (err) {
+        console.warn(`[VAULT_INDEX_WARN]: Unable to read dir ${currentDir}:`, err);
+        return;
+      }
+
+      const subDirs: string[] = [];
       for (const entry of entries) {
         if (entry.name.startsWith(".")) continue;
         const fullPath = path.join(currentDir, entry.name);
         if (entry.isDirectory()) {
-          await walkCourse(fullPath);
+          subDirs.push(fullPath);
         } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".md")) {
           const name = entry.name.replace(/\.md$/i, "");
           if (
@@ -274,29 +394,29 @@ async function buildVaultIndexInternal(): Promise<VaultIndex> {
           const canonicalSlug = `${courseDir.courseCode}/${courseRelPath}`;
           const legacyRelPath = `${courseDir.legacyRelPrefix}/${courseRelPath}`;
 
-          const rawContent = await fs.readFile(
-            /*turbopackIgnore: true*/ fullPath,
-            "utf-8"
-          );
-          const meta = parseNoteMetadata(rawContent, name);
-
-          rawNotes.push({
-            id: canonicalSlug.toLowerCase(),
+          discoveredFiles.push({
+            courseDir,
+            fullPath,
             name,
-            courseCode: courseDir.courseCode,
             courseRelPath,
             canonicalSlug,
-            canonicalUrl: `/notes/${canonicalSlug}`,
             legacyRelPath,
-            fullPath,
-            ...meta,
           });
         }
       }
+
+      if (subDirs.length > 0) {
+        await Promise.all(subDirs.map((d) => collectCourseFiles(d)));
+      }
     }
 
-    await walkCourse(courseDir.diskPath);
-  }
+    await collectCourseFiles(courseDir.diskPath);
+  });
+
+  const parsedResults = await mapConcurrent(discoveredFiles, 16, readCachedNoteMetadata);
+  const rawNotes = parsedResults.filter(
+    (n): n is Omit<IndexedNote, "bitIndex"> => n !== null
+  );
 
   // Deterministic ordering by canonicalSlug.toLowerCase() for bitmask stability
   rawNotes.sort((a, b) => a.id.localeCompare(b.id));
@@ -334,11 +454,16 @@ async function buildVaultIndexInternal(): Promise<VaultIndex> {
 export async function getVaultIndex(): Promise<VaultIndex> {
   if (cachedVaultIndex) return cachedVaultIndex;
   if (!inflightIndexPromise) {
-    inflightIndexPromise = buildVaultIndexInternal().then((idx) => {
-      cachedVaultIndex = idx;
-      inflightIndexPromise = null;
-      return idx;
-    });
+    inflightIndexPromise = buildVaultIndexInternal()
+      .then((idx) => {
+        cachedVaultIndex = idx;
+        inflightIndexPromise = null;
+        return idx;
+      })
+      .catch((err) => {
+        inflightIndexPromise = null;
+        throw err;
+      });
   }
   return inflightIndexPromise;
 }
@@ -356,10 +481,16 @@ export async function buildCourseDirectoryTree(): Promise<{
     folders: DirectoryTreeNode[];
     files: { name: string; path: string }[];
   }> {
-    const entries = await fs.readdir(/*turbopackIgnore: true*/ dirDiskPath, {
-      withFileTypes: true,
-    });
-    const folders: DirectoryTreeNode[] = [];
+    let entries;
+    try {
+      entries = await fs.readdir(/*turbopackIgnore: true*/ dirDiskPath, {
+        withFileTypes: true,
+      });
+    } catch {
+      return { folders: [], files: [] };
+    }
+
+    const dirTasks: Promise<DirectoryTreeNode | null>[] = [];
     const files: { name: string; path: string }[] = [];
 
     for (const entry of entries) {
@@ -368,14 +499,17 @@ export async function buildCourseDirectoryTree(): Promise<{
       const nextCanonical = `${canonicalPrefix}/${entry.name}`;
 
       if (entry.isDirectory()) {
-        const children = await buildSubtree(fullPath, nextCanonical);
-        if (children.folders.length > 0 || children.files.length > 0) {
-          folders.push({
-            name: entry.name,
-            path: `/notes/${nextCanonical}`,
-            children,
-          });
-        }
+        dirTasks.push(
+          buildSubtree(fullPath, nextCanonical).then((children) =>
+            children.folders.length > 0 || children.files.length > 0
+              ? {
+                  name: entry.name,
+                  path: `/notes/${nextCanonical}`,
+                  children,
+                }
+              : null
+          )
+        );
       } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".md")) {
         const cleanName = entry.name.replace(/\.md$/i, "");
         if (
@@ -390,6 +524,11 @@ export async function buildCourseDirectoryTree(): Promise<{
         });
       }
     }
+
+    const folderResults = await Promise.all(dirTasks);
+    const folders = folderResults.filter(
+      (f): f is DirectoryTreeNode => f !== null
+    );
 
     folders.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
     files.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
@@ -409,10 +548,13 @@ export async function buildCourseDirectoryTree(): Promise<{
     return a.courseCode.localeCompare(b.courseCode);
   });
 
-  const topFolders: DirectoryTreeNode[] = [];
+  const subtrees = await mapConcurrent(sortedCourses, 8, async (courseDir) => ({
+    courseDir,
+    children: await buildSubtree(courseDir.diskPath, courseDir.courseCode),
+  }));
 
-  for (const courseDir of sortedCourses) {
-    const children = await buildSubtree(courseDir.diskPath, courseDir.courseCode);
+  const topFolders: DirectoryTreeNode[] = [];
+  for (const { courseDir, children } of subtrees) {
     if (children.folders.length === 0 && children.files.length === 0) continue;
 
     const info = getCourseInfo(courseDir.courseCode);

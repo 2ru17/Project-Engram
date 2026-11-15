@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -72,11 +71,11 @@ Because events are subsets of the sample space $S$, **Event Operations** corresp
 
 ### Answer Key & Explanations
 
-1. **B**. Since $A = (A \cap B) \cup (A \cap B^c)$ is a disjoint union, $P(A) = P(A \cap B) + P(A \cap B^c)$, which rearranges to $P(A \cap B^c) = P(A) - P(A \cap B)$.
-2. **A**. Symmetric difference $A \triangle B = (A \cap B^c) \cup (A^c \cap B)$ is the disjoint union of "$A$ only" ($P(A) - P(A \cap B)$) and "$B$ only" ($P(B) - P(A \cap B)$), whose sum is $P(A) + P(B) - 2P(A \cap B)$.
-3. **C**. $P(A \triangle B) = P(A) + P(B) - 2P(A \cap B) = 0.60 + 0.35 - 2(0.20) = 0.95 - 0.40 = 0.55$.
-4. **D**. Intersection distributes over union: $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
-5. **B**. Since $B$ and $B^c$ partition $S$, intersecting with $A$ partitions $A$ into two mutually exclusive subsets $(A \cap B)$ and $(A \cap B^c)$.
+1. **B)** Since $A = (A \cap B) \cup (A \cap B^c)$ is a disjoint union, $P(A) = P(A \cap B) + P(A \cap B^c)$, which rearranges to $P(A \cap B^c) = P(A) - P(A \cap B)$.
+2. **A)** Symmetric difference $A \triangle B = (A \cap B^c) \cup (A^c \cap B)$ is the disjoint union of "$A$ only" ($P(A) - P(A \cap B)$) and "$B$ only" ($P(B) - P(A \cap B)$), whose sum is $P(A) + P(B) - 2P(A \cap B)$.
+3. **C)** $P(A \triangle B) = P(A) + P(B) - 2P(A \cap B) = 0.60 + 0.35 - 2(0.20) = 0.95 - 0.40 = 0.55$.
+4. **D)** Intersection distributes over union: $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+5. **B)** Since $B$ and $B^c$ partition $S$, intersecting with $A$ partitions $A$ into two mutually exclusive subsets $(A \cap B)$ and $(A \cap B^c)$.
 
 ## References & Navigation
 

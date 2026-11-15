@@ -5,7 +5,6 @@ course: STT101A
 topic: "STT101A Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -110,15 +109,15 @@ flowchart TD
 
 ### Answer Key & Explanations
 
-1. **B**. $P(R_1) = 4/10 = 2/5$. Given the first is red, 3 red remain out of 9: $P(R_2 \mid R_1) = 3/9 = 1/3$. $P(R_1 \cap R_2) = (2/5) \times (1/3) = 2/15$.
-2. **B**. For independent events, $P(A \cap B) = P(A)P(B) = 0.3 \times 0.4 = 0.12$. By the additive rule: $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.3 + 0.4 - 0.12 = 0.58$.
-3. **B**. By Bayes' Theorem: $P(A \mid T) = \frac{P(T \mid A) P(A)}{P(T \mid A) P(A) + P(T \mid A^c) P(A^c)} = \frac{0.95 \times 0.01}{(0.95 \times 0.01) + (0.02 \times 0.99)} = \frac{0.0095}{0.0095 + 0.0198} = \frac{0.0095}{0.0293} \approx 0.3242$ (32.4%). (The Base Rate Fallacy!).
-4. **A**. Margin of error is $Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} = 1.96 \times \frac{16}{\sqrt{64}} = 1.96 \times 2 = 3.92$. Interval is $[48.08, 55.92]$.
-5. **C**. The significance level $\alpha$ is by definition the maximum allowable probability of committing a Type I error (rejecting a true $H_0$).
+1. **B)** $P(R_1) = 4/10 = 2/5$. Given the first is red, 3 red remain out of 9: $P(R_2 \mid R_1) = 3/9 = 1/3$. $P(R_1 \cap R_2) = (2/5) \times (1/3) = 2/15$.
+2. **B)** For independent events, $P(A \cap B) = P(A)P(B) = 0.3 \times 0.4 = 0.12$. By the additive rule: $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.3 + 0.4 - 0.12 = 0.58$.
+3. **B)** By Bayes' Theorem: $P(A \mid T) = \frac{P(T \mid A) P(A)}{P(T \mid A) P(A) + P(T \mid A^c) P(A^c)} = \frac{0.95 \times 0.01}{(0.95 \times 0.01) + (0.02 \times 0.99)} = \frac{0.0095}{0.0095 + 0.0198} = \frac{0.0095}{0.0293} \approx 0.3242$ (32.4%). (The Base Rate Fallacy!).
+4. **A)** Margin of error is $Z_{\alpha/2} \frac{\sigma}{\sqrt{n}} = 1.96 \times \frac{16}{\sqrt{64}} = 1.96 \times 2 = 3.92$. Interval is $[48.08, 55.92]$.
+5. **C)** The significance level $\alpha$ is by definition the maximum allowable probability of committing a Type I error (rejecting a true $H_0$).
 
 ## References & Navigation
 
-- **Previous Topic:** [[CSMATH1]]
-- **Next Topic:** [[CSMODEL]]
-- **Prerequisites:** [[Probability and Statistics]], Bayes, Distributions, Hypothesis Testing
-- **Cross-Curricular Connections:** [[CSINTSY]]
+- **Previous Topic:** [[[REV] CSMATH1 Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] CSMODEL Comprehensive Finals Reviewer]]
+- **Prerequisites:** [[Basic Formula of Probability]], Bayes, Distributions, Hypothesis Testing
+- **Cross-Curricular Connections:** [[[REV] CSINTSY Comprehensive Finals Reviewer]]

@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "13.0 Virtualization"
 status: completed
 ---
-
 # 13.0 Virtualization
 
 > [!info] Document Metadata
@@ -117,16 +116,16 @@ Implementing virtualization yields several significant advantages: **Resource Op
 
 ### Answer Key & Explanations
 
-1. **B**. Virtualization is the creation of virtual versions of computing resources.
-2. **B**. A VM is an emulation allowing multiple isolated operating systems to run on one physical machine.
-3. **C**. A hypervisor is a software layer that creates, manages, and runs virtual machines.
-4. **A**. Type 1 runs directly on hardware (bare metal), while Type 2 runs on top of a conventional OS.
-5. **C**. Containers share the host OS kernel, making them lightweight and reducing resource overhead compared to full VMs.
-6. **C**. Storage Virtualization abstracts physical storage into unified virtual drives.
-7. **B**. Allocation involves assigning virtual CPUs, memory, and storage to the newly created VM.
-8. **B**. VMs can be easily snapshotted and cloned, making disaster recovery straightforward.
-9. **B**. Isolation provides secure, sandbox environments ideal for testing without risking the host machine.
-10. **B**. Network virtualization utilizes Virtual Network Devices such as Virtual Network Interface Cards (NICs) and virtual switches.
+1. **B)** Virtualization is the creation of virtual versions of computing resources.
+2. **B)** A VM is an emulation allowing multiple isolated operating systems to run on one physical machine.
+3. **C)** A hypervisor is a software layer that creates, manages, and runs virtual machines.
+4. **A)** Type 1 runs directly on hardware (bare metal), while Type 2 runs on top of a conventional OS.
+5. **C)** Containers share the host OS kernel, making them lightweight and reducing resource overhead compared to full VMs.
+6. **C)** Storage Virtualization abstracts physical storage into unified virtual drives.
+7. **B)** Allocation involves assigning virtual CPUs, memory, and storage to the newly created VM.
+8. **B)** VMs can be easily snapshotted and cloned, making disaster recovery straightforward.
+9. **B)** Isolation provides secure, sandbox environments ideal for testing without risking the host machine.
+10. **B)** Network virtualization utilizes Virtual Network Devices such as Virtual Network Interface Cards (NICs) and virtual switches.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Binary Signed Multiplication"
 status: completed
 ---
-
 # Problem Set - Binary Signed Multiplication
 
 > [!info] Document Metadata

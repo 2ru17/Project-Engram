@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Course Overview & Architecture Foundations"
 status: completed
 ---
-
 # Module 00: Course Overview & Architecture Foundations
 
 > [!info] Document Metadata
@@ -202,11 +201,11 @@ $$N(8\text{ years}) = 4 \times 10^9 \times 2^4 = 4 \times 10^9 \times 16 = 64 \t
 
 ### Answer Key & Explanations
 
-1. **C**. Instruction opcodes and addressing modes are visible to the assembly programmer/compiler and define the software-hardware interface (Computer Architecture). The number of pipeline stages, branch buffers, and cache queues are organizational implementation choices invisible to user-level code.
-2. **B**. The Von Neumann bottleneck occurs because instructions and data share a single memory address space and physical system bus, preventing simultaneous instruction fetches and data operand transfers.
-3. **C**. As physical transistor dimensions shrunk below 90 nm, the threshold voltage could not be proportionally lowered without triggering exponential increases in sub-threshold static leakage current, breaking constant power density scaling.
-4. **A**. Pure Harvard architecture maintains separate memory arrays and independent buses for instructions and data, allowing the CPU to fetch an instruction and read/write a data operand in parallel within the same clock cycle.
-5. **B**. Dynamic power scales quadratically with voltage: $P \propto V^2$. If $V_{new} = 0.80 \cdot V_{orig}$, then $P_{new} \propto (0.80)^2 = 0.64 \cdot P_{orig}$. The reduction is $1 - 0.64 = 0.36 = 36\%$.
+1. **C)** Instruction opcodes and addressing modes are visible to the assembly programmer/compiler and define the software-hardware interface (Computer Architecture). The number of pipeline stages, branch buffers, and cache queues are organizational implementation choices invisible to user-level code.
+2. **B)** The Von Neumann bottleneck occurs because instructions and data share a single memory address space and physical system bus, preventing simultaneous instruction fetches and data operand transfers.
+3. **C)** As physical transistor dimensions shrunk below 90 nm, the threshold voltage could not be proportionally lowered without triggering exponential increases in sub-threshold static leakage current, breaking constant power density scaling.
+4. **A)** Pure Harvard architecture maintains separate memory arrays and independent buses for instructions and data, allowing the CPU to fetch an instruction and read/write a data operand in parallel within the same clock cycle.
+5. **B)** Dynamic power scales quadratically with voltage: $P \propto V^2$. If $V_{new} = 0.80 \cdot V_{orig}$, then $P_{new} \propto (0.80)^2 = 0.64 \cdot P_{orig}$. The reduction is $1 - 0.64 = 0.36 = 36\%$.
 
 ## References & Navigation
 

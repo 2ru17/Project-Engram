@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 05_Machine_Learning
 
 > [!info] Document Metadata
@@ -181,16 +180,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **B**. Supervised learning relies on labeled datasets where both the input ($X$) and correct output ($Y$) are provided.
-2. **B**. Regression is the task of predicting a continuous value, such as a house price or temperature.
-3. **C**. Unsupervised learning works with unlabeled data to discover hidden structures, such as clusters or groups.
-4. **A**. Reinforcement learning trains agents to make sequences of decisions to maximize a cumulative reward signal from the environment.
-5. **B**. A False Positive is a Type I Error, where the model incorrectly predicts the positive class for an actual negative instance.
-6. **C**. Accuracy can be misleading for imbalanced datasets (e.g., 99% benign, 1% cancer) because predicting everything as the majority class still yields 99% accuracy.
-7. **B**. Recall (Sensitivity) measures the coverage of actual positives, calculated as $TP / (TP + FN)$.
-8. **C**. The F1 Score is the harmonic mean of Precision and Recall, offering a single balanced metric.
-9. **B**. One-Hot Encoding is a feature engineering technique that converts categorical data (e.g., Red, Blue) into binary vectors.
-10. **D**. TF-IDF (Term Frequency-Inverse Document Frequency) is a statistical measure used in text mining to weigh the importance of words.
+1. **B)** Supervised learning relies on labeled datasets where both the input ($X$) and correct output ($Y$) are provided.
+2. **B)** Regression is the task of predicting a continuous value, such as a house price or temperature.
+3. **C)** Unsupervised learning works with unlabeled data to discover hidden structures, such as clusters or groups.
+4. **A)** Reinforcement learning trains agents to make sequences of decisions to maximize a cumulative reward signal from the environment.
+5. **B)** A False Positive is a Type I Error, where the model incorrectly predicts the positive class for an actual negative instance.
+6. **C)** Accuracy can be misleading for imbalanced datasets (e.g., 99% benign, 1% cancer) because predicting everything as the majority class still yields 99% accuracy.
+7. **B)** Recall (Sensitivity) measures the coverage of actual positives, calculated as $TP / (TP + FN)$.
+8. **C)** The F1 Score is the harmonic mean of Precision and Recall, offering a single balanced metric.
+9. **B)** One-Hot Encoding is a feature engineering technique that converts categorical data (e.g., Red, Blue) into binary vectors.
+10. **D)** TF-IDF (Term Frequency-Inverse Document Frequency) is a statistical measure used in text mining to weigh the importance of words.
 
 ## References & Navigation
 

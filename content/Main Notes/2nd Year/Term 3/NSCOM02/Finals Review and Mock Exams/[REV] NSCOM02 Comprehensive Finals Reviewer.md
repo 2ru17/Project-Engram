@@ -5,7 +5,6 @@ course: NSCOM02
 topic: "NSCOM02 Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -109,15 +108,15 @@ flowchart TB
 
 ### Answer Key & Explanations
 
-1. **B**. Split Horizon prevents two-node routing loops by forbidding a router from advertising a route back out the interface from which it learned that route. Poison Reverse enhances this by advertising it back with a metric of infinity.
-2. **B**. RIP defines 15 as the maximum reachable hop count; a metric of 16 is defined as infinity (unreachable), preventing infinite looping.
-3. **C**. An ABR has interfaces in multiple OSPF areas, at least one of which must belong to the backbone Area 0, and is responsible for summarizing routes between areas.
-4. **C**. AS-PATH contains an ordered list of AS numbers traversed. If a BGP router receives an advertisement containing its own local AS number, it immediately detects a routing loop and discards the route.
-5. **B**. OpenFlow is the standardized Southbound protocol allowing SDN controllers to program the flow tables of network switches directly.
+1. **B)** Split Horizon prevents two-node routing loops by forbidding a router from advertising a route back out the interface from which it learned that route. Poison Reverse enhances this by advertising it back with a metric of infinity.
+2. **B)** RIP defines 15 as the maximum reachable hop count; a metric of 16 is defined as infinity (unreachable), preventing infinite looping.
+3. **C)** An ABR has interfaces in multiple OSPF areas, at least one of which must belong to the backbone Area 0, and is responsible for summarizing routes between areas.
+4. **C)** AS-PATH contains an ordered list of AS numbers traversed. If a BGP router receives an advertisement containing its own local AS number, it immediately detects a routing loop and discards the route.
+5. **B)** OpenFlow is the standardized Southbound protocol allowing SDN controllers to program the flow tables of network switches directly.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CSNETWK]]
-- **Next Topic:** [[NSCOM03]]
-- **Prerequisites:** [[Routing Protocols]], RIP, OSPF, BGP, SDN, OpenFlow
-- **Cross-Curricular Connections:** [[NSSECU1]]
+- **Previous Topic:** [[[REV] CSNETWK Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] NSCOM03 Finals Reviewer]]
+- **Prerequisites:** [[Distance-Vector Routing and RIP]], RIP, OSPF, BGP, SDN, OpenFlow
+- **Cross-Curricular Connections:** [[[REV] NSSECU1 Comprehensive Finals Reviewer]]

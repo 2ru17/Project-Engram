@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Image Data Modelling
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -538,16 +537,16 @@ Which statement regarding this pipeline is CORRECT? A) `pca.n_components_` will 
 
 ### Answer Key & Explanations
 
-1. **C**. A 3D tensor of shape `(H, W, 3)` with three distinct color channels (Red, Green, Blue).
-2. **C**. 16,777,216. Each color channel has 256 discrete intensity levels, resulting in $256 \times 256 \times 256 = 16,777,216$ possible colors.
-3. **A**. $\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}$. A horizontal flip mirrors the image across the vertical axis, multiplying the x-coordinate by -1 while keeping y unchanged.
-4. **B**. 0, so that constant uniform regions yield a black (0) output. Edge detection convolution kernels typically sum to 0, highlighting boundary gradients and suppressing uniform pixel areas.
-5. **C**. It prevents large numeric values from distorting distance metrics and gradient steps. Normalizing to float32 between 0.0 and 1.0 is required so scale doesn't negatively impact algorithms like SVM or KNN.
-6. **B**. It creates the curse of dimensionality and destroys the spatial structure of the pixels. Flattening unrolls the 2D array, which destroys the structural adjacency of pixels.
-7. **C**. Histogram of Oriented Gradients (HOG). HOG computes localized histograms of gradient directions to capture object shape and structure.
-8. **B**. To downsample feature maps, reduce spatial dimensions, and provide translation invariance. Pooling layers aggregate information (e.g. Max Pooling) to shrink spatial size.
-9. **A**. The fraction of total dataset variance captured by each principal component. The explained variance ratio shows how much of the original data's spread is retained by each PCA axis.
-10. **C**. All pixel values will become zero, except for pure white pixels. Since `uint8` values range from 0-255, integer division by 255 yields 0 for everything < 255, destroying the image data.
+1. **C)** A 3D tensor of shape `(H, W, 3)` with three distinct color channels (Red, Green, Blue).
+2. **C)** 16,777,216. Each color channel has 256 discrete intensity levels, resulting in $256 \times 256 \times 256 = 16,777,216$ possible colors.
+3. **A)** $\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}$. A horizontal flip mirrors the image across the vertical axis, multiplying the x-coordinate by -1 while keeping y unchanged.
+4. **B)** 0, so that constant uniform regions yield a black (0) output. Edge detection convolution kernels typically sum to 0, highlighting boundary gradients and suppressing uniform pixel areas.
+5. **C)** It prevents large numeric values from distorting distance metrics and gradient steps. Normalizing to float32 between 0.0 and 1.0 is required so scale doesn't negatively impact algorithms like SVM or KNN.
+6. **B)** It creates the curse of dimensionality and destroys the spatial structure of the pixels. Flattening unrolls the 2D array, which destroys the structural adjacency of pixels.
+7. **C)** Histogram of Oriented Gradients (HOG). HOG computes localized histograms of gradient directions to capture object shape and structure.
+8. **B)** To downsample feature maps, reduce spatial dimensions, and provide translation invariance. Pooling layers aggregate information (e.g. Max Pooling) to shrink spatial size.
+9. **A)** The fraction of total dataset variance captured by each principal component. The explained variance ratio shows how much of the original data's spread is retained by each PCA axis.
+10. **C)** All pixel values will become zero, except for pure white pixels. Since `uint8` values range from 0-255, integer division by 255 yields 0 for everything < 255, destroying the image data.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Introduction to Arrays
 
 > [!info] Document Metadata
@@ -64,9 +63,9 @@ Overlooking that arrays are **zero-indexed** in C — valid indices for `arr[n]`
 
 ### Answer Key & Explanations
 
-1. **C**. Arrays aggregate multiple identical types sequentially in adjacent memory blocks.
-2. **B**. C uses square brackets following the identifier to specify array size.
-3. **B**. Once declared, the memory block size for standard arrays cannot dynamically change.
+1. **C)** Arrays aggregate multiple identical types sequentially in adjacent memory blocks.
+2. **B)** C uses square brackets following the identifier to specify array size.
+3. **B)** Once declared, the memory block size for standard arrays cannot dynamically change.
 
 ## References & Navigation
 

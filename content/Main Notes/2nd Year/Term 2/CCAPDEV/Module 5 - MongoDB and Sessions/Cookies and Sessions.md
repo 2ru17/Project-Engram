@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Cookies and Sessions
 status: completed
 ---
-
 # Cookies and Sessions
 
 > [!info] Document Metadata
@@ -134,9 +133,9 @@ Cookie, Cookie properties are set here
 
 ### Answer Key & Explanations
 
-1. **C**. Cookies live on the client side, are available to the client to look at, and can be tampered with by the user.
-2. **B**. `httpOnly` flags the cookie to be only accessible by the web server, making the cookie inaccessible via client-side JavaScript (`document.cookie`).
-3. **C**. Sessions are preferred because they store only an identifier (Session ID) in the cookie, keeping the actual data on the server side, which is much more secure.
+1. **C)** Cookies live on the client side, are available to the client to look at, and can be tampered with by the user.
+2. **B)** `httpOnly` flags the cookie to be only accessible by the web server, making the cookie inaccessible via client-side JavaScript (`document.cookie`).
+3. **C)** Sessions are preferred because they store only an identifier (Session ID) in the cookie, keeping the actual data on the server side, which is much more secure.
 
 ## References & Navigation
 

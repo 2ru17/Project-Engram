@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "9.0 Computer Hardware Components - Memory and Storage"
 status: completed
 ---
-
 # 9.0 Computer Hardware Components - Memory and Storage
 
 > [!info] Document Metadata
@@ -107,16 +106,16 @@ Data moves between Main Memory and Secondary Storage via read/write operations. 
 
 ### Answer Key & Explanations
 
-1. **B**. Primary memory is defined as volatile, highly expensive, extremely fast, and interacts directly with the CPU.
-2. **C**. SRAM uses a complex flip-flop circuit, is extremely fast, and does not need to be constantly refreshed.
-3. **A**. DRAM is highly economical, uses a single transistor/capacitor per bit, and is used for Main Memory, though it requires constant refreshing.
-4. **B**. ROM contains firm, unchanging system instructions like the BIOS/UEFI.
-5. **D**. CPU Registers are placed at the very top of the memory hierarchy, meaning they are the fastest but have the smallest capacity.
-6. **C**. When a page fault occurs, the system must fetch data from the hard drive or SSD, incurring a massive latency penalty.
-7. **B**. Solid-State Storage uses NAND flash memory, has no moving parts, and is significantly faster than magnetic storage.
-8. **C**. Optical storage uses lasers to read/write microscopic pits on discs.
-9. **D**. A SAN is defined as a high-performance dedicated network for block-level storage.
-10. **C**. L3 cache is described in the memory hierarchy as being shared across all cores.
+1. **B)** Primary memory is defined as volatile, highly expensive, extremely fast, and interacts directly with the CPU.
+2. **C)** SRAM uses a complex flip-flop circuit, is extremely fast, and does not need to be constantly refreshed.
+3. **A)** DRAM is highly economical, uses a single transistor/capacitor per bit, and is used for Main Memory, though it requires constant refreshing.
+4. **B)** ROM contains firm, unchanging system instructions like the BIOS/UEFI.
+5. **D)** CPU Registers are placed at the very top of the memory hierarchy, meaning they are the fastest but have the smallest capacity.
+6. **C)** When a page fault occurs, the system must fetch data from the hard drive or SSD, incurring a massive latency penalty.
+7. **B)** Solid-State Storage uses NAND flash memory, has no moving parts, and is significantly faster than magnetic storage.
+8. **C)** Optical storage uses lasers to read/write microscopic pits on discs.
+9. **D)** A SAN is defined as a high-performance dedicated network for block-level storage.
+10. **C)** L3 cache is described in the memory hierarchy as being shared across all cores.
 
 ## References & Navigation
 

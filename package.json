@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "validate:notes": "node scripts/validate-notes.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -16,9 +18,9 @@
     "class-variance-authority": "^0.7.1",
     "cn": "^0.4.0",
     "d3-force": "^3.0.0",
+    "dompurify": "^3.4.16",
     "force-graph": "^1.51.4",
     "github-slugger": "^2.0.0",
-    "isomorphic-dompurify": "^4.5.0",
     "lucide-react": "^1.35.0",
     "mermaid": "^12.0.0",
     "motion": "^14.0.0",

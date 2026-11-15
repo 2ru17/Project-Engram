@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Security & Authentication
 status: completed
 ---
-
 # Security & Authentication
 
 > [!info] Document Metadata
@@ -120,9 +119,9 @@ graph TD
 
 ### Answer Key & Explanations
 
-1. **C**. Session-based authentication is stateful, as the server checks if the user exists, assigns a unique session ID, and stores that session in a database or server storage.
-2. **C**. A con of token-based authentication is that the content is often decodable (like JWT) and must be stored very securely since the server relies purely on the token's signature.
-3. **A**. By default, the local MemoryStore deletes all sessions when the server restarts, meaning all users would be logged out.
+1. **C)** Session-based authentication is stateful, as the server checks if the user exists, assigns a unique session ID, and stores that session in a database or server storage.
+2. **C)** A con of token-based authentication is that the content is often decodable (like JWT) and must be stored very securely since the server relies purely on the token's signature.
+3. **A)** By default, the local MemoryStore deletes all sessions when the server restarts, meaning all users would be logged out.
 
 ## References & Navigation
 

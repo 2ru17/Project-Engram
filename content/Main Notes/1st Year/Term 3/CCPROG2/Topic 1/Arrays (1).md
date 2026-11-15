@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Topic 1- Arrays
 
 > [!info] Document Metadata
@@ -66,9 +65,9 @@ Ignoring the **trade-offs** in the Advantages and Disadvantages note — knowing
 
 ### Answer Key & Explanations
 
-1. **B**. The document groups the topic logically into basics, dimensionality, and performance trade-offs.
-2. **A**. It stresses learning core principles like initialization before diving into pointer arithmetic.
-3. **A**. Recognizing situations where an array's limitations outweigh its speed benefits is crucial.
+1. **B)** The document groups the topic logically into basics, dimensionality, and performance trade-offs.
+2. **A)** It stresses learning core principles like initialization before diving into pointer arithmetic.
+3. **A)** Recognizing situations where an array's limitations outweigh its speed benefits is crucial.
 
 ## References & Navigation
 

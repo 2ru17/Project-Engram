@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Problem Set - Binary-Coded Decimal"
 status: completed
 ---
-
 # Problem Set - Binary-Coded Decimal
 
 > [!info] Document Metadata

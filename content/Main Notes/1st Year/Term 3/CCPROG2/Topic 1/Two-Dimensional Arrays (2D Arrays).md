@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Two-Dimensional Arrays (2D Arrays)
 
 > [!info] Document Metadata
@@ -135,9 +134,9 @@ for (int r = 0; r < ROWS; r++) {
 
 ### Answer Key & Explanations
 
-1. **C**. The dual indices naturally map to horizontal rows and vertical columns creating a grid.
-2. **B**. Multiplying the row count (4) by the column count (5) gives the total capacity (20).
-3. **C**. C accepts both flattened sequential lists and nested bracket groupings for matrix initialization.
+1. **C)** The dual indices naturally map to horizontal rows and vertical columns creating a grid.
+2. **B)** Multiplying the row count (4) by the column count (5) gives the total capacity (20).
+3. **C)** C accepts both flattened sequential lists and nested bracket groupings for matrix initialization.
 
 ## References & Navigation
 

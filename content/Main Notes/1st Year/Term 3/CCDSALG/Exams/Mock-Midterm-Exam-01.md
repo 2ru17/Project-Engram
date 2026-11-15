@@ -5,7 +5,6 @@ course: CCDSALG
 topic: Mock-Midterm-Exam-01
 status: completed
 ---
-
 # Mock-Midterm-Exam-01
 
 > [!info] Document Metadata
@@ -23,7 +22,7 @@ This mock midterm exam provides a rigorous, comprehensive assessment of foundati
 
 ---
 
-## Multiple Choice Practice Questions
+## Multiple Choice Questions
 
 1. By the formal mathematical definition of Big-Oh, $f(n) \in O(g(n))$ if and only if there exist positive constants $c > 0$ and $n_0 \ge 1$ such that:
     - **A)** $f(n) \ge c \cdot g(n)$ for all $n \ge n_0$
@@ -162,22 +161,20 @@ This mock midterm exam provides a rigorous, comprehensive assessment of foundati
     - **C)** Merge Sort cannot be implemented recursively.
     - **D)** In-place Selection Sort is stable for all inputs.
 
----
-
 ### Answer Key & Explanations
 
-1. **B**. The formal definition of Big-Oh requires bounding $f(n)$ from above by a constant multiple $c$ of $g(n)$ for all $n \ge n_0$, with $f(n)$ non-negative ($0 \le f(n) \le c \cdot g(n)$).
-2. **C**. The outer loop runs for $i = 1, 2, \dots, n$. For each $i$, the inner loop executes $i$ times. The total execution count is $\sum_{i=1}^n i = \frac{n(n + 1)}{2}$.
-3. **B**. The outer loop index starts at $i = 1$ and doubles each step until reaching $n$, executing $\lfloor \log_2 n \rfloor$ iterations. The inner loop executes exactly $n$ times for each outer iteration. Total running time is $\Theta(n \log_2 n)$.
-4. **A**. Unfolding the recurrence:
+1. **B)** The formal definition of Big-Oh requires bounding $f(n)$ from above by a constant multiple $c$ of $g(n)$ for all $n \ge n_0$, with $f(n)$ non-negative ($0 \le f(n) \le c \cdot g(n)$).
+2. **C)** The outer loop runs for $i = 1, 2, \dots, n$. For each $i$, the inner loop executes $i$ times. The total execution count is $\sum_{i=1}^n i = \frac{n(n + 1)}{2}$.
+3. **B)** The outer loop index starts at $i = 1$ and doubles each step until reaching $n$, executing $\lfloor \log_2 n \rfloor$ iterations. The inner loop executes exactly $n$ times for each outer iteration. Total running time is $\Theta(n \log_2 n)$.
+4. **A)** Unfolding the recurrence:
    $$T(n) = T(n - 1) + 3$$
    $$T(n) = (T(n - 2) + 3) + 3 = T(n - 2) + 2(3)$$
    $$T(n) = T(n - k) + 3k$$
    Setting $n - k = 1 \implies k = n - 1$:
    $$T(n) = T(1) + 3(n - 1) = 2 + 3n - 3 = 3n - 1$$
-5. **C**. By the Master Theorem $T(n) = aT(n/b) + f(n)$: here $a = 4, b = 2, f(n) = \Theta(n)$. We calculate $n^{\log_b a} = n^{\log_2 4} = n^2$. Since $f(n) = O(n^{2 - \epsilon})$ for $\epsilon = 1$, Case 1 applies, yielding $T(n) = \Theta(n^2)$.
-6. **B**. For $T(n) = 2T(n/2) + \Theta(n)$, $a = 2, b = 2$, so $n^{\log_2 2} = n^1$. Since $f(n) = \Theta(n^1)$, Case 2 of the Master Theorem applies with $k = 0$, giving $T(n) = \Theta(n \log_2 n)$.
-7. **A**. 
+5. **C)** By the Master Theorem $T(n) = aT(n/b) + f(n)$: here $a = 4, b = 2, f(n) = \Theta(n)$. We calculate $n^{\log_b a} = n^{\log_2 4} = n^2$. Since $f(n) = O(n^{2 - \epsilon})$ for $\epsilon = 1$, Case 1 applies, yielding $T(n) = \Theta(n^2)$.
+6. **B)** For $T(n) = 2T(n/2) + \Theta(n)$, $a = 2, b = 2$, so $n^{\log_2 2} = n^1$. Since $f(n) = \Theta(n^1)$, Case 2 of the Master Theorem applies with $k = 0$, giving $T(n) = \Theta(n \log_2 n)$.
+7. **A)** 
    - Push $10 \to S = [10]$
    - Push $20 \to S = [10, 20]$
    - Push $30 \to S = [10, 20, 30]$
@@ -185,36 +182,34 @@ This mock midterm exam provides a rigorous, comprehensive assessment of foundati
    - Push $40 \to S = [10, 20, 40]$
    - Pop all $\to$ outputs **40**, then **20**, then **10**.
    Total order: $30, 40, 20, 10$.
-8. **B**. A LIFO stack pushes opening delimiters onto the stack and verifies that each closing delimiter matches and pops the corresponding most recently seen opening delimiter.
-9. **A**. Dequeueing all elements of $Q$ into a stack reverses their order due to the stack's LIFO property. Popping from $S$ and enqueuing back into $Q$ places the reversed sequence back into the queue.
-10. **B**. Circular arrays use modulo arithmetic on index incrementation to wrap around to index 0 when the boundary of the allocated buffer is reached: $\text{rear} = (\text{rear} + 1) \pmod N$.
-11. **C**. Each element is pushed onto $S_1$ once, popped from $S_1$ once, pushed onto $S_2$ once, and popped from $S_2$ once. Thus, each element experiences exactly 4 stack operations over its entire lifetime in the queue, yielding an amortized complexity of $\frac{4n}{n} = O(1)$ per operation.
-12. **A**. In infix $A + B \times C - D / E$:
+8. **B)** A LIFO stack pushes opening delimiters onto the stack and verifies that each closing delimiter matches and pops the corresponding most recently seen opening delimiter.
+9. **A)** Dequeueing all elements of $Q$ into a stack reverses their order due to the stack's LIFO property. Popping from $S$ and enqueuing back into $Q$ places the reversed sequence back into the queue.
+10. **B)** Circular arrays use modulo arithmetic on index incrementation to wrap around to index 0 when the boundary of the allocated buffer is reached: $\text{rear} = (\text{rear} + 1) \pmod N$.
+11. **C)** Each element is pushed onto $S_1$ once, popped from $S_1$ once, pushed onto $S_2$ once, and popped from $S_2$ once. Thus, each element experiences exactly 4 stack operations over its entire lifetime in the queue, yielding an amortized complexity of $\frac{4n}{n} = O(1)$ per operation.
+12. **A)** In infix $A + B \times C - D / E$:
    - Multiplication $B \times C \to B C \times$ has higher precedence than addition.
    - Left-associative addition evaluates $(A + (B \times C)) \to A B C \times +$.
    - Division $D / E \to D E /$ evaluates next.
    - Subtraction combines both parts: $A B C \times + D E / -$.
-13. **A**. Step-by-step operand stack evaluation:
+13. **A)** Step-by-step operand stack evaluation:
    - Push 6, push 2, push 3 $\to$ Stack: $[6, 2, 3]$
    - Operator `+`: Pop 3 and 2, compute $2 + 3 = 5$, push 5 $\to$ Stack: $[6, 5]$
    - Operator `*`: Pop 5 and 6, compute $6 \times 5 = 30$, push 30 $\to$ Stack: $[30]$
    - Push 10 $\to$ Stack: $[30, 10]$
    - Operator `-`: Pop 10 and 30, compute $30 - 10 = 20$, push 20 $\to$ Stack: $[20]$
    Result is 20.
-14. **A**. 
+14. **A)** 
    - Pass 1 ($i = 0$): Scan $[29, 10, 14, 37, 13]$. Minimum is $10$ at index 1. Swap $A[0]$ and $A[1] \to [10, 29, 14, 37, 13]$.
    - Pass 2 ($i = 1$): Scan suffix $[29, 14, 37, 13]$. Minimum is $13$ at index 4. Swap $A[1]$ and $A[4] \to [10, 13, 14, 37, 29]$.
-15. **B**. In Selection Sort, the inner loop always compares every element in the remaining unsorted suffix regardless of initial ordering: $\sum_{i=0}^{n-2} (n - 1 - i) = \frac{n(n - 1)}{2}$ comparisons in all cases.
-16. **B**. 
+15. **B)** In Selection Sort, the inner loop always compares every element in the remaining unsorted suffix regardless of initial ordering: $\sum_{i=0}^{n-2} (n - 1 - i) = \frac{n(n - 1)}{2}$ comparisons in all cases.
+16. **B)** 
    - Initial array: $[8, 3, 5, 1, 9]$
    - Pass 1 (insert 3): $[3, 8, 5, 1, 9]$
    - Pass 2 (insert 5 into sorted prefix $[3, 8]$): 5 is compared with 8, 8 shifts right, 5 is inserted before 8 $\to [3, 5, 8, 1, 9]$.
-17. **B**. When an array is already sorted, Insertion Sort compares each element $A[i]$ once with $A[i-1]$, finds it is already in position, and performs zero shifts, terminating that pass in $O(1)$ and achieving $\Theta(n)$ overall.
-18. **C**. On an already sorted list, the first pass of Bubble Sort performs $n - 1$ comparisons, makes zero swaps, checks the `swapped` flag, and halts immediately, running in $\Theta(n)$ time.
-19. **B**. At each step of the merge algorithm, one comparison determines the smaller element, which is placed into the auxiliary array. In the worst case (elements strictly alternate), the final element remaining does not require a comparison, requiring at most $p + q - 1$ comparisons.
-20. **A**. Merge Sort requires an auxiliary array of size $n$ to merge sorted halves and maintains relative order of equal keys (stable). Standard in-place Selection Sort requires $O(1)$ extra space but long-distance swaps can move equal keys past each other, making it unstable.
-
----
+17. **B)** When an array is already sorted, Insertion Sort compares each element $A[i]$ once with $A[i-1]$, finds it is already in position, and performs zero shifts, terminating that pass in $O(1)$ and achieving $\Theta(n)$ overall.
+18. **C)** On an already sorted list, the first pass of Bubble Sort performs $n - 1$ comparisons, makes zero swaps, checks the `swapped` flag, and halts immediately, running in $\Theta(n)$ time.
+19. **B)** At each step of the merge algorithm, one comparison determines the smaller element, which is placed into the auxiliary array. In the worst case (elements strictly alternate), the final element remaining does not require a comparison, requiring at most $p + q - 1$ comparisons.
+20. **A)** Merge Sort requires an auxiliary array of size $n$ to merge sorted halves and maintains relative order of equal keys (stable). Standard in-place Selection Sort requires $O(1)$ extra space but long-distance swaps can move equal keys past each other, making it unstable.
 
 ## References & Navigation
 

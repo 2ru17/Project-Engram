@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -67,11 +66,11 @@ $$P(X = 2) = \frac{\binom{3}{2} \binom{7}{2}}{\binom{10}{4}} = \frac{3 \times 21
 
 ### Answer Key & Explanations
 
-1. **A**. Sampling without replacement from a finite population changes the success probability on each draw (dependent trials $\implies$ Hypergeometric), whereas constant $p$ with independent trials (or with replacement) yields the Binomial distribution.
-2. **B**. Stage 1 selects $x$ successes out of $K$ in $\binom{K}{x}$ ways; Stage 2 selects the remaining $n - x$ sample items from the $N - K$ failures in $\binom{N-K}{n-x}$ ways.
-3. **A**. $P(X = 0) = \frac{\binom{3}{0}\binom{7}{4}}{\binom{10}{4}} = \frac{1 \times 35}{210} = \frac{1}{6}$.
-4. **B**. When $N \gg n$, removing $n$ items barely changes the composition of the population, so $\frac{N - n}{N - 1} \to 1$ and $\text{Hypergeometric}(N, K, n) \to \text{Binomial}(n, p)$.
-5. **B**. By linearity of expectation over $n$ indicator variables (each with marginal probability $K/N$), $E[X] = n \frac{K}{N} = 4 \times 0.3 = 1.2$.
+1. **A)** Sampling without replacement from a finite population changes the success probability on each draw (dependent trials $\implies$ Hypergeometric), whereas constant $p$ with independent trials (or with replacement) yields the Binomial distribution.
+2. **B)** Stage 1 selects $x$ successes out of $K$ in $\binom{K}{x}$ ways; Stage 2 selects the remaining $n - x$ sample items from the $N - K$ failures in $\binom{N-K}{n-x}$ ways.
+3. **A)** $P(X = 0) = \frac{\binom{3}{0}\binom{7}{4}}{\binom{10}{4}} = \frac{1 \times 35}{210} = \frac{1}{6}$.
+4. **B)** When $N \gg n$, removing $n$ items barely changes the composition of the population, so $\frac{N - n}{N - 1} \to 1$ and $\text{Hypergeometric}(N, K, n) \to \text{Binomial}(n, p)$.
+5. **B)** By linearity of expectation over $n$ indicator variables (each with marginal probability $K/N$), $E[X] = n \frac{K}{N} = 4 \times 0.3 = 1.2$.
 
 ## References & Navigation
 

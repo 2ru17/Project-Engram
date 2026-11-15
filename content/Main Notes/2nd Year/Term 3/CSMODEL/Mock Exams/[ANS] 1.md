@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Mock Exams
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`

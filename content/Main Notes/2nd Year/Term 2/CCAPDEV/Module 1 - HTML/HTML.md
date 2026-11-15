@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: "HTML"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -140,16 +139,16 @@ In modern web development, particularly for mobile devices, maximizing available
 
 ### Answer Key & Explanations
 
-1. **A**. HTML stands for Hypertext Markup Language, the standard for creating web pages.
-2. **C**. XML is a markup language, whereas Java, Python, and C++ are programming languages.
-3. **B**. Markup languages are designed to annotate text to describe its structure and presentation.
-4. **C**. The `<html>` tag encapsulates all the content on the page and serves as the root element.
-5. **B**. The document type declaration tells the browser the specific version of HTML (typically HTML5) being used.
-6. **C**. Markup languages structure content, while programming languages execute step-by-step logical instructions.
-7. **C**. The `<head>` tag contains meta-information and links necessary for the document but not displayed directly in the content area.
-8. **C**. On mobile devices, input types tell the browser which virtual keyboard layout (like adding an '@' sign for emails) to show.
-9. **D**. C++ is a programming language used for logic execution, unlike the others which are markup languages.
-10. **B**. Web browsers read HTML documents and interpret the tags to render the visible web page.
+1. **A)** HTML stands for Hypertext Markup Language, the standard for creating web pages.
+2. **C)** XML is a markup language, whereas Java, Python, and C++ are programming languages.
+3. **B)** Markup languages are designed to annotate text to describe its structure and presentation.
+4. **C)** The `<html>` tag encapsulates all the content on the page and serves as the root element.
+5. **B)** The document type declaration tells the browser the specific version of HTML (typically HTML5) being used.
+6. **C)** Markup languages structure content, while programming languages execute step-by-step logical instructions.
+7. **C)** The `<head>` tag contains meta-information and links necessary for the document but not displayed directly in the content area.
+8. **C)** On mobile devices, input types tell the browser which virtual keyboard layout (like adding an '@' sign for emails) to show.
+9. **D)** C++ is a programming language used for logic execution, unlike the others which are markup languages.
+10. **B)** Web browsers read HTML documents and interpret the tags to render the visible web page.
 
 ## References & Navigation
 

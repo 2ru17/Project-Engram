@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Element Type
 
 > [!info] Document Metadata
@@ -89,9 +88,9 @@ char *words[5];  // Array of 5 char pointers (e.g., array of strings)
 
 ### Answer Key & Explanations
 
-1. **A**. The compiler needs the type to compute pointer offsets and allocate exact block sizes.
-2. **B**. Homogeneity ensures uniform offset calculations; mixing primitive types isn't allowed.
-3. **A**. Memory size equals the total number of items multiplied by the byte footprint of the type.
+1. **A)** The compiler needs the type to compute pointer offsets and allocate exact block sizes.
+2. **B)** Homogeneity ensures uniform offset calculations; mixing primitive types isn't allowed.
+3. **A)** Memory size equals the total number of items multiplied by the byte footprint of the type.
 
 ## References & Navigation
 

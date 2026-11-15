@@ -5,7 +5,6 @@ course: CSARCH2
 topic: Cache Memory Organization, Mapping Functions, and Replacement Policies
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -886,4 +885,4 @@ Given:
 
 ## References & Navigation
 
-- **Related Notes:** [[Cache Memory]]
+- **Related Notes:** [[Cache Memory Principles & Mapping Architectures]], [[Cache Replacement Policies & Write Strategies]]

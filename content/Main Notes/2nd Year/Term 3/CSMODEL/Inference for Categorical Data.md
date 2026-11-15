@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Inference for Categorical Data
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -492,16 +491,16 @@ Chi-Square statistics cannot be negative because all terms $\frac{(O-E)^2}{E} \g
 
 ### Answer Key & Explanations
 
-1. **B**. Categorical data inference relies on analyzing proportions and frequencies/counts. While numerical data uses means, categorical data focuses on proportions and discrete counts.
-2. **B**. $\sqrt{\frac{p_0(1 - p_0)}{n}}$. The standard error for hypothesis testing uses the hypothesized baseline proportion $p_0$, not the sample proportion.
-3. **B**. When the sample proportion $p = 0.5$. The margin of error formula scales with $p(1-p)$, which forms a parabola peaking at $p = 0.5$, representing maximum uncertainty.
-4. **A**. The expected successes $n p_0$ and expected failures $n (1 - p_0)$ must both be $\ge 10$. This is the Success-Failure Condition required to approximate the binomial distribution as normal.
-5. **B**. To estimate the common proportion assuming the null hypothesis ($p_1 = p_2$) is true. Pooling combines successes and sample sizes under the assumption that both groups share the same true proportion.
-6. **B**. The sample distribution matches the specified population distribution. The null hypothesis for goodness-of-fit assumes no difference between observed sample proportions and theoretical expectations.
-7. **C**. $df = (r - 1) \times (c - 1)$. For an $r \times c$ table test of independence, the degrees of freedom are the product of rows minus one and columns minus one.
-8. **A**. Every expected cell count $E_i$ must be $\ge 5$. It is a common trap to check observed counts, but the condition strictly applies to expected cell counts.
-9. **C**. Because the squared differences $(O_i - E_i)^2$ enforce $\chi^2 \ge 0$, accumulating deviations in the upper tail. Any deviation between observed and expected pushes the statistic into the positive right tail.
-10. **A**. Scipy applies Yates' continuity correction by default, which shrinks the $\chi^2$ statistic. The `correction=True` default for $2 \times 2$ tables adjusts the statistic, which must be set to `False` to match standard Pearson calculations.
+1. **B)** Categorical data inference relies on analyzing proportions and frequencies/counts. While numerical data uses means, categorical data focuses on proportions and discrete counts.
+2. **B)** $\sqrt{\frac{p_0(1 - p_0)}{n}}$. The standard error for hypothesis testing uses the hypothesized baseline proportion $p_0$, not the sample proportion.
+3. **B)** When the sample proportion $p = 0.5$. The margin of error formula scales with $p(1-p)$, which forms a parabola peaking at $p = 0.5$, representing maximum uncertainty.
+4. **A)** The expected successes $n p_0$ and expected failures $n (1 - p_0)$ must both be $\ge 10$. This is the Success-Failure Condition required to approximate the binomial distribution as normal.
+5. **B)** To estimate the common proportion assuming the null hypothesis ($p_1 = p_2$) is true. Pooling combines successes and sample sizes under the assumption that both groups share the same true proportion.
+6. **B)** The sample distribution matches the specified population distribution. The null hypothesis for goodness-of-fit assumes no difference between observed sample proportions and theoretical expectations.
+7. **C)** $df = (r - 1) \times (c - 1)$. For an $r \times c$ table test of independence, the degrees of freedom are the product of rows minus one and columns minus one.
+8. **A)** Every expected cell count $E_i$ must be $\ge 5$. It is a common trap to check observed counts, but the condition strictly applies to expected cell counts.
+9. **C)** Because the squared differences $(O_i - E_i)^2$ enforce $\chi^2 \ge 0$, accumulating deviations in the upper tail. Any deviation between observed and expected pushes the statistic into the positive right tail.
+10. **A)** Scipy applies Yates' continuity correction by default, which shrinks the $\chi^2$ statistic. The `correction=True` default for $2 \times 2$ tables adjusts the statistic, which must be set to `False` to match standard Pearson calculations.
 
 ## References & Navigation
 

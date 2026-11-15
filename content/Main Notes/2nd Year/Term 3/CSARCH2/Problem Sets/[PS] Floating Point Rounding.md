@@ -5,7 +5,6 @@ course: CSARCH2
 topic: Floating-Point Rounding Modes (IEEE-754)
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -292,4 +291,4 @@ verify_decimal_rounding()
 
 ## References & Navigation
 
-- **Related Notes:** [[Floating-Point Operations & Errors]]
+- **Related Notes:** [[Floating-Point Arithmetic Operations]], [[IEEE 754 Floating-Point Representation (Single & Double Precision)]]

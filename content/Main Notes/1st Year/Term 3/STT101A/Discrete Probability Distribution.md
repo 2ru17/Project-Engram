@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -69,11 +68,11 @@ A **Discrete Probability Distribution** specifies all possible values in the cou
 
 ### Answer Key & Explanations
 
-1. **B**. Normalization requires $\sum_{x=1}^3 cx = c(1 + 2 + 3) = 6c = 1 \implies c = \frac{1}{6}$, and each $P(X=x) > 0$.
-2. **A**. $F(1.5) = P(X \le 1.5) = P(X = 0) + P(X = 1) = 0.2 + 0.5 = 0.7$.
-3. **C**. A $\text{Binomial}(n, p)$ random variable is the sum of $n$ independent $\text{Bernoulli}(p)$ variables, yielding $E[X] = np$ and $\text{Var}(X) = np(1-p)$.
-4. **D**. Expanding $E[(X - \mu)^2] = E[X^2 - 2\mu X + \mu^2] = E[X^2] - 2\mu E[X] + \mu^2 = E[X^2] - \mu^2 = E[X^2] - (E[X])^2$.
-5. **B**. Because $P(X = a)$ must be included in $P(a \le X \le b)$, subtracting $F(a)$ would mistakenly remove $P(X = a)$. Subtracting $F(a - 1) = P(X \le a - 1)$ retains $X = a$.
+1. **B)** Normalization requires $\sum_{x=1}^3 cx = c(1 + 2 + 3) = 6c = 1 \implies c = \frac{1}{6}$, and each $P(X=x) > 0$.
+2. **A)** $F(1.5) = P(X \le 1.5) = P(X = 0) + P(X = 1) = 0.2 + 0.5 = 0.7$.
+3. **C)** A $\text{Binomial}(n, p)$ random variable is the sum of $n$ independent $\text{Bernoulli}(p)$ variables, yielding $E[X] = np$ and $\text{Var}(X) = np(1-p)$.
+4. **D)** Expanding $E[(X - \mu)^2] = E[X^2 - 2\mu X + \mu^2] = E[X^2] - 2\mu E[X] + \mu^2 = E[X^2] - \mu^2 = E[X^2] - (E[X])^2$.
+5. **B)** Because $P(X = a)$ must be included in $P(a \le X \le b)$, subtracting $F(a)$ would mistakenly remove $P(X = a)$. Subtracting $F(a - 1) = P(X \le a - 1)$ retains $X = a$.
 
 ## References & Navigation
 

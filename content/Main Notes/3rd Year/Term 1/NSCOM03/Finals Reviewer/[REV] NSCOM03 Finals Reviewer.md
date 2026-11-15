@@ -1,6 +1,6 @@
 ---
 id: finals_reviewer
-type: note
+type: reviewer
 course: NSCOM03
 topic: "Finals Reviewer"
 status: completed
@@ -58,7 +58,7 @@ In a $100\text{ Mbps}$ Fast Ethernet network ($R = 10^8\text{ bps}$), the maximu
 
 ---
 
-## Multiple Choice Practice Questions
+## Multiple Choice Questions
 
 1. A channel has a bandwidth of $10\text{ kHz}$ and an $SNR_{dB} = 20\text{ dB}$. What is its maximum theoretical Shannon capacity?
     - **A)** $10\text{ kbps}$
@@ -120,22 +120,18 @@ In a $100\text{ Mbps}$ Fast Ethernet network ($R = 10^8\text{ bps}$), the maximu
     - **C)** CHAP requires dedicated token keyfobs
     - **D)** PAP can only authenticate Unix systems
 
----
-
 ### Answer Key & Explanations
 
-1. **B**. $SNR_{dB} = 20\text{ dB} \implies SNR = 10^{20/10} = 100$. By Shannon's theorem: $C = B \log_2(1 + 100) = 10000 \cdot \log_2(101)$. Since $\log_2(101) \approx 6.658$, $C \approx 10000 \times 6.658 \approx 66580\text{ bps} \approx 66.6\text{ kbps}$.
-2. **B**. $L = 64 = 2^6$ (6 bits/sample), while $L = 256 = 2^8$ (8 bits/sample). Each additional bit of quantization improves the $SQNR$ by approximately $6.02\text{ dB}$. Adding 2 bits ($8 - 6 = 2$) improves $SQNR$ by $2 \times 6.02 \approx 12\text{ dB}$.
-3. **B**. Manchester encoding enforces a voltage transition at the center of every bit interval (providing continuous clock recovery) and balances high and low voltage states, eliminating net DC bias.
-4. **C**. For 64-QAM, each symbol represents $r = \log_2(64) = 6$ bits. Bit rate $N = S \times r = 12000\text{ baud} \times 6\text{ bits/symbol} = 72000\text{ bps} = 72\text{ kbps}$.
-5. **B**. A T-1 carrier frame carries $(24 \times 8) + 1 = 193$ bits. Transmitting at 8000 frames per second yields $193 \times 8000 = 1544000\text{ bps} = 1.544\text{ Mbps}$.
-6. **B**. The number of FCS check bits equals the degree of the generator polynomial. For $G(x) = x^4 + x^3 + 1$, the degree is $r = 4$, requiring 4 check bits.
-7. **B**. If a frame finishes transmitting before the round-trip propagation time expires, a collision occurring at the far end will reflect back only after the sender has already released the channel and assumed success, violating the collision detection invariant.
-8. **B**. MAC address `FF:FF:FF:FF:FF:FF` is the Layer 2 broadcast address. A transparent switch replicates and forwards broadcast frames out all active ports except the arrival port.
-9. **B**. HDLC bit stuffing guarantees that the flag sequence `01111110` never appears in user data by having the transmitter inject a `0` after any sequence of five consecutive `1`s.
-10. **A**. In PAP, credentials cross the link in plaintext. In CHAP, the server sends a random challenge, and the client returns a one-way MD5 hash of the secret and challenge; the plaintext secret never traverses the wire.
-
----
+1. **B)** $SNR_{dB} = 20\text{ dB} \implies SNR = 10^{20/10} = 100$. By Shannon's theorem: $C = B \log_2(1 + 100) = 10000 \cdot \log_2(101)$. Since $\log_2(101) \approx 6.658$, $C \approx 10000 \times 6.658 \approx 66580\text{ bps} \approx 66.6\text{ kbps}$.
+2. **B)** $L = 64 = 2^6$ (6 bits/sample), while $L = 256 = 2^8$ (8 bits/sample). Each additional bit of quantization improves the $SQNR$ by approximately $6.02\text{ dB}$. Adding 2 bits ($8 - 6 = 2$) improves $SQNR$ by $2 \times 6.02 \approx 12\text{ dB}$.
+3. **B)** Manchester encoding enforces a voltage transition at the center of every bit interval (providing continuous clock recovery) and balances high and low voltage states, eliminating net DC bias.
+4. **C)** For 64-QAM, each symbol represents $r = \log_2(64) = 6$ bits. Bit rate $N = S \times r = 12000\text{ baud} \times 6\text{ bits/symbol} = 72000\text{ bps} = 72\text{ kbps}$.
+5. **B)** A T-1 carrier frame carries $(24 \times 8) + 1 = 193$ bits. Transmitting at 8000 frames per second yields $193 \times 8000 = 1544000\text{ bps} = 1.544\text{ Mbps}$.
+6. **B)** The number of FCS check bits equals the degree of the generator polynomial. For $G(x) = x^4 + x^3 + 1$, the degree is $r = 4$, requiring 4 check bits.
+7. **B)** If a frame finishes transmitting before the round-trip propagation time expires, a collision occurring at the far end will reflect back only after the sender has already released the channel and assumed success, violating the collision detection invariant.
+8. **B)** MAC address `FF:FF:FF:FF:FF:FF` is the Layer 2 broadcast address. A transparent switch replicates and forwards broadcast frames out all active ports except the arrival port.
+9. **B)** HDLC bit stuffing guarantees that the flag sequence `01111110` never appears in user data by having the transmitter inject a `0` after any sequence of five consecutive `1`s.
+10. **A)** In PAP, credentials cross the link in plaintext. In CHAP, the server sends a random challenge, and the client returns a one-way MD5 hash of the secret and challenge; the plaintext secret never traverses the wire.
 
 ## References & Navigation
 

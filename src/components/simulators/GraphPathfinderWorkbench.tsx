@@ -224,6 +224,7 @@ export function GraphPathfinderWorkbench() {
           <div className="flex items-center gap-1.5">
             <span className="text-[var(--zen-ink-muted)]">Source:</span>
             <select
+              aria-label="Source node"
               value={startNode}
               onChange={(e) => setStartNode(e.target.value)}
               className="px-2 py-1 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-[var(--zen-cyan)] font-bold text-xs"
@@ -238,6 +239,7 @@ export function GraphPathfinderWorkbench() {
           <div className="flex items-center gap-1.5">
             <span className="text-[var(--zen-ink-muted)]">Target:</span>
             <select
+              aria-label="Target node"
               value={targetNode}
               onChange={(e) => setTargetNode(e.target.value)}
               className="px-2 py-1 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-emerald-400 font-bold text-xs"
@@ -447,6 +449,7 @@ export function GraphPathfinderWorkbench() {
           <div className="flex items-center gap-1.5">
             <span className="text-[11px] text-[var(--zen-ink-muted)]">From:</span>
             <select
+              aria-label="Edge origin node"
               value={newFrom}
               onChange={(e) => setNewFrom(e.target.value)}
               className="px-2 py-1 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-[var(--zen-snow)] text-xs"
@@ -461,6 +464,7 @@ export function GraphPathfinderWorkbench() {
           <div className="flex items-center gap-1.5">
             <span className="text-[11px] text-[var(--zen-ink-muted)]">To:</span>
             <select
+              aria-label="Edge destination node"
               value={newTo}
               onChange={(e) => setNewTo(e.target.value)}
               className="px-2 py-1 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-[var(--zen-snow)] text-xs"
@@ -476,6 +480,7 @@ export function GraphPathfinderWorkbench() {
             <span className="text-[11px] text-[var(--zen-ink-muted)]">Weight:</span>
             <input
               type="number"
+              aria-label="New edge weight"
               min="1"
               max="99"
               value={newWeight}
@@ -505,6 +510,7 @@ export function GraphPathfinderWorkbench() {
               <div className="flex items-center gap-1.5">
                 <input
                   type="number"
+                  aria-label={`Weight for edge ${e.from} to ${e.to}`}
                   min="1"
                   max="99"
                   value={e.weight}

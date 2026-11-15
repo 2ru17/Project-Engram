@@ -195,7 +195,7 @@ export function WarpJumpOverlay() {
               {/* ─── U-05 BROKEN-GRID: ARCHITECTURAL BLUEPRINT GRID SNAP ─── */}
               {activeTarget === "broken-grid" && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  {/* Grid Crosshairs */}
+                  {/* Grid Optical Target Reticles */}
                   <motion.div
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: [0, 1, 1, 0] }}

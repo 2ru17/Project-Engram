@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Graph Data Modelling
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -667,11 +666,11 @@ print(max(pr, key=pr.get))
 
 ### Answer Key & Explanations
 
-1. **B**. An adjacency matrix has a 1 (or weight) if an edge exists between node i and node j.
-2. **A**. PageRank counts in-links and weighs them by the importance of the referring nodes.
-3. **C**. Degree centrality is simply the count of incident edges on a node.
-4. **D**. Directed graphs have edges with direction (A -> B is not the same as B -> A).
-5. **B**. Embeddings (like Node2Vec) create vector representations for machine learning downstream tasks.
+1. **B)** An adjacency matrix has a 1 (or weight) if an edge exists between node i and node j.
+2. **A)** PageRank counts in-links and weighs them by the importance of the referring nodes.
+3. **C)** Degree centrality is simply the count of incident edges on a node.
+4. **D)** Directed graphs have edges with direction (A -> B is not the same as B -> A).
+5. **B)** Embeddings (like Node2Vec) create vector representations for machine learning downstream tasks.
 
 ## References & Navigation
 

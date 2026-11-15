@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ status: completed
 
 ### Answer Key & Explanations
 
-1. **B**. Knowing $B$ occurred eliminates all outcomes in $B^c$; only outcomes in $A \cap B$ can still yield $A$, and dividing by $P(B)$ ensures the restricted space sums to $1$ ($P(B \mid B) = 1$).
-2. **A**. By definition, $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{0.18}{0.45} = 0.40$.
-3. **C**. When $A \subseteq B$, the intersection is $A \cap B = A$, so $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)}{P(B)}$.
-4. **D**. When $B \subseteq A$, every outcome in $B$ is automatically in $A$ ($A \cap B = B$). Thus $P(A \mid B) = \frac{P(B)}{P(B)} = 1$.
-5. **B**. Mutually exclusive events have $A \cap B = \emptyset \implies P(A \cap B) = 0$. Since $P(B) > 0$, $P(A \mid B) = \frac{0}{P(B)} = 0$.
+1. **B)** Knowing $B$ occurred eliminates all outcomes in $B^c$; only outcomes in $A \cap B$ can still yield $A$, and dividing by $P(B)$ ensures the restricted space sums to $1$ ($P(B \mid B) = 1$).
+2. **A)** By definition, $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{0.18}{0.45} = 0.40$.
+3. **C)** When $A \subseteq B$, the intersection is $A \cap B = A$, so $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)}{P(B)}$.
+4. **D)** When $B \subseteq A$, every outcome in $B$ is automatically in $A$ ($A \cap B = B$). Thus $P(A \mid B) = \frac{P(B)}{P(B)} = 1$.
+5. **B)** Mutually exclusive events have $A \cap B = \emptyset \implies P(A \cap B) = 0$. Since $P(B) > 0$, $P(A \mid B) = \frac{0}{P(B)} = 0$.
 
 ## References & Navigation
 

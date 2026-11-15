@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Accessing Elements
 
 > [!info] Document Metadata
@@ -141,16 +140,16 @@ In this scenario, `arr[10]` attempts to read memory far past the end of `arr`. D
 
 ### Answer Key & Explanations
 
-1. **B**. C conventions utilize zero-based indexing for locating the first element.
-2. **A**. The syntactical tool used to target an element is the subscript operator.
-3. **B**. The subscript operator is syntactic sugar for pointer arithmetic calculating `*(arr + i)`.
-4. **C**. Reading or writing unallocated memory locations past bounds manifests as undefined behavior.
-5. **B**. In a 5-element array indexed from 0, the last valid index is size - 1, which is 4.
-6. **B**. C calculates memory addresses directly using pointer arithmetic for indexing.
-7. **D**. C does not execute automatic bounds checks; all checks must be manual.
-8. **A**. An array name naturally decays into a pointer to its very first memory location.
-9. **C**. The third element resides at index 2, which is accessed using `scores[2]`.
-10. **A**. C favors raw execution speed by omitting built-in bounds checking mechanisms.
+1. **B)** C conventions utilize zero-based indexing for locating the first element.
+2. **A)** The syntactical tool used to target an element is the subscript operator.
+3. **B)** The subscript operator is syntactic sugar for pointer arithmetic calculating `*(arr + i)`.
+4. **C)** Reading or writing unallocated memory locations past bounds manifests as undefined behavior.
+5. **B)** In a 5-element array indexed from 0, the last valid index is size - 1, which is 4.
+6. **B)** C calculates memory addresses directly using pointer arithmetic for indexing.
+7. **D)** C does not execute automatic bounds checks; all checks must be manual.
+8. **A)** An array name naturally decays into a pointer to its very first memory location.
+9. **C)** The third element resides at index 2, which is accessed using `scores[2]`.
+10. **A)** C favors raw execution speed by omitting built-in bounds checking mechanisms.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Binary Unsigned Division"
 status: completed
 ---
-
 # Problem Set - Binary Unsigned Division
 
 > [!info] Document Metadata
@@ -411,4 +410,4 @@ FINAL CORRECTION STEP:
 
 ## References & Navigation
 
-- **Related Notes:** [[Binary Division (Restoring & Non-Restoring)]]
+- **Related Notes:** [[Binary Division (Restoring & Non-Restoring Division Algorithms)]]

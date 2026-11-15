@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: "CSS Selectors"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -143,16 +142,16 @@ Using a class to style specific elements without affecting all tags of that type
 
 ### Answer Key & Explanations
 
-1. **B**. The dot/period (`.`) is used in CSS to target a class.
-2. **B**. An ID represents a unique element on a page, whereas classes are meant to be applied to multiple elements to share styles.
-3. **C**. Element selectors (like `p` or `h1`) apply rules to every matching HTML tag in the document.
-4. **D**. Pseudo-classes like `:hover` target the state of an element, such as user interaction.
-5. **B**. The hash/pound symbol (`#`) is used to denote an ID selector in CSS.
-6. **A**. Combinators (like descendent or child selectors) define relationships between elements to apply specific styles based on context.
-7. **C**. Attribute selectors look for specific HTML attributes inside the opening tag (e.g., `[type="text"]`).
-8. **B**. Relying only on element selectors causes sweeping changes. Classes provide controlled, reusable precision.
-9. **B**. This is a standard element selector that targets all `<h1>` tags directly.
-10. **C**. Pseudo-elements allow you to style specific structural parts of an element, like `::first-letter` or `::first-line`.
+1. **B)** The dot/period (`.`) is used in CSS to target a class.
+2. **B)** An ID represents a unique element on a page, whereas classes are meant to be applied to multiple elements to share styles.
+3. **C)** Element selectors (like `p` or `h1`) apply rules to every matching HTML tag in the document.
+4. **D)** Pseudo-classes like `:hover` target the state of an element, such as user interaction.
+5. **B)** The hash/pound symbol (`#`) is used to denote an ID selector in CSS.
+6. **A)** Combinators (like descendent or child selectors) define relationships between elements to apply specific styles based on context.
+7. **C)** Attribute selectors look for specific HTML attributes inside the opening tag (e.g., `[type="text"]`).
+8. **B)** Relying only on element selectors causes sweeping changes. Classes provide controlled, reusable precision.
+9. **B)** This is a standard element selector that targets all `<h1>` tags directly.
+10. **C)** Pseudo-elements allow you to style specific structural parts of an element, like `::first-letter` or `::first-line`.
 
 ## References & Navigation
 

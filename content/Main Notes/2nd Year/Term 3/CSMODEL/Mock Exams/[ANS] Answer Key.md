@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Mock Exams
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -180,4 +179,4 @@ status: completed
 
 ## References & Navigation
 
-- **Related Notes:** [[Modeling and Simulation]]
+- **Related Notes:** [[Introduction to Data]], [[Foundations for Inference]], [[[REV] CSMODEL Comprehensive Finals Reviewer]]

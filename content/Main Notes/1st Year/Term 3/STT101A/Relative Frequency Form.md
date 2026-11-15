@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -70,11 +69,11 @@ $$\hat{P}(D) = \frac{35}{2500} = 0.014 \quad (1.4\%), \qquad \hat{P}(D^c) = 1 - 
 
 ### Answer Key & Explanations
 
-1. **B**. Relative frequency is the empirical proportion of trials in which $E$ occurred: $\hat{P}_n(E) = f_n(E) / n$.
-2. **B**. Bernoulli's Weak (and Borel's Strong) Law of Large Numbers proves that the sample proportion $\hat{P}_n(E) = \frac{1}{n}\sum_{i=1}^n I_i(E)$ converges to $P(E)$ as $n \to \infty$.
-3. **A**. Independent trials have no memory ($P(T_6 \mid H_1 H_2 H_3 H_4 H_5) = 0.5$). Convergence of the ratio $f_n/n \to 0.5$ occurs because a fixed initial surplus of $5$ heads divided by $n$ vanishes ($5/n \to 0$) as $n \to \infty$.
-4. **A**. $\hat{P}_n(E) = \frac{7854}{10000} = 0.7854$ (which approximates $\pi/4 \approx 0.785398$).
-5. **A**. Since no single trial can belong to both $A$ and $B$, the empirical counts add without overlap: $f_n(A \cup B) = f_n(A) + f_n(B)$.
+1. **B)** Relative frequency is the empirical proportion of trials in which $E$ occurred: $\hat{P}_n(E) = f_n(E) / n$.
+2. **B)** Bernoulli's Weak (and Borel's Strong) Law of Large Numbers proves that the sample proportion $\hat{P}_n(E) = \frac{1}{n}\sum_{i=1}^n I_i(E)$ converges to $P(E)$ as $n \to \infty$.
+3. **A)** Independent trials have no memory ($P(T_6 \mid H_1 H_2 H_3 H_4 H_5) = 0.5$). Convergence of the ratio $f_n/n \to 0.5$ occurs because a fixed initial surplus of $5$ heads divided by $n$ vanishes ($5/n \to 0$) as $n \to \infty$.
+4. **A)** $\hat{P}_n(E) = \frac{7854}{10000} = 0.7854$ (which approximates $\pi/4 \approx 0.785398$).
+5. **A)** Since no single trial can belong to both $A$ and $B$, the empirical counts add without overlap: $f_n(A \cup B) = f_n(A) + f_n(B)$.
 
 ## References & Navigation
 

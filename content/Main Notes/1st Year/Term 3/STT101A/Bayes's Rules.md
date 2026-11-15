@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -67,11 +66,11 @@ $$P(M_2 \mid D) = \frac{P(D \mid M_2)P(M_2)}{P(D \mid M_1)P(M_1) + P(D \mid M_2)
 
 ### Answer Key & Explanations
 
-1. **B**. Since $P(A \cap B) = P(B \mid A)P(A) = P(A \mid B)P(B)$, dividing by $P(A)$ gives Bayes' Rule: $P(B \mid A) = \frac{P(A \mid B)P(B)}{P(A)}$.
-2. **A**. $P(M_1 \mid D) = \frac{0.012}{0.032} = 0.375$ (which also equals $1 - P(M_2 \mid D) = 1 - 0.625 = 0.375$).
-3. **C**. Conditioning on event $A$ defines a valid probability measure on the partition $\{B_i\}$; algebraically, $\sum_{i=1}^n \frac{P(A \mid B_i)P(B_i)}{P(A)} = \frac{P(A)}{P(A)} = 1$.
-4. **D**. Posterior odds equal Likelihood Ratio $\times$ Prior Odds $= \frac{0.90}{0.10} \times \frac{0.01}{0.99} = 9 \times \frac{1}{99} = \frac{9}{99} = \frac{1}{11}$.
-5. **B**. The Prosecutor's Fallacy (confusion of the inverse) mistakenly equates the probability of observing evidence given innocence $P(E \mid I)$ with the probability of innocence given the evidence $P(I \mid E)$.
+1. **B)** Since $P(A \cap B) = P(B \mid A)P(A) = P(A \mid B)P(B)$, dividing by $P(A)$ gives Bayes' Rule: $P(B \mid A) = \frac{P(A \mid B)P(B)}{P(A)}$.
+2. **A)** $P(M_1 \mid D) = \frac{0.012}{0.032} = 0.375$ (which also equals $1 - P(M_2 \mid D) = 1 - 0.625 = 0.375$).
+3. **C)** Conditioning on event $A$ defines a valid probability measure on the partition $\{B_i\}$; algebraically, $\sum_{i=1}^n \frac{P(A \mid B_i)P(B_i)}{P(A)} = \frac{P(A)}{P(A)} = 1$.
+4. **D)** Posterior odds equal Likelihood Ratio $\times$ Prior Odds $= \frac{0.90}{0.10} \times \frac{0.01}{0.99} = 9 \times \frac{1}{99} = \frac{9}{99} = \frac{1}{11}$.
+5. **B)** The Prosecutor's Fallacy (confusion of the inverse) mistakenly equates the probability of observing evidence given innocence $P(E \mid I)$ with the probability of innocence given the evidence $P(I \mid E)$.
 
 ## References & Navigation
 

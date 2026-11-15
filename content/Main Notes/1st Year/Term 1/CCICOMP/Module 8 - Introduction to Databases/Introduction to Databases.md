@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "17.0 Introduction to Databases"
 status: completed
 ---
-
 # 17.0 Introduction to Databases
 
 > [!info] Document Metadata
@@ -140,16 +139,16 @@ WHERE name = 'John Doe';
 
 ### Answer Key & Explanations
 
-1. **B**. A DBMS is software that enables users to define, create, maintain, and control access to data.
-2. **C**. SQL is the standard language (ANSI) used for managing and manipulating relational databases.
-3. **B**. Data Definition Language (DDL) is used to define and modify database structure.
-4. **B**. The Database Schema is the blueprint or structure of the database.
-5. **D**. Relational Databases store data in tables of rows/columns and maintain relationships via Primary/Foreign Keys.
-6. **B**. NoSQL databases lack strict structure, allowing rapid processing and high horizontal scalability.
-7. **B**. INSERT is a DML command used to insert new data/records.
-8. **A**. Indexes are data structures that improve the speed of data retrieval operations.
-9. **B**. A Hierarchical Database organizes data in a tree-like structure with parent-child relationships (1-to-many).
-10. **C**. The WHERE clause is used in the SELECT command to filter queried data based on conditions (e.g., WHERE age > 30).
+1. **B)** A DBMS is software that enables users to define, create, maintain, and control access to data.
+2. **C)** SQL is the standard language (ANSI) used for managing and manipulating relational databases.
+3. **B)** Data Definition Language (DDL) is used to define and modify database structure.
+4. **B)** The Database Schema is the blueprint or structure of the database.
+5. **D)** Relational Databases store data in tables of rows/columns and maintain relationships via Primary/Foreign Keys.
+6. **B)** NoSQL databases lack strict structure, allowing rapid processing and high horizontal scalability.
+7. **B)** INSERT is a DML command used to insert new data/records.
+8. **A)** Indexes are data structures that improve the speed of data retrieval operations.
+9. **B)** A Hierarchical Database organizes data in a tree-like structure with parent-child relationships (1-to-many).
+10. **C)** The WHERE clause is used in the SELECT command to filter queried data based on conditions (e.g., WHERE age > 30).
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Cache Memory Principles & Mapping Architectures"
 status: completed
 ---
-
 # Module 13: Cache Memory Principles & Mapping Architectures
 
 > [!info] Document Metadata
@@ -287,11 +286,11 @@ $$\text{Total Hardware Bits} = N \times \left( (B \times 8) + t + 1_{\text{Valid
 
 ### Answer Key & Explanations
 
-1. **B**. Block size $32\text{ bytes} \implies w = \log_2(32) = 5\text{ bits}$. Cache lines $512 \implies k = \log_2(512) = 9\text{ bits}$. Tag bits $t = 32 - 9 - 5 = 18\text{ bits}$.
-2. **A**. In an $k$-way set-associative cache, the hardware simultaneously compares the incoming tag against the tags of all $k$ lines inside the selected set. For $k=8$, exactly 8 comparators run in parallel.
-3. **C**. Fully Associative caches allow a memory block to reside in any line frame, preventing conflict misses where multiple active blocks compete for a single rigid line index.
-4. **D**. Total sets $S = \frac{\text{Total Lines}}{k} = \frac{2048}{4} = 512\text{ sets}$. Set index bits $s = \log_2(512) = 9\text{ bits}$.
-5. **B**. The valid bit differentiates populated, valid cache data ($V=1$) from uninitialized startup/garbage data ($V=0$) upon system reset.
+1. **B)** Block size $32\text{ bytes} \implies w = \log_2(32) = 5\text{ bits}$. Cache lines $512 \implies k = \log_2(512) = 9\text{ bits}$. Tag bits $t = 32 - 9 - 5 = 18\text{ bits}$.
+2. **A)** In an $k$-way set-associative cache, the hardware simultaneously compares the incoming tag against the tags of all $k$ lines inside the selected set. For $k=8$, exactly 8 comparators run in parallel.
+3. **C)** Fully Associative caches allow a memory block to reside in any line frame, preventing conflict misses where multiple active blocks compete for a single rigid line index.
+4. **D)** Total sets $S = \frac{\text{Total Lines}}{k} = \frac{2048}{4} = 512\text{ sets}$. Set index bits $s = \log_2(512) = 9\text{ bits}$.
+5. **B)** The valid bit differentiates populated, valid cache data ($V=1$) from uninitialized startup/garbage data ($V=0$) upon system reset.
 
 ## References & Navigation
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 
 type SortAlgorithm = "quicksort" | "mergesort" | "heapsort" | "insertionsort" | "bubblesort";
 
@@ -63,7 +63,7 @@ export function SortingVisualizerWorkbench() {
   const [algo, setAlgo] = useState<SortAlgorithm>("quicksort");
   const [arraySize, setArraySize] = useState<number>(14);
   const [customArrayText, setCustomArrayText] = useState<string>("45, 12, 85, 32, 8, 64, 51, 23, 77, 19");
-  const [steps, setSteps] = useState<SortStep[]>([]);
+  const [baseArray, setBaseArray] = useState<number[]>([45, 12, 85, 32, 8, 64, 51, 23, 77, 19, 41, 68, 29, 92]);
   const [currentStepIdx, setCurrentStepIdx] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [speedMs, setSpeedMs] = useState<number>(250);
@@ -382,6 +382,8 @@ export function SortingVisualizerWorkbench() {
     return trace;
   }, []);
 
+  const steps = useMemo(() => generateTrace(baseArray, algo), [baseArray, algo, generateTrace]);
+
   // Initialize array
   const createNewDataset = useCallback(
     (type: "random" | "reversed" | "nearly" = "random") => {
@@ -403,11 +405,10 @@ export function SortingVisualizerWorkbench() {
         }
       }
 
-      const generated = generateTrace(arr, algo);
-      setSteps(generated);
+      setBaseArray(arr);
       setCurrentStepIdx(0);
     },
-    [arraySize, algo, generateTrace]
+    [arraySize]
   );
 
   const applyCustomValues = () => {
@@ -418,15 +419,10 @@ export function SortingVisualizerWorkbench() {
       .filter((n) => !isNaN(n) && n > 0 && n <= 100);
     if (parsed.length >= 3) {
       setArraySize(parsed.length);
-      const generated = generateTrace(parsed, algo);
-      setSteps(generated);
+      setBaseArray(parsed);
       setCurrentStepIdx(0);
     }
   };
-
-  useEffect(() => {
-    createNewDataset("random");
-  }, [createNewDataset]);
 
   // Autoplay handler
   useEffect(() => {
@@ -523,6 +519,17 @@ export function SortingVisualizerWorkbench() {
           >
             RESET
           </button>
+          <select
+            aria-label="Sorting playback speed"
+            value={speedMs}
+            onChange={(e) => setSpeedMs(parseInt(e.target.value, 10))}
+            className="px-2 py-1 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-[var(--zen-snow)] text-xs font-mono"
+          >
+            <option value={500}>0.5x</option>
+            <option value={250}>1x</option>
+            <option value={125}>2x</option>
+            <option value={60}>4x</option>
+          </select>
         </div>
 
         <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
@@ -555,6 +562,7 @@ export function SortingVisualizerWorkbench() {
         </label>
         <input
           type="text"
+          aria-label="Custom array comma-separated values"
           value={customArrayText}
           onChange={(e) => setCustomArrayText(e.target.value)}
           placeholder="e.g. 45, 12, 85, 32, 8, 64, 51"

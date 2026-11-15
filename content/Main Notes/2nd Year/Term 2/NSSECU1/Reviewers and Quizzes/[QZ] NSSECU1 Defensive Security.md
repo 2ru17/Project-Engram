@@ -5,7 +5,6 @@ course: NSSECU1
 topic: "NSSECU1 Defensive Security Quiz"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -116,22 +115,22 @@ This document contains the curated 15-item quiz for the Defensive Security topic
 
 ### Answer Key & Explanations
 
-1. **C**. The SOC team's core function is to protect, monitor, identify, and eliminate threats in an organization's IT systems. It is the defensive frontline of cybersecurity operations.
-2. **C**. An IDS (Intrusion Detection System) is designed to detect and alert on suspicious activity such as repeated login failures. SIEM platforms aggregate these alerts from tools like IDS.
-3. **C**. IDS is classified under the Detect functionality — it is intended to detect incidents. It does not prevent or correct them on its own.
-4. **B**. Defense in Depth is the strategy of using multiple layered security controls so that if one layer is breached, the next layer contains the attacker.
-5. **D**. An Acceptable Use Policy (AUP) defines what a user can and cannot do when using company computing resources, whether on a company-provided or personal device.
-6. **B**. A Non-Disclosure Agreement (NDA) is a legal contract between parties that restricts the sharing of confidential information obtained during their relationship.
-7. **C**. A Combination or Series of Acts carries the highest penalty under RA 10173 — imprisonment of 3 to 6 years and a fine of up to 5,000,000 pesos for SPI.
-8. **C**. ISO/IEC 27001 specifies the requirements for establishing and maintaining an ISMS. ISO 27002 provides best practice recommendations but does not set formal requirements.
-9. **D**. A worm self-replicates and spreads across a network without requiring any user interaction. A virus requires a user to execute a program to spread.
-10. **B**. CryptoMalware's defining trait is that it encrypts the victim's data files and demands payment for the decryption key, while leaving the operating system running.
-11. **C**. The combination of urgency, a generic greeting, a threat of account deactivation, and a suspicious link together are the strongest composite indicators of a phishing email.
-12. **D**. A Boot Sector Virus embeds its code in the boot sector of a storage device, activating before the OS loads. The example given in the lecture was the "Stoned" virus from 1987.
-13. **B**. VirusTotal allows analysts to scan suspicious files, URLs, domains, and IP addresses against multiple antivirus engines simultaneously. It also supports hash value searches.
-14. **C**. The ILOVEYOU worm originated in the Pandacan neighborhood of Manila, Philippines on May 4, 2000, and spread globally within hours.
-15. **C**. Designating a Data Protection Officer (DPO) falls under compliance checklist item 1: Establish Data Privacy Governance — not under Manage Security Risks.
+1. **C)** The SOC team's core function is to protect, monitor, identify, and eliminate threats in an organization's IT systems. It is the defensive frontline of cybersecurity operations.
+2. **C)** An IDS (Intrusion Detection System) is designed to detect and alert on suspicious activity such as repeated login failures. SIEM platforms aggregate these alerts from tools like IDS.
+3. **C)** IDS is classified under the Detect functionality — it is intended to detect incidents. It does not prevent or correct them on its own.
+4. **B)** Defense in Depth is the strategy of using multiple layered security controls so that if one layer is breached, the next layer contains the attacker.
+5. **D)** An Acceptable Use Policy (AUP) defines what a user can and cannot do when using company computing resources, whether on a company-provided or personal device.
+6. **B)** A Non-Disclosure Agreement (NDA) is a legal contract between parties that restricts the sharing of confidential information obtained during their relationship.
+7. **C)** A Combination or Series of Acts carries the highest penalty under RA 10173 — imprisonment of 3 to 6 years and a fine of up to 5,000,000 pesos for SPI.
+8. **C)** ISO/IEC 27001 specifies the requirements for establishing and maintaining an ISMS. ISO 27002 provides best practice recommendations but does not set formal requirements.
+9. **D)** A worm self-replicates and spreads across a network without requiring any user interaction. A virus requires a user to execute a program to spread.
+10. **B)** CryptoMalware's defining trait is that it encrypts the victim's data files and demands payment for the decryption key, while leaving the operating system running.
+11. **C)** The combination of urgency, a generic greeting, a threat of account deactivation, and a suspicious link together are the strongest composite indicators of a phishing email.
+12. **D)** A Boot Sector Virus embeds its code in the boot sector of a storage device, activating before the OS loads. The example given in the lecture was the "Stoned" virus from 1987.
+13. **B)** VirusTotal allows analysts to scan suspicious files, URLs, domains, and IP addresses against multiple antivirus engines simultaneously. It also supports hash value searches.
+14. **C)** The ILOVEYOU worm originated in the Pandacan neighborhood of Manila, Philippines on May 4, 2000, and spread globally within hours.
+15. **C)** Designating a Data Protection Officer (DPO) falls under compliance checklist item 1: Establish Data Privacy Governance — not under Manage Security Risks.
 
 ## References & Navigation
 
-- **Related Notes:** [[Defensive Security]]
+- **Related Notes:** [[Defensive Security and SOC Operations]]

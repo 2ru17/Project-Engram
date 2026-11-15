@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: JavaScript Basic Syntax
 status: completed
 ---
-
 # JavaScript Basic Syntax
 
 > [!info] Document Metadata
@@ -102,9 +101,9 @@ Variables... example
 
 ### Answer Key & Explanations
 
-1. **C**. Block Scope applies to variables declared within a block (i.e., `{ }`) and is a feature introduced in ES6.
-2. **B**. JavaScript is an untyped language, meaning a variable can be of any data type, and its type can change dynamically.
-3. **A**. Function Scope means variables declared within a function are only visible within its function.
+1. **C)** Block Scope applies to variables declared within a block (i.e., `{ }`) and is a feature introduced in ES6.
+2. **B)** JavaScript is an untyped language, meaning a variable can be of any data type, and its type can change dynamically.
+3. **A)** Function Scope means variables declared within a function are only visible within its function.
 
 ## References & Navigation
 

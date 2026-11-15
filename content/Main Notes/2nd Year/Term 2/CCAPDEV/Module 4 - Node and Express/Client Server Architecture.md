@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Client Server Architecture
 status: completed
 ---
-
 # Client Server Architecture
 
 > [!info] Document Metadata
@@ -69,9 +68,9 @@ status: completed
 
 ### Answer Key & Explanations
 
-1. **B**. The server is a program that serves the requests of multiple clients, whereas the client makes the requests.
-2. **A**. NodeJS is an open-source JavaScript runtime environment that allows JavaScript to run outside of web browsers.
-3. **C**. A JS Engine is a program that interprets high-level JavaScript syntax to machine-bytecode.
+1. **B)** The server is a program that serves the requests of multiple clients, whereas the client makes the requests.
+2. **A)** NodeJS is an open-source JavaScript runtime environment that allows JavaScript to run outside of web browsers.
+3. **C)** A JS Engine is a program that interprets high-level JavaScript syntax to machine-bytecode.
 
 ## References & Navigation
 

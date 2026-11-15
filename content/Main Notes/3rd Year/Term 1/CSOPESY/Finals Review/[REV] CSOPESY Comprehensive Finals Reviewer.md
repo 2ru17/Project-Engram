@@ -5,7 +5,6 @@ course: CSOPESY
 topic: "CSOPESY Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -118,15 +117,15 @@ All 4 conditions must hold simultaneously for a deadlock to exist:
 
 ### Answer Key & Explanations
 
-1. **B**. The `exec` family of system calls overlays the calling process image with a new executable binary without altering the PID. `fork()` clones the process.
-2. **C**. SJF mathematically minimizes average waiting time by scheduling processes with the shortest burst lengths first.
-3. **C**. FIFO can exhibit Bélády's anomaly because the oldest page in memory is replaced regardless of whether it is referenced frequently or recently. LRU and OPT are stack algorithms and are immune to Bélády's Anomaly.
-4. **B**. A state is safe if the system can allocate resources to each process in some sequence up to its declared maximum need and still avoid deadlock.
-5. **B**. When a virtual address is accessed whose PTE valid bit is set to $0$ (invalid), the MMU triggers a page fault hardware trap to the OS kernel.
+1. **B)** The `exec` family of system calls overlays the calling process image with a new executable binary without altering the PID. `fork()` clones the process.
+2. **C)** SJF mathematically minimizes average waiting time by scheduling processes with the shortest burst lengths first.
+3. **C)** FIFO can exhibit Bélády's anomaly because the oldest page in memory is replaced regardless of whether it is referenced frequently or recently. LRU and OPT are stack algorithms and are immune to Bélády's Anomaly.
+4. **B)** A state is safe if the system can allocate resources to each process in some sequence up to its declared maximum need and still avoid deadlock.
+5. **B)** When a virtual address is accessed whose PTE valid bit is set to $0$ (invalid), the MMU triggers a page fault hardware trap to the OS kernel.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CSARCH1]], [[CCPROG2]]
+- **Previous Topic:** [[[REV] CSARCH1 Comprehensive Finals Reviewer]], [[[REV] CCPROG2 Comprehensive Finals Reviewer]]
 - **Next Topic:** None
-- **Prerequisites:** [[Operating Systems]], Processes, Threads, CPU Scheduling, Semaphores, Paging
-- **Cross-Curricular Connections:** [[LBYARCH]]
+- **Prerequisites:** [[CSOPESY 01 - Introduction]], Processes, Threads, CPU Scheduling, Semaphores, Paging
+- **Cross-Curricular Connections:** [[[REV] LBYARCH Comprehensive Finals Reviewer]]

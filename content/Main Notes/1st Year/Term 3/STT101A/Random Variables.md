@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -74,11 +73,11 @@ status: completed
 
 ### Answer Key & Explanations
 
-1. **B**. Time measured on an uncountable real interval $[0, \infty)$ is continuous, whereas counts of requests, defects, or heads take values in countable integer sets ($\{0, 1, 2, \dots\}$) and are discrete.
-2. **C**. By the variance scaling property $\text{Var}(aX + b) = a^2 \text{Var}(X)$, $\text{Var}(3X + 10) = 3^2 \times 5 = 9 \times 5 = 45$.
-3. **C**. For independent variables, $\text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)$. With $a = 1, b = -1$, $\text{Var}(X - Y) = (1)^2(4) + (-1)^2(9) = 4 + 9 = 13$. Uncertainty adds even when subtracting independent noisy quantities!
-4. **A**. Variance measures dispersion around the mean; translating the entire distribution rigidly along the number line by $+b$ does not change its spread.
-5. **B**. Unlike a PMF, a PDF $f(x)$ is not a probability itself—only its integral $\int_a^b f(x)\,dx$ is a probability. On a narrow interval like $[0, 0.5]$, $f(x) = 2 > 1$ while $\int_0^{0.5} 2\,dx = 1$.
+1. **B)** Time measured on an uncountable real interval $[0, \infty)$ is continuous, whereas counts of requests, defects, or heads take values in countable integer sets ($\{0, 1, 2, \dots\}$) and are discrete.
+2. **C)** By the variance scaling property $\text{Var}(aX + b) = a^2 \text{Var}(X)$, $\text{Var}(3X + 10) = 3^2 \times 5 = 9 \times 5 = 45$.
+3. **C)** For independent variables, $\text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y)$. With $a = 1, b = -1$, $\text{Var}(X - Y) = (1)^2(4) + (-1)^2(9) = 4 + 9 = 13$. Uncertainty adds even when subtracting independent noisy quantities!
+4. **A)** Variance measures dispersion around the mean; translating the entire distribution rigidly along the number line by $+b$ does not change its spread.
+5. **B)** Unlike a PMF, a PDF $f(x)$ is not a probability itself—only its integral $\int_a^b f(x)\,dx$ is a probability. On a narrow interval like $[0, 0.5]$, $f(x) = 2 > 1$ while $\int_0^{0.5} 2\,dx = 1$.
 
 ## References & Navigation
 

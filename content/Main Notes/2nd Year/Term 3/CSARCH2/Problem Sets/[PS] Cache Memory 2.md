@@ -5,7 +5,6 @@ course: CSARCH2
 topic: Cache Memory Performance in Looping Constructs, Set Associativity, and Conflict Miss Analysis
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -429,4 +428,4 @@ $$\text{AMAT} = \frac{60,844\text{ ns}}{60,544} \approx \mathbf{1.004955\text{ n
 
 ## References & Navigation
 
-- **Related Notes:** [[Cache Memory]]
+- **Related Notes:** [[Cache Memory Principles & Mapping Architectures]], [[Cache Replacement Policies & Write Strategies]]

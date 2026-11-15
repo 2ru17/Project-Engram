@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Memory System Organization & Hierarchy"
 status: completed
 ---
-
 # Module 12: Memory System Organization & Hierarchy
 
 > [!info] Document Metadata
@@ -209,11 +208,11 @@ for (int j = 0; j < N; j++) {
 
 ### Answer Key & Explanations
 
-1. **B**. Static RAM (SRAM) uses a 6-transistor bistable latch that retains data indefinitely as long as power is applied, without needing refresh cycles.
-2. **B**. Spatial locality indicates that memory addresses adjacent to the current address will likely be requested soon; loading an entire block (line) brings these adjacent words into cache ahead of time.
-3. **D**. CPU internal registers operate at processor core clock speeds ($< 1\text{ ns}$) and have the highest cost per bit of any storage in the system.
-4. **B**. DRAM stores bits as tiny capacitive charges ($1\text{T}-1\text{C}$). Sub-threshold silicon leakage causes these charges to dissipate within milliseconds if not periodically refreshed.
-5. **A**. High temporal locality means the same memory locations are reused frequently; keeping these items in high-level L1/L2 caches minimizes repetitive trips to slower main memory.
+1. **B)** Static RAM (SRAM) uses a 6-transistor bistable latch that retains data indefinitely as long as power is applied, without needing refresh cycles.
+2. **B)** Spatial locality indicates that memory addresses adjacent to the current address will likely be requested soon; loading an entire block (line) brings these adjacent words into cache ahead of time.
+3. **D)** CPU internal registers operate at processor core clock speeds ($< 1\text{ ns}$) and have the highest cost per bit of any storage in the system.
+4. **B)** DRAM stores bits as tiny capacitive charges ($1\text{T}-1\text{C}$). Sub-threshold silicon leakage causes these charges to dissipate within milliseconds if not periodically refreshed.
+5. **A)** High temporal locality means the same memory locations are reused frequently; keeping these items in high-level L1/L2 caches minimizes repetitive trips to slower main memory.
 
 ## References & Navigation
 

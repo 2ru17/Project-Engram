@@ -1,11 +1,10 @@
 ---
-id: unknown
+id: stt101a_hypothesis_testing_excalidraw
 type: note
 course: STT101A
-topic: "Unknown Topic"
+topic: Hypothesis Testing Diagram
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -73,11 +72,11 @@ This visual reference summarizes the **Statistical Hypothesis Testing Decision F
 
 ### Answer Key & Explanations
 
-1. **B**. A Type I error occurs when we reject a true null hypothesis $H_0$; its maximum probability is controlled by the chosen significance level $\alpha$.
-2. **A**. Since $\beta = P(\text{Fail to reject } H_0 \mid H_a \text{ true})$ is the Type II error rate, its complement $1 - \beta = P(\text{Reject } H_0 \mid H_a \text{ true})$ is the power of the test to detect a true effect.
-3. **C**. Lowering $\alpha$ pushes the critical value $z_\alpha$ further out, expanding the non-rejection region and increasing the probability $\beta$ of missing a true alternative when $n$ is fixed.
-4. **D**. Increasing $n$ shrinks $\sigma/\sqrt{n}$, reducing the overlap between the null and alternative sampling distributions so both $\alpha$ and $\beta$ can be made smaller simultaneously.
-5. **B**. The $p$-value is a conditional probability conditioned on $H_0$ being true ($P(|T| \ge |t_{\text{obs}}| \mid H_0)$), NOT the posterior probability $P(H_0 \mid \text{data})$.
+1. **B)** A Type I error occurs when we reject a true null hypothesis $H_0$; its maximum probability is controlled by the chosen significance level $\alpha$.
+2. **A)** Since $\beta = P(\text{Fail to reject } H_0 \mid H_a \text{ true})$ is the Type II error rate, its complement $1 - \beta = P(\text{Reject } H_0 \mid H_a \text{ true})$ is the power of the test to detect a true effect.
+3. **C)** Lowering $\alpha$ pushes the critical value $z_\alpha$ further out, expanding the non-rejection region and increasing the probability $\beta$ of missing a true alternative when $n$ is fixed.
+4. **D)** Increasing $n$ shrinks $\sigma/\sqrt{n}$, reducing the overlap between the null and alternative sampling distributions so both $\alpha$ and $\beta$ can be made smaller simultaneously.
+5. **B)** The $p$-value is a conditional probability conditioned on $H_0$ being true ($P(|T| \ge |t_{\text{obs}}| \mid H_0)$), NOT the posterior probability $P(H_0 \mid \text{data})$.
 
 ## References & Navigation
 
