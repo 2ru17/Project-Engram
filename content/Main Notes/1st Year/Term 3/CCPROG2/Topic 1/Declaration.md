@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Declaration
 
 > [!info] Document Metadata
@@ -97,9 +96,9 @@ int cube[2][3][4];   // 3D array
 
 ### Answer Key & Explanations
 
-1. **B**. Full declaration mandates specifying the unified type, identifier, and total size bounds.
-2. **C**. Local arrays inherit whatever leftover binary data exists in their allocated stack space.
-3. **A**. Variable length arrays using variables for sizing weren't officially introduced until C99.
+1. **B)** Full declaration mandates specifying the unified type, identifier, and total size bounds.
+2. **C)** Local arrays inherit whatever leftover binary data exists in their allocated stack space.
+3. **A)** Variable length arrays using variables for sizing weren't officially introduced until C99.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Name
 
 > [!info] Document Metadata
@@ -90,9 +89,9 @@ arr = other;  // ERROR: array name is not assignable
 
 ### Answer Key & Explanations
 
-1. **B**. The identifier acts as a reference pointing to the memory base, preventing deep copies.
-2. **C**. Standard C identifier rules prohibit variables from starting with a numeric digit.
-3. **A**. The name is tied statically to its original memory block and cannot be repointed.
+1. **B)** The identifier acts as a reference pointing to the memory base, preventing deep copies.
+2. **C)** Standard C identifier rules prohibit variables from starting with a numeric digit.
+3. **A)** The name is tied statically to its original memory block and cannot be repointed.
 
 ## References & Navigation
 

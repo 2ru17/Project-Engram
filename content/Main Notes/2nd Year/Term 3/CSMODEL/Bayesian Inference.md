@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Bayesian Inference
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -573,11 +572,11 @@ Correct Option is **C**.
 
 ### Answer Key & Explanations
 
-1. **B**. The prior is the initial probability of the hypothesis.
-2. **C**. A conjugate prior ensures the posterior is in the same family, simplifying calculations.
-3. **B**. Naive Bayes assumes that all features are independent of each other given the class.
-4. **B**. Bayesian treats parameters as distributions, while Frequentists treat them as fixed constants.
-5. **C**. According to Bayes theorem, Posterior is proportional to Likelihood * Prior.
+1. **B)** The prior is the initial probability of the hypothesis.
+2. **C)** A conjugate prior ensures the posterior is in the same family, simplifying calculations.
+3. **B)** Naive Bayes assumes that all features are independent of each other given the class.
+4. **B)** Bayesian treats parameters as distributions, while Frequentists treat them as fixed constants.
+5. **C)** According to Bayes theorem, Posterior is proportional to Likelihood * Prior.
 
 ## References & Navigation
 

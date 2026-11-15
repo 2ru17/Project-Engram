@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Common Array Operations & Considerations
 
 > [!info] Document Metadata
@@ -70,9 +69,9 @@ for (int i = 0; i < 3; i++) b[i] = a[i];
 
 ### Answer Key & Explanations
 
-1. **B**. Insertion at the start forces all existing elements to shift rightward.
-2. **B**. Deletion creates empty space that adjacent values must slide over to conceal.
-3. **A**. Since C lacks automatic bounds verification, inserting past capacity causes overflows.
+1. **B)** Insertion at the start forces all existing elements to shift rightward.
+2. **B)** Deletion creates empty space that adjacent values must slide over to conceal.
+3. **A)** Since C lacks automatic bounds verification, inserting past capacity causes overflows.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Functional Units & Performance Fundamentals"
 status: completed
 ---
-
 # Module 01: Functional Units & Performance Fundamentals
 
 > [!info] Document Metadata
@@ -260,13 +259,13 @@ Calculate:
 
 ### Answer Key & Explanations
 
-1. **B**. From $CPU\text{ Time} = \frac{I \times CPI}{f}$, we rearrange for $I$:
+1. **B)** From $CPU\text{ Time} = \frac{I \times CPI}{f}$, we rearrange for $I$:
 $$I = \frac{CPU\text{ Time} \times f}{CPI} = \frac{12\text{ s} \times 3.0 \times 10^9\text{ Hz}}{1.8} = \frac{36 \times 10^9}{1.8} = 2.0 \times 10^{10}\text{ instructions}$$
-2. **A**. Using Amdahl's Law with $F = 0.60$ and $k = 4$:
+2. **A)** Using Amdahl's Law with $F = 0.60$ and $k = 4$:
 $$S = \frac{1}{(1 - 0.60) + \frac{0.60}{4}} = \frac{1}{0.40 + 0.15} = \frac{1}{0.55} \approx 1.818\times \approx 1.82\times$$
-3. **B**. MFLOPS measures the throughput of standardized arithmetic operations (additions, multiplications of real numbers) necessary to solve a mathematical problem, avoiding the instruction-set composition disparities that invalidate MIPS.
-4. **C**. A 32-bit bus transfers $\frac{32}{8} = 4\text{ bytes}$ per clock cycle. Peak bandwidth $= 4\text{ bytes} \times 200 \times 10^6\text{ cycles/s} = 800\text{ MB/s}$.
-5. **C**. The total number of instructions executed ($I$) is directly determined by the algorithmic implementation and the compiler's code generation/optimization strategies. Clock parameters ($f, T$) are determined by circuit design and semiconductor technology.
+3. **B)** MFLOPS measures the throughput of standardized arithmetic operations (additions, multiplications of real numbers) necessary to solve a mathematical problem, avoiding the instruction-set composition disparities that invalidate MIPS.
+4. **C)** A 32-bit bus transfers $\frac{32}{8} = 4\text{ bytes}$ per clock cycle. Peak bandwidth $= 4\text{ bytes} \times 200 \times 10^6\text{ cycles/s} = 800\text{ MB/s}$.
+5. **C)** The total number of instructions executed ($I$) is directly determined by the algorithmic implementation and the compiler's code generation/optimization strategies. Clock parameters ($f, T$) are determined by circuit design and semiconductor technology.
 
 ## References & Navigation
 

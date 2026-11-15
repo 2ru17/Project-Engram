@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ $$E[\text{Net Profit}] = E[\text{Payout} - 15] = 45 - 15 = \$30$$
 
 ### Answer Key & Explanations
 
-1. **B**. $E[X]$ is the center of mass of the probability distribution, not necessarily an achievable single-trial value (e.g., $E[X] = 3.5$ for a fair die).
-2. **A**. By definition of expectation, $E[I_A] = 1 \cdot P(I_A = 1) + 0 \cdot P(I_A = 0) = P(A)$. This bridges event probabilities and expectations.
-3. **C**. Linearity of expectation ($E[X + Y] = E[X] + E[Y]$) follows from the linearity of summation/integration over the joint distribution and requires **no** independence assumption.
-4. **D**. By linearity of expectation, $E[3X - 5] = 3E[X] - 5 = 3(4) - 5 = 12 - 5 = 7$.
-5. **B**. A game is fair when neither player has a long-run expected advantage, meaning the expected net gain is $E[\text{Gain}] = 0$.
+1. **B)** $E[X]$ is the center of mass of the probability distribution, not necessarily an achievable single-trial value (e.g., $E[X] = 3.5$ for a fair die).
+2. **A)** By definition of expectation, $E[I_A] = 1 \cdot P(I_A = 1) + 0 \cdot P(I_A = 0) = P(A)$. This bridges event probabilities and expectations.
+3. **C)** Linearity of expectation ($E[X + Y] = E[X] + E[Y]$) follows from the linearity of summation/integration over the joint distribution and requires **no** independence assumption.
+4. **D)** By linearity of expectation, $E[3X - 5] = 3E[X] - 5 = 3(4) - 5 = 12 - 5 = 7$.
+5. **B)** A game is fair when neither player has a long-run expected advantage, meaning the expected net gain is $E[\text{Gain}] = 0$.
 
 ## References & Navigation
 

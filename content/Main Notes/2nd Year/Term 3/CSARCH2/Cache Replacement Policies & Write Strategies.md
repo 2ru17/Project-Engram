@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Cache Replacement Policies & Write Strategies"
 status: completed
 ---
-
 # Module 14: Cache Replacement Policies & Write Strategies
 
 > [!info] Document Metadata
@@ -233,11 +232,11 @@ Calculate:
 
 ### Answer Key & Explanations
 
-1. **C**. Compulsory misses happen on the initial reference to a block of memory and cannot be eliminated by increasing cache capacity or associativity.
-2. **A**. Write-Through updates main memory immediately on every write, keeping memory coherent. Write-Back updates only the cache and defers memory writes until the modified dirty line is evicted.
-3. **C**. $AMAT = t_h + m \cdot t_p = 1.2\text{ ns} + (0.04 \times 50\text{ ns}) = 1.2 + 2.0 = 3.20\text{ ns}$.
-4. **B**. The Dirty bit tracks modification state. If $D=1$, the line contains data newer than main memory and must be written back to DRAM upon replacement; if $D=0$, the line can simply be overwritten.
-5. **B**. LRU belongs to the class of stack algorithms (where the contents of an $n$-block cache are always a strict subset of an $(n+1)$-block cache), guaranteeing that expanding cache size will never increase miss counts.
+1. **C)** Compulsory misses happen on the initial reference to a block of memory and cannot be eliminated by increasing cache capacity or associativity.
+2. **A)** Write-Through updates main memory immediately on every write, keeping memory coherent. Write-Back updates only the cache and defers memory writes until the modified dirty line is evicted.
+3. **C)** $AMAT = t_h + m \cdot t_p = 1.2\text{ ns} + (0.04 \times 50\text{ ns}) = 1.2 + 2.0 = 3.20\text{ ns}$.
+4. **B)** The Dirty bit tracks modification state. If $D=1$, the line contains data newer than main memory and must be written back to DRAM upon replacement; if $D=0$, the line can simply be overwritten.
+5. **B)** LRU belongs to the class of stack algorithms (where the contents of an $n$-block cache are always a strict subset of an $(n+1)$-block cache), guaranteeing that expanding cache size will never increase miss counts.
 
 ## References & Navigation
 

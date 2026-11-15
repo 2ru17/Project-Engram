@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Unsigned Multiplication (Array & Sequential Multipliers)"
 status: completed
 ---
-
 # Module 04: Unsigned Multiplication (Array & Sequential Multipliers)
 
 > [!info] Document Metadata
@@ -221,11 +220,11 @@ Calculate the total multiplication latency for both implementations.
 
 ### Answer Key & Explanations
 
-1. **C**. The product of two $n$-bit integers requires up to $2n$ bits of precision. The sequential multiplier stores the high-order $n$ bits in accumulator $A$ and the low-order $n$ bits in register $Q$.
-2. **D**. Every bit of the multiplicand ($n$ bits) must be multiplied by every bit of the multiplier ($n$ bits), requiring $n \times n = n^2$ single-bit AND gates.
-3. **C**. When $Q_0 = 0$, the partial product to add is 0. Hardware skips the adder step and directly executes the logical shift right operation on $[C, A, Q]$ to inspect the next bit.
-4. **B**. In 2's complement, the MSB has a negative weight ($-2^{n-1}$). Unsigned hardware treats the MSB as $+2^{n-1}$, causing partial products from the sign bit to be added with positive magnitude instead of subtracted.
-5. **C**. Clock period $T = \frac{1}{500 \times 10^6\text{ Hz}} = 2\text{ ns}$. An 8-bit multiplication requires 8 clock cycles $\implies 8 \times 2\text{ ns} = 16\text{ ns}$.
+1. **C)** The product of two $n$-bit integers requires up to $2n$ bits of precision. The sequential multiplier stores the high-order $n$ bits in accumulator $A$ and the low-order $n$ bits in register $Q$.
+2. **D)** Every bit of the multiplicand ($n$ bits) must be multiplied by every bit of the multiplier ($n$ bits), requiring $n \times n = n^2$ single-bit AND gates.
+3. **C)** When $Q_0 = 0$, the partial product to add is 0. Hardware skips the adder step and directly executes the logical shift right operation on $[C, A, Q]$ to inspect the next bit.
+4. **B)** In 2's complement, the MSB has a negative weight ($-2^{n-1}$). Unsigned hardware treats the MSB as $+2^{n-1}$, causing partial products from the sign bit to be added with positive magnitude instead of subtracted.
+5. **C)** Clock period $T = \frac{1}{500 \times 10^6\text{ Hz}} = 2\text{ ns}$. An 8-bit multiplication requires 8 clock cycles $\implies 8 \times 2\text{ ns} = 16\text{ ns}$.
 
 ## References & Navigation
 

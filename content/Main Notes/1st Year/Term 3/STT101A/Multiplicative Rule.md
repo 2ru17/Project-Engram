@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -69,11 +68,11 @@ In probability theory, the **Multiplicative Rule of Probability** determines the
 
 ### Answer Key & Explanations
 
-1. **B**. The general rule $P(A \cap B) = P(A)P(B \mid A)$ reduces to $P(A)P(B)$ if and only if $P(B \mid A) = P(B)$, which is the definition of statistical independence.
-2. **B**. By the General Multiplicative Rule without replacement: $P(B_1 \cap B_2) = P(B_1)P(B_2 \mid B_1) = \frac{4}{10} \times \frac{3}{9} = \frac{2}{15}$.
-3. **A**. $P(W_1 \cap B_2) = P(W_1)P(B_2 \mid W_1) = \frac{6}{10} \times \frac{4}{9} = \frac{24}{90} = \frac{4}{15}$.
-4. **B**. In a series system, all three independent components must succeed simultaneously: $P(C_1 \cap C_2 \cap C_3) = (0.90)(0.90)(0.80) = 0.648$.
-5. **A**. Independence of $C_1, C_2, C_3$ implies independence of their complements $F_1, F_2, F_3$, so the joint failure probability is $(1-0.9)(1-0.9)(1-0.8) = (0.1)(0.1)(0.2) = 0.002$.
+1. **B)** The general rule $P(A \cap B) = P(A)P(B \mid A)$ reduces to $P(A)P(B)$ if and only if $P(B \mid A) = P(B)$, which is the definition of statistical independence.
+2. **B)** By the General Multiplicative Rule without replacement: $P(B_1 \cap B_2) = P(B_1)P(B_2 \mid B_1) = \frac{4}{10} \times \frac{3}{9} = \frac{2}{15}$.
+3. **A)** $P(W_1 \cap B_2) = P(W_1)P(B_2 \mid W_1) = \frac{6}{10} \times \frac{4}{9} = \frac{24}{90} = \frac{4}{15}$.
+4. **B)** In a series system, all three independent components must succeed simultaneously: $P(C_1 \cap C_2 \cap C_3) = (0.90)(0.90)(0.80) = 0.648$.
+5. **A)** Independence of $C_1, C_2, C_3$ implies independence of their complements $F_1, F_2, F_3$, so the joint failure probability is $(1-0.9)(1-0.9)(1-0.8) = (0.1)(0.1)(0.2) = 0.002$.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Integer Representation & Fixed-Point Arithmetic"
 status: completed
 ---
-
 # Module 02: Integer Representation & Fixed-Point Arithmetic
 
 > [!info] Document Metadata
@@ -257,11 +256,11 @@ Address  | Little Endian (LSB First) | Big Endian (MSB First)
 
 ### Answer Key & Explanations
 
-1. **A**. Decimal $+43$ in 8-bit binary is `00101011`. To find 2's complement: invert all bits (`11010100`) and add 1 $\implies$ `11010101`. Alternatively, scan from right: copy bits up to first 1 (`1`), then invert remaining bits (`1101010`) $\implies$ `11010101`.
-2. **B**. In Little Endian, the byte at the lowest address (`0x0040` $\to$ `0x78`) is the Least Significant Byte (LSB), and the byte at the highest address (`0x0043` $\to$ `0x12`) is the Most Significant Byte (MSB). Assembling from MSB to LSB gives `0x12345678`.
-3. **B**. 1's complement has dual zeros ($+0$ and $-0$), giving a symmetric range of $[-(2^7-1), +(2^7-1)] = [-127, +127]$. 2's complement has a single zero, giving an asymmetric range of $[-2^7, +2^7-1] = [-128, +127]$.
-4. **B**. Densely Packed BCD (DPD) compresses 3 decimal digits ($3 \times 4 = 12\text{ bits}$) into 10 bits ($2^{10} = 1024$ code points, comfortably encoding $10^3 = 1000$ decimal combinations).
-5. **C**. UTF-8 encodes characters in the range $U+0000..U+007F$ using a single byte identical to standard 7-bit ASCII with the MSB set to `0`.
+1. **A)** Decimal $+43$ in 8-bit binary is `00101011`. To find 2's complement: invert all bits (`11010100`) and add 1 $\implies$ `11010101`. Alternatively, scan from right: copy bits up to first 1 (`1`), then invert remaining bits (`1101010`) $\implies$ `11010101`.
+2. **B)** In Little Endian, the byte at the lowest address (`0x0040` $\to$ `0x78`) is the Least Significant Byte (LSB), and the byte at the highest address (`0x0043` $\to$ `0x12`) is the Most Significant Byte (MSB). Assembling from MSB to LSB gives `0x12345678`.
+3. **B)** 1's complement has dual zeros ($+0$ and $-0$), giving a symmetric range of $[-(2^7-1), +(2^7-1)] = [-127, +127]$. 2's complement has a single zero, giving an asymmetric range of $[-2^7, +2^7-1] = [-128, +127]$.
+4. **B)** Densely Packed BCD (DPD) compresses 3 decimal digits ($3 \times 4 = 12\text{ bits}$) into 10 bits ($2^{10} = 1024$ code points, comfortably encoding $10^3 = 1000$ decimal combinations).
+5. **C)** UTF-8 encodes characters in the range $U+0000..U+007F$ using a single byte identical to standard 7-bit ASCII with the MSB set to `0`.
 
 ## References & Navigation
 

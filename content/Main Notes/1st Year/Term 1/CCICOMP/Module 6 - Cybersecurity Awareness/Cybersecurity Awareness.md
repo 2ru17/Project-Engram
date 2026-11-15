@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "15.0 Cybersecurity Awareness"
 status: completed
 ---
-
 # 15.0 Cybersecurity Awareness
 
 > [!info] Document Metadata
@@ -99,16 +98,16 @@ Professionals in computing hold ethical responsibilities to safeguard user data 
 
 ### Answer Key & Explanations
 
-1. **B**. Ransomware encrypts user data and demands payment for the decryption key.
-2. **C**. A Botnet is a network of infected private computers controlled as a group without the owners' knowledge.
-3. **D**. Phishing is a cybercrime where targets are lured by someone posing as a legitimate institution.
-4. **B**. WannaCry (2017) was a massive ransomware attack on Windows systems demanding Bitcoin.
-5. **B**. Ethical Hacking intentionally probes systems with permission to find and report vulnerabilities.
-6. **B**. The SolarWinds attack involved hackers inserting malicious code into the Orion IT monitoring system.
-7. **B**. Best practices include using strong, unique passwords and enabling MFA.
-8. **A**. In Bug Bounty Programs, ethical hackers responsibly disclose vulnerabilities rather than exploiting them.
-9. **B**. The Mirai Botnet (2016) turned networked Linux devices into remotely controlled bots.
-10. **C**. A key hygiene tip is to regularly update OS and software to patch vulnerabilities.
+1. **B)** Ransomware encrypts user data and demands payment for the decryption key.
+2. **C)** A Botnet is a network of infected private computers controlled as a group without the owners' knowledge.
+3. **D)** Phishing is a cybercrime where targets are lured by someone posing as a legitimate institution.
+4. **B)** WannaCry (2017) was a massive ransomware attack on Windows systems demanding Bitcoin.
+5. **B)** Ethical Hacking intentionally probes systems with permission to find and report vulnerabilities.
+6. **B)** The SolarWinds attack involved hackers inserting malicious code into the Orion IT monitoring system.
+7. **B)** Best practices include using strong, unique passwords and enabling MFA.
+8. **A)** In Bug Bounty Programs, ethical hackers responsibly disclose vulnerabilities rather than exploiting them.
+9. **B)** The Mirai Botnet (2016) turned networked Linux devices into remotely controlled bots.
+10. **C)** A key hygiene tip is to regularly update OS and software to patch vulnerabilities.
 
 ## References & Navigation
 

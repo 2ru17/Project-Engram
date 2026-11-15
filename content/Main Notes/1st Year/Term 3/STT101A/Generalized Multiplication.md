@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -69,11 +68,11 @@ $$P(H_1 \cap H_2 \cap H_3) = P(H_1) \cdot P(H_2 \mid H_1) \cdot P(H_3 \mid H_1 \
 
 ### Answer Key & Explanations
 
-1. **B**. By induction on the two-event Multiplicative Rule, $P((A \cap B) \cap C) = P(A \cap B)P(C \mid A \cap B) = P(A)P(B \mid A)P(C \mid A \cap B)$.
-2. **A**. In general, the third factor is $P(C \mid A \cap B)$. It reduces to $P(C \mid B)$ only under the Markov property (conditional independence of $C$ from $A$ given $B$).
-3. **C**. Let $A_1, A_2, A_3$ be Aces on cards 1, 2, 3. Then $P(A_1 \cap A_2 \cap A_3) = \frac{4}{52} \times \frac{3}{51} \times \frac{2}{50} = \frac{1}{5525}$.
-4. **D**. By the 4-stage Generalized Multiplication Principle without replacement, $10 \times 9 \times 8 \times 7 = P(10, 4) = 5,040$.
-5. **B**. Tracking ordered 3-tuples multiplies both numerator and denominator of the unordered combination ratio by $3!$, which cancels identically.
+1. **B)** By induction on the two-event Multiplicative Rule, $P((A \cap B) \cap C) = P(A \cap B)P(C \mid A \cap B) = P(A)P(B \mid A)P(C \mid A \cap B)$.
+2. **A)** In general, the third factor is $P(C \mid A \cap B)$. It reduces to $P(C \mid B)$ only under the Markov property (conditional independence of $C$ from $A$ given $B$).
+3. **C)** Let $A_1, A_2, A_3$ be Aces on cards 1, 2, 3. Then $P(A_1 \cap A_2 \cap A_3) = \frac{4}{52} \times \frac{3}{51} \times \frac{2}{50} = \frac{1}{5525}$.
+4. **D)** By the 4-stage Generalized Multiplication Principle without replacement, $10 \times 9 \times 8 \times 7 = P(10, 4) = 5,040$.
+5. **B)** Tracking ordered 3-tuples multiplies both numerator and denominator of the unordered combination ratio by $3!$, which cancels identically.
 
 ## References & Navigation
 

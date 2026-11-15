@@ -5,7 +5,6 @@ course: CSMODEL
 topic: "Introduction to Data"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -150,16 +149,16 @@ print(df.describe(include='all'))
 
 ### Answer Key & Explanations
 
-1. **C**. JSON files utilize structural markers (keys) to organize data hierarchies, which defines them as semi-structured, unlike strict tabular DBs or fully unstructured media files.
-2. **B**. Socioeconomic classes possess a meaningful natural order, but the exact mathematical distance between "Lower" and "Middle" is undefined, making it Ordinal.
-3. **B**. Ratio data has an absolute zero (meaning the total absence of the quantity, like $0\text{ kg}$), whereas Interval data has an arbitrary zero (like $0^\circ\text{C}$).
-4. **C**. It involves random assignment to treatment/control (making it an RCT), and the researchers evaluating the outcomes are blind to the assignments, making it double-blind.
-5. **B**. Any numerical summary derived from a *sample* is termed a statistic (represented by Latin letters like $\bar{x}$).
-6. **C**. Cluster sampling selects entire intact heterogeneous groups (departments) and surveys everyone within them, contrasting with stratified sampling which pulls a few individuals from every group.
-7. **C**. Stratified sampling ensures representation by breaking the population into homogeneous strata and sampling individuals from all of them.
-8. **C**. Due to the lack of random assignment and control over variables, observational studies are vulnerable to confounding factors, meaning they can only prove association, not causation.
-9. **B**. For Interval data, differences are mathematically meaningful, making it valid to calculate the Mean, Median, and Mode. Multiplication/division operations (like Geometric Mean) remain invalid due to the lack of a true zero.
-10. **C**. `value_counts()` directly tallies and returns the frequency count for each distinct category in a pandas Series.
+1. **C)** JSON files utilize structural markers (keys) to organize data hierarchies, which defines them as semi-structured, unlike strict tabular DBs or fully unstructured media files.
+2. **B)** Socioeconomic classes possess a meaningful natural order, but the exact mathematical distance between "Lower" and "Middle" is undefined, making it Ordinal.
+3. **B)** Ratio data has an absolute zero (meaning the total absence of the quantity, like $0\text{ kg}$), whereas Interval data has an arbitrary zero (like $0^\circ\text{C}$).
+4. **C)** It involves random assignment to treatment/control (making it an RCT), and the researchers evaluating the outcomes are blind to the assignments, making it double-blind.
+5. **B)** Any numerical summary derived from a *sample* is termed a statistic (represented by Latin letters like $\bar{x}$).
+6. **C)** Cluster sampling selects entire intact heterogeneous groups (departments) and surveys everyone within them, contrasting with stratified sampling which pulls a few individuals from every group.
+7. **C)** Stratified sampling ensures representation by breaking the population into homogeneous strata and sampling individuals from all of them.
+8. **C)** Due to the lack of random assignment and control over variables, observational studies are vulnerable to confounding factors, meaning they can only prove association, not causation.
+9. **B)** For Interval data, differences are mathematically meaningful, making it valid to calculate the Mean, Median, and Mode. Multiplication/division operations (like Geometric Mean) remain invalid due to the lack of a true zero.
+10. **C)** `value_counts()` directly tallies and returns the frequency count for each distinct category in a pandas Series.
 
 ## References & Navigation
 

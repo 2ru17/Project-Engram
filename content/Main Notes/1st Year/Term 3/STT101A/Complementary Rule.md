@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ The **Complementary Rule** states that the sum of the probabilities of an event 
 
 ### Answer Key & Explanations
 
-1. **B**. Since $A \cup A^c = S$ and $A \cap A^c = \emptyset$, Axiom 3 gives $P(A \cup A^c) = P(A) + P(A^c)$ and Axiom 2 gives $P(S) = 1$, so $P(A) + P(A^c) = 1$.
-2. **A**. The complement is that all 3 layers fail to block the intrusion: $P(\text{none block}) = (0.20)^3 = 0.008$. Thus $P(\text{at least one blocks}) = 1 - 0.008 = 0.992$.
-3. **A**. From $P(A) + P(A^c) = 1$ and $P(A^c) \ge 0$ (Axiom 1), it immediately follows that $P(A) = 1 - P(A^c) \le 1$.
-4. **A**. The complement of "at least one shared birthday" is "all $23$ birthdays are distinct," whose probability is a single product $\frac{365 \times 364 \times \cdots \times 343}{365^{23}} \approx 0.4927$, giving $1 - 0.4927 = 0.5073$.
-5. **B**. Odds in favor of $A$ being $3:5$ means $P(A) = \frac{3}{3+5} = \frac{3}{8}$. By the Complementary Rule, $P(A^c) = 1 - \frac{3}{8} = \frac{5}{8}$.
+1. **B)** Since $A \cup A^c = S$ and $A \cap A^c = \emptyset$, Axiom 3 gives $P(A \cup A^c) = P(A) + P(A^c)$ and Axiom 2 gives $P(S) = 1$, so $P(A) + P(A^c) = 1$.
+2. **A)** The complement is that all 3 layers fail to block the intrusion: $P(\text{none block}) = (0.20)^3 = 0.008$. Thus $P(\text{at least one blocks}) = 1 - 0.008 = 0.992$.
+3. **A)** From $P(A) + P(A^c) = 1$ and $P(A^c) \ge 0$ (Axiom 1), it immediately follows that $P(A) = 1 - P(A^c) \le 1$.
+4. **A)** The complement of "at least one shared birthday" is "all $23$ birthdays are distinct," whose probability is a single product $\frac{365 \times 364 \times \cdots \times 343}{365^{23}} \approx 0.4927$, giving $1 - 0.4927 = 0.5073$.
+5. **B)** Odds in favor of $A$ being $3:5$ means $P(A) = \frac{3}{3+5} = \frac{3}{8}$. By the Complementary Rule, $P(A^c) = 1 - \frac{3}{8} = \frac{5}{8}$.
 
 ## References & Navigation
 

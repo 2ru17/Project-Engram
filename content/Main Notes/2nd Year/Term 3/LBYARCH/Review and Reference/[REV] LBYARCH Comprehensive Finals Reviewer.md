@@ -5,7 +5,6 @@ course: LBYARCH
 topic: "LBYARCH Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -112,15 +111,15 @@ flowchart TB
 
 ### Answer Key & Explanations
 
-1. **C**. The standard argument order for integer/pointer types is: 1st in `RDI`, 2nd in `RSI`, 3rd in `RDX`, 4th in `RCX`, 5th in `R8`, 6th in `R9`.
-2. **C**. `R12` through `R15`, as well as `RBX`, `RBP`, and `RSP`, are callee-saved registers. Any function that alters them must restore their original values before returning.
-3. **B**. `LEA` (Load Effective Address) computes the memory address using the CPU address generation unit (AGU) and writes the calculated value directly to the destination register.
-4. **B**. The System V ABI enforces 16-byte stack alignment at the point of the `call` instruction for SSE vector instruction safety and ABI compliance.
-5. **B**. `$monitor` continuously traces the specified argument list and prints to the console whenever any signal in the list changes state throughout simulation.
+1. **C)** The standard argument order for integer/pointer types is: 1st in `RDI`, 2nd in `RSI`, 3rd in `RDX`, 4th in `RCX`, 5th in `R8`, 6th in `R9`.
+2. **C)** `R12` through `R15`, as well as `RBX`, `RBP`, and `RSP`, are callee-saved registers. Any function that alters them must restore their original values before returning.
+3. **B)** `LEA` (Load Effective Address) computes the memory address using the CPU address generation unit (AGU) and writes the calculated value directly to the destination register.
+4. **B)** The System V ABI enforces 16-byte stack alignment at the point of the `call` instruction for SSE vector instruction safety and ABI compliance.
+5. **B)** `$monitor` continuously traces the specified argument list and prints to the console whenever any signal in the list changes state throughout simulation.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CSARCH1]]
-- **Next Topic:** [[CSARCH2]]
-- **Prerequisites:** [[Assembly Lab]], x86-64 NASM, System V ABI, Verilog Simulation
-- **Cross-Curricular Connections:** [[CSOPESY]]
+- **Previous Topic:** [[[REV] CSARCH1 Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] CSARCH2 Comprehensive Reviewer and Practice Exam]]
+- **Prerequisites:** [[Assembly Language and CPU Architecture Lab]], x86-64 NASM, System V ABI, Verilog Simulation
+- **Cross-Curricular Connections:** [[[REV] CSOPESY Comprehensive Finals Reviewer]]

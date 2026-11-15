@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: JavaScript DOM
 status: completed
 ---
-
 # JavaScript DOM
 
 > [!info] Document Metadata
@@ -103,9 +102,9 @@ https://developer.mozilla.org/en-US/docs/Web/API/Element
 
 ### Answer Key & Explanations
 
-1. **B**. The DOM allows programs and scripts to dynamically access and update the content, structure, and style of a document.
-2. **D**. `document.getElementsByTagName(name)` returns an array of objects of a specific tag.
-3. **C**. The property `.innerHTML` is used to change the content of an HTML element retrieved via its ID.
+1. **B)** The DOM allows programs and scripts to dynamically access and update the content, structure, and style of a document.
+2. **D)** `document.getElementsByTagName(name)` returns an array of objects of a specific tag.
+3. **C)** The property `.innerHTML` is used to change the content of an HTML element retrieved via its ID.
 
 ## References & Navigation
 

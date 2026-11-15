@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -71,11 +70,11 @@ A **Contingency Table** (two-way cross-tabulation table) organizes bivariate cat
 
 ### Answer Key & Explanations
 
-1. **A**. A joint probability measures the proportion of the entire sample space $N$ that falls simultaneously into row $i$ and column $j$: $P(A_i \cap B_j) = n_{ij} / N$.
-2. **C**. Conditioning on $M^c$ restricts the denominator to the **Benign** row total ($n_{M^c} = 900$). Within that row, $60$ packets are flagged, so $P(F \mid M^c) = 60 / 900 = 1/15 \approx 0.0667$.
-3. **A**. Summing across a row ($\sum_j P(A_i \cap B_j) = P(A_i)$) or down a column ($\sum_i P(A_i \cap B_j) = P(B_j)$) eliminates the other variable and places the single-variable totals in the table margins.
-4. **C**. Independence holds when $P(A_i \cap B_j) = P(A_i)P(B_j) \iff \frac{n_{ij}}{N} = \frac{n_{i\cdot}}{N} \cdot \frac{n_{\cdot j}}{N} \iff n_{ij} = \frac{n_{i\cdot} n_{\cdot j}}{N}$.
-5. **B**. By the Additive Rule, $P(M \cup F) = P(M) + P(F) - P(M \cap F) = \frac{100}{1000} + \frac{150}{1000} - \frac{90}{1000} = \frac{160}{1000} = 0.16$.
+1. **A)** A joint probability measures the proportion of the entire sample space $N$ that falls simultaneously into row $i$ and column $j$: $P(A_i \cap B_j) = n_{ij} / N$.
+2. **C)** Conditioning on $M^c$ restricts the denominator to the **Benign** row total ($n_{M^c} = 900$). Within that row, $60$ packets are flagged, so $P(F \mid M^c) = 60 / 900 = 1/15 \approx 0.0667$.
+3. **A)** Summing across a row ($\sum_j P(A_i \cap B_j) = P(A_i)$) or down a column ($\sum_i P(A_i \cap B_j) = P(B_j)$) eliminates the other variable and places the single-variable totals in the table margins.
+4. **C)** Independence holds when $P(A_i \cap B_j) = P(A_i)P(B_j) \iff \frac{n_{ij}}{N} = \frac{n_{i\cdot}}{N} \cdot \frac{n_{\cdot j}}{N} \iff n_{ij} = \frac{n_{i\cdot} n_{\cdot j}}{N}$.
+5. **B)** By the Additive Rule, $P(M \cup F) = P(M) + P(F) - P(M \cap F) = \frac{100}{1000} + \frac{150}{1000} - \frac{90}{1000} = \frac{160}{1000} = 0.16$.
 
 ## References & Navigation
 

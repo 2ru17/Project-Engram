@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Signed Multiplication (Booth's & Extended Booth's Algorithm)"
 status: completed
 ---
-
 # Module 05: Signed Multiplication (Booth's & Extended Booth's Algorithm)
 
 > [!info] Document Metadata
@@ -242,11 +241,11 @@ $$\text{Multiplier Recoded Value } X_i = -2 \cdot Q_{2i+1} + Q_{2i} + Q_{2i-1}$$
 
 ### Answer Key & Explanations
 
-1. **B**. The pattern $Q_0 Q_{-1} = 10$ represents the beginning of a contiguous run of `1`s (from right to left), requiring the subtraction of the multiplicand ($A \leftarrow A - M$) followed by an Arithmetic Shift Right ($ASR$).
-2. **B**. Extended Booth's algorithm inspects two bits of multiplier precision per cycle (using 3-bit sliding windows), halving the number of partial product reduction cycles from $n$ to $n/2$.
-3. **C**. Evaluating $-2 Q_{2i+1} + Q_{2i} + Q_{2i-1}$ for bits `011` yields $-2(0) + 1 + 1 = +2$, which corresponds to adding $+2 \times M$ (implemented via a 1-bit left shift of $M$).
-4. **A**. The implicit bit $Q_{-1}$ is always initialized to `0` prior to the first multiplication cycle.
-5. **B**. Arithmetic Shift Right ($ASR$) replicates the sign bit $A_{n-1}$ into $A_{n-1}$ on each shift, ensuring that negative partial products retain their correct 2's complement sign throughout execution.
+1. **B)** The pattern $Q_0 Q_{-1} = 10$ represents the beginning of a contiguous run of `1`s (from right to left), requiring the subtraction of the multiplicand ($A \leftarrow A - M$) followed by an Arithmetic Shift Right ($ASR$).
+2. **B)** Extended Booth's algorithm inspects two bits of multiplier precision per cycle (using 3-bit sliding windows), halving the number of partial product reduction cycles from $n$ to $n/2$.
+3. **C)** Evaluating $-2 Q_{2i+1} + Q_{2i} + Q_{2i-1}$ for bits `011` yields $-2(0) + 1 + 1 = +2$, which corresponds to adding $+2 \times M$ (implemented via a 1-bit left shift of $M$).
+4. **A)** The implicit bit $Q_{-1}$ is always initialized to `0` prior to the first multiplication cycle.
+5. **B)** Arithmetic Shift Right ($ASR$) replicates the sign bit $A_{n-1}$ into $A_{n-1}$ on each shift, ensuring that negative partial products retain their correct 2's complement sign throughout execution.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Advantages and Disadvantages
 
 > [!info] Document Metadata
@@ -121,16 +120,16 @@ Imagine an array `int arr[5] = {10, 20, 30, 40};` with one empty slot at the end
 
 ### Answer Key & Explanations
 
-1. **C**. Since elements are stored contiguously, addresses are calculated instantly granting $O(1)$ time.
-2. **C**. Contiguous blocks are loaded into the CPU cache simultaneously maximizing cache utilization.
-3. **B**. Static allocation determines the layout entirely during the compilation phase.
-4. **B**. Adding items requires shifting numerous adjacent items, slowing the operation.
-5. **C**. Adding an element at the start requires shifting all $N$ elements, taking $O(n)$ time.
-6. **B**. Arrays mandate homogeneity; all slots must store identical data types.
-7. **B**. Arrays dispense with the need to track individual element node pointers.
-8. **C**. Placing a new element at the start forces all existing elements down one index.
-9. **B**. Exceeding allocations can overwrite adjoining memory resulting in overflows and crashes.
-10. **B**. The principal advantage of array structures is quick lookup speeds and modifications using fixed indices.
+1. **C)** Since elements are stored contiguously, addresses are calculated instantly granting $O(1)$ time.
+2. **C)** Contiguous blocks are loaded into the CPU cache simultaneously maximizing cache utilization.
+3. **B)** Static allocation determines the layout entirely during the compilation phase.
+4. **B)** Adding items requires shifting numerous adjacent items, slowing the operation.
+5. **C)** Adding an element at the start requires shifting all $N$ elements, taking $O(n)$ time.
+6. **B)** Arrays mandate homogeneity; all slots must store identical data types.
+7. **B)** Arrays dispense with the need to track individual element node pointers.
+8. **C)** Placing a new element at the start forces all existing elements down one index.
+9. **B)** Exceeding allocations can overwrite adjoining memory resulting in overflows and crashes.
+10. **B)** The principal advantage of array structures is quick lookup speeds and modifications using fixed indices.
 
 ## References & Navigation
 

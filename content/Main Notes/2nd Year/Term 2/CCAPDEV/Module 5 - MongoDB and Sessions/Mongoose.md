@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Mongoose
 status: completed
 ---
-
 # Mongoose
 
 > [!info] Document Metadata
@@ -132,9 +131,9 @@ models/user.js
 
 ### Answer Key & Explanations
 
-1. **A**. Mongoose is an Object Data Modelling (ODM) library for MongoDB and Node.js that provides a schema-based solution to model application data.
-2. **C**. A Mongoose schema defines a document structure to be enforced, allowing for strongly-typed documents and robust validation.
-3. **B**. A mongoose model is a constructor that lets you create instances of a document using a defined schema and perform CRUD operations on a collection.
+1. **A)** Mongoose is an Object Data Modelling (ODM) library for MongoDB and Node.js that provides a schema-based solution to model application data.
+2. **C)** A Mongoose schema defines a document structure to be enforced, allowing for strongly-typed documents and robust validation.
+3. **B)** A mongoose model is a constructor that lets you create instances of a document using a defined schema and perform CRUD operations on a collection.
 
 ## References & Navigation
 

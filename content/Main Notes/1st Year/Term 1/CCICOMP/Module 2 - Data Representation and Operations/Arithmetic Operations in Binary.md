@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "7.0 Arithmetic Operations in Binary"
 status: completed
 ---
-
 # 7.0 Arithmetic Operations in Binary
 
 > [!info] Document Metadata
@@ -118,16 +117,16 @@ Perform $(+2) - (+6)$ using $8$-bit 2's complement strings. Equivalent to $(+2) 
 
 ### Answer Key & Explanations
 
-1. **B**. The binary addition rule states that 1 + 1 = 0 with a carry of 1.
-2. **C**. In digital arithmetic logic units, binary subtraction is universally executed by taking the two's complement of the subtrahend and adding it to the minuend: $A - B = A + (-B)$.
-3. **B**. In 1's complement addition, a final carry-out bit is added back into the intermediate result, known as an end-around carry.
-4. **C**. The binary subtraction rule states that 0 - 1 = 1 with a borrow of 1 (equivalent to borrowing 2 from the next higher column).
-5. **C**. In 2's complement addition, if there is a final carry-out bit, it is simply discarded.
-6. **B**. 1's complement is formed by inverting bits.
-7. **C**. As shown in the worked example: 1100 + 1010 = 10110.
-8. **C**. The overview explicitly states that for arithmetic operations to be performed, all operands must be converted to the same base (binary).
-9. **D**. To check the value of a negative 2's complement result, you invert the bits and add 1.
-10. **B**. The core difference highlighted in the text is how the final carry-out bit is handled: end-around carry for 1's complement vs. discarding it for 2's complement.
+1. **B)** The binary addition rule states that 1 + 1 = 0 with a carry of 1.
+2. **C)** In digital arithmetic logic units, binary subtraction is universally executed by taking the two's complement of the subtrahend and adding it to the minuend: $A - B = A + (-B)$.
+3. **B)** In 1's complement addition, a final carry-out bit is added back into the intermediate result, known as an end-around carry.
+4. **C)** The binary subtraction rule states that 0 - 1 = 1 with a borrow of 1 (equivalent to borrowing 2 from the next higher column).
+5. **C)** In 2's complement addition, if there is a final carry-out bit, it is simply discarded.
+6. **B)** 1's complement is formed by inverting bits.
+7. **C)** As shown in the worked example: 1100 + 1010 = 10110.
+8. **C)** The overview explicitly states that for arithmetic operations to be performed, all operands must be converted to the same base (binary).
+9. **D)** To check the value of a negative 2's complement result, you invert the bits and add 1.
+10. **B)** The core difference highlighted in the text is how the final carry-out bit is handled: end-around carry for 1's complement vs. discarding it for 2's complement.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: "CSS"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -139,16 +138,16 @@ img {
 
 ### Answer Key & Explanations
 
-1. **B**. CSS stands for Cascading Style Sheets.
-2. **C**. CSS is specifically designed to handle the styling and presentation of documents created with HTML.
-3. **C**. Cascading dictates the hierarchy of styles and how properties are inherited by child elements, preventing conflicts.
-4. **D**. The selector points to the specific HTML tag, class, or ID that you want to apply the styles to.
-5. **B**. `background-color` is a property that can be adjusted. `body` is a selector, and `#b7d1c4` is a value.
-6. **A**. Separating styles into a distinct file allows developers to reuse code and easily update the look of an entire site from one place.
-7. **C**. A colon separates the property name from the assigned value (e.g., `color: red`).
-8. **C**. `blue` is the value being assigned to the `color` property for the `p` selector.
-9. **B**. `box-shadow` is used to add shadow effects to elements, creating depth on the page.
-10. **A**. Semicolons are used at the end of each declaration to separate it from the next one within the same block.
+1. **B)** CSS stands for Cascading Style Sheets.
+2. **C)** CSS is specifically designed to handle the styling and presentation of documents created with HTML.
+3. **C)** Cascading dictates the hierarchy of styles and how properties are inherited by child elements, preventing conflicts.
+4. **D)** The selector points to the specific HTML tag, class, or ID that you want to apply the styles to.
+5. **B)** `background-color` is a property that can be adjusted. `body` is a selector, and `#b7d1c4` is a value.
+6. **A)** Separating styles into a distinct file allows developers to reuse code and easily update the look of an entire site from one place.
+7. **C)** A colon separates the property name from the assigned value (e.g., `color: red`).
+8. **C)** `blue` is the value being assigned to the `color` property for the `p` selector.
+9. **B)** `box-shadow` is used to add shadow effects to elements, creating depth on the page.
+10. **A)** Semicolons are used at the end of each declaration to separate it from the next one within the same block.
 
 ## References & Navigation
 

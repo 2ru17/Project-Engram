@@ -5,7 +5,6 @@ course: CCDSALG
 topic: "CCDSALG Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -132,15 +131,15 @@ flowchart TD
 
 ### Answer Key & Explanations
 
-1. **B**. The element is appended at the next available leaf position ($O(1)$) and bubbles up along the tree height via sift-up operations, requiring at most $\lceil \log_2 n \rceil$ comparisons.
-2. **C**. The imbalance is in the right child's left subtree (Right-Left heavy). It is resolved by a right rotation on the right child followed by a left rotation on node $A$.
-3. **C**. Merge Sort runs in $O(n \log n)$ time across best, average, and worst cases, and preserves the relative order of duplicate elements (stable). Quick Sort and Heap Sort are not stable.
-4. **B**. In linear probing, collisions resolve to consecutive slots, creating long clusters that increase search times for subsequent keys.
-5. **B**. Kruskal's algorithm greedily considers edges in non-decreasing order of weight, adding an edge to the forest if and only if it does not form a cycle (verified via Disjoint Set Union).
+1. **B)** The element is appended at the next available leaf position ($O(1)$) and bubbles up along the tree height via sift-up operations, requiring at most $\lceil \log_2 n \rceil$ comparisons.
+2. **C)** The imbalance is in the right child's left subtree (Right-Left heavy). It is resolved by a right rotation on the right child followed by a left rotation on node $A$.
+3. **C)** Merge Sort runs in $O(n \log n)$ time across best, average, and worst cases, and preserves the relative order of duplicate elements (stable). Quick Sort and Heap Sort are not stable.
+4. **B)** In linear probing, collisions resolve to consecutive slots, creating long clusters that increase search times for subsequent keys.
+5. **B)** Kruskal's algorithm greedily considers edges in non-decreasing order of weight, adding an edge to the forest if and only if it does not form a cycle (verified via Disjoint Set Union).
 
 ## References & Navigation
 
-- **Previous Topic:** [[CCPROG2]], [[CCDSTRU]]
-- **Next Topic:** [[CSALGCM]]
-- **Prerequisites:** [[Data Structures]], Trees, Graphs, Sorting
-- **Cross-Curricular Connections:** [[CSINTSY]]
+- **Previous Topic:** [[[REV] CCPROG2 Comprehensive Finals Reviewer]], [[[REV] CCDSTRU Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] CSALGCM Comprehensive Finals Reviewer]]
+- **Prerequisites:** [[Arrays and Linked Lists]], Trees, Graphs, Sorting
+- **Cross-Curricular Connections:** [[[REV] CSINTSY Comprehensive Finals Reviewer]]

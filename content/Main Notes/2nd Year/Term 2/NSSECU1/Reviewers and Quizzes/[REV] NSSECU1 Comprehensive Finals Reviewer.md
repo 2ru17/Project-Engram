@@ -5,7 +5,6 @@ course: NSSECU1
 topic: "NSSECU1 Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -109,15 +108,15 @@ sequenceDiagram
 
 ### Answer Key & Explanations
 
-1. **B**. ECB encrypts each 128-bit block independently with the same key without an Initialization Vector (IV), preserving structural patterns across identical data blocks.
-2. **A**. Only Alice possesses her private key. Anyone can verify the signature by decrypting the hash using Alice's public key and comparing it to the computed message hash, guaranteeing authentication and non-repudiation.
-3. **C**. Classical Diffie-Hellman provides no identity authentication. An active adversary can intercept the public parameters, negotiate two separate shared secrets with Alice and Bob, and transparently decrypt/tamper with traffic.
-4. **D**. A salt is a unique random nonce appended to each password before hashing, rendering global rainbow tables useless.
-5. **B**. The client authenticates to the Authentication Server (AS) to receive a TGT encrypted with the TGS secret key, which is subsequently presented to the TGS to obtain service tickets.
+1. **B)** ECB encrypts each 128-bit block independently with the same key without an Initialization Vector (IV), preserving structural patterns across identical data blocks.
+2. **A)** Only Alice possesses her private key. Anyone can verify the signature by decrypting the hash using Alice's public key and comparing it to the computed message hash, guaranteeing authentication and non-repudiation.
+3. **C)** Classical Diffie-Hellman provides no identity authentication. An active adversary can intercept the public parameters, negotiate two separate shared secrets with Alice and Bob, and transparently decrypt/tamper with traffic.
+4. **D)** A salt is a unique random nonce appended to each password before hashing, rendering global rainbow tables useless.
+5. **B)** The client authenticates to the Authentication Server (AS) to receive a TGT encrypted with the TGS secret key, which is subsequently presented to the TGS to obtain service tickets.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CSNETWK]]
-- **Next Topic:** [[NSSECU2]]
-- **Prerequisites:** [[Network Security]], Cryptography, AES, RSA, PKI, Firewalls
-- **Cross-Curricular Connections:** [[NSCOM02]]
+- **Previous Topic:** [[[REV] CSNETWK Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] NSSECU2 Comprehensive Reviewer and Practice Exam]]
+- **Prerequisites:** [[Introduction to Cybersecurity]], Cryptography, AES, RSA, PKI, Firewalls
+- **Cross-Curricular Connections:** [[[REV] NSCOM02 Comprehensive Finals Reviewer]]

@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -66,11 +65,11 @@ $$N = n_1 \times n_2 \times \cdots \times n_k$$
 
 ### Answer Key & Explanations
 
-1. **B**. By the Fundamental Principle of Counting, a 3-stage choice with $4$, $3$, and $5$ options per stage yields $4 \times 3 \times 5 = 60$ composite configurations.
-2. **A**. The Multiplication Principle requires a uniform branching factor $n_2$ across all branches of Stage 1. For example, when drawing 2 cards without replacement, the *specific* 51 remaining cards depend on the first card drawn, but the *count* $n_2 = 51$ is constant ($52 \times 51$).
-3. **C**. There are $10$ stages (questions), each with $4$ choices, giving $4 \times 4 \times \cdots \times 4 = 4^{10} = 1,048,576$ answer sheets.
-4. **D**. Any divisor of $2^3 \cdot 3^2 \cdot 5^1$ has the form $2^a 3^b 5^c$ where $a \in \{0,1,2,3\}$ ($4$ choices), $b \in \{0,1,2\}$ ($3$ choices), and $c \in \{0,1\}$ ($2$ choices), giving $4 \times 3 \times 2 = 24$ divisors.
-5. **B**. Each of the $n$ elements has $2$ binary states (in the subset vs. not in the subset); multiplying $2$ across $n$ stages yields $2^n$ subsets.
+1. **B)** By the Fundamental Principle of Counting, a 3-stage choice with $4$, $3$, and $5$ options per stage yields $4 \times 3 \times 5 = 60$ composite configurations.
+2. **A)** The Multiplication Principle requires a uniform branching factor $n_2$ across all branches of Stage 1. For example, when drawing 2 cards without replacement, the *specific* 51 remaining cards depend on the first card drawn, but the *count* $n_2 = 51$ is constant ($52 \times 51$).
+3. **C)** There are $10$ stages (questions), each with $4$ choices, giving $4 \times 4 \times \cdots \times 4 = 4^{10} = 1,048,576$ answer sheets.
+4. **D)** Any divisor of $2^3 \cdot 3^2 \cdot 5^1$ has the form $2^a 3^b 5^c$ where $a \in \{0,1,2,3\}$ ($4$ choices), $b \in \{0,1,2\}$ ($3$ choices), and $c \in \{0,1\}$ ($2$ choices), giving $4 \times 3 \times 2 = 24$ divisors.
+5. **B)** Each of the $n$ elements has $2$ binary states (in the subset vs. not in the subset); multiplying $2$ across $n$ stages yields $2^n$ subsets.
 
 ## References & Navigation
 

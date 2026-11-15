@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Dimension
 
 > [!info] Document Metadata
@@ -87,9 +86,9 @@ All multi-dimensional arrays are stored as contiguous 1D blocks in **row-major o
 
 ### Answer Key & Explanations
 
-1. **B**. Dimensionality represents the structural depth, matching the count of bracket pairs.
-2. **B**. The two sets of brackets specify rows and columns, making it two-dimensional.
-3. **B**. A 1D array sequences elements linearly like a simple straight list.
+1. **B)** Dimensionality represents the structural depth, matching the count of bracket pairs.
+2. **B)** The two sets of brackets specify rows and columns, making it two-dimensional.
+3. **B)** A 1D array sequences elements linearly like a simple straight list.
 
 ## References & Navigation
 

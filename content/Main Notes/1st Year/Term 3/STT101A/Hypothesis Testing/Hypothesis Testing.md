@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -169,16 +168,16 @@ $$
 
 ### Answer Key & Explanations
 
-1. **B**. A Type I error occurs when a true null hypothesis is erroneously rejected (a false alarm).
-2. **C**. Statistical power is $1 - \beta$, denoting the test's ability to detect an effect when one genuinely exists.
-3. **B**. The standard decision rule is: when $p \le \alpha$, reject $H_0$.
-4. **A**. The Student's $t$-distribution accounts for the additional sampling uncertainty introduced by estimating $\sigma$ using $s$.
-5. **C**. In a two-tailed test, the total error budget $\alpha$ is divided equally between the two tails ($\alpha / 2 = 0.01 / 2 = 0.005$).
-6. **A**. Absence of sufficient evidence to reject does not establish proof of the null hypothesis; it merely indicates consistency with the null.
-7. **B**. Because $\sigma_{\bar{x}} = \sigma / \sqrt{n}$, larger sample sizes narrow the standard error, decreasing $\beta$ and increasing test power.
-8. **B**. At $\alpha = 0.01$, the critical boundary is $\pm 2.576$; since $2.00 < 2.576$, the data is not significant at the $1\%$ level.
-9. **B**. For a single-sample mean $t$-test, $df = n - 1 = 25 - 1 = 24$.
-10. **A**. Since $p \le 0.01 \implies p < 0.05$, any test rejected at a stricter significance level is automatically rejected at a more lenient one.
+1. **B)** A Type I error occurs when a true null hypothesis is erroneously rejected (a false alarm).
+2. **C)** Statistical power is $1 - \beta$, denoting the test's ability to detect an effect when one genuinely exists.
+3. **B)** The standard decision rule is: when $p \le \alpha$, reject $H_0$.
+4. **A)** The Student's $t$-distribution accounts for the additional sampling uncertainty introduced by estimating $\sigma$ using $s$.
+5. **C)** In a two-tailed test, the total error budget $\alpha$ is divided equally between the two tails ($\alpha / 2 = 0.01 / 2 = 0.005$).
+6. **A)** Absence of sufficient evidence to reject does not establish proof of the null hypothesis; it merely indicates consistency with the null.
+7. **B)** Because $\sigma_{\bar{x}} = \sigma / \sqrt{n}$, larger sample sizes narrow the standard error, decreasing $\beta$ and increasing test power.
+8. **B)** At $\alpha = 0.01$, the critical boundary is $\pm 2.576$; since $2.00 < 2.576$, the data is not significant at the $1\%$ level.
+9. **B)** For a single-sample mean $t$-test, $df = n - 1 = 25 - 1 = 24$.
+10. **A)** Since $p \le 0.01 \implies p < 0.05$, any test rejected at a stricter significance level is automatically rejected at a more lenient one.
 
 ## References & Navigation
 

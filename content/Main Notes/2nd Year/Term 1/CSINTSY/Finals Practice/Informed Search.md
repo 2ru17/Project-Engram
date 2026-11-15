@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 03_Informed_Search
 
 > [!info] Document Metadata
@@ -209,16 +208,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **B**. Informed search uses a heuristic function, which incorporates problem-specific knowledge to estimate how close a state is to the goal.
-2. **C**. The function $h(n)$ estimates the cost from node $n$ to the goal.
-3. **B**. An admissible heuristic is one that never overestimates the true cost to reach the goal ($h(n) \le h^*(n)$).
-4. **B**. Admissibility is a strict requirement for A* to be optimal and guarantee finding the lowest cost path.
-5. **C**. Consistency requires that $h(n) \le c(n, a, n') + h(n')$, meaning the total estimated cost does not decrease along a path.
-6. **C**. GBFS evaluates nodes based purely on $f(n) = h(n)$, expanding the node that appears closest to the goal.
-7. **C**. GBFS is not optimal because it can take a path that looks short initially but is longer overall, and it is not complete because it can get stuck in loops.
-8. **B**. A* evaluates nodes using $f(n) = g(n) + h(n)$, combining the cost already paid and the estimated cost to go.
-9. **D**. If a cheaper path to a previously reached node is found, A* updates that node in the priority queue with the new lower cost.
-10. **B**. If the heuristic overestimates the cost (inadmissible), A* loses its guarantee of optimality and might settle for a suboptimal path.
+1. **B)** Informed search uses a heuristic function, which incorporates problem-specific knowledge to estimate how close a state is to the goal.
+2. **C)** The function $h(n)$ estimates the cost from node $n$ to the goal.
+3. **B)** An admissible heuristic is one that never overestimates the true cost to reach the goal ($h(n) \le h^*(n)$).
+4. **B)** Admissibility is a strict requirement for A* to be optimal and guarantee finding the lowest cost path.
+5. **C)** Consistency requires that $h(n) \le c(n, a, n') + h(n')$, meaning the total estimated cost does not decrease along a path.
+6. **C)** GBFS evaluates nodes based purely on $f(n) = h(n)$, expanding the node that appears closest to the goal.
+7. **C)** GBFS is not optimal because it can take a path that looks short initially but is longer overall, and it is not complete because it can get stuck in loops.
+8. **B)** A* evaluates nodes using $f(n) = g(n) + h(n)$, combining the cost already paid and the estimated cost to go.
+9. **D)** If a cheaper path to a previously reached node is found, A* updates that node in the priority queue with the new lower cost.
+10. **B)** If the heuristic overestimates the cost (inadmissible), A* loses its guarantee of optimality and might settle for a suboptimal path.
 
 ## References & Navigation
 

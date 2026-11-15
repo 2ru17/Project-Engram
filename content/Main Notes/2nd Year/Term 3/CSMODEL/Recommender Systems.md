@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Recommender Systems
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -147,7 +146,7 @@ Considers rating magnitudes. **Issue:** Treats missing ratings as 0 (negative si
 
 ---
 
-#### Centered Cosine Similarity = Pearson Correlation ⭐
+#### Centered Cosine Similarity = Pearson Correlation
 
 **Step 1:** Subtract each user's (row) mean from their ratings. Missing values become 0 after centering (treated as *average*).
 
@@ -725,11 +724,11 @@ return data.subtract(row_mean, axis=0)
 
 ### Answer Key & Explanations
 
-1. **B**. Content-based filtering uses item profiles (features) to match against a users past preferences.
-2. **B**. Cold start refers to the lack of initial data (ratings/history) for new entities.
-3. **C**. Centered cosine subtracts user means, handling strict/generous raters and making zero numerically average instead of negative.
-4. **B**. Matrix factorization decomposes ratings into hidden (latent) dimensions explaining preferences.
-5. **A**. Without community input, content-based systems only suggest more of the exact same type of items.
+1. **B)** Content-based filtering uses item profiles (features) to match against a users past preferences.
+2. **B)** Cold start refers to the lack of initial data (ratings/history) for new entities.
+3. **C)** Centered cosine subtracts user means, handling strict/generous raters and making zero numerically average instead of negative.
+4. **B)** Matrix factorization decomposes ratings into hidden (latent) dimensions explaining preferences.
+5. **A)** Without community input, content-based systems only suggest more of the exact same type of items.
 
 ## References & Navigation
 

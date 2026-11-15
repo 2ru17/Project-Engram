@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -69,11 +68,11 @@ The **Classical (Laplacian) Formula of Probability** defines the probability of 
 
 ### Answer Key & Explanations
 
-1. **B**. The ratio $|E|/|S|$ assigns probability $1/|S|$ to each elementary outcome, which is valid if and only if the sample space is finite and every elementary outcome is equally likely.
-2. **D**. By Axiom 1 ($P(E) \ge 0$) and the consequence $P(E) \le 1$, any valid probability must lie in the closed interval $[0, 1]$. $-0.05$ is negative and therefore impossible.
-3. **A**. There are $36$ equally likely ordered pairs $(d_1, d_2)$ and $6$ pairs that sum to $7$: $\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}$. Thus $P(\text{sum}=7) = 6/36 = 1/6$.
-4. **A**. Since $S$ and $\emptyset$ are mutually exclusive and $S \cup \emptyset = S$, Axiom 3 gives $P(S \cup \emptyset) = P(S) + P(\emptyset) = P(S)$, which implies $P(\emptyset) = 0$.
-5. **B**. There are $|S| = 2^4 = 16$ equally likely 4-bit strings and $\binom{4}{2} = 6$ strings with exactly two $1$s. Thus $P(E) = 6/16 = 3/8$.
+1. **B)** The ratio $|E|/|S|$ assigns probability $1/|S|$ to each elementary outcome, which is valid if and only if the sample space is finite and every elementary outcome is equally likely.
+2. **D)** By Axiom 1 ($P(E) \ge 0$) and the consequence $P(E) \le 1$, any valid probability must lie in the closed interval $[0, 1]$. $-0.05$ is negative and therefore impossible.
+3. **A)** There are $36$ equally likely ordered pairs $(d_1, d_2)$ and $6$ pairs that sum to $7$: $\{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)\}$. Thus $P(\text{sum}=7) = 6/36 = 1/6$.
+4. **A)** Since $S$ and $\emptyset$ are mutually exclusive and $S \cup \emptyset = S$, Axiom 3 gives $P(S \cup \emptyset) = P(S) + P(\emptyset) = P(S)$, which implies $P(\emptyset) = 0$.
+5. **B)** There are $|S| = 2^4 = 16$ equally likely 4-bit strings and $\binom{4}{2} = 6$ strings with exactly two $1$s. Thus $P(E) = 6/16 = 3/8$.
 
 ## References & Navigation
 

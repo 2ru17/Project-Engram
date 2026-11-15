@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -69,11 +68,11 @@ $$P(T) = (0.01)(0.50) + (0.02)(0.30) + (0.05)(0.20) = 0.005 + 0.006 + 0.010 = 0.
 
 ### Answer Key & Explanations
 
-1. **B**. The Law of Total Probability decomposes $A$ into disjoint slices $A \cap B_i$ across a partition $\{B_1, \dots, B_k\}$ of $S$, and then rewrites each $P(A \cap B_i) = P(A \mid B_i)P(B_i)$.
-2. **B**. $P(F) = P(F \mid S)P(S) + P(F \mid L)P(L) = (0.80)(0.30) + (0.05)(0.70) = 0.240 + 0.035 = 0.275$.
-3. **A**. Along a single tree path, the Multiplicative Rule multiplies $P(B_i)P(A \mid B_i) = P(A \cap B_i)$; across different disjoint paths ending in $A$, the Additive Rule sums them.
-4. **A**. Since $P(B_i) \ge 0$ and $\sum P(B_i) = 1$, $\sum P(B_i) P(A \mid B_i)$ is a convex combination (weighted average) of the conditional probabilities.
-5. **B**. $P(R) = P(R \mid B_1)P(B_1) + P(R \mid B_2)P(B_2) = (0.75)(0.50) + (0.25)(0.50) = 0.375 + 0.125 = 0.50$.
+1. **B)** The Law of Total Probability decomposes $A$ into disjoint slices $A \cap B_i$ across a partition $\{B_1, \dots, B_k\}$ of $S$, and then rewrites each $P(A \cap B_i) = P(A \mid B_i)P(B_i)$.
+2. **B)** $P(F) = P(F \mid S)P(S) + P(F \mid L)P(L) = (0.80)(0.30) + (0.05)(0.70) = 0.240 + 0.035 = 0.275$.
+3. **A)** Along a single tree path, the Multiplicative Rule multiplies $P(B_i)P(A \mid B_i) = P(A \cap B_i)$; across different disjoint paths ending in $A$, the Additive Rule sums them.
+4. **A)** Since $P(B_i) \ge 0$ and $\sum P(B_i) = 1$, $\sum P(B_i) P(A \mid B_i)$ is a convex combination (weighted average) of the conditional probabilities.
+5. **B)** $P(R) = P(R \mid B_1)P(B_1) + P(R \mid B_2)P(B_2) = (0.75)(0.50) + (0.25)(0.50) = 0.375 + 0.125 = 0.50$.
 
 ## References & Navigation
 

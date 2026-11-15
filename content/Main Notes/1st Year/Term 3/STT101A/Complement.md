@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ In set-theoretic probability, the **Complement** of an event $A$ (denoted $A^c$,
 
 ### Answer Key & Explanations
 
-1. **B**. An event and its complement partition the sample space: their union covers all of $S$ ($A \cup A^c = S$) and their intersection is empty ($A \cap A^c = \emptyset$).
-2. **A**. The logical negation of $X \ge 2$ on non-negative integers is $X < 2$, which consists of the outcomes $X = 0$ and $X = 1$.
-3. **C**. By definition, $A \cap A^c = \emptyset$, so $A$ and $A^c$ can never occur on the same trial and are always mutually exclusive.
-4. **D**. Applying De Morgan's Law and involution: $(A \cap B^c)^c = A^c \cup (B^c)^c = A^c \cup B$.
-5. **B**. All complementary pairs are mutually exclusive, but not all mutually exclusive pairs are complements: for example, rolling a $1$ and rolling a $2$ on a six-sided die are disjoint ($\{1\} \cap \{2\} = \emptyset$), but their union $\{1, 2\} \ne S$.
+1. **B)** An event and its complement partition the sample space: their union covers all of $S$ ($A \cup A^c = S$) and their intersection is empty ($A \cap A^c = \emptyset$).
+2. **A)** The logical negation of $X \ge 2$ on non-negative integers is $X < 2$, which consists of the outcomes $X = 0$ and $X = 1$.
+3. **C)** By definition, $A \cap A^c = \emptyset$, so $A$ and $A^c$ can never occur on the same trial and are always mutually exclusive.
+4. **D)** Applying De Morgan's Law and involution: $(A \cap B^c)^c = A^c \cup (B^c)^c = A^c \cup B$.
+5. **B)** All complementary pairs are mutually exclusive, but not all mutually exclusive pairs are complements: for example, rolling a $1$ and rolling a $2$ on a six-sided die are disjoint ($\{1\} \cap \{2\} = \emptyset$), but their union $\{1, 2\} \ne S$.
 
 ## References & Navigation
 

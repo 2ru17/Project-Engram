@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Topic 4- File Handling
 
 > [!info] Document Metadata
@@ -206,16 +205,16 @@ while (!feof(fp)) {
 
 ### Answer Key & Explanations
 
-1. **C**. Standard inputs/outputs operations encompass disc storage manipulation bridging directly from the `stdio.h` suite.
-2. **B**. Interaction requires assigning streaming handles utilizing the defined macro standard `FILE`.
-3. **C**. Employing write designation truncates pre-existing targets immediately purging older unretrieved iterations.
-4. **B**. Completing processes involves explicit finalization returning file handles to operational system availability.
-5. **C**. Initializer failures evaluate into unassigned pointers inherently terminating expected procedural operation pathways.
-6. **C**. Extrapolating formatted string data mirrors command prompt behavior employing specific parsed variables mapping.
-7. **C**. Direct byte transferring mandates raw block replication protocols specifically implemented in binary routines.
-8. **B**. Position checking traces exact structural index offsets mapping stream progression directly via integral markers.
-9. **B**. Premature loop conditionals trigger unexpected duplicate iteration evaluations skewing retrieved structural dataset mappings.
-10. **C**. Index offsets mapping relies on explicit anchor constants mapping structural file layouts properly.
+1. **C)** Standard inputs/outputs operations encompass disc storage manipulation bridging directly from the `stdio.h` suite.
+2. **B)** Interaction requires assigning streaming handles utilizing the defined macro standard `FILE`.
+3. **C)** Employing write designation truncates pre-existing targets immediately purging older unretrieved iterations.
+4. **B)** Completing processes involves explicit finalization returning file handles to operational system availability.
+5. **C)** Initializer failures evaluate into unassigned pointers inherently terminating expected procedural operation pathways.
+6. **C)** Extrapolating formatted string data mirrors command prompt behavior employing specific parsed variables mapping.
+7. **C)** Direct byte transferring mandates raw block replication protocols specifically implemented in binary routines.
+8. **B)** Position checking traces exact structural index offsets mapping stream progression directly via integral markers.
+9. **B)** Premature loop conditionals trigger unexpected duplicate iteration evaluations skewing retrieved structural dataset mappings.
+10. **C)** Index offsets mapping relies on explicit anchor constants mapping structural file layouts properly.
 
 ## References & Navigation
 

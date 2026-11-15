@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Time Series Data Modelling
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -957,11 +956,11 @@ ERROR METRICS (lower = better)
 
 ### Answer Key & Explanations
 
-1. **A**. Stationarity implies statistical properties like mean and variance do not change over time.
-2. **B**. `d` stands for Integrated, the number of differencing steps applied.
-3. **B**. The Autocorrelation Function (ACF) plot cutting off helps identify the MA order (q). PACF identifies AR (p).
-4. **B**. A low p-value (<0.05) in ADF rejects the null hypothesis of a unit root, implying stationarity.
-5. **A**. Autoregressive (AR) regresses on its own lags. Moving Average (MA) regresses on past error terms (noise).
+1. **A)** Stationarity implies statistical properties like mean and variance do not change over time.
+2. **B)** `d` stands for Integrated, the number of differencing steps applied.
+3. **B)** The Autocorrelation Function (ACF) plot cutting off helps identify the MA order (q). PACF identifies AR (p).
+4. **B)** A low p-value (<0.05) in ADF rejects the null hypothesis of a unit root, implying stationarity.
+5. **A)** Autoregressive (AR) regresses on its own lags. Moving Average (MA) regresses on past error terms (noise).
 
 ## References & Navigation
 

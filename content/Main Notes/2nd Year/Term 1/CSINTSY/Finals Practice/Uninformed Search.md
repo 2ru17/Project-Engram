@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 02_Uninformed_Search
 
 > [!info] Document Metadata
@@ -219,16 +218,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **C**. Uninformed search (blind search) algorithms can only distinguish a goal state from a non-goal state based on the problem definition, lacking heuristics.
-2. **C**. BFS uses a standard First In, First Out (FIFO) Queue to expand nodes level by level.
-3. **B**. BFS finds the path with the fewest edges, which is only optimal if all edges (steps) have the exact same cost.
-4. **C**. DFS can endlessly explore a path of infinite depth, entirely missing the goal located on a different branch.
-5. **B**. DFS only stores the current path and unexpanded siblings, resulting in linear memory usage compared to BFS's exponential memory.
-6. **C**. ID-DFS systematically increases the depth limit of DFS, ensuring it eventually finds the goal (like BFS) without storing entire levels in memory (like DFS).
-7. **C**. UCS specifically tracks the accumulated path cost $g(n)$ and always expands the cheapest path available.
-8. **A**. UCS uses a Priority Queue to keep the frontier sorted so the node with the lowest $g(n)$ is popped first.
-9. **B**. Backtracking incrementally builds solutions and undoes assignments when constraints are violated, making it ideal for CSPs.
-10. **C**. DFS is neither optimal nor guaranteed to find the shortest path, so using it when optimality is required is a major error.
+1. **C)** Uninformed search (blind search) algorithms can only distinguish a goal state from a non-goal state based on the problem definition, lacking heuristics.
+2. **C)** BFS uses a standard First In, First Out (FIFO) Queue to expand nodes level by level.
+3. **B)** BFS finds the path with the fewest edges, which is only optimal if all edges (steps) have the exact same cost.
+4. **C)** DFS can endlessly explore a path of infinite depth, entirely missing the goal located on a different branch.
+5. **B)** DFS only stores the current path and unexpanded siblings, resulting in linear memory usage compared to BFS's exponential memory.
+6. **C)** ID-DFS systematically increases the depth limit of DFS, ensuring it eventually finds the goal (like BFS) without storing entire levels in memory (like DFS).
+7. **C)** UCS specifically tracks the accumulated path cost $g(n)$ and always expands the cheapest path available.
+8. **A)** UCS uses a Priority Queue to keep the frontier sorted so the node with the lowest $g(n)$ is popped first.
+9. **B)** Backtracking incrementally builds solutions and undoes assignments when constraints are violated, making it ideal for CSPs.
+10. **C)** DFS is neither optimal nor guaranteed to find the shortest path, so using it when optimality is required is a major error.
 
 ## References & Navigation
 

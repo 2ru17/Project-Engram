@@ -5,7 +5,6 @@ course: NSCOM02
 topic: "NSCOM02 Finals 50-Item Mock Exam"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -317,57 +316,57 @@ status: completed
 
 ### Answer Key & Explanations
 
-1. **B**. Distance-vector protocols use Bellman-Ford.
-2. **A**. RIP permits up to 15 hops; 16 is unreachable.
-3. **C**. Split Horizon is the rule to not advertise a route out of the interface it was learned.
-4. **B**. The [120/4] bracket denotes AD and hop count.
-5. **A**. Count-to-Infinity happens due to metric loops.
-6. **B**. Route poisoning manually sets metric to 16 to flush the route.
-7. **C**. Triggered updates bypass the 30-second timer.
-8. **B**. Distance-vector trusts only neighbors instead of full topology maps.
-9. **D**. RIP AD is 120.
-10. **A**. Connected routes ('C') have an AD of 0.
-11. **B**. Hold-down timers avoid flip-flopping routes.
-12. **A**. Poison reverse replies with infinite metric.
-13. **C**. Link-State uses SPF (Dijkstra).
-14. **B**. Cost is derived from reference bandwidth.
-15. **C**. The LSDB is identical for all routers in an area.
-16. **A**. Hello packets form adjacencies.
-17. **C**. LSUs carry LSA change details.
-18. **B**. Area 0 is the Backbone.
-19. **C**. OSPF's lower AD (110) beats RIP (120).
-20. **C**. Link-state requires more memory and CPU.
-21. **B**. DBDs summarize the database during neighbor formation.
-22. **C**. LSRs request missing pieces of the LSDB.
-23. **A**. 'O' denotes an OSPF route.
-24. **B**. OSPF triggers partial updates; RIP sends full tables periodically.
-25. **C**. Multi-area OSPF keeps LSDBs small and manageable.
-26. **D**. BGP is the EGP for the Internet.
-27. **C**. BGP is a path-vector protocol.
-28. **B**. The OPEN message starts the BGP peering.
-29. **B**. BGP uses TCP Port 179.
-30. **B**. eBGP bridges different ASes.
-31. **B**. AS-PATH is fundamental for preventing loops.
-32. **C**. AS-PATH is well-known mandatory.
-33. **C**. Hot potato ejects traffic at the closest exit.
-34. **B**. NOTIFICATION drops the TCP connection.
-35. **C**. Self-AS in AS-PATH means a loop.
-36. **B**. LOCAL-PREF dictates the outbound exit path.
-37. **C**. UPDATE messages carry route prefixes.
-38. **A**. MED tells other ASes how to enter.
-39. **C**. SDN removes the Control Plane from individual switches.
-40. **C**. The Data Plane merely forwards according to rules.
-41. **B**. OpenFlow is the most prominent Southbound API.
-42. **B**. Northbound APIs connect controllers to applications.
-43. **B**. OpenFlow entries match fields and execute actions.
-44. **C**. Ping relies on ICMP Echo.
-45. **A**. Traceroute expires the TTL to map the path.
-46. **B**. Unreachable implies a missing routing table entry.
-47. **B**. The MIB contains manageable device parameters.
-48. **D**. Traps are asynchronous alerts.
-49. **C**. SetRequests alter variables on the device.
-50. **B**. SDN centralizes network control and configuration.
+1. **B)** Distance-vector protocols use Bellman-Ford.
+2. **A)** RIP permits up to 15 hops; 16 is unreachable.
+3. **C)** Split Horizon is the rule to not advertise a route out of the interface it was learned.
+4. **B)** The [120/4] bracket denotes AD and hop count.
+5. **A)** Count-to-Infinity happens due to metric loops.
+6. **B)** Route poisoning manually sets metric to 16 to flush the route.
+7. **C)** Triggered updates bypass the 30-second timer.
+8. **B)** Distance-vector trusts only neighbors instead of full topology maps.
+9. **D)** RIP AD is 120.
+10. **A)** Connected routes ('C') have an AD of 0.
+11. **B)** Hold-down timers avoid flip-flopping routes.
+12. **A)** Poison reverse replies with infinite metric.
+13. **C)** Link-State uses SPF (Dijkstra).
+14. **B)** Cost is derived from reference bandwidth.
+15. **C)** The LSDB is identical for all routers in an area.
+16. **A)** Hello packets form adjacencies.
+17. **C)** LSUs carry LSA change details.
+18. **B)** Area 0 is the Backbone.
+19. **C)** OSPF's lower AD (110) beats RIP (120).
+20. **C)** Link-state requires more memory and CPU.
+21. **B)** DBDs summarize the database during neighbor formation.
+22. **C)** LSRs request missing pieces of the LSDB.
+23. **A)** 'O' denotes an OSPF route.
+24. **B)** OSPF triggers partial updates; RIP sends full tables periodically.
+25. **C)** Multi-area OSPF keeps LSDBs small and manageable.
+26. **D)** BGP is the EGP for the Internet.
+27. **C)** BGP is a path-vector protocol.
+28. **B)** The OPEN message starts the BGP peering.
+29. **B)** BGP uses TCP Port 179.
+30. **B)** eBGP bridges different ASes.
+31. **B)** AS-PATH is fundamental for preventing loops.
+32. **C)** AS-PATH is well-known mandatory.
+33. **C)** Hot potato ejects traffic at the closest exit.
+34. **B)** NOTIFICATION drops the TCP connection.
+35. **C)** Self-AS in AS-PATH means a loop.
+36. **B)** LOCAL-PREF dictates the outbound exit path.
+37. **C)** UPDATE messages carry route prefixes.
+38. **A)** MED tells other ASes how to enter.
+39. **C)** SDN removes the Control Plane from individual switches.
+40. **C)** The Data Plane merely forwards according to rules.
+41. **B)** OpenFlow is the most prominent Southbound API.
+42. **B)** Northbound APIs connect controllers to applications.
+43. **B)** OpenFlow entries match fields and execute actions.
+44. **C)** Ping relies on ICMP Echo.
+45. **A)** Traceroute expires the TTL to map the path.
+46. **B)** Unreachable implies a missing routing table entry.
+47. **B)** The MIB contains manageable device parameters.
+48. **D)** Traps are asynchronous alerts.
+49. **C)** SetRequests alter variables on the device.
+50. **B)** SDN centralizes network control and configuration.
 
 ## References & Navigation
 
-- **Related Notes:** [[Network Communications 2]]
+- **Related Notes:** [[Distance-Vector Routing and RIP]], [[Link-State Routing and OSPF]], [[BGP and Interdomain Routing]]

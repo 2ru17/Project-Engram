@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Binary Division (Restoring & Non-Restoring Division Algorithms)"
 status: completed
 ---
-
 # Module 06: Binary Division (Restoring & Non-Restoring Division Algorithms)
 
 > [!info] Document Metadata
@@ -253,11 +252,11 @@ Performance Advantage of Non-Restoring Division:
 
 ### Answer Key & Explanations
 
-1. **B**. In Restoring Division, a negative accumulator ($A < 0$) indicates that the divisor was larger than the partial dividend. Hardware restores the previous value by adding $M$ back ($A \leftarrow A + M$) and sets the quotient bit $Q_0 = 0$.
-2. **A**. Shifting the restored remainder $A+M$ left by 1 bit gives $2(A+M) = 2A+2M$. Subtracting $M$ in the next cycle yields $(2A+2M)-M = 2A+M$, proving that shifting left and adding $M$ directly produces the exact mathematical equivalent.
-3. **C**. Accumulator $A$ must be $n+1$ bits wide (1 extra sign bit) to accommodate the negative results produced during trial subtractions without losing the most significant data bits.
-4. **B**. If the final remainder is negative, the last trial subtraction went past 0 without a subsequent corrective cycle, requiring a single post-loop restoration $A \leftarrow A + M$ to restore the true remainder.
-5. **B**. Division involves inherently serial quotient selection and remainder subtraction feedback, preventing the parallel tree reduction (e.g., Wallace trees) used in combinational multipliers.
+1. **B)** In Restoring Division, a negative accumulator ($A < 0$) indicates that the divisor was larger than the partial dividend. Hardware restores the previous value by adding $M$ back ($A \leftarrow A + M$) and sets the quotient bit $Q_0 = 0$.
+2. **A)** Shifting the restored remainder $A+M$ left by 1 bit gives $2(A+M) = 2A+2M$. Subtracting $M$ in the next cycle yields $(2A+2M)-M = 2A+M$, proving that shifting left and adding $M$ directly produces the exact mathematical equivalent.
+3. **C)** Accumulator $A$ must be $n+1$ bits wide (1 extra sign bit) to accommodate the negative results produced during trial subtractions without losing the most significant data bits.
+4. **B)** If the final remainder is negative, the last trial subtraction went past 0 without a subsequent corrective cycle, requiring a single post-loop restoration $A \leftarrow A + M$ to restore the true remainder.
+5. **B)** Division involves inherently serial quotient selection and remainder subtraction feedback, preventing the parallel tree reduction (e.g., Wallace trees) used in combinational multipliers.
 
 ## References & Navigation
 

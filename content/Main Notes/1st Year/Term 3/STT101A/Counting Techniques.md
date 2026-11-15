@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -70,11 +69,11 @@ status: completed
 
 ### Answer Key & Explanations
 
-1. **B**. Each of the $4$ positions independently has $10$ choices ($0$–$9$), yielding $10 \times 10 \times 10 \times 10 = 10^4 = 10,000$.
-2. **B**. Fixing one element's position breaks rotational symmetry ($n$ equivalent rotations per linear arrangement), leaving $(n - 1)!$ distinct circular arrangements.
-3. **C**. `BANANA` has $n = 6$ letters with $3$ `A`s, $2$ `N`s, and $1$ `B`. The multinomial formula gives $\frac{6!}{3! \, 2! \, 1!} = \frac{720}{6 \times 2 \times 1} = 60$.
-4. **A**. Every unordered $r$-combination can be ordered in $r!$ ways to form an ordered $r$-permutation, so $P(n, r) = r! \binom{n}{r}$.
-5. **C**. Since selection is without replacement and order does not matter, the number of outcomes is $\binom{45}{6} = 8,145,060$.
+1. **B)** Each of the $4$ positions independently has $10$ choices ($0$–$9$), yielding $10 \times 10 \times 10 \times 10 = 10^4 = 10,000$.
+2. **B)** Fixing one element's position breaks rotational symmetry ($n$ equivalent rotations per linear arrangement), leaving $(n - 1)!$ distinct circular arrangements.
+3. **C)** `BANANA` has $n = 6$ letters with $3$ `A`s, $2$ `N`s, and $1$ `B`. The multinomial formula gives $\frac{6!}{3! \, 2! \, 1!} = \frac{720}{6 \times 2 \times 1} = 60$.
+4. **A)** Every unordered $r$-combination can be ordered in $r!$ ways to form an ordered $r$-permutation, so $P(n, r) = r! \binom{n}{r}$.
+5. **C)** Since selection is without replacement and order does not matter, the number of outcomes is $\binom{45}{6} = 8,145,060$.
 
 ## References & Navigation
 

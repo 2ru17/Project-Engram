@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Topic 3- Structs
 
 > [!info] Document Metadata
@@ -205,16 +204,16 @@ struct Example {
 
 ### Answer Key & Explanations
 
-1. **B**. Structs define distinct logical groupings organizing fundamentally disparate datatypes collectively.
-2. **C**. The aliasing capability establishes shorter cleaner typenames sidestepping repetitive standard keywords.
-3. **B**. Accessing local initialized structure variables necessitates using the literal property dot path.
-4. **B**. Operating on object references inherently mandates replacing explicit dot referencing with directional operator routing.
-5. **C**. Tagging member initializers utilizing dots provides clear explicit targeting independent from original declaration ordering.
-6. **A**. Aligning variable blocks optimizes CPU retrieval rendering structures intermittently thicker than component arithmetic implies.
-7. **B**. Encapsulating discrete compound logic enables incorporating full secondary structural groupings internally as regular objects.
-8. **B**. Because primitive assignment fails across immutable array structures natively, data transfers mandate library replication tools.
-9. **B**. Eliminating substantial structural copy processes conserves execution timelines while exposing native roots to alterations.
-10. **A**. Deep equivalence requires granular iterative inspection given structural wrappers lack implicit relational operation overloads.
+1. **B)** Structs define distinct logical groupings organizing fundamentally disparate datatypes collectively.
+2. **C)** The aliasing capability establishes shorter cleaner typenames sidestepping repetitive standard keywords.
+3. **B)** Accessing local initialized structure variables necessitates using the literal property dot path.
+4. **B)** Operating on object references inherently mandates replacing explicit dot referencing with directional operator routing.
+5. **C)** Tagging member initializers utilizing dots provides clear explicit targeting independent from original declaration ordering.
+6. **A)** Aligning variable blocks optimizes CPU retrieval rendering structures intermittently thicker than component arithmetic implies.
+7. **B)** Encapsulating discrete compound logic enables incorporating full secondary structural groupings internally as regular objects.
+8. **B)** Because primitive assignment fails across immutable array structures natively, data transfers mandate library replication tools.
+9. **B)** Eliminating substantial structural copy processes conserves execution timelines while exposing native roots to alterations.
+10. **A)** Deep equivalence requires granular iterative inspection given structural wrappers lack implicit relational operation overloads.
 
 ## References & Navigation
 

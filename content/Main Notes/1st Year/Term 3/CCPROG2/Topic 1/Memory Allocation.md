@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Memory Allocation
 
 > [!info] Document Metadata
@@ -170,9 +169,9 @@ graph TD
 
 ### Answer Key & Explanations
 
-1. **B**. The compiler reserves one continuous region to house all requested slots adjacently.
-2. **C**. The calculation is 10 elements multiplied by 4 bytes per element, yielding 40 bytes.
-3. **B**. Local function variables, including fixed arrays, are automatically pushed onto the stack.
+1. **B)** The compiler reserves one continuous region to house all requested slots adjacently.
+2. **C)** The calculation is 10 elements multiplied by 4 bytes per element, yielding 40 bytes.
+3. **B)** Local function variables, including fixed arrays, are automatically pushed onto the stack.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Data Representation
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -408,11 +407,11 @@ Assuming standard alphabetical ordering of categories by pandas, what is the exa
 
 ### Answer Key & Explanations
 
-1. **B**. This is Hadley Wickhams standard definition of tidy data structure.
-2. **B**. A Series is a single column/1D array with an index.
-3. **B**. `melt` in pandas converts wide formats into long format.
-4. **A**. Data matrices (often X) contain numeric features for modeling.
-5. **A**. Many visualization tools and mixed-effects models expect long format where a single column holds the value and another holds the variable type.
+1. **B)** This is Hadley Wickhams standard definition of tidy data structure.
+2. **B)** A Series is a single column/1D array with an index.
+3. **B)** `melt` in pandas converts wide formats into long format.
+4. **A)** Data matrices (often X) contain numeric features for modeling.
+5. **A)** Many visualization tools and mixed-effects models expect long format where a single column holds the value and another holds the variable type.
 
 ## References & Navigation
 

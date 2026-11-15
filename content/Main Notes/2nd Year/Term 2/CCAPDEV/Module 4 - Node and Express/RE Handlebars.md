@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: RE_Handlebars
 status: completed
 ---
-
 # RE_Handlebars
 
 > [!info] Document Metadata
@@ -101,9 +100,9 @@ The template in the next set of slides include firstname, which is a variable en
 
 ### Answer Key & Explanations
 
-1. **B**. Handlebars expressions are content(s) enclosed by double curly braces `{{}}`.
-2. **B**. `app.set("view engine", "hbs");` is the Express configuration line that sets `hbs` as the template engine.
-3. **B**. The `{{{ body }}}` expression is used inside a layout (like `main.hbs`) as a placeholder where the specific view's content will be rendered.
+1. **B)** Handlebars expressions are content(s) enclosed by double curly braces `{{}}`.
+2. **B)** `app.set("view engine", "hbs");` is the Express configuration line that sets `hbs` as the template engine.
+3. **B)** The `{{{ body }}}` expression is used inside a layout (like `main.hbs`) as a placeholder where the specific view's content will be rendered.
 
 ## References & Navigation
 

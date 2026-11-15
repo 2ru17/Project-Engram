@@ -5,7 +5,6 @@ course: CSMODEL
 topic: EDA
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -442,11 +441,11 @@ Categorical group comparisons are best visualized using a Bar plot (specifically
 
 ### Answer Key & Explanations
 
-1. **B**. The median is resistant to outliers, unlike the mean.
-2. **A**. Positive (right) skew means the bulk of data is on the left, with a long right tail.
-3. **B**. Kurtosis identifies if data has heavy tails or is sharply peaked.
-4. **B**. 0.9 is close to -1, indicating a very strong inverse linear relationship.
-5. **C**. Standard deviation quantifies the amount of variation or dispersion.
+1. **B)** The median is resistant to outliers, unlike the mean.
+2. **A)** Positive (right) skew means the bulk of data is on the left, with a long right tail.
+3. **B)** Kurtosis identifies if data has heavy tails or is sharply peaked.
+4. **B)** 0.9 is close to -1, indicating a very strong inverse linear relationship.
+5. **C)** Standard deviation quantifies the amount of variation or dispersion.
 
 ## References & Navigation
 

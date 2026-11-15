@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -66,11 +65,11 @@ Two events $A$ and $B$ are **Mutually Exclusive** (or **Disjoint**) if they shar
 
 ### Answer Key & Explanations
 
-1. **B**. Disjoint sets share no elements ($A \cap B = \emptyset$), represented in a Venn diagram by non-overlapping regions.
-2. **A**. By mutual exclusivity, $P(A \cap B) = 0$ and $P(A \cup B) = P(A) + P(B) = 0.35 + 0.45 = 0.80$.
-3. **C**. $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{0}{0.45} = 0$: if $B$ occurred, $A$ cannot have occurred.
-4. **D**. Since $A \cup B \subseteq S$, $P(A \cup B) \le P(S) = 1$. For disjoint events this forces $P(A) + P(B) \le 1$.
-5. **B**. $\{1, 2\} \cap \{5, 6\} = \emptyset$, whereas all other pairs share at least one outcome ($2$, $3$, or $2$ and $6$).
+1. **B)** Disjoint sets share no elements ($A \cap B = \emptyset$), represented in a Venn diagram by non-overlapping regions.
+2. **A)** By mutual exclusivity, $P(A \cap B) = 0$ and $P(A \cup B) = P(A) + P(B) = 0.35 + 0.45 = 0.80$.
+3. **C)** $P(A \mid B) = \frac{P(A \cap B)}{P(B)} = \frac{0}{0.45} = 0$: if $B$ occurred, $A$ cannot have occurred.
+4. **D)** Since $A \cup B \subseteq S$, $P(A \cup B) \le P(S) = 1$. For disjoint events this forces $P(A) + P(B) \le 1$.
+5. **B)** $\{1, 2\} \cap \{5, 6\} = \emptyset$, whereas all other pairs share at least one outcome ($2$, $3$, or $2$ and $6$).
 
 ## References & Navigation
 

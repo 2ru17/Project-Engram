@@ -5,7 +5,6 @@ course: CSARCH2
 topic: Decimal Floating-Point Representation (IEEE 754-2008 Decimal32 and Decimal64)
 status: completed
 ---
-
 # Problem Set: Decimal Floating-Point Representation
 
 > [!info] Document Metadata

@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Control Unit Design & Microprogramming"
 status: completed
 ---
-
 # Module 11: Control Unit Design & Microprogramming
 
 > [!info] Document Metadata
@@ -278,11 +277,11 @@ Calculate:
 
 ### Answer Key & Explanations
 
-1. **A**. Horizontal microcode assigns one bit per control line for maximum speed and parallelism without decoders. Vertical microcode groups mutually exclusive signals into encoded bit fields to reduce control store ROM width.
-2. **C**. Step 3 of the universal fetch phase gates the received instruction word from the Memory Data Register into the Instruction Register via `MDR_out, IR_in`.
-3. **B**. Microprogrammed control units store their micro-routines in a dedicated, high-speed on-chip memory known as the Control Store.
-4. **C**. The instruction requires 3 fetch cycles + 3 execution cycles: `IRAF_out, MAR_in, Read` (Cycle 4); `WMFC` (Cycle 5); `MDR_out, EAX_in, END` (Cycle 6) $\implies$ 6 total cycles.
-5. **A**. `RET` pops the return address off the stack: it reads the address pointed to by `RSP`, waits for memory (`WMFC`), and loads the returned value from `MDR` directly into the Program Counter (`PC_in`), followed by `END`.
+1. **A)** Horizontal microcode assigns one bit per control line for maximum speed and parallelism without decoders. Vertical microcode groups mutually exclusive signals into encoded bit fields to reduce control store ROM width.
+2. **C)** Step 3 of the universal fetch phase gates the received instruction word from the Memory Data Register into the Instruction Register via `MDR_out, IR_in`.
+3. **B)** Microprogrammed control units store their micro-routines in a dedicated, high-speed on-chip memory known as the Control Store.
+4. **C)** The instruction requires 3 fetch cycles + 3 execution cycles: `IRAF_out, MAR_in, Read` (Cycle 4); `WMFC` (Cycle 5); `MDR_out, EAX_in, END` (Cycle 6) $\implies$ 6 total cycles.
+5. **A)** `RET` pops the return address off the stack: it reads the address pointed to by `RSP`, waits for memory (`WMFC`), and loads the returned value from `MDR` directly into the Program Counter (`PC_in`), followed by `END`.
 
 ## References & Navigation
 

@@ -1,6 +1,6 @@
 ---
 id: nscom01_finals_reviewer
-type: note
+type: reviewer
 course: NSCOM01
 topic: "Finals Reviewer"
 status: completed
@@ -142,27 +142,27 @@ This reviewer covers all core topics for the Term 2 Finals, including VoIP Basic
 
 ### Answer Key & Explanations
 
-1. **B**. End-to-end delay must be < 150 ms to prevent noticeable lag in conversation.
-2. **C**. Delay jitter is the variation in transit time for consecutive packets.
-3. **B**. A larger buffer ($q$) gives late packets time to arrive (reducing loss), but increases total delay, hurting interactivity.
-4. **C**. Interleaving splits chunks across packets. A lost packet causes a minor quality drop instead of a total gap.
-5. **C**. RTP structures the data (sequence, timestamp) but does not guarantee QoS and runs over UDP.
-6. **C**. The timestamp indicates the exact sampling instant, allowing the receiver to buffer and play smoothly.
-7. **C**. RTCP provides out-of-band QoS feedback and enables audio/video synchronization.
-8. **A**. RTSP acts as a network remote control for Video-on-Demand (VoD) servers.
-9. **C**. The Proxy Server acts like DNS, routing requests through the network.
-10. **D**. REGISTER updates the network with the user's current location.
-11. **B**. 606 Not Acceptable indicates the destination was reached, but session parameters are incompatible.
-12. **C**. This is the core advantage of P2P; it is self-scaling because every downloader is also an uploader.
-13. **B**. The Tracker is a directory server that maintains lists of active peers.
-14. **B**. Rarest First maximizes file availability across the swarm.
-15. **C**. Tit-for-Tat strictly unchokes (sends to) the top peers who are sending data to you.
-16. **B**. By randomly sending data to a random peer every 30s, it discovers better peers and kickstarts new joiners.
-17. **B**. Authentication is centralized for security, while the heavy lifting of routing is done P2P.
-18. **C**. Supernodes form the P2P overlay network to route calls and track users.
-19. **C**. Since NAT prevents inbound connections, routing via open outbound connections to Supernodes traverses the NAT.
-20. **B**. 64 kbps = 8,000 bytes/sec. 8,000 * 0.020 sec = 160 bytes.
+1. **B)** End-to-end delay must be < 150 ms to prevent noticeable lag in conversation.
+2. **C)** Delay jitter is the variation in transit time for consecutive packets.
+3. **B)** A larger buffer ($q$) gives late packets time to arrive (reducing loss), but increases total delay, hurting interactivity.
+4. **C)** Interleaving splits chunks across packets. A lost packet causes a minor quality drop instead of a total gap.
+5. **C)** RTP structures the data (sequence, timestamp) but does not guarantee QoS and runs over UDP.
+6. **C)** The timestamp indicates the exact sampling instant, allowing the receiver to buffer and play smoothly.
+7. **C)** RTCP provides out-of-band QoS feedback and enables audio/video synchronization.
+8. **A)** RTSP acts as a network remote control for Video-on-Demand (VoD) servers.
+9. **C)** The Proxy Server acts like DNS, routing requests through the network.
+10. **D)** REGISTER updates the network with the user's current location.
+11. **B)** 606 Not Acceptable indicates the destination was reached, but session parameters are incompatible.
+12. **C)** This is the core advantage of P2P; it is self-scaling because every downloader is also an uploader.
+13. **B)** The Tracker is a directory server that maintains lists of active peers.
+14. **B)** Rarest First maximizes file availability across the swarm.
+15. **C)** Tit-for-Tat strictly unchokes (sends to) the top peers who are sending data to you.
+16. **B)** By randomly sending data to a random peer every 30s, it discovers better peers and kickstarts new joiners.
+17. **B)** Authentication is centralized for security, while the heavy lifting of routing is done P2P.
+18. **C)** Supernodes form the P2P overlay network to route calls and track users.
+19. **C)** Since NAT prevents inbound connections, routing via open outbound connections to Supernodes traverses the NAT.
+20. **B)** 64 kbps = 8,000 bytes/sec. 8,000 * 0.020 sec = 160 bytes.
 
 ## References & Navigation
 
-- **Related Notes:** [[Network Communications]]
+- **Related Notes:** [[Voice over IP and Multimedia Basics]], [[Real-Time Protocols]], [[Session Initiation Protocol]]

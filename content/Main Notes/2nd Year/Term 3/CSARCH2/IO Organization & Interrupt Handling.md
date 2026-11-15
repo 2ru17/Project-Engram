@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "I/O Organization & Interrupt Handling"
 status: completed
 ---
-
 # Module 16: I/O Organization & Interrupt Handling
 
 > [!info] Document Metadata
@@ -205,11 +204,11 @@ Calculate the percentage of total CPU capacity consumed under each paradigm.
 
 ### Answer Key & Explanations
 
-1. **B**. Memory-Mapped I/O maps peripheral device registers into the standard memory address space, allowing any memory reference instruction (`MOV`, `LDR`, `STR`) to read/write hardware registers.
-2. **A**. DMA transfers entire blocks of data directly between peripherals and main RAM across the system bus, asserting an interrupt only once per block and freeing the CPU from processing individual byte interrupts.
-3. **C**. The CPU never halts mid-instruction for an external interrupt; it completes the currently executing instruction, pushes the architectural state (FLAGS, PC) onto the stack, and branches to the ISR.
-4. **D**. Cycle Stealing mode acquires the bus for single-word transfers between CPU operations, minimizing CPU execution stalls while maintaining continuous I/O throughput.
-5. **B**. The Interrupt Vector Table (or IDT in protected mode) holds the jump vectors (function pointers) for all hardware and software interrupt handlers indexed by vector number.
+1. **B)** Memory-Mapped I/O maps peripheral device registers into the standard memory address space, allowing any memory reference instruction (`MOV`, `LDR`, `STR`) to read/write hardware registers.
+2. **A)** DMA transfers entire blocks of data directly between peripherals and main RAM across the system bus, asserting an interrupt only once per block and freeing the CPU from processing individual byte interrupts.
+3. **C)** The CPU never halts mid-instruction for an external interrupt; it completes the currently executing instruction, pushes the architectural state (FLAGS, PC) onto the stack, and branches to the ISR.
+4. **D)** Cycle Stealing mode acquires the bus for single-word transfers between CPU operations, minimizing CPU execution stalls while maintaining continuous I/O throughput.
+5. **B)** The Interrupt Vector Table (or IDT in protected mode) holds the jump vectors (function pointers) for all hardware and software interrupt handlers indexed by vector number.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Binary Floating-Point Representation"
 status: completed
 ---
-
 # Problem Set: Binary Floating-Point Representation
 
 > [!info] Document Metadata
