@@ -1,26 +1,45 @@
 # Contributing to Project Engram
 
-Thank you for your interest in contributing to Project Engram. This document details the engineering guidelines, living documentation governance, and contribution workflow required to maintain our academic knowledge repository.
+Thank you for contributing to **Project Engram**. This document details the architectural invariants, 5-Universe design system rules, Obsidian-to-Next.js content workflow, Interactive MCQ contracts, and automated CI/CD checks required to maintain our academic Computer Science knowledge repository.
+
+For deep architectural context, cross-reference:
+* **[docs/DESIGN.md](./docs/DESIGN.md)** — Clean architectural principles, 5-Universe design system tokens, data flow, and scalability strategies.
+* **[docs/Structure.md](./docs/Structure.md)** — Repository layout, vault directory conventions, and module boundaries.
+* **[docs/Implementation-guide.md](./docs/Implementation-guide.md)** — Feature implementation workflow, parser contracts, and PR checklists.
 
 ---
 
-## 1. Core Principles & Invariants
+## 1. Core Principles & Architectural Invariants
 
-All contributions must strictly respect the architectural rules of Project Engram:
+All contributions must strictly respect the core invariants of **Project Engram**:
 
-1. **Locked Cyber-Zen Tech-Noir Aesthetic**: The Cyber-Zen theme design tokens, font hierarchy, and color palettes are locked. Do not modify global color definitions or replace established design variables without explicit coordinator consensus.
-2. **Decoupled Architecture**: Code resides in `Project-Engram/` while academic content is mounted under `content/`. Extraneous files, build dumps, or test logs must remain outside the repository directory.
-3. **Cookie & Telemetry Ethics**: Performance caching and state persistence rely strictly on local storage and first-party cookies (`engram-perf-cache`, `engram-telemetry-ack`). Vercel Analytics is restricted to runtime error diagnosis without advertising cookies or PII collection.
-4. **No Direct Master/Main Pushes**: All work must be conducted on feature branches and submitted via structured pull requests with clean builds.
+1. **Locked 5-Universe Design System & Choreography**:
+   * **Brand Identity**: The project name is strictly **"Project Engram"**. Zero emojis are permitted in the UI, Markdown notes, or Knowledge Graph. All UI copy and telemetry labels must maintain an authoritative systems-engineering tone.
+   * **Default Universe (`cyber-zen`)**: Deep Obsidian `#0d1017` (Dark) / `#f8fafc` (Light) background, Cyan `#00E5FF` / `#0284c7` primary active accent, Slate Blue-Grey `#4b5e78` muted borders/edges (opacity $\ge 0.20$), and `Cinzel` (`font-weight: 600`) headings. `cyber-zen` is the **only** universe with a Dark/Light toggle.
+   * **Single-Mode Universes**: `neo-brutalism`, `minimalism`, `parallax`, and `broken-grid` operate as locked single-mode universes switched via the **Singularity Warp Jump** with a mandatory $2.0\text{ s}$ anti-spam cooldown.
+   * **Framer Motion Easing**: All transitions must use the hardware-accelerated tech-noir curve `ease: [0.16, 1, 0.3, 1]`. Never use spring physics. Lists must stagger sequentially with `staggerChildren: 0.05`.
+   * **Reading Container**: Long-form rendered markdown must be wrapped in a `max-w-3xl` container using clean sans-serif body typography (`line-height: 1.65`).
+
+2. **Two-Location Content Architecture (Obsidian $\rightarrow$ Next.js)**:
+   * **Source of Truth**: All academic note creation and editing happens first in the **Obsidian Vault** (`/home/2ru17/Documents/Obsidian/ProjectEngram/main/Main Notes/`).
+   * **Deployment Mirror**: The Next.js `content/Main Notes/` directory (`/home/2ru17/Documents/Coding-Stuff/Pers-Projs/Notes-Website-Engram/Project-Engram/content/Main Notes/`) is a synchronized mirror populated via `rsync`. Never edit files directly in `content/Main Notes/` without syncing from the Obsidian Vault.
+
+3. **Asynchronous I/O, Caching & Security**:
+   * **No Sync FS**: Never use `fs.readFileSync`, `fs.readdirSync`, or `fs.statSync` in API routes, Server Components, or build scripts. Always use `fs.promises`.
+   * **XSS Sanitization**: Never use `dangerouslySetInnerHTML` without sanitizing HTML output through `isomorphic-dompurify`.
+   * **60FPS Graph Rendering**: In canvas/WebGL components (`react-force-graph` rendering the `COMPUTER SCIENCE // SINGULARITY` black hole at $(0, 0)$, 25 Course Stars, and 539+ orbiting monographs), all event handlers and canvas painter callbacks must be wrapped in `useCallback` with stable dependency arrays.
+
+4. **Cookie & Telemetry Ethics**:
+   * State persistence and performance caching rely strictly on local storage and first-party keys (`engram-perf-cache`, `engram-telemetry-ack`). Telemetry is restricted to runtime error diagnostics with zero advertising cookies or PII collection.
 
 ---
 
 ## 2. Development Setup
 
 ### Prerequisites
-- Node.js 20 or higher
-- npm (default package manager across this project)
-- Git configured with appropriate directory-scoped identities
+* **Node.js**: $\ge 20.0.0$
+* **Package Manager**: `npm`
+* **Git**: Configured with directory-scoped identity
 
 ### Clone and Install
 ```bash
@@ -33,11 +52,21 @@ npm install
 ```bash
 npm run dev
 ```
-Access the application at `http://localhost:3000`.
+Access the local development server at `http://localhost:3000`.
 
-### Verifying Build and Types
-Always ensure that the project compiles with zero errors before submitting any patch:
+### Syncing Content from the Obsidian Vault
+After editing notes in the Obsidian Vault, mirror changes into the Next.js repository:
 ```bash
+rsync -av --delete \
+  "/home/2ru17/Documents/Obsidian/ProjectEngram/main/Main Notes/" \
+  "/home/2ru17/Documents/Coding-Stuff/Pers-Projs/Notes-Website-Engram/Project-Engram/content/Main Notes/"
+```
+
+### Pre-Push Verification Suite
+Always run the validation and build pipeline locally before opening a Pull Request:
+```bash
+npm run validate:notes
+npm run lint
 npm run build
 ```
 
@@ -45,26 +74,27 @@ npm run build
 
 ## 3. Authoring New Simulators
 
-Simulators provide interactive pedagogical laboratories for students. When contributing a new simulator workbench:
+Simulators provide interactive pedagogical workbenches for Computer Science courses. When contributing a new simulator:
 
-1. **Create the Component**:
-   - Location: `src/components/simulators/[FeatureName]Workbench.tsx`
-   - Mark the file with `"use client";`.
-   - Adhere to Cyber-Zen theme tokens (`var(--zen-border)`, `var(--zen-card)`, `var(--zen-void)`, `var(--zen-cyan)`, `var(--zen-snow)`, `var(--zen-frost)`).
-   - Ensure interactive controls (sliders, toggles, stepping engines) are fully typed and accessible.
+1. **Create the Workbench Component**:
+   * **Path**: `src/components/simulators/[FeatureName]Workbench.tsx`
+   * Mark the component with `"use client";`.
+   * Wrap the workbench in `SimulatorWorkbenchShell` (`src/components/simulators/shared/SimulatorWorkbenchShell.tsx`) to provide unified transport controls (`Play/Pause`, `Step`, `Reset`), preset scenario selectors, and live telemetry logs.
+   * Bind styling to active theme tokens (`var(--zen-border)`, `var(--zen-card)`, `var(--zen-void)`, `var(--zen-cyan)`, `var(--zen-snow)`, `var(--zen-frost)`).
+   * Ensure all interactive inputs, sliders, and stepping buttons have explicit `<label>` or `aria-label` attributes and keyboard focus support (`tabIndex={0}`).
 
 2. **Register in Simulator Registry**:
-   - Add entry to `SIMULATOR_REGISTRY` in `src/lib/simulator-registry.ts`.
-   - Assign appropriate `domain` (`systems`, `security`, `theory`, or `software`).
-   - Map official course codes (e.g. `CSARCH1`, `CCDSALG`, `CSOPESY`).
-   - Add canonical alias mappings in `SIMULATOR_ALIASES`.
+   * Add the metadata entry to `SIMULATOR_REGISTRY` in `src/lib/simulator-registry.ts`.
+   * Assign the appropriate `domain` (`systems`, `security`, `theory`, or `software`).
+   * Map official course codes (e.g., `CSARCH1`, `CCDSALG`, `CSOPESY`, `CSNETWK`).
+   * Add canonical alias mappings in `SIMULATOR_ALIASES`.
 
 3. **Register in Renderer**:
-   - Add case branches in `src/components/simulators/SimulatorRenderer.tsx` linking to your component.
+   * Add the corresponding branch in `src/components/simulators/SimulatorRenderer.tsx`.
 
-4. **Link in Notes & Course Docks**:
-   - The simulator will automatically surface in `CourseSimulatorDock` on note pages matching its mapped courses.
-   - You can also add in-line launcher links in Markdown monographs using:
+4. **Embed in Monographs & Course Docks**:
+   * Mapped courses automatically display the simulator in `CourseSimulatorDock`.
+   * You may also embed inline workbench launchers inside Markdown monographs:
      ```markdown
      > [!simulator] Interactive Workbench
      > Summary description of the laboratory:
@@ -73,31 +103,99 @@ Simulators provide interactive pedagogical laboratories for students. When contr
 
 ---
 
-## 4. Contributing Academic Monographs
+## 4. Contributing Academic Monographs & Interactive MCQs
 
-Monographs synthesize undergraduate and graduate Computer Science curricula:
+### 4.1 Naming & Folder Hygiene Rules
+* **Module Folder Naming**: Format module directories with clean spaces around the hyphen: `Module 01 - Logic`, `Module 03 - Propositional Functions` (never `Module 03- Propositional Functions`).
+* **Standard Notes**: Use **Option 3 (Stripped Clean Title)** placed directly at the Module folder root. Strip numbering and week prefixes (`1.0`, `Week 08 -`, `Ch 3 -`). Name files purely by their core concept (e.g., `Propositional Functions.md`).
+* **No Hollow Modules (Trapped `[HO]` Notes)**: Never place a module's sole core lecture note inside `Resources/[HO] <Topic>.md` while leaving the module root with $0$ standard notes. Primary module lecture notes must sit at the module root as Standard Notes so they receive Interactive MCQs and link into the course navigation chain.
+* **Utility & Special Files**: Place supplemental files inside direct module subfolders (`Exercises/`, `Resources/`, `Assessments/`) and prefix with standard brackets:
+  * `[EX]` — Practical Exercises & Activities
+  * `[PS]` — Problem Sets
+  * `[HO]` — Supplemental Handouts & Reference Sheets (only when a root Standard Note already exists)
+  * `[REV]` — Reviewers & Study Guides
+  * `[QZ]` — Quizzes
+  * `[ANS]` — Answer Keys
+* **No Redundant Nesting, Empty Subfolders, or Dumps**: Never create nested folders like `Assessments/Assessments/` or `Topic/Topic/`. Remove empty `Resources/` folders and never commit raw text dumps $> 100\text{ KB}$.
 
-- **Frontmatter**: Each note must include YAML frontmatter specifying `id`, `type`, `course`, `topic`, and `status`.
-- **Structure**:
-  1. Overview and Key Definitions
-  2. Theoretical Framework and Mathematical Derivations (using LaTeX math syntax `$math$`)
-  3. Flowcharts and State Diagrams (using Mermaid.js code blocks ````mermaid ... ````)
-  4. Worked Examples and Annotated Algorithms
-  5. Multiple Choice Self-Assessment (`[MCQ]` format)
-- **Citations**: Academic references must follow standard citation guidelines.
+### 4.2 Required Metadata & Graph Linkage Layout
+Every note must include:
+1. **Unique YAML Frontmatter `id` & Dataview Callout**:
+   ```markdown
+   ---
+   id: csopesy_01_process_scheduling
+   type: note
+   course: CSOPESY
+   topic: Process Scheduling
+   status: completed
+   ---
+   > [!info] Document Metadata
+   > **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status`
+   ```
+2. **Tags Block (Zero Emojis)** (directly below the Document Metadata callout):
+   ```markdown
+   **Tags:** #[[Computer Science]] #[[CSOPESY]] #[[Process Scheduling]]
+   ```
+3. **Body Structure**:
+   * Overview & Formal Definitions
+   * Theoretical Framework & Derivations (strictly using LaTeX syntax `$inline$` and `$$display$$`)
+   * Architecture / State Diagrams (using Mermaid v12-compliant ````mermaid```` blocks with double-quoted labels for special characters)
+   * Worked Examples & Annotated Implementations
+4. **References & Navigation Footer** (placed at the **very bottom** of the file, *after* the MCQ Answer Key):
+   * **Standard Notes**: Link `- **Previous Topic:** [[...]]`, `- **Next Topic:** [[...]]`, and `- **Related Notes:** [[...]]`.
+   * **Utility Files**: Include `- **Related Notes:** [[Parent Topic]]`.
+
+### 4.3 Interactive MCQ Standards & Parser Contract
+All **Standard Notes** must include a `## Multiple Choice Questions` section that mounts cleanly into the **Interactive MCQ Component** (`MCQSection.tsx`) (Utility files must have $0$ MCQs):
+
+* **Required Question Counts**:
+  * Full notes ($> 2000$ chars body): **10 MCQs**
+  * Medium notes ($800\text{–}2000$ chars body): **5 MCQs**
+  * Micro-notes ($< 800$ chars body): **3 MCQs**
+* **Canonical Markdown Syntax**:
+  ```markdown
+  ## Multiple Choice Questions
+
+  1. Question stem testing a specific concept or derivation from this note?
+      - **A)** First plausible option
+      - **B)** Second plausible option
+      - **C)** Third plausible option
+      - **D)** Fourth plausible option
+
+  ### Answer Key & Explanations
+  1. **A)** Detailed explanation referencing the exact principle from the note body and explaining why the distractors are incorrect.
+
+  ## References & Navigation
+  - **Previous Topic:** [[Previous Note Title]]
+  - **Next Topic:** [[Next Note Title]]
+  - **Related Notes:** [[Related Concept]]
+  ```
+* **Strict Quality Gate**:
+  * Never use regex or template scripts to generate placeholder MCQs. Every question must test a specific domain concept with four distinct options and a complete rationale.
+  * Ensure `## References & Navigation` sits below `### Answer Key & Explanations` so the Interactive MCQ parser slices the question block cleanly without bleeding navigation links into the last answer explanation.
 
 ---
 
-## 5. Branching and Pull Request Workflow
+## 5. Accessibility, SEO & Performance Checklist
 
-1. Fork or branch from `v2` (or the active primary branch).
-2. Name feature branches descriptively:
-   - `feature/simulator-[name]`
-   - `fix/[issue-description]`
-   - `docs/[update-topic]`
-3. Verify that `npm run build` succeeds locally.
+Before submitting any UI or content PR, verify:
+* [ ] **Fitts's Law Cards**: Clickable project/feature cards wrap the entire card in an `<a>` tag with a descriptive `aria-label`, and wrap inner text in `<div aria-hidden="true">`.
+* [ ] **Input Labels**: Every `<input>` or search bar has an associated `<label>` (`sr-only` or `aria-label`).
+* [ ] **Structured Data**: `layout.tsx` preserves the `Person` JSON-LD schema and dynamic note routes (`notes/[...slug]`) preserve the `BreadcrumbList` schema with `Primary Topic | PROJECT ENGRAM` titles.
+* [ ] **Interactive MCQ Mounting**: All modified notes mount properly in the Interactive MCQ UI component with zero `[MCQ_PARSE_FAILURE]` build warnings.
+
+---
+
+## 6. Branching & Pull Request Workflow
+
+1. Branch from `v2` (or the active default branch). Never push directly to `main` or `v2`.
+2. Use descriptive branch prefixes:
+   * `feature/simulator-[name]`
+   * `fix/mcq-parser-[description]`
+   * `content/[course-code]-[topic]`
+   * `docs/[update-topic]`
+3. Run `npm run validate:notes && npm run build` locally.
 4. Open a Pull Request detailing:
-   - Summary of changes
-   - Impacted courses or modules
-   - Verification steps performed
-5. Maintain a clean Git history without extraneous merge commits or uncommitted temporary files.
+   * Summary of architectural, UI, or monograph changes
+   * Impacted courses, simulators, or Universe themes
+   * Confirmation that automated CI checks (`engram-governance.yml`) pass.
