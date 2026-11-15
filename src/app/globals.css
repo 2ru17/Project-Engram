@@ -48,6 +48,18 @@
    font utility classes attached to the <html> element.
    ============================================================================ */
 
+:root {
+  --font-zen-display: "Cinzel", serif;
+  --font-zen-decor: "Cinzel Decorative", serif;
+  --font-zen-serif: "Shippori Mincho", serif;
+  --font-zen-brush: "Yuji Boku", serif;
+  --font-wuxia-primary: "Cormorant Garamond", serif;
+  --font-grotesk: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono-code: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Plus Jakarta Sans", "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Shippori Mincho", serif;
+}
+
 :root,
 html[data-universe="cyber-zen"][data-theme="dark"] {
   /* === U-01 CYBER-ZEN: PURE OLED VANTABLACK DARK MODE (DEFAULT) === */
