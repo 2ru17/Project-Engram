@@ -1,117 +1,82 @@
-# Project Engram // 銘印
+# Project Engram
 
-> **Computer Science & Systems Architecture Knowledge Archive**  
-> *知の刻印・理の記録*
+> **Interactive Computer Science Monograph Archive, Pedagogical Simulator Suite, & Relativistic Knowledge Graph**
 
-Project Engram is a high-performance, design-forward academic web archive engineered with Next.js 16, React 19, Motion, and Tailwind CSS v4. It synthesizes over 500 classified monographs, problem sets, and mathematical treatises across 4 years and 38 curricular modules into a unified, interactive topological knowledge system.
-
----
-
-## Key Architectural Systems
-
-### 1. Interactive CS Simulators & Engineering Workbenches
-Project Engram embeds 18 interactive engineering workbenches directly into course monographs across four curricular domains:
-- **Systems & Architecture**: CPU pipelining, L1 cache hit/miss rates, virtual memory paging, process scheduling, IEEE 754 floating-point bit manipulation, microcontroller GPIO/PWM, and Raft consensus.
-- **Networks & Security**: IPv4 subnetting and CIDR routing, TCP sliding window flow control, cryptographic ciphers (Caesar, Vigenere, AES, RSA), and OWASP exploit defense sanitization.
-- **Theory & Algorithms**: Graph search heuristics (Dijkstra, A*), animated sorting algorithm benchmarks, and probability distributions with CLT Monte Carlo simulation.
-- **Software & Artificial Intelligence**: Relational algebra query optimization, database normalization (1NF to BCNF closure), AST lexical syntax parsing, and Perceptron linear classification boundaries.
-
-All simulators feature real-time parameter adjustments and can be launched directly from matching note callouts or through `/simulators`. For full registry metadata, see [CONTRIBUTING.md](./CONTRIBUTING.md) and [`simulator-registry.ts`](./src/lib/simulator-registry.ts).
-
-### 2. Curricular Bento Grid Hierarchy
-- **Adaptive Asymmetric Layout**: Dynamic 4-column Japanese Bento Grid architecture featuring prioritized double-bezel cards, thematic category seals (`統` Systems, `防` Security, `論` Theory, `創` Software), and real-time monograph counters.
-- **Micro-Telemetry Pagination**: Paginated carousel view that smoothly transitions across academic terms and domains without content shifting or empty grid gaps.
-
-### 3. Topological Knowledge Graph
-- **Interactive Force Simulation**: Real-time 2D network visualization powered by `force-graph` and D3, mapping curricular connections, cross-module dependencies, and concept relationships.
-- **Dual Gateway Navigation**: Seamless switching between structural directory tree views and relational graph exploration.
-
-### 4. Theme-Aware Academic Typography & Diagrams
-- **Cyber-Zen Tech-Noir Aesthetics**: OLED deep obsidian palette (`#0b0f17`), luminous cyan accents (`#00e5ff`), and Echizen washi parchment mode for bright ambient lighting.
-- **Dynamic Mermaid Flowcharts & State Machines**: Native client-side Mermaid rendering with responsive `viewBox` geometry that matches the active theme.
-- **LaTeX Mathematical Notation**: High-precision mathematical and algorithmic notation via KaTeX, Remark-Math, and Rehype.
-
-### 5. Performance Caching & Telemetry Architecture
-- **Performance Cookies & Local Storage**: Client-side cookies (`engram-perf-cache`, `engram-telemetry-ack`) and local storage cache pre-rendered monograph AST tokens, KaTeX mathematical fonts, and SVG assets across sessions to accelerate page transitions.
-- **Stateless EG2 Sync & Local State Persistence**: Reading progress checkpoints, study plan completion flags, and Cyber-Zen aesthetic preferences are preserved without requiring account logins.
-- **Vercel Runtime Analytics**: Low-overhead telemetry integration via `@vercel/analytics` specifically dedicated to monitoring runtime exceptions, unhandled promise rejections, and Core Web Vitals without collecting personal data or advertising cookies.
-- **Discreet Telemetry & Cookie Notice**: Minimalist, Cyber-Zen styled banner explaining that cookies and local storage are utilized for performance acceleration, state persistence, and automated error diagnostics.
+## 1. Overview
+**Project Engram** is a full-stack academic knowledge platform and engineering portfolio that synthesizes an undergraduate and graduate Computer Science curriculum into an interconnected digital archive. It combines rigorous technical monographs, cycle-accurate interactive systems simulators, automated self-assessment engines, and a $60\text{ fps}$ force-directed knowledge graph centered on the **Computer Science Black Hole Singularity** (`COMPUTER SCIENCE // SINGULARITY`).
 
 ---
 
-## Technical Stack
+## 2. Documentation Index
+Architectural standards, structural boundaries, and implementation workflows are maintained in the repository documentation suite:
 
-| Layer | Technologies |
-| :--- | :--- |
-| **Framework** | Next.js 16.3 (Turbopack, App Router, React Server Components) |
-| **Runtime & UI** | React 19, Lucide React, Shadcn/UI |
-| **Styling** | Tailwind CSS v4, Custom CSS Design Variables |
-| **Motion & Animation** | Motion (Framer Motion 14), Anime.js v4 |
-| **Data Visualization** | Force-Graph, React-Force-Graph-2D, D3-Force |
-| **Content Pipeline** | Unified / Remark / Rehype (GFM, KaTeX, Raw HTML, Slugs) |
-| **Diagrams** | Mermaid.js 12 (Dynamic Theme-Engine) |
-| **Telemetry & Health** | @vercel/analytics (Anonymous Performance & Error Monitoring) |
+* **[README.md](./README.md)** — Project overview, technology stack, quick-start setup, and script reference.
+* **[CONTRIBUTING.md](./CONTRIBUTING.md)** — Contribution guidelines, simulator registration workflow, monograph formatting rules, and pull request standards.
+* **[docs/DESIGN.md](./docs/DESIGN.md)** — System architecture, 5-Universe Design System tokens, Singularity Graph rendering engine, and performance/security invariants.
+* **[docs/Structure.md](./docs/Structure.md)** — Repository directory topology, academic vault organization (`1st Year`–`4th Year`), module naming rules, and dependency boundaries.
+* **[docs/Implementation-guide.md](./docs/Implementation-guide.md)** — Step-by-step developer guide for building simulator workbenches, extending the Markdown/MCQ parser pipeline, and running verification checks.
 
 ---
 
-## Decoupled Architecture
+## 3. Core Capabilities
 
-Project Engram utilizes a decoupled **Content Pipeline Architecture**:
-
-```text
-+-------------------------------------------------------+
-|            Markdown Knowledge Vault                   |
-|  - Raw Markdown monographs & problem sets             |
-|  - Authored locally via Obsidian                      |
-+---------------------------+---------------------------+
-                            |
-           [CI/CD Build Pipeline or local synchronization]
-                            |
-                            v
-+-------------------------------------------------------+
-|  Web Application (Project-Engram)                     |
-|  - Next.js 16 UI, Bento Grid, Graph, Design System    |
-|  - 18 Interactive Engineering Simulators              |
-|  - Parses /content/ mount point at build & run time   |
-+-------------------------------------------------------+
-```
-
-1. **Application Repository (`Project-Engram`)**: Contains the frontend application code, UI components, interactive workbenches, design tokens, and visualization pipeline.
-2. **Content Source (Obsidian Vault)**: Houses raw academic notes, monographs, and problem sets authored in Obsidian.
-3. **Build Pipeline**: During deployment, the build pipeline mounts or synchronizes the markdown vault into `content/` before compiling the static site.
+* **539+ Academic Monographs across 25+ CS Courses**: Deep-dive technical notes featuring formal mathematical derivations (KaTeX), client-side architecture and state diagrams (Mermaid v12), annotated code implementations, and bidirectional `[[WikiLink]]` navigation meshes.
+* **Interactive Self-Assessment Engine (`MCQSection.tsx`)**: Parses structured Markdown assessment blocks into interactive multiple-choice quizzes with instant distractor rationales and keyboard accessibility.
+* **Pedagogical Engineering Simulators**: Interactive laboratory workbenches spanning **Systems** (CPU pipelining, virtual memory paging), **Security & Networking** (TCP congestion control, cryptographic avalanche diffusion), **Theory** (graph pathfinding, automata tape machines), and **Software/Databases** ($\text{B}^+$ tree indexing and MVCC transactions).
+* **Singularity Knowledge Graph**: A custom HTML5 Canvas force-directed graph rendering the central `COMPUTER SCIENCE // SINGULARITY` at $(0, 0)$, 25 Course Stars, and 539 orbiting monographs with 1-hop constellation isolation.
+* **5-Universe Design System**: Supports the default **Cyber-Zen** tech-noir aesthetic (Dark/Light modes) alongside four locked single-mode universes (**Neo-Brutalism**, **Minimalism**, **Parallax**, and **Broken-Grid**) switched via the **Singularity Warp Jump**.
 
 ---
 
-## Getting Started
+## 4. Technology Stack
+
+* **Framework & Runtime**: Next.js (App Router), React, TypeScript, Node.js ($\ge 20.0.0$)
+* **Styling & Motion**: Tailwind CSS, CSS Custom Properties (`data-universe`), Framer Motion (`ease: [0.16, 1, 0.3, 1]`)
+* **Visualization & Diagrams**: `react-force-graph` (2D Canvas), Mermaid.js v12, KaTeX
+* **Content & Security Pipeline**: Asynchronous Node.js `fs.promises`, Gray-Matter (YAML frontmatter), Unified / Remark / Rehype, `isomorphic-dompurify`
+
+---
+
+## 5. Quick Start
 
 ### Prerequisites
-- Node.js 20+
-- npm (default package manager)
+* **Node.js** $\ge 20.0.0$
+* **npm** (standard package manager for this repository)
 
-### Installation
-```bash
-git clone https://github.com/2ru17/Project-Engram.git
-cd Project-Engram
-npm install
-```
+### Installation & Local Development
 
-### Development
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/2ru17/Project-Engram.git
+   cd Project-Engram
+   ```
 
-### Production Build
-```bash
-npm run build
-npm run start
-```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:3000` in your browser.
+
+4. **Sync content from the local Obsidian Vault (Authoring Workflow):**
+   ```bash
+   rsync -av --delete \
+     "/home/2ru17/Documents/Obsidian/ProjectEngram/main/Main Notes/" \
+     "/home/2ru17/Documents/Coding-Stuff/Pers-Projs/Notes-Website-Engram/Project-Engram/content/Main Notes/"
+   ```
 
 ---
 
-## Design System & Easing Guidelines
+## 6. Available Scripts
 
-All kinetic choreography conforms to the **Cyber-Zen Tech-Noir** specifications:
-- **Primary Curve**: `cubicBezier(0.16, 1, 0.3, 1)` (snappy entry, elongated cinematic deceleration).
-- **Theme Tokens**: Managed via standard CSS custom properties in `globals.css` with zero hardcoded visual artifacts.
-- **Global Invariants**: Zero emojis and zero em-dashes across all code, markup, documentation, and user interfaces.
+| Command | Description |
+| :--- | :--- |
+| `npm run dev` | Starts the Next.js development server with hot-reload. |
+| `npm run build` | Compiles and bundles the application for production deployment. |
+| `npm run start` | Runs the compiled production server locally. |
+| `npm run lint` | Executes static code analysis and linting checks. |
+| `npm run validate:notes` | Validates monograph frontmatter, folder hygiene, MCQ parser compatibility, and graph links. |
