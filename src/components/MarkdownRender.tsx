@@ -14,7 +14,9 @@ import rehypeKatex from "rehype-katex";
 import * as prod from "react/jsx-runtime";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { MCQSection, type MCQItem } from "@/components/MCQSection";
+import DOMPurify from "isomorphic-dompurify";
+import { MCQSection } from "@/components/MCQSection";
+import { parseMCQSection } from "@/lib/mcq-parser";
 import { SimulatorRenderer } from "@/components/simulators/SimulatorRenderer";
 
 const MermaidBlock = dynamic(() => import("@/components/MermaidBlock"), { ssr: false });
@@ -241,6 +243,7 @@ function CodeBlockPre({ children, ...props }: any) {
     </div>
   );
 }
+CodeBlockPre.displayName = "CodeBlockPre";
 
 const components = {
   a: ({ href, className, children, ...props }: any) => {
@@ -470,67 +473,85 @@ const components = {
   },
 };
 
-// Parser to extract Multiple Choice Questions into structured items
-function parseMCQSection(content: string): { articleContent: string; mcqItems: MCQItem[] } {
-  const mcqHeaderMatch = content.match(/\n## Multiple Choice Questions\s*\n([\s\S]*?)(?=\n## References & Navigation|\n## [^\n]+|$)/i);
+const FORBIDDEN_TAGS = new Set([
+  "script",
+  "iframe",
+  "object",
+  "embed",
+  "applet",
+  "base",
+  "meta",
+  "link",
+  "style",
+  "form",
+]);
 
-  if (!mcqHeaderMatch) {
-    return { articleContent: content, mcqItems: [] };
-  }
+function isUnsafeUrl(val: unknown): boolean {
+  if (typeof val !== "string") return false;
+  const cleaned = val.replace(/[\u0000-\u0020]+/g, "").toLowerCase();
+  return (
+    cleaned.startsWith("javascript:") ||
+    cleaned.startsWith("vbscript:") ||
+    cleaned.startsWith("data:text/html")
+  );
+}
 
-  const fullMCQBlock = mcqHeaderMatch[1];
-  const articleContent = content.replace(mcqHeaderMatch[0], "");
+interface AstNode {
+  type?: string;
+  tagName?: string;
+  value?: string;
+  properties?: Record<string, unknown>;
+  children?: AstNode[];
+}
 
-  const parts = fullMCQBlock.split(/### Answer Key & Explanations/i);
-  const questionsRaw = parts[0] || "";
-  const answersRaw = parts[1] || "";
+// Sanitizes standalone HTML nodes using isomorphic-dompurify without corrupting multi-block wrapper tags (<details>)
+function remarkSanitizeHtml() {
+  return (tree: AstNode) => {
+    const visit = (node: AstNode) => {
+      if (node.type === "html" && typeof node.value === "string") {
+        const val = node.value.trim();
+        const isWrapperTag = /^<\/?(?:details|summary)\b[^>]*>$/i.test(val);
+        if (!isWrapperTag && val.length > 0 && !val.startsWith("<!--")) {
+          node.value = DOMPurify.sanitize(val);
+        }
+      }
+      if (Array.isArray(node.children)) {
+        for (const child of node.children) visit(child);
+      }
+    };
+    visit(tree);
+  };
+}
 
-  // Parse answer explanations (supports both 1. **A**. and 1. **A)**)
-  const answersMap: Record<number, { key: string; explanation: string }> = {};
-  const answerRegex = /(\d+)\.\s*\*\*([A-D])\)?\*\*[.:)]?\s*([\s\S]*?)(?=(?:\n\s*\d+\.\s*\*\*)|$)/g;
-  let ansMatch;
-  while ((ansMatch = answerRegex.exec(answersRaw)) !== null) {
-    const qNum = parseInt(ansMatch[1], 10);
-    const key = ansMatch[2].toUpperCase();
-    const explanation = ansMatch[3].trim();
-    answersMap[qNum] = { key, explanation };
-  }
-
-  // Parse questions and options
-  const mcqItems: MCQItem[] = [];
-  const questionBlocks = questionsRaw.split(/\n(?=\d+\.\s+)/);
-
-  for (const block of questionBlocks) {
-    const qMatch = block.match(/^(\d+)\.\s+([\s\S]*?)(?=\n\s*-\s*\*\*A[.)]?\*\*)/);
-    if (!qMatch) continue;
-
-    const id = parseInt(qMatch[1], 10);
-    // Preserve newlines so embedded Markdown tables, math blocks, or code blocks remain intact
-    const question = qMatch[2].trim();
-
-    const options: { key: string; text: string }[] = [];
-    const optRegex = /-\s*\*\*([A-D])[.)]?\*\*\s*([^\n]+)/g;
-    let optMatch;
-    while ((optMatch = optRegex.exec(block)) !== null) {
-      options.push({
-        key: optMatch[1].toUpperCase(),
-        text: optMatch[2].trim(),
+// Strips forbidden HTML elements and inline event handlers parsed by rehypeRaw before KaTeX runs
+function rehypeSanitizeHast() {
+  return (tree: AstNode) => {
+    const walk = (node: AstNode) => {
+      if (!node || !Array.isArray(node.children)) return;
+      node.children = node.children.filter((child) => {
+        if (child.type === "element" && FORBIDDEN_TAGS.has(String(child.tagName).toLowerCase())) {
+          return false;
+        }
+        return true;
       });
-    }
-
-    if (options.length > 0) {
-      const answerInfo = answersMap[id] || { key: "A", explanation: "No explicit explanation recorded." };
-      mcqItems.push({
-        id,
-        question,
-        options,
-        answerKey: answerInfo.key,
-        explanation: answerInfo.explanation,
-      });
-    }
-  }
-
-  return { articleContent, mcqItems };
+      for (const child of node.children) {
+        if (child.type === "element" && child.properties) {
+          for (const key of Object.keys(child.properties)) {
+            if (/^on/i.test(key)) {
+              delete child.properties[key];
+            } else if (
+              (key === "href" || key === "src" || key === "action" || key === "formAction") &&
+              isUnsafeUrl(child.properties[key])
+            ) {
+              delete child.properties[key];
+            }
+          }
+        }
+        walk(child);
+      }
+    };
+    walk(tree);
+  };
 }
 
 // Helper to normalize indented list items and repair common LaTeX/table edge cases outside fenced code blocks
@@ -630,29 +651,38 @@ const mcqInlineComponents = {
   p: ({ children }: any) => <span>{children}</span>,
 };
 
-export default function MarkdownRender({ content }: { content: string }) {
+export default function MarkdownRender({
+  content,
+  filePath,
+}: {
+  content: string;
+  filePath?: string;
+}) {
   const { cleanContent, mcqItems } = useMemo(() => {
-    // Strip Document Metadata block
-    let cleaned = content.replace(/> \[!info\] Document Metadata[\s\S]*?(?=\n\n[^>]|$)/i, "");
-    // Strip YAML frontmatter
-    cleaned = cleaned.replace(/^---\n[\s\S]*?\n---\n/, "");
+    // Normalize CRLF first, then strip YAML frontmatter and Document Metadata callout
+    let cleaned = content.replace(/\r\n?/g, "\n").replace(/\0/g, "");
+    cleaned = cleaned.replace(/^---\n[\s\S]*?\n---\n?/, "");
+    cleaned = cleaned.replace(/> \[!info\] Document Metadata[\s\S]*?(?=\n\n[^>]|$)/i, "");
 
-    // Normalize indented lists and math/table edge cases outside code blocks
-    cleaned = normalizeContentAndMath(cleaned);
+    // Slice interactive assessments BEFORE normalizeContentAndMath preserves 4-space option indents
+    const { articleContent, mcqItems } = parseMCQSection(cleaned, filePath);
 
-    const { articleContent, mcqItems } = parseMCQSection(cleaned);
-    return { cleanContent: articleContent, mcqItems };
-  }, [content]);
+    // Normalize indented lists and math/table edge cases outside fenced code blocks
+    const normalizedArticle = normalizeContentAndMath(articleContent);
+    return { cleanContent: normalizedArticle, mcqItems };
+  }, [content, filePath]);
 
   const file = useMemo(() => {
     const processor = unified()
       .use(remarkParse)
+      .use(remarkSanitizeHtml)
       .use(remarkWikilink)
       .use(remarkGfm)
       .use(remarkBreaks)
       .use(remarkMath)
       .use(remarkRehype, { allowDangerousHtml: true })
       .use(rehypeRaw)
+      .use(rehypeSanitizeHast)
       .use(rehypeSlug)
       .use(rehypeKatex)
       .use(rehypeReact, {
@@ -668,12 +698,14 @@ export default function MarkdownRender({ content }: { content: string }) {
   const renderMCQMarkdown = useMemo(() => {
     const blockProcessor = unified()
       .use(remarkParse)
+      .use(remarkSanitizeHtml)
       .use(remarkWikilink)
       .use(remarkGfm)
       .use(remarkBreaks)
       .use(remarkMath)
       .use(remarkRehype, { allowDangerousHtml: true })
       .use(rehypeRaw)
+      .use(rehypeSanitizeHast)
       .use(rehypeKatex)
       .use(rehypeReact, {
         Fragment: React.Fragment,
@@ -684,11 +716,13 @@ export default function MarkdownRender({ content }: { content: string }) {
 
     const inlineProcessor = unified()
       .use(remarkParse)
+      .use(remarkSanitizeHtml)
       .use(remarkWikilink)
       .use(remarkGfm)
       .use(remarkMath)
       .use(remarkRehype, { allowDangerousHtml: true })
       .use(rehypeRaw)
+      .use(rehypeSanitizeHast)
       .use(rehypeKatex)
       .use(rehypeReact, {
         Fragment: React.Fragment,

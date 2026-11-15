@@ -30,7 +30,7 @@ export function BrokenGridAtmosphere() {
         <span>|--- 960 ---|</span>
       </div>
 
-      {/* CAD Registration Crosshairs at Corners */}
+      {/* CAD Registration Target Reticles at Corners */}
       <div className="absolute top-6 left-6 font-mono text-xs text-[#0D5C3A] font-bold">+</div>
       <div className="absolute top-6 right-6 font-mono text-xs text-[#0D5C3A] font-bold">+</div>
       <div className="absolute bottom-6 left-6 font-mono text-xs text-[#0D5C3A] font-bold">+</div>

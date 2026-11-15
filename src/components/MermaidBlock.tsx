@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useId, useCallback } from "react";
 import mermaid from "mermaid";
 import katex from "katex";
+import DOMPurify from "isomorphic-dompurify";
 import { useTheme } from "@/components/ThemeProvider";
 
 interface MermaidBlockProps {
@@ -486,9 +487,17 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
         svgEl.style.display = "block";
         svgEl.style.margin = "0 auto";
 
-        containerRef.current.innerHTML = svgEl.outerHTML;
+        containerRef.current.innerHTML = DOMPurify.sanitize(svgEl.outerHTML, {
+          USE_PROFILES: { svg: true, svgFilters: true, html: true },
+          ADD_TAGS: ["foreignObject"],
+          ADD_ATTR: ["target", "style", "class", "transform", "viewBox", "xmlns", "dominant-baseline", "text-anchor"],
+        });
       } else {
-        containerRef.current.innerHTML = svg;
+        containerRef.current.innerHTML = DOMPurify.sanitize(svg, {
+          USE_PROFILES: { svg: true, svgFilters: true, html: true },
+          ADD_TAGS: ["foreignObject"],
+          ADD_ATTR: ["target", "style", "class", "transform", "viewBox", "xmlns", "dominant-baseline", "text-anchor"],
+        });
       }
 
       // Post-process to render KaTeX math in node labels, edge labels and foreignObjects
