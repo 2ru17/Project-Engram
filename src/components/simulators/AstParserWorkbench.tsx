@@ -172,6 +172,7 @@ export function AstParserWorkbench() {
         <div className="flex gap-2">
           <input
             type="text"
+            aria-label="Source arithmetic expression"
             value={expr}
             onChange={(e) => setExpr(e.target.value)}
             placeholder="e.g. (10 + 5) * 2 - 4 / 2"
@@ -194,6 +195,7 @@ export function AstParserWorkbench() {
             <span className="text-[var(--zen-cyan)] font-bold">x:</span>
             <input
               type="number"
+              aria-label="Variable x value"
               value={varX}
               onChange={(e) => setVarX(parseInt(e.target.value, 10) || 0)}
               className="w-16 px-2 py-0.5 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-center text-xs"
@@ -203,6 +205,7 @@ export function AstParserWorkbench() {
             <span className="text-[var(--zen-cyan)] font-bold">y:</span>
             <input
               type="number"
+              aria-label="Variable y value"
               value={varY}
               onChange={(e) => setVarY(parseInt(e.target.value, 10) || 0)}
               className="w-16 px-2 py-0.5 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] text-center text-xs"

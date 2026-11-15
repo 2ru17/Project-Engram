@@ -52,7 +52,7 @@ export function PerceptronWorkbench() {
   const [w2, setW2] = useState<number>(0.9);
   const [bias, setBias] = useState<number>(-0.1);
   const [lr, setLr] = useState<number>(0.1);
-  const [activation, setActivation] = useState<ActivationFn>("step");
+  const [activation] = useState<ActivationFn>("step");
   const [epochsTrained, setEpochsTrained] = useState<number>(0);
 
   const dataset = DATASETS[datasetKey];

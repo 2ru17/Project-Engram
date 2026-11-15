@@ -19,6 +19,15 @@ export interface GraphNodePayload {
   excerpt?: string;
   noteCount?: number;
   estimatedMinutes?: number;
+  year?: number;
+  yearLabel?: string;
+  term?: string;
+  isUtility?: boolean;
+  isReviewer?: boolean;
+  tags?: string[];
+  prevTopic?: string;
+  nextTopic?: string;
+  wikilinks?: string[];
   fx?: number;
   fy?: number;
 }
@@ -49,17 +58,17 @@ export async function GET() {
     links.push({ source, target, kind });
   };
 
-  // 1. Central Core Node: COMPUTER SCIENCE pinned at (0, 0)
+  // 1. Central Core Node: COMPUTER SCIENCE // SINGULARITY pinned at (0, 0)
   const sunId = "sun:computer-science";
   nodes.push({
     id: sunId,
-    name: "COMPUTER SCIENCE",
-    subtitle: "Core Academic Discipline // 計算機科学",
+    name: "COMPUTER SCIENCE // SINGULARITY",
+    subtitle: "Core Academic Discipline // Event Horizon",
     tier: "sun",
     group: 0,
     path: "/notes?view=directory",
     excerpt:
-      "The central core of Project Engram uniting Systems & Architecture, Algorithms & Theory, Networks & Cybersecurity, and Software Engineering courses across Core CS, NIS, and ST tracks.",
+      "The gravitational core of Project Engram uniting Systems & Architecture, Algorithms & Theory, Networks & Cybersecurity, and Software Engineering across Core CS, NIS, and ST tracks.",
     noteCount: index.notes.length,
     fx: 0,
     fy: 0,
@@ -105,6 +114,9 @@ export async function GET() {
         info?.desc ||
         `Course directory for ${code} indexing ${noteCount} academic monographs.`,
       noteCount,
+      year: info?.year,
+      yearLabel: info?.yearLabel,
+      term: info?.termFull,
     });
     nodeIds.add(starId);
 
@@ -131,6 +143,13 @@ export async function GET() {
     const info = getCourseInfo(note.courseCode);
     const domain: StarDomainId = info?.category || "systems";
     const parentStarId = `star:${note.courseCode.toLowerCase()}`;
+    const relSegments = note.legacyRelPath.split("/");
+    const fallbackYearLabel = relSegments[0]?.includes("Year") ? relSegments[0] : undefined;
+    const fallbackTerm = relSegments[1]?.includes("Term") ? relSegments[1] : undefined;
+    const yearLabel = info?.yearLabel || fallbackYearLabel;
+    const inferredYear =
+      info?.year ||
+      (yearLabel ? parseInt(yearLabel.replace(/\D+/g, ""), 10) || undefined : undefined);
 
     nodes.push({
       id: note.id,
@@ -145,6 +164,15 @@ export async function GET() {
       path: note.canonicalUrl,
       excerpt: note.excerpt,
       estimatedMinutes: note.estimatedMinutes,
+      year: inferredYear,
+      yearLabel,
+      term: info?.termFull || fallbackTerm,
+      isUtility: note.isUtility,
+      isReviewer: /^\[REV\]/i.test(note.name),
+      tags: note.tags.slice(0, 8),
+      prevTopic: note.prevTopic,
+      nextTopic: note.nextTopic,
+      wikilinks: note.wikilinks.slice(0, 12),
     });
     nodeIds.add(note.id);
 
