@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Topic 5- Recursion
 
 > [!info] Document Metadata
@@ -228,16 +227,16 @@ If recursion is too deep, the stack overflows (**stack overflow**).
 
 ### Answer Key & Explanations
 
-1. **B**. Recursion occurs when logic dictates a procedure invoke itself to solve sub-problems.
-2. **C**. Base cases serve as absolute stopping conditions terminating the self-calling chain.
-3. **C**. Unchecked recursion rapidly consumes stack frames until memory bounds are catastrophically breached.
-4. **B**. Each invocation creates a new frame on the call stack housing local variables and addresses.
-5. **B**. Loops reuse the same local memory context, avoiding the compounding frame overhead of recursion.
-6. **B**. The step shrinks the problem state and cascades execution into the next function layer.
-7. **A**. Mathematical sequences like factorials intrinsically mirror recursive divide-and-conquer logic models.
-8. **A**. Unwinding resolves suspended operations retroactively once the base case propagates returns upwards.
-9. **B**. Tail calls finish completely upon returning, requiring no pending post-recursive mathematical operations.
-10. **B**. Optimizers can recycle the current stack frame, eliminating overflow risks for deep recursive chains.
+1. **B)** Recursion occurs when logic dictates a procedure invoke itself to solve sub-problems.
+2. **C)** Base cases serve as absolute stopping conditions terminating the self-calling chain.
+3. **C)** Unchecked recursion rapidly consumes stack frames until memory bounds are catastrophically breached.
+4. **B)** Each invocation creates a new frame on the call stack housing local variables and addresses.
+5. **B)** Loops reuse the same local memory context, avoiding the compounding frame overhead of recursion.
+6. **B)** The step shrinks the problem state and cascades execution into the next function layer.
+7. **A)** Mathematical sequences like factorials intrinsically mirror recursive divide-and-conquer logic models.
+8. **A)** Unwinding resolves suspended operations retroactively once the base case propagates returns upwards.
+9. **B)** Tail calls finish completely upon returning, requiring no pending post-recursive mathematical operations.
+10. **B)** Optimizers can recycle the current stack frame, eliminating overflow risks for deep recursive chains.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSARCH2
 topic: Floating-Point Arithmetic Operations and Hardware Alignment
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -404,4 +403,4 @@ verify_operations()
 
 ## References & Navigation
 
-- **Related Notes:** [[Floating-Point Operations & Errors]]
+- **Related Notes:** [[Floating-Point Arithmetic Operations]], [[IEEE 754 Floating-Point Representation (Single & Double Precision)]]

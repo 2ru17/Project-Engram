@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Size
 
 > [!info] Document Metadata
@@ -104,9 +103,9 @@ void printArray(int arr[], int size) {
 
 ### Answer Key & Explanations
 
-1. **B**. The `sizeof` operator natively evaluates the memory footprint of objects during compilation.
-2. **B**. Dividing the entire array's byte size by the byte size of a single element yields the item count.
-3. **C**. Older C standards mandate sizes be known strictly at compile-time via constants.
+1. **B)** The `sizeof` operator natively evaluates the memory footprint of objects during compilation.
+2. **B)** Dividing the entire array's byte size by the byte size of a single element yields the item count.
+3. **C)** Older C standards mandate sizes be known strictly at compile-time via constants.
 
 ## References & Navigation
 

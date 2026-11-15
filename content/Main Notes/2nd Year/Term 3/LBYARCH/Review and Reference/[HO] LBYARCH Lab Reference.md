@@ -5,7 +5,6 @@ course: LBYARCH
 topic: "LBYARCH Lab Reference Guide"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -122,4 +121,4 @@ Consider storing the 32-bit hex value `0x12345678` at memory address `0x1000`.
 
 ## References & Navigation
 
-- **Related Notes:** [[LBYARCH Lab]]
+- **Related Notes:** [[Verilog HDL and Digital Circuit Simulation]], [[Assembly Language and CPU Architecture Lab]]

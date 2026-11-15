@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Express
 status: completed
 ---
-
 # Express
 
 > [!info] Document Metadata
@@ -110,9 +109,9 @@ This route path will match requests to the root route, /.
 
 ### Answer Key & Explanations
 
-1. **C**. Express is a light-weight NodeJS framework that provides robust features for web and mobile applications.
-2. **B**. The `req` parameter represents the request object, which contains information about the HTTP request.
-3. **A**. The `app.listen([port])` method is used to start a UNIX socket and listen for connections on the given path/port.
+1. **C)** Express is a light-weight NodeJS framework that provides robust features for web and mobile applications.
+2. **B)** The `req` parameter represents the request object, which contains information about the HTTP request.
+3. **A)** The `app.listen([port])` method is used to start a UNIX socket and listen for connections on the given path/port.
 
 ## References & Navigation
 

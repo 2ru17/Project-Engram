@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Processing Unit Organization & Single-Bus Datapath"
 status: completed
 ---
-
 # Module 10: Processing Unit Organization & Single-Bus Datapath
 
 > [!info] Document Metadata
@@ -207,11 +206,11 @@ Cycle 6: MDR_out, EAX_in, END                      ; Gate memory data into EAX; 
 
 ### Answer Key & Explanations
 
-1. **B**. The single-bus architecture has exactly one shared data path. At most one register may drive the bus ($R_{\text{out}} = 1$) to prevent electrical contention, although multiple registers may read from it ($R_{\text{in}} = 1$).
-2. **B**. Because both operands for an ALU operation cannot reside on the single internal bus simultaneously, one operand must be pre-loaded into Temporary Register $Y$ in a preceding cycle.
-3. **C**. Cycle 1 places the current $PC$ onto the bus to load $MAR$, issues the memory `Read`, and simultaneously computes $PC + 4$ in the ALU, storing the updated address in $Z$.
-4. **B**. `WMFC` synchronizes the high-speed CPU with slower asynchronous main memory subsystems, preventing the CPU from executing subsequent steps until the memory controller signals that the transaction has finished.
-5. **A**. In a three-bus datapath, Bus A and Bus B feed both ALU inputs simultaneously and Bus C drives the destination register, completing execution in 1 cycle ($R1_{\text{outA}}, R2_{\text{outB}}, \text{ADD}, R3_{\text{inC}}$). A single-bus datapath requires 3 cycles ($R1_{\text{out}}, Y_{\text{in}}$; $R2_{\text{out}}, \text{ADD}, Z_{\text{in}}$; $Z_{\text{out}}, R3_{\text{in}}$).
+1. **B)** The single-bus architecture has exactly one shared data path. At most one register may drive the bus ($R_{\text{out}} = 1$) to prevent electrical contention, although multiple registers may read from it ($R_{\text{in}} = 1$).
+2. **B)** Because both operands for an ALU operation cannot reside on the single internal bus simultaneously, one operand must be pre-loaded into Temporary Register $Y$ in a preceding cycle.
+3. **C)** Cycle 1 places the current $PC$ onto the bus to load $MAR$, issues the memory `Read`, and simultaneously computes $PC + 4$ in the ALU, storing the updated address in $Z$.
+4. **B)** `WMFC` synchronizes the high-speed CPU with slower asynchronous main memory subsystems, preventing the CPU from executing subsequent steps until the memory controller signals that the transaction has finished.
+5. **A)** In a three-bus datapath, Bus A and Bus B feed both ALU inputs simultaneously and Bus C drives the destination register, completing execution in 1 cycle ($R1_{\text{outA}}, R2_{\text{outB}}, \text{ADD}, R3_{\text{inC}}$). A single-bus datapath requires 3 cycles ($R1_{\text{out}}, Y_{\text{in}}$; $R2_{\text{out}}, \text{ADD}, Z_{\text{in}}$; $Z_{\text{out}}, R3_{\text{in}}$).
 
 ## References & Navigation
 

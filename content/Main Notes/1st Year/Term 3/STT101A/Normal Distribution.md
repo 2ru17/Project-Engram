@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -71,11 +70,11 @@ The **Normal (Gaussian) Distribution**, denoted $X \sim \mathcal{N}(\mu, \sigma^
 
 ### Answer Key & Explanations
 
-1. **B**. Because the Gaussian density is unimodal and symmetric about $x = \mu$, its center of mass (mean), $50$th percentile (median), and peak density (mode) all coincide at $\mu$.
-2. **A**. $Z = \frac{X - \mu}{\sigma} = \frac{130 - 100}{\sqrt{225}} = \frac{30}{15} = +2.0$.
-3. **C**. Probability for a continuous random variable is the area under the density curve $f(x)$; a single point $[c, c]$ has width zero, so $P(X = c) = \int_c^c f(x)\,dx = 0$.
-4. **D**. By symmetry, $\Phi(-1.96) = 1 - \Phi(1.96) = 1 - 0.975 = 0.025$. Thus $P(-1.96 \le Z \le 1.96) = \Phi(1.96) - \Phi(-1.96) = 0.975 - 0.025 = 0.950$.
-5. **B**. Setting the second derivative $f''(x) = 0$ yields $(x - \mu)^2 - \sigma^2 = 0 \implies x = \mu \pm \sigma$.
+1. **B)** Because the Gaussian density is unimodal and symmetric about $x = \mu$, its center of mass (mean), $50$th percentile (median), and peak density (mode) all coincide at $\mu$.
+2. **A)** $Z = \frac{X - \mu}{\sigma} = \frac{130 - 100}{\sqrt{225}} = \frac{30}{15} = +2.0$.
+3. **C)** Probability for a continuous random variable is the area under the density curve $f(x)$; a single point $[c, c]$ has width zero, so $P(X = c) = \int_c^c f(x)\,dx = 0$.
+4. **D)** By symmetry, $\Phi(-1.96) = 1 - \Phi(1.96) = 1 - 0.975 = 0.025$. Thus $P(-1.96 \le Z \le 1.96) = \Phi(1.96) - \Phi(-1.96) = 0.975 - 0.025 = 0.950$.
+5. **B)** Setting the second derivative $f''(x) = 0$ yields $(x - \mu)^2 - \sigma^2 = 0 \implies x = \mu \pm \sigma$.
 
 ## References & Navigation
 

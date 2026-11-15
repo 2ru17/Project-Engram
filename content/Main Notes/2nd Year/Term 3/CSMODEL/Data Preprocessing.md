@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Data Preprocessing
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -463,11 +462,11 @@ What is the output of `res`? A) `['Small', 'Medium', 'Large']` B) `['Medium', 'L
 
 ### Answer Key & Explanations
 
-1. **B**. Feature scaling normalizes the ranges so distance-based and gradient-based algorithms perform correctly.
-2. **A**. Data leakage occurs when future/test info leaks into the training process, causing over-optimistic results.
-3. **C**. Standardization centers data at 0 with a standard deviation of 1.
-4. **D**. Label encoding assigns numbers (0, 1, 2) which algorithms might interpret as having inherent order/magnitude.
-5. **B**. Calculating scaling params on the entire dataset causes data leakage from the test set.
+1. **B)** Feature scaling normalizes the ranges so distance-based and gradient-based algorithms perform correctly.
+2. **A)** Data leakage occurs when future/test info leaks into the training process, causing over-optimistic results.
+3. **C)** Standardization centers data at 0 with a standard deviation of 1.
+4. **D)** Label encoding assigns numbers (0, 1, 2) which algorithms might interpret as having inherent order/magnitude.
+5. **B)** Calculating scaling params on the entire dataset causes data leakage from the test set.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Clustering
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -562,11 +561,11 @@ Which configuration represents the best clustering result and why? A) Configurat
 
 ### Answer Key & Explanations
 
-1. **B**. DBSCAN is a density-based algorithm that can find arbitrarily shaped clusters.
-2. **A**. Silhouette score measures how similar an object is to its own cluster compared to other clusters.
-3. **C**. The centroid is the center (mean) of a cluster.
-4. **D**. DBSCAN determines clusters based on density parameters (eps and min_samples), not a predefined cluster count.
-5. **B**. A dendrogram is a tree-like diagram that records the sequences of merges or splits.
+1. **B)** DBSCAN is a density-based algorithm that can find arbitrarily shaped clusters.
+2. **A)** Silhouette score measures how similar an object is to its own cluster compared to other clusters.
+3. **C)** The centroid is the center (mean) of a cluster.
+4. **D)** DBSCAN determines clusters based on density parameters (eps and min_samples), not a predefined cluster count.
+5. **B)** A dendrogram is a tree-like diagram that records the sequences of merges or splits.
 
 ## References & Navigation
 

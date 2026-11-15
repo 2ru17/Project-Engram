@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Arrays and Functions
 
 > [!info] Document Metadata
@@ -148,16 +147,16 @@ void print2DArray(int arr[][COLS], int numRows) {
 
 ### Answer Key & Explanations
 
-1. **B**. Passing arrays simply passes a pointer rather than duplicating large data structures.
-2. **B**. It is best practice to pass the pointer via `[]` alongside a distinct size parameter.
-3. **C**. Because functions operate on the original memory pointer, alterations impact the original data.
-4. **B**. The compiler needs later dimension sizes to properly calculate memory offset locations.
-5. **A**. Functions cannot deduce bounds natively due to pointer decay, so sizes prevent dangerous memory faults.
-6. **C**. Once decayed to a pointer, `sizeof` evaluates the pointer's byte footprint, not the original array's length.
-7. **B**. Parameter lists mandate defining columns when dealing with bi-dimensional mappings.
-8. **A**. The macro computes bounds successfully only when the original statically allocated scope applies.
-9. **A**. Bypassing strict array matrix types by pointing directly simplifies operations in dynamic contexts.
-10. **A**. Eliminating array copies significantly slashes memory usage and function invocation processing times.
+1. **B)** Passing arrays simply passes a pointer rather than duplicating large data structures.
+2. **B)** It is best practice to pass the pointer via `[]` alongside a distinct size parameter.
+3. **C)** Because functions operate on the original memory pointer, alterations impact the original data.
+4. **B)** The compiler needs later dimension sizes to properly calculate memory offset locations.
+5. **A)** Functions cannot deduce bounds natively due to pointer decay, so sizes prevent dangerous memory faults.
+6. **C)** Once decayed to a pointer, `sizeof` evaluates the pointer's byte footprint, not the original array's length.
+7. **B)** Parameter lists mandate defining columns when dealing with bi-dimensional mappings.
+8. **A)** The macro computes bounds successfully only when the original statically allocated scope applies.
+9. **A)** Bypassing strict array matrix types by pointing directly simplifies operations in dynamic contexts.
+10. **A)** Eliminating array copies significantly slashes memory usage and function invocation processing times.
 
 ## References & Navigation
 

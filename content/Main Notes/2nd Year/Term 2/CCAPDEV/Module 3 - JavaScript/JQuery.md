@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: JQuery
 status: completed
 ---
-
 # JQuery
 
 > [!info] Document Metadata
@@ -99,9 +98,9 @@ var x = $(“.post”);
 
 ### Answer Key & Explanations
 
-1. **B**. `$(document).ready` is used to prevent jQuery code from running before the document is ready.
-2. **C**. The syntax `$("#menu")` is the jQuery equivalent of `document.getElementById("menu")`.
-3. **B**. jQuery is a lightweight but feature-rich JavaScript library designed to simplify HTML DOM manipulation.
+1. **B)** `$(document).ready` is used to prevent jQuery code from running before the document is ready.
+2. **C)** The syntax `$("#menu")` is the jQuery equivalent of `document.getElementById("menu")`.
+3. **B)** jQuery is a lightweight but feature-rich JavaScript library designed to simplify HTML DOM manipulation.
 
 ## References & Navigation
 

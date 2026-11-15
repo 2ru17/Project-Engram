@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -69,11 +68,11 @@ Split into two mutually exclusive cases based on the exact number of women:
 
 ### Answer Key & Explanations
 
-1. **B**. The Rule of Sum holds without inclusion-exclusion adjustments if and only if no outcome belongs to two different cases ($E_i \cap E_j = \emptyset$) and every valid outcome in $E$ falls into one of the cases.
-2. **A**. Selecting 1 woman first ($\binom{5}{1}$) and then 3 people from the remaining 10 ($\binom{10}{3}$) counts a committee with $k$ women $k$ times—once for each woman who could be designated as the "first" woman.
-3. **B**. Total committees $= \binom{11}{4} = 330$; committees with $0$ women $= \binom{6}{4} = 15$; thus $330 - 15 = 315$ (or by cases: $\binom{5}{1}\binom{6}{3} + \binom{5}{2}\binom{6}{2} + \binom{5}{3}\binom{6}{1} + \binom{5}{4}\binom{6}{0} = 100 + 150 + 60 + 5 = 315$).
-4. **B**. Case 1 (units digit $= 0$): $1 \text{ choice for units} \times 5 \text{ for hundreds} \times 4 \text{ for tens} = 20$. Case 2 (units digit $\in \{2,4\}$): $2 \text{ choices for units} \times 4 \text{ for hundreds (not } 0 \text{ or units)} \times 4 \text{ for tens} = 32$. Total $= 20 + 32 = 52$.
-5. **A**. The number of available choices for the hundreds digit depends on whether $0$ was already used in the units place ($5$ choices if $0$ was used; $4$ choices if $2$ or $4$ was used), requiring two disjoint cases.
+1. **B)** The Rule of Sum holds without inclusion-exclusion adjustments if and only if no outcome belongs to two different cases ($E_i \cap E_j = \emptyset$) and every valid outcome in $E$ falls into one of the cases.
+2. **A)** Selecting 1 woman first ($\binom{5}{1}$) and then 3 people from the remaining 10 ($\binom{10}{3}$) counts a committee with $k$ women $k$ times—once for each woman who could be designated as the "first" woman.
+3. **B)** Total committees $= \binom{11}{4} = 330$; committees with $0$ women $= \binom{6}{4} = 15$; thus $330 - 15 = 315$ (or by cases: $\binom{5}{1}\binom{6}{3} + \binom{5}{2}\binom{6}{2} + \binom{5}{3}\binom{6}{1} + \binom{5}{4}\binom{6}{0} = 100 + 150 + 60 + 5 = 315$).
+4. **B)** Case 1 (units digit $= 0$): $1 \text{ choice for units} \times 5 \text{ for hundreds} \times 4 \text{ for tens} = 20$. Case 2 (units digit $\in \{2,4\}$): $2 \text{ choices for units} \times 4 \text{ for hundreds (not } 0 \text{ or units)} \times 4 \text{ for tens} = 32$. Total $= 20 + 32 = 52$.
+5. **A)** The number of available choices for the hundreds digit depends on whether $0$ was already used in the units place ($5$ choices if $0$ was used; $4$ choices if $2$ or $4$ was used), requiring two disjoint cases.
 
 ## References & Navigation
 

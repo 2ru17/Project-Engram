@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -67,11 +66,11 @@ In combinatorics, the **Multiplication Rule** (Rule of Product) states that if a
 
 ### Answer Key & Explanations
 
-1. **B**. By the Multiplication Rule across 3 stages: $4 \times 6 \times 3 = 72$.
-2. **B**. Without replacement across 5 positions, the choices are $26, 25, 24, 23, 22$, whose product is $7,893,600$.
-3. **A**. There are $5$ odd digits ($1,3,5,7,9$) and none is $0$, so each of the $4$ digit places independently has $5$ choices: $5^4 = 625$.
-4. **A**. Sequential multi-step construction ("do Stage 1 AND Stage 2") multiplies branching counts, whereas choosing between disjoint cases ("Case 1 OR Case 2") sums their counts.
-5. **B**. Four bit positions are fixed ($1$ choice each), and the middle $4$ bits each have $2$ choices (`0` or `1`), yielding $1 \times 1 \times 2^4 \times 1 \times 1 = 16$.
+1. **B)** By the Multiplication Rule across 3 stages: $4 \times 6 \times 3 = 72$.
+2. **B)** Without replacement across 5 positions, the choices are $26, 25, 24, 23, 22$, whose product is $7,893,600$.
+3. **A)** There are $5$ odd digits ($1,3,5,7,9$) and none is $0$, so each of the $4$ digit places independently has $5$ choices: $5^4 = 625$.
+4. **A)** Sequential multi-step construction ("do Stage 1 AND Stage 2") multiplies branching counts, whereas choosing between disjoint cases ("Case 1 OR Case 2") sums their counts.
+5. **B)** Four bit positions are fixed ($1$ choice each), and the middle $4$ bits each have $2$ choices (`0` or `1`), yielding $1 \times 1 \times 2^4 \times 1 \times 1 = 16$.
 
 ## References & Navigation
 

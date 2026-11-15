@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -72,11 +71,11 @@ The **Intersection** of two events $A$ and $B$, denoted $A \cap B$ (or $AB$), is
 
 ### Answer Key & Explanations
 
-1. **B**. By set definition, $\omega \in A \cap B \iff (\omega \in A) \land (\omega \in B)$, meaning both events occur together on the trial.
-2. **A**. Since $A = (A \cap B) \cup (A \cap B^c)$ is a disjoint union, $P(A) = P(A \cap B) + P(A \cap B^c) \ge P(A \cap B)$, and similarly $P(B) \ge P(A \cap B)$.
-3. **A**. An intersection $A \cap B$ is contained inside $A$, so its probability can never exceed $P(A) = 0.40$ (it would imply $P(A \cap B^c) = 0.40 - 0.45 = -0.05 < 0$, violating Axiom 1).
-4. **B**. Since $P(A \cup B) \le 1$, $P(A \cap B) = P(A) + P(B) - P(A \cup B) \ge 0.80 + 0.75 - 1.00 = 0.55$.
-5. **B**. When every element of $A$ is already inside $B$, their common overlap is all of $A$: $A \cap B = A$ and $P(A \cap B) = P(A)$.
+1. **B)** By set definition, $\omega \in A \cap B \iff (\omega \in A) \land (\omega \in B)$, meaning both events occur together on the trial.
+2. **A)** Since $A = (A \cap B) \cup (A \cap B^c)$ is a disjoint union, $P(A) = P(A \cap B) + P(A \cap B^c) \ge P(A \cap B)$, and similarly $P(B) \ge P(A \cap B)$.
+3. **A)** An intersection $A \cap B$ is contained inside $A$, so its probability can never exceed $P(A) = 0.40$ (it would imply $P(A \cap B^c) = 0.40 - 0.45 = -0.05 < 0$, violating Axiom 1).
+4. **B)** Since $P(A \cup B) \le 1$, $P(A \cap B) = P(A) + P(B) - P(A \cup B) \ge 0.80 + 0.75 - 1.00 = 0.55$.
+5. **B)** When every element of $A$ is already inside $B$, their common overlap is all of $A$: $A \cap B = A$ and $P(A \cap B) = P(A)$.
 
 ## References & Navigation
 

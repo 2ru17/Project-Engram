@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Virtual Memory & Address Translation (Paging & TLB)"
 status: completed
 ---
-
 # Module 15: Virtual Memory & Address Translation (Paging & TLB)
 
 > [!info] Document Metadata
@@ -220,14 +219,14 @@ $$\text{Translation Time on TLB Miss (No Fault)} = t_{\text{TLB}} + (2 \times t_
 
 ### Answer Key & Explanations
 
-1. **B**. Page size $4\text{ KiB} = 2^{12}\text{ bytes} \implies 12\text{ offset bits}$. Total virtual address is 32 bits $\implies \text{VPN} = 32 - 12 = 20\text{ bits}$.
-2. **C**. The Memory Management Unit (MMU) is the dedicated hardware unit on the CPU chip that performs dynamic virtual-to-physical address translation.
-3. **B**. When $V=0$ in the PTE, the referenced virtual page is not resident in physical RAM (it is on disk swap), causing the MMU to trigger a Page Fault interrupt.
-4. **B**. A flat page table for a 64-bit or 32-bit address space would require gigabytes of contiguous RAM. Multi-level hierarchical trees allocate page table pages only for the memory regions currently mapped by the process.
-5. **A**. On a TLB hit, the Physical Page Number is extracted directly from the on-chip TLB in $\approx 1\text{ ns}$, avoiding memory page table walks completely.
+1. **B)** Page size $4\text{ KiB} = 2^{12}\text{ bytes} \implies 12\text{ offset bits}$. Total virtual address is 32 bits $\implies \text{VPN} = 32 - 12 = 20\text{ bits}$.
+2. **C)** The Memory Management Unit (MMU) is the dedicated hardware unit on the CPU chip that performs dynamic virtual-to-physical address translation.
+3. **B)** When $V=0$ in the PTE, the referenced virtual page is not resident in physical RAM (it is on disk swap), causing the MMU to trigger a Page Fault interrupt.
+4. **B)** A flat page table for a 64-bit or 32-bit address space would require gigabytes of contiguous RAM. Multi-level hierarchical trees allocate page table pages only for the memory regions currently mapped by the process.
+5. **A)** On a TLB hit, the Physical Page Number is extracted directly from the on-chip TLB in $\approx 1\text{ ns}$, avoiding memory page table walks completely.
 
 ## References & Navigation
 
 - **Previous Topic:** [[Cache Replacement Policies & Write Strategies]]
-- **Next Topic:** [[Module 16 - I/O Organization & Interrupt Handling]]
+- **Next Topic:** [[IO Organization & Interrupt Handling]]
 - **Related Notes:** [[Memory System Organization & Hierarchy]], [[Cache Memory Principles & Mapping Architectures]]

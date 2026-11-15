@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Topic 2- Strings
 
 > [!info] Document Metadata
@@ -183,16 +182,16 @@ int main() {
 
 ### Answer Key & Explanations
 
-1. **C**. C does not feature an innate string object, utilizing character arrays terminating in `\0` instead.
-2. **B**. The compiler calculates character length and auto-appends the required null character footprint.
-3. **D**. `strlen()` iterates to measure characters right before reaching the null byte marker.
-4. **B**. `scanf()` blindly pulls characters into buffers risking severe memory overwrites upon long entries.
-5. **C**. `fgets()` limits reads strictly to buffer boundaries securing input against dangerous buffer overflows.
-6. **D**. Evaluative comparisons in C involve utilizing library routines like `strcmp` which iterate through character blocks.
-7. **C**. The function calculates the difference resulting in 0 specifically when sequences match identically.
-8. **A**. Using the bounded copy prevents unintentional spillage overriding non-allocated adjoining block domains.
-9. **B**. Standard character-level inspection and manipulation tools trace back directly to the `<ctype.h>` definition header.
-10. **C**. Modifying immutable constant text memory sections generally invokes OS protection protocols triggering critical application faults.
+1. **C)** C does not feature an innate string object, utilizing character arrays terminating in `\0` instead.
+2. **B)** The compiler calculates character length and auto-appends the required null character footprint.
+3. **D)** `strlen()` iterates to measure characters right before reaching the null byte marker.
+4. **B)** `scanf()` blindly pulls characters into buffers risking severe memory overwrites upon long entries.
+5. **C)** `fgets()` limits reads strictly to buffer boundaries securing input against dangerous buffer overflows.
+6. **D)** Evaluative comparisons in C involve utilizing library routines like `strcmp` which iterate through character blocks.
+7. **C)** The function calculates the difference resulting in 0 specifically when sequences match identically.
+8. **A)** Using the bounded copy prevents unintentional spillage overriding non-allocated adjoining block domains.
+9. **B)** Standard character-level inspection and manipulation tools trace back directly to the `<ctype.h>` definition header.
+10. **C)** Modifying immutable constant text memory sections generally invokes OS protection protocols triggering critical application faults.
 
 ## References & Navigation
 

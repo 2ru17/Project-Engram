@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "CSARCH2 Comprehensive Reviewer and Practice Exam"
 status: completed
 ---
-
 # CSARCH2 Comprehensive Reviewer and Practice Exam
 
 > [!info] Document Metadata
@@ -203,7 +202,46 @@ status: completed
 - **Forgetting the Biased Exponent Offset in Float Multiplication:** When multiplying floats, adding two biased exponents yields $E_x' + E_y' = E_x + E_y + 2 \cdot \text{Bias}$. Hardware must subtract one $\text{Bias}$ to restore the proper encoding.
 - **Single-Bus Multiple Output Bus Contention:** In microprogramming questions, never assert two `_out` signals on the same step (e.g., `PC_out` and `EBX_out` simultaneously).
 
+## Multiple Choice Questions
+
+1. In a 5-bit 2's complement addition where A = 10110 (-10) and B = 10101 (-11) produce raw sum 01011 (+11) with MSB carries C_5 = 1 and C_4 = 0, how does hardware detect signed overflow V?
+    - **A)** V = C_5 AND C_4 = 0
+    - **B)** V = C_5 XOR C_4 = 1, indicating carry into MSB differs from carry out of MSB
+    - **C)** V = NOT C_5 = 0, meaning no unsigned wrap occurred
+    - **D)** V = A_0 XOR B_0 = 1
+
+2. In Radix-4 Extended Booth's Multiplication of n-bit signed integers, how many multiplication iterations are required and which bit triplet is inspected at step i?
+    - **A)** n iterations inspecting pairs (Q_0, Q_{-1})
+    - **B)** n / 2 iterations inspecting overlapping triplets (Q_{2i+1}, Q_{2i}, Q_{2i-1})
+    - **C)** log2(n) iterations inspecting nibble groups (Q_3, Q_2, Q_1, Q_0)
+    - **D)** 2n iterations performing restoring subtraction on every cycle
+
+3. A 32-bit byte-addressable CPU has a 128 KiB 4-way set-associative cache with 64-byte blocks. How are the 32 address bits partitioned into TAG, SET, and OFFSET fields?
+    - **A)** TAG: 15 bits, SET: 11 bits, OFFSET: 6 bits
+    - **B)** TAG: 17 bits, SET: 9 bits, OFFSET: 6 bits
+    - **C)** TAG: 18 bits, SET: 8 bits, OFFSET: 6 bits
+    - **D)** TAG: 20 bits, SET: 6 bits, OFFSET: 6 bits
+
+4. Using the same cache (L1 hit time = 1.5 ns, L1 miss rate = 3%, DRAM miss penalty = 70 ns), what is the Average Memory Access Time (AMAT)?
+    - **A)** 1.50 ns
+    - **B)** 2.10 ns
+    - **C)** 3.60 ns
+    - **D)** 5.10 ns
+
+5. Why must single-bus microinstruction sequences avoid asserting two _out control signals (such as PC_out and EAX_out) in the same clock step?
+    - **A)** Both outputs share one common internal CPU bus, causing electrical bus contention and data corruption
+    - **B)** Reading two registers simultaneously doubles the IEEE 754 exponent bias
+    - **C)** Single-bus CPUs lack a Translation Lookaside Buffer (TLB) for MAR writes
+    - **D)** Asserting two _out signals forces non-restoring division to execute instead of WMFC
+
+### Answer Key & Explanations
+
+1. **B)** Two negative operands summed to a positive value ($+11$) because the true sum ($-21$) falls outside 5-bit signed range $[-16, +15]$; hardware flags this via $V = C_5 \oplus C_4 = 1 \oplus 0 = 1$.
+2. **B)** Extended Radix-4 Booth's recodes overlapping 3-bit windows $(Q_{2i+1}, Q_{2i}, Q_{2i-1})$ into multipliers $\{0, \pm 1, \pm 2\}$ and shifts by 2 bits per cycle, cutting iterations from $n$ to $n/2$.
+3. **B)** $64\text{-byte blocks} \implies w = \log_2(64) = 6\text{ offset bits}$; total lines $= 131072 / 64 = 2048$; 4-way sets $= 2048 / 4 = 512 \implies s = \log_2(512) = 9\text{ set bits}$; remaining $t = 32 - 9 - 6 = 17\text{ tag bits}$.
+4. **C)** Applying $AMAT = t_h + m \cdot t_p$ gives $1.5\text{ ns} + 0.03 \times 70\text{ ns} = 1.5 + 2.1 = 3.60\text{ ns}$.
+5. **A)** Only one register or functional unit may drive the shared single internal CPU bus during a microstep; driving two `_out` signals causes bus contention.
 
 ## References & Navigation
 
-- **Related Notes:** [[Computer Architecture 2]]
+- **Related Notes:** [[Course Overview & Architecture Foundations]], [[Pipelining Fundamentals & Pipeline Hazards]], [[Virtual Memory & Address Translation (Paging & TLB)]]

@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -161,16 +160,16 @@ This counterintuitive result is known as the **Base Rate Fallacy**: because beni
 
 ### Answer Key & Explanations
 
-1. **B**. $P(A \mid B)$ is the likelihood function: the probability of generating data $A$ given parameter state $B$.
-2. **A**. The denominator $\sum P(A \mid B_i)P(B_i)$ sums all disjoint paths leading to evidence $A$, serving as the normalizing constant.
-3. **C**. Low base rates mean the non-target group is vast; multiplying a small false-positive rate by a massive population yields an absolute count that dominates true positives.
-4. **D**. A partition divides the sample space into non-overlapping subsets whose probabilities sum to 1.
-5. **B**. Total probability of an alarm: $P(+) = (0.99)(0.005) + (0.02)(0.995) = 0.00495 + 0.01990 = 0.02485$.
-6. **C**. $P(B \mid A) = \frac{P(A \mid B)P(B)}{P(A)} = \frac{0.80 \times 0.10}{0.20} = \frac{0.08}{0.20} = 0.40$.
-7. **A**. When prior belief is virtually impossible ($P(B) \to 0$), extraordinarily strong evidence is required to lift the posterior above zero.
-8. **D**. In Bayesian filtering and tracking (e.g., Kalman filters, spam classifiers), today's posterior is tomorrow's prior.
-9. **C**. A likelihood ratio greater than 1 means the observed outcome is characteristic of hypothesis $B$, boosting its posterior credibility.
-10. **A**. The Naïve Bayes algorithm applies Bayes' theorem under the simplifying assumption that feature dimensions are conditionally independent given the class label.
+1. **B)** $P(A \mid B)$ is the likelihood function: the probability of generating data $A$ given parameter state $B$.
+2. **A)** The denominator $\sum P(A \mid B_i)P(B_i)$ sums all disjoint paths leading to evidence $A$, serving as the normalizing constant.
+3. **C)** Low base rates mean the non-target group is vast; multiplying a small false-positive rate by a massive population yields an absolute count that dominates true positives.
+4. **D)** A partition divides the sample space into non-overlapping subsets whose probabilities sum to 1.
+5. **B)** Total probability of an alarm: $P(+) = (0.99)(0.005) + (0.02)(0.995) = 0.00495 + 0.01990 = 0.02485$.
+6. **C)** $P(B \mid A) = \frac{P(A \mid B)P(B)}{P(A)} = \frac{0.80 \times 0.10}{0.20} = \frac{0.08}{0.20} = 0.40$.
+7. **A)** When prior belief is virtually impossible ($P(B) \to 0$), extraordinarily strong evidence is required to lift the posterior above zero.
+8. **D)** In Bayesian filtering and tracking (e.g., Kalman filters, spam classifiers), today's posterior is tomorrow's prior.
+9. **C)** A likelihood ratio greater than 1 means the observed outcome is characteristic of hypothesis $B$, boosting its posterior credibility.
+10. **A)** The Naïve Bayes algorithm applies Bayes' theorem under the simplifying assumption that feature dimensions are conditionally independent given the class label.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "1.0 ICT and Society"
 status: completed
 ---
-
 # 1.0 ICT and Society
 
 > [!info] Document Metadata
@@ -131,16 +130,16 @@ To address complex, real-world problems, the computing industry relies on a spec
 
 ### Answer Key & Explanations
 
-1. **C**. The text explicitly lists the Abacus (circa 3000 BCE) as one of the earliest computing devices.
-2. **B**. The Von Neumann Architecture introduced the revolutionary concept of electronically storing programs and data.
-3. **A**. The Second Generation was defined by the invention of the transistor in 1947, which replaced unreliable vacuum tubes.
-4. **C**. Computer Engineering is described as the field that bridges hardware and software, designing circuits and physical networking components.
-5. **B**. IoT is defined as the network of interconnected physical devices (e.g., smart homes) that communicate and exchange data.
-6. **C**. The text lists social isolation, anxiety, depression, and reduced attention spans as negative consequences of digital connectivity.
-7. **D**. The Fourth Generation (1970s–1980s) saw the advent of microprocessors that made Personal Computers (PCs) possible.
-8. **C**. The Turing Machine is a theoretical mathematical model from the 1930s that defines the limits of computation.
-9. **D**. Software Engineering focuses on applying engineering principles to the rigorous, systematic development of reliable software.
-10. **B**. The Fifth Generation is defined by the World Wide Web, extreme connectivity, mobile/cloud computing, AI, and quantum computing.
+1. **C)** The text explicitly lists the Abacus (circa 3000 BCE) as one of the earliest computing devices.
+2. **B)** The Von Neumann Architecture introduced the revolutionary concept of electronically storing programs and data.
+3. **A)** The Second Generation was defined by the invention of the transistor in 1947, which replaced unreliable vacuum tubes.
+4. **C)** Computer Engineering is described as the field that bridges hardware and software, designing circuits and physical networking components.
+5. **B)** IoT is defined as the network of interconnected physical devices (e.g., smart homes) that communicate and exchange data.
+6. **C)** The text lists social isolation, anxiety, depression, and reduced attention spans as negative consequences of digital connectivity.
+7. **D)** The Fourth Generation (1970s–1980s) saw the advent of microprocessors that made Personal Computers (PCs) possible.
+8. **C)** The Turing Machine is a theoretical mathematical model from the 1930s that defines the limits of computation.
+9. **D)** Software Engineering focuses on applying engineering principles to the rigorous, systematic development of reliable software.
+10. **B)** The Fifth Generation is defined by the World Wide Web, extreme connectivity, mobile/cloud computing, AI, and quantum computing.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: JSON and Fetch
 status: completed
 ---
-
 # JSON and Fetch
 
 > [!info] Document Metadata
@@ -112,9 +111,9 @@ Strings in JSON must be written in double quotes
 
 ### Answer Key & Explanations
 
-1. **C**. Valid JSON data types include String, Number, JSON object, Array, Boolean, and null. "Undefined" is a JavaScript type but not a valid JSON type.
-2. **A**. Strings in JSON must be written in double quotes.
-3. **B**. The `FormData` interface allows you to easily get data from a form, structured as key-value pairs, by passing `document.forms.myform` to it.
+1. **C)** Valid JSON data types include String, Number, JSON object, Array, Boolean, and null. "Undefined" is a JavaScript type but not a valid JSON type.
+2. **A)** Strings in JSON must be written in double quotes.
+3. **B)** The `FormData` interface allows you to easily get data from a form, structured as key-value pairs, by passing `document.forms.myform` to it.
 
 ## References & Navigation
 

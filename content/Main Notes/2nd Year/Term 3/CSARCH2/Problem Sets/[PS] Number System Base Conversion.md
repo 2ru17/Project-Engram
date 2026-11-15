@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Number System Base Conversion"
 status: completed
 ---
-
 # Problem Set: Number System Base Conversion
 
 > [!info] Document Metadata

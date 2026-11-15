@@ -5,7 +5,6 @@ course: CSNETWK
 topic: "CSNETWK Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -128,15 +127,15 @@ sequenceDiagram
 
 ### Answer Key & Explanations
 
-1. **B**. The server chooses its own independent initial sequence number $y$ and sets the acknowledgment field to `client_seq + 1` ($500 + 1 = 501$) to acknowledge receipt of the client's SYN bit.
-2. **B**. In a $/27$ subnet, host bits $h = 32 - 27 = 5$. Total addresses = $2^5 = 32$. Usable hosts = $2^5 - 2 = 32 - 2 = 30$.
-3. **C**. Dynamic Host Configuration Protocol uses a 4-step DORA (Discover, Offer, Request, Acknowledge) exchange over UDP ports 67/68 to assign IP configuration parameters.
-4. **A**. When the sender receives 3 duplicate ACKs (4 identical ACKs total for the same sequence number), it deduces that the segment immediately following was lost and retransmits it immediately before timeout expiration.
-5. **B**. Layer 4 (Transport) provides logical communication between application processes on different hosts using port numbers (e.g., TCP and UDP).
+1. **B)** The server chooses its own independent initial sequence number $y$ and sets the acknowledgment field to `client_seq + 1` ($500 + 1 = 501$) to acknowledge receipt of the client's SYN bit.
+2. **B)** In a $/27$ subnet, host bits $h = 32 - 27 = 5$. Total addresses = $2^5 = 32$. Usable hosts = $2^5 - 2 = 32 - 2 = 30$.
+3. **C)** Dynamic Host Configuration Protocol uses a 4-step DORA (Discover, Offer, Request, Acknowledge) exchange over UDP ports 67/68 to assign IP configuration parameters.
+4. **A)** When the sender receives 3 duplicate ACKs (4 identical ACKs total for the same sequence number), it deduces that the segment immediately following was lost and retransmits it immediately before timeout expiration.
+5. **B)** Layer 4 (Transport) provides logical communication between application processes on different hosts using port numbers (e.g., TCP and UDP).
 
 ## References & Navigation
 
-- **Previous Topic:** [[CCPROG2]]
-- **Next Topic:** [[NSCOM01]], [[NSCOM02]]
-- **Prerequisites:** [[Computer Networks]], OSI, TCP/IP, Sockets, Subnetting
-- **Cross-Curricular Connections:** [[NSSECU1]]
+- **Previous Topic:** [[[REV] CCPROG2 Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] NSCOM01 Finals Reviewer]], [[[REV] NSCOM02 Comprehensive Finals Reviewer]]
+- **Prerequisites:** [[Layered Network Design]], OSI, TCP/IP, Sockets, Subnetting
+- **Cross-Curricular Connections:** [[[REV] NSSECU1 Comprehensive Finals Reviewer]]

@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 10_Q_Learning
 
 > [!info] Document Metadata
@@ -168,16 +167,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **B**. Model-free means the agent does not require knowledge of the environment's internal mechanics (Transition Probabilities $T$ or Reward Function $R$) to learn.
-2. **C**. The Q-Function estimates the value of a state-action pair based on the expected cumulative reward moving forward optimally.
-3. **C**. Q-Tables are simply matrices starting with all 0s or random values, which are refined iteratively through interaction.
-4. **A**. The Learning Rate $\alpha$ controls how heavily the new update (TD Target) weighs against the existing Q-value.
-5. **C**. $\max_{a'} Q(s', a')$ assumes the agent will act optimally from the resulting state $s'$, looking up the highest Q-value available there.
-6. **C**. TD Error is the bracketed term in the update equation $[Target - Current]$, representing the surprise or correction needed.
-7. **B**. Exploration means taking random or untested actions to map out the environment and find potentially higher rewards.
-8. **B**. The $\epsilon$-greedy strategy gives a probability $\epsilon$ to explore and $1-\epsilon$ to exploit, striking a balance between the two.
-9. **C**. $\epsilon$ usually starts high to map the environment and decays over time as the agent becomes confident in its Q-Table.
-10. **B**. Without sufficient exploration, the agent might find a "good enough" path and exploit it endlessly, missing out on the true optimal solution.
+1. **B)** Model-free means the agent does not require knowledge of the environment's internal mechanics (Transition Probabilities $T$ or Reward Function $R$) to learn.
+2. **C)** The Q-Function estimates the value of a state-action pair based on the expected cumulative reward moving forward optimally.
+3. **C)** Q-Tables are simply matrices starting with all 0s or random values, which are refined iteratively through interaction.
+4. **A)** The Learning Rate $\alpha$ controls how heavily the new update (TD Target) weighs against the existing Q-value.
+5. **C)** $\max_{a'} Q(s', a')$ assumes the agent will act optimally from the resulting state $s'$, looking up the highest Q-value available there.
+6. **C)** TD Error is the bracketed term in the update equation $[Target - Current]$, representing the surprise or correction needed.
+7. **B)** Exploration means taking random or untested actions to map out the environment and find potentially higher rewards.
+8. **B)** The $\epsilon$-greedy strategy gives a probability $\epsilon$ to explore and $1-\epsilon$ to exploit, striking a balance between the two.
+9. **C)** $\epsilon$ usually starts high to map the environment and decays over time as the agent becomes confident in its Q-Table.
+10. **B)** Without sufficient exploration, the agent might find a "good enough" path and exploit it endlessly, missing out on the true optimal solution.
 
 ## References & Navigation
 

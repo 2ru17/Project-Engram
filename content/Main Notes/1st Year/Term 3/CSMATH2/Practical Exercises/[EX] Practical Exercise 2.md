@@ -5,7 +5,6 @@ course: CSMATH2
 topic: Prac Ex 2
 status: completed
 ---
-
 # Prac Ex 2
 
 > [!info] Document Metadata
@@ -52,4 +51,4 @@ $ A + B = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix} $
 
 ## References & Navigation
 
-- **Related Notes:** [[Linear Equations and Matrices]]
+- **Related Notes:** [[Matrices and Matrix Operations]], [[The Inverse of a Matrix]]

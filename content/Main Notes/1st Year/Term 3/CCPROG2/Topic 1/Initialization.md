@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Initialization
 
 > [!info] Document Metadata
@@ -99,9 +98,9 @@ int matrix[2][3] = {
 
 ### Answer Key & Explanations
 
-1. **B**. Curly braces enclosing comma-separated values are used for aggregate initialization.
-2. **C**. Partial initialization forces the compiler to pad all unspecified trailing slots with zeros.
-3. **B**. The compiler counts the provided elements in the list and sets the bounds automatically.
+1. **B)** Curly braces enclosing comma-separated values are used for aggregate initialization.
+2. **C)** Partial initialization forces the compiler to pad all unspecified trailing slots with zeros.
+3. **B)** The compiler counts the provided elements in the list and sets the bounds automatically.
 
 ## References & Navigation
 

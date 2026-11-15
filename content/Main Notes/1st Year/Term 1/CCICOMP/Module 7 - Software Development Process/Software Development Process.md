@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "16.0 Software Development Process"
 status: completed
 ---
-
 # 16.0 Software Development Process
 
 > [!info] Document Metadata
@@ -121,16 +120,16 @@ Strive for continuous improvement in both the software and the team processes.
 
 ### Answer Key & Explanations
 
-1. **B**. The SDLC is the structured approach to developing software efficiently and reliably.
-2. **B**. The SRS is a comprehensive document created during requirements gathering detailing functionality and constraints.
-3. **B**. Technical debt is the implied cost of future rework caused by taking a fast, easy approach now instead of a better one.
-4. **D**. The Development phase involves coding the software based on the design blueprints.
-5. **C**. The goal of Testing is to verify/validate functionality and ensure the software is free of major bugs.
-6. **C**. The Waterfall Model is a linear, sequential approach where each phase must finish before the next begins.
-7. **B**. Agile is an iterative, adaptable approach (like Scrum or Kanban) promoting flexibility and continuous feedback.
-8. **C**. DevOps combines software development (Dev) and IT operations (Ops) for CI/CD.
-9. **A**. HLD refers to the overarching architecture and structure of the proposed software system.
-10. **D**. Perfective maintenance focuses on feature improvements.
+1. **B)** The SDLC is the structured approach to developing software efficiently and reliably.
+2. **B)** The SRS is a comprehensive document created during requirements gathering detailing functionality and constraints.
+3. **B)** Technical debt is the implied cost of future rework caused by taking a fast, easy approach now instead of a better one.
+4. **D)** The Development phase involves coding the software based on the design blueprints.
+5. **C)** The goal of Testing is to verify/validate functionality and ensure the software is free of major bugs.
+6. **C)** The Waterfall Model is a linear, sequential approach where each phase must finish before the next begins.
+7. **B)** Agile is an iterative, adaptable approach (like Scrum or Kanban) promoting flexibility and continuous feedback.
+8. **C)** DevOps combines software development (Dev) and IT operations (Ops) for CI/CD.
+9. **A)** HLD refers to the overarching architecture and structure of the proposed software system.
+10. **D)** Perfective maintenance focuses on feature improvements.
 
 ## References & Navigation
 

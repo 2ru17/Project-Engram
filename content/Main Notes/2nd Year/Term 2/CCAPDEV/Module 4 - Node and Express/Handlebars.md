@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Handlebars
 status: completed
 ---
-
 # Handlebars
 
 > [!info] Document Metadata
@@ -98,9 +97,9 @@ views will be rendered inside main.hbs’ {{{body}}}
 
 ### Answer Key & Explanations
 
-1. **C**. Handlebars is a templating language that uses a template and an input object to generate HTML documents on runtime.
-2. **C**. The `public` folder is designated for static files like CSS, JS, images, and other local media that clients download from the server.
-3. **B**. `main.hbs` serves as the default layout template, providing the standard HTML skeleton where specific view content is injected via `{{{body}}}`.
+1. **C)** Handlebars is a templating language that uses a template and an input object to generate HTML documents on runtime.
+2. **C)** The `public` folder is designated for static files like CSS, JS, images, and other local media that clients download from the server.
+3. **B)** `main.hbs` serves as the default layout template, providing the standard HTML skeleton where specific view content is injected via `{{{body}}}`.
 
 ## References & Navigation
 

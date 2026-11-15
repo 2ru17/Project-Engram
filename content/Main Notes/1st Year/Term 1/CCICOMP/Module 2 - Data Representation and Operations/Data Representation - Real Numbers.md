@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "5.0 Data Representation - Real Numbers"
 status: completed
 ---
-
 # 5.0 Data Representation - Real Numbers
 
 > [!info] Document Metadata
@@ -135,16 +134,16 @@ $= 0.25 + 0.125 + 0.0625 + 0.015625 = 0.453125_{10}$.
 
 ### Answer Key & Explanations
 
-1. **B**. Fixed-point binary lacks the range to represent very large numbers and precision for very small numbers.
-2. **D**. The IEEE 754 standard heavily defines floating-point representations.
-3. **C**. Truncation discards least-significant bits, causing precision loss and resulting in close approximations rather than perfectly exact numbers.
-4. **B**. Positional weights to the right of the radix point use negative powers of 2, starting with 2^-1 = 0.5.
-5. **B**. Single Precision (binary32) utilizes 32 bits total.
-6. **C**. Floating point numbers are encoded into a Sign bit, an Exponent, and a Mantissa.
-7. **B**. Overflow occurs when a value is too large and its normalized exponent exceeds maximum possible bits.
-8. **B**. The bias for single precision exponent is explicitly stated as 127.
-9. **B**. During normalization, the implicit leading 1 is dropped and the mantissa is padded with zeros.
-10. **A**. Underflow occurs when a very small value normalizes to an exponent smaller than the minimum possible bound.
+1. **B)** Fixed-point binary lacks the range to represent very large numbers and precision for very small numbers.
+2. **D)** The IEEE 754 standard heavily defines floating-point representations.
+3. **C)** Truncation discards least-significant bits, causing precision loss and resulting in close approximations rather than perfectly exact numbers.
+4. **B)** Positional weights to the right of the radix point use negative powers of 2, starting with 2^-1 = 0.5.
+5. **B)** Single Precision (binary32) utilizes 32 bits total.
+6. **C)** Floating point numbers are encoded into a Sign bit, an Exponent, and a Mantissa.
+7. **B)** Overflow occurs when a value is too large and its normalized exponent exceeds maximum possible bits.
+8. **B)** The bias for single precision exponent is explicitly stated as 127.
+9. **B)** During normalization, the implicit leading 1 is dropped and the mantissa is padded with zeros.
+10. **A)** Underflow occurs when a very small value normalizes to an exponent smaller than the minimum possible bound.
 
 ## References & Navigation
 

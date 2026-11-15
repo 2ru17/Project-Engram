@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 06_Decision_Tree
 
 > [!info] Document Metadata
@@ -175,16 +174,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **B**. A decision tree is a supervised learning model that is primarily used for predicting values in classification and regression problems.
-2. **C**. Leaf nodes are the terminal nodes at the end of the tree and signify the final predicted outcome or class label.
-3. **D**. The Gini Index measures how often a randomly chosen element would be incorrectly labeled, serving as a measure of a node's impurity.
-4. **A**. A Gini Index of 0 means there is zero impurity; all items in that node belong to exactly one class.
-5. **B**. The goal is to minimize impurity, so the attribute that produces the lowest weighted Gini Index for the resulting children is chosen as the split.
-6. **C**. The probabilities are 0.5 for Class A and 0.5 for Class B. The formula is $1 - (0.5^2 + 0.5^2) = 1 - 0.5 = 0.5$.
-7. **B**. Overly deep trees memorize the training set perfectly (including noise), which is known as overfitting and hurts performance on new data.
-8. **C**. Forcing all leaves to be perfectly pure (Gini=0) often leads to fully overgrown trees, which causes overfitting rather than preventing it.
-9. **B**. The weighted Gini Index takes the proportion of samples at each child node into account because child nodes often receive unequal portions of the parent's data.
-10. **C**. Internal nodes represent intermediate decision points where the data is tested against a specific attribute before moving down a branch.
+1. **B)** A decision tree is a supervised learning model that is primarily used for predicting values in classification and regression problems.
+2. **C)** Leaf nodes are the terminal nodes at the end of the tree and signify the final predicted outcome or class label.
+3. **D)** The Gini Index measures how often a randomly chosen element would be incorrectly labeled, serving as a measure of a node's impurity.
+4. **A)** A Gini Index of 0 means there is zero impurity; all items in that node belong to exactly one class.
+5. **B)** The goal is to minimize impurity, so the attribute that produces the lowest weighted Gini Index for the resulting children is chosen as the split.
+6. **C)** The probabilities are 0.5 for Class A and 0.5 for Class B. The formula is $1 - (0.5^2 + 0.5^2) = 1 - 0.5 = 0.5$.
+7. **B)** Overly deep trees memorize the training set perfectly (including noise), which is known as overfitting and hurts performance on new data.
+8. **C)** Forcing all leaves to be perfectly pure (Gini=0) often leads to fully overgrown trees, which causes overfitting rather than preventing it.
+9. **B)** The weighted Gini Index takes the proportion of samples at each child node into account because child nodes often receive unequal portions of the parent's data.
+10. **C)** Internal nodes represent intermediate decision points where the data is tested against a specific attribute before moving down a branch.
 
 ## References & Navigation
 

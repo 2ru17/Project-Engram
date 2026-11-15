@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -67,11 +66,11 @@ Combining the **Additive Rule** and the **Complementary Rule** allows efficient 
 
 ### Answer Key & Explanations
 
-1. **C**. By De Morgan's Law, $A^c \cap B^c = (A \cup B)^c$. Applying the Complementary Rule yields $P((A \cup B)^c) = 1 - P(A \cup B)$.
-2. **A**. First, $P(A \cup B) = 0.60 + 0.50 - 0.30 = 0.80$. Then $P(A^c \cap B^c) = 1 - P(A \cup B) = 1 - 0.80 = 0.20$.
-3. **B**. By De Morgan's second law, $A^c \cup B^c = (A \cap B)^c$, which is the complement of both occurring simultaneously, so $P(A^c \cup B^c) = 1 - P(A \cap B)$.
-4. **B**. Since $P(B^c) = 0.60$, the Complementary Rule gives $P(B) = 1 - 0.60 = 0.40$. Since $A$ and $B$ are mutually exclusive, $P(A \cup B) = P(A) + P(B) = 0.35 + 0.40 = 0.75$.
-5. **B**. The event $X \ge 1$ is the complement of $X = 0$ in discrete counts. Computing $1 - P(X = 0)$ requires evaluating only one configuration instead of expanding inclusion-exclusion across $n$ events.
+1. **C)** By De Morgan's Law, $A^c \cap B^c = (A \cup B)^c$. Applying the Complementary Rule yields $P((A \cup B)^c) = 1 - P(A \cup B)$.
+2. **A)** First, $P(A \cup B) = 0.60 + 0.50 - 0.30 = 0.80$. Then $P(A^c \cap B^c) = 1 - P(A \cup B) = 1 - 0.80 = 0.20$.
+3. **B)** By De Morgan's second law, $A^c \cup B^c = (A \cap B)^c$, which is the complement of both occurring simultaneously, so $P(A^c \cup B^c) = 1 - P(A \cap B)$.
+4. **B)** Since $P(B^c) = 0.60$, the Complementary Rule gives $P(B) = 1 - 0.60 = 0.40$. Since $A$ and $B$ are mutually exclusive, $P(A \cup B) = P(A) + P(B) = 0.35 + 0.40 = 0.75$.
+5. **B)** The event $X \ge 1$ is the complement of $X = 0$ in discrete counts. Computing $1 - P(X = 0)$ requires evaluating only one configuration instead of expanding inclusion-exclusion across $n$ events.
 
 ## References & Navigation
 

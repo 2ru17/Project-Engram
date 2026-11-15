@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # One-Dimensional Arrays (1D Arrays)
 
 > [!info] Document Metadata
@@ -152,9 +151,9 @@ for (int i = 4; i >= 0; i--) {
 
 ### Answer Key & Explanations
 
-1. **B**. 1D arrays are the simplest array form, resembling a straight list of variables.
-2. **C**. Zero-based indexing means the offset for the very first item is zero.
-3. **C**. Since indexing starts at 0, the final slot is one less than the total allocated capacity.
+1. **B)** 1D arrays are the simplest array form, resembling a straight list of variables.
+2. **C)** Zero-based indexing means the offset for the very first item is zero.
+3. **C)** Since indexing starts at 0, the final slot is one less than the total allocated capacity.
 
 ## References & Navigation
 

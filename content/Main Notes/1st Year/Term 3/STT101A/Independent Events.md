@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -69,11 +68,11 @@ $$P(A \cap B) = P(A) \cdot P(B)$$
 
 ### Answer Key & Explanations
 
-1. **B**. Two events are independent by definition if and only if $P(A \cap B) = P(A)P(B)$.
-2. **A**. Since $A$ and $B$ are independent, $P(A \cap B) = (0.40)(0.50) = 0.20$. Then $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.40 + 0.50 - 0.20 = 0.70$.
-3. **C**. Disjoint events with positive probability have maximal negative dependence: if one occurs, the other is impossible ($P(A \mid B) = 0 \ne P(A)$).
-4. **D**. Independence of $A$ and $B$ implies independence of $A^c$ and $B^c$, so $P(A^c \cap B^c) = P(A^c)P(B^c) = (1 - 0.30)(1 - 0.60) = (0.70)(0.40) = 0.28$.
-5. **B**. Mutual independence of 3 events requires 4 equations (3 pairwise products plus the triple product $P(A \cap B \cap C) = P(A)P(B)P(C)$). Pairwise independence alone does not imply the triple product.
+1. **B)** Two events are independent by definition if and only if $P(A \cap B) = P(A)P(B)$.
+2. **A)** Since $A$ and $B$ are independent, $P(A \cap B) = (0.40)(0.50) = 0.20$. Then $P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0.40 + 0.50 - 0.20 = 0.70$.
+3. **C)** Disjoint events with positive probability have maximal negative dependence: if one occurs, the other is impossible ($P(A \mid B) = 0 \ne P(A)$).
+4. **D)** Independence of $A$ and $B$ implies independence of $A^c$ and $B^c$, so $P(A^c \cap B^c) = P(A^c)P(B^c) = (1 - 0.30)(1 - 0.60) = (0.70)(0.40) = 0.28$.
+5. **B)** Mutual independence of 3 events requires 4 equations (3 pairwise products plus the triple product $P(A \cap B \cap C) = P(A)P(B)P(C)$). Pairwise independence alone does not imply the triple product.
 
 ## References & Navigation
 

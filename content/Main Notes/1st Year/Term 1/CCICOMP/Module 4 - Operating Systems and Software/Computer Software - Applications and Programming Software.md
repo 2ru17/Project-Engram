@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "12.0 Computer Software - Applications and Programming Software"
 status: completed
 ---
-
 # 12.0 Computer Software - Applications and Programming Software
 
 > [!info] Document Metadata
@@ -128,16 +127,16 @@ Understanding licensing is crucial for ethical and legal software usage:
 
 ### Answer Key & Explanations
 
-1. **B**. Application Software encompasses programs designed to assist users with specific tasks.
-2. **C**. A Software Suite is a bundle of related proprietary software sold together.
-3. **B**. SaaS is a web delivery model where applications are hosted and accessed over a network/Internet.
-4. **C**. A Compiler translates entire high-level source code into machine code in a single batch.
-5. **A**. An Interpreter translates and executes code line-by-line during runtime (no permanent file generated).
-6. **C**. Emulators are simulation programs that duplicate hardware/OS features to run non-native software.
-7. **D**. Under an Open Source license, creators retain copyright but provide source code access and permission to modify and copy.
-8. **C**. Public Domain software does not retain copyright, granting full access and freedom.
-9. **B**. An Assembler translates low-level assembly language directly into machine code.
-10. **C**. Custom Installation allows the user to select specific components and customize settings, unlike Full/Typical installation.
+1. **B)** Application Software encompasses programs designed to assist users with specific tasks.
+2. **C)** A Software Suite is a bundle of related proprietary software sold together.
+3. **B)** SaaS is a web delivery model where applications are hosted and accessed over a network/Internet.
+4. **C)** A Compiler translates entire high-level source code into machine code in a single batch.
+5. **A)** An Interpreter translates and executes code line-by-line during runtime (no permanent file generated).
+6. **C)** Emulators are simulation programs that duplicate hardware/OS features to run non-native software.
+7. **D)** Under an Open Source license, creators retain copyright but provide source code access and permission to modify and copy.
+8. **C)** Public Domain software does not retain copyright, granting full access and freedom.
+9. **B)** An Assembler translates low-level assembly language directly into machine code.
+10. **C)** Custom Installation allows the user to select specific components and customize settings, unlike Full/Typical installation.
 
 ## References & Navigation
 

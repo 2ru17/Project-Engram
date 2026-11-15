@@ -5,7 +5,6 @@ course: CSALGCM
 topic: "CSALGCM Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -119,15 +118,15 @@ flowchart LR
 
 ### Answer Key & Explanations
 
-1. **B**. Here $a = 4, b = 2$. $c_{\text{crit}} = \log_b(a) = \log_2(4) = 2$. $f(n) = n^2 = \Theta(n^{c_{\text{crit}}} \log^0 n)$. By Master Theorem Case 2 (with $k = 0$), $T(n) = \Theta(n^2 \log n)$.
-2. **A**. Dynamic programming caches solutions to overlapping subproblems to ensure each distinct state is evaluated only once, requiring optimal substructure (optimal solution composed of optimal solutions to subproblems).
-3. **C**. Because items can be divided continuously, greedily selecting items with the highest value-to-weight ratio $v_i / w_i$ guarantees an optimal solution.
-4. **D**. Showing $B \in \text{NP}$ proves it is verifiable in polynomial time; reducing a known NP-Complete problem $A$ to $B$ proves that $B$ is at least as hard as any problem in NP (NP-Hard).
-5. **B**. The DP recurrence table stores the minimized scalar multiplication cost over all possible parenthesization splits $k$ between $i$ and $j$.
+1. **B)** Here $a = 4, b = 2$. $c_{\text{crit}} = \log_b(a) = \log_2(4) = 2$. $f(n) = n^2 = \Theta(n^{c_{\text{crit}}} \log^0 n)$. By Master Theorem Case 2 (with $k = 0$), $T(n) = \Theta(n^2 \log n)$.
+2. **A)** Dynamic programming caches solutions to overlapping subproblems to ensure each distinct state is evaluated only once, requiring optimal substructure (optimal solution composed of optimal solutions to subproblems).
+3. **C)** Because items can be divided continuously, greedily selecting items with the highest value-to-weight ratio $v_i / w_i$ guarantees an optimal solution.
+4. **D)** Showing $B \in \text{NP}$ proves it is verifiable in polynomial time; reducing a known NP-Complete problem $A$ to $B$ proves that $B$ is at least as hard as any problem in NP (NP-Hard).
+5. **B)** The DP recurrence table stores the minimized scalar multiplication cost over all possible parenthesization splits $k$ between $i$ and $j$.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CCDSALG]], [[CCDSTRU]]
+- **Previous Topic:** [[[REV] CCDSALG Comprehensive Finals Reviewer]], [[[REV] CCDSTRU Comprehensive Finals Reviewer]]
 - **Next Topic:** None
-- **Prerequisites:** [[Algorithms and Complexity]], Master Theorem, DP, Greedy, NP-Completeness
-- **Cross-Curricular Connections:** [[CSINTSY]]
+- **Prerequisites:** [[Complexity Analysis]], Master Theorem, DP, Greedy, NP-Completeness
+- **Cross-Curricular Connections:** [[[REV] CSINTSY Comprehensive Finals Reviewer]]

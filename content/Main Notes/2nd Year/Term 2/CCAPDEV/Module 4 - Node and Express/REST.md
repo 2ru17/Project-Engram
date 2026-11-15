@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: REST
 status: completed
 ---
-
 # REST
 
 > [!info] Document Metadata
@@ -84,9 +83,9 @@ status: completed
 
 ### Answer Key & Explanations
 
-1. **B**. Statelessness means that each request must contain all the information necessary for the server to understand it, keeping the session state entirely on the client.
-2. **D**. GET is an HTTP method used to retrieve resources and is considered a "safe" method because it is read-only.
-3. **C**. Client-Server decoupling separates UI concerns from data storage concerns, improving UI portability and server scalability.
+1. **B)** Statelessness means that each request must contain all the information necessary for the server to understand it, keeping the session state entirely on the client.
+2. **D)** GET is an HTTP method used to retrieve resources and is considered a "safe" method because it is read-only.
+3. **C)** Client-Server decoupling separates UI concerns from data storage concerns, improving UI portability and server scalability.
 
 ## References & Navigation
 

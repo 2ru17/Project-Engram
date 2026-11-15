@@ -5,7 +5,6 @@ course: CCDSALG
 topic: Mock-Midterm-Exam-02
 status: completed
 ---
-
 # Mock-Midterm-Exam-02
 
 > [!info] Document Metadata
@@ -23,7 +22,7 @@ This second mock midterm exam targets advanced problem-solving in CCDSALG. It te
 
 ---
 
-## Multiple Choice Practice Questions
+## Multiple Choice Questions
 
 1. Which asymptotic notation denotes both an asymptotic upper bound AND an asymptotic lower bound, providing an asymptotically tight bound on an algorithm's growth rate?
     - **A)** Big-Oh ($O$)
@@ -154,61 +153,57 @@ This second mock midterm exam targets advanced problem-solving in CCDSALG. It te
     - **C)** $O(n)$ due to call stack frames
     - **D)** $O(n^2)$
 
----
-
 ### Answer Key & Explanations
 
-1. **C**. Big-Theta ($\Theta$) bounds a function within constant factors both above and below: $c_1 g(n) \le f(n) \le c_2 g(n)$ for all $n \ge n_0$.
-2. **B**. Dividing leading coefficients:
+1. **C)** Big-Theta ($\Theta$) bounds a function within constant factors both above and below: $c_1 g(n) \le f(n) \le c_2 g(n)$ for all $n \ge n_0$.
+2. **B)** Dividing leading coefficients:
    $$\lim_{n \to \infty} \frac{n^2 + 5n \log_2 n}{2n^2 - 7} = \lim_{n \to \infty} \frac{1 + \frac{5 \log_2 n}{n}}{2 - \frac{7}{n^2}} = \frac{1 + 0}{2 - 0} = \frac{1}{2}$$
    Because the limit is a positive finite constant ($0 < L < \infty$), both functions share the same growth rate: $f(n) \in \Theta(g(n))$.
-3. **C**. The outer loop variable takes values $n, n/2, n/4, \dots, 1$. The inner loop runs $i$ times for each outer value. Total work is the geometric series:
+3. **C)** The outer loop variable takes values $n, n/2, n/4, \dots, 1$. The inner loop runs $i$ times for each outer value. Total work is the geometric series:
    $$\sum_{k=0}^{\lfloor \log_2 n \rfloor} \frac{n}{2^k} = n \left(1 + \frac{1}{2} + \frac{1}{4} + \dots \right) < 2n = \Theta(n)$$
-4. **A**. Unfolding the recurrence:
+4. **A)** Unfolding the recurrence:
    $$T(n) = 2T(n/2) + 5$$
    $$T(n) = 2(2T(n/4) + 5) + 5 = 4T(n/4) + 2(5) + 5$$
    $$T(n) = 2^k T(n/2^k) + 5 \sum_{j=0}^{k-1} 2^j = n T(1) + 5(2^k - 1) = 3n + 5(n - 1) = 8n - 5$$
-5. **B**. Binary search cuts the problem size in half each step with $O(1)$ comparison work. By Master Theorem ($a = 1, b = 2, f(n) = 1$), $n^{\log_2 1} = n^0 = 1$. Since $f(n) = \Theta(n^0)$, Case 2 applies: $T(n) = \Theta(\log_2 n)$.
-6. **A**. Inserting at head requires allocating the node, setting `node->next = head`, and updating `head = node`, which runs in $O(1)$. Without a tail pointer, inserting at the tail requires traversing all $n$ nodes to reach the last node before appending, requiring $O(n)$ time.
-7. **A**. To unlink `curr`, the predecessor's `next` pointer must bypass `curr` to point to `curr->next`, and the successor's `prev` pointer must bypass `curr` to point to `curr->prev`:
+5. **B)** Binary search cuts the problem size in half each step with $O(1)$ comparison work. By Master Theorem ($a = 1, b = 2, f(n) = 1$), $n^{\log_2 1} = n^0 = 1$. Since $f(n) = \Theta(n^0)$, Case 2 applies: $T(n) = \Theta(\log_2 n)$.
+6. **A)** Inserting at head requires allocating the node, setting `node->next = head`, and updating `head = node`, which runs in $O(1)$. Without a tail pointer, inserting at the tail requires traversing all $n$ nodes to reach the last node before appending, requiring $O(n)$ time.
+7. **A)** To unlink `curr`, the predecessor's `next` pointer must bypass `curr` to point to `curr->next`, and the successor's `prev` pointer must bypass `curr` to point to `curr->prev`:
    `curr->prev->next = curr->next;`
    `curr->next->prev = curr->prev;`
-8. **A**. When scanning $A + B \times (C - D) / E$:
+8. **A)** When scanning $A + B \times (C - D) / E$:
    - `+` pushed to stack: `[+]`
    - `*` pushed to stack: `[+, *]`
    - `(` pushed to stack: `[+, *, (]`
    - `-` pushed to stack: `[+, *, (, -]`
    - Upon encountering `)`, operators inside parentheses are popped until `(` is discarded. The `-` is popped. The remaining stack is `[+, *]`.
-9. **A**. 
+9. **A)** 
    - $(A + B) \to A B +$
    - $(C - D) \to C D -$
    - Multiplied together: $A B + C D - \times$
    - $(E + F) \to E F +$
    - Divided: $A B + C D - \times E F + /$
-10. **A**. Evaluating prefix expression $- \quad + \quad 7 \quad \times \quad 3 \quad 2 \quad 5$ from right to left:
+10. **A)** Evaluating prefix expression $- \quad + \quad 7 \quad \times \quad 3 \quad 2 \quad 5$ from right to left:
    - Read 5, 2, 3 $\to$ Stack: $[5, 2, 3]$
    - Operator `*`: Pop 3 and 2, compute $3 \times 2 = 6$, push 6 $\to$ Stack: $[5, 6]$
    - Read 7 $\to$ Stack: $[5, 6, 7]$
    - Operator `+`: Pop 7 and 6, compute $7 + 6 = 13$, push 13 $\to$ Stack: $[5, 13]$
    - Operator `-`: Pop 13 and 5, compute $13 - 5 = 8$, push 8 $\to$ Stack: $[8]$
    Result is 8.
-11. **B**. In this circular queue design, one slot is kept unoccupied to differentiate between full and empty states. With array size $N = 5$, a full queue holds $N - 1 = 4$ elements. With `front = 2` and `rear = 1`, $(\text{rear} + 1) \pmod 5 = (1 + 1) \pmod 5 = 2 == \text{front}$, confirming the queue is completely full with 4 elements.
-12. **B**. Enqueuing at the rear (`insertRear`) and dequeuing from the front (`deleteFront`) maintains First-In, First-Out (FIFO) ordering, exactly implementing a standard Queue.
-13. **A**. Trace of Pass 1 on $[5, 1, 4, 2, 8]$:
+11. **B)** In this circular queue design, one slot is kept unoccupied to differentiate between full and empty states. With array size $N = 5$, a full queue holds $N - 1 = 4$ elements. With `front = 2` and `rear = 1`, $(\text{rear} + 1) \pmod 5 = (1 + 1) \pmod 5 = 2 == \text{front}$, confirming the queue is completely full with 4 elements.
+12. **B)** Enqueuing at the rear (`insertRear`) and dequeuing from the front (`deleteFront`) maintains First-In, First-Out (FIFO) ordering, exactly implementing a standard Queue.
+13. **A)** Trace of Pass 1 on $[5, 1, 4, 2, 8]$:
    - Compare 5 and 1: $5 > 1$, swap $\to [1, 5, 4, 2, 8]$
    - Compare 5 and 4: $5 > 4$, swap $\to [1, 4, 5, 2, 8]$
    - Compare 5 and 2: $5 > 2$, swap $\to [1, 4, 2, 5, 8]$
    - Compare 5 and 8: $5 \le 8$, no swap $\to [1, 4, 2, 5, 8]$
    After pass 1, the largest element (8) has bubbled to the end, leaving $[1, 4, 2, 5, 8]$.
-14. **A**. Changing the comparison to search for the maximum element instead of the minimum causes each pass to select the largest remaining element and swap it into the current prefix position, sorting the array into descending order.
-15. **B**. For a reverse sorted array, element at index $i$ must shift past all $i$ previous elements to reach the front. Total shifts = $\sum_{i=1}^{n-1} i = \frac{n(n - 1)}{2}$.
-16. **A**. The recursion divides array size by 2 at each step, yielding a tree of depth $\log_2 n + 1$ levels. At each level, the total merging across all subproblems processes $n$ elements, requiring $O(n)$ work per level, producing $O(n \log n)$ total time.
-17. **A**. Consider sorting $[2_a, 2_b, 1]$. In the first pass, 1 is the minimum and swaps with $2_a$, yielding $[1, 2_b, 2_a]$. The relative order of $2_a$ and $2_b$ is inverted, proving instability.
-18. **B**. Merge Sort allocates a temporary array of size $n$ to hold merged results, and requires $\log_2 n$ stack frames for recursive calls, yielding total auxiliary space $O(n)$.
-19. **A**. At each comparison, the search interval is halved. The maximum number of iterations until an interval of size 1 is evaluated is $\lfloor \log_2 n \rfloor + 1$.
-20. **C**. On a degenerate (skewed) binary tree, each node has only one child, resembling a linked list. The recursion reaches depth $n$, allocating $n$ stack frames, requiring $O(n)$ auxiliary space.
-
----
+14. **A)** Changing the comparison to search for the maximum element instead of the minimum causes each pass to select the largest remaining element and swap it into the current prefix position, sorting the array into descending order.
+15. **B)** For a reverse sorted array, element at index $i$ must shift past all $i$ previous elements to reach the front. Total shifts = $\sum_{i=1}^{n-1} i = \frac{n(n - 1)}{2}$.
+16. **A)** The recursion divides array size by 2 at each step, yielding a tree of depth $\log_2 n + 1$ levels. At each level, the total merging across all subproblems processes $n$ elements, requiring $O(n)$ work per level, producing $O(n \log n)$ total time.
+17. **A)** Consider sorting $[2_a, 2_b, 1]$. In the first pass, 1 is the minimum and swaps with $2_a$, yielding $[1, 2_b, 2_a]$. The relative order of $2_a$ and $2_b$ is inverted, proving instability.
+18. **B)** Merge Sort allocates a temporary array of size $n$ to hold merged results, and requires $\log_2 n$ stack frames for recursive calls, yielding total auxiliary space $O(n)$.
+19. **A)** At each comparison, the search interval is halved. The maximum number of iterations until an interval of size 1 is evaluated is $\lfloor \log_2 n \rfloor + 1$.
+20. **C)** On a degenerate (skewed) binary tree, each node has only one child, resembling a linked list. The recursion reaches depth $n$, allocating $n$ stack frames, requiring $O(n)$ auxiliary space.
 
 ## References & Navigation
 

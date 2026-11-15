@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Text Data Modelling
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -482,11 +481,11 @@ Why is `Line X` flawed for an exam or production machine learning evaluation? A)
 
 ### Answer Key & Explanations
 
-1. **B**. Stemming uses crude rules (e.g. chopping ing), while Lemmatization maps words to their canonical lemma.
-2. **C**. IDF = log(N/df). If a word is in all N documents, df=N, log(1) = 0.
-3. **C**. BoW treats documents as unordered collections of term frequencies, ignoring syntax.
-4. **C**. CBOW uses context to predict the target, whereas Skip-Gram uses the target to predict context.
-5. **B**. The test set must be transformed using the exact vocabulary features learned from the training set.
+1. **B)** Stemming uses crude rules (e.g. chopping ing), while Lemmatization maps words to their canonical lemma.
+2. **C)** IDF = log(N/df). If a word is in all N documents, df=N, log(1) = 0.
+3. **C)** BoW treats documents as unordered collections of term frequencies, ignoring syntax.
+4. **C)** CBOW uses context to predict the target, whereas Skip-Gram uses the target to predict context.
+5. **B)** The test set must be transformed using the exact vocabulary features learned from the training set.
 
 ## References & Navigation
 

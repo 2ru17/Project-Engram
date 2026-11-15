@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Association Rule Mining
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -585,11 +584,11 @@ print(strong_rules[['antecedents', 'consequents', 'support', 'confidence', 'lift
 
 ### Answer Key & Explanations
 
-1. **B**. Support is the proportion of transactions that contain the itemset.
-2. **B**. Apriori works by generating candidates of length k from length k-1.
-3. **A**. Confidence measures the probability of B given A, calculated as Support(A U B) / Support(A).
-4. **C**. Lift > 1 implies that the occurrence of A increases the probability of B.
-5. **B**. FP-Growth uses an FP-tree structure to find frequent itemsets without candidate generation.
+1. **B)** Support is the proportion of transactions that contain the itemset.
+2. **B)** Apriori works by generating candidates of length k from length k-1.
+3. **A)** Confidence measures the probability of B given A, calculated as Support(A U B) / Support(A).
+4. **C)** Lift > 1 implies that the occurrence of A increases the probability of B.
+5. **B)** FP-Growth uses an FP-tree structure to find frequent itemsets without candidate generation.
 
 ## References & Navigation
 

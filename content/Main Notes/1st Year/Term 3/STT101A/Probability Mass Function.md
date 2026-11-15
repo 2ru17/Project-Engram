@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -71,11 +70,11 @@ The **Probability Mass Function (PMF)** of a discrete random variable $X$, denot
 
 ### Answer Key & Explanations
 
-1. **A**. Every discrete probability mass must be non-negative ($p(x) \ge 0$) and the total probability across the entire support must sum to $1$ ($\sum p(x) = 1$).
-2. **B**. Evaluating at $x = 0, 1, 2$ gives $k(1) + k(3) + k(5) = 9k = 1 \implies k = \frac{1}{9}$.
-3. **B**. The CDF $F_X(x) = P(X \le x)$ accumulates all probability masses up to $x$. Subtracting the cumulative probability strictly below $x_i$ isolates the exact point mass $P(X = x_i)$.
-4. **B**. The Poisson PMF is $p(x) = \frac{e^{-\lambda}\lambda^x}{x!}$ for $x = 0, 1, 2, \dots$, which sums to $e^{-\lambda} \sum_{x=0}^\infty \frac{\lambda^x}{x!} = e^{-\lambda}e^\lambda = 1$.
-5. **A**. Discrete variables have point masses $p(x) = P(X=x) \in [0, 1]$, whereas continuous densities $f(x)$ represent probability *per unit length* (which can exceed $1$) and yield probabilities only when integrated over an interval.
+1. **A)** Every discrete probability mass must be non-negative ($p(x) \ge 0$) and the total probability across the entire support must sum to $1$ ($\sum p(x) = 1$).
+2. **B)** Evaluating at $x = 0, 1, 2$ gives $k(1) + k(3) + k(5) = 9k = 1 \implies k = \frac{1}{9}$.
+3. **B)** The CDF $F_X(x) = P(X \le x)$ accumulates all probability masses up to $x$. Subtracting the cumulative probability strictly below $x_i$ isolates the exact point mass $P(X = x_i)$.
+4. **B)** The Poisson PMF is $p(x) = \frac{e^{-\lambda}\lambda^x}{x!}$ for $x = 0, 1, 2, \dots$, which sums to $e^{-\lambda} \sum_{x=0}^\infty \frac{\lambda^x}{x!} = e^{-\lambda}e^\lambda = 1$.
+5. **A)** Discrete variables have point masses $p(x) = P(X=x) \in [0, 1]$, whereas continuous densities $f(x)$ represent probability *per unit length* (which can exceed $1$) and yield probabilities only when integrated over an interval.
 
 ## References & Navigation
 

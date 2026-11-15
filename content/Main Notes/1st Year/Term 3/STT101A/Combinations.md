@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ $$\binom{8}{3} \times \binom{6}{2} = \frac{8 \times 7 \times 6}{3 \times 2 \time
 
 ### Answer Key & Explanations
 
-1. **B**. In ordered permutations $P(n, r)$, each $r$-element subset appears $r!$ times (once for each internal permutation of its $r$ elements). Dividing by $r!$ collapses those $r!$ orderings into a single unordered combination.
-2. **B**. $\binom{10}{3} = \frac{10 \times 9 \times 8}{3 \times 2 \times 1} = \frac{720}{6} = 120$.
-3. **B**. By symmetry, selecting $r = 98$ items to keep is in one-to-one correspondence with selecting $n - r = 2$ items to omit: $\binom{100}{98} = \binom{100}{2} = \frac{100 \times 99}{2} = 4950$.
-4. **A**. Choosing all $4$ Aces can be done in $\binom{4}{4} = 1$ way, and the remaining $1$ card in the $5$-card hand can be chosen from the other $48$ non-Ace cards in $\binom{48}{1} = 48$ ways ($1 \times 48 = 48$).
-5. **C**. By the Binomial Theorem with $x=1, y=1$, $(1+1)^n = \sum_{k=0}^n \binom{n}{k} = 2^n$, which counts all possible subsets of an $n$-element set.
+1. **B)** In ordered permutations $P(n, r)$, each $r$-element subset appears $r!$ times (once for each internal permutation of its $r$ elements). Dividing by $r!$ collapses those $r!$ orderings into a single unordered combination.
+2. **B)** $\binom{10}{3} = \frac{10 \times 9 \times 8}{3 \times 2 \times 1} = \frac{720}{6} = 120$.
+3. **B)** By symmetry, selecting $r = 98$ items to keep is in one-to-one correspondence with selecting $n - r = 2$ items to omit: $\binom{100}{98} = \binom{100}{2} = \frac{100 \times 99}{2} = 4950$.
+4. **A)** Choosing all $4$ Aces can be done in $\binom{4}{4} = 1$ way, and the remaining $1$ card in the $5$-card hand can be chosen from the other $48$ non-Ace cards in $\binom{48}{1} = 48$ ways ($1 \times 48 = 48$).
+5. **C)** By the Binomial Theorem with $x=1, y=1$, $(1+1)^n = \sum_{k=0}^n \binom{n}{k} = 2^n$, which counts all possible subsets of an $n$-element set.
 
 ## References & Navigation
 

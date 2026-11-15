@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Pipelining Fundamentals & Pipeline Hazards"
 status: completed
 ---
-
 # Module 17: Pipelining Fundamentals & Pipeline Hazards
 
 > [!info] Document Metadata
@@ -324,14 +323,14 @@ Calculate:
 
 ### Answer Key & Explanations
 
-1. **B**. The canonical 5-stage RISC pipeline order is: Instruction Fetch (IF), Instruction Decode & Register Read (ID), Execute / ALU (EX), Memory Access (MEM), and Write-Back (WB).
-2. **A**. A Load-Use hazard occurs because loaded memory data only becomes available at the end of the MEM stage (Stage 4), while the subsequent instruction requires the operand at the beginning of the EX stage (Stage 3), necessitating a 1-cycle stall.
-3. **C**. Data forwarding bypasses the slow write-back to the register file by routing the newly computed ALU value directly from the `EX/MEM` or `MEM/WB` intermediate pipeline registers back to the ALU input MUX.
-4. **D**. As the number of instructions $n$ becomes very large, the speedup formula $S_k = \frac{n \cdot k}{k + n - 1}$ asymptotically approaches $k\times$.
-5. **B**. A 1-bit predictor flips immediately upon a single loop exit, causing a guaranteed misprediction on the very next iteration. The 2-bit counter has hysteresis and requires two consecutive mispredictions before switching states.
+1. **B)** The canonical 5-stage RISC pipeline order is: Instruction Fetch (IF), Instruction Decode & Register Read (ID), Execute / ALU (EX), Memory Access (MEM), and Write-Back (WB).
+2. **A)** A Load-Use hazard occurs because loaded memory data only becomes available at the end of the MEM stage (Stage 4), while the subsequent instruction requires the operand at the beginning of the EX stage (Stage 3), necessitating a 1-cycle stall.
+3. **C)** Data forwarding bypasses the slow write-back to the register file by routing the newly computed ALU value directly from the `EX/MEM` or `MEM/WB` intermediate pipeline registers back to the ALU input MUX.
+4. **D)** As the number of instructions $n$ becomes very large, the speedup formula $S_k = \frac{n \cdot k}{k + n - 1}$ asymptotically approaches $k\times$.
+5. **B)** A 1-bit predictor flips immediately upon a single loop exit, causing a guaranteed misprediction on the very next iteration. The 2-bit counter has hysteresis and requires two consecutive mispredictions before switching states.
 
 ## References & Navigation
 
-- **Previous Topic:** [[Module 16 - I/O Organization & Interrupt Handling]]
+- **Previous Topic:** [[IO Organization & Interrupt Handling]]
 - **Next Topic:** [[[REV] CSARCH2 Comprehensive Reviewer and Practice Exam]]
 - **Related Notes:** [[Functional Units & Performance Fundamentals]], [[Processing Unit Organization & Single-Bus Datapath]]

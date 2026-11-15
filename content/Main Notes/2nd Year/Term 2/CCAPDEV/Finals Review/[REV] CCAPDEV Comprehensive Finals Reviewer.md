@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: "CCAPDEV Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -109,15 +108,15 @@ sequenceDiagram
 
 ### Answer Key & Explanations
 
-1. **B**. Specificity breakdown: 1 ID (`#sidebar` = 100), 1 Class (`.nav` = 10), 2 Elements (`ul`, `li` = 2) $\to$ Total specificity (0, 1, 1, 2) = 112. Option A is (0, 0, 2, 2) = 22; Option C is (0, 0, 0, 4) = 4; Option D is (0, 0, 3, 0) = 30.
-2. **A**. Express middleware receives `(req, res, next)`. Invoking `next()` informs Express that the current handler has completed its task and yields execution to the next middleware in the queue.
-3. **C**. When `httpOnly` is enabled, malicious injected JavaScript cannot read the session cookie via `document.cookie`.
-4. **D**. `bcrypt.compare()` hashes the plaintext candidate using the salt embedded inside the stored hash and compares the results in constant time, resolving to `true` on match and `false` on mismatch.
-5. **B**. `Model.findOneAndUpdate(query, update, { new: true })` finds a matching document, applies updates atomically in MongoDB, and returns the updated document instead of the original pre-update document.
+1. **B)** Specificity breakdown: 1 ID (`#sidebar` = 100), 1 Class (`.nav` = 10), 2 Elements (`ul`, `li` = 2) $\to$ Total specificity (0, 1, 1, 2) = 112. Option A is (0, 0, 2, 2) = 22; Option C is (0, 0, 0, 4) = 4; Option D is (0, 0, 3, 0) = 30.
+2. **A)** Express middleware receives `(req, res, next)`. Invoking `next()` informs Express that the current handler has completed its task and yields execution to the next middleware in the queue.
+3. **C)** When `httpOnly` is enabled, malicious injected JavaScript cannot read the session cookie via `document.cookie`.
+4. **D)** `bcrypt.compare()` hashes the plaintext candidate using the salt embedded inside the stored hash and compares the results in constant time, resolving to `true` on match and `false` on mismatch.
+5. **B)** `Model.findOneAndUpdate(query, update, { new: true })` finds a matching document, applies updates atomically in MongoDB, and returns the updated document instead of the original pre-update document.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CCPROG3]]
+- **Previous Topic:** [[JAVA-OOP-Finals-Rev]]
 - **Next Topic:** None
-- **Prerequisites:** [[Web Development]], HTML, CSS, JavaScript, Express, MongoDB
-- **Cross-Curricular Connections:** [[CCINFOM]]
+- **Prerequisites:** [[Client Server Architecture]], HTML, CSS, JavaScript, Express, MongoDB
+- **Cross-Curricular Connections:** [[DB-Design-Finals-Rev]]

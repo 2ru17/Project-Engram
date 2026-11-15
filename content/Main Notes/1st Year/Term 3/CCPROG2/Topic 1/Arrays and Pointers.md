@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Arrays and Pointers
 
 > [!info] Document Metadata
@@ -71,9 +70,9 @@ printf("%d\n", *(ptr + 1));  // 20
 
 ### Answer Key & Explanations
 
-1. **B**. An array name decays to point directly to the memory address of the first item (index 0).
-2. **A**. The subscript operator calculates the address `arr + 3` and then dereferences it.
-3. **C**. Passing just the pointer passes the memory reference, bypassing expensive block copies.
+1. **B)** An array name decays to point directly to the memory address of the first item (index 0).
+2. **A)** The subscript operator calculates the address `arr + 3` and then dereferences it.
+3. **C)** Passing just the pointer passes the memory reference, bypassing expensive block copies.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCINFOM
 topic: Data Modeling
 status: completed
 ---
-
 # DB-Design-Finals-Mock
 
 > [!info] Document Metadata
@@ -112,4 +111,4 @@ _Please contact me through discord or my the university email for any problems r
 
 ## References & Navigation
 
-- **Related Notes:** [[Database Design]]
+- **Related Notes:** [[Modeling Data]], [[Enhanced ER Model and Transformation]], [[Relational Model and Normalization]]

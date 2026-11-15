@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Multidimensional Arrays (3D+)
 
 > [!info] Document Metadata
@@ -62,9 +61,9 @@ Same memory layout rules and function-passing rules apply.
 
 ### Answer Key & Explanations
 
-1. **B**. Multidimensional arrays chain bracket pairs for each distinct dimensional depth.
-2. **C**. The first index selects a specific 2D matrix from a larger containing volume.
-3. **B**. Regardless of dimension count, memory is strictly linear; offsets are calculated mathematically.
+1. **B)** Multidimensional arrays chain bracket pairs for each distinct dimensional depth.
+2. **C)** The first index selects a specific 2D matrix from a larger containing volume.
+3. **B)** Regardless of dimension count, memory is strictly linear; offsets are calculated mathematically.
 
 ## References & Navigation
 

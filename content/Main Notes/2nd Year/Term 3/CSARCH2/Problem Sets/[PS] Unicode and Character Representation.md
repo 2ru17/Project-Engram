@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Problem Set - Unicode and Character Representation"
 status: completed
 ---
-
 # Problem Set - Unicode and Character Representation
 
 > [!info] Document Metadata

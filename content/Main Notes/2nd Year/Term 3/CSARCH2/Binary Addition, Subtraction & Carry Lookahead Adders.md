@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Binary Addition, Subtraction & Carry Lookahead Adders"
 status: completed
 ---
-
 # Module 03: Binary Addition, Subtraction & Carry Lookahead Adders
 
 > [!info] Document Metadata
@@ -297,11 +296,11 @@ Hierarchical CLA achieves an overall delay of $O(\log n)$.
 
 ### Answer Key & Explanations
 
-1. **B**. Signed overflow occurs if the carry entering the sign position ($C_{n-1}$) differs from the carry leaving the sign position ($C_n$). This condition is evaluated by the XOR gate $V = C_n \oplus C_{n-1}$.
-2. **C**. Ripple Carry Adders cascade carry signals linearly through $n$ stages ($O(n)$), while Hierarchical Carry Lookahead Adders group carries tree-wise, achieving logarithmic delay ($O(\log n)$).
-3. **B**. The carry propagate term is $P_i = A_i \oplus B_i$ (or $A_i + B_i$), indicating that if either input bit is `1`, an incoming carry will be propagated to the next stage.
-4. **B**. Expanding carry formulas directly to 64 bits creates boolean terms requiring gates with up to 65 inputs. Real silicon transistors suffer severe RC propagation slowdown and signal degradation at high fan-in.
-5. **C**. When $\text{Sub} = 1$, the input XOR gate inverts $B_0$ to $\overline{B_0}$ and sets the initial carry-in $C_0 = 1$, effectively completing the 2's complement negation $A + \overline{B} + 1$.
+1. **B)** Signed overflow occurs if the carry entering the sign position ($C_{n-1}$) differs from the carry leaving the sign position ($C_n$). This condition is evaluated by the XOR gate $V = C_n \oplus C_{n-1}$.
+2. **C)** Ripple Carry Adders cascade carry signals linearly through $n$ stages ($O(n)$), while Hierarchical Carry Lookahead Adders group carries tree-wise, achieving logarithmic delay ($O(\log n)$).
+3. **B)** The carry propagate term is $P_i = A_i \oplus B_i$ (or $A_i + B_i$), indicating that if either input bit is `1`, an incoming carry will be propagated to the next stage.
+4. **B)** Expanding carry formulas directly to 64 bits creates boolean terms requiring gates with up to 65 inputs. Real silicon transistors suffer severe RC propagation slowdown and signal degradation at high fan-in.
+5. **C)** When $\text{Sub} = 1$, the input XOR gate inverts $B_0$ to $\overline{B_0}$ and sets the initial carry-in $C_0 = 1$, effectively completing the 2's complement negation $A + \overline{B} + 1$.
 
 ## References & Navigation
 

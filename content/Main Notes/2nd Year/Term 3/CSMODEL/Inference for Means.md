@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Inference for Means
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -452,11 +451,11 @@ Calculate the ANOVA $F$-statistic and determine the Bonferroni-adjusted signific
 
 ### Answer Key & Explanations
 
-1. **B**. The t-distribution accounts for the extra uncertainty introduced by using sample std dev.
-2. **C**. A paired t-test is used when observations are dependent or linked.
-3. **B**. Welchs t-test (`equal_var=False`) is safer because it drops the restrictive assumption of equal variances.
-4. **B**. Running multiple tests inflates the chance of a false positive; Bonferroni adjusts alpha to prevent this.
-5. **A**. For a single sample, df = n - 1.
+1. **B)** The t-distribution accounts for the extra uncertainty introduced by using sample std dev.
+2. **C)** A paired t-test is used when observations are dependent or linked.
+3. **B)** Welchs t-test (`equal_var=False`) is safer because it drops the restrictive assumption of equal variances.
+4. **B)** Running multiple tests inflates the chance of a false positive; Bonferroni adjusts alpha to prevent this.
+5. **A)** For a single sample, df = n - 1.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ A **Statistical (Random) Experiment** is any well-defined process or observation
 
 ### Answer Key & Explanations
 
-1. **B**. A statistical experiment has a well-defined sample space $S$ of possible outcomes, but uncontrolled micro-variations or intrinsic randomness make the outcome of any single trial uncertain.
-2. **A**. Each execution of the experiment is a **trial**, and because elementary outcomes in $S$ are mutually exclusive and exhaustive, one trial yields exactly one $\omega \in S$.
-3. **C**. Component time-to-failure varies unpredictably from unit to unit over $S = [0, \infty)$, whereas the other three options are fixed mathematical constants.
-4. **D**. While single trials are unpredictable, aggregate behavior over large $n$ exhibits stable, predictable probability distributions.
-5. **B**. Andrey Kolmogorov formalized every statistical experiment as a probability space $(\Omega, \mathcal{F}, P)$: sample space $\Omega$, event collection $\mathcal{F} \subseteq \mathcal{P}(\Omega)$, and probability measure $P : \mathcal{F} \to [0,1]$.
+1. **B)** A statistical experiment has a well-defined sample space $S$ of possible outcomes, but uncontrolled micro-variations or intrinsic randomness make the outcome of any single trial uncertain.
+2. **A)** Each execution of the experiment is a **trial**, and because elementary outcomes in $S$ are mutually exclusive and exhaustive, one trial yields exactly one $\omega \in S$.
+3. **C)** Component time-to-failure varies unpredictably from unit to unit over $S = [0, \infty)$, whereas the other three options are fixed mathematical constants.
+4. **D)** While single trials are unpredictable, aggregate behavior over large $n$ exhibits stable, predictable probability distributions.
+5. **B)** Andrey Kolmogorov formalized every statistical experiment as a probability space $(\Omega, \mathcal{F}, P)$: sample space $\Omega$, event collection $\mathcal{F} \subseteq \mathcal{P}(\Omega)$, and probability measure $P : \mathcal{F} \to [0,1]$.
 
 ## References & Navigation
 

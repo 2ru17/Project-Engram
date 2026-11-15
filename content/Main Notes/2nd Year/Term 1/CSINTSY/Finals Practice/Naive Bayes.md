@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 07_Naive_Bayes
 
 > [!info] Document Metadata
@@ -173,16 +172,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **B**. It makes a "naive" or strong assumption that all features (e.g., words in a text) are independent of each other given the class.
-2. **D**. $P(C|X)$ is the Posterior Probability, representing the probability of Class $C$ given the observed features $X$.
-3. **C**. The term $P(X|C)$ is the Likelihood, the probability of features appearing given a specific class.
-4. **B**. The Evidence $P(X)$ is the same for all classes being compared, so it can be omitted when finding the maximum score (argmax).
-5. **A**. The assumption means the joint probability is just the product of individual feature probabilities: $P(x_1|C) \times \dots \times P(x_n|C)$.
-6. **C**. The classification rule takes the argmax of the product of the prior probability and the likelihoods of all observed features.
-7. **B**. Since probabilities are multiplied, a single zero likelihood forces the entire score for that class to be zero, completely overriding other evidence.
-8. **C**. Laplace Smoothing adds a small constant (usually 1) to all counts to ensure no probability is exactly zero.
-9. **C**. $V$ stands for the vocabulary size, which is added to the denominator to balance the $+1$ added to the numerator for every possible word.
-10. **B**. $P(Spam) = 10 / (10 + 40) = 10 / 50 = 0.20$.
+1. **B)** It makes a "naive" or strong assumption that all features (e.g., words in a text) are independent of each other given the class.
+2. **D)** $P(C|X)$ is the Posterior Probability, representing the probability of Class $C$ given the observed features $X$.
+3. **C)** The term $P(X|C)$ is the Likelihood, the probability of features appearing given a specific class.
+4. **B)** The Evidence $P(X)$ is the same for all classes being compared, so it can be omitted when finding the maximum score (argmax).
+5. **A)** The assumption means the joint probability is just the product of individual feature probabilities: $P(x_1|C) \times \dots \times P(x_n|C)$.
+6. **C)** The classification rule takes the argmax of the product of the prior probability and the likelihoods of all observed features.
+7. **B)** Since probabilities are multiplied, a single zero likelihood forces the entire score for that class to be zero, completely overriding other evidence.
+8. **C)** Laplace Smoothing adds a small constant (usually 1) to all counts to ensure no probability is exactly zero.
+9. **C)** $V$ stands for the vocabulary size, which is added to the denominator to balance the $+1$ added to the numerator for every possible word.
+10. **B)** $P(Spam) = 10 / (10 + 40) = 10 / 50 = 0.20$.
 
 ## References & Navigation
 
