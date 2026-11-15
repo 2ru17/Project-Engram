@@ -5,7 +5,6 @@ course: CCPROG2
 topic: "CCPROG2 Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -131,15 +130,15 @@ flowchart LR
 
 ### Answer Key & Explanations
 
-1. **B**. `arr` points to `arr[0]` (10). `ptr = arr + 2` points to `arr[2]` (30). `ptr - 1` points to `arr[1]`, whose dereferenced value is 20.
-2. **C**. `calloc(num, size)` allocates contiguous memory and explicitly zeros out every byte. `malloc()` leaves allocated memory uninitialized.
-3. **C**. The arrow operator `->` dereferences the pointer to a structure and accesses the member `age`. Equivalent to `(*ptr).age = 20;`.
-4. **B**. `fread()` returns the number of complete items successfully read, which in this case is 4.
-5. **C**. According to the ANSI C standard, if `ptr` is a null pointer, no action occurs.
+1. **B)** `arr` points to `arr[0]` (10). `ptr = arr + 2` points to `arr[2]` (30). `ptr - 1` points to `arr[1]`, whose dereferenced value is 20.
+2. **C)** `calloc(num, size)` allocates contiguous memory and explicitly zeros out every byte. `malloc()` leaves allocated memory uninitialized.
+3. **C)** The arrow operator `->` dereferences the pointer to a structure and accesses the member `age`. Equivalent to `(*ptr).age = 20;`.
+4. **B)** `fread()` returns the number of complete items successfully read, which in this case is 4.
+5. **C)** According to the ANSI C standard, if `ptr` is a null pointer, no action occurs.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CCPROG1]]
-- **Next Topic:** [[CCDSALG]], [[CCPROG3]]
-- **Prerequisites:** [[Advanced C]], Pointers, Dynamic Memory, Structs
-- **Cross-Curricular Connections:** [[CSOPESY]]
+- **Previous Topic:** [[[REV] CCPROG1 Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] CCDSALG Comprehensive Finals Reviewer]], [[JAVA-OOP-Finals-Rev]]
+- **Prerequisites:** [[Arrays and Pointers]], Pointers, Dynamic Memory, Structs
+- **Cross-Curricular Connections:** [[[REV] CSOPESY Comprehensive Finals Reviewer]]

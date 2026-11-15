@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Integer Operations and Overflow"
 status: completed
 ---
-
 # Problem Set - Integer Operations and Overflow
 
 > [!info] Document Metadata

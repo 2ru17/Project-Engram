@@ -5,7 +5,6 @@ course: CCPROG1
 topic: "CCPROG1 Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -134,15 +133,15 @@ sequenceDiagram
 
 ### Answer Key & Explanations
 
-1. **A**. Operator precedence is left-to-right for `*`, `/`, `%`. `14 / 4 = 3` (integer division). Then `3 * 4 = 12`. Then `14 % 4 = 2`. Finally `12 + 2 = 14`.
-2. **A**. Due to short-circuit evaluation in logical OR (`||`), because `x > 3` (5 > 3) is true, the right-hand operand `++y < 12` is never evaluated. Thus, `y` remains 10.
-3. **B**. Flowing off the end of a non-void function in C leads to undefined behavior; the caller reads whatever residual bits happen to remain in the return register (e.g., `EAX/RAX`).
-4. **C**. The test expression is evaluated at the bottom of the loop body, guaranteeing at least one execution pass.
-5. **B**. In C, `=` is an assignment operator. The expression `x = 0` assigns 0 to `x` and evaluates to the value `0`. In C conditionals, 0 is false, so the loop never executes its body.
+1. **A)** Operator precedence is left-to-right for `*`, `/`, `%`. `14 / 4 = 3` (integer division). Then `3 * 4 = 12`. Then `14 % 4 = 2`. Finally `12 + 2 = 14`.
+2. **A)** Due to short-circuit evaluation in logical OR (`||`), because `x > 3` (5 > 3) is true, the right-hand operand `++y < 12` is never evaluated. Thus, `y` remains 10.
+3. **B)** Flowing off the end of a non-void function in C leads to undefined behavior; the caller reads whatever residual bits happen to remain in the return register (e.g., `EAX/RAX`).
+4. **C)** The test expression is evaluated at the bottom of the loop body, guaranteeing at least one execution pass.
+5. **B)** In C, `=` is an assignment operator. The expression `x = 0` assigns 0 to `x` and evaluates to the value `0`. In C conditionals, 0 is false, so the loop never executes its body.
 
 ## References & Navigation
 
 - **Previous Topic:** None
-- **Next Topic:** [[CCPROG2]]
-- **Prerequisites:** [[CCPROG1]] Foundations, C Language Syntax
-- **Cross-Curricular Connections:** [[CCDSTRU]]
+- **Next Topic:** [[[REV] CCPROG2 Comprehensive Finals Reviewer]]
+- **Prerequisites:** [[Process and Importance of Programming]] Foundations, C Language Syntax
+- **Cross-Curricular Connections:** [[[REV] CCDSTRU Comprehensive Finals Reviewer]]

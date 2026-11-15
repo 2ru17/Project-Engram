@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 01_State_Based_Model
 
 > [!info] Document Metadata
@@ -181,16 +180,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **B**. A state-based model frames problems by viewing the world as a set of discrete states connected by actions.
-2. **D**. The Initial State ($S_0$) is where the agent starts searching or acting.
-3. **C**. The successor function takes a state and returns the available actions and the subsequent states they lead to.
-4. **A**. The goal test is a condition or function that evaluates whether a state meets the criteria to be considered a solution.
-5. **B**. Path cost is usually the cumulative sum of step costs $c(s, a, s')$ taken along a specific path.
-6. **C**. The optimal solution is explicitly defined as the path that minimizes the total path cost.
-7. **C**. The state space forms the complete theoretical graph of all possible states accessible from the start.
-8. **A**. For N-Queens, success is achieved when all $n$ queens are placed safely without attacking each other.
-9. **B**. The state space exists independently as the theoretical problem landscape, whereas the search tree is built dynamically as the algorithm explores paths.
-10. **C**. A common mistake is conflating $g(n)$, the actual cost incurred, with $h(n)$, which is an informed estimate used in heuristic search, not basic state formulation.
+1. **B)** A state-based model frames problems by viewing the world as a set of discrete states connected by actions.
+2. **D)** The Initial State ($S_0$) is where the agent starts searching or acting.
+3. **C)** The successor function takes a state and returns the available actions and the subsequent states they lead to.
+4. **A)** The goal test is a condition or function that evaluates whether a state meets the criteria to be considered a solution.
+5. **B)** Path cost is usually the cumulative sum of step costs $c(s, a, s')$ taken along a specific path.
+6. **C)** The optimal solution is explicitly defined as the path that minimizes the total path cost.
+7. **C)** The state space forms the complete theoretical graph of all possible states accessible from the start.
+8. **A)** For N-Queens, success is achieved when all $n$ queens are placed safely without attacking each other.
+9. **B)** The state space exists independently as the theoretical problem landscape, whereas the search tree is built dynamically as the algorithm explores paths.
+10. **C)** A common mistake is conflating $g(n)$, the actual cost incurred, with $h(n)$, which is an informed estimate used in heuristic search, not basic state formulation.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCINFOM
 topic: Data Modeling
 status: completed
 ---
-
 # Concept-Finals-Mock
 
 > [!info] Document Metadata
@@ -215,4 +214,4 @@ _Please contact me through discord or my the university email for any problems r
 
 ## References & Navigation
 
-- **Related Notes:** [[Information Management]]
+- **Related Notes:** [[Fundamentals of Data and Information]], [[Database and Its Environment]], [[Introduction to SQL]]

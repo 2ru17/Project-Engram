@@ -5,7 +5,6 @@ course: CSARCH1
 topic: "CSARCH1 Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -118,15 +117,15 @@ flowchart TD
 
 ### Answer Key & Explanations
 
-1. **A**. $+43$ in 8-bit binary is `00101011`. Invert all bits (1's complement): `11010100`. Add 1 (2's complement): `11010101`.
-2. **B**. Tree of 2-to-1 MUXes: Level 1 requires 4 MUXes (handling 8 inputs down to 4), Level 2 requires 2 MUXes (4 inputs to 2), Level 3 requires 1 MUX (2 inputs to 1). Total $= 4 + 2 + 1 = 7$.
-3. **C**. When $J=0, K=0 \implies Q$; when $J=0, K=1 \implies 0$; when $J=1, K=0 \implies 1$; when $J=1, K=1 \implies \bar{Q}$.
-4. **B**. Moore outputs depend solely on the current state, whereas Mealy outputs are a combinational function of current state and external inputs.
-5. **B**. Clocked edge-triggered behavior in Verilog is modeled using an `always @(posedge clk)` event control block with non-blocking assignments (`<=`).
+1. **A)** $+43$ in 8-bit binary is `00101011`. Invert all bits (1's complement): `11010100`. Add 1 (2's complement): `11010101`.
+2. **B)** Tree of 2-to-1 MUXes: Level 1 requires 4 MUXes (handling 8 inputs down to 4), Level 2 requires 2 MUXes (4 inputs to 2), Level 3 requires 1 MUX (2 inputs to 1). Total $= 4 + 2 + 1 = 7$.
+3. **C)** When $J=0, K=0 \implies Q$; when $J=0, K=1 \implies 0$; when $J=1, K=0 \implies 1$; when $J=1, K=1 \implies \bar{Q}$.
+4. **B)** Moore outputs depend solely on the current state, whereas Mealy outputs are a combinational function of current state and external inputs.
+5. **B)** Clocked edge-triggered behavior in Verilog is modeled using an `always @(posedge clk)` event control block with non-blocking assignments (`<=`).
 
 ## References & Navigation
 
-- **Previous Topic:** [[CCPROG1]]
-- **Next Topic:** [[CSARCH2]], [[LBYARCH]]
-- **Prerequisites:** [[Digital Logic]], Boolean Algebra, Combinational/Sequential Circuits, Verilog
-- **Cross-Curricular Connections:** [[CSOPESY]]
+- **Previous Topic:** [[[REV] CCPROG1 Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] CSARCH2 Comprehensive Reviewer and Practice Exam]], [[[REV] LBYARCH Comprehensive Finals Reviewer]]
+- **Prerequisites:** [[Boolean Algebra]], Boolean Algebra, Combinational/Sequential Circuits, Verilog
+- **Cross-Curricular Connections:** [[[REV] CSOPESY Comprehensive Finals Reviewer]]

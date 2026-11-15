@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "4.0 Data Representation - Integers"
 status: completed
 ---
-
 # 4.0 Data Representation - Integers
 
 > [!info] Document Metadata
@@ -116,16 +115,16 @@ Notice the MSB is now $1$. In an $8$-bit signed 2's complement system, $10000010
 
 ### Answer Key & Explanations
 
-1. **B**. Data representation involves encoding information into binary form for reliable transport and processing.
-2. **B**. Unsigned integers represent only non-negative values, while signed integers can represent both positive and negative values.
-3. **D**. Modern CPUs almost universally use the 2's complement scheme for signed integers.
-4. **C**. Calculations exceeding fixed-width capacity result in overflow, causing illogical values.
-5. **B**. Zero extension expands an unsigned integer by padding the left side with 0s.
-6. **C**. Signed integers allocate the MSB as the sign bit: 0 for positive, 1 for negative.
-7. **B**. 1's complement involves starting with the positive unsigned binary value and inverting every bit.
-8. **A**. The range of an unsigned integer is 0 to 2^n - 1.
-9. **B**. A noted advantage is that 2's complement uses only one representation of 0, unlike sign-and-magnitude.
-10. **C**. Sign extension for negative signed integers replicates the sign bit (1) to the left.
+1. **B)** Data representation involves encoding information into binary form for reliable transport and processing.
+2. **B)** Unsigned integers represent only non-negative values, while signed integers can represent both positive and negative values.
+3. **D)** Modern CPUs almost universally use the 2's complement scheme for signed integers.
+4. **C)** Calculations exceeding fixed-width capacity result in overflow, causing illogical values.
+5. **B)** Zero extension expands an unsigned integer by padding the left side with 0s.
+6. **C)** Signed integers allocate the MSB as the sign bit: 0 for positive, 1 for negative.
+7. **B)** 1's complement involves starting with the positive unsigned binary value and inverting every bit.
+8. **A)** The range of an unsigned integer is 0 to 2^n - 1.
+9. **B)** A noted advantage is that 2's complement uses only one representation of 0, unlike sign-and-magnitude.
+10. **C)** Sign extension for negative signed integers replicates the sign bit (1) to the left.
 
 ## References & Navigation
 

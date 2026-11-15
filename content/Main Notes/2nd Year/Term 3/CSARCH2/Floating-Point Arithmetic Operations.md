@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Floating-Point Arithmetic Operations"
 status: completed
 ---
-
 # Module 08: Floating-Point Arithmetic Operations
 
 > [!info] Document Metadata
@@ -244,11 +243,11 @@ using IEEE 754 Round to Nearest, Ties to Even.
 
 ### Answer Key & Explanations
 
-1. **B**. The sticky bit $S$ acts as a cumulative OR reduction of all bits shifted beyond the Round bit ($R$). It guarantees that hardware knows whether any non-zero fractional data was discarded, which is necessary for exact half-way tie detection.
-2. **A**. The combination $G=1, R=0, S=0$ represents an exact half-way tie. Banker's rounding breaks ties by rounding to the nearest EVEN number (LSb $= 0$). Since $L=1$ is odd, adding 1 rounds it up to make the LSb even (`0`).
-3. **C**. Subtracting two close numbers (e.g., $1.0000001 - 1.0000000$) cancels out all common leading bits, leaving only the unaligned trailing bits shifted to the MSB, which magnifies roundoff noise.
-4. **D**. The alignment shift distance is $\Delta E = E_1' - E_2' = 140 - 135 = 5$ bit positions.
-5. **B**. Since $E_x' = E_x + \text{Bias}$ and $E_y' = E_y + \text{Bias}$, summing them gives $E_x + E_y + 2\cdot\text{Bias}$. Subtracting one $\text{Bias}$ restores the proper biased format $E_z + \text{Bias}$.
+1. **B)** The sticky bit $S$ acts as a cumulative OR reduction of all bits shifted beyond the Round bit ($R$). It guarantees that hardware knows whether any non-zero fractional data was discarded, which is necessary for exact half-way tie detection.
+2. **A)** The combination $G=1, R=0, S=0$ represents an exact half-way tie. Banker's rounding breaks ties by rounding to the nearest EVEN number (LSb $= 0$). Since $L=1$ is odd, adding 1 rounds it up to make the LSb even (`0`).
+3. **C)** Subtracting two close numbers (e.g., $1.0000001 - 1.0000000$) cancels out all common leading bits, leaving only the unaligned trailing bits shifted to the MSB, which magnifies roundoff noise.
+4. **D)** The alignment shift distance is $\Delta E = E_1' - E_2' = 140 - 135 = 5$ bit positions.
+5. **B)** Since $E_x' = E_x + \text{Bias}$ and $E_y' = E_y + \text{Bias}$, summing them gives $E_x + E_y + 2\cdot\text{Bias}$. Subtracting one $\text{Bias}$ restores the proper biased format $E_z + \text{Bias}$.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSMATH2
 topic: Prac Ex 3
 status: completed
 ---
-
 # Prac Ex 3
 
 > [!info] Document Metadata
@@ -52,4 +51,4 @@ $ A + B = \begin{pmatrix} 6 & 8 \\ 10 & 12 \end{pmatrix} $
 
 ## References & Navigation
 
-- **Related Notes:** [[Vector Spaces]]
+- **Related Notes:** [[Vectors in the Plane]], [[Vectors in R3]]

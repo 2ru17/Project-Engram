@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ In probability theory, an **Event** is any subset $E$ of the sample space $S$ ($
 
 ### Answer Key & Explanations
 
-1. **B**. Sample points (elementary outcomes) are elements $\omega \in S$, whereas events are subsets $E \subseteq S$ (collections of outcomes).
-2. **A**. A simple event consists of a single sample point $\{\omega\}$ ($|E| = 1$), while a compound event contains multiple sample points ($|E| \ge 2$).
-3. **C**. The power set $\mathcal{P}(S)$ of an $n$-element sample space contains $2^n$ subsets. For $n = 6$, $2^6 = 64$.
-4. **D**. The only even prime number is $2$, so $E = \{2\}$. Because $|E| = 1$, $E$ is a simple (elementary) event.
-5. **B**. The impossible event $\emptyset$ always has $P(\emptyset) = 0$, but the converse fails in continuous spaces where individual points have zero length/measure ($P(\{x\}) = 0$ even though $\{x\} \ne \emptyset$).
+1. **B)** Sample points (elementary outcomes) are elements $\omega \in S$, whereas events are subsets $E \subseteq S$ (collections of outcomes).
+2. **A)** A simple event consists of a single sample point $\{\omega\}$ ($|E| = 1$), while a compound event contains multiple sample points ($|E| \ge 2$).
+3. **C)** The power set $\mathcal{P}(S)$ of an $n$-element sample space contains $2^n$ subsets. For $n = 6$, $2^6 = 64$.
+4. **D)** The only even prime number is $2$, so $E = \{2\}$. Because $|E| = 1$, $E$ is a simple (elementary) event.
+5. **B)** The impossible event $\emptyset$ always has $P(\emptyset) = 0$, but the converse fails in continuous spaces where individual points have zero length/measure ($P(\{x\}) = 0$ even though $\{x\} \ne \emptyset$).
 
 ## References & Navigation
 

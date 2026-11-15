@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "10.0 Computer Hardware - IO Devices"
 status: completed
 ---
-
 # 10.0 Computer Hardware - IO Devices
 
 > [!info] Document Metadata
@@ -102,16 +101,16 @@ Without such mechanisms in HPC environments, the system would stall waiting on I
 
 ### Answer Key & Explanations
 
-1. **B**. Input devices gather data and convert it into machine-readable forms.
-2. **A**. Buffering is defined as the temporary storage of data while transferred between processes/devices operating at different speeds.
-3. **C**. Latency is the time delay between a request for data and when the transfer begins.
-4. **C**. A Device Driver is system software that serves as an interface translating OS commands into device actions.
-5. **C**. Capacitive touchscreens rely on the electrical conductivity of objects to sense location.
-6. **C**. Impact printers press an ink-soaked ribbon onto paper, making them ideal for multi-copy forms.
-7. **C**. Caching stores frequently accessed data in faster mediums to speed up retrieval and reduce slower secondary storage access.
-8. **C**. Bandwidth is the maximum amount of data that can be transferred concurrently.
-9. **B**. Physical I/O hardware can be emulated as virtual devices by a hypervisor to share among VMs.
-10. **A**. DMA and similar mechanisms prevent CPU bottlenecks by keeping the fast CPU from stalling while waiting on slower I/O.
+1. **B)** Input devices gather data and convert it into machine-readable forms.
+2. **A)** Buffering is defined as the temporary storage of data while transferred between processes/devices operating at different speeds.
+3. **C)** Latency is the time delay between a request for data and when the transfer begins.
+4. **C)** A Device Driver is system software that serves as an interface translating OS commands into device actions.
+5. **C)** Capacitive touchscreens rely on the electrical conductivity of objects to sense location.
+6. **C)** Impact printers press an ink-soaked ribbon onto paper, making them ideal for multi-copy forms.
+7. **C)** Caching stores frequently accessed data in faster mediums to speed up retrieval and reduce slower secondary storage access.
+8. **C)** Bandwidth is the maximum amount of data that can be transferred concurrently.
+9. **B)** Physical I/O hardware can be emulated as virtual devices by a hypervisor to share among VMs.
+10. **A)** DMA and similar mechanisms prevent CPU bottlenecks by keeping the fast CPU from stalling while waiting on slower I/O.
 
 ## References & Navigation
 

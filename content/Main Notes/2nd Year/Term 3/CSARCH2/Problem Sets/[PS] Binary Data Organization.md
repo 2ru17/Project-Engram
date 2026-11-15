@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Binary Data Organization"
 status: completed
 ---
-
 # Problem Set: Binary Data Organization
 
 > [!info] Document Metadata

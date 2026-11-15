@@ -15,7 +15,7 @@ import { STAR_DOMAINS, type StarDomainId } from "@/lib/course-registry";
 
 export default function ProgressCodeModal() {
   const router = useRouter();
-  const { universe, theme, isLite } = useTheme();
+  const { universe } = useTheme();
   const {
     tier,
     focusCourse,
@@ -41,20 +41,7 @@ export default function ProgressCodeModal() {
   } | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
 
-  const liveCode = useMemo(() => {
-    if (!isSyncModalOpen) return "";
-    return exportProgressCode();
-  }, [
-    isSyncModalOpen,
-    exportProgressCode,
-    universe,
-    theme,
-    isLite,
-    tier,
-    focusCourse,
-    completedNotes,
-    lastVisited,
-  ]);
+  const liveCode = isSyncModalOpen ? exportProgressCode() : "";
 
   const decodedPreview = useMemo(() => {
     if (!importInput.trim()) return null;
@@ -289,16 +276,18 @@ export default function ProgressCodeModal() {
                       </h3>
 
                       <div className="flex flex-wrap items-center gap-1">
-                        {[
-                          { id: "all", label: "ALL DOMAINS" },
-                          { id: "systems", label: "SYSTEMS" },
-                          { id: "theory", label: "THEORY & MATH" },
-                          { id: "security", label: "NET & SECURITY" },
-                          { id: "software", label: "SOFTWARE & AI" },
-                        ].map((d) => (
+                        {(
+                          [
+                            { id: "all", label: "ALL DOMAINS" },
+                            { id: "systems", label: "SYSTEMS" },
+                            { id: "theory", label: "THEORY & MATH" },
+                            { id: "security", label: "NET & SECURITY" },
+                            { id: "software", label: "SOFTWARE & AI" },
+                          ] satisfies { id: StarDomainId | "all"; label: string }[]
+                        ).map((d) => (
                           <button
                             key={d.id}
-                            onClick={() => setDomainFilter(d.id as any)}
+                            onClick={() => setDomainFilter(d.id)}
                             className={`px-2 py-0.5 text-[10px] font-mono rounded border transition-all ${
                               domainFilter === d.id
                                 ? "border-[var(--zen-cyan)] text-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 font-semibold"
@@ -397,7 +386,7 @@ export default function ProgressCodeModal() {
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <div>
                         <span className="text-[10px] font-mono tracking-widest text-[var(--zen-cyan)] uppercase font-semibold">
-                          EXPORT PROFILE CODE // VALORANT CROSSHAIR STYLE
+                          EXPORT PROFILE CODE // STATELESS TELEMETRY VECTOR
                         </span>
                         <h3 className="text-sm font-semibold text-[var(--zen-snow)] mt-0.5">
                           Copy this code to transfer your exact study state to another device

@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "2.0 Computers, Data, and Information"
 status: completed
 ---
-
 # 2.0 Computers, Data, and Information
 
 > [!info] Document Metadata
@@ -136,16 +135,16 @@ Computers are typically categorized based on their intended use, scale, and proc
 
 ### Answer Key & Explanations
 
-1. **B**. The note defines a computer as a data processing device that performs four major functions: Input, Process, Output, and Storage.
-2. **C**. Data represents raw, unorganized facts with minimal standalone meaning, while information is data that has been processed, organized, and presented in a purposeful and useful context.
-3. **D**. Primary storage (RAM) is explicitly described as a volatile storage medium that holds instructions and data for currently running programs, losing contents when powered off.
-4. **A**. Binary is defined as the fundamental language of computers, representing off/on electrical states with 0s and 1s.
-5. **B**. A Kilobyte (KB) is defined as exactly 1024 bytes.
-6. **C**. The CPU is referred to as the "brain" of the computer, responsible for executing instructions and orchestrating data manipulation.
-7. **C**. Mainframes are massive, highly reliable computers used by large organizations to rapidly process vast volumes of data concurrently.
-8. **B**. Special-purpose (embedded) computers are engineered for one specific task and operate within larger mechanical or electrical systems.
-9. **D**. System software encompasses operating systems and utilities that manage hardware resources, contrasting with application software.
-10. **A**. A nibble is defined as a combination of four bits.
+1. **B)** The note defines a computer as a data processing device that performs four major functions: Input, Process, Output, and Storage.
+2. **C)** Data represents raw, unorganized facts with minimal standalone meaning, while information is data that has been processed, organized, and presented in a purposeful and useful context.
+3. **D)** Primary storage (RAM) is explicitly described as a volatile storage medium that holds instructions and data for currently running programs, losing contents when powered off.
+4. **A)** Binary is defined as the fundamental language of computers, representing off/on electrical states with 0s and 1s.
+5. **B)** A Kilobyte (KB) is defined as exactly 1024 bytes.
+6. **C)** The CPU is referred to as the "brain" of the computer, responsible for executing instructions and orchestrating data manipulation.
+7. **C)** Mainframes are massive, highly reliable computers used by large organizations to rapidly process vast volumes of data concurrently.
+8. **B)** Special-purpose (embedded) computers are engineered for one specific task and operate within larger mechanical or electrical systems.
+9. **D)** System software encompasses operating systems and utilities that manage hardware resources, contrasting with application software.
+10. **A)** A nibble is defined as a combination of four bits.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Linear Programming
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -656,14 +655,14 @@ Only non-zero for BINDING constraints.
 
 ### Answer Key & Explanations
 
-1. **B**. LP requires all relationships (objective and constraints) to be strictly linear.
-2. **A**. The Fundamental Theorem of LP states the optimal is at an extreme point (corner).
-3. **C**. Slack variables convert <= inequalities to equalities by taking up the slack (unused resource).
-4. **D**. If a constraint is not fully used (slack > 0), adding more of that resource has no value, hence shadow price = 0.
-5. **B**. `linprog` minimizes by default; maximization requires negating the objective coefficients.
+1. **B)** LP requires all relationships (objective and constraints) to be strictly linear.
+2. **A)** The Fundamental Theorem of LP states the optimal is at an extreme point (corner).
+3. **C)** Slack variables convert <= inequalities to equalities by taking up the slack (unused resource).
+4. **D)** If a constraint is not fully used (slack > 0), adding more of that resource has no value, hence shadow price = 0.
+5. **B)** `linprog` minimizes by default; maximization requires negating the objective coefficients.
 
 ## References & Navigation
 
 - **Previous Topic:** [[Bayesian Inference]]
 - **Next Topic:** [[Clustering]]
-- **Related Notes:** [[Optimization]], [[Foundations for Inference]]
+- **Related Notes:** [[Matrices and Matrix Operations]], [[Foundations for Inference]]

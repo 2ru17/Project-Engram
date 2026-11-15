@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Data Collection
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -117,11 +116,11 @@ print("\nStratified Sample:\n", stratified_sample)
 
 ### Answer Key & Explanations
 
-1. **B**. A population is the entire group, while a sample is a subset drawn from it.
-2. **C**. Stratified sampling ensures all subgroups (strata) are proportionally represented.
-3. **B**. Selection bias happens when the sampling method is flawed, leading to unrepresentative data.
-4. **C**. Observational studies just observe, whereas experiments involve active manipulation (treatments).
-5. **B**. In cluster sampling, the population is divided into clusters, and random clusters are chosen in their entirety.
+1. **B)** A population is the entire group, while a sample is a subset drawn from it.
+2. **C)** Stratified sampling ensures all subgroups (strata) are proportionally represented.
+3. **B)** Selection bias happens when the sampling method is flawed, leading to unrepresentative data.
+4. **C)** Observational studies just observe, whereas experiments involve active manipulation (treatments).
+5. **B)** In cluster sampling, the population is divided into clusters, and random clusters are chosen in their entirety.
 
 ## References & Navigation
 

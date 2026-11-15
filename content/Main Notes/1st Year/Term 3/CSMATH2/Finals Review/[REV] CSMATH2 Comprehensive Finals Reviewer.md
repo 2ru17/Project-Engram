@@ -5,7 +5,6 @@ course: CSMATH2
 topic: "CSMATH2 Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -101,15 +100,15 @@ flowchart LR
 
 ### Answer Key & Explanations
 
-1. **C**. For an $n \times n$ matrix, $\det(c A) = c^n \det(A)$. Here $n = 3$, so $\det(2A) = 2^3 \det(A) = 8 \times 4 = 32$.
-2. **B**. By the Rank-Nullity Theorem: $\text{rank}(A) + \text{nullity}(A) = n$ (number of columns). Thus, $\text{rank}(A) + 4 = 7 \implies \text{rank}(A) = 3$.
-3. **C**. A matrix is singular when its determinant equals zero: $\det(A) = 2(6) - 4(k) = 12 - 4k = 0 \implies k = 3$.
-4. **A**. $A$ is an upper triangular matrix. The eigenvalues of an upper or lower triangular matrix are strictly the entries on its main diagonal: 3 and 2.
-5. **C**. A valid subspace must contain the zero vector $\mathbf{0}$ and be closed under vector addition and scalar multiplication. The homogeneous linear equation $2x - 3y + z = 0$ defines a plane passing through the origin in $\mathbb{R}^3$, satisfying all subspace axioms.
+1. **C)** For an $n \times n$ matrix, $\det(c A) = c^n \det(A)$. Here $n = 3$, so $\det(2A) = 2^3 \det(A) = 8 \times 4 = 32$.
+2. **B)** By the Rank-Nullity Theorem: $\text{rank}(A) + \text{nullity}(A) = n$ (number of columns). Thus, $\text{rank}(A) + 4 = 7 \implies \text{rank}(A) = 3$.
+3. **C)** A matrix is singular when its determinant equals zero: $\det(A) = 2(6) - 4(k) = 12 - 4k = 0 \implies k = 3$.
+4. **A)** $A$ is an upper triangular matrix. The eigenvalues of an upper or lower triangular matrix are strictly the entries on its main diagonal: 3 and 2.
+5. **C)** A valid subspace must contain the zero vector $\mathbf{0}$ and be closed under vector addition and scalar multiplication. The homogeneous linear equation $2x - 3y + z = 0$ defines a plane passing through the origin in $\mathbb{R}^3$, satisfying all subspace axioms.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CSMATH1]]
-- **Next Topic:** [[CSMODEL]]
-- **Prerequisites:** [[Linear Algebra]], Matrices, Vector Spaces, Eigenvalues
-- **Cross-Curricular Connections:** [[CSINTSY]]
+- **Previous Topic:** [[[REV] CSMATH1 Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] CSMODEL Comprehensive Finals Reviewer]]
+- **Prerequisites:** [[Matrices and Matrix Operations]], Matrices, Vector Spaces, Eigenvalues
+- **Cross-Curricular Connections:** [[[REV] CSINTSY Comprehensive Finals Reviewer]]

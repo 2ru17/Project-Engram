@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Specificity-Properties-and-Others
 status: completed
 ---
-
 # Specificity-Properties-and-Others
 
 > [!info] Document Metadata
@@ -110,9 +109,9 @@ padding-top, padding-left, padding-right, padding-bottom can be used to adjust e
 
 ### Answer Key & Explanations
 
-1. **A**. The specificity hierarchy places inline styles at the top, followed by IDs, then classes/attributes/pseudo-classes, and finally elements.
-2. **B**. 'Float'-ing an element removes it from the normal flow of the layout, but other elements still flow around it.
-3. **C**. The `padding` property generates space around an element’s content, inside of any defined borders, whereas margin is outside the border.
+1. **A)** The specificity hierarchy places inline styles at the top, followed by IDs, then classes/attributes/pseudo-classes, and finally elements.
+2. **B)** 'Float'-ing an element removes it from the normal flow of the layout, but other elements still flow around it.
+3. **C)** The `padding` property generates space around an element’s content, inside of any defined borders, whereas margin is outside the border.
 
 ## References & Navigation
 

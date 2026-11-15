@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "3.0 Introduction to Number Systems"
 status: completed
 ---
-
 # 3.0 Introduction to Number Systems
 
 > [!info] Document Metadata
@@ -109,16 +108,16 @@ Reading from bottom to top: $15\text{F}_{16}$.
 
 ### Answer Key & Explanations
 
-1. **C**. The base or radix determines the number of symbols used to represent digits.
-2. **C**. Computers natively operate exclusively on binary (base 2) numbers.
-3. **C**. Hexadecimal uses 16 symbols (0-9 and A-F).
-4. **B**. To convert to decimal, multiply each digit by the base raised to the power of its positional index and sum them up.
-5. **B**. Using continuous division, remainders are read from bottom to top to form the new digits.
-6. **A**. Binary to octal conversion involves grouping binary digits into sets of 3 starting from the rightmost bit.
-7. **C**. The hexadecimal symbol C corresponds to the decimal value 12.
-8. **C**. Binary to hexadecimal conversion uses groups of 4 bits.
-9. **B**. Humans use decimal, octal, and hexadecimal to conveniently represent and manipulate binary computer data.
-10. **C**. The rule explicitly states to pad with 0s on the left if necessary when grouping digits.
+1. **C)** The base or radix determines the number of symbols used to represent digits.
+2. **C)** Computers natively operate exclusively on binary (base 2) numbers.
+3. **C)** Hexadecimal uses 16 symbols (0-9 and A-F).
+4. **B)** To convert to decimal, multiply each digit by the base raised to the power of its positional index and sum them up.
+5. **B)** Using continuous division, remainders are read from bottom to top to form the new digits.
+6. **A)** Binary to octal conversion involves grouping binary digits into sets of 3 starting from the rightmost bit.
+7. **C)** The hexadecimal symbol C corresponds to the decimal value 12.
+8. **C)** Binary to hexadecimal conversion uses groups of 4 bits.
+9. **B)** Humans use decimal, octal, and hexadecimal to conveniently represent and manipulate binary computer data.
+10. **C)** The rule explicitly states to pad with 0s on the left if necessary when grouping digits.
 
 ## References & Navigation
 

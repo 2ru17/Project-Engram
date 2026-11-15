@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -67,11 +66,11 @@ $$P(\text{CPU} \cup \text{Mem}) = 0.35 + 0.25 - 0.12 = 0.48$$
 
 ### Answer Key & Explanations
 
-1. **B**. The general Additive Rule computes the probability of the union of two events by summing their marginal probabilities and subtracting their intersection once: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
-2. **B**. Every sample point in $A \cap B$ belongs to both $A$ and $B$. Adding $P(A) + P(B)$ counts those shared outcomes twice, so subtracting $P(A \cap B)$ once restores an exact single count.
-3. **B**. Rearranging the Additive Rule gives $P(A \cap B) = P(A) + P(B) - P(A \cup B) = 0.45 + 0.30 - 0.60 = 0.15$.
-4. **C**. The subtraction term $-P(A \cap B)$ vanishes if and only if $P(A \cap B) = 0$, which is true when $A$ and $B$ are mutually exclusive (disjoint).
-5. **A**. Outcomes in $A \cap B \cap C$ are counted $+3$ times in $P(A)+P(B)+P(C)$ and $-3$ times in $-P(A \cap B)-P(A \cap C)-P(B \cap C)$, so $+P(A \cap B \cap C)$ must be added back to count that region once.
+1. **B)** The general Additive Rule computes the probability of the union of two events by summing their marginal probabilities and subtracting their intersection once: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
+2. **B)** Every sample point in $A \cap B$ belongs to both $A$ and $B$. Adding $P(A) + P(B)$ counts those shared outcomes twice, so subtracting $P(A \cap B)$ once restores an exact single count.
+3. **B)** Rearranging the Additive Rule gives $P(A \cap B) = P(A) + P(B) - P(A \cup B) = 0.45 + 0.30 - 0.60 = 0.15$.
+4. **C)** The subtraction term $-P(A \cap B)$ vanishes if and only if $P(A \cap B) = 0$, which is true when $A$ and $B$ are mutually exclusive (disjoint).
+5. **A)** Outcomes in $A \cap B \cap C$ are counted $+3$ times in $P(A)+P(B)+P(C)$ and $-3$ times in $-P(A \cap B)-P(A \cap C)-P(B \cap C)$, so $+P(A \cap B \cap C)$ must be added back to count that region once.
 
 ## References & Navigation
 

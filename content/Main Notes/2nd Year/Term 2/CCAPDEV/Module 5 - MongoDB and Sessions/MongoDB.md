@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: MongoDB
 status: completed
 ---
-
 # MongoDB
 
 > [!info] Document Metadata
@@ -104,9 +103,9 @@ This is to prevent your credentials from being leaked to the internet!
 
 ### Answer Key & Explanations
 
-1. **C**. In MongoDB, a collection holds different documents, where a document is equivalent to a tuple (row) in an RDBMS.
-2. **B**. CommonJS is the Node.js default for imports and follows the syntax `const <name> = require(<module_name>);`.
-3. **C**. Config values, credentials, and sensitive information are stored in `.env` files which are ignored from version control to prevent leaks.
+1. **C)** In MongoDB, a collection holds different documents, where a document is equivalent to a tuple (row) in an RDBMS.
+2. **B)** CommonJS is the Node.js default for imports and follows the syntax `const <name> = require(<module_name>);`.
+3. **C)** Config values, credentials, and sensitive information are stored in `.env` files which are ignored from version control to prevent leaks.
 
 ## References & Navigation
 

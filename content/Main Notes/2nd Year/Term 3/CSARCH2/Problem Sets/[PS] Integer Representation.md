@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Integer Representation"
 status: completed
 ---
-
 # Problem Set - Integer Representation
 
 > [!info] Document Metadata

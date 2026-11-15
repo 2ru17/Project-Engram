@@ -5,7 +5,6 @@ course: CCPROG3
 topic: Object-Oriented Concepts
 status: completed
 ---
-
 # JAVA-OOP-Mock-Answers
 
 > [!info] Document Metadata
@@ -268,4 +267,4 @@ _Please contact me through discord or my the university email for any problems r
 
 ## References & Navigation
 
-- **Related Notes:** [[Object-Oriented Programming in Java]]
+- **Related Notes:** [[The Object-Oriented Paradigm and an Overview of Java]], [[Classes and Objects]], [[Inheritance]]

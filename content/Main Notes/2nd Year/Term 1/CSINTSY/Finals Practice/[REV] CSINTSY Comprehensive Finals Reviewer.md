@@ -5,7 +5,6 @@ course: CSINTSY
 topic: "CSINTSY Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -120,15 +119,15 @@ graph TD
 
 ### Answer Key & Explanations
 
-1. **B**. Consistency requires that the estimated cost from $n$ is no greater than the step cost to $n'$ plus the estimated cost from $n'$ (the triangle inequality). Every consistent heuristic is also admissible.
-2. **B**. At the MIN node, $\beta$ is updated to $\min(\beta, 4) = 4$. Since the ancestor MAX node already has a guaranteed move of value $\alpha = 5$, MAX will never choose this branch. Because $\alpha \ge \beta$ ($5 \ge 4$), the remaining children are pruned.
-3. **C**. $H(S) = - (0.5 \log_2 0.5 + 0.5 \log_2 0.5) = - (0.5(-1) + 0.5(-1)) = -(-1) = 1.0$.
-4. **C**. A* balances the known cost to reach the node $g(n)$ with the estimated remaining cost to the goal $h(n)$.
-5. **B**. K-Means alternates between cluster assignment based on Euclidean distance to centroids and updating centroids as the center of mass (mean) of all cluster members.
+1. **B)** Consistency requires that the estimated cost from $n$ is no greater than the step cost to $n'$ plus the estimated cost from $n'$ (the triangle inequality). Every consistent heuristic is also admissible.
+2. **B)** At the MIN node, $\beta$ is updated to $\min(\beta, 4) = 4$. Since the ancestor MAX node already has a guaranteed move of value $\alpha = 5$, MAX will never choose this branch. Because $\alpha \ge \beta$ ($5 \ge 4$), the remaining children are pruned.
+3. **C)** $H(S) = - (0.5 \log_2 0.5 + 0.5 \log_2 0.5) = - (0.5(-1) + 0.5(-1)) = -(-1) = 1.0$.
+4. **C)** A* balances the known cost to reach the node $g(n)$ with the estimated remaining cost to the goal $h(n)$.
+5. **B)** K-Means alternates between cluster assignment based on Euclidean distance to centroids and updating centroids as the center of mass (mean) of all cluster members.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CCDSALG]], [[STT101A]]
-- **Next Topic:** [[CSMODEL]]
-- **Prerequisites:** [[Artificial Intelligence]], A* Search, Minimax, Decision Trees
-- **Cross-Curricular Connections:** [[CSALGCM]]
+- **Previous Topic:** [[[REV] CCDSALG Comprehensive Finals Reviewer]], [[[REV] STT101A Comprehensive Finals Reviewer]]
+- **Next Topic:** [[[REV] CSMODEL Comprehensive Finals Reviewer]]
+- **Prerequisites:** [[Artificial Intelligence Overview]], A* Search, Minimax, Decision Trees
+- **Cross-Curricular Connections:** [[[REV] CSALGCM Comprehensive Finals Reviewer]]

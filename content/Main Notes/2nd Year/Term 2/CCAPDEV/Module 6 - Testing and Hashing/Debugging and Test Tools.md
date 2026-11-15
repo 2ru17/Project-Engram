@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Debugging and Test Tools
 status: completed
 ---
-
 # Debugging and Test Tools
 
 > [!info] Document Metadata
@@ -102,9 +101,9 @@ https://jestjs.io/docs/expect#methods
 
 ### Answer Key & Explanations
 
-1. **C**. `expect` provides access to "matchers" which are used to define which results pass the test case by comparing values.
-2. **A**. `toBe(value)` checks referential equality, while `toEqual(value)` checks value equality.
-3. **B**. Babel is a transcompiler that transforms ES6+ syntax to ES5. Some tools like Jest do not fully support modern ES6+ natively.
+1. **C)** `expect` provides access to "matchers" which are used to define which results pass the test case by comparing values.
+2. **A)** `toBe(value)` checks referential equality, while `toEqual(value)` checks value equality.
+3. **B)** Babel is a transcompiler that transforms ES6+ syntax to ES5. Some tools like Jest do not fully support modern ES6+ natively.
 
 ## References & Navigation
 

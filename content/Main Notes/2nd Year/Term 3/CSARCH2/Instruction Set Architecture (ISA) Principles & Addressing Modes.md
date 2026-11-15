@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "Instruction Set Architecture (ISA) Principles & Addressing Modes"
 status: completed
 ---
-
 # Module 09: Instruction Set Architecture (ISA) Principles & Addressing Modes
 
 > [!info] Document Metadata
@@ -239,11 +238,11 @@ Calculate total memory traffic (in bytes transferred across the system bus) for 
 
 ### Answer Key & Explanations
 
-1. **B**. Scaled Index Base Displacement is the canonical x86 SIB addressing mode designed for accessing elements in arrays of structured data types.
-2. **C**. Pure RISC architectures enforce a strict Load/Store policy: memory is accessed solely through explicit `LOAD` and `STORE` instructions; all ALU arithmetic and logic operations must take their inputs from and write results to the register file.
-3. **C**. In a stack-based machine, operands are pushed onto the evaluation stack (`PUSH A`, `PUSH B`), the `ADD` opcode pops the top two values and pushes their sum, and `POP X` writes the top of stack into variable $X$.
-4. **B**. PC-relative addressing references branch targets as relative distance offsets from the current Program Counter, ensuring that code functions correctly regardless of where the operating system loads the library in virtual memory.
-5. **C**. In post-autoincrement, the operand is fetched using the initial address in the register ($EA = [R1] = \text{0x3000}$), after which $R1$ is incremented by the data size (4 bytes for 32-bit words), resulting in $R1 = \text{0x3004}$.
+1. **B)** Scaled Index Base Displacement is the canonical x86 SIB addressing mode designed for accessing elements in arrays of structured data types.
+2. **C)** Pure RISC architectures enforce a strict Load/Store policy: memory is accessed solely through explicit `LOAD` and `STORE` instructions; all ALU arithmetic and logic operations must take their inputs from and write results to the register file.
+3. **C)** In a stack-based machine, operands are pushed onto the evaluation stack (`PUSH A`, `PUSH B`), the `ADD` opcode pops the top two values and pushes their sum, and `POP X` writes the top of stack into variable $X$.
+4. **B)** PC-relative addressing references branch targets as relative distance offsets from the current Program Counter, ensuring that code functions correctly regardless of where the operating system loads the library in virtual memory.
+5. **C)** In post-autoincrement, the operand is fetched using the initial address in the register ($EA = [R1] = \text{0x3000}$), after which $R1$ is incremented by the data size (4 bytes for 32-bit words), resulting in $R1 = \text{0x3004}$.
 
 ## References & Navigation
 

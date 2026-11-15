@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -69,11 +68,11 @@ status: completed
 
 ### Answer Key & Explanations
 
-1. **B**. Cross-multiplying the definition $P(B \mid A) = \frac{P(A \cap B)}{P(A)}$ yields the general Multiplicative Rule $P(A \cap B) = P(A) \cdot P(B \mid A)$.
-2. **A**. $P(R_1) = \frac{5}{8}$. Given a red ball was removed first, $3$ blue balls remain out of $7$ total balls, so $P(B_2 \mid R_1) = \frac{3}{7}$. Multiplying gives $\frac{5}{8} \times \frac{3}{7} = \frac{15}{56}$.
-3. **C**. $P(\cdot \mid A)$ is a valid probability measure on the reduced sample space $A$. Since $B$ and $B^c$ partition $A$ into $(A \cap B)$ and $(A \cap B^c)$, $P(B \mid A) + P(B^c \mid A) = \frac{P(A \cap B) + P(A \cap B^c)}{P(A)} = \frac{P(A)}{P(A)} = 1$.
-4. **D**. Complements must share the *same* conditioning event: $P(B \mid A) + P(B^c \mid A) = 1$, whereas $P(B \mid A)$ and $P(B \mid A^c)$ condition on different sets $A$ and $A^c$.
-5. **B**. By the Law of Total Probability and the Multiplicative Rule, $P(B) = P(A)P(B \mid A) + P(A^c)P(B \mid A^c) = (0.40)(0.50) + (0.60)(0.20) = 0.20 + 0.12 = 0.32$.
+1. **B)** Cross-multiplying the definition $P(B \mid A) = \frac{P(A \cap B)}{P(A)}$ yields the general Multiplicative Rule $P(A \cap B) = P(A) \cdot P(B \mid A)$.
+2. **A)** $P(R_1) = \frac{5}{8}$. Given a red ball was removed first, $3$ blue balls remain out of $7$ total balls, so $P(B_2 \mid R_1) = \frac{3}{7}$. Multiplying gives $\frac{5}{8} \times \frac{3}{7} = \frac{15}{56}$.
+3. **C)** $P(\cdot \mid A)$ is a valid probability measure on the reduced sample space $A$. Since $B$ and $B^c$ partition $A$ into $(A \cap B)$ and $(A \cap B^c)$, $P(B \mid A) + P(B^c \mid A) = \frac{P(A \cap B) + P(A \cap B^c)}{P(A)} = \frac{P(A)}{P(A)} = 1$.
+4. **D)** Complements must share the *same* conditioning event: $P(B \mid A) + P(B^c \mid A) = 1$, whereas $P(B \mid A)$ and $P(B \mid A^c)$ condition on different sets $A$ and $A^c$.
+5. **B)** By the Law of Total Probability and the Multiplicative Rule, $P(B) = P(A)P(B \mid A) + P(A^c)P(B \mid A^c) = (0.40)(0.50) + (0.60)(0.20) = 0.20 + 0.12 = 0.32$.
 
 ## References & Navigation
 

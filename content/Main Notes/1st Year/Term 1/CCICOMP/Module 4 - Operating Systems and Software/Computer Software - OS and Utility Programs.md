@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "11.0 Computer Software - OS and Utility Programs"
 status: completed
 ---
-
 # 11.0 Computer Software - OS and Utility Programs
 
 > [!info] Document Metadata
@@ -114,16 +113,16 @@ Utility programs perform specialized tasks related to the management, maintenanc
 
 ### Answer Key & Explanations
 
-1. **C**. An OS manages hardware/software resources and acts as the interface between hardware and applications.
-2. **B**. The Boot Up process involves loading the BIOS, a POST, loading the OS, and applying configurations.
-3. **C**. Virtual Memory Management uses secondary storage (swap space) to hold inactive program pages.
-4. **B**. An RTOS is designed to respond very quickly/predictably to external events for critical systems.
-5. **C**. System Software sits directly between Hardware and Application Software in the architecture hierarchy.
-6. **D**. Device Configuration and Control manages hardware devices through drivers for seamless communication.
-7. **C**. Windows Server and UNIX are Server operating systems, optimized to manage network resources for multiple clients.
-8. **B**. Backup and Restore safeguards data by creating copies for potential recovery.
-9. **C**. File compression reduces file sizes for efficient storage or transmission.
-10. **B**. Task Coordination manages the execution of concurrent processes, ensuring fair CPU time allocation.
+1. **C)** An OS manages hardware/software resources and acts as the interface between hardware and applications.
+2. **B)** The Boot Up process involves loading the BIOS, a POST, loading the OS, and applying configurations.
+3. **C)** Virtual Memory Management uses secondary storage (swap space) to hold inactive program pages.
+4. **B)** An RTOS is designed to respond very quickly/predictably to external events for critical systems.
+5. **C)** System Software sits directly between Hardware and Application Software in the architecture hierarchy.
+6. **D)** Device Configuration and Control manages hardware devices through drivers for seamless communication.
+7. **C)** Windows Server and UNIX are Server operating systems, optimized to manage network resources for multiple clients.
+8. **B)** Backup and Restore safeguards data by creating copies for potential recovery.
+9. **C)** File compression reduces file sizes for efficient storage or transmission.
+10. **B)** Task Coordination manages the execution of concurrent processes, ensuring fair CPU time allocation.
 
 ## References & Navigation
 

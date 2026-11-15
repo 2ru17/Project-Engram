@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "8.0 Computer Hardware Components - CPU and Motherboard"
 status: completed
 ---
-
 # 8.0 Computer Hardware Components - CPU and Motherboard
 
 > [!info] Document Metadata
@@ -105,16 +104,16 @@ The processor operates on a continuous loop consisting of the following stages:
 
 ### Answer Key & Explanations
 
-1. **B**. The motherboard acts as the central hub, providing connectors and pathways for the CPU, memory, and peripherals.
-2. **C**. The machine cycle is the fundamental sequence of Fetch-Decode-Execute steps performed continuously.
-3. **C**. The Control Unit (CU) directs operations, fetches/decodes instructions, and coordinates the ALU and memory.
-4. **A**. The system clock regulates timing by emitting a continuous stream of electrical pulses.
-5. **C**. The Arithmetic Logic Unit (ALU) performs integer arithmetic and bitwise logic.
-6. **B**. Registers are tiny, ultra-fast storage locations built directly into the CPU for holding temporary data.
-7. **A**. During decoding, the instruction is translated into control signals that the CPU understands.
-8. **C**. Modern CPUs combine multiple independent processing units (cores) onto a single chip to allow parallel execution without excessive heat.
-9. **B**. Pipelining/Hyper-Threading allows a single core to process different stages of different instructions simultaneously.
-10. **C**. A 3.0 GHz processor experiences 3 billion clock cycles per second.
+1. **B)** The motherboard acts as the central hub, providing connectors and pathways for the CPU, memory, and peripherals.
+2. **C)** The machine cycle is the fundamental sequence of Fetch-Decode-Execute steps performed continuously.
+3. **C)** The Control Unit (CU) directs operations, fetches/decodes instructions, and coordinates the ALU and memory.
+4. **A)** The system clock regulates timing by emitting a continuous stream of electrical pulses.
+5. **C)** The Arithmetic Logic Unit (ALU) performs integer arithmetic and bitwise logic.
+6. **B)** Registers are tiny, ultra-fast storage locations built directly into the CPU for holding temporary data.
+7. **A)** During decoding, the instruction is translated into control signals that the CPU understands.
+8. **C)** Modern CPUs combine multiple independent processing units (cores) onto a single chip to allow parallel execution without excessive heat.
+9. **B)** Pipelining/Hyper-Threading allows a single core to process different stages of different instructions simultaneously.
+10. **C)** A 3.0 GHz processor experiences 3 billion clock cycles per second.
 
 ## References & Navigation
 

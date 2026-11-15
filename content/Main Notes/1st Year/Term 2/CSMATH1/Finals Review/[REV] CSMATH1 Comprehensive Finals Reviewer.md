@@ -5,7 +5,6 @@ course: CSMATH1
 topic: "CSMATH1 Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -120,15 +119,15 @@ graph LR
 
 ### Answer Key & Explanations
 
-1. **A**. $\lim_{x \to 0} \frac{\sin(3x)}{5x} = \frac{3}{5} \lim_{x \to 0} \frac{\sin(3x)}{3x} = \frac{3}{5}(1) = \frac{3}{5}$. (Or using L'Hôpital: $\lim \frac{3\cos(3x)}{5} = \frac{3}{5}$).
-2. **B**. Differentiating implicitly: $2x + 2y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}$. At $(3, 4)$, $\frac{dy}{dx} = -\frac{3}{4}$.
-3. **A**. By Pythagorean theorem: $x^2 + y^2 = 10^2 = 100$. When $x = 6$, $y = \sqrt{100 - 36} = 8$. Differentiating: $2x \frac{dx}{dt} + 2y \frac{dy}{dt} = 0 \implies 6(2) + 8 \frac{dy}{dt} = 0 \implies \frac{dy}{dt} = -\frac{12}{8} = -1.5\text{ ft/s}$.
-4. **B**. Perimeter $2x + 2y = 100 \implies y = 50 - x$. Area $A(x) = x(50 - x) = 50x - x^2$. $A'(x) = 50 - 2x = 0 \implies x = 25\text{ m}$. Maximum area is a square: $25 \times 25 = 625\text{ m}^2$.
-5. **C**. $f'(x) = 3x^2 - 6x$, $f''(x) = 6x - 6$. Setting $f''(x) = 0 \implies x = 1$. For $x < 1$, $f'' < 0$ (concave down); for $x > 1$, $f'' > 0$ (concave up). Because concavity changes sign, $x = 1$ is an inflection point.
+1. **A)** $\lim_{x \to 0} \frac{\sin(3x)}{5x} = \frac{3}{5} \lim_{x \to 0} \frac{\sin(3x)}{3x} = \frac{3}{5}(1) = \frac{3}{5}$. (Or using L'Hôpital: $\lim \frac{3\cos(3x)}{5} = \frac{3}{5}$).
+2. **B)** Differentiating implicitly: $2x + 2y \frac{dy}{dx} = 0 \implies \frac{dy}{dx} = -\frac{x}{y}$. At $(3, 4)$, $\frac{dy}{dx} = -\frac{3}{4}$.
+3. **A)** By Pythagorean theorem: $x^2 + y^2 = 10^2 = 100$. When $x = 6$, $y = \sqrt{100 - 36} = 8$. Differentiating: $2x \frac{dx}{dt} + 2y \frac{dy}{dt} = 0 \implies 6(2) + 8 \frac{dy}{dt} = 0 \implies \frac{dy}{dt} = -\frac{12}{8} = -1.5\text{ ft/s}$.
+4. **B)** Perimeter $2x + 2y = 100 \implies y = 50 - x$. Area $A(x) = x(50 - x) = 50x - x^2$. $A'(x) = 50 - 2x = 0 \implies x = 25\text{ m}$. Maximum area is a square: $25 \times 25 = 625\text{ m}^2$.
+5. **C)** $f'(x) = 3x^2 - 6x$, $f''(x) = 6x - 6$. Setting $f''(x) = 0 \implies x = 1$. For $x < 1$, $f'' < 0$ (concave down); for $x > 1$, $f'' > 0$ (concave up). Because concavity changes sign, $x = 1$ is an inflection point.
 
 ## References & Navigation
 
 - **Previous Topic:** None
-- **Next Topic:** [[CSMATH2]]
-- **Prerequisites:** [[Differential Calculus]], Limits, Derivatives
-- **Cross-Curricular Connections:** [[STT101A]]
+- **Next Topic:** [[[REV] CSMATH2 Comprehensive Finals Reviewer]]
+- **Prerequisites:** [[The Tangent Line and the Derivative]], Limits, Derivatives
+- **Cross-Curricular Connections:** [[[REV] STT101A Comprehensive Finals Reviewer]]

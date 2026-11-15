@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -69,11 +68,11 @@ A **Permutation** is an **ordered** arrangement of objects. Unlike combinations 
 
 ### Answer Key & Explanations
 
-1. **B**. $P(8, 3) = 8 \times 7 \times 6 = 336$.
-2. **A**. There is exactly one empty permutation of $\emptyset$, and setting $0! = 1$ preserves the recurrence $n! = n \cdot (n-1)!$ at $n=1$ ($1! = 1 \cdot 0!$) as well as $\frac{n!}{(n-n)!} = n!$.
-3. **C**. Total arrangements of $5$ books $= 5! = 120$. Arrangements where X and Y ARE adjacent (treating XY as one block) $= 4! \times 2! = 24 \times 2 = 48$. By the complement, $120 - 48 = 72$.
-4. **B**. For circular permutations of $n = 6$ distinct objects, fixing one person's seat as the reference point leaves $(6 - 1)! = 5! = 120$ arrangements.
-5. **C**. Because the three offices (President, VP, Secretary) are distinct roles, order of assignment matters, yielding $P(20, 3) = 20 \times 19 \times 18$.
+1. **B)** $P(8, 3) = 8 \times 7 \times 6 = 336$.
+2. **A)** There is exactly one empty permutation of $\emptyset$, and setting $0! = 1$ preserves the recurrence $n! = n \cdot (n-1)!$ at $n=1$ ($1! = 1 \cdot 0!$) as well as $\frac{n!}{(n-n)!} = n!$.
+3. **C)** Total arrangements of $5$ books $= 5! = 120$. Arrangements where X and Y ARE adjacent (treating XY as one block) $= 4! \times 2! = 24 \times 2 = 48$. By the complement, $120 - 48 = 72$.
+4. **B)** For circular permutations of $n = 6$ distinct objects, fixing one person's seat as the reference point leaves $(6 - 1)! = 5! = 120$ arrangements.
+5. **C)** Because the three offices (President, VP, Secretary) are distinct roles, order of assignment matters, yielding $P(20, 3) = 20 \times 19 \times 18$.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Password Hashing
 status: completed
 ---
-
 # Password Hashing
 
 > [!info] Document Metadata
@@ -107,9 +106,9 @@ user.isModified('password') checks whether the password field of the document ha
 
 ### Answer Key & Explanations
 
-1. **C**. Plaintext data stored as is is referred to as cleartext, which leads to a severe vulnerability and breaches confidentiality.
-2. **B**. Hashing functions are one-way, meaning you cannot convert a hashed string back to its plaintext form.
-3. **C**. Mongoose middleware functions (pre hooks) allow you to perform code, such as hashing a modified password, right before the document is saved to the database.
+1. **C)** Plaintext data stored as is is referred to as cleartext, which leads to a severe vulnerability and breaches confidentiality.
+2. **B)** Hashing functions are one-way, meaning you cannot convert a hashed string back to its plaintext form.
+3. **C)** Mongoose middleware functions (pre hooks) allow you to perform code, such as hashing a modified password, right before the document is saved to the database.
 
 ## References & Navigation
 

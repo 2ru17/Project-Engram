@@ -5,7 +5,6 @@ course: CSARCH2
 topic: "IEEE 754 Floating-Point Representation (Single & Double Precision)"
 status: completed
 ---
-
 # Module 07: IEEE 754 Floating-Point Representation (Single & Double Precision)
 
 > [!info] Document Metadata
@@ -231,11 +230,11 @@ Gradual Underflow (With IEEE 754 Denormals):
 
 ### Answer Key & Explanations
 
-1. **B**. Infinity in single precision is encoded with the maximum biased exponent $E' = 255$ (`11111111_2`), an all-zero fraction ($f = 0$), and $S = 0$ for positive infinity.
-2. **A**. Denormalized numbers implement gradual underflow, filling the numeric gap between 0 and the smallest normalized float ($2^{-126}$), ensuring that differences between close numbers never prematurely flush to zero.
-3. **C**. `0xBF800000` expanded: $S = 1$ (negative), $E' = 10111111_2 = 127_{10} \implies E = 127 - 127 = 0$, $f = 0$. Value $= (-1)^1 \times 1.0 \times 2^0 = -1.0$.
-4. **D**. A Quiet NaN sets the MSB of the fraction to `1`, allowing errors to propagate silently through pipelines, while a Signaling NaN sets the MSB to `0` (with non-zero lower bits), immediately raising a hardware invalid operation trap.
-5. **B**. Double precision uses an 11-bit exponent field with bias $2^{11-1} - 1 = 1023$.
+1. **B)** Infinity in single precision is encoded with the maximum biased exponent $E' = 255$ (`11111111_2`), an all-zero fraction ($f = 0$), and $S = 0$ for positive infinity.
+2. **A)** Denormalized numbers implement gradual underflow, filling the numeric gap between 0 and the smallest normalized float ($2^{-126}$), ensuring that differences between close numbers never prematurely flush to zero.
+3. **C)** `0xBF800000` expanded: $S = 1$ (negative), $E' = 10111111_2 = 127_{10} \implies E = 127 - 127 = 0$, $f = 0$. Value $= (-1)^1 \times 1.0 \times 2^0 = -1.0$.
+4. **D)** A Quiet NaN sets the MSB of the fraction to `1`, allowing errors to propagate silently through pipelines, while a Signaling NaN sets the MSB to `0` (with non-zero lower bits), immediately raising a hardware invalid operation trap.
+5. **B)** Double precision uses an 11-bit exponent field with bias $2^{11-1} - 1 = 1023$.
 
 ## References & Navigation
 

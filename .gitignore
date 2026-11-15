@@ -32,3 +32,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# AI agent & audit artifacts
+GEMINI.md
+AGENTS.md
+.gemini/
+audit-report.json
+AUDIT_SUMMARY.md
+*.scratch*

@@ -278,6 +278,7 @@ export function ProcessSchedulerWorkbench() {
               <span className="text-xs font-mono text-[var(--zen-ink-muted)]">Q:</span>
               <input
                 type="number"
+                aria-label="Round robin time quantum Q"
                 min="1"
                 max="20"
                 value={quantum}
@@ -432,6 +433,7 @@ export function ProcessSchedulerWorkbench() {
                   <td className="p-2">
                     <input
                       type="number"
+                      aria-label={`Arrival time for ${p.name}`}
                       min="0"
                       max="100"
                       value={p.arrival}
@@ -442,6 +444,7 @@ export function ProcessSchedulerWorkbench() {
                   <td className="p-2">
                     <input
                       type="number"
+                      aria-label={`Burst time for ${p.name}`}
                       min="1"
                       max="50"
                       value={p.burst}
@@ -452,6 +455,7 @@ export function ProcessSchedulerWorkbench() {
                   <td className="p-2">
                     <input
                       type="number"
+                      aria-label={`Priority for ${p.name}`}
                       min="1"
                       max="9"
                       value={p.priority}

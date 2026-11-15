@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # What is an Array
 
 > [!info] Document Metadata
@@ -62,9 +61,9 @@ Array
 
 ### Answer Key & Explanations
 
-1. **B**. The core definition emphasizes rigid size limits, unified element typing, and sequential layout.
-2. **B**. They aggregate simpler fundamental forms like `int` or `char` into complex structures.
-3. **D**. Standard arrays lack the ability to grow or shrink, requiring manual reallocation for changes.
+1. **B)** The core definition emphasizes rigid size limits, unified element typing, and sequential layout.
+2. **B)** They aggregate simpler fundamental forms like `int` or `char` into complex structures.
+3. **D)** Standard arrays lack the ability to grow or shrink, requiring manual reallocation for changes.
 
 ## References & Navigation
 

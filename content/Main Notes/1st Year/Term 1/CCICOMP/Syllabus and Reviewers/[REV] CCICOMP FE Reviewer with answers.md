@@ -1,11 +1,10 @@
 ---
 id: ccicomp_fe_reviewer_with_answers
-type: note
+type: reviewer
 course: CCICOMP
 topic: "CCICOMP FE Reviewer with answers"
 status: completed
 ---
-
 # CCICOMP FE Reviewer with answers
 
 > [!info] Document Metadata
@@ -98,8 +97,46 @@ This document is a comprehensive Final Exam Reviewer for CCICOMP (Introduction t
 - **NoSQL Systems:** Non-relational databases (document, key-value, column-family, graph) optimized for horizontal partitioning, flexible schema models, and high ingestion throughput.
 - **Database Indexes:** Specialized data structures (typically B+ Trees or hash tables) that accelerate record lookups by mapping indexed key values directly to row storage locations.
 
----
+## Multiple Choice Questions
+
+1. Which processor subsystem decodes machine instructions and coordinates data movement across registers, the ALU, and motherboard buses during the fetch-decode-execute cycle?
+    - **A)** Dynamic RAM (DRAM) controller
+    - **B)** Control Unit (CU)
+    - **C)** Direct Memory Access buffer
+    - **D)** Northbridge cache tag array
+
+2. Why must Dynamic RAM (DRAM) undergo periodic electrical refresh cycles thousands of times per second?
+    - **A)** Static SRAM latches overheat unless purged between instructions
+    - **B)** Each DRAM bit is stored in a microscopic capacitor that gradually leaks charge over time
+    - **C)** Flash NAND cells lose floating-gate electrons on every read operation
+    - **D)** Motherboard BIOS requires DRAM clearing after each clock interrupt
+
+3. How does a Type-1 (bare-metal) hypervisor differ architecturally from a Type-2 (hosted) hypervisor?
+    - **A)** Type-1 hypervisors run directly on physical server hardware without a general-purpose host OS layer underneath
+    - **B)** Type-1 hypervisors can only emulate 16-bit operating systems inside a web browser
+    - **C)** Type-2 hypervisors execute inside CPU L1 SRAM cache without touching DRAM
+    - **D)** Type-1 hypervisors eliminate the need for virtual memory and I/O buffering
+
+4. For the IPv4 address 192.168.1.1/24, what subnet mask corresponds to the /24 CIDR prefix, and how does a Layer 2 switch direct Ethernet frames inside that LAN?
+    - **A)** Subnet mask 255.255.0.0; forwards frames by HTTP domain header
+    - **B)** Subnet mask 255.255.255.0; inspects destination MAC addresses using its internal CAM forwarding table
+    - **C)** Subnet mask 255.0.0.0; broadcasts every frame permanently out of all egress ports
+    - **D)** Subnet mask 255.255.255.255; translates private IP addresses via DNS A-records
+
+5. Which SQL statement permanently destroys a table's schema, indexes, and all stored records, as opposed to removing only selected rows?
+    - **A)** DELETE FROM table_name WHERE condition;
+    - **B)** SELECT DISTINCT * FROM table_name;
+    - **C)** DROP TABLE table_name;
+    - **D)** ALTER TABLE table_name CHECK FOREIGN KEY;
+
+### Answer Key & Explanations
+
+1. **B)** As noted in Section 1 of the CCICOMP reviewer, the **Control Unit (CU)** decodes fetched machine instructions and directs signals across the ALU, internal registers, and external buses.
+2. **B)** DRAM stores bits as charge in tiny capacitor-transistor cells; because capacitors leak charge naturally, periodic refresh cycles preserve stored data integrity (unlike SRAM or non-volatile NAND flash).
+3. **A)** Type-1 hypervisors (such as VMware ESXi or KVM) sit directly atop bare-metal hardware, whereas Type-2 hypervisors (like VirtualBox) run as applications managed by a conventional host OS.
+4. **B)** A `/24` prefix sets the first 24 bits to `1` (`255.255.255.0`), and a Layer 2 Ethernet switch learns and matches destination MAC addresses against its CAM table to forward frames selectively.
+5. **C)** `DELETE` removes matching tuples while leaving the table structure and constraints intact, whereas `DROP TABLE` deletes the entire schema, indexes, and all rows.
 
 ## References & Navigation
 
-- **Related Notes:** [[Introduction to Computing]]
+- **Related Notes:** [[ICT and Society]], [[Computers, Data, and Information]], [[Introduction to Number Systems]]

@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Mock Exams
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -122,4 +121,4 @@ Given: P(B|A) = 0.9, P(A) = 0.01, P(B) = 0.05
 
 ## References & Navigation
 
-- **Related Notes:** [[Modeling and Simulation]]
+- **Related Notes:** [[Introduction to Data]], [[Foundations for Inference]], [[[REV] CSMODEL Comprehensive Finals Reviewer]]

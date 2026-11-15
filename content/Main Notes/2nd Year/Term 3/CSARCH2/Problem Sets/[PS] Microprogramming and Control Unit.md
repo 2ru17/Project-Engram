@@ -5,7 +5,6 @@ course: CSARCH2
 topic: Microprogramming and Control Unit Design
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -613,4 +612,4 @@ if __name__ == "__main__":
 
 ## References & Navigation
 
-- **Related Notes:** [[Microprogramming and Control Unit Design]]
+- **Related Notes:** [[Control Unit Design & Microprogramming]]

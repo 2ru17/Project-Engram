@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ A collection of events $\{B_1, B_2, \dots, B_k\}$ forms a partition of $S$ if an
 
 ### Answer Key & Explanations
 
-1. **B**. By definition, a partition divides $S$ into non-overlapping (pairwise disjoint) subsets whose union covers the entire sample space (collectively exhaustive).
-2. **A**. Any event $B$ and its complement $B^c$ satisfy $B \cap B^c = \emptyset$ and $B \cup B^c = S$, forming the fundamental binary partition of $S$.
-3. **C**. Because $\{B_1, B_2, B_3\}$ partitions $S$, $\sum_{i=1}^3 P(B_i) = P(S) = 1$, so $P(B_3) = 1 - (0.25 + 0.45) = 0.30$.
-4. **D**. By the distributive law of sets, $A = A \cap S = A \cap (\bigcup B_i) = \bigcup (A \cap B_i)$, where $(A \cap B_i) \cap (A \cap B_j) \subseteq B_i \cap B_j = \emptyset$. Additivity of disjoint sets yields $P(A) = \sum P(A \cap B_i)$.
-5. **B**. Their union is $\{1, 2, 3, 4, 5\} \ne S$ (missing $6$), so they fail the collective exhaustiveness condition.
+1. **B)** By definition, a partition divides $S$ into non-overlapping (pairwise disjoint) subsets whose union covers the entire sample space (collectively exhaustive).
+2. **A)** Any event $B$ and its complement $B^c$ satisfy $B \cap B^c = \emptyset$ and $B \cup B^c = S$, forming the fundamental binary partition of $S$.
+3. **C)** Because $\{B_1, B_2, B_3\}$ partitions $S$, $\sum_{i=1}^3 P(B_i) = P(S) = 1$, so $P(B_3) = 1 - (0.25 + 0.45) = 0.30$.
+4. **D)** By the distributive law of sets, $A = A \cap S = A \cap (\bigcup B_i) = \bigcup (A \cap B_i)$, where $(A \cap B_i) \cap (A \cap B_j) \subseteq B_i \cap B_j = \emptyset$. Additivity of disjoint sets yields $P(A) = \sum P(A \cap B_i)$.
+5. **B)** Their union is $\{1, 2, 3, 4, 5\} \ne S$ (missing $6$), so they fail the collective exhaustiveness condition.
 
 ## References & Navigation
 

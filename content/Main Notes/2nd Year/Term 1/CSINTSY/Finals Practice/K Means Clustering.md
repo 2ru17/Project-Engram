@@ -5,7 +5,6 @@ course: CSINTSY
 topic: Computational Thinking
 status: completed
 ---
-
 # 08_K_Means_Clustering
 
 > [!info] Document Metadata
@@ -176,16 +175,16 @@ _Please contact me through discord or my the university email for any problems r
 
 ### Answer Key & Explanations
 
-1. **B**. K-Means is an unsupervised learning algorithm because it works with unlabeled data to find hidden subgroups.
-2. **D**. The goal is to group similar items closely together (minimize intra-cluster distance) and separate different groups as much as possible (maximize inter-cluster distance).
-3. **C**. The parameter $k$ dictates the number of distinct, non-overlapping clusters the dataset will be partitioned into.
-4. **B**. The centroid is updated by taking the mathematical mean of all the data points currently assigned to its cluster.
-5. **D**. Convergence means the assignments or centroids stop changing, or a limit is hit; SSE almost never reaches exactly zero unless every point is a centroid.
-6. **C**. Euclidean distance measures the standard straight-line distance between points.
-7. **C**. The Elbow Method involves plotting Inertia vs. $k$ and finding the "elbow" to choose the optimal number of clusters.
-8. **A**. Inertia (SSE) measures the sum of squared distances from each point to its assigned centroid, indicating cluster spread.
-9. **B**. Different initial random placements of centroids can lead to different final clusters, which is why it is often run multiple times.
-10. **C**. The "elbow" is the point on the graph where the rate of decrease in inertia slows down significantly, suggesting diminishing returns for adding more clusters.
+1. **B)** K-Means is an unsupervised learning algorithm because it works with unlabeled data to find hidden subgroups.
+2. **D)** The goal is to group similar items closely together (minimize intra-cluster distance) and separate different groups as much as possible (maximize inter-cluster distance).
+3. **C)** The parameter $k$ dictates the number of distinct, non-overlapping clusters the dataset will be partitioned into.
+4. **B)** The centroid is updated by taking the mathematical mean of all the data points currently assigned to its cluster.
+5. **D)** Convergence means the assignments or centroids stop changing, or a limit is hit; SSE almost never reaches exactly zero unless every point is a centroid.
+6. **C)** Euclidean distance measures the standard straight-line distance between points.
+7. **C)** The Elbow Method involves plotting Inertia vs. $k$ and finding the "elbow" to choose the optimal number of clusters.
+8. **A)** Inertia (SSE) measures the sum of squared distances from each point to its assigned centroid, indicating cluster spread.
+9. **B)** Different initial random placements of centroids can lead to different final clusters, which is why it is often run multiple times.
+10. **C)** The "elbow" is the point on the graph where the rate of decrease in inertia slows down significantly, suggesting diminishing returns for adding more clusters.
 
 ## References & Navigation
 

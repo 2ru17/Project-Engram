@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: NodeJS
 status: completed
 ---
-
 # NodeJS
 
 > [!info] Document Metadata
@@ -116,9 +115,9 @@ bounded
 
 ### Answer Key & Explanations
 
-1. **C**. To create a server, you need to include the core `http` module using `require('http')`.
-2. **B**. The `req` parameter represents an `IncomingMessage` object containing details about the client request.
-3. **C**. To activate the server and make it accept requests, `server.listen([port])` must be called.
+1. **C)** To create a server, you need to include the core `http` module using `require('http')`.
+2. **B)** The `req` parameter represents an `IncomingMessage` object containing details about the client request.
+3. **C)** To activate the server and make it accept requests, `server.listen([port])` must be called.
 
 ## References & Navigation
 

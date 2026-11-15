@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Data Cleaning
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -533,11 +532,11 @@ Applying `.str.lower()` normalizes casing: `'apple'`, `'apple'`, `'apple'`, `'ba
 
 ### Answer Key & Explanations
 
-1. **B**. MCAR means the missingness is completely independent of both observed and unobserved data.
-2. **C**. This is the standard Interquartile Range (IQR) method for outlier bounds.
-3. **C**. MAR means missingness depends on the observed data, not the missing values themselves.
-4. **A**. Mean imputation severely distorts variance and relationships, especially if data is not MCAR.
-5. **A**. A Z-score measures how many standard deviations a value is away from the mean.
+1. **B)** MCAR means the missingness is completely independent of both observed and unobserved data.
+2. **C)** This is the standard Interquartile Range (IQR) method for outlier bounds.
+3. **C)** MAR means missingness depends on the observed data, not the missing values themselves.
+4. **A)** Mean imputation severely distorts variance and relationships, especially if data is not MCAR.
+5. **A)** A Z-score measures how many standard deviations a value is away from the mean.
 
 ## References & Navigation
 

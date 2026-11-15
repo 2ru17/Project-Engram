@@ -5,7 +5,6 @@ course: STT101A
 topic: "Statistics"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -68,11 +67,11 @@ A **Random Variable** $X$ is **neither random nor a variable** in the algebraic 
 
 ### Answer Key & Explanations
 
-1. **B**. A random variable is a real-valued function $X : S \to \mathbb{R}$ whose domain is the sample space $S$ and whose codomain is $\mathbb{R}$.
-2. **A**. The outcomes in $S$ containing exactly $2$ Heads and $1$ Tail are $HHT, HTH,$ and $THH$.
-3. **C**. Distinguishing the random variable $X$ (function) from its realized value $x \in \mathbb{R}$ prevents ambiguity in expressions like $F_X(x) = P(X \le x)$.
-4. **D**. Because $X$ is a function, each $\omega \in S$ maps to a unique real number, but many distinct outcomes $\omega$ can share the same value $x$; the pre-image $X^{-1}(\{x\})$ collects all such outcomes.
-5. **B**. Any number of real-valued functions $X, Y, Z : S \to \mathbb{R}$ can be defined on the same sample space $S$ to measure different numerical attributes of the outcome.
+1. **B)** A random variable is a real-valued function $X : S \to \mathbb{R}$ whose domain is the sample space $S$ and whose codomain is $\mathbb{R}$.
+2. **A)** The outcomes in $S$ containing exactly $2$ Heads and $1$ Tail are $HHT, HTH,$ and $THH$.
+3. **C)** Distinguishing the random variable $X$ (function) from its realized value $x \in \mathbb{R}$ prevents ambiguity in expressions like $F_X(x) = P(X \le x)$.
+4. **D)** Because $X$ is a function, each $\omega \in S$ maps to a unique real number, but many distinct outcomes $\omega$ can share the same value $x$; the pre-image $X^{-1}(\{x\})$ collects all such outcomes.
+5. **B)** Any number of real-valued functions $X, Y, Z : S \to \mathbb{R}$ can be defined on the same sample space $S$ to measure different numerical attributes of the outcome.
 
 ## References & Navigation
 

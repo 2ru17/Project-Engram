@@ -5,7 +5,6 @@ course: CSMODEL
 topic: "CSMODEL Comprehensive Finals Reviewer"
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -100,15 +99,15 @@ flowchart TD
 
 ### Answer Key & Explanations
 
-1. **C**. $\text{Confidence}(\text{Bread} \implies \text{Butter}) = \frac{\text{freq}(\text{Bread} \cup \text{Butter})}{\text{freq}(\text{Bread})} = \frac{15}{20} = 0.75$ (75%).
-2. **C**. $\text{Lift} = \frac{\text{Support}(\text{Bread} \cup \text{Butter})}{\text{Support}(\text{Bread}) \times \text{Support}(\text{Butter})} = \frac{0.15}{0.20 \times 0.30} = \frac{0.15}{0.06} = 2.50$. Since $\text{Lift} > 1$, Bread and Butter are strongly positively associated.
-3. **C**. Betweenness centrality quantifies the bridge role of a node by tallying the proportion of all shortest paths passing through that node.
-4. **B**. The Gauss-Markov theorem requires residuals to have zero conditional mean, homoscedasticity, and no autocorrelation for OLS estimators to be BLUE (Best Linear Unbiased Estimator).
-5. **B**. Inertia measures the total squared distance of samples to their closest cluster center. The elbow point marks where adding further clusters yields diminishing reductions in inertia.
+1. **C)** $\text{Confidence}(\text{Bread} \implies \text{Butter}) = \frac{\text{freq}(\text{Bread} \cup \text{Butter})}{\text{freq}(\text{Bread})} = \frac{15}{20} = 0.75$ (75%).
+2. **C)** $\text{Lift} = \frac{\text{Support}(\text{Bread} \cup \text{Butter})}{\text{Support}(\text{Bread}) \times \text{Support}(\text{Butter})} = \frac{0.15}{0.20 \times 0.30} = \frac{0.15}{0.06} = 2.50$. Since $\text{Lift} > 1$, Bread and Butter are strongly positively associated.
+3. **C)** Betweenness centrality quantifies the bridge role of a node by tallying the proportion of all shortest paths passing through that node.
+4. **B)** The Gauss-Markov theorem requires residuals to have zero conditional mean, homoscedasticity, and no autocorrelation for OLS estimators to be BLUE (Best Linear Unbiased Estimator).
+5. **B)** Inertia measures the total squared distance of samples to their closest cluster center. The elbow point marks where adding further clusters yields diminishing reductions in inertia.
 
 ## References & Navigation
 
-- **Previous Topic:** [[CSMATH2]], [[STT101A]]
+- **Previous Topic:** [[[REV] CSMATH2 Comprehensive Finals Reviewer]], [[[REV] STT101A Comprehensive Finals Reviewer]]
 - **Next Topic:** None
-- **Prerequisites:** [[Statistical Modeling]], Regression, Clustering, Graph Analytics, Optimization
-- **Cross-Curricular Connections:** [[CSINTSY]]
+- **Prerequisites:** [[Foundations for Inference]], Regression, Clustering, Graph Analytics, Optimization
+- **Cross-Curricular Connections:** [[[REV] CSINTSY Comprehensive Finals Reviewer]]

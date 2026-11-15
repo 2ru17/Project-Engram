@@ -5,7 +5,6 @@ course: CSMODEL
 topic: Foundations for Inference
 status: completed
 ---
-
 > [!info] Document Metadata
 > - **Course:** `=this.course`
 > - **Topic:** `=this.topic`
@@ -441,11 +440,11 @@ If $H_0$ is actually **true** in reality for this population, what is the printe
 
 ### Answer Key & Explanations
 
-1. **B**. CLT is fundamental: the sampling distribution of the mean is approx normal for large n.
-2. **A**. Type I error is a false positive - rejecting H0 when its actually true.
-3. **C**. The p-value quantifies evidence against the null under the assumption the null is true.
-4. **D**. SE = s / sqrt(n).
-5. **B**. A point estimate is a single statistic (like sample mean) estimating the true parameter.
+1. **B)** CLT is fundamental: the sampling distribution of the mean is approx normal for large n.
+2. **A)** Type I error is a false positive - rejecting H0 when its actually true.
+3. **C)** The p-value quantifies evidence against the null under the assumption the null is true.
+4. **D)** SE = s / sqrt(n).
+5. **B)** A point estimate is a single statistic (like sample mean) estimating the true parameter.
 
 ## References & Navigation
 

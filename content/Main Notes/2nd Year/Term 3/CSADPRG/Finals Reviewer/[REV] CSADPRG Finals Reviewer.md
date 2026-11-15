@@ -1,11 +1,10 @@
 ---
 id: csadprg_finals_reviewer
-type: note
+type: reviewer
 course: CSADPRG
 topic: "Finals Reviewer"
 status: completed
 ---
-
 # CSADPRG Finals Reviewer
 
 > [!info] Document Metadata
@@ -172,7 +171,46 @@ public class Main {
   - **Flexibility/Loose Coupling:** You can easily swap out the underlying implementation (e.g., changing `ArrayList` to `LinkedList`) without changing the code that uses it.
   - **Testability:** Makes it incredibly easy to inject mock implementations during unit testing.
 
+## Multiple Choice Questions
+
+1. Suppose global int i = 1 and int a[3] = {10, 20, 30}. Calling swap(i, a[i]) executes temp = x; x = y; y = temp; i = 2;. What are the final values of (i, a[0], a[1], a[2]) under Pass-by-Reference?
+    - **A)** 2, 10, 20, 30
+    - **B)** 2, 10, 1, 30
+    - **C)** 20, 10, 1, 30
+    - **D)** Out-of-bounds runtime crash at a[20]
+
+2. Under Pass-by-Value-Result for the same swap(i, a[i]) trace (where local x swaps with y, global i becomes 2 inside swap, and formal parameters copy back out on return), what are the final values?
+    - **A)** 2, 10, 20, 30
+    - **B)** 2, 10, 1, 30
+    - **C)** 20, 10, 1, 30
+    - **D)** 1, 10, 20, 30
+
+3. Why does Java pass object arguments using Pass-by-Value of an object reference rather than true Pass-by-Reference?
+    - **A)** Inside a method, mutating fields of the referenced object works, but reassigning the formal parameter variable does not rebind the caller's original reference
+    - **B)** Java prohibits returning references from any method invocation
+    - **C)** Primitives are always allocated on the garbage-collected heap while objects live exclusively in CPU registers
+    - **D)** Java performs textual Pass-by-Name macro expansion at compile time
+
+4. Why are closures required when a programming language supports nested subprograms, first-class functions, and static (lexical) scoping?
+    - **A)** So a returned nested function retains access to non-local variables from its defining lexical environment even after that outer activation record exits
+    - **B)** Because C structs enforce private encapsulation natively without access modifiers
+    - **C)** To convert dynamic binding of overridden methods into static compile-time dispatch
+    - **D)** To disable stack-frame allocation during recursion
+
+5. Given Parent class A (defining print(int) and show()) and subclass B (overriding show(), overloading print(double), and adding exclusive()), what happens when calling obj3.print(5.5) on A obj3 = new B()?
+    - **A)** Calls B.print(double) via dynamic binding
+    - **B)** Calls A.print(int) after truncating 5.5 to 5
+    - **C)** Produces a compile-time error because the static reference type A lacks print(double)
+    - **D)** Causes a Stack Overflow Error at runtime
+
+### Answer Key & Explanations
+
+1. **B)** In Pass-by-Reference, `x` aliases `i` and `y` aliases `a[1]`. Swapping sets `i = 20` and `a[1] = 1`, and then the line `i = 2;` overwrites global `i` to `2`, producing `2, 10, 1, 30`.
+2. **C)** Pass-by-Value-Result copies in `x = 1, y = 20`, swaps locally to `x = 20, y = 1`, sets `i = 2` mid-body, and on return writes `x` back to `i` (`i = 20`) and `y` back to `a[1]` (`a[1] = 1`).
+3. **A)** Java copies the reference value (address) into the formal parameter; callers observe heap mutations through that shared address, yet reassigning the parameter variable only changes the local copy.
+4. **A)** A closure bundles a subprogram's code pointer with its non-local lexical referencing environment so static-scoped free variables survive after the enclosing call returns.
+5. **C)** Accessible method signatures are verified at compile time using the declared reference type (`A`); since class `A` only declares `print(int)`, `obj3.print(5.5)` fails compilation.
 
 ## References & Navigation
 
-- **Related Notes:** [[Advanced Programming]]
+- **Related Notes:** [[Overview of Programming Languages]], [[Names, Variables, Binding, Scope]], [[Data Types]]

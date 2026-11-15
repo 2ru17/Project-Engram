@@ -5,7 +5,6 @@ course: CCAPDEV
 topic: Javascript
 status: completed
 ---
-
 # Javascript
 
 > [!info] Document Metadata
@@ -96,9 +95,9 @@ src – specifies the URI of an external script file
 
 ### Answer Key & Explanations
 
-1. **B**. Scripts in the `<head>` section are processed first before the page loads.
-2. **B**. External JS is best used to control multiple web pages, as you can link the same `.js` file across them.
-3. **D**. The `src` attribute specifies the URI of an external script file, e.g., `<script src="external.js"></script>`.
+1. **B)** Scripts in the `<head>` section are processed first before the page loads.
+2. **B)** External JS is best used to control multiple web pages, as you can link the same `.js` file across them.
+3. **D)** The `src` attribute specifies the URI of an external script file, e.g., `<script src="external.js"></script>`.
 
 ## References & Navigation
 

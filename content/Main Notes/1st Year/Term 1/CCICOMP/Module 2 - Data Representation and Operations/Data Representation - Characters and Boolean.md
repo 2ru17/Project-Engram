@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "6.0 Data Representation - Characters and Boolean"
 status: completed
 ---
-
 # 6.0 Data Representation - Characters and Boolean
 
 > [!info] Document Metadata
@@ -106,16 +105,16 @@ A single-bit adder can be described by boolean functions: **Sum:** $Y = A'B + AB
 
 ### Answer Key & Explanations
 
-1. **B**. The note specifies that characters are represented indirectly by mapping them to numeric values via standard coding tables.
-2. **C**. ASCII is defined as a standard 7-bit (or 8-bit) encoding format supporting at least 128 characters, common for English.
-3. **C**. Unicode is described as a newer 16-bit or 32-bit standard designed to support a vast array of international characters.
-4. **B**. CPU designers often use integer formats where 0 corresponds to false and any non-zero value corresponds to true.
-5. **D**. The AND gate outputs true (1) only if all inputs are true.
-6. **C**. The XOR gate outputs true (1) if the inputs differ (meaning there is an odd number of 1s).
-7. **B**. Device Control Codes are defined as non-printable characters used for formatting text when communicating with output devices.
-8. **C**. A Bitwise NOT inverts all bits, transforming 11110011 into 00001100.
-9. **D**. The Sum function in a single-bit adder corresponds explicitly to the XOR operation.
-10. **B**. The worked example demonstrates interpreting this exact hexadecimal string as the ASCII character string CCICOMP.
+1. **B)** The note specifies that characters are represented indirectly by mapping them to numeric values via standard coding tables.
+2. **C)** ASCII is defined as a standard 7-bit (or 8-bit) encoding format supporting at least 128 characters, common for English.
+3. **C)** Unicode is described as a newer 16-bit or 32-bit standard designed to support a vast array of international characters.
+4. **B)** CPU designers often use integer formats where 0 corresponds to false and any non-zero value corresponds to true.
+5. **D)** The AND gate outputs true (1) only if all inputs are true.
+6. **C)** The XOR gate outputs true (1) if the inputs differ (meaning there is an odd number of 1s).
+7. **B)** Device Control Codes are defined as non-printable characters used for formatting text when communicating with output devices.
+8. **C)** A Bitwise NOT inverts all bits, transforming 11110011 into 00001100.
+9. **D)** The Sum function in a single-bit adder corresponds explicitly to the XOR operation.
+10. **B)** The worked example demonstrates interpreting this exact hexadecimal string as the ASCII character string CCICOMP.
 
 ## References & Navigation
 

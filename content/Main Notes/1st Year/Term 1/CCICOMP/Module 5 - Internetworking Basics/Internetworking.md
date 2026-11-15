@@ -5,7 +5,6 @@ course: CCICOMP
 topic: "14.0 Internetworking"
 status: completed
 ---
-
 # 14.0 Internetworking
 
 > [!info] Document Metadata
@@ -112,16 +111,16 @@ Users subscribe to Internet Service Providers (ISPs) to gain broadband access. C
 
 ### Answer Key & Explanations
 
-1. **B**. Bandwidth is the theoretical maximum speed data can be transmitted, measured in bps.
-2. **C**. Throughput is the actual realized speed, typically less than bandwidth due to overhead and congestion.
-3. **B**. A MAC address is a permanent, physical address assigned to a NIC by the manufacturer.
-4. **C**. A Subnet Mask determines which portion of an IP represents the network vs the host.
-5. **D**. Fiber optical media uses light signals and does not degrade over long distances.
-6. **A**. A WAN extends over a large geographic distance, connecting multiple LANs.
-7. **C**. The Default Gateway is the router that provides access to external networks.
-8. **D**. Cable broadband uses coaxial cable where connections are shared, causing potential speed drops.
-9. **C**. Computers, smartphones, and printers are classified as End Devices.
-10. **B**. DSL uses copper wire phone lines, and its speed degrades as distance from the central signal source increases.
+1. **B)** Bandwidth is the theoretical maximum speed data can be transmitted, measured in bps.
+2. **C)** Throughput is the actual realized speed, typically less than bandwidth due to overhead and congestion.
+3. **B)** A MAC address is a permanent, physical address assigned to a NIC by the manufacturer.
+4. **C)** A Subnet Mask determines which portion of an IP represents the network vs the host.
+5. **D)** Fiber optical media uses light signals and does not degrade over long distances.
+6. **A)** A WAN extends over a large geographic distance, connecting multiple LANs.
+7. **C)** The Default Gateway is the router that provides access to external networks.
+8. **D)** Cable broadband uses coaxial cable where connections are shared, causing potential speed drops.
+9. **C)** Computers, smartphones, and printers are classified as End Devices.
+10. **B)** DSL uses copper wire phone lines, and its speed degrades as distance from the central signal source increases.
 
 ## References & Navigation
 

@@ -5,7 +5,6 @@ course: CCPROG2
 topic: C Programming
 status: completed
 ---
-
 # Characteristics & Attributes
 
 > [!info] Document Metadata
@@ -61,9 +60,9 @@ status: completed
 
 ### Answer Key & Explanations
 
-1. **B**. Elements occupy uninterrupted neighboring memory cells for direct addressing.
-2. **C**. The size attribute dictates how many total slots the array provides.
-3. **A**. Arrays strictly enforce homogeneity via their defined element type.
+1. **B)** Elements occupy uninterrupted neighboring memory cells for direct addressing.
+2. **C)** The size attribute dictates how many total slots the array provides.
+3. **A)** Arrays strictly enforce homogeneity via their defined element type.
 
 ## References & Navigation
 

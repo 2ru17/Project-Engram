@@ -298,6 +298,118 @@ export const SIMULATOR_REGISTRY: Record<string, SimulatorMeta> = {
       "Confusion Matrix, Precision, and Recall Metrics",
     ],
   },
+  "pipeline-hazard": {
+    id: "pipeline-hazard",
+    title: "5-Stage RISC-V Pipeline & Hazard Analyzer",
+    domain: "systems",
+    domainLabel: "Systems & Architecture",
+    category: "Computer Organization & Microarchitecture",
+    courses: ["CSARCH1", "CSARCH2", "LBYARCH"],
+    description:
+      "Interactive cycle-by-cycle RISC-V 5-stage pipeline analyzer with RAW/Load-Use/Control hazard detection, toggleable EX/MEM forwarding bypass paths, and live architectural register state.",
+    keyConcepts: [
+      "5-Stage Pipeline (IF, ID, EX, MEM, WB)",
+      "RAW Forwarding vs Load-Use Stall Bubbles",
+      "Branch Control Hazard Flush Penalty",
+      "CPI & Speedup Performance Invariants",
+    ],
+  },
+  "virtual-memory-page": {
+    id: "virtual-memory-page",
+    title: "Virtual Memory TLB & Page Replacement Lab",
+    domain: "systems",
+    domainLabel: "Systems & Architecture",
+    category: "Operating Systems & Memory Management",
+    courses: ["CSOPESY", "NSDSYST"],
+    description:
+      "Interactive TLB lookup, Page Table frame allocation, and 4-algorithm eviction benchmark (FIFO, LRU, Second-Chance Clock, Optimal) featuring Belady's Anomaly and EAT latency.",
+    keyConcepts: [
+      "TLB Hit Ratio & Address Translation",
+      "FIFO, LRU, Clock (R-Bit) & Optimal Replacement",
+      "Belady's Anomaly & Thrashing Behavior",
+      "Effective Access Time (EAT) Latency Model",
+    ],
+  },
+  "tcp-congestion": {
+    id: "tcp-congestion",
+    title: "TCP Congestion Control & Window Dynamics Studio",
+    domain: "security",
+    domainLabel: "Networks & Security",
+    category: "Transport Layer & Congestion Control",
+    courses: ["NSCOM01", "NSCOM02", "NSCOM03", "CSNETWK"],
+    description:
+      "Compare TCP Reno Fast Recovery, Tahoe Slow-Start collapse, and High-BDP CUBIC window growth with interactive 3x DupACK and RTO Timeout loss injection.",
+    keyConcepts: [
+      "Slow Start vs AIMD Congestion Avoidance",
+      "Fast Retransmit & Fast Recovery (3x DupACK)",
+      "TCP CUBIC Concave-Convex Growth",
+      "Mathis Bandwidth-Delay Product (BDP)",
+    ],
+  },
+  "avalanche-crypto": {
+    id: "avalanche-crypto",
+    title: "Cryptographic Avalanche & Key Exchange Workbench",
+    domain: "security",
+    domainLabel: "Networks & Security",
+    category: "Applied Cryptography & Number Theory",
+    courses: ["NSSECU1", "NSSECU2", "NSSECU3"],
+    description:
+      "Flip single plaintext bits across an 8x8 SPN block cipher to inspect Strict Avalanche Criterion diffusion, or verify Diffie-Hellman prime-field key exchange.",
+    keyConcepts: [
+      "Strict Avalanche Criterion (~50% Hamming Diffusion)",
+      "Confusion & MixColumns Byte Diffusion",
+      "Diffie-Hellman Ephemeral Key Agreement",
+      "Discrete Logarithm Hardness in Z*_p",
+    ],
+  },
+  "graph-algorithm-arena": {
+    id: "graph-algorithm-arena",
+    title: "Weighted Graph & Pathfinding Algorithm Arena",
+    domain: "theory",
+    domainLabel: "Theory & Algorithms",
+    category: "Graph Theory & Search Heuristics",
+    courses: ["CCDSALG", "CCDSTRU", "CSALGCM", "CSINTSY"],
+    description:
+      "Step through Dijkstra, A* Euclidean search, Bellman-Ford negative-edge relaxation, BFS, and DFS with live Priority Queue / Frontier inspection.",
+    keyConcepts: [
+      "Greedy Relaxation (Dijkstra & A* f(n)=g(n)+h(n))",
+      "Negative Edge Relaxation (Bellman-Ford)",
+      "Priority Queue / Frontier Order Inspection",
+      "Shortest-Path Predecessor Reconstruction",
+    ],
+  },
+  "automata-tape": {
+    id: "automata-tape",
+    title: "Finite Automata & Turing Tape Machine Lab",
+    domain: "theory",
+    domainLabel: "Theory & Algorithms",
+    category: "Computability & Formal Languages",
+    courses: ["CSALGCM", "CCICOMP", "CSMODEL"],
+    description:
+      "Execute binary input strings on Deterministic Finite Automata and writable Single-Tape Turing Machines with visual tape head stepping and formal transition tables.",
+    keyConcepts: [
+      "Deterministic Finite Automata (DFA)",
+      "Single-Tape Turing Machine Head Movement (L/R/S)",
+      "Decidable Palindrome & Binary Arithmetic Languages",
+      "Formal State Transition Functions (Delta)",
+    ],
+  },
+  "bplustree-transaction": {
+    id: "bplustree-transaction",
+    title: "B+ Tree Indexing & MVCC Transaction Isolation Lab",
+    domain: "software",
+    domainLabel: "Software & AI",
+    category: "Database Storage & Concurrency Control",
+    courses: ["CCINFOM", "CCAPDEV", "NSAPDEV"],
+    description:
+      "Insert keys into a self-balancing B+ Tree index with sequential node splits, or step interleaved SQL schedules across Read Uncommitted, Read Committed, and MVCC Snapshot Isolation.",
+    keyConcepts: [
+      "Balanced B+ Tree Node Splits & Separator Promotion",
+      "Linked Leaf Chains for Range Scans",
+      "Dirty Read & Lost Update Concurrency Anomalies",
+      "MVCC Snapshot Isolation & First-Committer-Wins",
+    ],
+  },
 };
 
 export const SIMULATOR_LIST: SimulatorMeta[] = Object.values(SIMULATOR_REGISTRY);
@@ -382,6 +494,34 @@ export const SIMULATOR_ALIASES: Record<string, string> = {
   "neural-perceptron": "neural-perceptron",
   "ai-classifier": "neural-perceptron",
   "perceptron": "neural-perceptron",
+
+  "pipeline-hazard": "pipeline-hazard",
+  "pipelinehazardworkbench": "pipeline-hazard",
+  "riscv-pipeline": "pipeline-hazard",
+
+  "virtual-memory-page": "virtual-memory-page",
+  "virtualmemorypageworkbench": "virtual-memory-page",
+  "tlb-paging": "virtual-memory-page",
+
+  "tcp-congestion": "tcp-congestion",
+  "tcpcongestionworkbench": "tcp-congestion",
+  "tcp-reno-cubic": "tcp-congestion",
+
+  "avalanche-crypto": "avalanche-crypto",
+  "avalanchecryptoworkbench": "avalanche-crypto",
+  "diffie-hellman": "avalanche-crypto",
+
+  "graph-algorithm-arena": "graph-algorithm-arena",
+  "graphalgorithmarenaworkbench": "graph-algorithm-arena",
+  "bellman-ford-arena": "graph-algorithm-arena",
+
+  "automata-tape": "automata-tape",
+  "automatatapeworkbench": "automata-tape",
+  "turing-machine": "automata-tape",
+
+  "bplustree-transaction": "bplustree-transaction",
+  "bplustreetransactionworkbench": "bplustree-transaction",
+  "mvcc-btree": "bplustree-transaction",
 };
 
 export function resolveSimulator(idOrAlias: string | null | undefined): SimulatorMeta {
