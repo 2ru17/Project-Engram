@@ -24,7 +24,7 @@ The codebase is partitioned into decoupled layers where dependencies point stric
 * **Content-Hash Memoization**: Parsed Markdown ASTs, extracted MCQ payloads, and computed graph topologies are cached in-memory keyed by file path and modification timestamp (`mtimeMs` / SHA-256 digest) so unchanged monographs are never re-parsed redundantly.
 
 ### 2.4 Security & Boundary Sanitization
-* **HTML Sanitization**: Any raw HTML output produced during Markdown rendering must be sanitized through `isomorphic-dompurify` before passing to `dangerouslySetInnerHTML` to prevent Cross-Site Scripting (XSS).
+* **HTML Sanitization**: Any raw HTML output produced during Markdown or formula rendering must be sanitized through `@/lib/sanitize` (browser `dompurify` + pure-JS SSR fallback, with zero `jsdom` dependency) before passing to `dangerouslySetInnerHTML` to prevent Cross-Site Scripting (XSS).
 * **Schema Enforcement**: Frontmatter metadata (`id`, `type`, `course`, `topic`, `status`) and simulator query parameters are validated at the boundary before entering rendering pipelines.
 
 ---

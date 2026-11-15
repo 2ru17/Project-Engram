@@ -4,7 +4,7 @@ import React, { useMemo, useId } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import katex from "katex";
-import DOMPurify from "isomorphic-dompurify";
+import { sanitizeHtml } from "@/lib/sanitize";
 import {
   Play,
   Pause,
@@ -85,7 +85,7 @@ export function KatexFormula({ latex, displayMode = false }: { latex: string; di
       const fn = kMod?.default?.renderToString || kMod?.renderToString;
       if (!fn) return "";
       const raw = fn(latex, { throwOnError: false, displayMode });
-      return DOMPurify.sanitize(raw, {
+      return sanitizeHtml(raw, {
         USE_PROFILES: { html: true, mathMl: true },
       });
     } catch {

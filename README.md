@@ -30,17 +30,17 @@ Architectural standards, structural boundaries, and implementation workflows are
 
 ## 4. Technology Stack
 
-* **Framework & Runtime**: Next.js (App Router), React, TypeScript, Node.js ($\ge 20.0.0$)
+* **Framework & Runtime**: Next.js (App Router), React, TypeScript, Node.js ($\ge 22.0.0$)
 * **Styling & Motion**: Tailwind CSS, CSS Custom Properties (`data-universe`), Framer Motion (`ease: [0.16, 1, 0.3, 1]`)
 * **Visualization & Diagrams**: `react-force-graph` (2D Canvas), Mermaid.js v12, KaTeX
-* **Content & Security Pipeline**: Asynchronous Node.js `fs.promises`, Gray-Matter (YAML frontmatter), Unified / Remark / Rehype, `isomorphic-dompurify`
+* **Content & Security Pipeline**: Asynchronous Node.js `fs.promises`, Gray-Matter (YAML frontmatter), Unified / Remark / Rehype, `dompurify` (`@/lib/sanitize`)
 
 ---
 
 ## 5. Quick Start
 
 ### Prerequisites
-* **Node.js** $\ge 20.0.0$
+* **Node.js** $\ge 22.0.0$
 * **npm** (standard package manager for this repository)
 
 ### Installation & Local Development

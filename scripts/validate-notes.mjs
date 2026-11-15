@@ -857,6 +857,7 @@ async function runGate6CodebaseInvariants() {
   const codeFiles = files.filter((f) => /\.(ts|tsx|js|jsx|mjs)$/.test(f));
 
   const domPurifyChecked = {
+    "lib/sanitize.ts": false,
     "components/MarkdownRender.tsx": false,
     "components/MermaidBlock.tsx": false,
     "components/simulators/shared/SimulatorWorkbenchShell.tsx": false,
@@ -876,12 +877,23 @@ async function runGate6CodebaseInvariants() {
       }
     }
 
+    if (
+      /(?:from|import)\s+["'](?:isomorphic-dompurify|jsdom)["']|require\s*\(\s*["'](?:isomorphic-dompurify|jsdom)["']\s*\)/.test(
+        content,
+      )
+    ) {
+      errors.push(`[Gate 6] Forbidden SSR DOM dependency (isomorphic-dompurify/jsdom) in src/${rel}`);
+    }
+
     if (rel in domPurifyChecked) {
-      domPurifyChecked[rel] = /DOMPurify\.sanitize\s*\(/.test(content);
+      domPurifyChecked[rel] =
+        rel === "lib/sanitize.ts"
+          ? /DOMPurify\.sanitize\s*\(/.test(content)
+          : /(?:DOMPurify\.sanitize|sanitizeHtml)\s*\(/.test(content);
     }
 
     if (/dangerouslySetInnerHTML/.test(content)) {
-      const hasDomPurify = /DOMPurify\.sanitize\s*\(/.test(content);
+      const hasDomPurify = /(?:DOMPurify\.sanitize|sanitizeHtml)\s*\(/.test(content);
       const isSafeStaticOrJsonLd =
         rel === "app/layout.tsx" ||
         rel === "app/not-found.tsx" ||
@@ -895,7 +907,7 @@ async function runGate6CodebaseInvariants() {
 
   for (const [rel, ok] of Object.entries(domPurifyChecked)) {
     if (!ok) {
-      errors.push(`[Gate 6] Missing DOMPurify.sanitize guard in src/${rel}`);
+      errors.push(`[Gate 6] Missing sanitization guard in src/${rel}`);
     }
   }
 

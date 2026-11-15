@@ -26,7 +26,7 @@ All contributions must strictly respect the core invariants of **Project Engram*
 
 3. **Asynchronous I/O, Caching & Security**:
    * **No Sync FS**: Never use `fs.readFileSync`, `fs.readdirSync`, or `fs.statSync` in API routes, Server Components, or build scripts. Always use `fs.promises`.
-   * **XSS Sanitization**: Never use `dangerouslySetInnerHTML` without sanitizing HTML output through `isomorphic-dompurify`.
+   * **XSS Sanitization**: Never use `dangerouslySetInnerHTML` without sanitizing HTML output through `sanitizeHtml` (`@/lib/sanitize`, backed by browser `dompurify` with a pure-JS SSR fallback).
    * **60FPS Graph Rendering**: In canvas/WebGL components (`react-force-graph` rendering the `COMPUTER SCIENCE // SINGULARITY` black hole at $(0, 0)$, 25 Course Stars, and 539+ orbiting monographs), all event handlers and canvas painter callbacks must be wrapped in `useCallback` with stable dependency arrays.
 
 4. **Cookie & Telemetry Ethics**:
@@ -37,7 +37,7 @@ All contributions must strictly respect the core invariants of **Project Engram*
 ## 2. Development Setup
 
 ### Prerequisites
-* **Node.js**: $\ge 20.0.0$
+* **Node.js**: $\ge 22.0.0$
 * **Package Manager**: `npm`
 * **Git**: Configured with directory-scoped identity
 
