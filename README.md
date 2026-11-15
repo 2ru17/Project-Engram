@@ -63,11 +63,15 @@ Architectural standards, structural boundaries, and implementation workflows are
    Open `http://localhost:3000` in your browser.
 
 4. **Sync content from the local Obsidian Vault (Authoring Workflow):**
-   ```bash
-   rsync -av --delete \
-     "/home/2ru17/Documents/Obsidian/ProjectEngram/main/Main Notes/" \
-     "/home/2ru17/Documents/Coding-Stuff/Pers-Projs/Notes-Website-Engram/Project-Engram/content/Main Notes/"
-   ```
+   - One-way clean sync (from Vault to Next.js repo root):
+     ```bash
+     export OBSIDIAN_VAULT_PATH="/path/to/your/engram-vault"
+     rsync -av --delete "$OBSIDIAN_VAULT_PATH/main/Main Notes/" "./content/Main Notes/"
+     ```
+   - Safe two-way contributor sync (without deleting newer files):
+     ```bash
+     rsync -avu "$OBSIDIAN_VAULT_PATH/main/Main Notes/" "./content/Main Notes/"
+     ```
 
 ---
 

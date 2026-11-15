@@ -21,8 +21,8 @@ All contributions must strictly respect the core invariants of **Project Engram*
    * **Reading Container**: Long-form rendered markdown must be wrapped in a `max-w-3xl` container using clean sans-serif body typography (`line-height: 1.65`).
 
 2. **Two-Location Content Architecture (Obsidian $\rightarrow$ Next.js)**:
-   * **Source of Truth**: All academic note creation and editing happens first in the **Obsidian Vault** (`/home/2ru17/Documents/Obsidian/ProjectEngram/main/Main Notes/`).
-   * **Deployment Mirror**: The Next.js `content/Main Notes/` directory (`/home/2ru17/Documents/Coding-Stuff/Pers-Projs/Notes-Website-Engram/Project-Engram/content/Main Notes/`) is a synchronized mirror populated via `rsync`. Never edit files directly in `content/Main Notes/` without syncing from the Obsidian Vault.
+   * **Source of Truth**: All academic note creation and editing happens first in the **Obsidian Vault** (`$OBSIDIAN_VAULT_PATH/main/Main Notes/`).
+   * **Deployment Mirror**: The Next.js `./content/Main Notes/` directory is a synchronized mirror populated via `rsync`. Never edit files directly in `./content/Main Notes/` without syncing from the Obsidian Vault.
 
 3. **Asynchronous I/O, Caching & Security**:
    * **No Sync FS**: Never use `fs.readFileSync`, `fs.readdirSync`, or `fs.statSync` in API routes, Server Components, or build scripts. Always use `fs.promises`.
@@ -55,11 +55,17 @@ npm run dev
 Access the local development server at `http://localhost:3000`.
 
 ### Syncing Content from the Obsidian Vault
-After editing notes in the Obsidian Vault, mirror changes into the Next.js repository:
+After editing notes in the Obsidian Vault, mirror changes into the Next.js repository from the repository root:
+
+* **One-way clean sync (from Vault to Next.js repo root):**
 ```bash
-rsync -av --delete \
-  "/home/2ru17/Documents/Obsidian/ProjectEngram/main/Main Notes/" \
-  "/home/2ru17/Documents/Coding-Stuff/Pers-Projs/Notes-Website-Engram/Project-Engram/content/Main Notes/"
+export OBSIDIAN_VAULT_PATH="/path/to/your/engram-vault"
+rsync -av --delete "$OBSIDIAN_VAULT_PATH/main/Main Notes/" "./content/Main Notes/"
+```
+
+* **Safe two-way contributor sync (without deleting newer files):**
+```bash
+rsync -avu "$OBSIDIAN_VAULT_PATH/main/Main Notes/" "./content/Main Notes/"
 ```
 
 ### Pre-Push Verification Suite
