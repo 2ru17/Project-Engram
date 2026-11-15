@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "validate:notes": "node scripts/validate-notes.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
