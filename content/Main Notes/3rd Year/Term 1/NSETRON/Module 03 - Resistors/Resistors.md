@@ -32,7 +32,7 @@ status: completed
   - **Power Dissipation Rating:** Typical axial ratings are $1/8\text{ W}$, $1/4\text{ W}$, $1/2\text{ W}$, $1\text{ W}$, $2\text{ W}$. Always verify $P = I^2 R = V^2 / R$ with a safety margin (good design keeps actual dissipation $\le 90\%$ of rated power, e.g., $\le 0.225\text{ W}$ for a $1/4\text{ W}$ resistor). Identical $n \times n$ series-parallel resistor arrays multiply power capacity by $n^2$ while keeping net resistance equal to one unit!
   - **Potentiometer vs. Rheostat & Tapers:** **Linear-taper** pots vary resistance uniformly with angle (meters/instruments); **audio/log-taper** pots match human logarithmic hearing (volume controls); **rheostats** are high-power 2-terminal variable resistors.
 
-### 4-Band Resistor Color Code Table (Textbook Standard)
+### 4-Band Resistor Color Code Table
 
 | Color | Digit (Bands 1 & 2) | Multiplier (Band 3) | Tolerance (Band 4) |
 | :--- | :---: | :--- | :--- |
@@ -78,12 +78,12 @@ In Laboratory Experiment 2, a $3.3\text{ k}\Omega$ resistor (`orange-orange-red-
 **Solution (b) Parallel (`Lab 2 Part 2`):**
 1. $3.3\text{ k}\Omega \parallel 100\text{ k}\Omega$:
    $$R_P = \frac{3.3 \times 100}{3.3 + 100} = \frac{330}{103.3} \approx 3.195\text{ k}\Omega \approx 3.2\text{ k}\Omega$$
-   (Matches manual's $3.2\text{ k}\Omega$ value; current is $I = \frac{7.5}{3195} \approx 2.35\text{ mA}$, making the LED bright despite the $100\text{ k}\Omega$ branch.)
+   (Current is $I = \frac{7.5}{3195} \approx 2.35\text{ mA}$, making the LED bright despite the $100\text{ k}\Omega$ branch.)
 2. $3.3\text{ k}\Omega \parallel 10\text{ k}\Omega$:
    $$R_P = \frac{3.3 \times 10}{3.3 + 10} = \frac{33}{13.3} \approx 2.481\text{ k}\Omega \approx 2.5\text{ k}\Omega$$
 3. $3.3\text{ k}\Omega \parallel 1\text{ k}\Omega$:
    $$R_P = \frac{3.3 \times 1}{3.3 + 1} = \frac{3.3}{4.3} \approx 0.767\text{ k}\Omega = 767\ \Omega \approx 770\ \Omega$$
-   (Matches manual's $770\ \Omega$ value; current jumps to $I = \frac{7.5}{767} \approx 9.78\text{ mA}$, making the LED much brighter.)
+   (Current jumps to $I = \frac{7.5}{767} \approx 9.78\text{ mA}$, making the LED much brighter.)
 
 ### Example 2: Color Code Decoding, Tolerance Reject Check, and Power Rating
 (a) A resistor has color bands `orange-orange-red-gold`. Determine its nominal value and acceptable ohmmeter range.
@@ -103,7 +103,7 @@ In Laboratory Experiment 2, a $3.3\text{ k}\Omega$ resistor (`orange-orange-red-
 
 ## Laboratory Recap
 
-### Laboratory Activity #02: Resistors (Manual + Group 8 Report)
+### Laboratory Activity #02: Resistors
 - **Objective:** Verify series resistance addition (KVL), parallel resistance reduction (KCL), independent operation of parallel branches, and current splitting in combined series-parallel circuits using fixed and variable resistors.
 - **Materials & Instruments:** $9\text{ V}$ power supply, breadboard, pushbutton switch, fixed resistors ($1\text{ k}\Omega$ brown-black-red-gold, $3.3\text{ k}\Omega$ orange-orange-red-gold, $10\text{ k}\Omega$ brown-black-orange-gold, $100\text{ k}\Omega$ brown-black-yellow-gold), $50\text{ k}\Omega$ variable resistor, 2 LEDs, jumper wires.
 - **Numbered Procedure:**
@@ -117,8 +117,8 @@ In Laboratory Experiment 2, a $3.3\text{ k}\Omega$ resistor (`orange-orange-red-
   - **Part 2:** Bright even with $100\text{ k}\Omega$ ($3.2\text{ k}\Omega$ equiv.), nearly same brightness at $10\text{ k}\Omega$ ($2.5\text{ k}\Omega$), noticeably brighter at $1\text{ k}\Omega$ ($770\ \Omega$).
   - **Part 3A:** Right LED ($3.3\text{ k}\Omega$ branch) keeps constant brightness while changing Left branch resistor affects only Left LED.
   - **Part 3B:** At VR $= 0\ \Omega$ (leftmost), almost all current from the $3.3\text{ k}\Omega$ resistor flows through Left LED (bright) and Right LED is very dim. At $1/5$ turn ($\text{VR} = 10\text{ k}\Omega$), both branches have $10\text{ k}\Omega$ and glow equally. At VR $= 50\text{ k}\Omega$ (rightmost), Left LED dims and Right LED brightens.
-- **Typical Sources of Error (Group 8):** $\pm 5\%$ gold-band manufacturing tolerance, natural resistance of breadboard strips and jumper wires, loose component leads in breadboard sockets, and shorting adjacent tightly packed resistors/wires.
-- **Conclusion Statements (Group 8):** Series circuits obey KVL and additive resistance (largest resistor dominates); parallel circuits obey KCL and reduce equivalent resistance below any single branch while keeping branch voltages independent; combined circuits allow controlled current steering across parallel branches via a series-fed variable resistor.
+- **Typical Sources of Error:** $\pm 5\%$ gold-band manufacturing tolerance, natural resistance of breadboard strips and jumper wires, loose component leads in breadboard sockets, and shorting adjacent tightly packed resistors/wires.
+- **Conclusion Statements:** Series circuits obey KVL and additive resistance (largest resistor dominates); parallel circuits obey KCL and reduce equivalent resistance below any single branch while keeping branch voltages independent; combined circuits allow controlled current steering across parallel branches via a series-fed variable resistor.
 
 ---
 
@@ -162,7 +162,7 @@ flowchart TD
 - **Combined circuit opposite-brightness trap (Lab 2 Part 3B):** Because a $3.3\text{ k}\Omega$ resistor sits in series *upstream* of the parallel split, lowering VR steals current away from the $10\text{ k}\Omega$ branch (Left brightens, Right dims); raising VR pushes current into the $10\text{ k}\Omega$ branch (Left dims, Right brightens). Equal brightness occurs when VR $= 10\text{ k}\Omega$ ($1/5$ of $50\text{ k}\Omega$ rotation).
 - **Tolerance is on rated nominal value:** Never compute $\pm 5\%$ or $\pm 10\%$ around the *measured* value; always compute around the labeled/color-coded nominal value.
 - **Minimum parallel resistance check:** If your parallel $R_P$ ever comes out larger than ANY resistor in the parallel group, you forgot to take the final reciprocal $1 / (1/R_P)$.
-- **Residential wiring analogy (Group 8 Report):** Household outlets/lamps are wired in **parallel** (independent switching, full mains voltage), while fuses and wall switches are placed in **series** with individual loads/circuits for control and safety.
+- **Residential wiring analogy:** Household outlets/lamps are wired in **parallel** (independent switching, full mains voltage), while fuses and wall switches are placed in **series** with individual loads/circuits for control and safety.
 
 ---
 
@@ -224,8 +224,8 @@ flowchart TD
 2. **A)** Parallel branches across a constant voltage source receive the full supply voltage independently; changing Branch B's resistance alters only Branch B's current (plus total source current), leaving Branch A unchanged.
 3. **A)** Yellow ($4$), Violet ($7$), Red ($\times 10^2 = 100$) $= 4700\ \Omega = 4.7\text{ k}\Omega$. Gold $= \pm 5\%$ ($0.05 \times 4700 = 235\ \Omega$), giving $[4465\ \Omega,\ 4935\ \Omega]$.
 4. **A, B, C)** Sweeping the VR from $0\ \Omega \to 10\text{ k}\Omega \to 50\text{ k}\Omega$ shifts current from the left LED branch to equal sharing and then into the right $10\text{ k}\Omega$ LED branch.
-5. **[2481.20; 2481.2; 2481; 2481.20 ohm; 2481.20 ohms]** $R_P = (3300 \times 10000) / (3300 + 10000) = 33,000,000 / 13,300 \approx 2481.20\ \Omega$ (approx. $2.48\text{ k}\Omega$, rounded to $2.5\text{ k}\Omega$ in the manual).
-6. **[767.44; 767.4; 767; 767.44 ohm; 767.44 ohms]** $R_P = (3300 \times 1000) / (3300 + 1000) = 3,300,000 / 4300 \approx 767.44\ \Omega$ (rounded to $770\ \Omega$ in the manual).
+5. **[2481.20; 2481.2; 2481; 2481.20 ohm; 2481.20 ohms]** $R_P = (3300 \times 10000) / (3300 + 10000) = 33,000,000 / 13,300 \approx 2481.20\ \Omega$ (approx. $2.48\text{ k}\Omega$, commonly rounded to $2.5\text{ k}\Omega$).
+6. **[767.44; 767.4; 767; 767.44 ohm; 767.44 ohms]** $R_P = (3300 \times 1000) / (3300 + 1000) = 3,300,000 / 4300 \approx 767.44\ \Omega$ (commonly rounded to $770\ \Omega$).
 7. **[423; 423.0; 423 ohm; 423 ohms]** $R_{\min} = 470 - 0.10(470) = 470 - 47 = 423\ \Omega$.
 8. **B)** Two $2.2\text{ k}\Omega$, $1\text{ W}$ resistors in parallel yield $R_P = 2.2/2 = 1.1\text{ k}\Omega$ (within $+10\%$ of $1\text{ k}\Omega$, well inside $20\%$) and split the $1.05\text{ W}$ load equally ($0.525\text{ W}$ each), giving $2\text{ W}$ combined dissipation capability.
 9. **[1: 103.3; 2: 3.19/3.2/3.20; 3: 20; 4: 5]** Series: $3.3 + 100 = 103.3\text{ k}\Omega$, $10 + 10 = 20\text{ k}\Omega$. Parallel: $(3.3 \times 100)/103.3 \approx 3.195\text{ k}\Omega$ ($3.19$ or $3.20$ or $3.2$), $10/2 = 5\text{ k}\Omega$.

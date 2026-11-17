@@ -58,7 +58,7 @@ In Laboratory Experiment 3, students test $C_1 = 10\ \mu\text{F}$ and $C_2 = 100
 **Solution (a) Series (`Lab 3 Part 2`):**
 1. Apply the two-capacitor series formula:
    $$C_{\text{series}} = \frac{C_1 C_2}{C_1 + C_2} = \frac{(10\ \mu\text{F})(100\ \mu\text{F})}{10\ \mu\text{F} + 100\ \mu\text{F}} = \frac{1000}{110}\ \mu\text{F} \approx 9.09\ \mu\text{F} \approx 9.1\ \mu\text{F}$$
-   This matches the Lab 3 manual value ($9.1\ \mu\text{F}$). Because $9.09\ \mu\text{F} < 10\ \mu\text{F}$, the smaller $10\ \mu\text{F}$ capacitor dominates the circuit response.
+   (Rounded to $9.1\ \mu\text{F}$ in Lab 3.) Because $9.09\ \mu\text{F} < 10\ \mu\text{F}$, the smaller $10\ \mu\text{F}$ capacitor dominates the circuit response.
 
 **Solution (b) Parallel (`Lab 3 Part 3`):**
 1. Sum the parallel capacitances directly:
@@ -83,7 +83,7 @@ In Lab 3 Part 1, a $100\ \mu\text{F}$ capacitor charges from the $9\text{ V}$ su
 
 ## Laboratory Recap
 
-### Laboratory Activity #03: Capacitors (Manual Only — No Group 8 Report in Staging)
+### Laboratory Activity #03: Capacitors
 - **Objective:** Inspect schematics directly without parts lists to observe RC charge/discharge timing, series vs. parallel capacitor behavior, and electrostatic energy storage.
 - **Materials & Instruments:** $9\text{ V}$ supply, breadboard, switch, resistors ($1\text{ k}\Omega$, $3.3\text{ k}\Omega$, $10\text{ k}\Omega$), electrolytic capacitors ($100\ \mu\text{F}$, $10\ \mu\text{F}$; also ceramic disc & variable capacitors noted as too small for this DC test), LED, jumper wires.
 - **Numbered Procedure:**

@@ -16,18 +16,18 @@ status: completed
 
 ## Exam-Oriented Concept Summary
 
-- **Communication System Architecture (`Frenzel Ch. 1`):**
+- **Communication System Architecture:**
   - Core path: **Information Source $\to$ Transmitter $\to$ Communication Channel (Medium) $\to$ Receiver $\to$ Recovered Information**. A **transceiver** combines both Tx and Rx (telephones, modems, handheld radios).
   - **Impairments:** **Attenuation** degrades signal strength proportionally to the square of distance ($1/d^2$ in free space); **noise** is random unwanted electrical energy entering through the channel.
   - **Transmission Modes:** **Simplex** (one-way: broadcast AM/FM radio, TV); **Half-Duplex** (two-way, one party at a time: CB/police/amateur radio); **Full-Duplex** (simultaneous two-way: telephone).
   - **Baseband vs. Broadband:** Baseband sends raw information directly; broadband modulates a high-frequency RF **carrier** for antenna radiation. **Multiplexing** shares one medium across multiple signals via **FDM** (frequency) or **TDM** (time).
   - **EM Spectrum & Wavelength:** $\lambda = \frac{3 \times 10^8}{f}$ ($\text{m}$). Key bands: ELF ($30\text{--}300\text{ Hz}$), VF ($300\text{--}3000\text{ Hz}$), VLF (up to $20\text{ kHz}$), LF ($30\text{--}300\text{ kHz}$), MF ($300\text{--}3000\text{ kHz}$), HF ($3\text{--}30\text{ MHz}$), VHF ($30\text{--}300\text{ MHz}$), UHF ($300\text{--}3000\text{ MHz}$), SHF ($1\text{--}30\text{ GHz}$), EHF ($30\text{--}300\text{ GHz}$).
-- **Amplitude Modulation — AM (`Frenzel Ch. 3` & `Lab 8 Part I–II`):**
+- **Amplitude Modulation (AM):**
   - The modulating signal $V_m \sin(2\pi f_m t)$ varies the instantaneous **amplitude** of a constant-frequency carrier $V_c \sin(2\pi f_c t)$, traced by its **envelope**.
   - **Modulation Index ($m$):** $m = \frac{V_m}{V_c} = \frac{V_{\max} - V_{\min}}{V_{\max} + V_{\min}}$ (percentage $= 100 m$). Valid range is $0 \le m \le 1$. When **$m > 1$ (e.g., $m = 1.5$)**, **overmodulation** occurs—causing severe envelope distortion, phase reversals, harsh audio, and failure of simple diode envelope detectors!
   - **Sidebands & Spectrum:** Single-tone modulation yields an Upper Sideband ($f_{\text{USB}} = f_c + f_m$) and Lower Sideband ($f_{\text{LSB}} = f_c - f_m$), occupying total bandwidth $\text{BW} = f_{\text{USB}} - f_{\text{LSB}} = 2 f_m$. Square-wave AM (**ASK**) produces odd-harmonic sidebands (3rd, 5th, 7th...) causing **splatter** interference.
   - **AM Power & Variants:** $P_T = P_C\left(1 + \frac{m^2}{2}\right)$ and $P_{\text{USB}} = P_{\text{LSB}} = \frac{P_C m^2}{4}$. Even at $100\%$ modulation ($m = 1$), **$2/3$ of transmitted power stays in the uninformative carrier**! Switching off the carrier DC offset ($\hat{s} = 0$ in LabAlive) creates **DSB-SC** (Double-Sideband Suppressed Carrier via a balanced modulator); removing one sideband too creates **SSB** (narrower BW, concentrated power, less fading); **VSB** partially trims one sideband (analog TV video).
-- **Frequency & Phase Modulation — FM & PM (`Frenzel Ch. 5` & `Lab 8 Part III`):**
+- **Frequency & Phase Modulation (FM & PM):**
   - **FM:** Carrier **amplitude stays constant** while instantaneous carrier frequency shifts proportionally with modulating voltage (**frequency deviation $\Delta f_{\max}$ or $f_d = k_m \hat{m}$**); modulating frequency $f_m$ sets the **deviation rate**.
   - **PM vs. Indirect FM:** Phase modulation shifts carrier phase in proportion to amplitude, so frequency deviation grows with *both* modulating amplitude and $f_m$; inserting a $1/f$ RC low-pass **predistorter** converts PM into **indirect FM**. Digital equivalents: **FSK** (frequency tones) and **PSK/BPSK** (phase shifts).
   - **FM Modulation Index ($\beta$ or $m_f$) & Bessel Bandwidth:**
@@ -53,9 +53,9 @@ status: completed
 
 ## Worked Numerical Examples
 
-### Example 1: AM Sidebands, Bandwidth, Modulation Index & Power (`Frenzel Ch. 3` + `Lab 8 Part I`)
-(a) An AM broadcast station operates at carrier $f_c = 980\text{ kHz}$ with a maximum modulating audio tone of $f_m = 5\text{ kHz}$ (Frenzel Ch. 3 example). Find $f_{\text{USB}}$, $f_{\text{LSB}}$, and total bandwidth $\text{BW}$.
-(b) In Lab 8 Part I (`image1.png`), the LabAlive AM modulator sets carrier amplitude $1.9\text{ V}$ at $f_c = 20.0\text{ MHz}$, DC carrier offset $\hat{s} = 1.0\text{ V}$, message amplitude $1.4\text{ V}$ at $f_m = 1.0\text{ MHz}$, and modulation index $m = 0.5$: verify the spectrum analyzer sideband frequencies $f_{\text{LSB}}$ and $f_{\text{USB}}$ shown on screen ($19\text{ MHz}$ and $21\text{ MHz}$) and compute total AM power if carrier power is $P_C = 100\text{ W}$ at $m = 0.5$.
+### Example 1: AM Sidebands, Bandwidth, Modulation Index & Power
+(a) An AM broadcast station operates at carrier $f_c = 980\text{ kHz}$ with a maximum modulating audio tone of $f_m = 5\text{ kHz}$. Find $f_{\text{USB}}$, $f_{\text{LSB}}$, and total bandwidth $\text{BW}$.
+(b) In Lab 8 Part I (`LabAlive AM Modulator`), the modulator sets carrier amplitude $1.9\text{ V}$ at $f_c = 20.0\text{ MHz}$, DC carrier offset $\hat{s} = 1.0\text{ V}$, message amplitude $1.4\text{ V}$ at $f_m = 1.0\text{ MHz}$, and modulation index $m = 0.5$: verify the spectrum analyzer sideband frequencies $f_{\text{LSB}}$ and $f_{\text{USB}}$ shown on screen ($19\text{ MHz}$ and $21\text{ MHz}$) and compute total AM power if carrier power is $P_C = 100\text{ W}$ at $m = 0.5$.
 
 **Solution (a):**
 1. Sideband frequencies:
@@ -71,7 +71,7 @@ status: completed
    $$P_T = 100\left(1 + \frac{0.5^2}{2}\right) = 100(1 + 0.125) = 112.5\text{ W}$$
    Each sideband carries $P_{\text{USB}} = P_{\text{LSB}} = \frac{100(0.25)}{4} = 6.25\text{ W}$.
 
-### Example 2: FM Modulation Index, Bessel Bandwidth & Carrier Null (`Frenzel Ch. 5` + `Lab 8 Part III`)
+### Example 2: FM Modulation Index, Bessel Bandwidth & Carrier Null
 (a) In Lab 8 Part III(a), the FM modulator has modulation constant $k_m = 1.0\text{ kHz/V}$, modulating sine amplitude $\hat{m} = 2.0\text{ V}$, and modulating frequency $f_m = 1.0\text{ kHz}$ around $f_c = 1.0\text{ MHz}$. Compute peak deviation $\Delta f_{\max}$, modulation index $\beta$, and bandwidth $\text{BW}_{\text{FM}}$ using the Bessel table ($N = 4$ significant sidebands at $\beta = 2.0$).
 (b) In Lab 8 Part III(b), what value of modulation constant $k_m$ causes the carrier component on the spectrum analyzer to vanish ($\beta \approx 2.405$ where $J_0(\beta) = 0$) while keeping $\hat{m} = 2.0\text{ V}$ and $f_m = 1.0\text{ kHz}$?
 
@@ -80,7 +80,7 @@ status: completed
    $$\Delta f_{\max} = k_m \hat{m} = (1.0\text{ kHz/V})(2.0\text{ V}) = 2.0\text{ kHz}$$
 2. Modulation index:
    $$\beta = \frac{\Delta f_{\max}}{f_m} = \frac{2.0\text{ kHz}}{1.0\text{ kHz}} = 2.0$$
-3. From Frenzel Fig. 5-8 Bessel table for $\beta = 2.0$, there are $N = 4$ significant sideband pairs ($J_1 = 0.58, J_2 = 0.35, J_3 = 0.13, J_4 = 0.03 > 0.01$; matching the 4 pairs at $\pm 1, \pm 2, \pm 3, \pm 4\text{ kHz}$ in LabAlive `image3.png`!):
+3. From the FM Bessel function table ($J_n(\beta)$) for $\beta = 2.0$, there are $N = 4$ significant sideband pairs ($J_1 = 0.58, J_2 = 0.35, J_3 = 0.13, J_4 = 0.03 > 0.01$; matching the $4$ sideband pairs at $\pm 1, \pm 2, \pm 3, \pm 4\text{ kHz}$ in LabAlive):
    $$\text{BW}_{\text{FM}} = 2 f_m N = 2(1.0\text{ kHz})(4) = 8.0\text{ kHz}$$
 
 **Solution (b):**
@@ -92,7 +92,7 @@ status: completed
 
 ## Laboratory Recap
 
-### Laboratory Activity #08 (Internally Titled `#07`): Analog Modulation (AM and FM) using LabAlive
+### Laboratory Activity #08: Analog Modulation (AM and FM) using LabAlive
 - **Objective:** Simulate AM, AM Envelope Detection, and FM in LabAlive to observe time-domain waveforms (`Oscilloscope`) alongside frequency-domain sidebands (`Spectrum Analyzer`) while varying $m$, carrier offset $\hat{s}$, $f_c$, $f_m$, waveforms, and FM $\beta$.
 - **Software & Instruments:** LabAlive simulation suite (`am/` and `fm/` experiments), built-in Signal Generators, Carrier Oscillator, AM/FM Modulator, Rectifier Envelope Detector, Time-Domain Oscilloscope / Complex Oscilloscope, and Frequency-Domain Spectrum Analyzer $|S(f)|$.
 - **Numbered Procedure:**
@@ -129,7 +129,7 @@ LabAlive FM Modulator Chain:
   m(t) ---> [ FM Modulator (km, f_c = 1 MHz) ] ---> s(t) Constant Amplitude, Varying Frequency
 ```
 
-### FM Noise-Suppression Receiver Flow (`Frenzel Ch. 5`)
+### FM Noise-Suppression Receiver Flow
 
 ```mermaid
 flowchart LR
@@ -148,7 +148,7 @@ flowchart LR
 - **FM vs. AM visual distinction on oscilloscope:** FM keeps **constant peak amplitude** while cycle spacing (frequency) compresses and expands; AM keeps **constant carrier frequency** while peak amplitude (envelope) swells and shrinks.
 - **Why FM resists atmospheric noise:** Natural electrical noise changes **amplitude**; AM relies on amplitude, whereas FM receivers **clip off** amplitude variations in a **limiter** and extract information solely from frequency shifts.
 - **Scope + Spectrum Analyzer on same circuit point:** Completely safe and valid—they produce **different screen displays** because the scope plots **time** on the horizontal axis while the spectrum analyzer plots **frequency** on the horizontal axis.
-- **LabAlive Waveforms (`Reviewer Q27` note):** `Lab 8` explicitly assigns `Sine`, `DC`, `Sawtooth`, and `Speech` (sampled audio waves); consult the full LabAlive Signal Generator dropdown (outside local docs) to verify whether `Triangular` is also built-in alongside `Square` and sampled speech audio.
+- **LabAlive Waveforms:** Signal generators in LabAlive produce standard periodic waves (`Sine`, `Square`, `Triangular`, `Sawtooth`, `DC`) as well as sampled `Speech` audio waveforms.
 - **Bessel carrier null ($\beta \approx 2.405$):** Carrier disappears on $|S(f)|$ NOT because transmission stopped, but because all RF power shifted into the FM sidebands ($J_0(2.405) = 0$).
 
 ---
@@ -191,7 +191,7 @@ flowchart LR
 
 8. [INPUT] Using the LabAlive FM formula $\beta = \frac{k_m \hat{m}}{f_m}$, calculate the modulation index $\beta$ when modulation constant $k_m = 2.5\text{ kHz/V}$, modulating signal amplitude $\hat{m} = 3.0\text{ V}$, and modulating frequency $f_m = 1.5\text{ kHz}$.
 
-9. [BLANK] Complete the Lab 8 / Frenzel communication comparison table below:
+9. [BLANK] Complete the AM vs. FM communication comparison table below:
 
 | Parameter / Concept | Amplitude Modulation (AM) | Frequency Modulation (FM) |
 | :--- | :--- | :--- |

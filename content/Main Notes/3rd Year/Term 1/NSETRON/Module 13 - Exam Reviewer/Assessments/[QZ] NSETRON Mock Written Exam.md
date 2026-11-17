@@ -16,9 +16,8 @@ status: completed
 
 ## Exam Instructions & Coverage Matrix
 
-- **Format:** `31` four-option multiple-choice questions designed for individual **pen-and-paper** NSETRON assessment (matching the structure and scope of [[[REV] NSETRON Written Exam Reviewer]] with original values and laboratory scenarios).
-- **Lab Coverage Note:** Covers Modules `01`--`12`, **Laboratory Activities 1--6 and 8**, and **Machine Project 2** (`Lab 7` is absent/renumbered in the course module sequence).
-- **Worked Solutions:** Complete derivations, distractor eliminations, and confidence scores live in [[[ANS] NSETRON Mock Written Exam Answer Key]].
+- **Format:** `31` four-option multiple-choice questions for individual **pen-and-paper** NSETRON practice covering Modules `01`--`12`, **Laboratory Activities 1--6 and 8**, and **Machine Project 2**.
+- **Worked Solutions:** Step-by-step derivations and distractor analyses live in [[[ANS] NSETRON Mock Written Exam Answer Key]].
 
 | Mock Q# | Assigned Module | Lab / Project / Theory Focus | Target Skill |
 | :---: | :--- | :--- | :--- |
@@ -180,7 +179,7 @@ status: completed
 24. For residential $120\text{ V}/240\text{ V}$ appliance wiring safety and ampacity management, which statement accurately describes conductor gauge and fuse placement?
     - **A)** Connecting a fuse in **parallel** with the Neutral wire trips the breaker without interrupting Hot voltage.
     - **B)** Increasing the AWG gauge number (e.g., AWG `10` to AWG `18`) thickens wire diameter and raises safe ampacity.
-    - **C)** Dropping $6$ AWG numbers in Malestrom Table 2-1 (e.g., AWG `18` at $21\ \Omega/\text{km}$ down to AWG `12` at $5.3\ \Omega/\text{km}$) multiplies cross-sectional area roughly four-fold and quarters $\Omega/\text{km}$ resistance, while safety fuses/breakers must be placed in **series with the Hot wire** and appliance metal frames tied to earth **Ground**.
+    - **C)** Dropping $6$ AWG numbers for solid copper wire (e.g., AWG `18` at $21\ \Omega/\text{km}$ down to AWG `12` at $5.3\ \Omega/\text{km}$) multiplies cross-sectional area roughly four-fold and quarters $\Omega/\text{km}$ resistance, while safety fuses/breakers must be placed in **series with the Hot wire** and appliance metal frames tied to earth **Ground**.
     - **D)** Earth ground wires are meant to carry continuous return load current identically to the Neutral conductor.
 
 25. A resistive sensor voltage divider uses $V_{\text{in}} = 10.0\text{ V}$ across a top fixed resistor $R_1 = 4.0\text{ k}\Omega$ and a bottom resistive photo/thermistor sensor $R_2$ connected to ground, with $V_{\text{out}}$ tapped between $R_1$ and $R_2$. As environmental changes raise $R_2$ from $1.0\text{ k}\Omega$ to $6.0\text{ k}\Omega$, how does the unloaded divider output $V_{\text{out}}$ change?
@@ -207,7 +206,7 @@ status: completed
     - **C)** $4.81\text{ kHz/V}$
     - **D)** $9.62\text{ kHz/V}$
 
-29. Which proposed Machine Project 2 DipTrace design **passes** every rule specified in `Project 2 - PCB Design.pdf`?
+29. Which proposed Machine Project 2 DipTrace design **passes** every project rule?
     - **A)** $5.0\text{ cm} \times 5.0\text{ cm}$ presensitized photoresist single-sided PCB, bottom copper layer only, manual traces at $0.9\text{ mm}$ width, through-hole Red/Green/Orange LEDs + $1\text{ k}\Omega$ resistors + `GPIO1, GPIO2, GPIO3, GND` 4-pin header.
     - **B)** $5.0\text{ cm} \times 5.0\text{ cm}$ Universal perfboard layout using DipTrace autorouter with $0.5\text{ mm}$ bottom traces.
     - **C)** $7.0\text{ cm} \times 5.0\text{ cm}$ plain copper-only board with SMD LEDs routed manually on top and bottom layers at $1.0\text{ mm}$ trace width.
@@ -219,7 +218,7 @@ status: completed
     - **C)** $1.50\text{ mA}$ at $500\ \Omega$; $0.15\text{ mA}$ at $5\text{ k}\Omega$
     - **D)** $3.00\text{ mA}$ at $5\text{ k}\Omega$; $0.30\text{ mA}$ at $500\ \Omega$
 
-31. After chemical etching in Agua Oxenada ($\text{H}_2\text{O}_2$) + Muriatic Acid ($\text{HCl}$) and drilling holes for Machine Project 2 (following the Section 2 lab-technician update where no separate developer is needed), a student checks resistance with a multimeter (`power OFF`) before connecting the ESP32 and records:
+31. After chemical etching in Agua Oxenada ($\text{H}_2\text{O}_2$) + Muriatic Acid ($\text{HCl}$) and drilling holes for Machine Project 2 (following the lab-technician update where no separate developer is needed), a student checks resistance with a multimeter (`power OFF`) before connecting the ESP32 and records:
     - `GPIO1` header pad to `R1` pad: $0.3\ \Omega$
     - `GPIO3` header pad to `R3` pad: `OL` (infinite resistance)
     - `GPIO2` trace to adjacent `GND` copper pad: $0.2\ \Omega$
@@ -255,7 +254,7 @@ status: completed
 21. **A)** $T = 4.0 \times 50\ \mu\text{s} = 200\ \mu\text{s} \implies f = 1/T = 5.0\text{ kHz}$; $V_{pp} = 3.5 \times 2.0\text{ V} = 7.0\text{ V}$.
 22. **B)** Rounded or peaked corners on the `1 kHz` calibration lug indicate probe capacitive mismatch, corrected by trimming the probe's compensation screw.
 23. **D)** Quantization levels equal $2^n$: going from $n=3$ ($8$ steps) to $n=6$ ($64$ steps) increases resolution by $8\times$ and reduces quantization step size by $8\times$.
-24. **C)** Lowering gauge by `6` AWG steps (e.g., `18 -> 12`) cuts $\Omega/\text{km}$ roughly four-fold (`21 -> 5.3` in Table 2-1); fuses protect circuits only when in series on the Hot wire while chassis ground prevents shock.
+24. **C)** Lowering gauge by `6` AWG steps (e.g., `18 -> 12`) cuts $\Omega/\text{km}$ roughly four-fold ($21 \to 5.3\ \Omega/\text{km}$); fuses protect circuits only when in series on the Hot wire while chassis ground prevents shock.
 25. **A)** Voltage divider $V_{\text{out}} = V_{\text{in}} \frac{R_2}{R_1+R_2}$: at $1\text{ k}\Omega$, $10(1/5) = 2.0\text{ V}$; at $6\text{ k}\Omega$, $10(6/10) = 6.0\text{ V}$.
 26. **B)** Here $V_+ = 5.5\text{ V} > V_- = 4.0\text{ V}$, so an open-loop comparator saturates immediately toward the positive rail ($+12\text{ V}$).
 27. **D)** $m = \frac{8.0 - 2.0}{8.0 + 2.0} = 0.60$; sidebands are $1000 \pm 5\text{ kHz}$ ($995$ & $1005\text{ kHz}$), giving $\text{BW} = 2 f_m = 10\text{ kHz}$.

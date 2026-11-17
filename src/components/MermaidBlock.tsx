@@ -491,6 +491,7 @@ export default function MermaidBlock({ chart }: MermaidBlockProps) {
       containerRef.current.innerHTML = sanitizeHtml(svgEl ? svgEl.outerHTML : svg, {
         USE_PROFILES: { svg: true, svgFilters: true, html: true },
         ADD_TAGS: ["foreignObject"],
+        HTML_INTEGRATION_POINTS: { foreignobject: true },
         ADD_ATTR: ["target", "style", "class", "transform", "viewBox", "xmlns", "dominant-baseline", "text-anchor"],
       });
 

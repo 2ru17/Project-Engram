@@ -16,15 +16,15 @@ status: completed
 
 ## Exam-Oriented Concept Summary
 
-- **What an Oscilloscope Measures (Malestrom Ch. 3, Lab 6):**
+- **What an Oscilloscope Measures:**
   - Unlike a digital multimeter (which gives a single averaged/RMS number), an oscilloscope displays a live **time-domain graph**: **instantaneous voltage ($V$) on the vertical axis** versus **time ($t$) on the horizontal axis**.
   - **DC vs. AC Trace:** Pure **DC** appears as a flat horizontal line offset vertically from $0\text{ V}$; **AC** alternates periodically above and below zero (or a DC bias), revealing exact waveform shape (sine, square, triangle, pulse), ripple, peak-to-peak amplitude $V_{pp}$, and period $T$.
-  - **Time-Domain vs. Frequency-Domain (`Reviewer Q28` & `Lab 8`):** Both an oscilloscope and a spectrum analyzer can probe the same circuit node simultaneously without damaging it, producing **different displays** because an oscilloscope plots amplitude vs. **time** while a spectrum analyzer plots amplitude vs. **frequency**.
-- **Calibration, Scaling & Triggering (`Lab 6` Group 8 Report):**
+  - **Time-Domain vs. Frequency-Domain Analysis:** Both an oscilloscope and a spectrum analyzer can probe the same circuit node simultaneously without damaging it, producing **different displays** because an oscilloscope plots amplitude vs. **time** while a spectrum analyzer plots amplitude vs. **frequency**.
+- **Calibration, Scaling & Triggering:**
   - **Mandatory Pre-Measurement Calibration:** Always hook the probe tip (and ground clip) to the scope's front-panel **calibration terminal** (reference square wave) to reset baseline shifts and verify probe scaling before probing external circuits.
   - **Vertical & Horizontal Scales:** Vertical scale is set in **$\text{Volts/div}$**; horizontal time-base is set in **$\text{s/div}$** ($\text{ms/div}$, $\mu\text{s/div}$). Manual mis-scaling zooms too far out or clips the wave off-screen; **Auto-scale** quickly locks onto Channel 1 (`CH1`), after which manual fine-tuning improves precision.
-  - **Time-Base Behavior (`Reviewer Q20`):** Keeping horizontal time-base ($\text{s/div}$) fixed while **increasing input signal frequency $f$** shortens period $T = 1/f$, causing cycles to **compress horizontally** so **more complete periods fit across the screen**.
-- **Signal-to-Noise Ratio (SNR) & Uniform Quantization (`Reviewer Q21–Q23`, Malestrom Ch. 25):**
+  - **Time-Base Behavior:** Keeping horizontal time-base ($\text{s/div}$) fixed while **increasing input signal frequency $f$** shortens period $T = 1/f$, causing cycles to **compress horizontally** so **more complete periods fit across the screen**.
+- **Signal-to-Noise Ratio (SNR) & Uniform Quantization:**
   - **Low SNR on Scope:** As noise power increases relative to signal power (low **SNR**), the clean waveform trace becomes **fuzzy, thick, and distorted**, making edges and zero-crossings hard to distinguish.
   - **Sampling & Uniform Quantization (ADC):** Digital oscilloscopes and digital audio systems sample analog waveforms at rate $f_s \ge 2 f_{\max}$ (Nyquist criterion) and round continuous analog voltages onto $L = 2^n$ **discrete finite voltage levels** ($n$-bit resolution). Rounding to discrete steps turns a smooth analog sine wave into a **staircase waveform**.
   - **Bit-Depth Impact:** Reducing quantization resolution (e.g., from $16\text{-bit}$ with $2^{16} = 65,536$ levels down to $1\text{-bit}$ with $2^1 = 2$ levels) introduces **severe quantization distortion**, collapsing the signal into a coarse 2-level binary square-like representation.
@@ -46,10 +46,10 @@ status: completed
 
 ## Worked Numerical Examples
 
-### Example 1: Group 8 Lab 6 — Rigol Square Wave & Sine Wave Measurements
-Verify the actual measured Rigol oscilloscope data captured by Group 8 in Laboratory Activity #06:
-(a) **QuickPrint1 (Square Wave):** Timebase $= 10.0\ \mu\text{s/div}$, Vertical $= 500\text{ mV/div}$, scope reports $T = 33.30\ \mu\text{s}$ and $V_{pp} = 2.52\text{ V}$. Verify the frequency $f$ and the approximate horizontal/vertical division counts.
-(b) **QuickPrint2 (Sine Wave):** Timebase $= 1.00\text{ ms/div}$, Vertical $= 1.00\text{ V/div}$, scope reports $T = 4.020\text{ ms}$ and $V_{pp} = 8.04\text{ V}$. Verify $f$, peak amplitude $V_p$, and RMS voltage $V_{\text{rms}}$, plus Group 8's audio generator check at $f = 200\text{ Hz}$.
+### Example 1: Lab 6 Rigol Square Wave & Sine Wave Measurements
+Verify the recorded Rigol oscilloscope measurements from Laboratory Activity #06:
+(a) **Captured Square Wave ($30.0\text{ kHz}$ test):** Timebase $= 10.0\ \mu\text{s/div}$, Vertical $= 500\text{ mV/div}$, scope reports $T = 33.30\ \mu\text{s}$ and $V_{pp} = 2.52\text{ V}$. Verify the frequency $f$ and the approximate horizontal/vertical division counts.
+(b) **Captured Sine Wave ($249\text{ Hz}$ test):** Timebase $= 1.00\text{ ms/div}$, Vertical $= 1.00\text{ V/div}$, scope reports $T = 4.020\text{ ms}$ and $V_{pp} = 8.04\text{ V}$. Verify $f$, peak amplitude $V_p$, and RMS voltage $V_{\text{rms}}$, plus the audio generator check at $f = 200\text{ Hz}$.
 
 **Solution (a) Square Wave:**
 1. Frequency from period $T = 33.30\ \mu\text{s} = 33.30 \times 10^{-6}\text{ s}$:
@@ -64,7 +64,7 @@ Verify the actual measured Rigol oscilloscope data captured by Group 8 in Labora
    Matches the Rigol readout (`Freq = 249 Hz`).
 2. Grid divisions, peak, and RMS voltage:
    $$N_{\text{vert}} = \frac{8.04\text{ V}}{1.00\text{ V/div}} = 8.04\text{ div}, \quad V_p = \frac{8.04\text{ V}}{2} = 4.02\text{ V}, \quad V_{\text{rms}} = 0.707 \times 4.02\text{ V} \approx 2.84\text{ V}$$
-3. Group 8 audio generator cross-check at $f = 200\text{ Hz}$:
+3. Audio generator cross-check at $f = 200\text{ Hz}$:
    $$T = \frac{1}{200\text{ Hz}} = 0.005\text{ s} = 5\text{ ms}$$
 
 ### Example 2: Screen-Scale Compression & Uniform Quantization Levels
@@ -82,7 +82,7 @@ Verify the actual measured Rigol oscilloscope data captured by Group 8 in Labora
 
 ## Laboratory Recap
 
-### Laboratory Activity #06: Oscilloscope (Group 8 Report — No Lab Manual PDF in Staging)
+### Laboratory Activity #06: Oscilloscope
 - **Objective:** Operate, calibrate, scale, and interpret a digital oscilloscope (`Rigol`) using its built-in reference calibration wave and an external audio signal generator, and capture screenshots/CSV data.
 - **Materials & Instruments:** Digital storage oscilloscope (Rigol, Channel 1 probe), audio frequency signal generator, oscilloscope calibration lug, USB flash drive (formatted as **MS-DOS** / FAT32 for Rigol compatibility).
 - **Numbered Procedure:**
@@ -92,10 +92,10 @@ Verify the actual measured Rigol oscilloscope data captured by Group 8 in Labora
   4. Adjust horizontal time-base (`s/div`) and vertical scale (`V/div`), or press **Auto-scale** to center and stabilize `CH1` if zooming distorts/clips the trace.
   5. Measure $V_{pp}$ ($V_{\max} - V_{\min}$), period $T$, and frequency $f$, cross-checking $T = 1/f$.
   6. Export screen captures and raw CSV waveform data to an MS-DOS-formatted USB drive.
-- **What Is Measured:** Waveform shape (square vs. sine vs. flat DC line), period $T$, frequency $f$, and peak-to-peak voltage $V_{pp}$ (`QuickPrint1`: $30.0\text{ kHz}$, $33.30\ \mu\text{s}$, $2.52\text{ V}_{pp}$; `QuickPrint2`: $249\text{ Hz}$, $4.020\text{ ms}$, $8.04\text{ V}_{pp}$).
+- **What Is Measured:** Waveform shape (square vs. sine vs. flat DC line), period $T$, frequency $f$, and peak-to-peak voltage $V_{pp}$ (square-wave capture: $30.0\text{ kHz}$, $33.30\ \mu\text{s}$, $2.52\text{ V}_{pp}$; sine-wave capture: $249\text{ Hz}$, $4.020\text{ ms}$, $8.04\text{ V}_{pp}$).
 - **Expected Readings or Behavior:** AC waveforms oscillate symmetrically around baseline while pure DC renders as a flat horizontal line; measured $T$ matches $1/f$ calculated from the generator frequency.
-- **Typical Sources of Error (Group 8):** Skipping probe calibration (causing baseline DC offset errors), incorrect manual vertical/horizontal scaling zooming out or distorting traces, improper trigger level causing rolling traces, and incompatible USB filesystem format preventing data export.
-- **Conclusion Statements (Group 8):** Proper probe calibration and matched time/voltage scaling are mandatory prerequisites for accurately visualizing AC vs. DC waveforms, measuring $V_{pp}$, and confirming $T = 1/f$.
+- **Typical Sources of Error:** Skipping probe calibration (causing baseline DC offset errors), incorrect manual vertical/horizontal scaling zooming out or distorting traces, improper trigger level causing rolling traces, and incompatible USB filesystem format preventing data export.
+- **Conclusion Statements:** Proper probe calibration and matched time/voltage scaling are mandatory prerequisites for accurately visualizing AC vs. DC waveforms, measuring $V_{pp}$, and confirming $T = 1/f$.
 
 ---
 
@@ -134,7 +134,7 @@ flowchart TD
 ## Exam Traps & Quick-Recall Checklist
 
 - **Time-base fixed + frequency increases:** Higher $f$ means **smaller $T$**, so cycles **compress horizontally** and **more cycles appear** on screen (amplitude does NOT stretch vertically).
-- **Oscilloscope vs. Spectrum Analyzer (`Reviewer Q28`):** Both can probe the exact same point in a circuit without harming it; they show different screens because the scope displays **time domain** ($V$ vs. $t$) while the spectrum analyzer displays **frequency domain** ($|S(f)|$ vs. $f$).
+- **Oscilloscope vs. Spectrum Analyzer at Same Node:** Both can probe the exact same point in a circuit without harming it; they show different screens because the scope displays **time domain** ($V$ vs. $t$) while the spectrum analyzer displays **frequency domain** ($|S(f)|$ vs. $f$).
 - **Low SNR appearance:** Noise adds random voltage spikes on top of the trace, making the oscilloscope waveform look **fuzzy and distorted**, NOT turning it into a clean square wave or doubling its frequency.
 - **Quantization staircase cause:** Rounding continuous analog amplitudes to **finite discrete voltage levels** creates the staircase shape; dropping from $16\text{-bit}$ ($65,536$ levels) to $1\text{-bit}$ ($2$ levels) produces severe quantization distortion.
 - **Peak vs. Peak-to-Peak:** Do not confuse $V_p$ (centerline to peak) with $V_{pp}$ (trough to peak): $V_{pp} = 2 V_p$.
@@ -167,9 +167,9 @@ flowchart TD
     - **C)** A DC voltage appears on an oscilloscope as a flat horizontal line offset from $0\text{ V}$ rather than an alternating wave
     - **D)** A spectrum analyzer and an oscilloscope cannot probe the same circuit point because doing so damages the signal source
 
-5. [MSQ] In Group 8's Rigol oscilloscope lab captures, which statements accurately match the recorded measurements? (Select all that apply)
-    - **A)** In `QuickPrint1` (square wave), a period of $33.30\ \mu\text{s}$ corresponds to a frequency of approximately $30.0\text{ kHz}$
-    - **B)** In `QuickPrint2` (sine wave), a period of $4.020\text{ ms}$ corresponds to a frequency of approximately $249\text{ Hz}$
+5. [MSQ] In the recorded Lab 6 Rigol oscilloscope captures, which statements accurately match the measured waveform values? (Select all that apply)
+    - **A)** For the square-wave capture, a period of $33.30\ \mu\text{s}$ corresponds to a frequency of approximately $30.0\text{ kHz}$
+    - **B)** For the sine-wave capture, a period of $4.020\text{ ms}$ corresponds to a frequency of approximately $249\text{ Hz}$
     - **C)** At $1.00\text{ V/div}$ vertical scale, $V_{pp} = 8.04\text{ V}$ spans roughly $8.04$ vertical divisions
     - **D)** At $200\text{ Hz}$, one full cycle period equals $50\text{ ms}$
 
@@ -183,10 +183,10 @@ flowchart TD
 
 | Waveform | Period $T$ | Frequency $f$ | $V_{pp}$ | Vertical Scale ($\text{V/div}$) | Divisions Spanned (Vert) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Square wave (`QuickPrint1`) | $33.30\ \mu\text{s}$ | {{1}} $\text{kHz}$ | $2.52\text{ V}$ | $0.50\text{ V/div}$ | {{2}} |
-| Sine wave (`QuickPrint2`) | {{3}} $\text{ms}$ | $249\text{ Hz}$ | $8.04\text{ V}$ | $1.00\text{ V/div}$ | $8.04$ |
+| Square wave (`30 kHz` test) | $33.30\ \mu\text{s}$ | {{1}} $\text{kHz}$ | $2.52\text{ V}$ | $0.50\text{ V/div}$ | {{2}} |
+| Sine wave (`249 Hz` test) | {{3}} $\text{ms}$ | $249\text{ Hz}$ | $8.04\text{ V}$ | $1.00\text{ V/div}$ | $8.04$ |
 
-10. Why did Group 8 need to format their USB flash drive in **MS-DOS** format during Laboratory Activity #06?
+10. Why must a USB flash drive be formatted in **MS-DOS (FAT)** when saving waveforms during Laboratory Activity #06?
     - **A)** To double the Rigol oscilloscope sampling rate to $2\text{ GSa/s}$
     - **B)** Because the Rigol oscilloscope firmware only recognizes an MS-DOS (FAT) filesystem to export screenshots and CSV waveform files
     - **C)** To prevent quantization distortion inside the probe
@@ -203,7 +203,7 @@ flowchart TD
 7. **[4.24; 4.242; 4.24 V; 4.24V]** $V_{pp} = 6 \times 2.0\text{ V} = 12.0\text{ V} \implies V_p = 6.0\text{ V}$. Thus $V_{\text{rms}} = 0.707 \times 6.0\text{ V} = 4.242\text{ V} \approx 4.24\text{ V}$.
 8. **[256; 256 levels]** $L = 2^8 = 256$ levels.
 9. **[1: 30/30.0; 2: 5.04; 3: 4.02/4.020]** $1/(33.30\ \mu\text{s}) \approx 30.0\text{ kHz}$; $2.52\text{ V}/0.50\text{ V/div} = 5.04\text{ div}$; $1/(249\text{ Hz}) \approx 4.016\text{ ms} \approx 4.02\text{ ms}$ (scope displays $4.020\text{ ms}$).
-10. **B)** Lab 6 explicitly notes formatting the USB stick to the MS-DOS filesystem recognized by the Rigol oscilloscope to save screencaptures and CSV traces.
+10. **B)** The Rigol oscilloscope firmware recognizes MS-DOS (FAT) filesystems to export screencaptures and CSV traces.
 
 ## References & Navigation
 
