@@ -18,8 +18,8 @@ status: completed
 
 - **830-Hole Solderless Breadboard Topology:**
   - **Terminal Strips (Main Matrix):** Two mirrored halves separated by a central IC gap/trench. Each column contains **5 vertically connected holes** (`a-e` on one side of the gap, `f-j` on the other; `126` 5-hole columns total). Columns are **not** connected horizontally to adjacent columns, nor across the center gap.
-  - **Power / Ground Bus Rails:** Top and bottom horizontal rows marked red (`+`) and blue (`-`). Standard handout diagrams depict `6` rows of `100` holes (or `2` rails top and `2` rails bottom), where holes along the same `+` or `-` row share an internal bus strip, while `+` and `-` rows remain isolated from one another.
-  - **DLSU-CT Lab Breadboard Critical Trap (`"W"` Split):** On the physical laboratory breadboards used in NSETRON (verified in Group 8 photos and the official exam reviewer), a printed **`W`** symbol sits near the middle of the horizontal power/ground rails (between columns 30 and 35). That split breaks electrical continuity between the left half and right half of the horizontal rail. Putting the power supply ground on the left side of the `"W"` and a circuit ground jumper on the right side leaves an **open circuit** unless bridged by a jumper wire.
+  - **Power / Ground Bus Rails:** Top and bottom horizontal rows marked red (`+`) and blue (`-`). Standard layouts depict `6` rows of `100` holes (or `2` rails top and `2` rails bottom), where holes along the same `+` or `-` row share an internal bus strip, while `+` and `-` rows remain isolated from one another.
+  - **DLSU-CT Lab Breadboard Critical Trap (`"W"` Split):** On DLSU-CT laboratory `830`-hole breadboards used in NSETRON, a printed **`W`** symbol sits near the middle of the horizontal power/ground rails (between columns 30 and 35). That split breaks electrical continuity between the left half and right half of the horizontal rail. Putting the power supply ground on the left side of the `"W"` and a circuit ground jumper on the right side leaves an **open circuit** unless bridged by a jumper wire.
   - **Hole Notation:** Expressed as `<row><col>` (e.g., `b26`, `h9`, `e15`) or `<rail><col>` (e.g., `(+)3`, `(-)21`).
 - **Component Polarity & Pin Placement:**
   - **LED (Light-Emitting Diode):** Polarized semiconductor diode (typically GaAs/visible LEDs with forward threshold $\approx 1.5\text{ V}$ to $3\text{ V}$ depending on color/material). The **cathode (`-`)** is marked by the **flat side** on the plastic rim and the **shorter lead**; the **anode (`+`)** has the longer lead. Placing both leads in the same 5-hole column shorts the LED; reversing polarity blocks current and leaves it dark.
@@ -36,7 +36,7 @@ status: completed
 
 | Formula Name | Expression | Units | When to Use |
 | :--- | :--- | :--- | :--- |
-| LED Series Circuit Current | $I = \frac{V_S - V_{\text{LED}}}{R_{\text{total}}}$ | $I$ ($\text{A}$), $V$ ($\text{V}$), $R$ ($\Omega$) | Computing LED current in Lab 1 (use $V_{\text{LED}} \approx 1.5\text{ V}$ per course manuals when not otherwise specified, or ideal $V_S/R$ estimate) |
+| LED Series Circuit Current | $I = \frac{V_S - V_{\text{LED}}}{R_{\text{total}}}$ | $I$ ($\text{A}$), $V$ ($\text{V}$), $R$ ($\Omega$) | Computing LED current in Lab 1 (use typical visible LED drop $V_{\text{LED}} \approx 1.5\text{ V}$ when unspecified, or ideal $V_S/R$ estimate) |
 | Potentiometer Wiper Sum | $R_{AC} = R_{AB} + R_{BC}$ | $\Omega$ | Verifying outer-pin resistance ($50\text{ k}\Omega$ constant) vs. center-wiper resistance |
 | Inductive Reactance | $X_L = 2\pi f L$ | $X_L$ ($\Omega$), $f$ ($\text{Hz}$), $L$ ($\text{H}$) | Calculating AC opposition of a coil (increases linearly with frequency $f$) |
 | Capacitive Reactance | $X_C = \frac{1}{2\pi f C}$ | $X_C$ ($\Omega$), $f$ ($\text{Hz}$), $C$ ($\text{F}$) | Calculating AC opposition of a capacitor (decreases as $f$ or $C$ rises) |
@@ -80,7 +80,7 @@ In Laboratory Experiment 1 Part 1, a $9\text{ V}$ supply drives a switch, a fixe
 
 ## Laboratory Recap
 
-### Laboratory Activity #01: The Light Bulb (Manual + Group 8 Report)
+### Laboratory Activity #01: The Light Bulb
 - **Objective:** Understand breadboard hole continuity, schematic-to-breadboard translation, LED polarity, and how fixed and variable resistors control current and LED brightness.
 - **Materials & Instruments:** $9\text{ V}$ battery or DC power supply, 830-hole breadboard, tactile pushbutton switch, fixed resistors ($1\text{ k}\Omega$, $10\text{ k}\Omega$, $100\text{ k}\Omega$), $50\text{ k}\Omega$ variable resistor (potentiometer), LED, jumper wires.
 - **Numbered Procedure:**
@@ -97,9 +97,9 @@ In Laboratory Experiment 1 Part 1, a $9\text{ V}$ supply drives a switch, a fixe
 - **Typical Sources of Error:**
   - Inserting both legs of the switch or LED into the **same 5-hole column** (e.g., `f4` and `g4`), shorting the component.
   - Bridging across the **`"W"` rail break** on the DLSU-CT breadboard without a jumper wire.
-  - Reversing LED anode/cathode leads or loose/bent component legs making intermittent breadboard contact (noted by Group 8 for the potentiometer).
-  - Note: The printed lab manual contains a color-band typo on page 4 listing $100\text{ k}\Omega$ as `brown-black-red-gold` (which is actually $1\text{ k}\Omega$); the true 4-band code for $100\text{ k}\Omega$ is `brown-black-yellow-gold` (confirmed in Lab 2).
-- **Conclusion Statements (Group 8):** Current and resistance exhibit a clear inverse relationship ($I = V/R$). Fixed resistors limit current to safe LED thresholds, and a potentiometer acts as a continuous current controller when wired between an outer terminal and the center wiper, protected by a series $1\text{ k}\Omega$ resistor.
+  - Reversing LED anode/cathode leads or loose/bent component legs causing intermittent potentiometer/breadboard contact.
+  - Note: Always double-check resistor color bands (`brown-black-red-gold` is $1\text{ k}\Omega$; `brown-black-yellow-gold` is $100\text{ k}\Omega$) with an ohmmeter before wiring.
+- **Conclusion Statements:** Current and resistance exhibit a clear inverse relationship ($I = V/R$). Fixed resistors limit current to safe LED thresholds, and a potentiometer acts as a continuous current controller when wired between an outer terminal and the center wiper, protected by a series $1\text{ k}\Omega$ resistor.
 
 ---
 
@@ -210,7 +210,7 @@ flowchart TD
 
 1. **B)** On a solderless breadboard, each 5-hole vertical column (`a-e` or `f-j`) shares one metal clip underneath. Putting switch leads into `f4` and `g4` (same column 4) permanently bypasses the switch.
 2. **C)** If the potentiometer wiper is rotated to $0\ \Omega$, Ohm's Law ($I = V/R$) would send excessive destructive current through the LED without the $1\text{ k}\Omega$ safety resistor in series.
-3. **B)** As verified by Group 8's physical breadboard photos and the DLSU-CT lab equipment layout, the `"W"` divider marks a physical break between left and right halves of the horizontal power/ground rails.
+3. **B)** On DLSU-CT laboratory `830`-hole breadboards, the `"W"` divider marks a physical break between left and right halves of the horizontal power/ground rails.
 4. **A, B, D)** Capacitors store electric-field energy and block steady DC; inductors store magnetic-field energy, generate collapsing-field flyback spikes when opened, and have $X_L = 2\pi f L$ (directly proportional to $f$). Capacitive reactance $X_C = 1/(2\pi f C)$ *decreases* as frequency increases.
 5. **A, B, D)** Electrolytic polarity reversal can overheat/rupture the part, LEDs conduct when the flat/short cathode faces ground, and straight leads prevent accidental shorts. Wiring across the two outer pins of a potentiometer locks it at its full fixed resistance rather than making it variable.
 6. **B)** Using the opposite outer pin swaps which side of the resistive track approaches $0\ \Omega$ vs. $50\text{ k}\Omega$ relative to the wiper, reversing the clockwise/counterclockwise brightness direction.

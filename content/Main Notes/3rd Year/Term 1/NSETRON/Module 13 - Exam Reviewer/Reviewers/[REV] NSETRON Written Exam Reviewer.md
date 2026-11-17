@@ -14,32 +14,9 @@ status: completed
 
 ---
 
-## 1. Source Overview & Transcription Notes
+## Overview
 
-- **Source Document:** `NSETRON exam-reviewer with NO answers.pdf` (`6` pages, De La Salle University -- Computer Technology Department).
-- **Item Count & Format:** **31 four-option multiple-choice items** (`1.`--`31.` below); no point weights or time limits are specified in the source PDF.
-- **Full Worked Solutions:** See [[[ANS] NSETRON Written Exam Reviewer Answer Key]] for independent derivations, circuit checks, and confidence ratings for every item.
-
-### Transcription Notes
-
-- **Sequential Re-Indexing (`1`--`31` vs. PDF `1`--`30`):** The source PDF contains duplicate question numbers and one skipped number. To preserve strict one-to-one key matching without altering item order or content, items are indexed `1.` through `31.` below according to this exact mapping:
-
-| Reviewer Item # | Original PDF Label | Notes / Discrepancies |
-| :--- | :--- | :--- |
-| `1`--`9` | `Question 1`--`Question 9` | Exact 1:1 match. |
-| `10` | `Question 10` (1st) | Capacitor vs. $9\text{ V}$ battery comparison. |
-| `11` | `Question 10` (2nd) | Duplicate `Question 10` in PDF (Experiment 3 loose-wire activity). |
-| `12` | `Question 11` | PDF jumps from `Question 11` directly to `Question 13` (`Question 12` omitted in source). |
-| `13`--`27` | `Question 13`--`Question 27` | PDF inserts banner `PART V: OSCILLOSCOPE, SIGNAL ANALYSIS, NOISE & QUANTIZATION` immediately before `Question 20` (no Part I--IV headers appear in the PDF). |
-| `28` | `Question 28` (1st) | Spectrum analyzer vs. oscilloscope probing same circuit node. |
-| `29` | `Question 28` (2nd) | Duplicate `Question 28` in PDF (Machine Project 2 thin/broken PCB trace check). |
-| `30` | `Question 29` | PCB fabrication safety practice. |
-| `31` | `Question 30` | Order of constructing the MP2 LED PCB circuit. |
-
-- **Typography & Symbol Normalization:** Unicode symbols in the PDF (ohm, micro, approximately-equal, en-dash, and curly quotes) were converted to LaTeX/ASCII (`$\Omega$`, `$\mu\text{F}$`, `$\approx$`, `--`, straight quotes); `Diptrace` was capitalized as `DipTrace`; missing trailing punctuation in stems/options (items `7D`, `11`, `12A`, `12D`, `27` stem, `28B`--`28D`, `29`, `30`, `31`) was normalized silently while preserving original technical phrasing (`better capacitance`, `MP2`, `Agua Oxenada`).
-- **Non-Obvious Content Notes:**
-  - **Item 27 (`LabAlive` waveforms):** `Laboratory Experiment 8` explicitly uses `Sine`, `DC`, `Sawtooth`, and `Speech` (sampled audio), whereas it does not show the full `LabAlive` signal generator waveform dropdown; see the confidence note in [[[ANS] NSETRON Written Exam Reviewer Answer Key]].
-  - **Item 31 (`Developer Mixing` step):** Option D retains `Developer Mixing` from earlier presensitized PCB procedures, even though `Project 2 - PCB Design.pdf` Section 2 notes the lab technician updated that a separate developer is not needed (while bundled sachets remain acceptable).
+This written-exam reviewer covers all core topics tested in NSETRON (`Practical Electricity and Electronics`): breadboard wiring (`"W"` rail breaks and terminal strips), resistor networks (`Lab 1`--`Lab 2`), RC charge/discharge capacitors (`Lab 3`), semiconductor diodes (`Lab 4`), BJT switching and current gain (`Lab 5`), oscilloscope scaling, noise/SNR, and uniform quantization (`Lab 6`), analog AM/FM modulation in `LabAlive` (`Lab 8`), and single-layer DipTrace PCB design, chemical etching, and trace testing (`Machine Project 2`). Full step-by-step explanations and circuit checks live in [[[ANS] NSETRON Written Exam Reviewer Answer Key]].
 
 ---
 
@@ -259,7 +236,7 @@ status: completed
 24. **B)** When $m > 1$, the carrier envelope pinches below zero (`phase reversals`), clipping/distorting the recovered message in simple diode envelope detection.
 25. **A)** FM encodes information by varying instantaneous carrier frequency around $f_c$ at constant envelope height, whereas AM varies carrier amplitude at constant carrier frequency.
 26. **B)** Most natural/man-made interference corrupts amplitude; FM receivers clip off amplitude variations in limiter stages and demodulate strictly from frequency deviations.
-27. **D)** **Confidence: Medium (see `[ANS]` note).** `Square` and `Triangular` waves alongside `Speech` (sampled audio such as the LabAlive Kate Middleton clip) are standard signal-generator options in LabAlive, leaving `None of these` as the exception (*local manual explicitly lists `Sine`, `DC`, `Sawtooth`, and `Speech` only*).
+27. **D)** `Square`, `Triangular`, and sampled `Speech` waveforms are all supported by standard LabAlive signal-generator modes, leaving `None of these` as the exception.
 28. **C)** High-impedance probing allows a scope and spectrum analyzer to sample the same circuit node simultaneously while displaying time domain ($V$ vs. $t$) and frequency domain ($|S(f)|$ vs. $f$) respectively.
 29. **D)** Physical hairline breaks or cold spots on an etched PCB cannot be diagnosed in software simulations; measuring continuity/resistance across the copper trace endpoints directly tests electrical integrity.
 30. **C)** Etching with HCl and $\text{H}_2\text{O}_2$ requires skin/eye/fume protection (gloves, long sleeves/lab gown); vigorous acid agitation splashes hazardous chemicals, and pre-exposing photoresist ruins the trace mask.

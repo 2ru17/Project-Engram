@@ -22,7 +22,7 @@ status: completed
   - **Conventional Theory:** Standard engineering convention used in circuit schematics and diodes/transistors, tracing current from positive (`+`) to negative (`-`).
 - **Core Electrical Quantities:**
   - **Voltage ($V$ or $E$, Volts $\text{V}$):** Electromotive force (EMF) or potential difference pushing charge through a circuit (analogous to water pump pressure).
-  - **Current ($I$, Amperes $\text{A}$):** Rate of charge flow past a point per second. $1\text{ A} = 1\text{ C/s} = 6.28 \times 10^{18}\text{ electrons/s}$ (per lecture slides).
+  - **Current ($I$, Amperes $\text{A}$):** Rate of charge flow past a point per second: $1\text{ A} = 1\text{ C/s} = 6.28 \times 10^{18}\text{ electrons/s}$.
   - **Resistance ($R$, Ohms $\Omega$):** Opposition to current flow determined by material resistivity, cross-sectional area, length, and connection integrity (e.g., corrosion). Conductance is the reciprocal: $G = 1/R$ in Siemens ($\text{S}$).
 - **DC vs. AC:** Direct Current (**DC**) flows in a single direction (batteries, DC power supplies); Alternating Current (**AC**) periodically reverses polarity and direction (utility mains, audio/RF signals).
 - **Circuit States and Protection:**
@@ -55,7 +55,7 @@ status: completed
 
 ## Worked Numerical Examples
 
-### Example 1: Series and Parallel Resistance & Power Comparison (Lecture Slides)
+### Example 1: Series and Parallel Resistance & Power Comparison
 A $10\text{ V}$ DC battery powers three resistors: $R_1 = 8\ \Omega$, $R_2 = 8\ \Omega$, and $R_3 = 4\ \Omega$. Compare total resistance, total current, branch values, and total power when connected (a) in series and (b) in parallel.
 
 **Solution (a) Series:**
@@ -76,7 +76,7 @@ A $10\text{ V}$ DC battery powers three resistors: $R_1 = 8\ \Omega$, $R_2 = 8\ 
 3. Total current and total power:
    $$I_T = I_1 + I_2 + I_3 = 1.25 + 1.25 + 2.5 = 5\text{ A}, \quad P_T = 10\text{ V} \times 5\text{ A} = 50\text{ W}$$
 
-### Example 2: DC Power, Current Draw, Decibels, and Metric Conversions (Lecture Slides)
+### Example 2: DC Power, Current Draw, Decibels, and Metric Conversions
 (a) A transceiver runs on $13.8\text{ V}$ DC and draws $10\text{ A}$ while transmitting; a separate appliance runs on $120\text{ V}$ DC and consumes $1200\text{ W}$. Find the transceiver power and appliance current.
 (b) A linear amplifier increases transmitter output from $5\text{ W}$ to $50\text{ W}$. Express the power gain in decibels.
 (c) Convert $7125\text{ kHz}$ to $\text{MHz}$ and $500,000\ \mu\text{F}$ to $\text{F}$.
@@ -94,10 +94,9 @@ A $10\text{ V}$ DC battery powers three resistors: $R_1 = 8\ \Omega$, $R_2 = 8\ 
 
 ---
 
-## Laboratory Recap
+## Practical Instrument Rules
 
-- **Scope Note:** No standalone numbered laboratory experiment is assigned directly to this module; the first hands-on breadboard experiment begins in [[Basic Electricity and Electronic Components]] (Laboratory Activity #01).
-- **Lab Instrument & Safety Carryover:**
+- **Breadboard Lab Prerequisites:** Apply these instrument conventions before wiring circuit experiments starting in [[Basic Electricity and Electronic Components]] (`Laboratory Activity #01`):
   - Always verify supply voltage with a **voltmeter in parallel** before connecting LEDs or polarized components.
   - Break the circuit path to place an **ammeter in series**; placing an ammeter in parallel across a voltage source creates a near-short circuit that blows the meter's internal fuse.
   - Disconnect power before measuring resistance with an **ohmmeter in parallel** to prevent skewed readings and meter damage.

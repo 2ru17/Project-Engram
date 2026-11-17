@@ -16,24 +16,24 @@ status: completed
 
 ## Exam-Oriented Concept Summary
 
-- **Semiconductor Physics & Doping (`Semiconductor Theory.ppt`, `Diode Theory.ppt`):**
+- **Semiconductor Physics & Doping:**
   - **Silicon ($\text{Si}$)** has 4 valence electrons forming covalent crystal bonds, sitting between conductors (1 valence electron, e.g., copper) and insulators. Thermal energy creates electron-hole pairs (conduction-band electrons and valence-band holes).
   - **$n$-type Doping:** Adding pentavalent impurities (e.g., **Antimony $\text{Sb}$**) supplies free conduction electrons. **Electrons** are majority carriers; holes are minority carriers.
   - **$p$-type Doping:** Adding trivalent impurities (e.g., **Boron $\text{B}$**) creates valence vacancies (holes). **Holes** are majority carriers; electrons are minority carriers.
 - **P-N Junction & Barrier Potential:** Joining $p$-type and $n$-type semiconductor forms a **P-N junction**. Electrons diffuse across to fill holes near the boundary, creating negative ions on the $p$ side, positive ions on the $n$ side, and a charge-free **depletion region** whose built-in electric field establishes a **barrier potential** ($V_{\text{barrier}}$):
   - **Silicon ($\text{Si}$):** $\approx 0.7\text{ V}$
   - **Germanium ($\text{Ge}$):** $\approx 0.3\text{ V}$
-  - **Gallium Arsenide ($\text{GaAs}$):** $\approx 1.2\text{ V}$ (slide material value; Lab 4 specifies $\approx 1.5\text{ V}$ turn-on for visible GaAs LEDs, and `Diode Theory.ppt` notes visible LEDs typically drop $2\text{ V}$ to $3\text{ V}$).
+  - **Gallium Arsenide ($\text{GaAs}$):** $\approx 1.2\text{ V}$ intrinsic barrier value ($\approx 1.5\text{ V}$ forward turn-on threshold for standard GaAs LEDs, rising to $2\text{ V}\text{--}3\text{ V}$ for typical visible indicator LEDs).
 - **Three Bias States & Zener Region:**
   - **No Bias ($V_D = 0\text{ V}$):** Zero current ($I_D = 0\text{ A}$), modest equilibrium depletion width.
   - **Forward Bias ($+$ to Anode `A` / $p$-side, $-$ to Cathode `K` / $n$-side):** Depletion region **narrows**; once $V_S > V_{\text{barrier}}$, the diode conducts heavy forward current. Physically, the cathode is marked by a **stripe/band** on rectifier diodes (`1N400x`) or the **flat rim / shorter lead** on an LED.
   - **Reverse Bias ($-$ to Anode, $+$ to Cathode):** Depletion region **widens**; blocks current like an open switch (only tiny leakage $I_R$ flows) until reverse voltage reaches **Peak Inverse Voltage (PIV / PRV)** and enters **Zener / avalanche breakdown** ($V_Z$), where reverse current rises sharply.
   - **Hydraulic Analogy:** A diode behaves like a **one-way check valve** with a light threshold spring ($0.7\text{ V}$) allowing fluid flow in one direction only.
-- **Three Diode Approximation Models (`Semiconductor Theory.ppt`):**
+- **Three Diode Approximation Models:**
   1. **Ideal Model:** Forward = closed switch ($V_F = 0\text{ V}$, $R_F = 0\ \Omega$); Reverse = open switch ($I_R = 0\text{ A}$, $R_R = \infty$).
   2. **Practical Model:** Forward = closed switch + barrier voltage source ($V_F = 0.7\text{ V}$ for Si); Reverse = open switch.
   3. **Complete Model:** Forward = $V_F = 0.7\text{ V}$ + small internal bulk resistance $r_B$ ($0.1\text{--}2\ \Omega$ typical); Reverse = large finite reverse resistance $R_R$ accounting for tiny leakage current.
-- **Temperature, AC Resistance, Recovery & Testing (`Diode Theory.ppt`):**
+- **Temperature, AC Resistance, Recovery & Testing:**
   - **Temperature rise** adds thermal energy: lowers required $V_F$, increases reverse saturation current $I_R$, and raises maximum avalanche voltage. $\text{Ge}$ is more temperature-sensitive than $\text{Si}$ or $\text{GaAs}$.
   - **Dynamic AC Resistance:** $r_d = \frac{26\text{ mV}}{I_D}$ at $25^\circ\text{C}$ (plus bulk $r_B$).
   - **Diode Capacitance & Switching:** Reverse bias creates transition/depletion capacitance $C_T$; forward bias creates diffusion/storage capacitance $C_D$; **reverse recovery time ($t_{rr}$)** is the delay required to stop conducting when switched from forward to reverse bias.
@@ -57,7 +57,7 @@ status: completed
 
 ## Worked Numerical Examples
 
-### Example 1: Ideal vs. Practical vs. Complete Diode Model Comparison (`Semiconductor Theory.ppt` Style)
+### Example 1: Ideal vs. Practical vs. Complete Diode Model Comparison
 A $9\text{ V}$ DC source supplies a series circuit containing a silicon diode ($V_F = 0.7\text{ V}$, bulk resistance $r_B = 2\ \Omega$) and a $3.3\text{ k}\Omega$ resistor (without an LED). Compute the forward current $I_D$ using (a) the ideal model, (b) the practical model, and (c) the complete model.
 
 **Solution:**
@@ -86,7 +86,7 @@ A $9\text{ V}$ DC source supplies a series circuit containing a silicon diode ($
 
 ## Laboratory Recap
 
-### Laboratory Activity #04: Diodes (Manual Only — No Group 8 Report in Staging)
+### Laboratory Activity #04: Diodes
 - **Objective:** Verify unidirectional conduction of a standard silicon rectifier diode and demonstrate directional charge/discharge indication using anti-parallel GaAs LEDs with a capacitor.
 - **Materials & Instruments:** $9\text{ V}$ supply, breadboard, switch, $3.3\text{ k}\Omega$ resistor, silicon rectifier diode (with cathode band/stripe), $100\ \mu\text{F}$ electrolytic capacitor, 2 LEDs, jumper wires.
 - **Numbered Procedure:**
@@ -143,7 +143,7 @@ flowchart TD
 
 ## Exam Traps & Quick-Recall Checklist
 
-- **Testing a dark series Diode + LED circuit:** If connections are tight and the switch is closed but the LED stays dark, the #1 logical troubleshooting check is whether **either the diode or the LED is inserted in reverse bias** (Reviewer Q15).
+- **Testing a dark series Diode + LED circuit:** If connections are tight and the switch is closed but the LED stays dark, the #1 logical troubleshooting check is whether **either the diode or the LED is inserted in reverse bias**.
 - **Sub-threshold forward bias trap:** Forward-biasing a $1.5\text{ V}$ GaAs LED with only $1.0\text{ V}$ still keeps it **OFF**—forward polarity alone is insufficient without exceeding $V_{\text{barrier}}$.
 - **Cathode markings:** Rectifier diode cathode (`K`) = **silver/black stripe** on package end; LED cathode = **flat edge** on rim / **shorter leg**.
 - **Out-of-circuit testing:** Always remove at least one diode lead from the circuit before testing with a DMM diode checker or ohmmeter so parallel circuit paths do not spoof the reading.
@@ -213,7 +213,7 @@ flowchart TD
 2. **B)** Because the applied $1.0\text{ V}$ forward voltage is less than the $1.5\text{ V}$ barrier threshold, charge carriers lack sufficient energy to cross the junction and the LED remains dark.
 3. **C)** Two polarized parts (the diode and the LED) sit in series; reversing either one blocks loop current completely even when all mechanical connections are solid.
 4. **A, B, D)** Pentavalent $\text{Sb}$ adds free electrons ($n$-type), trivalent $\text{B}$ creates holes ($p$-type), and a diode acts like a one-way check valve. Reverse bias *widens* (not narrows) the depletion layer.
-5. **A, B, C)** Ideal ($0\text{ V}$), practical ($0.7\text{ V}$), and complete ($0.7\text{ V} + r_B$ and finite $R_R$) match Floyd's definitions; higher temperature *lowers* (reduces) the required forward bias voltage.
+5. **A, B, C)** Ideal ($0\text{ V}$), practical ($0.7\text{ V}$), and complete ($0.7\text{ V} + r_B$ and finite $R_R$) match standard diode equivalent models; higher temperature *lowers* (reduces) the required forward bias voltage.
 6. **B)** Grounding the charged capacitor reverses current direction relative to charging: `RIGHT` LED becomes forward-biased and fades out as capacitor voltage drops to zero, while `LEFT` LED becomes reverse-biased.
 7. **[2.06; 2.06 mA; 2.06mA]** $I = (9 - 0.7 - 1.5) / 3300 = 6.8 / 3300 \approx 2.0606\text{ mA} \approx 2.06\text{ mA}$.
 8. **[3; 3.0; 3 mA; 3.0 mA]** Under the ideal model ($V_F = 0\text{ V}$), $I = 12\text{ V} / 4000\ \Omega = 3\text{ mA}$.

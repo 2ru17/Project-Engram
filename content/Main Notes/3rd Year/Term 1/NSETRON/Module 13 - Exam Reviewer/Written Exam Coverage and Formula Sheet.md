@@ -17,9 +17,7 @@ status: completed
 ## Exam Format & Coverage Scope
 
 - **Exam Format:** Individual, **written pen-and-paper** examination (`NSETRON - Practical Electricity and Electronics`).
-- **Official Reviewer Format (`NSETRON exam-reviewer with NO answers.pdf`):** 31 four-option multiple-choice items across 6 pages (PDF labels `Question 1` through `Question 30` with duplicate `#10`, skipped `#12`, and duplicate `#28`); no fixed point values or exam time limit are stated in the source PDF.
-- **Included Scope:** ALL laboratory experiments (`Lab 1` through `Lab 6` and `Lab 8`, noting `Lab 7` is absent/renumbered in the course module list) + **Machine Project 2** (DipTrace single-layer PCB design & etching), plus supporting AC/DC circuit theory, wiring, voltage dividers/comparators, and AM/FM communication fundamentals.
-- **Excluded Scope:** Machine Project 1 (*Linear Power Supply with Full-Wave Bridge Rectifier*, `Power Supply FWBT.docx`) is **not exam coverage** and serves only as supporting context in [[AC Circuits]].
+- **Included Scope:** All NSETRON laboratory activities (`Lab 1`--`Lab 6` and `Lab 8`) plus **Machine Project 2** (DipTrace single-layer PCB design and etching), supported by DC circuit theory, ampacity/wiring safety, voltage dividers/comparators, AC reactance/power factor, and AM/FM modulation principles. *(Note: Machine Project 1 power-supply hardware deliverables are outside written exam coverage; AC concepts map to Module 06.)*
 
 ---
 
@@ -32,12 +30,11 @@ status: completed
 | **Lab 2: Resistors** | Series ($3.3\text{ k}\Omega + 100\text{ k}\Omega$), parallel, dual LED branches, combined VR splitter, color codes | Module 03 | [[Resistors]] |
 | **Lab 3: Capacitors** | Asymmetric RC charge/discharge ($3.3\text{ k}\Omega$/$1\text{ k}\Omega$ vs. $10\text{ k}\Omega$), series ($9.1\ \mu\text{F}$), parallel ($110\ \mu\text{F}$), loose-wire | Module 04 | [[Capacitors]] |
 | **Lab 4: Diodes** | Si diode ($0.7\text{ V}$), GaAs LED ($1.5\text{ V}$), anti-parallel dual LED capacitor indicator, 3 models | Module 05 | [[Diodes]] |
-| AC Circuits *(MP1 supporting only)* | RMS/peak, $X_L$, $X_C$, $Z$, ELI/ICE, VA vs. W, Power Factor, transformers | Module 06 | [[AC Circuits]] |
+| AC Circuits | RMS/peak, $X_L$, $X_C$, $Z$, ELI/ICE, VA vs. W, Power Factor, transformers | Module 06 | [[AC Circuits]] |
 | **Lab 5: Transistors** | NPN switch, Base vs. Collector LED gain & $33\text{ k}\Omega$ saturation ($\text{gain}\approx 3$), B-C shorted diode | Module 07 | [[Transistors]] |
-| **Lab 6: Oscilloscope** *(Group 8 report)* | Rigol scope calibration, $T = 1/f$, $V_{pp}$, QuickPrint1 ($30\text{ kHz}$ square) & QuickPrint2 ($249\text{ Hz}$ sine), SNR, quantization | Module 08 | [[Oscilloscope]] |
-| *(Lab 7)* | **Gap / Renumbered:** Skipped on module page; Lab 8 docx header internally reads `LABORATORY ACTIVITY #7` | --- | --- |
-| Ampacity & Wiring *(no local lab/video)* | AWG Table 2-1 ($\Omega/\text{km}$), $I^2 R$ heating, 3-wire earth ground, series fuses & breakers | Module 09 | [[Ampacity and Wiring]] |
-| Sensor Controls, Comparator & Divider *(no local lab/video)* | Multi-tap voltage divider, closed-loop op-amp vs. open-loop comparator, elastomer/capacitive/photoelectric/encoder sensors | Module 10 | [[Sensor Controls, Comparator and Voltage Divider]] |
+| **Lab 6: Oscilloscope** | Rigol scope calibration, $T = 1/f$, $V_{pp}$, square-wave ($30\text{ kHz}$) & sine-wave ($249\text{ Hz}$) captures, SNR, quantization | Module 08 | [[Oscilloscope]] |
+| Ampacity & Wiring | AWG resistivity ($\Omega/\text{km}$), $I^2 R$ heating, 3-wire earth ground, series fuses & breakers | Module 09 | [[Ampacity and Wiring]] |
+| Sensor Controls, Comparator & Divider | Multi-tap voltage divider, closed-loop op-amp vs. open-loop comparator, elastomer/capacitive/photoelectric/encoder sensors | Module 10 | [[Sensor Controls, Comparator and Voltage Divider]] |
 | **Lab 8: Analog Modulation (AM & FM)** | LabAlive AM ($m$, DSB-SC via $\hat{s}=0$, envelope detector), FM ($\beta = k_m\hat{m}/f_m$, Bessel null $\beta \approx 2.405$, limiters, pre/deemphasis) | Module 11 | [[Principles of Communication]] |
 | **Machine Project 2: PCB Design** | DipTrace bottom-layer manual routing ($\ge 0.8\text{ mm}$, $\le 6\times 6\text{ cm}$), photoresist PCB, $\text{H}_2\text{O}_2 + \text{HCl}$ etch, ESP32 3-LED test | Module 12 | [[PCB Design and Machine Project 2]] |
 
@@ -71,7 +68,7 @@ status: completed
 
 ## Metric Prefix, Energy & Color-Code Reference Tables
 
-### Metric Prefixes (`Basic Electrical Theory.pdf`)
+### Metric Prefixes
 
 | Prefix | Symbol | Power of 10 | Multiplier | Common Electronics Example |
 | :--- | :---: | :---: | :--- | :--- |
@@ -84,7 +81,7 @@ status: completed
 | nano | $\text{n}$ | $10^{-9}$ | $10^{-9}$ | $\text{nF}$ film/ceramic caps, $\text{nH}$ coils |
 | pico | $\text{p}$ | $10^{-12}$ | $10^{-12}$ | $\text{pF}$ RF disc capacitors ($10^6\text{ pF} = 1\ \mu\text{F}$) |
 
-### 4-Band Resistor Color Code & Standard Decade Values (Malestrom Ch. 6)
+### 4-Band Resistor Color Code & Standard Decade Values
 
 - **Color Digits (`0–9`):** Black (`0`), Brown (`1`), Red (`2`), Orange (`3`), Yellow (`4`), Green (`5`), Blue (`6`), Violet (`7`), Gray (`8`), White (`9`). Multiplier $= 10^{\text{digit}}$ (Gold $= \times 0.1$, Silver $= \times 0.01$). Tolerance (Band 4): Gold $= \pm 5\%$, Silver $= \pm 10\%$, None $= \pm 20\%$.
 - **E12 ($\pm 10\%$) Standard Multiples:** `1.0, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2`

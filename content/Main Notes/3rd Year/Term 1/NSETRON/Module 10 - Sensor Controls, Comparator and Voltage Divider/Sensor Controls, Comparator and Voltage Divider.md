@@ -16,20 +16,18 @@ status: completed
 
 ## Exam-Oriented Concept Summary
 
-> **Source Scope Note:** The course module page references an external video (`https://youtu.be/KQnrWNqiMps`) with no standalone local slide PDF or lab manual in `Staging/NSETRON`. Every concept, formula, and worked problem below is grounded in Malestrom Ch. 5 (*Voltage Divider Networks*), Ch. 28 (*Operational Amplifiers & Comparators*), and Ch. 30 (*Transducers & Sensors*), paired with standard resistive-sensor divider principles.
-
-- **Voltage Divider Networks (Malestrom Ch. 5):**
+- **Voltage Divider Networks:**
   - A series chain of resistors $R_1, R_2, \dots, R_n$ across supply $V_S$ produces stepped intermediate voltages relative to ground proportional to the sum of resistances below each tap point:
     $$V_{\text{out}} = V_S \frac{R_{\text{bottom}}}{R_{\text{top}} + R_{\text{bottom}}}$$
   - **Ratio Principle:** Output voltage depends strictly on the **resistance ratio**, not absolute $\Omega$ scale—unless a low-impedance load attaches to the tap.
   - **Design & Loading Rule (Stiff Divider):** Choose total divider resistance $R_{\text{total}} = R_{\text{top}} + R_{\text{bottom}}$ as small as the power supply current budget comfortably allows so any downstream load draws negligible current compared to the divider bleed current and does not sag $V_{\text{out}}$.
-- **Operational Amplifiers & Voltage Comparators (Malestrom Ch. 28):**
+- **Operational Amplifiers & Voltage Comparators:**
   - **Operational Amplifier (Op-Amp):** High-gain linear IC with two inputs (**non-inverting `+`**, output in phase; **inverting `-`**, output $180^\circ$ out of phase), one output, and dual supply rails. Using an external feedback resistor between output and `-` creates **closed-loop negative feedback**, reducing extreme open-loop gain to prevent oscillation and noise.
   - **Comparator IC:** Compares two input voltages ($V_A$ and $V_B$, or $V_+$ and $V_-$) **without negative feedback** (open-loop saturation):
-    - When $V_A > V_B$ (i.e., $V_+ > V_-$), output snaps **HIGH** (logic 1, e.g., $\approx +5\text{ V}$ in TTL-compatible comparators cited in Malestrom Ch. 28, or $+V_{\text{rail}}$).
-    - When $V_A \le V_B$ (i.e., $V_+ < V_-$), output snaps **LOW** (logic 0, e.g., $\approx +2\text{ V}$ threshold/low cited in Malestrom Ch. 28 or $0\text{ V}$/$-V_{\text{rail}}$ depending on comparator IC).
+    - When $V_A > V_B$ (i.e., $V_+ > V_-$), output snaps **HIGH** (logic 1, e.g., $\approx +5\text{ V}$ in TTL-compatible comparators, or $+V_{\text{rail}}$).
+    - When $V_A \le V_B$ (i.e., $V_+ < V_-$), output snaps **LOW** (logic 0, e.g., $\le +2\text{ V}$ TTL low threshold, or $0\text{ V}$/$-V_{\text{rail}}$ depending on comparator IC).
   - **Actuation Role:** Comparators act as analog-to-digital threshold detectors that trigger **relays, BJTs, or LEDs** whenever a physical variable crosses a chosen setpoint.
-- **Transducers and Sensors (Malestrom Ch. 30):**
+- **Transducers and Sensors:**
   - **Transducer:** Converts energy from one domain to another (e.g., acoustic, light, pressure, motion $\leftrightarrow$ electrical).
   - **Sensor:** Combines one or more transducers to detect/measure physical quantities (pressure, proximity, light, texture, angle).
   - **Key Transducers & Sensors Covered:**
@@ -49,7 +47,7 @@ status: completed
 | Formula Name | Expression | Units | When to Use |
 | :--- | :--- | :--- | :--- |
 | 2-Resistor Voltage Divider | $V_{\text{out}} = V_S \frac{R_{\text{bottom}}}{R_{\text{top}} + R_{\text{bottom}}}$ | $\text{V}$, $\Omega$ | Finding unloaded tap voltage between $R_{\text{top}}$ (to $+V_S$) and $R_{\text{bottom}}$ (to GND) |
-| Multi-Tap Voltage Divider | $V_k = V_S \frac{\sum_{i=1}^k R_i}{\sum_{i=1}^n R_i}$ | $\text{V}$, $\Omega$ | Finding potential $V_k$ at tap $P_k$ relative to ground (Malestrom Fig. 5-7) |
+| Multi-Tap Voltage Divider | $V_k = V_S \frac{\sum_{i=1}^k R_i}{\sum_{i=1}^n R_i}$ | $\text{V}$, $\Omega$ | Finding potential $V_k$ at tap $P_k$ relative to ground |
 | Divider Total Current | $I_{\text{div}} = \frac{V_S}{R_{\text{top}} + R_{\text{bottom}}}$ | $\text{A}$ | Sizing $R_{\text{total}}$ to satisfy power supply current limit ($R_{\text{total}} = V_S / I_{\text{max}}$) |
 | Comparator Switching Rule | $V_{\text{out}} = \begin{cases} \text{HIGH (1)}, & V_+ > V_- \\ \text{LOW (0)}, & V_+ < V_- \end{cases}$ | $\text{V}$ | Determining whether comparator turns ON or OFF an output LED, relay, or BJT |
 | Capacitive LC Sensor Frequency | $f_r = \frac{1}{2\pi\sqrt{L C}}$ | $\text{Hz}$ | Showing why increased capacitance (closer plates) lowers oscillator frequency |
@@ -58,16 +56,16 @@ status: completed
 
 ## Worked Numerical Examples
 
-### Example 1: Voltage Divider Design & Current Sizing (Malestrom Problems 5-15 to 5-17)
+### Example 1: Voltage Divider Design & Current Sizing
 A $9.0\text{ V}$ DC battery (negative terminal grounded) must supply a fixed reference voltage $V_{\text{ref}} = +2.5\text{ V}$ to a comparator input.
 (a) Design $R_{\text{bottom}}$ and $R_{\text{top}}$ if total divider resistance is $R_{\text{total}} = 1000\ \Omega$, and compute the current drawn.
 (b) Redesign $R_{\text{bottom}}$ and $R_{\text{top}}$ if the divider is allowed to draw $I_{\max} = 100\text{ mA}$ for stiffer voltage regulation.
 
 **Solution (a):**
 1. Required resistance ratio:
-   $$\frac{R_{\text{bottom}}}{R_{\text{total}}} = \frac{V_{\text{ref}}}{V_S} = \frac{2.5\text{ V}}{9.0\text{ V}} \approx 0.2778 \quad (\text{book rounds to } 0.28)$$
+   $$\frac{R_{\text{bottom}}}{R_{\text{total}}} = \frac{V_{\text{ref}}}{V_S} = \frac{2.5\text{ V}}{9.0\text{ V}} \approx 0.2778 \quad (\text{or } 0.28 \text{ rounded to two decimals})$$
 2. With $R_{\text{total}} = 1000\ \Omega$:
-   $$R_{\text{bottom}} = 0.2778 \times 1000\ \Omega \approx 277.8\ \Omega \quad (\text{Malestrom uses } 0.28 \implies 280\ \Omega)$$
+   $$R_{\text{bottom}} = 0.2778 \times 1000\ \Omega \approx 277.8\ \Omega \quad (280\ \Omega \text{ when rounding ratio to } 0.28)$$
    $$R_{\text{top}} = 1000\ \Omega - 277.8\ \Omega = 722.2\ \Omega \quad (\text{or } 720\ \Omega \text{ using } 0.28)$$
 3. Current drawn:
    $$I_{\text{div}} = \frac{9.0\text{ V}}{1000\ \Omega} = 0.0090\text{ A} = 9.0\text{ mA}$$
@@ -75,7 +73,7 @@ A $9.0\text{ V}$ DC battery (negative terminal grounded) must supply a fixed ref
 **Solution (b):**
 1. Convert $100\text{ mA} = 0.100\text{ A}$ and compute $R_{\text{total}}$:
    $$R_{\text{total}} = \frac{9.0\text{ V}}{0.100\text{ A}} = 90\ \Omega$$
-2. Apply the ratio ($2.5/9.0 = 0.2778$, or $0.28$ per Malestrom):
+2. Apply the exact ratio ($2.5/9.0 = 0.2778$):
    $$R_{\text{bottom}} = \frac{2.5}{9.0} \times 90\ \Omega = 25\ \Omega, \quad R_{\text{top}} = 90\ \Omega - 25\ \Omega = 65\ \Omega$$
    Exact check: $V_{\text{ref}} = 9.0 \times \frac{25}{25 + 65} = 9.0 \times \frac{25}{90} = 2.50\text{ V}$!
 
@@ -92,10 +90,9 @@ A resistive pressure sensor (elastomer pad) has $R_{\text{sensor}} = 10\text{ k}
 
 ---
 
-## Laboratory Recap
+## Practical Divider & Comparator Design Checks
 
-- **Scope Note:** Module 10 has **no assigned laboratory experiment** in the course module schedule or `Staging/NSETRON`.
-- **Conceptual Tie-In to Course Labs:**
+- **Laboratory Circuit Connections:**
   - The $50\text{ k}\Omega$ potentiometer wired across outer pins with a middle wiper (Lab 1 & Lab 2) is physically a single-component adjustable **voltage divider** when one outer pin goes to $+V_S$ and the other to GND.
   - A comparator's digital HIGH/LOW output commonly drives the base resistor of an NPN BJT switch (Lab 5 Part 1 topology) to switch higher-current relays, motors, or LEDs.
 
@@ -161,7 +158,7 @@ flowchart TD
     - **C)** Zero volts regardless of input voltage
     - **D)** Linear half-supply ($1.7\text{ V}$) proportional to the difference
 
-4. [MSQ] Which of the following statements accurately match sensor and transducer technologies covered in Malestrom Ch. 30? (Select all that apply)
+4. [MSQ] Which of the following statements accurately match electronic sensor and transducer principles? (Select all that apply)
     - **A)** Piezoelectric transducers can operate at ultrasonic frequencies ($20\text{ kHz}$ to $>100\text{ kHz}$) better than dynamic or electrostatic transducers
     - **B)** An elastomer pressure sensor exhibits lower electrical resistance when mechanically compressed
     - **C)** A capacitive proximity sensor detects dry wood and glass much more easily than metal or living tissue
@@ -177,7 +174,7 @@ flowchart TD
 
 7. [INPUT] You must design a voltage divider from a $15\text{ V}$ supply to obtain $+5.0\text{ V}$ relative to ground while drawing exactly $50\text{ mA}$ total divider current. Calculate the required **ground-side resistor $R_{\text{bottom}}$** in ohms.
 
-8. [INPUT] A 4-resistor series voltage divider (`R1`, `R2`, `R3`, `R4` from ground upward) has $R_1 = 100\ \Omega$, $R_2 = 22.0\ \Omega$, $R_3 = 33.0\ \Omega$, and $R_4 = 47.0\ \Omega$ across an $18.0\text{ V}$ battery (matching Malestrom Ch. 5 Quiz 19). What is the voltage $V_3$ measured from node `P3` (above $R_1 + R_2 + R_3$) to ground, in Volts rounded to two decimal places?
+8. [INPUT] A 4-resistor series voltage divider (`R1`, `R2`, `R3`, `R4` from ground upward) has $R_1 = 100\ \Omega$, $R_2 = 22.0\ \Omega$, $R_3 = 33.0\ \Omega$, and $R_4 = 47.0\ \Omega$ across an $18.0\text{ V}$ battery. What is the voltage $V_3$ measured from node `P3` (above $R_1 + R_2 + R_3$) to ground, in Volts rounded to two decimal places?
 
 9. [BLANK] Complete the sensor physics comparison table below:
 

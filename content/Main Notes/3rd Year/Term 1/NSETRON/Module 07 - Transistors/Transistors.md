@@ -16,17 +16,17 @@ status: completed
 
 ## Exam-Oriented Concept Summary
 
-- **Bipolar Junction Transistor (BJT) Structure (`Lab 5`, Malestrom Ch. 22):**
+- **Bipolar Junction Transistor (BJT) Structure:**
   - A BJT is a 3-terminal, 2-junction semiconductor device (**Base `B`**, **Collector `C`**, **Emitter `E`**) built either as **NPN** (thin $p$-type base sandwiched between $n$-type emitter and collector) or **PNP** (thin $n$-type base between $p$-type emitter and collector).
   - **Schematic Symbol Rule:** Look at the **emitter arrow**: **NPN** points **outward** (*Not Pointing iN*); **PNP** points **inward** (*Pointing iN Proudly*).
-  - **Why Two Discrete Diodes Cannot Make a Working Transistor (Lab 5 Reflection Q3):** Although a BJT is often *modeled* conceptually as two opposing P-N junctions (E-B and B-C), wiring two separate packaged diodes back-to-back cannot produce transistor current gain because real BJT action requires one continuous crystal with an **extremely thin, lightly doped base layer** so carriers injected from the emitter sweep across into the reverse-biased collector instead of recombining.
-- **Three Regions of Operation (Lab 5 Reflection Q4 & Malestrom Ch. 22):**
+  - **Why Two Discrete Diodes Cannot Make a Working Transistor:** Although a BJT is often *modeled* conceptually as two opposing P-N junctions (E-B and B-C), wiring two separate packaged diodes back-to-back cannot produce transistor current gain because real BJT action requires one continuous crystal with an **extremely thin, lightly doped base layer** so carriers injected from the emitter sweep across into the reverse-biased collector instead of recombining.
+- **Three Regions of Operation:**
   1. **Cutoff Region:** Base-emitter junction is zero-biased or reverse-biased ($V_{BE} < 0.7\text{ V}$ for Si, $I_B = 0\text{ A}$). Collector current $I_C \approx 0\text{ A}$; the transistor acts as an **open electronic switch** (Lab 5 Part 1 with switch open).
   2. **Active (Linear) Region:** Base-emitter is forward-biased ($\approx 0.7\text{ V}$ Si) while base-collector is reverse-biased. Small changes in $I_B$ control proportionally large changes in $I_C = \beta I_B$ ($H_{FE} = I_C / I_B$, typically $10$ to $1000$). Used for analog **current/signal amplification** (Lab 5 Part 2: bright collector LED vs. dim base LED). Overdriving an amplifier pushes it toward cutoff/saturation, causing nonlinear distortion.
   3. **Saturation Region:** Both E-B and B-C junctions are forward-biased; the transistor conducts as much current as the **external supply voltage and circuit resistors permit** ($V_{CE} \approx 0\text{--}0.2\text{ V}$), acting as a **closed switch**. As shown in Lab 5 Part 2, replacing the $1\text{ k}\Omega$ collector resistor with $33\text{ k}\Omega$ caps $I_C$ externally so apparent circuit gain drops to $\sim 3$, forcing **saturation**.
-- **Diode-Connected Transistor (Lab 5 Part 3):**
+- **Diode-Connected Transistor (Base Shorted to Collector):**
   - Shorting the **Base and Collector together** leaves only the Base-Emitter P-N junction active. Once forward voltage exceeds $\sim 0.7\text{ V}$, it conducts in one direction with **no current gain**—functioning exactly as a single silicon diode (used in IC manufacturing where fabricating transistors is uniform).
-- **Three Basic BJT Amplifier Configurations (Malestrom Ch. 22):**
+- **Three Basic BJT Amplifier Configurations:**
   - **Common Emitter (CE):** Emitter at AC ground; input at Base, output at Collector. **Highest gain**, **$180^\circ$ phase inversion**.
   - **Common Base (CB):** Base at AC ground; input at Emitter, output at Collector. **In phase** ($0^\circ$), lower gain, high stability for RF amplifiers.
   - **Common Collector (CC / Emitter Follower):** Collector at AC ground; input at Base, output at Emitter. **In phase** ($0^\circ$), **high input impedance, low output impedance** (used for broadband impedance matching).
@@ -47,8 +47,8 @@ status: completed
 
 ## Worked Numerical Examples
 
-### Example 1: Active-Region Current Gain & Malestrom $H_{FE}$ Calculation
-(a) In Malestrom Ch. 22, a BJT draws a base current of $I_B = 0.5\text{ mA}$ and produces a collector current of $I_C = 35\text{ mA}$. Calculate its static forward current gain $H_{FE}$ ($\beta$) and its emitter current $I_E$.
+### Example 1: Active-Region Current Gain ($H_{FE}$ / $\beta$) Calculation
+(a) A BJT draws a base current of $I_B = 0.5\text{ mA}$ and produces a collector current of $I_C = 35\text{ mA}$. Calculate its static forward current gain $H_{FE}$ ($\beta$) and its emitter current $I_E$.
 (b) In Lab 5 Part 1, a $9\text{ V}$ battery feeds a closed switch and a $10\text{ k}\Omega$ base resistor into an NPN silicon BJT ($V_{BE} = 0.7\text{ V}$), while the collector drives a $1\text{ k}\Omega$ resistor and LED ($V_{\text{LED}} = 1.5\text{ V}$). Estimate $I_B$ and verify whether a transistor with $\beta = 100$ enters saturation (assuming $V_{CE,\text{sat}} \approx 0.2\text{ V}$).
 
 **Solution (a):**
@@ -78,13 +78,13 @@ In Lab 5 Part 2, a $9\text{ V}$ supply closes a switch to two parallel LED paths
    $$I_{C,\text{sat}} = \frac{7.3\text{ V}}{33,000\ \Omega} \approx 0.221\text{ mA}$$
    Effective circuit gain drops to:
    $$\frac{I_C}{I_B} = \frac{0.221\text{ mA}}{0.068\text{ mA}} \approx 3.25 \approx 3$$
-   This matches the exact observation stated in the Lab 5 manual ("if you replace the $1\text{ k}\Omega$ in this circuit with a $33\text{ k}\Omega$ then the current gain will only be about $3$... the transistor is said to be saturated")!
+   This matches the saturation behavior observed in Lab 5 (`1 kOhm -> 33 kOhm` drops current gain to roughly `3`).
 
 ---
 
 ## Laboratory Recap
 
-### Laboratory Activity #05: Transistors (Manual Only — No Group 8 Report in Staging)
+### Laboratory Activity #05: Transistors
 - **Objective:** Demonstrate BJT operation as an electronic switch (cutoff vs. saturation), current amplification ($\beta$) and external-resistance saturation, and diode-connected BJT behavior.
 - **Materials & Instruments:** $9\text{ V}$ supply, breadboard, pushbutton switch, NPN BJT transistor (observe flat housing side for E-B-C pinout), resistors ($1\text{ k}\Omega$, $3.3\text{ k}\Omega$, $10\text{ k}\Omega$, $33\text{ k}\Omega$, $100\text{ k}\Omega$), 2 LEDs, jumper wires.
 - **Numbered Procedure:**
@@ -137,7 +137,7 @@ flowchart TD
 
 ## Exam Traps & Quick-Recall Checklist
 
-- **Lab 5 Part 1 vs. Part 2 questions on the exam reviewer:**
+- **Lab 5 Part 1 vs. Part 2 Behavior:**
   - **Part 1 (No base current $\implies$ LED dark):** Transistor acts as an **open electronic switch** (cutoff), blocking collector current because $I_B = 0$.
   - **Part 2 (Collector LED brighter than Base LED):** Demonstrates **current amplification (gain)** where small base current controls much larger collector current.
 - **Saturation cause trap:** Saturation does **not** mean $\beta$ became infinite—it means external supply voltage and collector resistance $R_C$ limit $I_C$ below $\beta I_B$, flattening $I_C$ against further $I_B$ increases (e.g., swapping $1\text{ k}\Omega \to 33\text{ k}\Omega$ drops effective gain to $\sim 3$).
