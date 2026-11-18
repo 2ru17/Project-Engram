@@ -14,11 +14,13 @@ interface UpdateLogModalProps {
   onMarkSeen?: () => void;
 }
 
-const CATEGORIES: ("All" | ChangelogCategory)[] = [
-  "All",
-  "Notes",
-  "Simulators",
-  "System",
+const REPO_COMMIT_BASE = "https://github.com/2ru17/Project-Engram/commit";
+
+const FILTER_TABS: { id: "All" | ChangelogCategory; label: string }[] = [
+  { id: "All", label: "ALL" },
+  { id: "System", label: "SYSTEM · X" },
+  { id: "Simulators", label: "SIMULATORS & PRS · Y" },
+  { id: "Notes", label: "NOTES · Z" },
 ];
 
 function getCategoryStyle(category: ChangelogCategory): string {
@@ -29,6 +31,17 @@ function getCategoryStyle(category: ChangelogCategory): string {
       return "border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/10 text-[var(--zen-cyan)]";
     case "System":
       return "border-amber-500/40 bg-amber-500/10 text-amber-400";
+  }
+}
+
+function getCategoryBadgeLabel(category: ChangelogCategory): string {
+  switch (category) {
+    case "System":
+      return "SYSTEM · X";
+    case "Simulators":
+      return "SIMULATORS / PR · Y";
+    case "Notes":
+      return "NOTES · Z";
   }
 }
 
@@ -60,9 +73,9 @@ export default function UpdateLogModal({
   const categoryCounts = useMemo(() => {
     const counts: Record<"All" | ChangelogCategory, number> = {
       All: CHANGELOG_ENTRIES.length,
-      Notes: 0,
-      Simulators: 0,
       System: 0,
+      Simulators: 0,
+      Notes: 0,
     };
     for (const entry of CHANGELOG_ENTRIES) {
       counts[entry.category]++;
@@ -142,39 +155,45 @@ export default function UpdateLogModal({
                 className="min-h-[36px] px-3 py-1 rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] text-xs font-mono text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)]"
                 aria-label="Close Update Log"
               >
-                ESC // [x]
+                ESC {"//"} [x]
               </button>
             </div>
 
-            <div className="px-6 py-3 border-b border-[var(--zen-border)] bg-[var(--zen-void)] flex flex-wrap items-center justify-between gap-2 shrink-0">
-              <div className="flex flex-wrap items-center gap-2" role="tablist" aria-label="Filter updates by category">
-                {CATEGORIES.map((cat) => {
-                  const isActive = filter === cat;
-                  return (
-                    <button
-                      key={cat}
-                      type="button"
-                      role="tab"
-                      aria-selected={isActive}
-                      onClick={() => setFilter(cat)}
-                      className={`min-h-[34px] px-3 py-1 text-xs font-mono tracking-wider rounded border transition-all flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] ${
-                        isActive
-                          ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 text-[var(--zen-cyan)] font-semibold"
-                          : "border-[var(--zen-border)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] bg-[var(--zen-card)]"
-                      }`}
-                    >
-                      <span>{cat.toUpperCase()}</span>
-                      <span className="text-[10px] opacity-75">
-                        ({categoryCounts[cat]})
-                      </span>
-                    </button>
-                  );
-                })}
+            <div className="px-6 py-3 border-b border-[var(--zen-border)] bg-[var(--zen-void)] flex flex-col gap-2 shrink-0">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <div
+                  className="flex flex-wrap items-center gap-2"
+                  role="tablist"
+                  aria-label="Filter updates by category"
+                >
+                  {FILTER_TABS.map((tab) => {
+                    const isActive = filter === tab.id;
+                    return (
+                      <button
+                        key={tab.id}
+                        type="button"
+                        role="tab"
+                        aria-selected={isActive}
+                        onClick={() => setFilter(tab.id)}
+                        className={`min-h-[34px] px-3 py-1 text-xs font-mono tracking-wider rounded border transition-all flex items-center gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] ${
+                          isActive
+                            ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/15 text-[var(--zen-cyan)] font-semibold"
+                            : "border-[var(--zen-border)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] bg-[var(--zen-card)]"
+                        }`}
+                      >
+                        <span>{tab.label}</span>
+                        <span className="text-[10px] opacity-75">
+                          ({categoryCounts[tab.id]})
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
 
-              <span className="text-[10px] font-mono text-[var(--zen-ink-muted)] uppercase">
-                CHRONOLOGICAL ARCHIVE
-              </span>
+              <div className="text-[10px] font-mono text-[var(--zen-ink-muted)] uppercase tracking-wider">
+                SCHEMA: X (MAJOR SYSTEM) · Y (SIMULATORS / PR) · Z (NOTES)
+              </div>
             </div>
 
             <div className="flex-1 overflow-y-auto p-6 space-y-4 custom-scrollbar">
@@ -193,8 +212,24 @@ export default function UpdateLogModal({
                           entry.category
                         )}`}
                       >
-                        {entry.category}
+                        {getCategoryBadgeLabel(entry.category)}
                       </span>
+                      {entry.pr && (
+                        <span className="px-2 py-0.5 rounded border border-[var(--zen-border)] bg-[var(--zen-void)] font-mono text-[10px] text-[var(--zen-frost)]">
+                          {entry.pr}
+                        </span>
+                      )}
+                      {entry.commit && (
+                        <a
+                          href={`${REPO_COMMIT_BASE}/${entry.commit}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-2 py-0.5 rounded border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] bg-[var(--zen-void)] font-mono text-[10px] text-[var(--zen-ink-muted)] hover:text-[var(--zen-cyan)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)]"
+                          title={`Inspect commit ${entry.commit} on GitHub`}
+                        >
+                          @{entry.commit} ↗
+                        </a>
+                      )}
                     </div>
                     <time
                       dateTime={entry.date}
