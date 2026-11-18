@@ -26,7 +26,7 @@ export const CHANGELOG_ENTRIES: ChangelogEntry[] = [
       "Lazy-loaded all 29 simulator workbenches via next/dynamic, shipped interactive navbar utility hubs, expanded SEO/OpenGraph/sitemap coverage, and hardened CSP, CI, and EG2 progress decoding.",
     items: [
       "Dynamically code-split all 29 simulator workbenches in SimulatorRenderer.tsx with SimulatorWorkbenchSkeleton fallbacks and React.memo.",
-      "Added Feature Guide, Notes & Platform Update Log, and GitHub Contribute/Issues/License Hub modals in TopNav.tsx.",
+      "Added Feature Guide, Notes & Platform Update Log, GitHub Contribute/Issues/License Hub modals, and Buy Me a Coffee support trigger in TopNav.tsx.",
       "Added dedicated /terms, /privacy, and /cookies compliance pages paired with a keyboard-dismissible CookieConsentBanner.",
       "Expanded sitemap.ts across all 26 courses, 29 simulators, legal routes, and 559 monographs alongside /twitter-image and custom 404 jump search.",
       "Hardened Content-Security-Policy, least-privilege CI token permissions, EG2 relative path validation, and non-breaking npm dependencies.",

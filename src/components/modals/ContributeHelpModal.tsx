@@ -14,6 +14,7 @@ interface ContributeHelpModalProps {
 type HelpTab = "overview" | "contribute" | "issues" | "license";
 
 const REPO_URL = "https://github.com/2ru17/Project-Engram";
+const BMC_URL = "https://buymeacoffee.com/2ru17";
 
 export default function ContributeHelpModal({
   isOpen,
@@ -172,6 +173,43 @@ export default function ContributeHelpModal({
                       className="shrink-0 inline-flex items-center justify-center px-4 py-2.5 rounded-lg border border-[var(--zen-border)] hover:border-[var(--zen-cyan)] bg-[var(--zen-void)] text-[var(--zen-snow)] hover:text-[var(--zen-cyan)] font-mono text-xs font-semibold tracking-wider transition-colors"
                     >
                       OPEN DISCUSSIONS ↗
+                    </a>
+                  </div>
+
+                  <div className="p-5 rounded-xl border border-amber-500/35 bg-amber-500/5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div className="space-y-1">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-amber-400 font-semibold block">
+                        SUPPORT THE ARCHIVE
+                      </span>
+                      <h4 className="text-sm font-semibold text-[var(--zen-snow)]">
+                        Fuel Future Monographs &amp; Interactive Simulators
+                      </h4>
+                      <p className="text-xs text-[var(--zen-ink-muted)] leading-relaxed">
+                        Project Engram is completely free and zero-account. If these study notes or engineering workbenches helped you, you can support ongoing development directly.
+                      </p>
+                    </div>
+                    <a
+                      href={BMC_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-amber-400/60 bg-amber-500/15 hover:bg-amber-400 text-amber-300 hover:text-[#0A0A0A] font-mono text-xs font-semibold tracking-wider transition-all"
+                    >
+                      <svg
+                        className="w-3.5 h-3.5"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M10 2v2" />
+                        <path d="M14 2v2" />
+                        <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
+                        <path d="M6 2v2" />
+                      </svg>
+                      <span>BUY ME A COFFEE ↗</span>
                     </a>
                   </div>
                 </div>
