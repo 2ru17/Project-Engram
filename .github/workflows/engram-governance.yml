@@ -1,5 +1,8 @@
 name: Engram Notes & Architecture Governance
 
+permissions:
+  contents: read
+
 on:
   push:
     branches:

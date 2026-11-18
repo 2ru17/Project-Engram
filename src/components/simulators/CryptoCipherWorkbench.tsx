@@ -377,6 +377,10 @@ export function CryptoCipherWorkbench() {
           </div>
         </div>
       )}
+
+      <div className="mt-4 p-3 rounded-lg border border-amber-500/30 bg-amber-500/5 font-mono text-[11px] text-amber-300/90">
+        PEDAGOGICAL NOTICE: Classical Caesar/Vigenère ciphers and small-prime RSA demonstrations are educational visualizations only. Production encryption requires AES-256-GCM, RSA-OAEP (≥ 2048-bit), or X25519/Ed25519 backed by a CSPRNG.
+      </div>
     </div>
   );
 }
