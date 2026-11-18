@@ -148,12 +148,13 @@ export default async function NotePage({
     }
   }
 
-  // Generate BreadcrumbList schema using canonical year-agnostic hierarchy
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL || "https://2ru17-project-engram.vercel.app";
   const breadcrumbs = resolved.canonicalSlugArray.map((slug, idx) => ({
     "@type": "ListItem",
     position: idx + 1,
     name: slug,
-    item: `https://project-engram-2ru17.vercel.app/notes/${resolved.canonicalSlugArray
+    item: `${siteUrl}/notes/${resolved.canonicalSlugArray
       .slice(0, idx + 1)
       .map(encodeURIComponent)
       .join("/")}`,
@@ -182,7 +183,9 @@ export default async function NotePage({
     >
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
       />
 
       {resolved.kind === "virtual" ? (

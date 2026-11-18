@@ -271,7 +271,7 @@ export default function HomePage() {
         <section className="relative pt-16 pb-20 px-6 sm:px-12 max-w-7xl mx-auto border-b border-[var(--zen-border)]">
           {/* Top Swiss Editorial Metadata Row */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pb-8 mb-14 border-b border-[var(--zen-border)] text-[11px] font-mono uppercase tracking-wider text-[var(--zen-ink-muted)]">
-            <div>INDEX // 01-25</div>
+            <div>INDEX // 01-26</div>
             <div>DISCIPLINE // COMPUTER SCIENCE</div>
             <div>CORPUS // 559 MONOGRAPHS</div>
             <div className="sm:text-right">EDITION // V2.0</div>
@@ -340,7 +340,7 @@ export default function HomePage() {
               <div className="space-y-3 font-mono text-xs text-[#1A1917] my-4">
                 <div className="flex justify-between py-1.5 border-b border-[#141413]/20">
                   <span className="text-[#545049]">TOTAL COURSES</span>
-                  <span className="font-bold">25 MODULES</span>
+                  <span className="font-bold">26 MODULES</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-[#141413]/20">
                   <span className="text-[#545049]">MONOGRAPH CORPUS</span>
@@ -475,7 +475,7 @@ export default function HomePage() {
           >
             {universe === "parallax" && (
               <div className="mb-4 px-3.5 py-1 rounded-full border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/10 font-mono text-[10px] tracking-[0.3em] text-[var(--zen-cyan)] uppercase">
-                DEEP HORIZON EXPEDITION ARCHIVE // 25 SECTORS
+                DEEP HORIZON EXPEDITION ARCHIVE // 26 SECTORS
               </div>
             )}
 
@@ -1404,35 +1404,63 @@ export default function HomePage() {
               : "Procrastination is heaven's retribution for potential."}
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 font-mono text-[10px] tracking-widest text-[var(--zen-ink-muted)]">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2.5 font-mono text-[10px] tracking-widest text-[var(--zen-ink-muted)]">
             <Link
               href="/notes?view=graph"
-              className="hover:text-[var(--zen-cyan)] transition-colors"
+              className="hover:text-[var(--zen-cyan)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] rounded px-1"
             >
               KNOWLEDGE GRAPH
             </Link>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <Link
               href="/notes?view=directory"
-              className="hover:text-[var(--zen-cyan)] transition-colors"
+              className="hover:text-[var(--zen-cyan)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] rounded px-1"
             >
               COURSE DIRECTORY
             </Link>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
+            <Link
+              href="/simulators"
+              className="hover:text-[var(--zen-cyan)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] rounded px-1"
+            >
+              SIMULATORS
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link
+              href="/terms"
+              className="hover:text-[var(--zen-cyan)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] rounded px-1"
+            >
+              TERMS
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link
+              href="/privacy"
+              className="hover:text-[var(--zen-cyan)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] rounded px-1"
+            >
+              PRIVACY
+            </Link>
+            <span aria-hidden="true">·</span>
+            <Link
+              href="/cookies"
+              className="hover:text-[var(--zen-cyan)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] rounded px-1"
+            >
+              COOKIES
+            </Link>
+            <span aria-hidden="true">·</span>
             <a
               href="https://github.com/2ru17/Project-Engram"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[var(--zen-cyan)] transition-colors"
+              className="hover:text-[var(--zen-cyan)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] rounded px-1"
             >
               REPOSITORY
             </a>
-            <span>·</span>
+            <span aria-hidden="true">·</span>
             <a
               href="https://github.com/2ru17/Project-Engram/blob/main/LICENSE"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[var(--zen-cyan)] transition-colors"
+              className="hover:text-[var(--zen-cyan)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] rounded px-1"
             >
               MIT LICENSE
             </a>

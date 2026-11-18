@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { promises as fs } from "fs";
 import { getVaultIndex } from "@/lib/vault-index";
+import { SIMULATOR_LIST } from "@/lib/simulator-registry";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl =
@@ -20,11 +21,43 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "daily",
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/simulators`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/terms`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/cookies`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.3,
+    },
   ];
+
+  for (const sim of SIMULATOR_LIST) {
+    routes.push({
+      url: `${baseUrl}/simulators?id=${encodeURIComponent(sim.id)}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    });
+  }
 
   const index = await getVaultIndex();
 
-  // Add Course Star hub URLs
   for (const courseCode of index.courses.keys()) {
     routes.push({
       url: `${baseUrl}/notes/${encodeURIComponent(courseCode)}`,
@@ -34,7 +67,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  // Add canonical Note URLs
   for (const note of index.notes) {
     let lastModified = now;
     try {

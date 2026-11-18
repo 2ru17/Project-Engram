@@ -7,26 +7,43 @@ import { StudyPlanProvider } from "@/components/StudyPlanProvider";
 import ProgressCodeModal from "@/components/ProgressCodeModal";
 import { AtmosphereProvider } from "@/components/atmosphere/AtmosphereProvider";
 import { ScrollProgress } from "@/components/ScrollProgress";
-import { CookieTelemetryNotice } from "@/components/CookieTelemetryNotice";
+import { CookieConsentBanner } from "@/components/common/CookieConsentBanner";
 import { Analytics } from "@vercel/analytics/react";
+
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://2ru17-project-engram.vercel.app";
 
 export const metadata: Metadata = {
   title: {
     template: "%s | PROJECT ENGRAM",
-    default: "PROJECT ENGRAM // 銘印",
+    default:
+      "PROJECT ENGRAM // 銘印 — Computer Science Knowledge Archive & Interactive Simulators",
   },
   description:
-    "Project Engram: Academic Knowledge Vault, Relational Concept Graph, and Computer Science Monograph Archive",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://2ru17-project-engram.vercel.app"
-  ),
+    "Project Engram: Open-source Computer Science academic monograph archive, relational force-directed concept graph, and 29 interactive engineering workbenches across Systems, Theory, Networks, Security, and Software Engineering.",
+  keywords: [
+    "Computer Science",
+    "Project Engram",
+    "Systems Architecture",
+    "Cybersecurity",
+    "Network Engineering",
+    "Algorithms",
+    "Operating Systems",
+    "Interactive Simulators",
+    "Knowledge Graph",
+    "Academic Monographs",
+  ],
+  authors: [{ name: "2RU17", url: "https://github.com/2ru17" }],
+  creator: "2RU17",
+  publisher: "Project Engram",
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "PROJECT ENGRAM // 銘印",
     description:
-      "Academic Knowledge Vault, Relational Concept Graph, and Computer Science Monograph Archive",
+      "Open-source Computer Science academic monograph archive, relational concept graph, and 29 interactive engineering workbenches.",
     siteName: "Project Engram",
     type: "website",
     locale: "en_US",
@@ -43,8 +60,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PROJECT ENGRAM // 銘印",
     description:
-      "Academic Knowledge Vault, Relational Concept Graph, and Computer Science Monograph Archive",
-    images: ["/opengraph-image"],
+      "Open-source Computer Science academic monograph archive, relational concept graph, and 29 interactive engineering workbenches.",
+    images: ["/twitter-image"],
   },
   robots: {
     index: true,
@@ -117,7 +134,7 @@ export default function RootLayout({
               "@type": "Person",
               name: "2RU17",
               jobTitle: "Computer Science & Security Scholar",
-              url: "https://project-engram-2ru17.vercel.app",
+              url: SITE_URL,
               sameAs: ["https://github.com/2ru17"],
             }),
           }}
@@ -129,7 +146,7 @@ export default function RootLayout({
             <TopNav />
             <ProgressCodeModal />
             {children}
-            <CookieTelemetryNotice />
+            <CookieConsentBanner />
             <Analytics />
           </StudyPlanProvider>
         </ThemeProvider>

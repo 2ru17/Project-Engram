@@ -1,13 +1,27 @@
 "use client";
 
-import { useState, useMemo, Suspense, useId } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef, Suspense, useId } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { SIMULATOR_LIST, SimulatorMeta, resolveSimulator } from "@/lib/simulator-registry";
+import {
+  SIMULATOR_LIST,
+  SimulatorMeta,
+  resolveSimulator,
+} from "@/lib/simulator-registry";
 import { SimulatorRenderer } from "@/components/simulators/SimulatorRenderer";
+import { SimulatorWorkbenchSkeleton } from "@/components/ui/Skeleton";
+
+const DOMAIN_TABS = [
+  { id: "all", label: `ALL LABS (${SIMULATOR_LIST.length})` },
+  { id: "systems", label: "SYSTEMS & ARCHITECTURE" },
+  { id: "security", label: "NETWORKS & SECURITY" },
+  { id: "theory", label: "THEORY & ALGORITHMS" },
+  { id: "software", label: "SOFTWARE & DATABASES" },
+];
 
 function SimulatorStudioContent() {
   const searchInputId = useId();
   const courseFilterId = useId();
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   const searchParams = useSearchParams();
   const urlParamId = searchParams.get("id") || searchParams.get("sim");
@@ -16,37 +30,66 @@ function SimulatorStudioContent() {
   const [activeCourse, setActiveCourse] = useState<string>("ALL");
   const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const allCourseCodes = Array.from(
-    new Set(SIMULATOR_LIST.flatMap((s) => s.courses))
-  ).sort();
+  const allCourseCodes = useMemo(
+    () => Array.from(new Set(SIMULATOR_LIST.flatMap((s) => s.courses))).sort(),
+    []
+  );
 
-  const handleSelectSim = (sim: SimulatorMeta) => {
-    router.replace(`/simulators?id=${sim.id}`, { scroll: false });
-  };
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "/") return;
+      const target = e.target as HTMLElement | null;
+      const tagName = target?.tagName?.toLowerCase();
+      if (
+        tagName === "input" ||
+        tagName === "textarea" ||
+        tagName === "select" ||
+        target?.isContentEditable
+      ) {
+        return;
+      }
+      e.preventDefault();
+      searchInputRef.current?.focus();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
-  const q = searchQuery.toLowerCase().trim();
-  const filteredSims = SIMULATOR_LIST.filter((sim) => {
-    const matchesDomain = activeDomain === "all" || sim.domain === activeDomain;
-    if (!matchesDomain) return false;
-    const matchesCourse =
-      activeCourse === "ALL" || sim.courses.includes(activeCourse);
-    if (!matchesCourse) return false;
-    if (!q) return true;
-    return (
-      sim.title.toLowerCase().includes(q) ||
-      sim.description.toLowerCase().includes(q) ||
-      sim.category.toLowerCase().includes(q) ||
-      sim.courses.some((c) => c.toLowerCase().includes(q)) ||
-      sim.keyConcepts.some((k) => k.toLowerCase().includes(q))
-    );
-  });
+  const handleSelectSim = useCallback(
+    (sim: SimulatorMeta) => {
+      router.replace(`/simulators?id=${sim.id}`, { scroll: false });
+    },
+    [router]
+  );
+
+  const filteredSims = useMemo(() => {
+    const q = searchQuery.toLowerCase().trim();
+    return SIMULATOR_LIST.filter((sim) => {
+      const matchesDomain =
+        activeDomain === "all" || sim.domain === activeDomain;
+      if (!matchesDomain) return false;
+      const matchesCourse =
+        activeCourse === "ALL" || sim.courses.includes(activeCourse);
+      if (!matchesCourse) return false;
+      if (!q) return true;
+      return (
+        sim.title.toLowerCase().includes(q) ||
+        sim.description.toLowerCase().includes(q) ||
+        sim.category.toLowerCase().includes(q) ||
+        sim.courses.some((c) => c.toLowerCase().includes(q)) ||
+        sim.keyConcepts.some((k) => k.toLowerCase().includes(q))
+      );
+    });
+  }, [activeDomain, activeCourse, searchQuery]);
 
   return (
-    <div className="min-h-screen pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      {/* Studio Header */}
+    <div className="min-h-screen pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="mb-8 border-b border-[var(--zen-border)] pb-6">
         <div className="flex items-center gap-2 mb-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-[var(--zen-cyan)] animate-pulse" />
+          <span
+            className="w-2.5 h-2.5 rounded-full bg-[var(--zen-cyan)] animate-pulse"
+            aria-hidden="true"
+          />
           <span className="text-[11px] font-mono tracking-[0.3em] uppercase text-[var(--zen-cyan)] font-semibold">
             PROJECT ENGRAM // V2 INTERACTIVE STUDIO
           </span>
@@ -55,28 +98,21 @@ function SimulatorStudioContent() {
           className="text-2xl sm:text-4xl font-bold uppercase tracking-wider text-[var(--zen-snow)] mb-3"
           style={{ fontFamily: "var(--font-zen-display, serif)" }}
         >
-          Computer Science Workbenches & Simulators
+          Computer Science Workbenches &amp; Simulators
         </h1>
         <p className="text-sm text-[var(--zen-frost)]/80 max-w-3xl leading-relaxed">
           Curriculum-mapped interactive engineering simulations across Computer Science, Systems, Networking, Cybersecurity, and Software Engineering.
           Experiment directly with instruction pipelines, memory paging, IEEE 754 precision, network subnetting, TCP sliding windows, Raft consensus, and OWASP exploit sanitization.
         </p>
 
-        {/* Search and Domain Filter Controls */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mt-6">
-          {/* Domain Filter Pills */}
           <div className="flex flex-wrap gap-2">
-            {[
-              { id: "all", label: `ALL LABS (${SIMULATOR_LIST.length})` },
-              { id: "systems", label: "SYSTEMS & ARCHITECTURE" },
-              { id: "security", label: "NETWORKS & SECURITY" },
-              { id: "theory", label: "THEORY & ALGORITHMS" },
-              { id: "software", label: "SOFTWARE & DATABASES" },
-            ].map((tab) => (
+            {DOMAIN_TABS.map((tab) => (
               <button
                 key={tab.id}
+                type="button"
                 onClick={() => setActiveDomain(tab.id)}
-                className={`px-3 py-1.5 font-mono text-xs rounded border transition-all ${
+                className={`min-h-[38px] px-3 py-1.5 font-mono text-xs rounded border transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] ${
                   activeDomain === tab.id
                     ? "border-[var(--zen-cyan)] bg-[var(--zen-cyan)]/20 text-[var(--zen-snow)] font-bold shadow-[0_0_12px_rgba(0,229,255,0.2)]"
                     : "border-[var(--zen-border)] text-[var(--zen-ink-muted)] hover:text-[var(--zen-snow)] hover:bg-[var(--zen-card-hover)]"
@@ -88,7 +124,6 @@ function SimulatorStudioContent() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
-            {/* Course Code Filter */}
             <div>
               <label htmlFor={courseFilterId} className="sr-only">
                 Filter by Course Code
@@ -98,7 +133,7 @@ function SimulatorStudioContent() {
                 aria-label="Filter simulators by course code"
                 value={activeCourse}
                 onChange={(e) => setActiveCourse(e.target.value)}
-                className="w-full sm:w-44 bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-lg px-2.5 py-1.5 font-mono text-xs text-[var(--zen-snow)] focus:outline-none focus:border-[var(--zen-cyan)]"
+                className="min-h-[40px] w-full sm:w-44 bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-lg px-2.5 py-1.5 font-mono text-xs text-[var(--zen-snow)] focus:outline-none focus:border-[var(--zen-cyan)] focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)]"
               >
                 <option value="ALL">ALL COURSES ({allCourseCodes.length})</option>
                 {allCourseCodes.map((code) => (
@@ -109,25 +144,25 @@ function SimulatorStudioContent() {
               </select>
             </div>
 
-            {/* Quick Filter Input */}
-            <div className="w-full sm:w-64">
-              <label htmlFor={searchInputId} className="sr-only">Search Simulators</label>
+            <div className="w-full sm:w-64 relative">
+              <label htmlFor={searchInputId} className="sr-only">
+                Search Simulators
+              </label>
               <input
+                ref={searchInputRef}
                 id={searchInputId}
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search by course or topic..."
-                className="w-full bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-lg px-3 py-1.5 font-mono text-xs text-[var(--zen-snow)] placeholder:text-[var(--zen-ink-muted)] focus:outline-none focus:border-[var(--zen-cyan)]"
+                placeholder="Search by course or topic (/)..."
+                className="min-h-[40px] w-full bg-[var(--zen-card)] border border-[var(--zen-border)] rounded-lg px-3 py-1.5 font-mono text-xs text-[var(--zen-snow)] placeholder:text-[var(--zen-ink-muted)] focus:outline-none focus:border-[var(--zen-cyan)] focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)]"
               />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Studio Stage Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        {/* Sidebar Lab Navigation */}
         <div className="lg:col-span-4 space-y-2.5 max-h-[85vh] overflow-y-auto pr-1">
           <span className="text-[10px] font-mono tracking-widest uppercase text-[var(--zen-ink-muted)] block mb-2 px-1">
             SELECT WORKBENCH ({filteredSims.length})
@@ -142,8 +177,9 @@ function SimulatorStudioContent() {
               return (
                 <button
                   key={sim.id}
+                  type="button"
                   onClick={() => handleSelectSim(sim)}
-                  className={`w-full text-left p-3.5 rounded-xl border transition-all universe-card flex flex-col gap-1.5 ${
+                  className={`w-full text-left p-3.5 rounded-xl border transition-all universe-card flex flex-col gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)] ${
                     isSelected
                       ? "border-[var(--zen-cyan)] border-l-4 border-l-[var(--zen-cyan)] bg-[var(--zen-midnight)] shadow-[0_0_15px_rgba(0,71,255,0.15)]"
                       : "border-[var(--zen-border)] bg-[var(--zen-card)] hover:border-[var(--zen-slate-edge)] hover:bg-[var(--zen-card-hover)]"
@@ -181,14 +217,12 @@ function SimulatorStudioContent() {
           )}
         </div>
 
-        {/* Active Simulator Stage */}
         <div className="lg:col-span-8 space-y-6">
           <SimulatorRenderer simulatorId={selectedSim.id} />
 
-          {/* Key Concepts Reference Footer */}
           <div className="p-4 rounded-xl border border-[var(--zen-border)] bg-[var(--zen-card)] universe-card">
             <span className="text-[10px] font-mono text-[var(--zen-cyan)] tracking-widest uppercase font-semibold block mb-2">
-              CURRICULUM SPECIFICATION & CONCEPTS
+              CURRICULUM SPECIFICATION &amp; CONCEPTS
             </span>
             <div className="flex flex-wrap gap-2">
               {selectedSim.keyConcepts.map((kc, i) => (
@@ -214,8 +248,8 @@ export default function SimulatorStudioPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen pt-32 text-center font-mono text-xs text-[var(--zen-ink-muted)]">
-          INITIALIZING INTERACTIVE CS STUDIO...
+        <div className="min-h-screen pt-20 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <SimulatorWorkbenchSkeleton />
         </div>
       }
     >

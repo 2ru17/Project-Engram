@@ -158,7 +158,7 @@ export default async function Image() {
               margin: 0,
             }}
           >
-            A high-performance topological knowledge vault synthesizing 4 academic years, 38 curricular modules, interactive force graphs, and verified monographs.
+            A high-performance topological knowledge vault synthesizing 26 curricular courses, 29 interactive simulators, relational force graphs, and 559 verified monographs.
           </p>
         </div>
 

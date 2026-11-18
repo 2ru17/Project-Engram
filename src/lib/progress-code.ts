@@ -17,6 +17,9 @@ export interface ProgressSnapshot {
   } | null;
 }
 
+const MAX_CODE_LENGTH = 16384;
+const FORBIDDEN_KEYS = new Set(["__proto__", "constructor", "prototype"]);
+
 const UNIVERSE_TO_CODE: Record<UniverseId, string> = {
   "cyber-zen": "CZ",
   "neo-brutalism": "NB",
@@ -47,6 +50,8 @@ const CODE_TO_TIER: Record<string, StudyPlanTier> = {
 
 /**
  * Compute CRC16-CCITT (0x1021) as a 4-character uppercase hex string.
+ * Note: CRC16 is an error-detection checksum against accidental truncation of
+ * non-sensitive client-side study state; it is NOT a cryptographic MAC.
  */
 export function computeCrc16Hex(input: string): string {
   let crc = 0xffff;
@@ -61,6 +66,25 @@ export function computeCrc16Hex(input: string): string {
     }
   }
   return crc.toString(16).toUpperCase().padStart(4, "0");
+}
+
+function sanitizeRelativeNoteSegment(raw: string): string | null {
+  const cleaned = raw.replace(/[\u0000-\u001f\u007f]/g, "").trim();
+  if (!cleaned) return null;
+  const lower = cleaned.toLowerCase();
+  if (
+    lower.startsWith("javascript:") ||
+    lower.startsWith("vbscript:") ||
+    lower.startsWith("data:") ||
+    lower.startsWith("http:") ||
+    lower.startsWith("https:") ||
+    cleaned.startsWith("//") ||
+    cleaned.includes("\\") ||
+    cleaned.includes("..")
+  ) {
+    return null;
+  }
+  return cleaned.replace(/^\/+/, "");
 }
 
 function toBase64Url(str: string): string {
@@ -104,7 +128,7 @@ function fromBase64Url(b64url: string): string {
  * so the resulting stateless telemetry vector stays compact.
  */
 function packCompletedNotes(urls: string[]): Record<string, string[]> {
-  const grouped: Record<string, string[]> = {};
+  const grouped: Record<string, string[]> = Object.create(null);
   const unique = Array.from(new Set(urls)).sort();
 
   for (const rawUrl of unique) {
@@ -116,6 +140,7 @@ function packCompletedNotes(urls: string[]): Record<string, string[]> {
       grouped["@"].push(clean);
     } else {
       const course = clean.slice(0, slashIdx).toUpperCase();
+      if (FORBIDDEN_KEYS.has(course)) continue;
       const rest = clean.slice(slashIdx + 1);
       grouped[course] = grouped[course] || [];
       grouped[course].push(rest);
@@ -124,17 +149,25 @@ function packCompletedNotes(urls: string[]): Record<string, string[]> {
   return grouped;
 }
 
-function unpackCompletedNotes(grouped: Record<string, string[]> | undefined): string[] {
-  if (!grouped || typeof grouped !== "object") return [];
+function unpackCompletedNotes(grouped: unknown): string[] {
+  if (!grouped || typeof grouped !== "object" || Array.isArray(grouped)) {
+    return [];
+  }
   const result: string[] = [];
-  for (const [course, items] of Object.entries(grouped)) {
-    if (!Array.isArray(items)) continue;
+  for (const [course, items] of Object.entries(
+    grouped as Record<string, unknown>
+  )) {
+    if (FORBIDDEN_KEYS.has(course) || !Array.isArray(items)) continue;
     for (const item of items) {
-      if (typeof item !== "string" || !item) continue;
+      if (typeof item !== "string") continue;
+      const safeItem = sanitizeRelativeNoteSegment(item);
+      if (!safeItem) continue;
       if (course === "@") {
-        result.push(`/notes/${item}`);
+        result.push(`/notes/${safeItem}`);
       } else {
-        result.push(`/notes/${course}/${item}`);
+        const safeCourse = sanitizeRelativeNoteSegment(course);
+        if (!safeCourse) continue;
+        result.push(`/notes/${safeCourse}/${safeItem}`);
       }
     }
   }
@@ -144,7 +177,6 @@ function unpackCompletedNotes(grouped: Record<string, string[]> | undefined): st
 /**
  * Encodes a ProgressSnapshot into a stateless CRC16 telemetry vector string:
  * Format: EG2-<UNIVERSE><MODE>-<TIER>-<FOCUS>-<PAYLOAD_B64URL>-<CRC16>
- * Example: EG2-CZD0-CORE-ALL-eyJ... -4F9A
  */
 export function encodeProgressCode(snapshot: ProgressSnapshot): string {
   const uCode = UNIVERSE_TO_CODE[snapshot.universe] || "CZ";
@@ -152,10 +184,11 @@ export function encodeProgressCode(snapshot: ProgressSnapshot): string {
   const liteChar = snapshot.isLite ? "1" : "0";
   const headerFlags = `${uCode}${themeChar}${liteChar}`;
   const tierCode = TIER_TO_CODE[snapshot.tier] || "FULL";
-  const focus = (snapshot.focusCourse || "ALL")
-    .toUpperCase()
-    .replace(/[^A-Z0-9]/g, "")
-    .slice(0, 10) || "ALL";
+  const focus =
+    (snapshot.focusCourse || "ALL")
+      .toUpperCase()
+      .replace(/[^A-Z0-9]/g, "")
+      .slice(0, 10) || "ALL";
 
   const compactPayload = {
     n: packCompletedNotes(snapshot.completedNotes),
@@ -188,12 +221,19 @@ export function decodeProgressCode(rawCode: string): DecodedProgressResult {
   if (!trimmed) {
     return { ok: false, error: "Progress code is empty." };
   }
+  if (trimmed.length > MAX_CODE_LENGTH) {
+    return {
+      ok: false,
+      error: `Progress code exceeds maximum allowed length (${MAX_CODE_LENGTH} chars).`,
+    };
+  }
 
   const parts = trimmed.split("-");
   if (parts.length !== 6 || parts[0] !== "EG2") {
     return {
       ok: false,
-      error: "Invalid format. Expected EG2-<UNIVERSE>-<TIER>-<COURSE>-<DATA>-<CRC>.",
+      error:
+        "Invalid format. Expected EG2-<UNIVERSE>-<TIER>-<COURSE>-<DATA>-<CRC>.",
     };
   }
 
@@ -232,13 +272,23 @@ export function decodeProgressCode(rawCode: string): DecodedProgressResult {
     const completedNotes = unpackCompletedNotes(parsed?.n);
 
     let lastVisited: ProgressSnapshot["lastVisited"] = null;
-    if (Array.isArray(parsed?.l) && typeof parsed.l[0] === "string" && parsed.l[0]) {
-      const cleanRel = parsed.l[0].replace(/^\/notes\//, "");
-      lastVisited = {
-        url: `/notes/${cleanRel}`,
-        title: typeof parsed.l[1] === "string" ? parsed.l[1] : cleanRel,
-        courseCode: typeof parsed.l[2] === "string" && parsed.l[2] ? parsed.l[2] : undefined,
-      };
+    if (Array.isArray(parsed?.l) && typeof parsed.l[0] === "string") {
+      const safeRel = sanitizeRelativeNoteSegment(
+        parsed.l[0].replace(/^\/notes\//, "")
+      );
+      if (safeRel) {
+        lastVisited = {
+          url: `/notes/${safeRel}`,
+          title:
+            typeof parsed.l[1] === "string"
+              ? parsed.l[1].slice(0, 80)
+              : safeRel,
+          courseCode:
+            typeof parsed.l[2] === "string" && parsed.l[2]
+              ? parsed.l[2].slice(0, 16)
+              : undefined,
+        };
+      }
     }
 
     return {
@@ -249,7 +299,9 @@ export function decodeProgressCode(rawCode: string): DecodedProgressResult {
         theme: themeChar === "L" ? "light" : "dark",
         isLite: liteChar === "1",
         tier,
-        focusCourse: focusRaw.toUpperCase() || "ALL",
+        focusCourse:
+          focusRaw.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 10) ||
+          "ALL",
         completedNotes,
         lastVisited,
       },

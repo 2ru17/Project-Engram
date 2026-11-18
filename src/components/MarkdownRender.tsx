@@ -308,10 +308,15 @@ const components = {
       );
     }
 
+    const rawHref = typeof href === "string" ? href : "#";
+    const safeHref = isUnsafeUrl(rawHref) ? "#" : rawHref;
+    const isExternal = /^https?:\/\//i.test(safeHref);
+
     return (
       <a
         className="text-[var(--zen-cyan)] hover:text-[var(--zen-snow)] transition-colors underline decoration-[var(--zen-cyan)]/40 underline-offset-4"
-        href={href}
+        href={safeHref}
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         {...props}
       >
         {children}
