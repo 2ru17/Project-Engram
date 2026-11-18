@@ -106,21 +106,43 @@ In Lab 3 Part 1, a $100\ \mu\text{F}$ capacitor charges from the $9\text{ V}$ su
 
 ### Lab 3 Schematics (Parts 1-4)
 
-```text
-Part 1 (RC Timing):                      Part 2 (Series):       Part 3 (Parallel):
-  +9V--SW--[3.3k/1k]--+--[10k]--(>| LED)--GND   +--+100uF-       +--+10uF-   +--+100uF-
-                      |                            |+10uF-          |          |
-                    + | 100uF (or 10uF)            v                v          v
-                    - |                           GND              GND        GND
-                     GND
+```circuit:lab3-capacitor-circuits
+Part 1 (RC Timing):
+  +9V--SW--[3.3k/1k]--+--[10k]--(>| LED)--GND
+                      |
+                    + | 100uF (or 10uF)
+                    - |
+                      GND
+
+Part 2 (Series):
+  RC node
+     |
+   + 100uF -
+   + 10uF -
+     |
+    GND
+
+Part 3 (Parallel):
+  RC node ---+-------------+
+             |             |
+         + 10uF -     + 100uF -
+             |             |
+            GND           GND
 
 Part 4 (Loose-Wire Energy Storage):
-  +9V o (touch to charge)     (touch to discharge) o---[ 3.3k ]---(>| LED)--- GND
+  +9V o (touch to charge)
+  (touch to discharge) o---[ 3.3k ]---(>| LED)--- GND
              ^------- [ LOOSE WIRE ] -------^
-                            |
-                         +  =  100uF
-                         -  |
-                           GND
+                          |
+                       +  =  100uF
+                       -  |
+                         GND
+```
+
+```simulator:rc-timing
+RC timing (tau = R C):
+  charge:    v_C = Vs (1 - e^(-t/RC))     63.2% at 1 tau, >99% at 5 tau
+  discharge: v_C = V0 e^(-t/RC)
 ```
 
 ### Safe Pre-Lab Capacitor Discharge & Handling Flow

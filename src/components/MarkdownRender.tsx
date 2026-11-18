@@ -18,6 +18,7 @@ import { sanitizeHtml } from "@/lib/sanitize";
 import { MCQSection } from "@/components/MCQSection";
 import { parseMCQSection } from "@/lib/mcq-parser";
 import { SimulatorRenderer } from "@/components/simulators/SimulatorRenderer";
+import { CircuitDiagram } from "@/components/diagrams/CircuitDiagram";
 
 const MermaidBlock = dynamic(() => import("@/components/MermaidBlock"), { ssr: false });
 
@@ -103,10 +104,42 @@ function CodeBlockPre({ children, ...props }: any) {
     };
     const bodyText = extractText(child.props.children).trim();
     const simId = match ? match[1] : bodyText || "digital-logic";
+    // When the fence carries an ASCII fallback (info string has an id), print it instead of the workbench.
+    const printAscii = match ? bodyText : "";
     return (
-      <div className="my-8 print:hidden">
-        <SimulatorRenderer simulatorId={simId} />
-      </div>
+      <>
+        <div className="my-8 print:hidden">
+          <SimulatorRenderer simulatorId={simId} />
+        </div>
+        {printAscii && (
+          <pre className="hidden print:block my-6 whitespace-pre text-[10px] font-mono">{printAscii}</pre>
+        )}
+      </>
+    );
+  }
+
+  const isCircuit =
+    typeof child?.props?.className === "string" &&
+    child.props.className.includes("language-circuit");
+
+  if (isCircuit) {
+    const classStr = child.props.className || "";
+    const match = classStr.match(/language-circuit[:-]([\w-]+)/);
+    const extractText = (node: any): string => {
+      if (typeof node === "string") return node;
+      if (Array.isArray(node)) return node.map(extractText).join("");
+      if (node?.props?.children) return extractText(node.props.children);
+      return "";
+    };
+    const asciiBody = extractText(child.props.children).replace(/\n$/, "");
+    const circuitId = match ? match[1] : asciiBody.trim().split(/\s+/)[0] || "";
+    return (
+      <>
+        <div className="my-8 print:hidden">
+          <CircuitDiagram diagramId={circuitId} ascii={asciiBody} />
+        </div>
+        <pre className="hidden print:block my-6 whitespace-pre text-[10px] font-mono">{asciiBody}</pre>
+      </>
     );
   }
 

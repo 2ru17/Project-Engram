@@ -113,7 +113,7 @@ An ESP32 GPIO pin outputs $V_{\text{GPIO}} = 3.3\text{ V}$ to drive one Project 
 
 ### Machine Project 2 Schematic (`3-LED ESP32 Interface Board`)
 
-```text
+```circuit:mp2-led-board
   4-Pin Header
    [ GPIO1 ] ----[ R1 (500-5k) ]----(>| LED1 Red    )----+
    [ GPIO2 ] ----[ R2 (500-5k) ]----(>| LED2 Green  )----+

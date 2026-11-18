@@ -410,6 +410,70 @@ export const SIMULATOR_REGISTRY: Record<string, SimulatorMeta> = {
       "MVCC Snapshot Isolation & First-Committer-Wins",
     ],
   },
+  "analog-modulation": {
+    id: "analog-modulation",
+    title: "Analog Modulation Studio",
+    domain: "systems",
+    domainLabel: "Systems & Architecture",
+    category: "Communication Systems",
+    courses: ["NSETRON"],
+    description:
+      "AM and FM modulator chains from LabAlive Lab 8: vary modulation index, carrier offset, message waveform and FM index to see the time-domain envelope and the frequency-domain sidebands change together.",
+    keyConcepts: [
+      "AM Modulation Index and Overmodulation",
+      "Sidebands, Bandwidth and DSB-SC",
+      "AM Power Distribution P_T = P_C(1 + m^2/2)",
+      "FM Index and Bessel Sidebands",
+    ],
+  },
+  "rc-timing": {
+    id: "rc-timing",
+    title: "RC Timing Workbench",
+    domain: "systems",
+    domainLabel: "Systems & Architecture",
+    category: "Circuits & Electronics",
+    courses: ["NSETRON"],
+    description:
+      "Capacitor charge and discharge curves for Lab 3 and Lab 4 Part 2 with 1 tau and 5 tau markers and the LED threshold line.",
+    keyConcepts: [
+      "Time Constant tau = R C",
+      "Charge v_C = Vs(1 - e^(-t/RC))",
+      "Discharge v_C = V0 e^(-t/RC)",
+      "63.2% at 1 tau, above 99% at 5 tau",
+    ],
+  },
+  "scope-quantizer": {
+    id: "scope-quantizer",
+    title: "Oscilloscope and Quantizer Studio",
+    domain: "systems",
+    domainLabel: "Systems & Architecture",
+    category: "Circuits & Electronics",
+    courses: ["NSETRON"],
+    description:
+      "Read period, frequency and peak-to-peak voltage from an 8 x 10 graticule, then explore uniform quantization with a bit-depth slider.",
+    keyConcepts: [
+      "T = N_horiz x Time/div",
+      "V_pp = N_vert x Volts/div",
+      "Quantization Levels L = 2^n",
+      "Nyquist Minimum Sampling Rate",
+    ],
+  },
+  "rectifier-supply": {
+    id: "rectifier-supply",
+    title: "Rectifier Power Supply Studio",
+    domain: "systems",
+    domainLabel: "Systems & Architecture",
+    category: "Circuits & Electronics",
+    courses: ["NSETRON"],
+    description:
+      "Stage-by-stage waveforms of the 220 V AC to +5 V DC linear supply: transformer, full-wave bridge, filter capacitors and 7805 regulator.",
+    keyConcepts: [
+      "Step-Down Transformer",
+      "Full-Wave Bridge at 120 Hz",
+      "Capacitive Filtering",
+      "7805 Regulation",
+    ],
+  },
 };
 
 export const SIMULATOR_LIST: SimulatorMeta[] = Object.values(SIMULATOR_REGISTRY);
@@ -522,6 +586,24 @@ export const SIMULATOR_ALIASES: Record<string, string> = {
   "bplustree-transaction": "bplustree-transaction",
   "bplustreetransactionworkbench": "bplustree-transaction",
   "mvcc-btree": "bplustree-transaction",
+
+  "analog-modulation": "analog-modulation",
+  "analogmodulationworkbench": "analog-modulation",
+  "am-fm": "analog-modulation",
+  "labalive": "analog-modulation",
+  "modulation": "analog-modulation",
+
+  "rc-timing": "rc-timing",
+  "rctimingworkbench": "rc-timing",
+  "rc-circuit": "rc-timing",
+
+  "scope-quantizer": "scope-quantizer",
+  "scopequantizerworkbench": "scope-quantizer",
+  "oscilloscope": "scope-quantizer",
+
+  "rectifier-supply": "rectifier-supply",
+  "rectifiersupplyworkbench": "rectifier-supply",
+  "power-supply": "rectifier-supply",
 };
 
 export function resolveSimulator(idOrAlias: string | null | undefined): SimulatorMeta {

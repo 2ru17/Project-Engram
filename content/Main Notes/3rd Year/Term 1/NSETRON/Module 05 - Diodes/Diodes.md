@@ -108,22 +108,31 @@ A $9\text{ V}$ DC source supplies a series circuit containing a silicon diode ($
 
 ### Lab 4 Part 1 & Part 2 Schematics and P-N Biasing
 
-```text
+```circuit:lab4-diode-circuits
 Bias Conditions:
-  Forward:  (+)---[ p | n ]---(-)   Depletion NARROW, conducts above V_barrier (0.7 V Si)
-  Reverse:  (-)---[ p | n ]---(+)   Depletion WIDE,   blocks current (open switch)
+  Forward:  (+)---[ p | n ]---(-)
+            Depletion NARROW, conducts above V_barrier (0.7 V Si)
+  Reverse:  (-)---[ p | n ]---(+)
+            Depletion WIDE, blocks current (open switch)
 
 Lab 4 Part 1 (Diode + LED Series):
   +9V ---[ SW ]---[ 3.3k ]---[ |>| Si Diode (stripe right) ]---(>| LED)--- GND
 
 Lab 4 Part 2 (Anti-Parallel Dual LED Charge/Discharge):
   +9V o (touch to charge -> LEFT lights)
+  GND o (touch to discharge -> RIGHT lights)
           ^
-       [LOOSE WIRE]       +--->|--- (LED LEFT:  lights on CHARGE)  ---+
-          |               |                                           |
-       + 100uF - ---[3.3k]+                                           +--- GND
-                          |                                           |
-  GND o (touch to disch.) +---|<--- (LED RIGHT: lights on DISCHARGE) -+
+     [LOOSE WIRE]
+          |
+  + 100uF - ---[3.3k]---+---|>--- (LED LEFT: lights on CHARGE) ----+
+                        |                                          +--- GND
+                        +---|<--- (LED RIGHT: lights on DISCHARGE)-+
+```
+
+```simulator:rc-timing
+RC timing (tau = R C):
+  charge:    v_C = Vs (1 - e^(-t/RC))     63.2% at 1 tau, >99% at 5 tau
+  discharge: v_C = V0 e^(-t/RC)
 ```
 
 ### Troubleshooting a Dark Diode + LED Series Circuit

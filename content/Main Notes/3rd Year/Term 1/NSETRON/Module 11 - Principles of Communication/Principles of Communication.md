@@ -114,19 +114,24 @@ status: completed
 
 ### LabAlive AM & FM Block Diagrams + Time vs. Frequency Domain
 
-```text
+```simulator:analog-modulation
 LabAlive AM Modulator Chain:
   m(t) ---> [ Gain km ] ---> ( + ) ---> ( x ) ---> s(t)
                                ^          ^
                              s_hat    cos(wt) Carrier
                  (Off = DSB-SC)
 
-AM Envelope (Time Domain) & Spectrum (Frequency Domain):
-  m = 0.5..1.0:  V_max / V_min envelope smooth    |   |S(f)|:  LSB      Carrier    USB
-  m > 1.0:       Overmodulated, phase reversals   |            f_c-f_m    f_c    f_c+f_m
+AM Envelope (Time Domain):
+  m = 0.5..1.0:  V_max / V_min envelope smooth
+  m > 1.0:       Overmodulated, phase reversals
+
+AM Spectrum (Frequency Domain):
+  |S(f)|:  LSB        Carrier     USB
+           f_c-f_m    f_c         f_c+f_m
 
 LabAlive FM Modulator Chain:
-  m(t) ---> [ FM Modulator (km, f_c = 1 MHz) ] ---> s(t) Constant Amplitude, Varying Frequency
+  m(t) ---> [ FM Modulator (km, f_c = 1 MHz) ] ---> s(t)
+  s(t): constant amplitude, varying frequency
 ```
 
 ### FM Noise-Suppression Receiver Flow

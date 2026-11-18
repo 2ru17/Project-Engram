@@ -42,7 +42,12 @@ Project-Engram/
 │   │   │   ├── MCQSection.tsx         # Interactive Multiple Choice Question component & parser
 │   │   │   ├── MermaidBlock.tsx       # Client-side Mermaid v12 diagram renderer
 │   │   │   └── CourseSimulatorDock.tsx# Contextual simulator launcher docked on course notes
+│   │   ├── diagrams/                  # Data-driven circuit scenes (`circuit:` fence)
+│   │   │   ├── CircuitDiagram.tsx     # Part tabs, value pickers, current flow, info cards
+│   │   │   ├── BreadboardDiagram.tsx  # 830-hole connectivity map
+│   │   │   └── symbols.tsx            # Schematic symbol set
 │   │   ├── simulators/                # Interactive Pedagogical Workbenches
+│   │   │   │                          # incl. AnalogModulation, RcTiming, ScopeQuantizer, RectifierSupply
 │   │   │   ├── shared/
 │   │   │   │   └── SimulatorWorkbenchShell.tsx # Unified transport controls, presets, & telemetry shell
 │   │   │   ├── SimulatorRenderer.tsx  # Dynamic switch dispatcher for registered simulators

@@ -26,6 +26,10 @@ import { AvalancheCryptoWorkbench } from "./AvalancheCryptoWorkbench";
 import { GraphAlgorithmArenaWorkbench } from "./GraphAlgorithmArenaWorkbench";
 import { AutomataTapeWorkbench } from "./AutomataTapeWorkbench";
 import { BPlusTreeTransactionWorkbench } from "./BPlusTreeTransactionWorkbench";
+import { AnalogModulationWorkbench } from "./AnalogModulationWorkbench";
+import { RcTimingWorkbench } from "./RcTimingWorkbench";
+import { ScopeQuantizerWorkbench } from "./ScopeQuantizerWorkbench";
+import { RectifierSupplyWorkbench } from "./RectifierSupplyWorkbench";
 import { KatexFormula } from "./shared/SimulatorWorkbenchShell";
 import { resolveSimulator } from "@/lib/simulator-registry";
 import { getCourseInfo } from "@/lib/course-registry";
@@ -38,6 +42,10 @@ const NATIVE_SHELL_IDS = new Set([
   "graph-algorithm-arena",
   "automata-tape",
   "bplustree-transaction",
+  "analog-modulation",
+  "rc-timing",
+  "scope-quantizer",
+  "rectifier-supply",
 ]);
 
 const LEGACY_INVARIANTS: Record<string, { label: string; latex: string }> = {
@@ -171,6 +179,14 @@ export function SimulatorRenderer({ simulatorId }: { simulatorId: string }) {
         return <AutomataTapeWorkbench />;
       case "bplustree-transaction":
         return <BPlusTreeTransactionWorkbench />;
+      case "analog-modulation":
+        return <AnalogModulationWorkbench />;
+      case "rc-timing":
+        return <RcTimingWorkbench />;
+      case "scope-quantizer":
+        return <ScopeQuantizerWorkbench />;
+      case "rectifier-supply":
+        return <RectifierSupplyWorkbench />;
       default:
         return (
           <div className="p-4 rounded-lg border border-[var(--zen-border)] bg-[var(--zen-card)] text-xs font-mono text-[var(--zen-ink-muted)]">

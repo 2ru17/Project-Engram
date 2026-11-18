@@ -126,7 +126,7 @@ In Laboratory Experiment 2, a $3.3\text{ k}\Omega$ resistor (`orange-orange-red-
 
 ### Lab 2 Schematics (Series, Parallel, Parallel Branches, Combined)
 
-```text
+```circuit:lab2-resistor-networks
 Part 1 (Series):
   +9V ---[ SW ]---[ 3.3k ]---[ 100k/10k/1k ]---(>| LED)--- GND
 
@@ -135,10 +135,15 @@ Part 2 (Parallel Resistors):
   +9V ---[ SW ]---+              +---(>| LED)--- GND
                   +---[ 100k ]---+
 
-Part 3A (Parallel LED Branches):          Part 3B (Combined Series-Parallel):
-           +---[ 100k ]---(>| LED_L)--+                  +---[ 50k VR ]---(>| LED_L)--+
-  +9V--SW--+                          +-GND  +9V--SW--[3.3k]+                          +-GND
-           +---[ 3.3k ]---(>| LED_R)--+                  +---[ 10k ]----(>| LED_R)--+
+Part 3A (Parallel LED Branches):
+           +---[ 100k ]---(>| LED_L)--+
+  +9V--SW--+                          +-GND
+           +---[ 3.3k ]---(>| LED_R)--+
+
+Part 3B (Combined Series-Parallel):
+                       +---[ 50k VR ]---(>| LED_L)--+
+  +9V--SW--[3.3k]------+                             +-GND
+                       +---[ 10k ]----(>| LED_R)----+
 ```
 
 ### Series-Parallel Circuit Reduction Flow

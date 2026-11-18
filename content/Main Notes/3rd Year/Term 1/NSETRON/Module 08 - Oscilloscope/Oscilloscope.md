@@ -103,13 +103,18 @@ Verify the recorded Rigol oscilloscope measurements from Laboratory Activity #06
 
 ### Oscilloscope Graticule Reading & Uniform Quantizer Staircase
 
-```text
+```simulator:scope-quantizer
 Oscilloscope Display (e.g., 1.00 V/div vert, 1.00 ms/div horiz):
-  +4V |   .---.           .---.         V_max = +4.02 V
-  +2V |  /     \         /     \        V_pp  = V_max - V_min = 8.04 V
-   0V |-/-------\-------/-------\---    T     = 4.02 div * 1.00 ms/div = 4.02 ms
-  -2V |          \     /                f     = 1 / 4.02 ms = 249 Hz
-  -4V |           '---'                 V_min = -4.02 V
+  +4V |   .---.           .---.
+  +2V |  /     \         /     \
+   0V |-/-------\-------/-------\---
+  -2V |          \     /
+  -4V |           '---'
+  V_max = +4.02 V
+  V_pp  = V_max - V_min = 8.04 V
+  T     = 4.02 div * 1.00 ms/div = 4.02 ms
+  f     = 1 / 4.02 ms = 249 Hz
+  V_min = -4.02 V
 
 Uniform Quantizer Effect (Continuous Sine -> Discrete Staircase):
   Analog Sine:   _/-\_        Quantized:   _|--|_

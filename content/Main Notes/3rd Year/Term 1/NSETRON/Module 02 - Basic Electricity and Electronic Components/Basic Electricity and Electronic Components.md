@@ -107,21 +107,25 @@ In Laboratory Experiment 1 Part 1, a $9\text{ V}$ supply drives a switch, a fixe
 
 ### Breadboard Layout & Lab 1 Part 1 / Part 2 Schematics
 
-```text
-Breadboard Internal Bus Map (830-Hole with DLSU-CT "W" Split):
-  (-) [o o o o o ... o o]  W  [o o o o o ... o o]  <-- Split at "W" (needs jumper!)
-  (+) [o o o o o ... o o]  W  [o o o o o ... o o]
-       1 2 3 4 5 ...  30      35 ...          60
-  j-f | | | | |   |   |        |               |   <-- Each vertical 5-hole col connected
+```circuit:breadboard-map
+Breadboard Internal Bus Map (830-Hole, DLSU-CT "W" Split):
+  (-) [o o o ... o o]  W  [o o o ... o o]   <-- Split at "W" (needs jumper!)
+  (+) [o o o ... o o]  W  [o o o ... o o]
+       1 2 3 4 5 ... 30    35 ...      60
+  j-f | | | | |   |   |        |             <-- Each vertical 5-hole column
   === CENTER IC TRENCH (NO VERTICAL CONNECTION ACROSS) ===
-  e-a | | | | |   |   |        |               |   <-- Each vertical 5-hole col connected
+  e-a | | | | |   |   |        |             <-- Each vertical 5-hole column
+```
 
+```circuit:lab1-led-series
 Lab 1 Part 1 Schematic:
   +9V ---[ Switch ]---[ R (10k / 1k / 100k) ]---(>|) LED (flat=cathode)--- GND
 
-Lab 1 Part 2 Schematic (with 1k Safety Limiter & 50k Potentiometer):
-  +9V ---[ Switch ]---[ 1k safety ]---/\/\/\ (50k Pot, pin 14 to wiper 15)---(>|) LED--- GND
-                                         ^-- pin 16 unconnected (moving wire 14->16 reverses dial)
+Lab 1 Part 2 Schematic (1k safety limiter, 50k potentiometer):
+  +9V ---[ Switch ]---[ 1k safety ]---/\/\/\ (50k Pot)---(>|) LED--- GND
+                                      ^-- pin 14 to wiper 15
+                                      pin 16 unconnected (moving wire 14->16
+                                      reverses the dial)
 ```
 
 ### Breadboard Circuit Verification & Debugging Flow

@@ -107,14 +107,22 @@ A $10\text{ V}$ DC battery powers three resistors: $R_1 = 8\ \Omega$, $R_2 = 8\ 
 
 ### Instrument Connection Rules (Voltmeter, Ammeter, Ohmmeter)
 
-```text
-1. VOLTMETER (Parallel)             2. AMMETER (Series)
-   +---[ R_load ]---+                  +----( A )----+
-   |                |                  |             |
-  (+)              (-)                (+)          [ R_load ]
-  [V_src]          ( V )              [V_src]        |
-  (-)              (+)                (-)------------+
+```circuit:instrument-connections
+1. VOLTMETER (Parallel)
+   +---[ R_load ]---+
+   |                |
+  (+)              (-)
+  [V_src]          ( V )
+  (-)              (+)
+   |                |
    +----------------+
+
+2. AMMETER (Series)
+   +----( A )----+
+   |             |
+  (+)        [ R_load ]
+  [V_src]        |
+  (-)------------+
 
 3. OHMMETER (Power OFF, Component Isolated)
    [V_src DISCONNECTED]     [ R_test ]---( Omega )---[ R_test other end ]
