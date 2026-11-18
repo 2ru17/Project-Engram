@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
+import { TOTAL_COURSE_COUNT, TOTAL_MONOGRAPH_COUNT } from "@/lib/course-registry";
+import { TOTAL_SIMULATOR_COUNT } from "@/lib/simulator-registry";
 
 interface ContributeHelpModalProps {
   isOpen: boolean;
@@ -147,7 +149,7 @@ export default function ContributeHelpModal({
                       </a>
                     </div>
                     <p className="text-xs sm:text-sm text-[var(--zen-ink-muted)] leading-relaxed">
-                      Built with Next.js 16 App Router, React 19, Tailwind CSS, Unified/Remark/KaTeX, and Mermaid. Contains 26 Computer Science courses, 559 structured monographs, a force-directed Obsidian-style knowledge graph, and 29 interactive simulators.
+                      Built with Next.js 16 App Router, React 19, Tailwind CSS, Unified/Remark/KaTeX, and Mermaid. Contains {TOTAL_COURSE_COUNT} Computer Science courses, {TOTAL_MONOGRAPH_COUNT} structured monographs, a force-directed Obsidian-style knowledge graph, and {TOTAL_SIMULATOR_COUNT} interactive simulators.
                     </p>
                   </div>
 

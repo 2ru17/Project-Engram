@@ -12,6 +12,9 @@ import { STUDY_PLAN_TIER_LIST, STUDY_PLAN_TIERS } from "@/lib/study-plans";
 import {
   COURSE_REGISTRY,
   STAR_DOMAINS,
+  TOTAL_COURSE_COUNT,
+  TOTAL_MONOGRAPH_COUNT,
+  TOTAL_DOMAIN_COUNT,
   type StarDomainId,
   type CourseTrack,
 } from "@/lib/course-registry";
@@ -197,7 +200,9 @@ export default function HomePage() {
           {/* Brutalist Ticker Banner */}
           <div className="w-full border-[3px] border-[#0A0A0A] bg-[#0A0A0A] text-[#F4F3EE] px-4 py-2 mb-8 shadow-[5px_5px_0px_#C5221F] flex flex-wrap items-center justify-between gap-2 font-mono text-xs font-bold uppercase tracking-wider">
             <span>SYS.ENGRAM // V2.0 BAUHAUS EDITION</span>
-            <span>26 COURSES // 559 MONOGRAPHS // ZERO ACCOUNTS</span>
+            <span>
+              {TOTAL_COURSE_COUNT} COURSES // {TOTAL_MONOGRAPH_COUNT} MONOGRAPHS // ZERO ACCOUNTS
+            </span>
             <span>OPEN SOURCE MIT</span>
           </div>
 
@@ -242,15 +247,15 @@ export default function HomePage() {
                 </span>
                 <div className="my-4">
                   <div className="text-5xl font-black font-mono leading-none text-[#0A0A0A]">
-                    559
+                    {TOTAL_MONOGRAPH_COUNT}
                   </div>
                   <div className="font-mono text-xs font-bold uppercase mt-1 text-[#2D2D2A]">
                     ACADEMIC MONOGRAPHS
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-3 border-t-[2px] border-[#0A0A0A] font-mono text-xs font-bold">
-                  <div>26 COURSES</div>
-                  <div>4 DOMAINS</div>
+                  <div>{TOTAL_COURSE_COUNT} COURSES</div>
+                  <div>{TOTAL_DOMAIN_COUNT} DOMAINS</div>
                 </div>
               </div>
 
@@ -271,9 +276,11 @@ export default function HomePage() {
         <section className="relative pt-16 pb-20 px-6 sm:px-12 max-w-7xl mx-auto border-b border-[var(--zen-border)]">
           {/* Top Swiss Editorial Metadata Row */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pb-8 mb-14 border-b border-[var(--zen-border)] text-[11px] font-mono uppercase tracking-wider text-[var(--zen-ink-muted)]">
-            <div>INDEX // 01-26</div>
+            <div>
+              INDEX // 01-{String(TOTAL_COURSE_COUNT).padStart(2, "0")}
+            </div>
             <div>DISCIPLINE // COMPUTER SCIENCE</div>
-            <div>CORPUS // 559 MONOGRAPHS</div>
+            <div>CORPUS // {TOTAL_MONOGRAPH_COUNT} MONOGRAPHS</div>
             <div className="sm:text-right">EDITION // V2.0</div>
           </div>
 
@@ -316,7 +323,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center justify-between text-[10px] font-mono text-[#545049] mb-8 pb-3 border-b border-[#141413]/20">
                 <span>COORD: X-00.0 // Y-14.2</span>
-                <span>SCALE: 1:1 // 26 COURSES</span>
+                <span>SCALE: 1:1 // {TOTAL_COURSE_COUNT} COURSES</span>
               </div>
 
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-[-0.03em] text-[#0A0A09] leading-[0.96] mb-6">
@@ -326,7 +333,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-sm sm:text-base text-[#1A1917] max-w-xl leading-relaxed font-mono">
-                Deconstructed academic repository mapping 559 Computer Science monographs across four structural domains without rigid year-level constraints.
+                Deconstructed academic repository mapping {TOTAL_MONOGRAPH_COUNT} Computer Science monographs across {TOTAL_DOMAIN_COUNT} structural domains without rigid year-level constraints.
               </p>
             </div>
 
@@ -340,11 +347,11 @@ export default function HomePage() {
               <div className="space-y-3 font-mono text-xs text-[#1A1917] my-4">
                 <div className="flex justify-between py-1.5 border-b border-[#141413]/20">
                   <span className="text-[#545049]">TOTAL COURSES</span>
-                  <span className="font-bold">26 MODULES</span>
+                  <span className="font-bold">{TOTAL_COURSE_COUNT} MODULES</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-[#141413]/20">
                   <span className="text-[#545049]">MONOGRAPH CORPUS</span>
-                  <span className="font-bold">559 DOCUMENTS</span>
+                  <span className="font-bold">{TOTAL_MONOGRAPH_COUNT} DOCUMENTS</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-[#141413]/20">
                   <span className="text-[#545049]">DOMAINS</span>
@@ -475,7 +482,7 @@ export default function HomePage() {
           >
             {universe === "parallax" && (
               <div className="mb-4 px-3.5 py-1 rounded-full border border-[var(--zen-cyan)]/40 bg-[var(--zen-cyan)]/10 font-mono text-[10px] tracking-[0.3em] text-[var(--zen-cyan)] uppercase">
-                DEEP HORIZON EXPEDITION ARCHIVE // 26 SECTORS
+                DEEP HORIZON EXPEDITION ARCHIVE // {TOTAL_COURSE_COUNT} SECTORS
               </div>
             )}
 
@@ -541,15 +548,15 @@ export default function HomePage() {
               </span>
               <span className="text-[var(--zen-cyan)]">·</span>
               <span className="flex items-center gap-1.5">
-                [ <NumberTicker value={26} className="text-[var(--zen-snow)] font-semibold" /> COURSES ]
+                [ <NumberTicker value={TOTAL_COURSE_COUNT} className="text-[var(--zen-snow)] font-semibold" /> COURSES ]
               </span>
               <span className="text-[var(--zen-cyan)]">·</span>
               <span className="flex items-center gap-1.5">
-                [ <NumberTicker value={559} className="text-[var(--zen-snow)] font-semibold" /> MONOGRAPHS ]
+                [ <NumberTicker value={TOTAL_MONOGRAPH_COUNT} className="text-[var(--zen-snow)] font-semibold" /> MONOGRAPHS ]
               </span>
               <span className="text-[var(--zen-cyan)]">·</span>
               <span className="flex items-center gap-1.5">
-                [ <NumberTicker value={4} className="text-[var(--zen-snow)] font-semibold" /> DOMAINS ]
+                [ <NumberTicker value={TOTAL_DOMAIN_COUNT} className="text-[var(--zen-snow)] font-semibold" /> DOMAINS ]
               </span>
             </div>
           </motion.div>
@@ -768,7 +775,7 @@ export default function HomePage() {
                   THE KNOWLEDGE GRAPH
                 </h3>
                 <p className="text-sm sm:text-base text-[var(--zen-frost)] opacity-85 leading-relaxed max-w-md">
-                  Explore an interactive force-directed graph where Computer Science anchors the core, linking 26 courses and 559 academic monographs across domains.
+                  Explore an interactive force-directed graph where Computer Science anchors the core, linking {TOTAL_COURSE_COUNT} courses and {TOTAL_MONOGRAPH_COUNT} academic monographs across domains.
                 </p>
               </div>
 
@@ -944,11 +951,11 @@ export default function HomePage() {
               {universe === "cyber-zen"
                 ? "体系的課程 // SUBJECT CURRICULUM"
                 : universe === "neo-brutalism"
-                ? "DATABASE // 26 COURSE MODULES"
+                ? `DATABASE // ${TOTAL_COURSE_COUNT} COURSE MODULES`
                 : universe === "minimalism"
                 ? "02 // CURRICULUM INDEX"
                 : universe === "parallax"
-                ? "SECTOR MATRIX // 26 COURSES"
+                ? `SECTOR MATRIX // ${TOTAL_COURSE_COUNT} COURSES`
                 : "SECT. 02 // CURRICULAR MATRIX"}
             </span>
             <h2
@@ -959,7 +966,7 @@ export default function HomePage() {
             </h2>
           </div>
           <p className="text-xs font-mono tracking-wider text-[var(--zen-ink-muted)]">
-            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} COURSES · 559 MONOGRAPHS
+            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} COURSES · {TOTAL_MONOGRAPH_COUNT} MONOGRAPHS
           </p>
         </div>
 
