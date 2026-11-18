@@ -30,6 +30,7 @@ export const CHANGELOG_ENTRIES: ChangelogEntry[] = [
       "Added dedicated /terms, /privacy, and /cookies compliance pages paired with a keyboard-dismissible CookieConsentBanner.",
       "Expanded sitemap.ts across all 26 courses, 29 simulators, legal routes, and 559 monographs alongside /twitter-image and custom 404 jump search.",
       "Hardened Content-Security-Policy, least-privilege CI token permissions, EG2 relative path validation, and non-breaking npm dependencies.",
+      "Added automated course monograph count synchronization (npm run sync:counts), Gate 6 COURSE_REGISTRY parity enforcement in validate-notes.mjs, and single-source-of-truth count constants (TOTAL_COURSE_COUNT, TOTAL_MONOGRAPH_COUNT, TOTAL_DOMAIN_COUNT, TOTAL_SIMULATOR_COUNT) (e3c8d4c).",
     ],
   },
   {
