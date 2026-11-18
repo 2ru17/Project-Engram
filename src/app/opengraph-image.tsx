@@ -1,4 +1,6 @@
 import { ImageResponse } from 'next/og';
+import { TOTAL_COURSE_COUNT, TOTAL_MONOGRAPH_COUNT } from '@/lib/course-registry';
+import { TOTAL_SIMULATOR_COUNT } from '@/lib/simulator-registry';
 
 export const runtime = 'nodejs';
 export const alt = 'Project Engram // 銘印 - Computer Science & Systems Architecture Knowledge Archive';
@@ -131,7 +133,7 @@ export default async function Image() {
               letterSpacing: '0.12em',
             }}
           >
-            559+ CLASSIFIED MONOGRAPHS
+            {TOTAL_MONOGRAPH_COUNT}+ CLASSIFIED MONOGRAPHS
           </div>
         </div>
 
@@ -158,7 +160,7 @@ export default async function Image() {
               margin: 0,
             }}
           >
-            A high-performance topological knowledge vault synthesizing 26 curricular courses, 29 interactive simulators, relational force graphs, and 559 verified monographs.
+            A high-performance topological knowledge vault synthesizing {TOTAL_COURSE_COUNT} curricular courses, {TOTAL_SIMULATOR_COUNT} interactive simulators, relational force graphs, and {TOTAL_MONOGRAPH_COUNT} verified monographs.
           </p>
         </div>
 

@@ -477,6 +477,7 @@ export const SIMULATOR_REGISTRY: Record<string, SimulatorMeta> = {
 };
 
 export const SIMULATOR_LIST: SimulatorMeta[] = Object.values(SIMULATOR_REGISTRY);
+export const TOTAL_SIMULATOR_COUNT = SIMULATOR_LIST.length;
 
 export const SIMULATOR_ALIASES: Record<string, string> = {
   "digital-logic": "digital-logic",

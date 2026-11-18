@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
+import { TOTAL_COURSE_COUNT, TOTAL_MONOGRAPH_COUNT } from "@/lib/course-registry";
+import { TOTAL_SIMULATOR_COUNT } from "@/lib/simulator-registry";
 
 interface FeatureGuideModalProps {
   isOpen: boolean;
@@ -135,7 +137,7 @@ export default function FeatureGuideModal({
                         Knowledge Graph &amp; Curricular Directory
                       </h3>
                       <p className="text-xs text-[var(--zen-ink-muted)] leading-relaxed">
-                        Switch seamlessly between the interactive force-directed topology (<code className="text-[var(--zen-cyan)]">/notes?view=graph</code>) and the hierarchical module directory (<code className="text-[var(--zen-cyan)]">/notes?view=directory</code>) covering 26 courses and 559 monographs.
+                        Switch seamlessly between the interactive force-directed topology (<code className="text-[var(--zen-cyan)]">/notes?view=graph</code>) and the hierarchical module directory (<code className="text-[var(--zen-cyan)]">/notes?view=directory</code>) covering {TOTAL_COURSE_COUNT} courses and {TOTAL_MONOGRAPH_COUNT} monographs.
                       </p>
                     </div>
 
@@ -211,7 +213,7 @@ export default function FeatureGuideModal({
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl border border-[var(--zen-cyan)]/30 bg-[var(--zen-cyan)]/5 space-y-2">
                     <span className="text-[10px] font-mono uppercase tracking-widest text-[var(--zen-cyan)] font-semibold">
-                      29 INTERACTIVE ENGINEERING WORKBENCHES
+                      {TOTAL_SIMULATOR_COUNT} INTERACTIVE ENGINEERING WORKBENCHES
                     </span>
                     <p className="text-xs sm:text-sm text-[var(--zen-frost)] leading-relaxed">
                       Every simulator is mapped directly to its parent courses across Systems, Architecture, Networks, Security, Algorithms, and Electronics. You can launch them from the dedicated studio (<code className="text-[var(--zen-cyan)]">/simulators</code>) or inline inside lecture notes.

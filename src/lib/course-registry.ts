@@ -122,7 +122,7 @@ export const COURSE_REGISTRY: CourseInfo[] = [
     track: "Core CS",
     relatedCourses: ["CSARCH1", "LBYARCH", "CSOPESY"],
     defaultSimulators: ["pipeline-cache", "digital-logic"],
-    count: 35,
+    count: 34,
     href: "/notes/CSARCH2",
     year: 2,
     yearLabel: "2nd Year",
@@ -154,7 +154,7 @@ export const COURSE_REGISTRY: CourseInfo[] = [
     track: "Core CS",
     relatedCourses: ["CSARCH2", "CCPROG2", "CSNETWK", "NSSECU1"],
     defaultSimulators: ["cpu-scheduler", "page-replacement"],
-    count: 10,
+    count: 13,
     href: "/notes/CSOPESY",
     year: 3,
     yearLabel: "3rd Year",
@@ -284,7 +284,7 @@ export const COURSE_REGISTRY: CourseInfo[] = [
     track: "Core CS",
     relatedCourses: ["CCDSALG", "CCDSTRU", "CSINTSY", "CSMATH2"],
     defaultSimulators: ["algo-visualizer"],
-    count: 44,
+    count: 48,
     href: "/notes/CSALGCM",
     year: 3,
     yearLabel: "3rd Year",
@@ -508,6 +508,13 @@ export const COURSE_REGISTRY: CourseInfo[] = [
 export const COURSE_MAP: Map<string, CourseInfo> = new Map(
   COURSE_REGISTRY.map((c) => [c.code.toUpperCase(), c])
 );
+
+export const TOTAL_COURSE_COUNT = COURSE_REGISTRY.length;
+export const TOTAL_MONOGRAPH_COUNT = COURSE_REGISTRY.reduce(
+  (sum, course) => sum + course.count,
+  0
+);
+export const TOTAL_DOMAIN_COUNT = Object.keys(STAR_DOMAINS).length;
 
 export function getCourseInfo(code: string): CourseInfo | undefined {
   if (!code) return undefined;
