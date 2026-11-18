@@ -56,12 +56,14 @@ Access the local development server at `http://localhost:3000`.
 
 ### Content Authoring Workflow (Direct In-Repo Editing)
 1. Edit or create `.md` monographs directly inside `./content/Main Notes/<Year>/<Term>/<COURSE_CODE>/Module XX - <Topic>/` (using any IDE or by opening `./content/Main Notes/` directly as an Obsidian vault).
-2. Run `npm run validate:notes` to verify YAML frontmatter, callout metadata, and interactive assessment syntax (`A)-D)`, `[MSQ]`, `[INPUT]`, `[BLANK]`).
-3. Run `npm run build` to verify static route generation before committing.
+2. If you added, moved, or deleted `.md` monographs, run `npm run sync:counts` (`node scripts/validate-notes.mjs --sync`) to automatically synchronize per-course `count` values in `src/lib/course-registry.ts` (all UI and OpenGraph views derive totals from the single-source-of-truth constants `TOTAL_COURSE_COUNT`, `TOTAL_MONOGRAPH_COUNT`, `TOTAL_DOMAIN_COUNT`, and `TOTAL_SIMULATOR_COUNT`).
+3. Run `npm run validate:notes` to verify YAML frontmatter, callout metadata, interactive assessment syntax (`A)-D)`, `[MSQ]`, `[INPUT]`, `[BLANK]`), and Gate 6 parity between `./content/Main Notes/` and `COURSE_REGISTRY` in `src/lib/course-registry.ts`.
+4. Run `npm run build` to verify static route generation before committing.
 
 ### Pre-Push Verification Suite
 Always run the validation and build pipeline locally before opening a Pull Request:
 ```bash
+npm run sync:counts
 npm run validate:notes
 npm run typecheck
 npm run lint
@@ -196,7 +198,7 @@ Before submitting any UI or content PR, verify:
    * `fix/mcq-parser-[description]`
    * `content/[course-code]-[topic]`
    * `docs/[update-topic]`
-3. Run `npm run validate:notes && npm run build` locally.
+3. Run `npm run sync:counts && npm run validate:notes && npm run typecheck && npm run lint && npm run build` locally.
 4. Open a Pull Request detailing:
    * Summary of architectural, UI, or monograph changes
    * Impacted courses, simulators, or Universe themes

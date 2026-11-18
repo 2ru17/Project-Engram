@@ -483,6 +483,10 @@ export function AvalancheCryptoWorkbench() {
           </div>
         </div>
       )}
+
+      <div className="mt-4 p-3 rounded-lg border border-amber-500/30 bg-amber-500/5 font-mono text-[11px] text-amber-300/90">
+        PEDAGOGICAL NOTICE: The 64-bit SPN toy block cipher and small-prime Diffie-Hellman group shown here are reduced-scale learning models. Production systems require AES-256-GCM / ChaCha20-Poly1305 and ECDHE (X25519) or ≥ 2048-bit safe primes with CSPRNG nonces.
+      </div>
     </SimulatorWorkbenchShell>
   );
 }

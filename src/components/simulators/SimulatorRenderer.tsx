@@ -1,38 +1,174 @@
 "use client";
 
+import { memo, useMemo } from "react";
 import Link from "next/link";
-import { LogicGateWorkbench } from "./LogicGateWorkbench";
-import { CpuPipelineWorkbench } from "./CpuPipelineWorkbench";
-import { ProcessSchedulerWorkbench } from "./ProcessSchedulerWorkbench";
-import { VirtualMemoryWorkbench } from "./VirtualMemoryWorkbench";
-import { SubnetRouterWorkbench } from "./SubnetRouterWorkbench";
-import { CryptoCipherWorkbench } from "./CryptoCipherWorkbench";
-import { SqlOptimizerWorkbench } from "./SqlOptimizerWorkbench";
-import { AstParserWorkbench } from "./AstParserWorkbench";
-import { GraphPathfinderWorkbench } from "./GraphPathfinderWorkbench";
-import { ProbabilityStudioWorkbench } from "./ProbabilityStudioWorkbench";
-import { FloatingPointWorkbench } from "./FloatingPointWorkbench";
-import { SortingVisualizerWorkbench } from "./SortingVisualizerWorkbench";
-import { TcpFlowWorkbench } from "./TcpFlowWorkbench";
-import { DistributedConsensusWorkbench } from "./DistributedConsensusWorkbench";
-import { AppSecSanitizerWorkbench } from "./AppSecSanitizerWorkbench";
-import { PerceptronWorkbench } from "./PerceptronWorkbench";
-import { EmbeddedGpioWorkbench } from "./EmbeddedGpioWorkbench";
-import { RelationalNormalizationWorkbench } from "./RelationalNormalizationWorkbench";
-import { PipelineHazardWorkbench } from "./PipelineHazardWorkbench";
-import { VirtualMemoryPageWorkbench } from "./VirtualMemoryPageWorkbench";
-import { TcpCongestionWorkbench } from "./TcpCongestionWorkbench";
-import { AvalancheCryptoWorkbench } from "./AvalancheCryptoWorkbench";
-import { GraphAlgorithmArenaWorkbench } from "./GraphAlgorithmArenaWorkbench";
-import { AutomataTapeWorkbench } from "./AutomataTapeWorkbench";
-import { BPlusTreeTransactionWorkbench } from "./BPlusTreeTransactionWorkbench";
-import { AnalogModulationWorkbench } from "./AnalogModulationWorkbench";
-import { RcTimingWorkbench } from "./RcTimingWorkbench";
-import { ScopeQuantizerWorkbench } from "./ScopeQuantizerWorkbench";
-import { RectifierSupplyWorkbench } from "./RectifierSupplyWorkbench";
+import dynamic from "next/dynamic";
 import { KatexFormula } from "./shared/SimulatorWorkbenchShell";
+import { SimulatorWorkbenchSkeleton } from "@/components/ui/Skeleton";
 import { resolveSimulator } from "@/lib/simulator-registry";
 import { getCourseInfo } from "@/lib/course-registry";
+
+const loadingFallback = () => <SimulatorWorkbenchSkeleton />;
+
+const LogicGateWorkbench = dynamic(
+  () => import("./LogicGateWorkbench").then((m) => m.LogicGateWorkbench),
+  { loading: loadingFallback }
+);
+const CpuPipelineWorkbench = dynamic(
+  () => import("./CpuPipelineWorkbench").then((m) => m.CpuPipelineWorkbench),
+  { loading: loadingFallback }
+);
+const ProcessSchedulerWorkbench = dynamic(
+  () =>
+    import("./ProcessSchedulerWorkbench").then(
+      (m) => m.ProcessSchedulerWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const VirtualMemoryWorkbench = dynamic(
+  () =>
+    import("./VirtualMemoryWorkbench").then((m) => m.VirtualMemoryWorkbench),
+  { loading: loadingFallback }
+);
+const SubnetRouterWorkbench = dynamic(
+  () => import("./SubnetRouterWorkbench").then((m) => m.SubnetRouterWorkbench),
+  { loading: loadingFallback }
+);
+const CryptoCipherWorkbench = dynamic(
+  () => import("./CryptoCipherWorkbench").then((m) => m.CryptoCipherWorkbench),
+  { loading: loadingFallback }
+);
+const SqlOptimizerWorkbench = dynamic(
+  () => import("./SqlOptimizerWorkbench").then((m) => m.SqlOptimizerWorkbench),
+  { loading: loadingFallback }
+);
+const AstParserWorkbench = dynamic(
+  () => import("./AstParserWorkbench").then((m) => m.AstParserWorkbench),
+  { loading: loadingFallback }
+);
+const GraphPathfinderWorkbench = dynamic(
+  () =>
+    import("./GraphPathfinderWorkbench").then(
+      (m) => m.GraphPathfinderWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const ProbabilityStudioWorkbench = dynamic(
+  () =>
+    import("./ProbabilityStudioWorkbench").then(
+      (m) => m.ProbabilityStudioWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const FloatingPointWorkbench = dynamic(
+  () =>
+    import("./FloatingPointWorkbench").then((m) => m.FloatingPointWorkbench),
+  { loading: loadingFallback }
+);
+const SortingVisualizerWorkbench = dynamic(
+  () =>
+    import("./SortingVisualizerWorkbench").then(
+      (m) => m.SortingVisualizerWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const TcpFlowWorkbench = dynamic(
+  () => import("./TcpFlowWorkbench").then((m) => m.TcpFlowWorkbench),
+  { loading: loadingFallback }
+);
+const DistributedConsensusWorkbench = dynamic(
+  () =>
+    import("./DistributedConsensusWorkbench").then(
+      (m) => m.DistributedConsensusWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const AppSecSanitizerWorkbench = dynamic(
+  () =>
+    import("./AppSecSanitizerWorkbench").then(
+      (m) => m.AppSecSanitizerWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const PerceptronWorkbench = dynamic(
+  () => import("./PerceptronWorkbench").then((m) => m.PerceptronWorkbench),
+  { loading: loadingFallback }
+);
+const EmbeddedGpioWorkbench = dynamic(
+  () => import("./EmbeddedGpioWorkbench").then((m) => m.EmbeddedGpioWorkbench),
+  { loading: loadingFallback }
+);
+const RelationalNormalizationWorkbench = dynamic(
+  () =>
+    import("./RelationalNormalizationWorkbench").then(
+      (m) => m.RelationalNormalizationWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const PipelineHazardWorkbench = dynamic(
+  () =>
+    import("./PipelineHazardWorkbench").then((m) => m.PipelineHazardWorkbench),
+  { loading: loadingFallback }
+);
+const VirtualMemoryPageWorkbench = dynamic(
+  () =>
+    import("./VirtualMemoryPageWorkbench").then(
+      (m) => m.VirtualMemoryPageWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const TcpCongestionWorkbench = dynamic(
+  () =>
+    import("./TcpCongestionWorkbench").then((m) => m.TcpCongestionWorkbench),
+  { loading: loadingFallback }
+);
+const AvalancheCryptoWorkbench = dynamic(
+  () =>
+    import("./AvalancheCryptoWorkbench").then(
+      (m) => m.AvalancheCryptoWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const GraphAlgorithmArenaWorkbench = dynamic(
+  () =>
+    import("./GraphAlgorithmArenaWorkbench").then(
+      (m) => m.GraphAlgorithmArenaWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const AutomataTapeWorkbench = dynamic(
+  () => import("./AutomataTapeWorkbench").then((m) => m.AutomataTapeWorkbench),
+  { loading: loadingFallback }
+);
+const BPlusTreeTransactionWorkbench = dynamic(
+  () =>
+    import("./BPlusTreeTransactionWorkbench").then(
+      (m) => m.BPlusTreeTransactionWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const AnalogModulationWorkbench = dynamic(
+  () =>
+    import("./AnalogModulationWorkbench").then(
+      (m) => m.AnalogModulationWorkbench
+    ),
+  { loading: loadingFallback }
+);
+const RcTimingWorkbench = dynamic(
+  () => import("./RcTimingWorkbench").then((m) => m.RcTimingWorkbench),
+  { loading: loadingFallback }
+);
+const ScopeQuantizerWorkbench = dynamic(
+  () => import("./ScopeQuantizerWorkbench").then((m) => m.ScopeQuantizerWorkbench),
+  { loading: loadingFallback }
+);
+const RectifierSupplyWorkbench = dynamic(
+  () =>
+    import("./RectifierSupplyWorkbench").then(
+      (m) => m.RectifierSupplyWorkbench
+    ),
+  { loading: loadingFallback }
+);
 
 const NATIVE_SHELL_IDS = new Set([
   "pipeline-hazard",
@@ -51,11 +187,13 @@ const NATIVE_SHELL_IDS = new Set([
 const LEGACY_INVARIANTS: Record<string, { label: string; latex: string }> = {
   "digital-logic": {
     label: "De Morgan's Duality Law",
-    latex: "\\overline{A \\cdot B} \\equiv \\overline{A} + \\overline{B},\\quad \\overline{A + B} \\equiv \\overline{A} \\cdot \\overline{B}",
+    latex:
+      "\\overline{A \\cdot B} \\equiv \\overline{A} + \\overline{B},\\quad \\overline{A + B} \\equiv \\overline{A} \\cdot \\overline{B}",
   },
   "pipeline-cache": {
     label: "Average Memory Access Time (AMAT)",
-    latex: "\\text{AMAT} = \\text{Hit Time}_{L1} + \\text{Miss Rate}_{L1} \\times \\text{Miss Penalty}_{L1}",
+    latex:
+      "\\text{AMAT} = \\text{Hit Time}_{L1} + \\text{Miss Rate}_{L1} \\times \\text{Miss Penalty}_{L1}",
   },
   "cpu-scheduler": {
     label: "Turnaround & Wait Relation",
@@ -63,7 +201,8 @@ const LEGACY_INVARIANTS: Record<string, { label: string; latex: string }> = {
   },
   "page-replacement": {
     label: "Belady Optimal Bound",
-    latex: "\\text{Faults}_{\\text{OPT}} \\le \\text{Faults}_{\\text{LRU}},\\; \\text{Faults}_{\\text{FIFO}}",
+    latex:
+      "\\text{Faults}_{\\text{OPT}} \\le \\text{Faults}_{\\text{LRU}},\\; \\text{Faults}_{\\text{FIFO}}",
   },
   "ieee754-float": {
     label: "IEEE-754 Single Precision Value",
@@ -71,7 +210,8 @@ const LEGACY_INVARIANTS: Record<string, { label: string; latex: string }> = {
   },
   "embedded-gpio": {
     label: "PWM Timer Carrier Frequency",
-    latex: "f_{\\text{PWM}} = \\frac{f_{\\text{CLK}}}{(\\text{PSC} + 1)(\\text{ARR} + 1)}",
+    latex:
+      "f_{\\text{PWM}} = \\frac{f_{\\text{CLK}}}{(\\text{PSC} + 1)(\\text{ARR} + 1)}",
   },
   "distributed-consensus": {
     label: "Raft Quorum Intersection",
@@ -87,11 +227,13 @@ const LEGACY_INVARIANTS: Record<string, { label: string; latex: string }> = {
   },
   "security-lab": {
     label: "Euler Totient & RSA Key Pair",
-    latex: "e \\cdot d \\equiv 1 \\pmod{(p-1)(q-1)},\\quad M^{ed} \\equiv M \\pmod n",
+    latex:
+      "e \\cdot d \\equiv 1 \\pmod{(p-1)(q-1)},\\quad M^{ed} \\equiv M \\pmod n",
   },
   "appsec-sanitizer": {
     label: "Context-Aware Output Encoding",
-    latex: "\\text{Safe}(u) = \\text{Escape}_{\\text{ctx}}(\\text{Canonicalize}(u))",
+    latex:
+      "\\text{Safe}(u) = \\text{Escape}_{\\text{ctx}}(\\text{Canonicalize}(u))",
   },
   "db-web-lab": {
     label: "Relational Join Cardinality Upper Bound",
@@ -99,11 +241,13 @@ const LEGACY_INVARIANTS: Record<string, { label: string; latex: string }> = {
   },
   "relational-normalization": {
     label: "BCNF Decomposition Condition",
-    latex: "\\forall (X \\to Y) \\in F^+ : (Y \\subseteq X) \\lor (X \\text{ is Superkey})",
+    latex:
+      "\\forall (X \\to Y) \\in F^+ : (Y \\subseteq X) \\lor (X \\text{ is Superkey})",
   },
   "memory-model": {
     label: "Recursive Descent Evaluation",
-    latex: "\\text{Eval}(\\text{BinOp}(op, L, R)) = op(\\text{Eval}(L),\\; \\text{Eval}(R))",
+    latex:
+      "\\text{Eval}(\\text{BinOp}(op, L, R)) = op(\\text{Eval}(L),\\; \\text{Eval}(R))",
   },
   "algo-visualizer": {
     label: "Dijkstra Non-Negative Invariant",
@@ -115,96 +259,107 @@ const LEGACY_INVARIANTS: Record<string, { label: string; latex: string }> = {
   },
   "stats-modeling": {
     label: "Gaussian Density Function",
-    latex: "f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} \\exp\\!\\left(-\\frac{(x - \\mu)^2}{2\\sigma^2}\\right)",
+    latex:
+      "f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} \\exp\\!\\left(-\\frac{(x - \\mu)^2}{2\\sigma^2}\\right)",
   },
   "neural-perceptron": {
     label: "Perceptron Decision Hyperplane",
-    latex: "\\hat{y} = \\sigma(\\mathbf{w}^\\top \\mathbf{x} + b),\\quad \\Delta \\mathbf{w} = \\eta (y - \\hat{y}) \\mathbf{x}",
+    latex:
+      "\\hat{y} = \\sigma(\\mathbf{w}^\\top \\mathbf{x} + b),\\quad \\Delta \\mathbf{w} = \\eta (y - \\hat{y}) \\mathbf{x}",
   },
 };
 
-export function SimulatorRenderer({ simulatorId }: { simulatorId: string }) {
-  const meta = resolveSimulator(simulatorId);
+function renderWorkbenchById(canonicalId: string, originalId: string) {
+  switch (canonicalId) {
+    case "digital-logic":
+      return <LogicGateWorkbench />;
+    case "pipeline-cache":
+      return <CpuPipelineWorkbench />;
+    case "cpu-scheduler":
+      return <ProcessSchedulerWorkbench />;
+    case "page-replacement":
+      return <VirtualMemoryWorkbench />;
+    case "network-lab":
+      return <SubnetRouterWorkbench />;
+    case "security-lab":
+      return <CryptoCipherWorkbench />;
+    case "db-web-lab":
+      return <SqlOptimizerWorkbench />;
+    case "memory-model":
+      return <AstParserWorkbench />;
+    case "algo-visualizer":
+      return <GraphPathfinderWorkbench />;
+    case "stats-modeling":
+      return <ProbabilityStudioWorkbench />;
+    case "ieee754-float":
+      return <FloatingPointWorkbench />;
+    case "sorting-bench":
+      return <SortingVisualizerWorkbench />;
+    case "tcp-flow":
+      return <TcpFlowWorkbench />;
+    case "distributed-consensus":
+      return <DistributedConsensusWorkbench />;
+    case "appsec-sanitizer":
+      return <AppSecSanitizerWorkbench />;
+    case "neural-perceptron":
+      return <PerceptronWorkbench />;
+    case "embedded-gpio":
+      return <EmbeddedGpioWorkbench />;
+    case "relational-normalization":
+      return <RelationalNormalizationWorkbench />;
+    case "pipeline-hazard":
+      return <PipelineHazardWorkbench />;
+    case "virtual-memory-page":
+      return <VirtualMemoryPageWorkbench />;
+    case "tcp-congestion":
+      return <TcpCongestionWorkbench />;
+    case "avalanche-crypto":
+      return <AvalancheCryptoWorkbench />;
+    case "graph-algorithm-arena":
+      return <GraphAlgorithmArenaWorkbench />;
+    case "automata-tape":
+      return <AutomataTapeWorkbench />;
+    case "bplustree-transaction":
+      return <BPlusTreeTransactionWorkbench />;
+    case "analog-modulation":
+      return <AnalogModulationWorkbench />;
+    case "rc-timing":
+      return <RcTimingWorkbench />;
+    case "scope-quantizer":
+      return <ScopeQuantizerWorkbench />;
+    case "rectifier-supply":
+      return <RectifierSupplyWorkbench />;
+    default:
+      return (
+        <div className="p-4 rounded-lg border border-[var(--zen-border)] bg-[var(--zen-card)] text-xs font-mono text-[var(--zen-ink-muted)]">
+          Interactive simulator workbench [{originalId}] not found in registry.
+        </div>
+      );
+  }
+}
+
+export const SimulatorRenderer = memo(function SimulatorRenderer({
+  simulatorId,
+}: {
+  simulatorId: string;
+}) {
+  const meta = useMemo(() => resolveSimulator(simulatorId), [simulatorId]);
   const canonicalId = meta.id;
 
-  const renderInner = () => {
-    switch (canonicalId) {
-      case "digital-logic":
-        return <LogicGateWorkbench />;
-      case "pipeline-cache":
-        return <CpuPipelineWorkbench />;
-      case "cpu-scheduler":
-        return <ProcessSchedulerWorkbench />;
-      case "page-replacement":
-        return <VirtualMemoryWorkbench />;
-      case "network-lab":
-        return <SubnetRouterWorkbench />;
-      case "security-lab":
-        return <CryptoCipherWorkbench />;
-      case "db-web-lab":
-        return <SqlOptimizerWorkbench />;
-      case "memory-model":
-        return <AstParserWorkbench />;
-      case "algo-visualizer":
-        return <GraphPathfinderWorkbench />;
-      case "stats-modeling":
-        return <ProbabilityStudioWorkbench />;
-      case "ieee754-float":
-        return <FloatingPointWorkbench />;
-      case "sorting-bench":
-        return <SortingVisualizerWorkbench />;
-      case "tcp-flow":
-        return <TcpFlowWorkbench />;
-      case "distributed-consensus":
-        return <DistributedConsensusWorkbench />;
-      case "appsec-sanitizer":
-        return <AppSecSanitizerWorkbench />;
-      case "neural-perceptron":
-        return <PerceptronWorkbench />;
-      case "embedded-gpio":
-        return <EmbeddedGpioWorkbench />;
-      case "relational-normalization":
-        return <RelationalNormalizationWorkbench />;
-      case "pipeline-hazard":
-        return <PipelineHazardWorkbench />;
-      case "virtual-memory-page":
-        return <VirtualMemoryPageWorkbench />;
-      case "tcp-congestion":
-        return <TcpCongestionWorkbench />;
-      case "avalanche-crypto":
-        return <AvalancheCryptoWorkbench />;
-      case "graph-algorithm-arena":
-        return <GraphAlgorithmArenaWorkbench />;
-      case "automata-tape":
-        return <AutomataTapeWorkbench />;
-      case "bplustree-transaction":
-        return <BPlusTreeTransactionWorkbench />;
-      case "analog-modulation":
-        return <AnalogModulationWorkbench />;
-      case "rc-timing":
-        return <RcTimingWorkbench />;
-      case "scope-quantizer":
-        return <ScopeQuantizerWorkbench />;
-      case "rectifier-supply":
-        return <RectifierSupplyWorkbench />;
-      default:
-        return (
-          <div className="p-4 rounded-lg border border-[var(--zen-border)] bg-[var(--zen-card)] text-xs font-mono text-[var(--zen-ink-muted)]">
-            Interactive simulator workbench [{simulatorId}] not found in registry.
-          </div>
-        );
-    }
-  };
+  const workbench = useMemo(
+    () => renderWorkbenchById(canonicalId, simulatorId),
+    [canonicalId, simulatorId]
+  );
 
   if (NATIVE_SHELL_IDS.has(canonicalId)) {
-    return renderInner();
+    return workbench;
   }
 
   const inv = LEGACY_INVARIANTS[canonicalId];
 
   return (
     <div className="space-y-3">
-      {renderInner()}
+      {workbench}
       <div className="p-3.5 rounded-xl border border-[var(--zen-border)] bg-[var(--zen-card)] universe-card flex flex-col md:flex-row md:items-center justify-between gap-3">
         <div className="flex flex-wrap items-center gap-1.5">
           <span className="text-[10px] font-mono uppercase tracking-wider text-[var(--zen-ink-muted)] mr-1">
@@ -212,7 +367,9 @@ export function SimulatorRenderer({ simulatorId }: { simulatorId: string }) {
           </span>
           {meta.courses.map((courseCode) => {
             const info = getCourseInfo(courseCode);
-            const href = info?.href || `/notes?view=directory&q=${encodeURIComponent(courseCode)}`;
+            const href =
+              info?.href ||
+              `/notes?view=directory&q=${encodeURIComponent(courseCode)}`;
             return (
               <Link
                 key={courseCode}
@@ -236,4 +393,4 @@ export function SimulatorRenderer({ simulatorId }: { simulatorId: string }) {
       </div>
     </div>
   );
-}
+});
