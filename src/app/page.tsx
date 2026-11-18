@@ -197,7 +197,7 @@ export default function HomePage() {
           {/* Brutalist Ticker Banner */}
           <div className="w-full border-[3px] border-[#0A0A0A] bg-[#0A0A0A] text-[#F4F3EE] px-4 py-2 mb-8 shadow-[5px_5px_0px_#C5221F] flex flex-wrap items-center justify-between gap-2 font-mono text-xs font-bold uppercase tracking-wider">
             <span>SYS.ENGRAM // V2.0 BAUHAUS EDITION</span>
-            <span>25 COURSES // 539 MONOGRAPHS // ZERO ACCOUNTS</span>
+            <span>26 COURSES // 539 MONOGRAPHS // ZERO ACCOUNTS</span>
             <span>OPEN SOURCE MIT</span>
           </div>
 
@@ -249,7 +249,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-3 border-t-[2px] border-[#0A0A0A] font-mono text-xs font-bold">
-                  <div>25 COURSES</div>
+                  <div>26 COURSES</div>
                   <div>4 DOMAINS</div>
                 </div>
               </div>
@@ -316,7 +316,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center justify-between text-[10px] font-mono text-[#545049] mb-8 pb-3 border-b border-[#141413]/20">
                 <span>COORD: X-00.0 // Y-14.2</span>
-                <span>SCALE: 1:1 // 25 COURSES</span>
+                <span>SCALE: 1:1 // 26 COURSES</span>
               </div>
 
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold uppercase tracking-[-0.03em] text-[#0A0A09] leading-[0.96] mb-6">
@@ -541,7 +541,7 @@ export default function HomePage() {
               </span>
               <span className="text-[var(--zen-cyan)]">·</span>
               <span className="flex items-center gap-1.5">
-                [ <NumberTicker value={25} className="text-[var(--zen-snow)] font-semibold" /> COURSES ]
+                [ <NumberTicker value={26} className="text-[var(--zen-snow)] font-semibold" /> COURSES ]
               </span>
               <span className="text-[var(--zen-cyan)]">·</span>
               <span className="flex items-center gap-1.5">
@@ -768,7 +768,7 @@ export default function HomePage() {
                   THE KNOWLEDGE GRAPH
                 </h3>
                 <p className="text-sm sm:text-base text-[var(--zen-frost)] opacity-85 leading-relaxed max-w-md">
-                  Explore an interactive force-directed graph where Computer Science anchors the core, linking 25 courses and 539 academic monographs across domains.
+                  Explore an interactive force-directed graph where Computer Science anchors the core, linking 26 courses and 539 academic monographs across domains.
                 </p>
               </div>
 
@@ -944,11 +944,11 @@ export default function HomePage() {
               {universe === "cyber-zen"
                 ? "体系的課程 // SUBJECT CURRICULUM"
                 : universe === "neo-brutalism"
-                ? "DATABASE // 25 COURSE MODULES"
+                ? "DATABASE // 26 COURSE MODULES"
                 : universe === "minimalism"
                 ? "02 // CURRICULUM INDEX"
                 : universe === "parallax"
-                ? "SECTOR MATRIX // 25 COURSES"
+                ? "SECTOR MATRIX // 26 COURSES"
                 : "SECT. 02 // CURRICULAR MATRIX"}
             </span>
             <h2

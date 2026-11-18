@@ -161,6 +161,22 @@ export const COURSE_REGISTRY: CourseInfo[] = [
     term: "Y3 T1",
     termFull: "Term 1",
   },
+  {
+    code: "NSETRON",
+    name: "Electronics",
+    desc: "Circuit fundamentals, passive and semiconductor components, instruments, power supplies, sensing, communication principles, and PCB design.",
+    category: "systems",
+    categoryLabel: "Systems & Architecture",
+    track: "NIS",
+    relatedCourses: ["CSARCH1", "NSCOM02", "NSCOM03"],
+    defaultSimulators: ["analog-modulation", "rc-timing", "scope-quantizer", "rectifier-supply"],
+    count: 17,
+    href: "/notes/NSETRON",
+    year: 3,
+    yearLabel: "3rd Year",
+    term: "Y3 T1",
+    termFull: "Term 1",
+  },
 
   // ─── ALGORITHMS, THEORY & MODELING CONSTELLATION ──────────────────────────
   {
