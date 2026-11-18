@@ -29,6 +29,7 @@ const ContributeHelpModal = dynamic(
 );
 
 const REPO_URL = "https://github.com/2ru17/Project-Engram";
+const BMC_URL = "https://buymeacoffee.com/2ru17";
 
 export default function TopNav() {
   const pathname = usePathname() || "/";
@@ -615,6 +616,31 @@ export default function TopNav() {
                     />
                   </svg>
                 </a>
+
+                <a
+                  href={BMC_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Support Project Engram on Buy Me a Coffee"
+                  title="Support on Buy Me a Coffee"
+                  className="p-1.5 rounded border border-[var(--zen-border)] hover:border-amber-400 text-[var(--zen-frost)] hover:text-amber-300 bg-[var(--zen-card)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zen-cyan)]"
+                >
+                  <svg
+                    className="w-3.5 h-3.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M10 2v2" />
+                    <path d="M14 2v2" />
+                    <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
+                    <path d="M6 2v2" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -810,6 +836,32 @@ export default function TopNav() {
                   className="min-h-[40px] px-3 py-2 text-[11px] font-mono rounded border border-[var(--zen-border)] text-[var(--zen-cyan)] hover:border-[var(--zen-cyan)] text-left flex items-center justify-between"
                 >
                   <span>GITHUB</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+                <a
+                  href={BMC_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="col-span-2 min-h-[40px] px-3 py-2 text-[11px] font-mono rounded border border-amber-500/40 bg-amber-500/10 text-amber-300 hover:border-amber-400 text-left flex items-center justify-between"
+                >
+                  <span className="flex items-center gap-2">
+                    <svg
+                      className="w-3.5 h-3.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M10 2v2" />
+                      <path d="M14 2v2" />
+                      <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
+                      <path d="M6 2v2" />
+                    </svg>
+                    <span>BUY ME A COFFEE</span>
+                  </span>
                   <span aria-hidden="true">↗</span>
                 </a>
               </div>
