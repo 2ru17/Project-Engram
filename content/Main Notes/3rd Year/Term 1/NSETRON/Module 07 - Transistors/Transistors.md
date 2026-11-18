@@ -105,14 +105,19 @@ In Lab 5 Part 2, a $9\text{ V}$ supply closes a switch to two parallel LED paths
 
 ### Lab 5 Schematics (Parts 1, 2, and 3)
 
-```text
-Part 1 (Electronic Switch):            Part 2 (Amplifier / Gain & Saturation):
-  +9V ---+---[ 1k ]---(>| LED)---+       +9V ---[ SW ]---+---[ 100k ]---(>| LED_L)---+
-         |                       | C                     |                           | B
-         +--[ SW ]--[ 10k ]--+--B| NPN                   +---[ 1k (or 33k) ]--|>|----+ C
-                                 | E                                          LED_R  | NPN
-                                GND                                                  | E
-                                                                                    GND
+```circuit:lab5-transistor-circuits
+Part 1 (Electronic Switch):
+  +9V ---+---[ 1k ]---(>| LED)---+
+         |                       | C
+         +--[ SW ]--[ 10k ]--B| NPN
+                               | E
+                              GND
+
+Part 2 (Amplifier / Gain & Saturation):
+  +9V ---[ SW ]---+---[ 100k ]---(>| LED_L)---> B
+                  |                            NPN
+                  +---[ 1k (or 33k) ]---(>| LED_R)---> C
+                                               E ---> GND
 
 Part 3 (Base-Collector Shorted = Diode Mode):
           +------+

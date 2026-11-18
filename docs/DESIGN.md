@@ -96,6 +96,7 @@ Project Engram implements a deterministic 5-Universe theming architecture contro
 ### 5.3 Pedagogical Simulator Suite (`src/components/simulators/`)
 * **Unified Workbench Shell**: All simulators wrap their interactive canvas inside `SimulatorWorkbenchShell`, providing standardized transport stepping (`Play/Pause`, `Step Forward/Back`, `Reset`, playback speed), curated preset scenarios, KaTeX invariant logs, and live state inspection.
 * **Registry & Course Dock**: Simulators are registered in `src/lib/simulator-registry.ts` under four domains (`systems`, `security`, `theory`, `software`) and automatically surface on corresponding course pages via `CourseSimulatorDock`.
+* **Circuit Scenes (`circuit:` fence)**: Static schematics are authored as data in `src/lib/diagram-registry.ts` and embedded in notes with a ```` ```circuit:<id> ```` fence that mirrors the `simulator:<id>` fence. `MarkdownRender.tsx` mounts `CircuitDiagram` (`src/components/diagrams/`) on screen and prints the fence body (the ASCII fallback, at most 78 columns) in print and Obsidian.
 
 ---
 
@@ -114,3 +115,4 @@ Project Engram implements a deterministic 5-Universe theming architecture contro
 | **002** | Asynchronous `fs.promises` + Content-Hash Caching | Accepted | Prevents Next.js serverless bundle bloat and speeds up static/dynamic route generation across 539+ notes. |
 | **003** | Offscreen Sprite Caching & `useCallback` Lock on ForceGraph | Accepted | Sustains locked $60\text{ fps}$ rendering for the Singularity Knowledge Graph even on integrated GPUs. |
 | **004** | Unified `SimulatorWorkbenchShell` & Domain Registry | Accepted | Guarantees consistent UX, keyboard accessibility, and automatic course-page docking across all simulators. |
+| **005** | Data-driven `circuit:` fence with ASCII fallback body | Accepted | Circuits are pure data plus pure behavior functions rendered by one SVG component; notes stay readable in Obsidian and print, and new scenes need no new React code. |

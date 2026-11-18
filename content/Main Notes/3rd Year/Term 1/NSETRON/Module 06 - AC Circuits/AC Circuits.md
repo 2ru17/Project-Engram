@@ -105,9 +105,16 @@ status: completed
 
 ### Full-Wave Bridge Power Supply Stages (Supporting AC-to-DC Architecture)
 
-```text
-  220V AC ---> [ Step-Down Tx ] ---> [ 4-Diode Bridge ] ---> [ 2x 470uF || (940uF) ] ---> [ 7805 Reg ] ---> +5V DC
-  (60 Hz)      (12V AC RMS)          (120 Hz Pulsating)      (Smoothed DC w/ Ripple)     (Steady 5V)     [1k + LED]
+```simulator:rectifier-supply
+  220V AC (60 Hz)
+     |
+  [ Step-Down Tx ]            -> 12V AC RMS
+     |
+  [ 4-Diode Bridge ]          -> 120 Hz pulsating
+     |
+  [ 2x 470uF || (940uF) ]     -> smoothed DC with ripple
+     |
+  [ 7805 Reg ]                -> steady +5V DC    [1k + LED]
 ```
 
 ### AC Circuit Analysis & Power Factor Flow

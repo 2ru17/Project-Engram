@@ -102,7 +102,7 @@ A resistive pressure sensor (elastomer pad) has $R_{\text{sensor}} = 10\text{ k}
 
 ### Sensor Voltage Divider + Comparator Control Circuit
 
-```text
+```circuit:sensor-comparator
   +V_S ----+------------------------+
            |                        |
         [ R_top ]               [ R_ref_top ]

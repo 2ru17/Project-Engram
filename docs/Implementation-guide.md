@@ -50,7 +50,7 @@ export function PipelineHazardWorkbench() {
       domain="systems"
       courses={["CSARCH1", "CSARCH2", "LBYARCH"]}
       presets={PRESETS}
-      activePreset={activePreset}
+      activePresetId={activePreset}
       onSelectPreset={setActivePreset}
       cycle={cycle}
       onStepForward={handleStepForward}
@@ -83,7 +83,12 @@ export const SIMULATOR_REGISTRY: SimulatorMeta[] = [
 ```
 
 ### Step 3: Wire the Component in `src/components/simulators/SimulatorRenderer.tsx`
-Add the `case` branch matching your registry `id` so dynamic routes and docks can mount it.
+Add the `case` branch matching your registry `id` so dynamic routes and docks can mount it. Native-shell workbenches must also be added to `NATIVE_SHELL_IDS`. The shell prop is `activePresetId` (not `activePreset`).
+
+### Embedding diagrams in notes
+- Workbench: a ```` ```simulator:<id> ```` fence; the body holds an ASCII fallback of at most 78 columns.
+- Circuit scene: a ```` ```circuit:<id> ```` fence, with `<id>` defined in `src/lib/diagram-registry.ts` (parts, elements, wires, params, readouts, and a behavior key). Keep the ASCII version in the fence body; it is shown in Obsidian, in print, and in the collapsed "Text version" panel.
+- Every number on screen must come from the note's Key Formulas, Worked Examples, or Laboratory Recap.
 
 ---
 

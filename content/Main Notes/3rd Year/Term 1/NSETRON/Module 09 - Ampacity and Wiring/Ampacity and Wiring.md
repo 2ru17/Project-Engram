@@ -111,12 +111,14 @@ A resistive workshop heater is rated at $1650\text{ W}$. Calculate the operating
 
 ### Three-Wire Grounded AC System with Series Overcurrent Protection
 
-```text
-  Utility Hot ----[ Fuse / Breaker (Series) ]----[ Power Switch ]----+
-                                                                     |
-  Utility Neutral (Polarized Wide Slot) -------------------------+ [ Load / Tx Primary ]
-                                                                 |   |
-  Earth Ground (3rd D-Pin) =====> [ Exposed Metal Chassis ]      +---+
+```circuit:grounded-ac-wiring
+  Utility Hot ---[ Fuse / Breaker (Series) ]---[ Power Switch ]---+
+                                                                  |
+                                                      [ Load / Tx Primary ]
+                                                                  |
+  Utility Neutral (Polarized Wide Slot) --------------------------+
+
+  Earth Ground (3rd D-Pin) =====> [ Exposed Metal Chassis ]
 ```
 
 ### Wiring Protection & Overcurrent Triage Flow
