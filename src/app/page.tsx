@@ -197,7 +197,7 @@ export default function HomePage() {
           {/* Brutalist Ticker Banner */}
           <div className="w-full border-[3px] border-[#0A0A0A] bg-[#0A0A0A] text-[#F4F3EE] px-4 py-2 mb-8 shadow-[5px_5px_0px_#C5221F] flex flex-wrap items-center justify-between gap-2 font-mono text-xs font-bold uppercase tracking-wider">
             <span>SYS.ENGRAM // V2.0 BAUHAUS EDITION</span>
-            <span>26 COURSES // 539 MONOGRAPHS // ZERO ACCOUNTS</span>
+            <span>26 COURSES // 559 MONOGRAPHS // ZERO ACCOUNTS</span>
             <span>OPEN SOURCE MIT</span>
           </div>
 
@@ -242,7 +242,7 @@ export default function HomePage() {
                 </span>
                 <div className="my-4">
                   <div className="text-5xl font-black font-mono leading-none text-[#0A0A0A]">
-                    539
+                    559
                   </div>
                   <div className="font-mono text-xs font-bold uppercase mt-1 text-[#2D2D2A]">
                     ACADEMIC MONOGRAPHS
@@ -273,7 +273,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pb-8 mb-14 border-b border-[var(--zen-border)] text-[11px] font-mono uppercase tracking-wider text-[var(--zen-ink-muted)]">
             <div>INDEX // 01-25</div>
             <div>DISCIPLINE // COMPUTER SCIENCE</div>
-            <div>CORPUS // 539 MONOGRAPHS</div>
+            <div>CORPUS // 559 MONOGRAPHS</div>
             <div className="sm:text-right">EDITION // V2.0</div>
           </div>
 
@@ -326,7 +326,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-sm sm:text-base text-[#1A1917] max-w-xl leading-relaxed font-mono">
-                Deconstructed academic repository mapping 539 Computer Science monographs across four structural domains without rigid year-level constraints.
+                Deconstructed academic repository mapping 559 Computer Science monographs across four structural domains without rigid year-level constraints.
               </p>
             </div>
 
@@ -344,7 +344,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-[#141413]/20">
                   <span className="text-[#545049]">MONOGRAPH CORPUS</span>
-                  <span className="font-bold">539 DOCUMENTS</span>
+                  <span className="font-bold">559 DOCUMENTS</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-[#141413]/20">
                   <span className="text-[#545049]">DOMAINS</span>
@@ -545,7 +545,7 @@ export default function HomePage() {
               </span>
               <span className="text-[var(--zen-cyan)]">·</span>
               <span className="flex items-center gap-1.5">
-                [ <NumberTicker value={539} className="text-[var(--zen-snow)] font-semibold" /> MONOGRAPHS ]
+                [ <NumberTicker value={559} className="text-[var(--zen-snow)] font-semibold" /> MONOGRAPHS ]
               </span>
               <span className="text-[var(--zen-cyan)]">·</span>
               <span className="flex items-center gap-1.5">
@@ -768,7 +768,7 @@ export default function HomePage() {
                   THE KNOWLEDGE GRAPH
                 </h3>
                 <p className="text-sm sm:text-base text-[var(--zen-frost)] opacity-85 leading-relaxed max-w-md">
-                  Explore an interactive force-directed graph where Computer Science anchors the core, linking 26 courses and 539 academic monographs across domains.
+                  Explore an interactive force-directed graph where Computer Science anchors the core, linking 26 courses and 559 academic monographs across domains.
                 </p>
               </div>
 
@@ -959,7 +959,7 @@ export default function HomePage() {
             </h2>
           </div>
           <p className="text-xs font-mono tracking-wider text-[var(--zen-ink-muted)]">
-            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} COURSES · 539 MONOGRAPHS
+            PAGE {currentPage + 1} OF {totalPages} · {filteredCourses.length} COURSES · 559 MONOGRAPHS
           </p>
         </div>
 

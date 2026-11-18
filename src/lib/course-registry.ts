@@ -163,7 +163,7 @@ export const COURSE_REGISTRY: CourseInfo[] = [
   },
   {
     code: "NSETRON",
-    name: "Electronics",
+    name: "Practical Electricity and Electronics",
     desc: "Circuit fundamentals, passive and semiconductor components, instruments, power supplies, sensing, communication principles, and PCB design.",
     category: "systems",
     categoryLabel: "Systems & Architecture",

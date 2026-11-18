@@ -83,7 +83,7 @@ Project Engram implements a deterministic 5-Universe theming architecture contro
 ## 5. Core Subsystem Designs
 
 ### 5.1 Singularity Knowledge Graph (`src/components/graph/`)
-* **Astrophysical Coordinate System**: The central node at $(0, 0)$ is fixed as `COMPUTER SCIENCE // SINGULARITY` (rendered with an event horizon shadow core, photon sphere rim, and tilted relativistic accretion disk), surrounded by 25 Course Stars and 539+ orbiting monographs.
+* **Astrophysical Coordinate System**: The central node at $(0, 0)$ is fixed as `COMPUTER SCIENCE // SINGULARITY` (rendered with an event horizon shadow core, photon sphere rim, and tilted relativistic accretion disk), surrounded by 26 Course Stars and 559+ orbiting monographs.
 * **$60\text{ FPS}$ Canvas Optimization**:
   * Radial gradients and stellar glow sprites are pre-rendered once per theme onto offscreen `<canvas>` buffers rather than calling `ctx.createRadialGradient` per node on every frame.
   * Every callback passed to `ForceGraph2D` (`nodeCanvasObject`, `linkCanvasObject`, `onNodeHover`, `onNodeClick`) is wrapped in `useCallback` with stable dependency arrays to eliminate React re-render frame drops.
@@ -112,7 +112,7 @@ Project Engram implements a deterministic 5-Universe theming architecture contro
 | ADR # | Decision | Status | Architectural Consequence |
 | :--- | :--- | :--- | :--- |
 | **001** | File-Backed In-Repo Markdown (`content/Main Notes/`) Pipeline | Accepted | Eliminates database latency and external sync steps for static monographs; requires strict build-time validation (`validate:notes`). |
-| **002** | Asynchronous `fs.promises` + Content-Hash Caching | Accepted | Prevents Next.js serverless bundle bloat and speeds up static/dynamic route generation across 539+ notes. |
+| **002** | Asynchronous `fs.promises` + Content-Hash Caching | Accepted | Prevents Next.js serverless bundle bloat and speeds up static/dynamic route generation across 559+ notes. |
 | **003** | Offscreen Sprite Caching & `useCallback` Lock on ForceGraph | Accepted | Sustains locked $60\text{ fps}$ rendering for the Singularity Knowledge Graph even on integrated GPUs. |
 | **004** | Unified `SimulatorWorkbenchShell` & Domain Registry | Accepted | Guarantees consistent UX, keyboard accessibility, and automatic course-page docking across all simulators. |
 | **005** | Data-driven `circuit:` fence with ASCII fallback body | Accepted | Circuits are pure data plus pure behavior functions rendered by one SVG component; notes stay readable in Obsidian and print, and new scenes need no new React code. |

@@ -132,7 +132,7 @@ export async function loadMonographByPath(filePath: string): Promise<ParsedMonog
 
 ## 4. Workflow C: Interactive MCQ Parser Contract (`mcq-parser.ts` & `MCQSection.tsx`)
 
-To guarantee $100\%$ mount reliability for `MCQSection.tsx` across all 539+ monographs:
+To guarantee $100\%$ mount reliability for `MCQSection.tsx` across all 559+ monographs:
 
 1. **Clean Section Boundary Slicing**:
    Always slice the MCQ section starting at `^##+\s*Multiple Choice Questions.*$` and stop strictly before `^##+\s*References\s*&\s*Navigation` (or any subsequent `^##\s+` H2 heading or `^---\s*$` divider):
