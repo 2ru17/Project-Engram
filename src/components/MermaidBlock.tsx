@@ -206,10 +206,13 @@ function renderKatexInContainer(container: HTMLElement) {
           try {
             const span = document.createElement("span");
             span.className = isBlock ? "mermaid-katex-block" : "mermaid-katex-inline";
-            span.innerHTML = k.renderToString(math, {
-              displayMode: isBlock,
-              throwOnError: false,
-            });
+            span.innerHTML = sanitizeHtml(
+              k.renderToString(math, {
+                displayMode: isBlock,
+                throwOnError: false,
+              }),
+              { USE_PROFILES: { html: true, mathMl: true } }
+            );
             div.appendChild(span);
           } catch {
             div.appendChild(document.createTextNode(part));
@@ -257,10 +260,13 @@ function renderKatexInContainer(container: HTMLElement) {
         try {
           const span = document.createElement("span");
           span.className = isBlock ? "mermaid-katex-block" : "mermaid-katex-inline";
-          span.innerHTML = k.renderToString(math, {
-            displayMode: isBlock,
-            throwOnError: false,
-          });
+          span.innerHTML = sanitizeHtml(
+            k.renderToString(math, {
+              displayMode: isBlock,
+              throwOnError: false,
+            }),
+            { USE_PROFILES: { html: true, mathMl: true } }
+          );
           frag.appendChild(span);
         } catch {
           frag.appendChild(document.createTextNode(part));

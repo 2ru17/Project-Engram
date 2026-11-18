@@ -631,7 +631,7 @@ html[data-universe="broken-grid"] .universe-card:hover {
   box-sizing: border-box !important;
 }
 
-/* --- PHASE 4: DUAL EXPORT ENGINE (@media print) --- */
+/* --- DUAL EXPORT ENGINE (@media print) --- */
 @media print {
   @page {
     size: A4 portrait;
@@ -695,5 +695,34 @@ html[data-universe="broken-grid"] .universe-card:hover {
     white-space: pre-wrap !important;
     word-break: break-word !important;
     overflow-x: visible !important;
+  }
+}
+
+@keyframes engram-glitch-404 {
+  0%, 95%, 100% {
+    text-shadow: 0 0 0 transparent;
+    clip-path: none;
+  }
+  96% {
+    text-shadow: 3px 0 #00e5ff, -3px 0 #e63946;
+    clip-path: inset(10% 0 80% 0);
+  }
+  97% {
+    text-shadow: -3px 0 #00e5ff, 3px 0 #e63946;
+    clip-path: inset(60% 0 20% 0);
+  }
+  98% {
+    text-shadow: 1px 0 #00e5ff;
+    clip-path: none;
+  }
+}
+
+.glitch-404 {
+  animation: engram-glitch-404 4s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch-404 {
+    animation: none;
   }
 }

@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
-    "validate:notes": "node scripts/validate-notes.mjs"
+    "validate:notes": "node scripts/validate-notes.mjs",
+    "sync:counts": "node scripts/validate-notes.mjs --sync"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

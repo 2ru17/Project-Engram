@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
 import { useStudyPlan } from "./StudyPlanProvider";
@@ -40,6 +40,17 @@ export default function ProgressCodeModal() {
     text: string;
   } | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
+
+  useEffect(() => {
+    if (!isSyncModalOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setSyncModalOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isSyncModalOpen, setSyncModalOpen]);
 
   const liveCode = isSyncModalOpen ? exportProgressCode() : "";
 

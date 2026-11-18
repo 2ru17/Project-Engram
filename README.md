@@ -77,4 +77,6 @@ Architectural standards, structural boundaries, and implementation workflows are
 | `npm run build` | Compiles and bundles the application for production deployment. |
 | `npm run start` | Runs the compiled production server locally. |
 | `npm run lint` | Executes static code analysis and linting checks. |
-| `npm run validate:notes` | Validates monograph frontmatter, folder hygiene, MCQ parser compatibility, and graph links. |
+| `npm run typecheck` | Runs the TypeScript compiler (`tsc --noEmit`) for static type verification without emitting build files. |
+| `npm run validate:notes` | Validates monograph frontmatter, folder hygiene, MCQ parser compatibility, graph links, and Gate 6 `COURSE_REGISTRY` parity (`node scripts/validate-notes.mjs`). |
+| `npm run sync:counts` | Automatically synchronizes per-course monograph counts in `src/lib/course-registry.ts` against the vault (`node scripts/validate-notes.mjs --sync`). |

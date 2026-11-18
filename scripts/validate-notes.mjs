@@ -914,8 +914,64 @@ async function runGate6CodebaseInvariants() {
   return errors;
 }
 
+async function syncAndVerifyCourseRegistry(courseCounts, shouldSync) {
+  const errors = [];
+  const registryPath = path.join(SRC_ROOT, "lib", "course-registry.ts");
+  const original = await fs.readFile(registryPath, "utf8");
+  const entryRegex = /(code:\s*"([^"]+)"[\s\S]*?count:\s*)(\d+)/g;
+  const registryCounts = new Map();
+  const syncedChanges = [];
+
+  const updated = original.replace(entryRegex, (full, prefix, code, rawNum) => {
+    const upperCode = code.toUpperCase();
+    const prevCount = Number(rawNum);
+    const actualCount = courseCounts.get(upperCode) || 0;
+
+    if (shouldSync && prevCount !== actualCount) {
+      syncedChanges.push(`${upperCode}: ${prevCount} -> ${actualCount}`);
+      registryCounts.set(upperCode, actualCount);
+      return `${prefix}${actualCount}`;
+    }
+    registryCounts.set(upperCode, prevCount);
+    return full;
+  });
+
+  if (shouldSync && updated !== original) {
+    await fs.writeFile(registryPath, updated, "utf8");
+    console.log(`[sync:counts] Updated src/lib/course-registry.ts (${syncedChanges.join(", ")})`);
+  } else if (shouldSync) {
+    console.log("[sync:counts] src/lib/course-registry.ts already matches vault counts.");
+  }
+
+  for (const [courseCode, actualCount] of courseCounts.entries()) {
+    if (!registryCounts.has(courseCode)) {
+      errors.push(
+        `[Gate 6] Vault course "${courseCode}" (${actualCount} notes) is missing from src/lib/course-registry.ts.`
+      );
+      continue;
+    }
+    const regCount = registryCounts.get(courseCode);
+    if (regCount !== actualCount) {
+      errors.push(
+        `[Gate 6] Course "${courseCode}" count mismatch in src/lib/course-registry.ts (registry=${regCount}, vault=${actualCount}). Run "npm run sync:counts" to synchronize.`
+      );
+    }
+  }
+
+  for (const [courseCode, regCount] of registryCounts.entries()) {
+    if (!courseCounts.has(courseCode) && regCount !== 0) {
+      errors.push(
+        `[Gate 6] Course "${courseCode}" in src/lib/course-registry.ts has count=${regCount} but 0 vault notes. Run "npm run sync:counts" to synchronize.`
+      );
+    }
+  }
+
+  return errors;
+}
+
 async function main() {
   const startedAt = Date.now();
+  const shouldSync = process.argv.includes("--sync");
   const errors = [];
 
   // Gate 3 Self-Test (verifies MCQ, [MSQ], [INPUT], [BLANK] syntax & grading)
@@ -1097,8 +1153,19 @@ async function main() {
     errors.push(...validateMermaidBlocks(content, rel));
   }
 
-  // Gate 6: Codebase Invariant Check (src/)
-  const gate6Errors = await runGate6CodebaseInvariants();
+  // Gate 6: Codebase Invariant Check (src/) & Registry Parity
+  const courseCounts = new Map();
+  for (const filePath of mdFiles) {
+    const rel = path.relative(CONTENT_ROOT, filePath);
+    const parts = rel.split(path.sep);
+    if (parts.length >= 3) {
+      const courseCode = parts[2].toUpperCase();
+      courseCounts.set(courseCode, (courseCounts.get(courseCode) || 0) + 1);
+    }
+  }
+
+  const parityErrors = await syncAndVerifyCourseRegistry(courseCounts, shouldSync);
+  const gate6Errors = [...(await runGate6CodebaseInvariants()), ...parityErrors];
   errors.push(...gate6Errors);
 
   const elapsedMs = Date.now() - startedAt;
