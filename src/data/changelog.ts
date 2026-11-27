@@ -11,9 +11,25 @@ export interface ChangelogEntry {
   items: string[];
 }
 
-export const LATEST_CHANGELOG_VERSION = "2.3.0";
+export const LATEST_CHANGELOG_VERSION = "2.3.1";
 
 export const CHANGELOG_ENTRIES: ChangelogEntry[] = [
+  {
+    version: "2.3.1",
+    date: "2026-11-28",
+    category: "Notes",
+    commit: "a864901",
+    pr: "PR #7",
+    title:
+      "CSALGCM Arcana Problem Sets Expansion & Content Allowlist Security Lockdown (606 Monographs)",
+    summary:
+      "Added 39 new CSALGCM Dynamic Programming and Greedy Arcana solutions, refreshed 37 existing problem set notes, synchronized registry counts to 606 monographs, and enforced .md-only content governance.",
+    items: [
+      "Added 39 new CSALGCM problem breakdown notes across Emperor, Hierophant, Lovers, Chariot, Hermit, and Justice Arcana sets and refreshed 37 existing Arcana notes (a864901).",
+      "Synchronized COURSE_REGISTRY (CSALGCM: 56 -> 95, total 606 monographs) and wired TOTAL_COURSE_COUNT / TOTAL_MONOGRAPH_COUNT into /notes metadata and /terms.",
+      "Added Gate 0 recursive content allowlist enforcement in scripts/validate-notes.mjs, .gitignore rules blocking non-Markdown binaries under content/, and sanitized PR template sync guidance (18ddf2e).",
+    ],
+  },
   {
     version: "2.3.0",
     date: "2026-11-18",
