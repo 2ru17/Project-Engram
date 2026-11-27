@@ -338,4 +338,4 @@ if __name__ == "__main__":
 
 - **Previous Topic:** [[Computational Thinking in Problem Solving]]
 - **Next Topic:** [[Dynamic Programming Introduction]]
-- **Related Notes:** [[Complexity Analysis]], [[[PS] Empress Arcana]], [[[PS] Priestess Arcana]]
+- **Related Notes:** [[Complexity Analysis]], [[[PS] Empress Arcana]], [[[PS] Priestess Arcana]], [[[QZ] Divide and Conquer]]

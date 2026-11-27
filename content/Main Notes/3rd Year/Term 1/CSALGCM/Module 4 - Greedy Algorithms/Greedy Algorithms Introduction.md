@@ -190,4 +190,4 @@ Whenever a weighted optimization problem reduces to finding a maximum-weight (or
 
 - **Previous Topic:** [[Dynamic Programming Introduction]]
 - **Next Topic:** [[Intractability and NP-Completeness]]
-- **Related Notes:** [[[PS] Chariot Arcana]], [[[PS] Hermit Arcana]], [[[PS] Justice Arcana]], [[MST]]
+- **Related Notes:** [[[PS] Chariot Arcana]], [[[PS] Hermit Arcana]], [[[PS] Justice Arcana]], [[MST]], [[[QZ] Huffman Encoding]], [[[QZ] Minimum Spanning Tree]]

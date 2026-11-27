@@ -329,4 +329,4 @@ if __name__ == "__main__":
 
 - **Previous Topic:** [[Divide and Conquer Introduction]]
 - **Next Topic:** [[Greedy Algorithms Introduction]]
-- **Related Notes:** [[[PS] Emperor Arcana]], [[[PS] Hierophant Arcana]], [[[PS] Lovers Arcana]]
+- **Related Notes:** [[[PS] Emperor Arcana]], [[[PS] Hierophant Arcana]], [[[PS] Lovers Arcana]], [[[QZ] Dynamic Programming Basics]], [[[QZ] Dynamic Programming Problem 1]]
