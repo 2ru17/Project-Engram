@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run generate:changelog",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "validate:notes": "node scripts/validate-notes.mjs",
-    "sync:counts": "node scripts/validate-notes.mjs --sync"
+    "sync:counts": "node scripts/validate-notes.mjs --sync",
+    "generate:changelog": "node scripts/generate-changelog.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",

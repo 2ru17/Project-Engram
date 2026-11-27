@@ -80,3 +80,4 @@ Architectural standards, structural boundaries, and implementation workflows are
 | `npm run typecheck` | Runs the TypeScript compiler (`tsc --noEmit`) for static type verification without emitting build files. |
 | `npm run validate:notes` | Validates monograph frontmatter, folder hygiene, MCQ parser compatibility, graph links, and Gate 6 `COURSE_REGISTRY` parity (`node scripts/validate-notes.mjs`). |
 | `npm run sync:counts` | Automatically synchronizes per-course monograph counts in `src/lib/course-registry.ts` against the vault (`node scripts/validate-notes.mjs --sync`). |
+| `npm run generate:changelog` | Generates `src/data/changelog.generated.json` from Git commit history (or GitHub API fallback in shallow clones); runs automatically in `prebuild`. |

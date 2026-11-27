@@ -1,0 +1,2128 @@
+[
+  {
+    "sha": "f428673b1de8c09466520a6c0fbb9b25675be091",
+    "shortSha": "f428673",
+    "date": "2026-11-28T04:34:51+08:00",
+    "title": "Add v2.3.1 notes and content lockdown entry",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/f428673b1de8c09466520a6c0fbb9b25675be091",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "a864901e7c84780ed8bc16f586f1f940dd500f50",
+    "shortSha": "a864901",
+    "date": "2026-11-28T04:33:23+08:00",
+    "title": "Sync 39 new and 37 updated Arcana problem sets and update counts",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/a864901e7c84780ed8bc16f586f1f940dd500f50",
+    "category": "notes",
+    "courses": [
+      "CSALGCM"
+    ],
+    "notes": {
+      "added": [
+        {
+          "title": "01 - Adventurer In Need (Tank Needed)",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Chariot%20Arcana%20Problems/01%20-%20Adventurer%20In%20Need%20(Tank%20Needed)"
+        },
+        {
+          "title": "01 - Basic Knapsack",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Emperor%20Arcana%20Problems/01%20-%20Basic%20Knapsack"
+        },
+        {
+          "title": "01 - Dodging Spikes (Easy)",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Hierophant%20Arcana%20Problems/01%20-%20Dodging%20Spikes%20(Easy)"
+        },
+        {
+          "title": "01 - Quantum Leap",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Lovers%20Arcana%20Problems/01%20-%20Quantum%20Leap"
+        },
+        {
+          "title": "01 - The Tragedy of Salems Lot",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Justice%20Arcana%20Problems/01%20-%20The%20Tragedy%20of%20Salems%20Lot"
+        },
+        {
+          "title": "01 - Youre Like an Electron - Youre So Negative",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Hermit%20Arcana%20Problems/01%20-%20Youre%20Like%20an%20Electron%20-%20Youre%20So%20Negative"
+        },
+        {
+          "title": "02 - Coin Change (Counting Version)",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Emperor%20Arcana%20Problems/02%20-%20Coin%20Change%20(Counting%20Version)"
+        },
+        {
+          "title": "02 - Dodging Spikes (Medium)",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Hierophant%20Arcana%20Problems/02%20-%20Dodging%20Spikes%20(Medium)"
+        },
+        {
+          "title": "02 - Its The End Of The World As We Know It",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Justice%20Arcana%20Problems/02%20-%20Its%20The%20End%20Of%20The%20World%20As%20We%20Know%20It"
+        },
+        {
+          "title": "02 - The Easiest College Degree of All Time",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Chariot%20Arcana%20Problems/02%20-%20The%20Easiest%20College%20Degree%20of%20All%20Time"
+        },
+        {
+          "title": "02 - Weird Recurrence",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Lovers%20Arcana%20Problems/02%20-%20Weird%20Recurrence"
+        },
+        {
+          "title": "02 - Welcome to Algo Burger",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Hermit%20Arcana%20Problems/02%20-%20Welcome%20to%20Algo%20Burger"
+        },
+        {
+          "title": "03 - Dodging Spikes (Hard)",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Hierophant%20Arcana%20Problems/03%20-%20Dodging%20Spikes%20(Hard)"
+        },
+        {
+          "title": "03 - How Many Ways (Easy Version)",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Emperor%20Arcana%20Problems/03%20-%20How%20Many%20Ways%20(Easy%20Version)"
+        },
+        {
+          "title": "03 - Its a Matter of Fusion",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Hermit%20Arcana%20Problems/03%20-%20Its%20a%20Matter%20of%20Fusion"
+        },
+        {
+          "title": "03 - Logic The Unsundering",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Justice%20Arcana%20Problems/03%20-%20Logic%20The%20Unsundering"
+        },
+        {
+          "title": "03 - Sequence Distillation",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Lovers%20Arcana%20Problems/03%20-%20Sequence%20Distillation"
+        },
+        {
+          "title": "03 - The Retribution of Salems Lot",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Chariot%20Arcana%20Problems/03%20-%20The%20Retribution%20of%20Salems%20Lot"
+        },
+        {
+          "title": "04 - A Chain of Memories in Castle Oblivion",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Justice%20Arcana%20Problems/04%20-%20A%20Chain%20of%20Memories%20in%20Castle%20Oblivion"
+        },
+        {
+          "title": "04 - Just A Few More Steps",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Hierophant%20Arcana%20Problems/04%20-%20Just%20A%20Few%20More%20Steps"
+        },
+        {
+          "title": "04 - The Fair Maiden Fangirls of Waterdeep",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Chariot%20Arcana%20Problems/04%20-%20The%20Fair%20Maiden%20Fangirls%20of%20Waterdeep"
+        },
+        {
+          "title": "04 - The Wet Bandits",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Emperor%20Arcana%20Problems/04%20-%20The%20Wet%20Bandits"
+        },
+        {
+          "title": "04 - These Ghosts Are So Annoying",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Hermit%20Arcana%20Problems/04%20-%20These%20Ghosts%20Are%20So%20Annoying"
+        },
+        {
+          "title": "04 - These Vowels Feel Special",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Lovers%20Arcana%20Problems/04%20-%20These%20Vowels%20Feel%20Special"
+        },
+        {
+          "title": "05 - Hiding In The Tranquiline Halls of Valhalla",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Chariot%20Arcana%20Problems/05%20-%20Hiding%20In%20The%20Tranquiline%20Halls%20of%20Valhalla"
+        },
+        {
+          "title": "05 - In My Restless Dreams, I See That Place",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Lovers%20Arcana%20Problems/05%20-%20In%20My%20Restless%20Dreams%2C%20I%20See%20That%20Place"
+        },
+        {
+          "title": "05 - Problematizing the Problems 1",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Justice%20Arcana%20Problems/05%20-%20Problematizing%20the%20Problems%201"
+        },
+        {
+          "title": "05 - We Got a 4-D Dynamic Programming Problem in CSALGCM Before GTA VII",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Hermit%20Arcana%20Problems/05%20-%20We%20Got%20a%204-D%20Dynamic%20Programming%20Problem%20in%20CSALGCM%20Before%20GTA%20VII"
+        },
+        {
+          "title": "05 - What Sequence Is This",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Emperor%20Arcana%20Problems/05%20-%20What%20Sequence%20Is%20This"
+        },
+        {
+          "title": "05 - Which Line Is It Anyway (Medium Version)",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Hierophant%20Arcana%20Problems/05%20-%20Which%20Line%20Is%20It%20Anyway%20(Medium%20Version)"
+        },
+        {
+          "title": "06 - Blasting Through With Sonic Speed",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Hierophant%20Arcana%20Problems/06%20-%20Blasting%20Through%20With%20Sonic%20Speed"
+        },
+        {
+          "title": "06 - Friendly Rhythm Game",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Justice%20Arcana%20Problems/06%20-%20Friendly%20Rhythm%20Game"
+        },
+        {
+          "title": "06 - Great Expectations",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Hermit%20Arcana%20Problems/06%20-%20Great%20Expectations"
+        },
+        {
+          "title": "06 - Optimizing Chicken Jay",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Chariot%20Arcana%20Problems/06%20-%20Optimizing%20Chicken%20Jay"
+        },
+        {
+          "title": "06 - Rollercoaster Sequences",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Lovers%20Arcana%20Problems/06%20-%20Rollercoaster%20Sequences"
+        },
+        {
+          "title": "06 - Which Line Is It Anyway (Easy Version)",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Emperor%20Arcana%20Problems/06%20-%20Which%20Line%20Is%20It%20Anyway%20(Easy%20Version)"
+        },
+        {
+          "title": "07 - Algo-Man and the Class of 25 Quatromania",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Chariot%20Arcana%20Problems/07%20-%20Algo-Man%20and%20the%20Class%20of%2025%20Quatromania"
+        },
+        {
+          "title": "07 - Tataru Taru, Disciple of the Hand",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Hierophant%20Arcana%20Problems/07%20-%20Tataru%20Taru%2C%20Disciple%20of%20the%20Hand"
+        },
+        {
+          "title": "08 - Gigaman Z",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Hierophant%20Arcana%20Problems/08%20-%20Gigaman%20Z"
+        }
+      ],
+      "updated": [
+        {
+          "title": "[PS] Chariot Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Chariot%20Arcana"
+        },
+        {
+          "title": "[PS] Emperor Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Emperor%20Arcana"
+        },
+        {
+          "title": "[PS] Empress Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Empress%20Arcana"
+        },
+        {
+          "title": "[PS] Fool Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana"
+        },
+        {
+          "title": "[PS] Hermit Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Hermit%20Arcana"
+        },
+        {
+          "title": "[PS] Hierophant Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Hierophant%20Arcana"
+        },
+        {
+          "title": "[PS] Justice Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Problem%20Sets/%5BPS%5D%20Justice%20Arcana"
+        },
+        {
+          "title": "[PS] Lovers Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Problem%20Sets/%5BPS%5D%20Lovers%20Arcana"
+        },
+        {
+          "title": "[PS] Magician Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Magician%20Arcana"
+        },
+        {
+          "title": "[PS] Priestess Arcana",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Priestess%20Arcana"
+        },
+        {
+          "title": "01 - Breadth First Search Shortest Reach",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Magician%20Arcana%20Problems/01%20-%20Breadth%20First%20Search%20Shortest%20Reach"
+        },
+        {
+          "title": "01 - DPS Check in the Knights of Favonius",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Empress%20Arcana%20Problems/01%20-%20DPS%20Check%20in%20the%20Knights%20of%20Favonius"
+        },
+        {
+          "title": "01 - Its Like I Have ESPN Or Something",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Priestess%20Arcana%20Problems/01%20-%20Its%20Like%20I%20Have%20ESPN%20Or%20Something"
+        },
+        {
+          "title": "01 - Solve Me First",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/01%20-%20Solve%20Me%20First"
+        },
+        {
+          "title": "02 - Cycle Detection",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Magician%20Arcana%20Problems/02%20-%20Cycle%20Detection"
+        },
+        {
+          "title": "02 - I Hate Spellcasters",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Empress%20Arcana%20Problems/02%20-%20I%20Hate%20Spellcasters"
+        },
+        {
+          "title": "02 - Laughter Is The Best Medicine",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Priestess%20Arcana%20Problems/02%20-%20Laughter%20Is%20The%20Best%20Medicine"
+        },
+        {
+          "title": "02 - Simple Array Sum",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/02%20-%20Simple%20Array%20Sum"
+        },
+        {
+          "title": "03 - Find The Running Median",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Magician%20Arcana%20Problems/03%20-%20Find%20The%20Running%20Median"
+        },
+        {
+          "title": "03 - Lets Plant Rice",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Priestess%20Arcana%20Problems/03%20-%20Lets%20Plant%20Rice"
+        },
+        {
+          "title": "03 - Metacognitive Frequencies",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Empress%20Arcana%20Problems/03%20-%20Metacognitive%20Frequencies"
+        },
+        {
+          "title": "03 - Mini-Max Sum",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/03%20-%20Mini-Max%20Sum"
+        },
+        {
+          "title": "04 - CamelCase",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/04%20-%20CamelCase"
+        },
+        {
+          "title": "04 - Is This a Binary Search Tree",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Magician%20Arcana%20Problems/04%20-%20Is%20This%20a%20Binary%20Search%20Tree"
+        },
+        {
+          "title": "04 - Never Fade Away",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Empress%20Arcana%20Problems/04%20-%20Never%20Fade%20Away"
+        },
+        {
+          "title": "04 - POWAH UNLIMITED POWAH",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Priestess%20Arcana%20Problems/04%20-%20POWAH%20UNLIMITED%20POWAH"
+        },
+        {
+          "title": "05 - Library Fine",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/05%20-%20Library%20Fine"
+        },
+        {
+          "title": "05 - Queue Using Two Stacks",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Magician%20Arcana%20Problems/05%20-%20Queue%20Using%20Two%20Stacks"
+        },
+        {
+          "title": "05 - QUIIIIICKSOOOOORT!!!!!!!!!!!",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Empress%20Arcana%20Problems/05%20-%20QUIIIIICKSOOOOORT!!!!!!!!!!!"
+        },
+        {
+          "title": "05 - Shattering The Towers Of Algorythmos",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Priestess%20Arcana%20Problems/05%20-%20Shattering%20The%20Towers%20Of%20Algorythmos"
+        },
+        {
+          "title": "06 - Minimum Distances",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/06%20-%20Minimum%20Distances"
+        },
+        {
+          "title": "06 - Sherlock and Array",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Magician%20Arcana%20Problems/06%20-%20Sherlock%20and%20Array"
+        },
+        {
+          "title": "06 - Swapper, No Swapping!!!",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Empress%20Arcana%20Problems/06%20-%20Swapper%2C%20No%20Swapping!!!"
+        },
+        {
+          "title": "06 - The Monkeys Paw",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Problem%20Sets/%5BPS%5D%20Priestess%20Arcana%20Problems/06%20-%20The%20Monkeys%20Paw"
+        },
+        {
+          "title": "07 - Repeated String",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/07%20-%20Repeated%20String"
+        },
+        {
+          "title": "07 - Sparse Arrays",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Magician%20Arcana%20Problems/07%20-%20Sparse%20Arrays"
+        },
+        {
+          "title": "08 - Sherlock and Squares",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/08%20-%20Sherlock%20and%20Squares"
+        },
+        {
+          "title": "08 - Tree Preorder Traversal",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Magician%20Arcana%20Problems/08%20-%20Tree%20Preorder%20Traversal"
+        },
+        {
+          "title": "09 - Anagram",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/09%20-%20Anagram"
+        },
+        {
+          "title": "10 - Circular Array Rotation",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/10%20-%20Circular%20Array%20Rotation"
+        }
+      ],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 39,
+      "updated": 40,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "18ddf2e884b0d81bf898a7ea04e06dc9c16fe3b0",
+    "shortSha": "18ddf2e",
+    "date": "2026-11-28T04:14:50+08:00",
+    "title": "Block non-markdown binary files in content/ via gitignore and CI validator",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/18ddf2e884b0d81bf898a7ea04e06dc9c16fe3b0",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "282330c16bb7e73c5336ea6d62635c8f4fbf9f6a",
+    "shortSha": "282330c",
+    "date": "2026-11-27T23:31:34+08:00",
+    "title": "Add 8 formatted module quiz notes and sync counts",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/282330c16bb7e73c5336ea6d62635c8f4fbf9f6a",
+    "category": "notes",
+    "courses": [
+      "CSALGCM"
+    ],
+    "notes": {
+      "added": [
+        {
+          "title": "[QZ] Divide and Conquer",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Assessments/%5BQZ%5D%20Divide%20and%20Conquer"
+        },
+        {
+          "title": "[QZ] Dynamic Programming Basics",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Assessments/%5BQZ%5D%20Dynamic%20Programming%20Basics"
+        },
+        {
+          "title": "[QZ] Dynamic Programming Problem 1",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Assessments/%5BQZ%5D%20Dynamic%20Programming%20Problem%201"
+        },
+        {
+          "title": "[QZ] Evaluation of Algorithms",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Assessments/%5BQZ%5D%20Evaluation%20of%20Algorithms"
+        },
+        {
+          "title": "[QZ] Huffman Encoding",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Assessments/%5BQZ%5D%20Huffman%20Encoding"
+        },
+        {
+          "title": "[QZ] Master Theorem",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Assessments/%5BQZ%5D%20Master%20Theorem"
+        },
+        {
+          "title": "[QZ] Minimum Spanning Tree",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Assessments/%5BQZ%5D%20Minimum%20Spanning%20Tree"
+        },
+        {
+          "title": "[QZ] Recurrence Relations",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Assessments/%5BQZ%5D%20Recurrence%20Relations"
+        }
+      ],
+      "updated": [
+        {
+          "title": "Complexity Analysis",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Complexity%20Analysis"
+        },
+        {
+          "title": "Divide and Conquer Introduction",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Divide%20and%20Conquer%20Introduction"
+        },
+        {
+          "title": "Dynamic Programming Introduction",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Dynamic%20Programming%20Introduction"
+        },
+        {
+          "title": "Greedy Algorithms Introduction",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Greedy%20Algorithms%20Introduction"
+        }
+      ],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 8,
+      "updated": 4,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "9cfec56568cff1ff87964087d8ea4fcb4284c400",
+    "shortSha": "9cfec56",
+    "date": "2026-11-18T13:00:35+08:00",
+    "title": "Sync v2.3.0 changelog, README scripts, and CONTRIBUTING",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/9cfec56568cff1ff87964087d8ea4fcb4284c400",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "c0ae70cb6030d5b76308fd3e79a70ab616b9cd0c",
+    "shortSha": "c0ae70c",
+    "date": "2026-11-18T12:59:40+08:00",
+    "title": "Add route error boundary and web manifest",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/c0ae70cb6030d5b76308fd3e79a70ab616b9cd0c",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "321b69c81ef6790e2878b0812d8960ef9ccb8ce1",
+    "shortSha": "321b69c",
+    "date": "2026-11-18T12:57:57+08:00",
+    "title": "Add issue templates, funding, and PR template",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/321b69c81ef6790e2878b0812d8960ef9ccb8ce1",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "03bb4d5bbfff24759e7820b129d56486e452a290",
+    "shortSha": "03bb4d5",
+    "date": "2026-11-18T12:42:32+08:00",
+    "title": "Add Buy Me a Coffee support button to navbar, help hub, and footer",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/03bb4d5bbfff24759e7820b129d56486e452a290",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "1ce1e4dd1b300f0fc0300dde0c76e4e69b28a050",
+    "shortSha": "1ce1e4d",
+    "date": "2026-11-18T12:17:37+08:00",
+    "title": "Auto-sync course monograph counts and enforce registry parity in Gate 6",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/1ce1e4dd1b300f0fc0300dde0c76e4e69b28a050",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "80ed5a2940086544fc32ed6b458cd86124de8236",
+    "shortSha": "80ed5a2",
+    "date": "2026-11-18T12:13:18+08:00",
+    "title": "Remove X/Y/Z versioning meta-labels from UpdateLogModal",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/80ed5a2940086544fc32ed6b458cd86124de8236",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "00dbbdf225af0a1bb15d65a4753a484d9d54fdbf",
+    "shortSha": "00dbbdf",
+    "date": "2026-11-18T12:06:49+08:00",
+    "title": "Curate git-backed X.Y.Z update log and align category filters",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/00dbbdf225af0a1bb15d65a4753a484d9d54fdbf",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "61aacbe5666ce94dbb7b2acf5912589e60ad3952",
+    "shortSha": "61aacbe",
+    "date": "2026-11-18T11:51:32+08:00",
+    "title": "Update metadata and performance optimization",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/61aacbe5666ce94dbb7b2acf5912589e60ad3952",
+    "category": "simulators",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "d34c1cb0c85f3702b3dcb37e6a4cf33f319caa57",
+    "shortSha": "d34c1cb",
+    "date": "2026-11-18T11:29:37+08:00",
+    "title": "Update course and monograph counts to 26 and 559; name NSETRON course",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/d34c1cb0c85f3702b3dcb37e6a4cf33f319caa57",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "9767dd685feee34b11f1feaf0847d7586d7b2a92",
+    "shortSha": "9767dd6",
+    "date": "2026-11-18T11:25:02+08:00",
+    "title": "Add NSETRON to course registry and update course counts to 26",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/9767dd685feee34b11f1feaf0847d7586d7b2a92",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "495255eb3fdddb293c88aa17ce1808c437d1779a",
+    "shortSha": "495255e",
+    "date": "2026-11-18T11:20:59+08:00",
+    "title": "Add interactive NSETRON circuit scenes and signal workbenches",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/495255eb3fdddb293c88aa17ce1808c437d1779a",
+    "category": "notes",
+    "courses": [
+      "NSETRON"
+    ],
+    "notes": {
+      "added": [],
+      "updated": [
+        {
+          "title": "AC Circuits",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2006%20-%20AC%20Circuits/AC%20Circuits"
+        },
+        {
+          "title": "Ampacity and Wiring",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2009%20-%20Ampacity%20and%20Wiring/Ampacity%20and%20Wiring"
+        },
+        {
+          "title": "Basic Electrical Theory",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2001%20-%20Basic%20Electrical%20Theory/Basic%20Electrical%20Theory"
+        },
+        {
+          "title": "Basic Electricity and Electronic Components",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2002%20-%20Basic%20Electricity%20and%20Electronic%20Components/Basic%20Electricity%20and%20Electronic%20Components"
+        },
+        {
+          "title": "Capacitors",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2004%20-%20Capacitors/Capacitors"
+        },
+        {
+          "title": "Diodes",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2005%20-%20Diodes/Diodes"
+        },
+        {
+          "title": "Oscilloscope",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2008%20-%20Oscilloscope/Oscilloscope"
+        },
+        {
+          "title": "PCB Design and Machine Project 2",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2012%20-%20PCB%20Design%20and%20Machine%20Project%202/PCB%20Design%20and%20Machine%20Project%202"
+        },
+        {
+          "title": "Principles of Communication",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2011%20-%20Principles%20of%20Communication/Principles%20of%20Communication"
+        },
+        {
+          "title": "Resistors",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2003%20-%20Resistors/Resistors"
+        },
+        {
+          "title": "Sensor Controls, Comparator and Voltage Divider",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2010%20-%20Sensor%20Controls%2C%20Comparator%20and%20Voltage%20Divider/Sensor%20Controls%2C%20Comparator%20and%20Voltage%20Divider"
+        },
+        {
+          "title": "Transistors",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2007%20-%20Transistors/Transistors"
+        }
+      ],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 12,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "61cb6507f0bfbc10d3947f4f31eb282e77d08abb",
+    "shortSha": "61cb650",
+    "date": "2026-11-18T02:07:09+08:00",
+    "title": "Render Mermaid foreignObject labels and clean NSETRON notes",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/61cb6507f0bfbc10d3947f4f31eb282e77d08abb",
+    "category": "notes",
+    "courses": [
+      "NSETRON"
+    ],
+    "notes": {
+      "added": [],
+      "updated": [
+        {
+          "title": "[ANS] NSETRON Mock Written Exam Answer Key",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Assessments/%5BANS%5D%20NSETRON%20Mock%20Written%20Exam%20Answer%20Key"
+        },
+        {
+          "title": "[ANS] NSETRON Written Exam Reviewer Answer Key",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Assessments/%5BANS%5D%20NSETRON%20Written%20Exam%20Reviewer%20Answer%20Key"
+        },
+        {
+          "title": "[QZ] NSETRON Mock Written Exam",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Assessments/%5BQZ%5D%20NSETRON%20Mock%20Written%20Exam"
+        },
+        {
+          "title": "[REV] NSETRON Written Exam Reviewer",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Reviewers/%5BREV%5D%20NSETRON%20Written%20Exam%20Reviewer"
+        },
+        {
+          "title": "AC Circuits",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2006%20-%20AC%20Circuits/AC%20Circuits"
+        },
+        {
+          "title": "Ampacity and Wiring",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2009%20-%20Ampacity%20and%20Wiring/Ampacity%20and%20Wiring"
+        },
+        {
+          "title": "Basic Electrical Theory",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2001%20-%20Basic%20Electrical%20Theory/Basic%20Electrical%20Theory"
+        },
+        {
+          "title": "Basic Electricity and Electronic Components",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2002%20-%20Basic%20Electricity%20and%20Electronic%20Components/Basic%20Electricity%20and%20Electronic%20Components"
+        },
+        {
+          "title": "Capacitors",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2004%20-%20Capacitors/Capacitors"
+        },
+        {
+          "title": "Diodes",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2005%20-%20Diodes/Diodes"
+        },
+        {
+          "title": "Oscilloscope",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2008%20-%20Oscilloscope/Oscilloscope"
+        },
+        {
+          "title": "PCB Design and Machine Project 2",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2012%20-%20PCB%20Design%20and%20Machine%20Project%202/PCB%20Design%20and%20Machine%20Project%202"
+        },
+        {
+          "title": "Principles of Communication",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2011%20-%20Principles%20of%20Communication/Principles%20of%20Communication"
+        },
+        {
+          "title": "Resistors",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2003%20-%20Resistors/Resistors"
+        },
+        {
+          "title": "Sensor Controls, Comparator and Voltage Divider",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2010%20-%20Sensor%20Controls%2C%20Comparator%20and%20Voltage%20Divider/Sensor%20Controls%2C%20Comparator%20and%20Voltage%20Divider"
+        },
+        {
+          "title": "Transistors",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2007%20-%20Transistors/Transistors"
+        },
+        {
+          "title": "Written Exam Coverage and Formula Sheet",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Written%20Exam%20Coverage%20and%20Formula%20Sheet"
+        }
+      ],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 17,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "77b1d9d798a816118e93972a2e8924d35a72662e",
+    "shortSha": "77b1d9d",
+    "date": "2026-11-17T23:57:05+08:00",
+    "title": "Add NSETRON Notes and Written Exam reviewer",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/77b1d9d798a816118e93972a2e8924d35a72662e",
+    "category": "notes",
+    "courses": [
+      "NSETRON"
+    ],
+    "notes": {
+      "added": [
+        {
+          "title": "[ANS] NSETRON Mock Written Exam Answer Key",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Assessments/%5BANS%5D%20NSETRON%20Mock%20Written%20Exam%20Answer%20Key"
+        },
+        {
+          "title": "[ANS] NSETRON Written Exam Reviewer Answer Key",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Assessments/%5BANS%5D%20NSETRON%20Written%20Exam%20Reviewer%20Answer%20Key"
+        },
+        {
+          "title": "[QZ] NSETRON Mock Written Exam",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Assessments/%5BQZ%5D%20NSETRON%20Mock%20Written%20Exam"
+        },
+        {
+          "title": "[REV] NSETRON Written Exam Reviewer",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Reviewers/%5BREV%5D%20NSETRON%20Written%20Exam%20Reviewer"
+        },
+        {
+          "title": "AC Circuits",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2006%20-%20AC%20Circuits/AC%20Circuits"
+        },
+        {
+          "title": "Ampacity and Wiring",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2009%20-%20Ampacity%20and%20Wiring/Ampacity%20and%20Wiring"
+        },
+        {
+          "title": "Basic Electrical Theory",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2001%20-%20Basic%20Electrical%20Theory/Basic%20Electrical%20Theory"
+        },
+        {
+          "title": "Basic Electricity and Electronic Components",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2002%20-%20Basic%20Electricity%20and%20Electronic%20Components/Basic%20Electricity%20and%20Electronic%20Components"
+        },
+        {
+          "title": "Capacitors",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2004%20-%20Capacitors/Capacitors"
+        },
+        {
+          "title": "Diodes",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2005%20-%20Diodes/Diodes"
+        },
+        {
+          "title": "Oscilloscope",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2008%20-%20Oscilloscope/Oscilloscope"
+        },
+        {
+          "title": "PCB Design and Machine Project 2",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2012%20-%20PCB%20Design%20and%20Machine%20Project%202/PCB%20Design%20and%20Machine%20Project%202"
+        },
+        {
+          "title": "Principles of Communication",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2011%20-%20Principles%20of%20Communication/Principles%20of%20Communication"
+        },
+        {
+          "title": "Resistors",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2003%20-%20Resistors/Resistors"
+        },
+        {
+          "title": "Sensor Controls, Comparator and Voltage Divider",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2010%20-%20Sensor%20Controls%2C%20Comparator%20and%20Voltage%20Divider/Sensor%20Controls%2C%20Comparator%20and%20Voltage%20Divider"
+        },
+        {
+          "title": "Transistors",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2007%20-%20Transistors/Transistors"
+        },
+        {
+          "title": "Written Exam Coverage and Formula Sheet",
+          "course": "NSETRON",
+          "href": "/notes/NSETRON/Module%2013%20-%20Exam%20Reviewer/Written%20Exam%20Coverage%20and%20Formula%20Sheet"
+        }
+      ],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 17,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "ac9ddf0ad5d2471e6b02150dd74b7f832fbca32f",
+    "shortSha": "ac9ddf0",
+    "date": "2026-11-15T15:20:38+08:00",
+    "title": "Set direct in-repo content editing as default contributor workflow",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/ac9ddf0ad5d2471e6b02150dd74b7f832fbca32f",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "88443d8fe014cf993fdda23ab4909426cb335d5c",
+    "shortSha": "88443d8",
+    "date": "2026-11-15T15:09:24+08:00",
+    "title": "Clean",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/88443d8fe014cf993fdda23ab4909426cb335d5c",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "7730d1827294723e8afb408c0be0cc78c70294fa",
+    "shortSha": "7730d18",
+    "date": "2026-11-15T14:54:02+08:00",
+    "title": "Bypass next/font/google turbopack URL parser bug (#99114) and bind CSS font tokens directly",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/7730d1827294723e8afb408c0be0cc78c70294fa",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "4bf9725dba94ac0494c7eab1cd015b18072de5fc",
+    "shortSha": "4bf9725",
+    "date": "2026-11-15T14:34:17+08:00",
+    "title": "Replace jsdom SSR dependency and upgrade CI to Node 22 LTS",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/4bf9725dba94ac0494c7eab1cd015b18072de5fc",
+    "category": "simulators",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "5eef1d7c5ad39b89e5d4848c22068e63f009529a",
+    "shortSha": "5eef1d7",
+    "date": "2026-11-15T14:05:58+08:00",
+    "title": "Add automated note standards validator and build gate workflow",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/5eef1d7c5ad39b89e5d4848c22068e63f009529a",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "07a751e1e00f60ab7a5c39c2821eedaab7874505",
+    "shortSha": "07a751e",
+    "date": "2026-11-15T14:05:51+08:00",
+    "title": "Add 7 interactive engineering workbenches and upgrade singularity graph",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/07a751e1e00f60ab7a5c39c2821eedaab7874505",
+    "category": "simulators",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "f4c8a9bc423e51e3d448513f44c61511fb8ac011",
+    "shortSha": "f4c8a9b",
+    "date": "2026-11-15T14:05:46+08:00",
+    "title": "Add canvas-style assessment engine and migrate content loaders to async I/O",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/f4c8a9bc423e51e3d448513f44c61511fb8ac011",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "d88fc887385a522dc18e274134e8a80137ed797d",
+    "shortSha": "d88fc88",
+    "date": "2026-11-15T14:05:38+08:00",
+    "title": "Normalize module hierarchy, frontmatter schema, and interactive MCQ blocks",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/d88fc887385a522dc18e274134e8a80137ed797d",
+    "category": "notes",
+    "courses": [
+      "CCAPDEV",
+      "CCDSALG",
+      "CCDSTRU",
+      "CCICOMP",
+      "CCINFOM",
+      "CCPROG1",
+      "CCPROG2",
+      "CCPROG3",
+      "CSADPRG",
+      "CSALGCM",
+      "CSARCH1",
+      "CSARCH2",
+      "CSINTSY",
+      "CSMATH1",
+      "CSMATH2",
+      "CSMODEL",
+      "CSNETWK",
+      "CSOPESY",
+      "LBYARCH",
+      "NSCOM01",
+      "NSCOM02",
+      "NSCOM03",
+      "NSSECU1",
+      "NSSECU2",
+      "STT101A"
+    ],
+    "notes": {
+      "added": [
+        {
+          "title": "Algorithms - Search",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%202%20-%20Searching%20and%20Sorting/Algorithms%20-%20Search"
+        },
+        {
+          "title": "Arrays and Linked Lists",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%203%20-%20Linear%20Data%20Structures/Arrays%20and%20Linked%20Lists"
+        },
+        {
+          "title": "Asymptotic Bounds",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%201%20-%20Analysis%20of%20Algorithms/Asymptotic%20Bounds"
+        },
+        {
+          "title": "AVL Trees",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%205%20-%20Trees%20and%20Heaps/AVL%20Trees"
+        },
+        {
+          "title": "Binary Search Trees (BST)",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%205%20-%20Trees%20and%20Heaps/Binary%20Search%20Trees%20(BST)"
+        },
+        {
+          "title": "Frequency Counting",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%201%20-%20Analysis%20of%20Algorithms/Frequency%20Counting"
+        },
+        {
+          "title": "Graphs",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%206%20-%20Graphs/Graphs"
+        },
+        {
+          "title": "Graphs Traversals",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%206%20-%20Graphs/Graphs%20Traversals"
+        },
+        {
+          "title": "Hash Tables",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%204%20-%20Hash%20Tables/Hash%20Tables"
+        },
+        {
+          "title": "Heaps",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%205%20-%20Trees%20and%20Heaps/Heaps"
+        },
+        {
+          "title": "Infix, Postfix, and Prefix Expressions",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%203%20-%20Linear%20Data%20Structures/Infix%2C%20Postfix%2C%20and%20Prefix%20Expressions"
+        },
+        {
+          "title": "Introduction to Algorithm Analysis",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%201%20-%20Analysis%20of%20Algorithms/Introduction%20to%20Algorithm%20Analysis"
+        },
+        {
+          "title": "MST",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%206%20-%20Graphs/MST"
+        },
+        {
+          "title": "Queues",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%203%20-%20Linear%20Data%20Structures/Queues"
+        },
+        {
+          "title": "Recurrence Relations",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%201%20-%20Analysis%20of%20Algorithms/Recurrence%20Relations"
+        },
+        {
+          "title": "Sorting Algorithms",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%202%20-%20Searching%20and%20Sorting/Sorting%20Algorithms"
+        },
+        {
+          "title": "Stack Operations and Applications",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%203%20-%20Linear%20Data%20Structures/Stack%20Operations%20and%20Applications"
+        },
+        {
+          "title": "Trees",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%205%20-%20Trees%20and%20Heaps/Trees"
+        },
+        {
+          "title": "Equivalences",
+          "course": "CCDSTRU",
+          "href": "/notes/CCDSTRU/Module%2001%20-%20Logic/Equivalences"
+        },
+        {
+          "title": "Functions",
+          "course": "CCDSTRU",
+          "href": "/notes/CCDSTRU/Module%2006%20-%20Functions/Functions"
+        },
+        {
+          "title": "Propositional Functions",
+          "course": "CCDSTRU",
+          "href": "/notes/CCDSTRU/Module%2003%20-%20Propositional%20Functions/Propositional%20Functions"
+        },
+        {
+          "title": "Propositional Logic",
+          "course": "CCDSTRU",
+          "href": "/notes/CCDSTRU/Module%2001%20-%20Logic/Propositional%20Logic"
+        },
+        {
+          "title": "Relations",
+          "course": "CCDSTRU",
+          "href": "/notes/CCDSTRU/Module%2007%20-%20Relations%20and%20Matrices/Relations"
+        },
+        {
+          "title": "Rules of Inference",
+          "course": "CCDSTRU",
+          "href": "/notes/CCDSTRU/Module%2008%20-%20Inference%20and%20Induction/Rules%20of%20Inference"
+        },
+        {
+          "title": "Sets",
+          "course": "CCDSTRU",
+          "href": "/notes/CCDSTRU/Module%2005%20-%20Sets/Sets"
+        },
+        {
+          "title": "Sums and Sequences",
+          "course": "CCDSTRU",
+          "href": "/notes/CCDSTRU/Module%2004%20-%20Sums%20and%20Sequences/Sums%20and%20Sequences"
+        },
+        {
+          "title": "Divide and Conquer Introduction",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%202%20-%20Divide%20and%20Conquer/Divide%20and%20Conquer%20Introduction"
+        },
+        {
+          "title": "Dynamic Programming Introduction",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%203%20-%20Dynamic%20Programming/Dynamic%20Programming%20Introduction"
+        },
+        {
+          "title": "Greedy Algorithms Introduction",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%204%20-%20Greedy%20Algorithms/Greedy%20Algorithms%20Introduction"
+        },
+        {
+          "title": "Intractability and NP-Completeness",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%205%20-%20Intractability/Intractability%20and%20NP-Completeness"
+        },
+        {
+          "title": "Determinants",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Ch%202%20-%20Determinants/Determinants"
+        },
+        {
+          "title": "Eigenvalues, Eigenvectors, and Diagonalization",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Ch%205%20-%20Eigenvalues%2C%20Eigenvectors%2C%20and%20Diagonalization/Eigenvalues%2C%20Eigenvectors%2C%20and%20Diagonalization"
+        },
+        {
+          "title": "Linear Transformations",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Ch%204%20-%20Linear%20Transformations/Linear%20Transformations"
+        },
+        {
+          "title": "Vectors in R3",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Ch%203%20-%20Vector%20Spaces/Vectors%20in%20R3"
+        },
+        {
+          "title": "Vectors in the Plane",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Ch%203%20-%20Vector%20Spaces/Vectors%20in%20the%20Plane"
+        }
+      ],
+      "updated": [
+        {
+          "title": "[REV] CCAPDEV Comprehensive Finals Reviewer",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Finals%20Review/%5BREV%5D%20CCAPDEV%20Comprehensive%20Finals%20Reviewer"
+        },
+        {
+          "title": "Client Server Architecture",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%204%20-%20Node%20and%20Express/Client%20Server%20Architecture"
+        },
+        {
+          "title": "Cookies and Sessions",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%205%20-%20MongoDB%20and%20Sessions/Cookies%20and%20Sessions"
+        },
+        {
+          "title": "CSS",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%202%20-%20CSS/CSS"
+        },
+        {
+          "title": "CSS Selectors",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%202%20-%20CSS/CSS%20Selectors"
+        },
+        {
+          "title": "Debugging and Test Tools",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%206%20-%20Testing%20and%20Hashing/Debugging%20and%20Test%20Tools"
+        },
+        {
+          "title": "Express",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%204%20-%20Node%20and%20Express/Express"
+        },
+        {
+          "title": "Handlebars",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%204%20-%20Node%20and%20Express/Handlebars"
+        },
+        {
+          "title": "HTML",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%201%20-%20HTML/HTML"
+        },
+        {
+          "title": "Javascript",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%203%20-%20JavaScript/Javascript"
+        },
+        {
+          "title": "JavaScript Basic Syntax",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%203%20-%20JavaScript/JavaScript%20Basic%20Syntax"
+        },
+        {
+          "title": "JavaScript DOM",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%203%20-%20JavaScript/JavaScript%20DOM"
+        },
+        {
+          "title": "JQuery",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%203%20-%20JavaScript/JQuery"
+        },
+        {
+          "title": "JSON and Fetch",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%203%20-%20JavaScript/JSON%20and%20Fetch"
+        },
+        {
+          "title": "MongoDB",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%205%20-%20MongoDB%20and%20Sessions/MongoDB"
+        },
+        {
+          "title": "Mongoose",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%205%20-%20MongoDB%20and%20Sessions/Mongoose"
+        },
+        {
+          "title": "NodeJS",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%204%20-%20Node%20and%20Express/NodeJS"
+        },
+        {
+          "title": "Password Hashing",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%206%20-%20Testing%20and%20Hashing/Password%20Hashing"
+        },
+        {
+          "title": "RE Handlebars",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%204%20-%20Node%20and%20Express/RE%20Handlebars"
+        },
+        {
+          "title": "REST",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%204%20-%20Node%20and%20Express/REST"
+        },
+        {
+          "title": "Security & Authentication",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%205%20-%20MongoDB%20and%20Sessions/Security%20%26%20Authentication"
+        },
+        {
+          "title": "Specificity-Properties-and-Others",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%202%20-%20CSS/Specificity-Properties-and-Others"
+        },
+        {
+          "title": "[REV] CCDSALG Comprehensive Finals Reviewer",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Exams/%5BREV%5D%20CCDSALG%20Comprehensive%20Finals%20Reviewer"
+        },
+        {
+          "title": "A Posteriori Analysis",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/A%20Posteriori%20Analysis"
+        },
+        {
+          "title": "A Priori Analysis",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/A%20Priori%20Analysis"
+        },
+        {
+          "title": "Advanced & Related Topics",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Advanced%20%26%20Related%20Topics"
+        },
+        {
+          "title": "Algorithm",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Algorithm"
+        },
+        {
+          "title": "Algorithm Analysis",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Algorithm%20Analysis"
+        },
+        {
+          "title": "Amortized Analysis",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Amortized%20Analysis"
+        },
+        {
+          "title": "Analysis of Algorithms",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Analysis%20of%20Algorithms"
+        },
+        {
+          "title": "Assignment - Read - Write",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Assignment%20-%20Read%20-%20Write"
+        },
+        {
+          "title": "Asymptotic Notation",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Asymptotic%20Notation"
+        },
+        {
+          "title": "Average-Case Analysis",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Average-Case%20Analysis"
+        },
+        {
+          "title": "Best-Case Analysis",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Best-Case%20Analysis"
+        },
+        {
+          "title": "Big-O Notation",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Big-O%20Notation"
+        },
+        {
+          "title": "Big-Omega Notation",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Big-Omega%20Notation"
+        },
+        {
+          "title": "Big-Theta Notation",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Big-Theta%20Notation"
+        },
+        {
+          "title": "Conditionals",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Conditionals"
+        },
+        {
+          "title": "Context & Relationships",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Context%20%26%20Relationships"
+        },
+        {
+          "title": "Core Concepts",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Core%20Concepts"
+        },
+        {
+          "title": "Correctness",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Correctness"
+        },
+        {
+          "title": "Declarations",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Declarations"
+        },
+        {
+          "title": "Divide and Conquer",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Divide%20and%20Conquer"
+        },
+        {
+          "title": "Efficiency",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Efficiency"
+        },
+        {
+          "title": "Frequency Count",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Frequency%20Count"
+        },
+        {
+          "title": "Function Calls",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Function%20Calls"
+        },
+        {
+          "title": "Growth Rates",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Growth%20Rates"
+        },
+        {
+          "title": "Input Size",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Input%20Size"
+        },
+        {
+          "title": "Little-o Notation",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Little-o%20Notation"
+        },
+        {
+          "title": "Little-omega Notation",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Little-omega%20Notation"
+        }
+      ],
+      "removed": [
+        {
+          "title": "[HO] 01 - Intro",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 02 - Frequency Counting",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 03 - Asymptotic Bounds",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 04 - Recurrences",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 05 - Algorithms - Search",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 06 - Algorithms - Sort",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 07 - Array and Link Lists",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 08 - Stacks",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 09 - Queues",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 10 - Infix, Postfix, Prefix",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 11 - Hash Tables",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 12 - Trees",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 13 - Binary Search Trees (BST)",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 14 - AVL Trees",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 15 - Heaps",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 16 - Graphs",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 17 - Graphs Traversals",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 18 - MST",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] Equivalences",
+          "course": "CCDSTRU"
+        },
+        {
+          "title": "[HO] Functions",
+          "course": "CCDSTRU"
+        },
+        {
+          "title": "[HO] Propositional Functions",
+          "course": "CCDSTRU"
+        },
+        {
+          "title": "[HO] Propositional Logic",
+          "course": "CCDSTRU"
+        },
+        {
+          "title": "[HO] Relations",
+          "course": "CCDSTRU"
+        },
+        {
+          "title": "[HO] Rules of Inference",
+          "course": "CCDSTRU"
+        },
+        {
+          "title": "[HO] Sets",
+          "course": "CCDSTRU"
+        },
+        {
+          "title": "[HO] Sums and Sequences",
+          "course": "CCDSTRU"
+        },
+        {
+          "title": "[REV] CSARCH2 Comprehensive Reviewer and Practice Exam",
+          "course": "CSARCH2"
+        },
+        {
+          "title": "[HO] 10",
+          "course": "CSMATH2"
+        },
+        {
+          "title": "[HO] 11",
+          "course": "CSMATH2"
+        },
+        {
+          "title": "Determinants",
+          "course": "CSMATH2"
+        },
+        {
+          "title": "Vectors in R3",
+          "course": "CSMATH2"
+        },
+        {
+          "title": "Vectors in the Plane",
+          "course": "CSMATH2"
+        }
+      ]
+    },
+    "noteCounts": {
+      "added": 35,
+      "updated": 507,
+      "removed": 32
+    }
+  },
+  {
+    "sha": "58d37043b37a2910459c223d1f03496377d918bd",
+    "shortSha": "58d3704",
+    "date": "2026-11-15T14:05:35+08:00",
+    "title": "Establish architecture blueprints, design system invariants, and contribution guide",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/58d37043b37a2910459c223d1f03496377d918bd",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "c305b3baa14a85905619cf9ae58af3d6199ba5d2",
+    "shortSha": "c305b3b",
+    "date": "2026-11-10T13:54:26+08:00",
+    "title": "Fix-notes-v7",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/c305b3baa14a85905619cf9ae58af3d6199ba5d2",
+    "category": "notes",
+    "courses": [
+      "CCAPDEV",
+      "CCDSALG",
+      "CCICOMP",
+      "CSADPRG",
+      "CSALGCM",
+      "CSMATH1",
+      "CSMATH2",
+      "CSMODEL",
+      "CSNETWK",
+      "NSCOM03"
+    ],
+    "notes": {
+      "added": [],
+      "updated": [
+        {
+          "title": "HTML",
+          "course": "CCAPDEV",
+          "href": "/notes/CCAPDEV/Module%201%20-%20HTML/HTML"
+        },
+        {
+          "title": "Context & Relationships",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Context%20%26%20Relationships"
+        },
+        {
+          "title": "Divide and Conquer",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Divide%20and%20Conquer"
+        },
+        {
+          "title": "Mock-Midterm-Exam-01",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Exams/Mock-Midterm-Exam-01"
+        },
+        {
+          "title": "Mock-Midterm-Exam-02",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Exams/Mock-Midterm-Exam-02"
+        },
+        {
+          "title": "Probabilistic Analysis",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Probabilistic%20Analysis"
+        },
+        {
+          "title": "Supplement-Infix-to-Postfix",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/Module%203%20-%20Linear%20Data%20Structures/Supplement-Infix-to-Postfix"
+        },
+        {
+          "title": "[REV] CCICOMP FE Reviewer with answers",
+          "course": "CCICOMP",
+          "href": "/notes/CCICOMP/Syllabus%20and%20Reviewers/%5BREV%5D%20CCICOMP%20FE%20Reviewer%20with%20answers"
+        },
+        {
+          "title": "Arithmetic Operations in Binary",
+          "course": "CCICOMP",
+          "href": "/notes/CCICOMP/Module%202%20-%20Data%20Representation%20and%20Operations/Arithmetic%20Operations%20in%20Binary"
+        },
+        {
+          "title": "Computers, Data, and Information",
+          "course": "CCICOMP",
+          "href": "/notes/CCICOMP/Module%201%20-%20ICT%20and%20Society/Computers%2C%20Data%2C%20and%20Information"
+        },
+        {
+          "title": "ICT and Society",
+          "course": "CCICOMP",
+          "href": "/notes/CCICOMP/Module%201%20-%20ICT%20and%20Society/ICT%20and%20Society"
+        },
+        {
+          "title": "Abstract Data Types",
+          "course": "CSADPRG",
+          "href": "/notes/CSADPRG/Module%208%20-%20Abstract%20Data%20Types/Abstract%20Data%20Types"
+        },
+        {
+          "title": "Expressions and Assignment Statements",
+          "course": "CSADPRG",
+          "href": "/notes/CSADPRG/Module%205%20-%20Expressions%20and%20Assignment%20Statements/Expressions%20and%20Assignment%20Statements"
+        },
+        {
+          "title": "Overview of Programming Languages",
+          "course": "CSADPRG",
+          "href": "/notes/CSADPRG/Module%201%20-%20Overview%20of%20Programming%20Languages/Overview%20of%20Programming%20Languages"
+        },
+        {
+          "title": "07 - Repeated String",
+          "course": "CSALGCM",
+          "href": "/notes/CSALGCM/Module%201%20-%20Problem%20Solving%20and%20Algorithm%20Analysis/Problem%20Sets/%5BPS%5D%20Fool%20Arcana%20Problems/07%20-%20Repeated%20String"
+        },
+        {
+          "title": "Definition of the Limit and Limit Theorems",
+          "course": "CSMATH1",
+          "href": "/notes/CSMATH1/Ch%201%20-%20Functions%2C%20Limits%20and%20Continuity/Definition%20of%20the%20Limit%20and%20Limit%20Theorems"
+        },
+        {
+          "title": "Elementary Matrices",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Ch%201%20-%20Linear%20Equations%20and%20Matrices/Matrices%20and%20Matrix%20Operations/Elementary%20Matrices"
+        },
+        {
+          "title": "Symmetric Matrix",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Ch%201%20-%20Linear%20Equations%20and%20Matrices/Matrices%20and%20Matrix%20Operations/Symmetric%20Matrix"
+        },
+        {
+          "title": "Types of Matrices",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Ch%201%20-%20Linear%20Equations%20and%20Matrices/Matrices%20and%20Matrix%20Operations/Types%20of%20Matrices"
+        },
+        {
+          "title": "Vectors in R3",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Ch%203%20-%20Vector%20Spaces/Vectors%20in%20R3"
+        },
+        {
+          "title": "Image Data Modelling",
+          "course": "CSMODEL",
+          "href": "/notes/CSMODEL/Image%20Data%20Modelling"
+        },
+        {
+          "title": "Security",
+          "course": "CSNETWK",
+          "href": "/notes/CSNETWK/Ch%208%20-%20Security/Security"
+        },
+        {
+          "title": "[REV] NSCOM03 Finals Reviewer",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Finals%20Reviewer/%5BREV%5D%20NSCOM03%20Finals%20Reviewer"
+        },
+        {
+          "title": "Data Link Protocols (LAN)",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Module%208%20-%20Data%20Link%20Protocols%20(LAN)/Data%20Link%20Protocols%20(LAN)"
+        },
+        {
+          "title": "Data Link Protocols (WANs)",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Module%209%20-%20Data%20Link%20Protocols%20(WANs)/Data%20Link%20Protocols%20(WANs)"
+        },
+        {
+          "title": "Digital to Analog Transmission",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Module%204%20-%20Digital%20to%20Analog%20Transmission/Digital%20to%20Analog%20Transmission"
+        },
+        {
+          "title": "Digital Transmission",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Module%203%20-%20Digital%20Transmission/Digital%20Transmission"
+        },
+        {
+          "title": "Error Detection",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Module%206%20-%20Error%20Detection/Error%20Detection"
+        },
+        {
+          "title": "Media Access Control",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Module%207%20-%20Media%20Access%20Control/Media%20Access%20Control"
+        },
+        {
+          "title": "Multiplexing",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Module%205%20-%20Multiplexing/Multiplexing"
+        },
+        {
+          "title": "Physical Communication Layer",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Module%202%20-%20Physical%20Communication%20Layer/Physical%20Communication%20Layer"
+        },
+        {
+          "title": "Review of Physical and Data Link Layer",
+          "course": "NSCOM03",
+          "href": "/notes/NSCOM03/Module%201%20-%20Review%20of%20Physical%20and%20Data%20Link%20Layer/Review%20of%20Physical%20and%20Data%20Link%20Layer"
+        }
+      ],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 32,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "b63613862ace5bbc7e46a83442a3e78e38dd35c8",
+    "shortSha": "b636138",
+    "date": "2026-11-10T12:09:22+08:00",
+    "title": "Phase 5 interactive simulators suite, mermaid latex rendering, and governance",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/b63613862ace5bbc7e46a83442a3e78e38dd35c8",
+    "category": "notes",
+    "courses": [
+      "CCDSALG",
+      "CCINFOM",
+      "CSARCH1",
+      "CSARCH2",
+      "CSINTSY",
+      "CSMATH1",
+      "CSMATH2",
+      "CSNETWK",
+      "CSOPESY",
+      "NSSECU1"
+    ],
+    "notes": {
+      "added": [],
+      "updated": [
+        {
+          "title": "[HO] 06 - Algorithms - Sort",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "[HO] 17 - Graphs Traversals",
+          "course": "CCDSALG"
+        },
+        {
+          "title": "Recursion Tree Method",
+          "course": "CCDSALG",
+          "href": "/notes/CCDSALG/L1%20-%20Analysis%20of%20Algorithms/Recursion%20Tree%20Method"
+        },
+        {
+          "title": "Introduction to SQL",
+          "course": "CCINFOM",
+          "href": "/notes/CCINFOM/Module%203%20-%20Introduction%20to%20SQL/Introduction%20to%20SQL"
+        },
+        {
+          "title": "Relational Model and Normalization",
+          "course": "CCINFOM",
+          "href": "/notes/CCINFOM/Module%207%20-%20Relational%20Model%20and%20Normalization/Relational%20Model%20and%20Normalization"
+        },
+        {
+          "title": "Logic Gates",
+          "course": "CSARCH1",
+          "href": "/notes/CSARCH1/Module%203%20-%20Digital%20Logic/Logic%20Gates"
+        },
+        {
+          "title": "IEEE 754 Floating-Point Representation (Single & Double Precision)",
+          "course": "CSARCH2",
+          "href": "/notes/CSARCH2/IEEE%20754%20Floating-Point%20Representation%20(Single%20%26%20Double%20Precision)"
+        },
+        {
+          "title": "Virtual Memory & Address Translation (Paging & TLB)",
+          "course": "CSARCH2",
+          "href": "/notes/CSARCH2/Virtual%20Memory%20%26%20Address%20Translation%20(Paging%20%26%20TLB)"
+        },
+        {
+          "title": "Machine Learning Models",
+          "course": "CSINTSY",
+          "href": "/notes/CSINTSY/Module%204%20-%20Learning-Based%20Models/Machine%20Learning%20Models"
+        },
+        {
+          "title": "[REV] CSMATH1 Comprehensive Finals Reviewer",
+          "course": "CSMATH1",
+          "href": "/notes/CSMATH1/Finals%20Review/%5BREV%5D%20CSMATH1%20Comprehensive%20Finals%20Reviewer"
+        },
+        {
+          "title": "[REV] CSMATH2 Comprehensive Finals Reviewer",
+          "course": "CSMATH2",
+          "href": "/notes/CSMATH2/Finals%20Review/%5BREV%5D%20CSMATH2%20Comprehensive%20Finals%20Reviewer"
+        },
+        {
+          "title": "Dijkstra's Link State Algorithm",
+          "course": "CSNETWK",
+          "href": "/notes/CSNETWK/Ch%205%20-%20Network%20Layer/Dijkstra's%20Link%20State%20Algorithm"
+        },
+        {
+          "title": "Network Layer",
+          "course": "CSNETWK",
+          "href": "/notes/CSNETWK/Ch%205%20-%20Network%20Layer/Network%20Layer"
+        },
+        {
+          "title": "Transport Layer",
+          "course": "CSNETWK",
+          "href": "/notes/CSNETWK/Ch%204%20-%20Transport%20Layer/Transport%20Layer"
+        },
+        {
+          "title": "CSOPESY 06 - CPU Scheduling",
+          "course": "CSOPESY",
+          "href": "/notes/CSOPESY/Module%203%20-%20CPU%20Scheduling%20and%20Synchronization/CSOPESY%2006%20-%20CPU%20Scheduling"
+        },
+        {
+          "title": "CSOPESY 09 - Virtual Memory",
+          "course": "CSOPESY",
+          "href": "/notes/CSOPESY/Module%204%20-%20Memory%20Management/CSOPESY%2009%20-%20Virtual%20Memory"
+        },
+        {
+          "title": "OS Basics and Cryptography",
+          "course": "NSSECU1",
+          "href": "/notes/NSSECU1/Module%202%20-%20OS%20Basics%20and%20Cryptography/OS%20Basics%20and%20Cryptography"
+        },
+        {
+          "title": "Software and Network Security",
+          "course": "NSSECU1",
+          "href": "/notes/NSSECU1/Module%203%20-%20Software%20and%20Network%20Security/Software%20and%20Network%20Security"
+        }
+      ],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 18,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "69008a73ac220441913dc7435464dd3ee2f8c469",
+    "shortSha": "69008a7",
+    "date": "2026-10-22T13:22:29+08:00",
+    "title": "Soften mobile vignette and hide vignette in print exports",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/69008a73ac220441913dc7435464dd3ee2f8c469",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  },
+  {
+    "sha": "22bd0bb30cd5a6358cffac97759f1d3890c36c90",
+    "shortSha": "22bd0bb",
+    "date": "2026-10-22T10:49:23+08:00",
+    "title": "Disable transitions during layout measurement in lite mode",
+    "commitUrl": "https://github.com/2ru17/Project-Engram/commit/22bd0bb30cd5a6358cffac97759f1d3890c36c90",
+    "category": "platform",
+    "courses": [],
+    "notes": {
+      "added": [],
+      "updated": [],
+      "removed": []
+    },
+    "noteCounts": {
+      "added": 0,
+      "updated": 0,
+      "removed": 0
+    }
+  }
+]
