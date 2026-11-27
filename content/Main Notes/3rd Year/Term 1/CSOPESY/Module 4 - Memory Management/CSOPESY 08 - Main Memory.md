@@ -202,4 +202,4 @@ print(f"Physical address: {translate_address(8200)}")
 
 - **Previous Topic:** [[CSOPESY 07 - Synchronization Tools]]
 - **Next Topic:** [[CSOPESY 09 - Virtual Memory]]
-- **Related Notes:** 
+- **Related Notes:** [[[EX] Exercise 5 - Paging and Address Translation]], [[[EX] Exercise 6 - Frame Allocation and Memory Swapping]]

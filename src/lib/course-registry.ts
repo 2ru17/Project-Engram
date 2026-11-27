@@ -154,7 +154,7 @@ export const COURSE_REGISTRY: CourseInfo[] = [
     track: "Core CS",
     relatedCourses: ["CSARCH2", "CCPROG2", "CSNETWK", "NSSECU1"],
     defaultSimulators: ["cpu-scheduler", "page-replacement"],
-    count: 13,
+    count: 20,
     href: "/notes/CSOPESY",
     year: 3,
     yearLabel: "3rd Year",

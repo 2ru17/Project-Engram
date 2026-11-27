@@ -197,4 +197,4 @@ print(f"FIFO Faults (3 frames): {fifo_page_replacement(ref_string, 3)}")
 
 - **Previous Topic:** [[CSOPESY 08 - Main Memory]]
 - **Next Topic:** None
-- **Related Notes:** 
+- **Related Notes:** [[[EX] Exercise 5 - Paging and Address Translation]], [[[EX] Exercise 6 - Frame Allocation and Memory Swapping]]

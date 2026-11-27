@@ -472,4 +472,5 @@ $$Speedup \le \frac{1}{S + \frac{1-S}{N}}$$
 - **Related Notes:** [[CSOPESY 01 - Introduction]], [[CSOPESY 02 - Operating System Structure]], [[CSOPESY 03 - IO and Display]], [[CSOPESY 04 - Processes]], [[CSOPESY 05 - Threads]], [[CSOPESY 06 - CPU Scheduling]], [[CSOPESY 07 - Synchronization Tools]]
 - **Practice Quiz 1:** [[[QZ] CSOPESY Practice Quiz 1 - OS Foundations]]
 - **Practice Quiz 2:** [[[QZ] CSOPESY Practice Quiz 2 - CPU Scheduling]]
+- **Midterm Compilation:** [[[QZ] CSOPESY Midterm Examination Compilation]]
 - **Finals Reviewer:** [[[REV] CSOPESY Comprehensive Finals Reviewer]]

@@ -207,4 +207,4 @@ flowchart TD
 
 - **Previous Topic:** [[CSOPESY 05 - Threads]]
 - **Next Topic:** [[CSOPESY 07 - Synchronization Tools]]
-- **Related Notes:** 
+- **Related Notes:** [[[EX] Exercise 1 - CPU Scheduling (FCFS and SJF)]], [[[EX] Exercise 2 - CPU Scheduling (Priority and SRTF)]], [[[EX] Exercise 3 - CPU Scheduling (Round Robin)]], [[[QZ] CSOPESY Midterm Examination Compilation]]
