@@ -232,4 +232,4 @@ for(int i = 1; i < n; i++) {
 
 - **Previous Topic:** [[Problems, Problem Types, and Algorithms]]
 - **Next Topic:** [[Computational Thinking in Problem Solving]]
-- **Related Notes:** [[Asymptotic Bounds]], [[Divide and Conquer Introduction]]
+- **Related Notes:** [[Asymptotic Bounds]], [[Divide and Conquer Introduction]], [[[QZ] Evaluation of Algorithms]], [[[QZ] Recurrence Relations]], [[[QZ] Master Theorem]]
