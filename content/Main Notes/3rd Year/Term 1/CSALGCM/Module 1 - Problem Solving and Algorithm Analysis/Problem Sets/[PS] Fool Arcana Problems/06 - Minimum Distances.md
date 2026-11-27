@@ -7,35 +7,42 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Arrays
 ---
+# Minimum Distances
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Fool Arcana]] #[[Arrays]] #[[Hash Map]]
 
 ---
-
-# Minimum Distances
 
 ## Problem Description
 
 The **distance** between two indices $i$ and $j$ in an array is defined as $|i - j|$. Given an array, find the minimum distance between any two matching values. If no matching pair exists, return $-1$.
 
 **Input Format:**
-- First line: integer `n`
-- Second line: `n` space-separated integers
+- First line: integer $n$
+- Second line: $n$ space-separated integers $a[i]$
 
 **Output Format:**
 - A single integer: the minimum distance, or `-1` if no pair exists.
 
 **Constraints:** $1 \leq n \leq 10^3$; $1 \leq a[i] \leq 10^5$
 
-**Sample:**
-| Input | Output | Reason |
-|-------|--------|--------|
-| `6`<br>`7 1 3 4 1 7` | `3` | `7` at index 0 and 5 → distance 5. `1` at index 1 and 4 → distance **3** (minimum). |
+**Sample Input 0**
+
+```text
+6
+7 1 3 4 1 7
+```
+
+**Sample Output 0**
+
+```text
+3
+```
+
+*Explanation: `7` appears at indices $0$ and $5$ (distance $5$). `1` appears at indices $1$ and $4$ (distance $3$). The minimum distance is $\min(3, 5) = 3$.*
 
 ---
 

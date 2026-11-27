@@ -7,41 +7,82 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Implementation
 ---
+# Library Fine
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Fool Arcana]] #[[Implementation]] #[[Conditionals]]
 
 ---
-
-# Library Fine
 
 ## Problem Description
 
 A library charges fines for late book returns. Given the actual return date and the due date, calculate the fine.
 
 **Fine Rules:**
-- Returned **before or on** the due date: **No fine** (0)
-- Returned **after the due day** (same month and year): **15 × (days late)**
-- Returned **after the due month** (same year): **500 × (months late)**
-- Returned **after the due year**: flat fine of **10,000**
+- Returned **before or on** the due date: **No fine** ($0$)
+- Returned **after the due day** (same month and year): $15 \times (\text{days late})$ Hackos
+- Returned **after the due month** (same year): $500 \times (\text{months late})$ Hackos
+- Returned **after the due year**: fixed fine of $10000$ Hackos
 
 **Input Format:**
-- Line 1: `d1 m1 y1` — actual return date
-- Line 2: `d2 m2 y2` — due date
+- Line 1: three space-separated integers `d1 m1 y1` — actual return date (day, month, year)
+- Line 2: three space-separated integers `d2 m2 y2` — due date (day, month, year)
 
 **Output Format:**
-- A single integer: the fine amount.
+- A single integer: the fine amount (or $0$ if there is none).
 
-**Sample:**
-| Input | Output | Reason |
-|-------|--------|--------|
-| `9 6 2015`<br>`6 6 2015` | `45` | Same year, same month. 3 days late → 15 × 3 = 45 |
-| `1 1 2016`<br>`1 1 2015` | `10000` | Different year, always flat 10000 |
-| `5 3 2015`<br>`5 4 2015` | `0` | Returned before due date |
+**Constraints:**
+- $1 \leq d1, d2 \leq 31$
+- $1 \leq m1, m2 \leq 12$
+- $1 \leq y1, y2 \leq 3000$
+- It is guaranteed that the dates will be valid Gregorian calendar dates.
+
+**Sample Input 0**
+
+```text
+9 6 2015
+6 6 2015
+```
+
+**Sample Output 0**
+
+```text
+45
+```
+
+*Explanation: Same year and same month ($y_1 = y_2 = 2015, m_1 = m_2 = 6$), and $9 - 6 = 3$ days late, so $15 \times 3 = 45$.*
+
+**Sample Input 1**
+
+```text
+1 1 2016
+1 1 2015
+```
+
+**Sample Output 1**
+
+```text
+10000
+```
+
+*Explanation: Returned after the expected calendar year ($y_1 > y_2$), so the flat fine is $10000$.*
+
+**Sample Input 2**
+
+```text
+5 3 2015
+5 4 2015
+```
+
+**Sample Output 2**
+
+```text
+0
+```
+
+*Explanation: Returned before the due date, so no fine is charged.*
 
 ---
 

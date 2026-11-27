@@ -7,43 +7,59 @@ status: solved
 difficulty: Medium
 hackerrank_domain: Queues
 ---
+# Queue Using Two Stacks
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Queues]] #[[Stacks]]
 
 ---
 
----
-
-# Queue Using Two Stacks
-
 ## Problem Description
-Implement a standard Queue (First-In-First-Out) data structure using only two Stacks (Last-In-First-Out). You must support three operations across $Q$ queries:
-1. Enqueue element `x` to the end of the queue.
-2. Dequeue the element at the front of the queue.
-3. Print the element at the front of the queue.
+
+Implement a standard Queue (First-In-First-Out) data structure using only two Stacks (Last-In-First-Out). Process $q$ queries, where each query is one of the following $3$ types:
+1. `1 x`: Enqueue element $x$ into the end of the queue.
+2. `2`: Dequeue the element at the front of the queue.
+3. `3`: Print the element at the front of the queue.
 
 **Input Format:**
- Download problem statement
-The first line contains a single integer, , denoting the number of queries.                                          Download all test cases
-Each line of the       subsequent lines contains a single query in the form described in the problem                 Suggest Edits
-statement above. All three queries start with an integer denoting the query                 , but only query   is
-followed by an additional space-separated value, , denoting the value to be enqueued.
+- The first line contains a single integer, $q$, denoting the number of queries.
+- Each line $i$ of the $q$ subsequent lines contains a single query in the form described above. All three queries start with an integer denoting the query $type$, and only query $1$ is followed by an additional space-separated value, $x$, denoting the value to be enqueued.
 
 **Output Format:**
-For each query of type , print the value of the element at the front of the queue on a new line.
+- For each query of type $3$, print the value of the element at the front of the queue on a new line.
 
 **Constraints:**
-• $• $• $• $It is guaranteed that a valid answer always exists for each query of type .$
+- $1 \leq q \leq 10^5$
+- $1 \leq type \leq 3$
+- $1 \leq |x| \leq 10^9$
+- It is guaranteed that a valid answer always exists for each query of type $3$.
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `STDIN         Function<br>     -----         --------<br>     10            q = 10 (number of queries)<br>     1 42          1st query, enqueue 42<br>     2             dequeue front element<br>     1 14          enqueue 42<br>     3             print the front element<br>     1 28          enqueue 28<br>     3             print the front element<br>     1 60          enqueue 60<br>     1 78          enqueue 78<br>     2             dequeue front element<br>     2             dequeue front element` | `14<br>     14` |
+**Sample Input 0**
+
+```text
+10
+1 42
+2
+1 14
+3
+1 28
+3
+1 60
+1 78
+2
+2
+```
+
+**Sample Output 0**
+
+```text
+14
+14
+```
+
+*Explanation:* After enqueuing `42` and dequeuing it, `14` is enqueued and printed (`14`), then `28` is enqueued and the front is printed again (`14`).
 
 ---
 
@@ -63,15 +79,11 @@ Here is the exact step-by-step mechanism of the C++ solution:
 
 ---
 
----
-
 ## Complexity Analysis
 | | Complexity |
 |--|--|
 | **Time** | **Enqueue:** $O(1)$. **Dequeue/Print:** Amortized $O(1)$. While transferring elements from `inbox` to `outbox` takes $O(N)$ time when the `outbox` is empty, each element is pushed to `inbox` once, popped from `inbox` once, pushed to `outbox` once, and popped from `outbox` once. Over a sequence of operations, the average cost per element is constant. |
 | **Space** | **$O(N)$** — In the worst-case scenario where we enqueue $N$ elements without dequeuing any, we must store all $N$ elements across the two stacks. |
-
----
 
 ---
 

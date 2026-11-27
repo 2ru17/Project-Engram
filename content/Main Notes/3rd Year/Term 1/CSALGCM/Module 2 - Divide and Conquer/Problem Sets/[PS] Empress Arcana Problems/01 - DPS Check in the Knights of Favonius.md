@@ -7,98 +7,120 @@ status: solved
 difficulty: Medium
 hackerrank_domain: Sorting & Searching
 ---
-> [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
-
-**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
-
----
 
 # DPS Check in the Knights of Favonius
 
+> [!info] Document Metadata
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
+
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
+---
+
 ## Problem Description
-Jean Gunnhildr, Acting Grand Master of the Knights of Favonius, intends to test the combat efficiency
-of the members of her organization. Despite the odd assortment of characters at her disposal (among
-which includes a child with a penchant for violence, a creepy dude who is fond of giving people the
-cold shoulder, an alchemist with a stare that is perhaps a bit too intense, an absent-minded gliding
-instructor with an exploding doll), she thinks they are capable fighters.
-However, she would still like to perform a classical "DPS Check" as she gathers data in order to more
-efficiently assign missions to the Knights of Favonius.
-To explain this, we will be using a simplified version of Genshin Impact's mechanics.
-Each character has an ATK stat. The character then has four attacks: a normal attack, charged attack,
-elemental skill, and elemental burst.
-Each of these four attack types have a scaling factor. This determines how much damage is dealt
-relative to the attack. For example, if a character has 1523 ATK and their normal attack has 67%
-scaling, their normal attack would deal 1523 · 67% = 1523 · 0.67 = 1020.41 damage. After this,
-damage is always rounded down. The final damage for the normal attack is 1020.
-Jean has gathered a sizable amount of data involving hillichurls. For our purposes, we will abstract the
-consititution of these hillichurls using the concept of hit points. A hillichurl will have a fixed number of
-hit points. When a character attacks this hillichurl, their hit points are decreased by the damage dealt.
-When the hillichurl's hit points drop to 0 or lower, the hillichurl is defeated.
-Given the number of hillchurls in the sample Jean collected, and the ATK stats and damage scaling of
-each of the moves of her Knights of Favonius, kindly print the ranking of all her knights in terms of
-most hillichurls defeated. You may assume that each character always uses their most effective
-move and the damage is applied exactly once to each of the hypothetical hillichurls in Jean's
-sample. See the sample input for an explanation of how this would look like.
 
-**Input Format:**
-The first line contains two space-separated integers K and H indicating the number of knights and
-hillichurls to be considered in the problem.
-2K lines follow, with every two lines describing one of Jean's Knights. The line will start with a single
-string indicating the knight's name. This string will only contain latin alphabet characters. All the
-names are guaranteed to be distinct. The next line contains five integers
-ATK_i, NA_i, CA_i, ES_i, EB_i indicating the ATK stat, normal attack scaling, charged attack scaling,
-elemental skill scaling, and elemental burst scaling of the i-th character.
-After all the knight description, H lines follow, each containing a single integer H_j, indicating the hit
-points of each of the H hillichurls in Jean's sample.
+Jean Gunnhildr, Acting Grand Master of the Knights of Favonius, intends to test the combat efficiency of the members of her organization. Despite the odd assortment of characters at her disposal (among which includes a child with a penchant for violence, a creepy dude who is fond of giving people the cold shoulder, an alchemist with a stare that is perhaps a bit too intense, and an absent-minded gliding instructor with an exploding doll), she thinks they are capable fighters. However, she would still like to perform a classical "DPS Check" as she gathers data in order to more efficiently assign missions to the Knights of Favonius.
 
-**Output Format:**
-Output K lines, each containing the name of the knight and an integer indicating the number of
-hillichurls they can defeat with their optimal attack separated by a single space. The knights must be
-sorted in non-ascending order according to the number of hillichurls defeated. In the case of a tie
-between two knights, print them in lexicographical order.
+To explain this, we use a simplified version of Genshin Impact's mechanics. Each character has an ATK stat and four attacks: a normal attack, charged attack, elemental skill, and elemental burst. Each of these four attack types has a scaling factor that determines how much damage is dealt relative to ATK. For example, if a character has $1523$ ATK and their normal attack has $67\%$ scaling, their normal attack deals $1523 \cdot 67\% = 1523 \cdot 0.67 = 1020.41$ damage. Damage is always rounded down, giving a final damage of $1020$.
 
-**Constraints:**
-$1 \le K, H \le 10^5$
-$1 \le ATK_i \le 9 \cdot 10^3$
-$1 \le NA_i, CA_i, ES_i, EB_i \le 10^3$
-$1 \le H_j \le 10^5$ for all $1 \le i \le H$
+Jean has gathered a sample of hillichurls, each having a fixed number of hit points. When a character attacks a hillichurl, its hit points decrease by the damage dealt, and the hillichurl is defeated if its hit points drop to $0$ or lower. Given the hillichurls' hit points and the ATK stats and move scalings of Jean's Knights of Favonius, print the ranking of all knights by most hillichurls defeated. Assume each character always uses their most effective move and applies damage exactly once to each hypothetical hillichurl in Jean's sample.
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `3 5<br>Amber<br>101 47 13 33 11<br>Kaeya<br>473 16 36 49 47<br>Fischl<br>263 39 10 42 14<br>49<br>14<br>358<br>444<br>306` | `Fischl 2<br>Kaeya 2<br>Amber 1` |
+### Input Format
+
+The first line contains two space-separated integers $K$ and $H$ indicating the number of knights and hillichurls to be considered in the problem.
+
+$2K$ lines follow, with every two lines describing one of Jean's Knights. The first line starts with a single string indicating the knight's name (containing only Latin alphabet characters, all distinct). The next line contains five integers $ATK_i, NA_i, CA_i, ES_i, EB_i$ indicating the ATK stat, normal attack scaling, charged attack scaling, elemental skill scaling, and elemental burst scaling of the $i$-th character.
+
+After all knight descriptions, $H$ lines follow, each containing a single integer $H_j$ indicating the hit points of each of the $H$ hillichurls in Jean's sample.
+
+### Output Format
+
+Output $K$ lines, each containing the name of the knight and an integer indicating the number of hillichurls they can defeat with their optimal attack, separated by a single space. The knights must be sorted in non-ascending order according to the number of hillichurls defeated. In the case of a tie between two knights, print them in lexicographical order.
+
+### Constraints
+
+- $1 \le K, H \le 10^5$
+- $1 \le ATK_i \le 9 \cdot 10^3$
+- $1 \le NA_i, CA_i, ES_i, EB_i \le 10^3$
+- $1 \le H_j \le 10^5$ for all $1 \le i \le H$
+
+### Sample Test Cases
+
+**Sample Input 0**
+```text
+3 5
+Amber
+101 47 13 33 11
+Kaeya
+473 16 36 49 47
+Fischl
+263 39 10 42 14
+49
+14
+358
+444
+306
+```
+
+**Sample Output 0**
+```text
+Fischl 2
+Kaeya 2
+Amber 1
+```
+
+*Sample 0 Explanation:* Amber's strongest skill has $47\%$ scaling, dealing $\lfloor 101 \cdot 0.47 \rfloor = 47$ damage ($1$ hillichurl defeated). Kaeya's elemental skill ($49\%$) deals $\lfloor 473 \cdot 0.49 \rfloor = 231$ damage ($2$ hillichurls defeated). Fischl's elemental skill ($42\%$) deals $\lfloor 263 \cdot 0.42 \rfloor = 110$ damage ($2$ hillichurls defeated). Since Fischl and Kaeya tie at $2$, Fischl precedes Kaeya lexicographically.
+
+**Sample Input 1**
+```text
+2 6
+Timmie
+9000 1000 100 500 100
+Diluc
+518 29 39 42 237
+318
+257
+1490
+3980
+1960
+3350
+```
+
+**Sample Output 1**
+```text
+Timmie 6
+Diluc 2
+```
+
+*Sample 1 Explanation:* Timmie's normal attack ($1000\%$) deals $\lfloor 9000 \cdot 10.00 \rfloor = 90000$ damage, defeating all $6$ hillichurls. Diluc's elemental burst ($237\%$) deals $\lfloor 518 \cdot 2.37 \rfloor = 1227$ damage, defeating $2$ hillichurls ($318$ and $257$).
 
 ---
 
 ## Approach & Intuition
-> ** Abstract the problem**
-> Each knight has an ATK stat and 4 attack scalings. Compute the best single-hit damage for each knight (floor of ATK × best_scaling%). Count how many hillichurls each can one-shot. Rank knights by kills descending, ties broken lexicographically.
 
-> ** Dumb sol?**
-> For each knight, loop through ALL hillichurls and check if damage ≥ HP.
-> **O(K × H)** — with K = H = 100,000 that's **10 billion ops** → TLE.
+> **Problem Abstraction:**
+> Each knight has an ATK stat and four percentage scalings, yielding optimal single-hit damage $\lfloor \text{ATK} \cdot \max(\text{scalings}) / 100 \rfloor$. Count how many hillichurls satisfy $H_j \le \text{damage}$ for each knight, then sort knights by kills descending and name ascending.
 
-> ** Smart sol?**
-> Sort hillichurls by HP once. For each knight, binary search (`bisect_right`) to count how many have HP ≤ damage.
-> **O(H log H + K log H)** — fast.
+> **Brute-Force Approach:**
+> For each of the $K$ knights, iterate over all $H$ hillichurls and count how many have $H_j \le \text{damage}$.
+> This runs in $O(K \cdot H)$ time — up to $10^{10}$ checks when $K = H = 10^5$, causing Time Limit Exceeded (TLE).
+
+> **Optimal Approach:**
+> Sort the hillichurl HP list once in $O(H \log H)$ time. For each knight, binary search (`bisect_right`) in $O(\log H)$ time to count all hillichurls with $H_j \le \text{damage}$, then sort the resulting `(name, kills)` pairs by `(-kills, name)`.
+> This achieves $O(H \log H + K \log H + K \log K)$ total time.
 
 ---
 
 ## Damage Formula
 
-```
-damage = floor(ATK × best_scaling / 100)
+```text
+damage = floor(ATK * best_scaling / 100)
 
 Where best_scaling = max(normal, charged, elemental_skill, elemental_burst)
 ```
 
-Example: Amber has ATK=101, scalings = [47, 13, 33, 11]
-- Best scaling = 47 (normal attack)
-- Damage = floor(101 × 47 / 100) = floor(47.47) = **47**
+Example: Amber has $\text{ATK} = 101$ and scalings $[47, 13, 33, 11]$.
+- Best scaling $= 47$ (normal attack)
+- $\text{damage} = \lfloor 101 \times 47 / 100 \rfloor = \lfloor 47.47 \rfloor = \mathbf{47}$
 
 ---
 
@@ -106,53 +128,54 @@ Example: Amber has ATK=101, scalings = [47, 13, 33, 11]
 
 ```mermaid
 flowchart TD
-    A["Read K knights\n(name, ATK, 4 scalings)"] --> B
-    B["Read H hillichurl HPs"] --> C
-    C["Sort hillichurl HPs\nascending"] --> D
-    D["For each knight:"] --> E
-    E["damage = ATK × max(scalings) // 100"] --> F
-    F["kills = bisect_right(sorted_hp, damage)\n(count of HP values ≤ damage)"] --> G
-    G["Store (name, kills)"] --> D
-    D --> H["Sort results:\n1st: kills descending\n2nd: name ascending (ties)"]
-    H --> I["Print each: name kills"]
+    A["Read K knights (name, ATK, 4 scalings)"] --> B["Read H hillichurl HPs"]
+    B --> C["Sort hillichurl HPs ascending"]
+    C --> D{"Next knight remaining?"}
+    D -->|"Yes"| E["Compute damage = ATK * max(scalings) // 100"]
+    E --> F["kills = bisect_right(sorted_hp, damage)"]
+    F --> G["Append (name, kills) to results"]
+    G --> D
+    D -->|"No"| H["Sort results by kills descending, then name ascending"]
+    H --> I["Print each name and kill count"]
 ```
 
 ---
 
 ## Trace (Sample 0)
 
-**Input:** 3 knights, 5 hillichurls with HP = [49, 14, 358, 444, 306]
+**Input:** $3$ knights, $5$ hillichurls with $\text{HP} = [49, 14, 358, 444, 306]$
 
 **Step 1 — Sort HPs:** `[14, 49, 306, 358, 444]`
 
 **Step 2 — Compute each knight:**
 
-| Knight | ATK | Best Scaling | Damage | bisect_right | Kills |
-|---|---|---|---|---|---|
-| Amber | 101 | 47% (normal) | 101×47//100 = **47** | bisect([14,49,306,358,444], 47) = 1 | **1** |
-| Kaeya | 473 | 49% (elem skill) | 473×49//100 = **231** | bisect(..., 231) = 2 | **2** |
-| Fischl | 263 | 42% (elem skill) | 263×42//100 = **110** | bisect(..., 110) = 2 | **2** |
+| Knight | ATK | Best Scaling | Damage | `bisect_right` | Kills |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Amber | 101 | 47% (normal) | `101 * 47 // 100 = 47` | `bisect_right([14, 49, 306, 358, 444], 47) = 1` | **1** |
+| Kaeya | 473 | 49% (elem skill) | `473 * 49 // 100 = 231` | `bisect_right([14, 49, 306, 358, 444], 231) = 2` | **2** |
+| Fischl | 263 | 42% (elem skill) | `263 * 42 // 100 = 110` | `bisect_right([14, 49, 306, 358, 444], 110) = 2` | **2** |
 
-**Step 3 — Sort results:** Fischl(2) & Kaeya(2) tied → alphabetical → Fischl first.
+**Step 3 — Sort results:** Fischl ($2$) and Kaeya ($2$) tie on kills, so lexicographical tie-breaking places Fischl first.
 
-```
-Fischl 2  
-Kaeya 2   
-Amber 1   
+```text
+Fischl 2
+Kaeya 2
+Amber 1
 ```
 
 ---
 
 ## Complexity Analysis
 
-| | Complexity |
-|--|--|
-| **Time** | $O(K \cdot 4 + H \log H + K \log H)$ | Based on optimal algorithm
-| **Space** | $O(H + K)$ | Required memory
+| Metric | Complexity | Rationale |
+| :--- | :--- | :--- |
+| **Time** | $O(H \log H + K \log H + K \log K)$ | Sorting $H$ hillichurl HPs takes $O(H \log H)$, computing optimal damage and running `bisect_right` for $K$ knights takes $O(K \log H)$, and sorting the $K$ knight rankings takes $O(K \log K)$. |
+| **Space** | $O(H + K)$ | Storing the sorted hillichurl HP list of size $H$ alongside the $K$ knight records and output tuples requires linear memory. |
 
 ---
 
 ## Original Stub (HackerRank Template)
+
 ```python
 def solve(k,h,knights,hillichurls):
     # compute and print answer here
@@ -174,6 +197,7 @@ if __name__ == "__main__":
 ```
 
 ## Full Solution
+
 ```python
 def solve(k,h,knights,hillichurls):
     # compute and print answer here
@@ -214,8 +238,8 @@ if __name__ == "__main__":
     main()
 ```
 
-
 ## References & Navigation
-- **Related Notes:** [[Divide and Conquer Introduction]]
+
 - **Next Problem:** [[02 - I Hate Spellcasters]]
 - **Parent Set:** [[[PS] Empress Arcana|Empress Arcana Index]]
+- **Related Notes:** [[Divide and Conquer Introduction]]

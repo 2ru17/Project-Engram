@@ -7,42 +7,49 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Trees
 ---
+# Tree: Preorder Traversal
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Trees]] #[[Recursion]] #[[DFS]]
 
 ---
 
----
-
-# Tree: Preorder Traversal
-
 ## Problem Description
+
 Given a pointer to the root of a binary tree, print the values of its nodes in a **Preorder Traversal** format as a single line of space-separated values.
 
 **Input Format:**
-NEED HELP?
-Our test code passes the root node of a binary tree to the preOrder function.
+Our test code passes the root node of a binary tree to the `preOrder` function.
 
 **Output Format:**
-    
 Print the tree's preorder traversal as a single line of space-separated values.
-                                                                                                                M O R E D E TA I LS
 
 **Constraints:**
- View discussions$
-$
-    Nodes in the tree                                                                                            View top submissions$
-                                                                                                                RATE THIS CHALLENGE$
+- $1 \leq \text{Nodes in the tree} \leq 500$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| ` Download problem statement<br>          1<br>           \                                                                                                     Download all test cases<br>            2<br>                                                                                                                 Suggest Edits<br>             \<br>              5<br>             / \<br>            3   6<br>             \<br>              4` | `1 2 5 3 4 6` |
+**Sample Input 0**
+
+```text
+     1
+      \
+       2
+        \
+         5
+        / \
+       3   6
+        \
+         4
+```
+
+**Sample Output 0**
+
+```text
+1 2 5 3 4 6
+```
+
+*Explanation:* The preorder traversal of the binary tree visits root, then left subtree, then right subtree, printing `1 2 5 3 4 6`.
 
 ---
 
@@ -61,15 +68,11 @@ Here is how the C++ function accomplishes this:
 
 ---
 
----
-
 ## Complexity Analysis
 | | Complexity |
 |--|--|
 | **Time** | **$O(N)$** — The recursive function visits every single node in the tree exactly once. The work done at each node (printing a value and making two recursive calls) is $O(1)$. Therefore, the time scales linearly with $N$, the total number of nodes. |
 | **Space** | **$O(H)$** — We do not use any explicit data structures, but the recursive call stack takes up memory. The maximum depth of the call stack corresponds to the height of the tree, $H$. In the worst case (a completely skewed, linked-list-like tree), $H = N$, resulting in $O(N)$ space. In the best/average case (a perfectly balanced tree), $H = \log N$, resulting in $O(\log N)$ space. |
-
----
 
 ---
 

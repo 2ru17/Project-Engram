@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { TOTAL_COURSE_COUNT, TOTAL_MONOGRAPH_COUNT } from "@/lib/course-registry";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -42,7 +43,7 @@ export default function TermsPage() {
             <span>1. Educational &amp; Pedagogical Use Disclaimer</span>
           </h2>
           <p className="text-sm sm:text-base leading-[1.65] text-[var(--zen-frost)]">
-            Project Engram provides curated Computer Science lecture monographs, mathematical derivations, assessments, and engineering simulators solely for educational, academic reference, and personal study purposes. While every effort is made to maintain technical accuracy across all 26 courses and 559 monographs, the archive does not replace official institutional syllabi, formal verification standards, or professional engineering review.
+            Project Engram provides curated Computer Science lecture monographs, mathematical derivations, assessments, and engineering simulators solely for educational, academic reference, and personal study purposes. While every effort is made to maintain technical accuracy across all {TOTAL_COURSE_COUNT} courses and {TOTAL_MONOGRAPH_COUNT} monographs, the archive does not replace official institutional syllabi, formal verification standards, or professional engineering review.
           </p>
         </section>
 

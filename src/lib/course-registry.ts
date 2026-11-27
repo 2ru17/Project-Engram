@@ -284,7 +284,7 @@ export const COURSE_REGISTRY: CourseInfo[] = [
     track: "Core CS",
     relatedCourses: ["CCDSALG", "CCDSTRU", "CSINTSY", "CSMATH2"],
     defaultSimulators: ["algo-visualizer"],
-    count: 56,
+    count: 95,
     href: "/notes/CSALGCM",
     year: 3,
     yearLabel: "3rd Year",

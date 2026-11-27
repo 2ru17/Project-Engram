@@ -7,118 +7,129 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Implementation
 ---
-> [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
-
-**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
-
----
 
 # I Hate Spellcasters
 
+> [!info] Document Metadata
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
+
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
+---
+
 ## Problem Description
-Pat is a new tunnel master for the popular tabletop roleplaying game Tunnels and Troglodytes.
-She had recently finished a campaign with her T&T group, but one particular encounter near the
-end of the campaign sort of went badly because of one kind of character: the spellcaster.
-Their tunnel master (the one who runs the game) told them afterwards that they should never put
-more than 6 spellcasters in combat, because the headaches induced by having spellcasters in
-combat grow very quickly. In fact, there is a formula to compute for the headache measure H of
-an encounter, which only requires one variable n, which is the number of spellcasters. The
-formula is as follows
-$H = a \cdot sin(n) + a \cdot n$
-where a is a constant and n is the number of spellcasters.
-Note that even in the fantastical world of Tunnels and Troglodytes, there is no such thing as a half
-creature or a negative creature, so n must be a non-negative integer i.e. $n \ge 0$.
-Now, the tunnelmaster of the real world secretly knows Pat's headache threshold T. This means
-that if an encounter's H value is strictly greater than T, Pat will not be able to run the encounter
-at all and she will spontaneously combust on the spot.
-Given a and several values of T, find the maximum number of spellcasters n Pat can handle in an
-encounter without spontaneously combusting.
 
-**Input Format:**
-Input consists of a single line containing 2 space-separated integers a and Q, indicating the
-constant in the headache measure formula and the number of queries.
-Q lines follow, each containing a single value for T, which indicates Pat's headache threshold.
+Pat is a new tunnel master for the popular tabletop roleplaying game Tunnels and Troglodytes. She recently finished a campaign with her T&T group where one encounter near the end went badly because of spellcasters. Their tunnel master told them afterward that they should never put more than $6$ spellcasters in combat because the headaches induced by having spellcasters in combat grow quickly. Specifically, the headache measure $H$ of an encounter with $n$ spellcasters is given by:
 
-**Output Format:**
-Output consists of N lines, each containing the maximum integer n, denoting the maximum
-spellcasters Pat can put in her encounters without spontaneously combusting.
-If Pat can handle an unlimited number of spellcasters, print "Pat is the Best Tunnel Master!"
-without quotes on the corresponding line.
+$$H = a \cdot \sin(n) + a \cdot n$$
 
-**Constraints:**
-$0 \le a, T \le 10^9$
-$1 \le Q \le 2 \cdot 10^5$
+where $a$ is a constant and $n$ is the number of spellcasters. Since there is no such thing as a half-creature or a negative creature, $n$ must be a non-negative integer ($n \ge 0$).
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `1 3<br>10<br>20<br>30` | `10<br>19<br>30` |
+The real-world tunnelmaster knows Pat's headache threshold $T$: if an encounter's $H$ value is strictly greater than $T$, Pat cannot run the encounter and spontaneously combusts on the spot. Given $a$ and several values of $T$, find the maximum number of spellcasters $n$ Pat can handle without spontaneously combusting.
+
+### Input Format
+
+Input consists of a single line containing $2$ space-separated integers $a$ and $Q$, indicating the constant in the headache measure formula and the number of queries.
+
+$Q$ lines follow, each containing a single value for $T$, which indicates Pat's headache threshold.
+
+### Output Format
+
+Output consists of $Q$ lines, each containing the maximum integer $n$ denoting the maximum spellcasters Pat can put in her encounters without spontaneously combusting. If Pat can handle an unlimited number of spellcasters, print `Pat is the Best Tunnel Master!` without quotes on the corresponding line.
+
+### Constraints
+
+- $0 \le a, T \le 10^9$
+- $1 \le Q \le 2 \cdot 10^5$
+
+### Sample Test Cases
+
+**Sample Input 0**
+```text
+1 3
+10
+20
+30
+```
+
+**Sample Output 0**
+```text
+10
+19
+30
+```
+
+**Sample Input 1**
+```text
+0 1
+10
+```
+
+**Sample Output 1**
+```text
+Pat is the Best Tunnel Master!
+```
 
 ---
 
 ## Approach & Intuition
-> ** Abstract the problem**
-> The headache formula is `H(n) = a·sin(n) + a·n`. Given a constant `a` and a threshold `T`, find the maximum non-negative integer `n` such that `H(n) ≤ T`. If `a = 0`, headache is always 0 → unlimited spellcasters.
 
-> ** Dumb sol?**
-> Try n = 0, 1, 2, ... until H(n) > T. Return n−1.
-> **O(T/a)** — if T = 10⁹ and a = 1, that's a billion iterations → TLE.
+> **Problem Abstraction:**
+> Given constant $a \ge 0$ and $Q$ thresholds $T$, find for each query the largest integer $n \ge 0$ satisfying $H(n) = a(\sin(n) + n) \le T$, or output `Pat is the Best Tunnel Master!` if $a = 0$.
 
-> ** Smart sol?**
-> Since sin(n) ∈ [−1, 1], H(n) ≥ a·(n−1). So the maximum possible answer is at most `T/a + 2`. Start from there and scan downward (at most ~3 steps).
-> **O(1) per query** — instant.
+> **Brute-Force Approach:**
+> Increment $n = 0, 1, 2, \dots$ from zero until $H(n) > T$.
+> When $a = 1$ and $T = 10^9$, scanning from $0$ takes $O(T / a) = 10^9$ steps per query, causing Time Limit Exceeded (TLE).
+
+> **Optimal Approach:**
+> Since $\sin(n) \in [-1, 1]$, we always have $H(n) \ge a(n - 1)$, so any valid $n$ satisfies $n \le \lfloor T / a \rfloor + 1$ (and $H(\lfloor T / a \rfloor + 2) > T$). Starting at `upper = T / a + 2` and scanning downward guarantees finding the largest valid $n$ in at most $3$ steps.
+> This achieves $O(1)$ time per query and $O(Q)$ total runtime.
 
 ---
 
 ## Why Not Binary Search?
 
-`H(n) = a·(sin(n) + n)` is **NOT monotone** because sin oscillates:
+$H(n) = a \cdot (\sin(n) + n)$ is **not strictly monotonic** over integers because $\sin(n)$ oscillates (though its derivative $1 + \cos(n) \ge 0$ is non-negative on $\mathbb{R}$, near-flat regions make direct integer threshold checks delicate):
 
-```
+```text
 n:   0    1    2    3    4    5    6    7    8    9   10   11
 H: 0.00 1.84 2.91 3.14 3.24 4.04 5.72 7.66 8.99 9.41 9.46 10.00
-                        ↓                                    ↑
-                  H dips here                          H jumps here
 ```
 
-Binary search assumes monotonicity. It would pick the wrong half on a dip. However, the sin contribution is bounded to ±a, so the function can't dip MORE than 1 unit below `a·n`. That's why scanning down from `T/a + 2` always works — we only ever need to check ~3 values.
+Because $\sin(n)$ is bounded in $[-1, 1]$, $H(n)$ lies strictly inside $[a(n - 1),\, a(n + 1)]$. Therefore any valid integer $n$ lies within a constant-width band around $T / a$, so scanning down from $\lfloor T / a \rfloor + 2$ requires only $O(1)$ iterations regardless of how large $T$ is.
 
 ---
 
-## Trace (a=1, T=10)
+## Trace ($a = 1, T = 10$)
 
+```text
+Upper bound = 10 / 1 + 2 = 12
+
+n=12: H = sin(12) + 12 = 11.463 > 10 -> skip
+n=11: H = sin(11) + 11 = 10.0000097 > 10 -> skip
+n=10: H = sin(10) + 10 = 9.456 <= 10 -> answer = 10
 ```
-Upper bound = 10/1 + 2 = 12
 
-n=12: H = sin(12)+12 = 11.46 > 10 → skip
-n=11: H = sin(11)+11 = 10.00 > 10 → skip  (barely! ~10.000010)
-n=10: H = sin(10)+10 = 9.456 ≤ 10 → answer = 10 
-```
-
-Only 3 iterations from the upper bound!
+Only $3$ iterations from the upper bound!
 
 ---
 
-## Pitfall: Floating Point Precision
+## Pitfall: Floating-Point Precision
 
-At n=11, a=1: `sin(11) + 11 ≈ 10.0000097`, which is BARELY above 10. Double precision has ~15 significant digits, so this is well within safe territory. But if the problem used larger `a` values and marginal thresholds, precision would matter more. Lucky for us, constraints keep things clean.
+At $n = 11, a = 1$: $\sin(11) + 11 \approx 10.0000097$, which is barely above $10$. IEEE 754 `double` precision provides roughly $15$–$17$ significant decimal digits, cleanly distinguishing $10.0000097$ from $10$ across $a, T \le 10^9$.
 
 ---
 
 ## Complexity Analysis
 
-| | Complexity |
-|--|--|
-| **Time** | $O(Q)$ | Based on optimal algorithm
-| **Space** | $O(1)$ | Required memory
+| Metric | Complexity | Rationale |
+| :--- | :--- | :--- |
+| **Time** | $O(Q)$ | Because $\sin(n) \in [-1, 1]$, the upper bound $\lfloor T / a \rfloor + 2$ sits at most $3$ integer steps above the maximum valid $n$, so each of the $Q$ queries evaluates $H(n)$ at most a constant number of times. |
+| **Space** | $O(1)$ | Each threshold query is processed in a streaming loop using only scalar `long long` and `double` variables. |
 
 ---
 
 ## Original Stub (HackerRank Template)
+
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -138,6 +149,7 @@ int main() {
 ```
 
 ## Full Solution
+
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -175,9 +187,9 @@ int main() {
 }
 ```
 
-
 ## References & Navigation
-- **Related Notes:** [[Divide and Conquer Introduction]]
+
 - **Previous Problem:** [[01 - DPS Check in the Knights of Favonius]]
 - **Next Problem:** [[03 - Metacognitive Frequencies]]
 - **Parent Set:** [[[PS] Empress Arcana|Empress Arcana Index]]
+- **Related Notes:** [[Divide and Conquer Introduction]]

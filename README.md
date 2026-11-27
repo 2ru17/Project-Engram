@@ -20,10 +20,10 @@ Architectural standards, structural boundaries, and implementation workflows are
 
 ## 3. Core Capabilities
 
-* **559+ Academic Monographs across 26+ CS Courses**: Deep-dive technical notes featuring formal mathematical derivations (KaTeX), client-side architecture and state diagrams (Mermaid v12), annotated code implementations, and bidirectional `[[WikiLink]]` navigation meshes.
+* **606+ Academic Monographs across 26+ CS Courses**: Deep-dive technical notes featuring formal mathematical derivations (KaTeX), client-side architecture and state diagrams (Mermaid v12), annotated code implementations, and bidirectional `[[WikiLink]]` navigation meshes.
 * **Interactive Self-Assessment Engine (`MCQSection.tsx`)**: Parses structured Markdown assessment blocks into interactive multiple-choice quizzes with instant distractor rationales and keyboard accessibility.
 * **Pedagogical Engineering Simulators**: Interactive laboratory workbenches spanning **Systems** (CPU pipelining, virtual memory paging), **Security & Networking** (TCP congestion control, cryptographic avalanche diffusion), **Theory** (graph pathfinding, automata tape machines), and **Software/Databases** ($\text{B}^+$ tree indexing and MVCC transactions).
-* **Singularity Knowledge Graph**: A custom HTML5 Canvas force-directed graph rendering the central `COMPUTER SCIENCE // SINGULARITY` at $(0, 0)$, 26 Course Stars, and 559 orbiting monographs with 1-hop constellation isolation.
+* **Singularity Knowledge Graph**: A custom HTML5 Canvas force-directed graph rendering the central `COMPUTER SCIENCE // SINGULARITY` at $(0, 0)$, 26 Course Stars, and 606 orbiting monographs with 1-hop constellation isolation.
 * **5-Universe Design System**: Supports the default **Cyber-Zen** tech-noir aesthetic (Dark/Light modes) alongside four locked single-mode universes (**Neo-Brutalism**, **Minimalism**, **Parallax**, and **Broken-Grid**) switched via the **Singularity Warp Jump**.
 
 ---

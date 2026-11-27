@@ -7,40 +7,48 @@ status: solved
 difficulty: Medium
 hackerrank_domain: Linked Lists
 ---
+# Cycle Detection
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Linked Lists]] #[[Floyd's Algorithm]]
 
 ---
 
----
-
-# Cycle Detection
-
 ## Problem Description
-A linked list contains a cycle if any node is visited more than once during traversal. Given a pointer to the head of a singly linked list, determine whether it contains a cycle. Return `1` (or `true`) if a cycle is present, and `0` (or `false`) otherwise.
+
+A linked list is said to contain a cycle if any node is visited more than once while traversing the list. Given a pointer `head` to the head of a singly linked list, determine whether it contains a cycle. Return `1` (or `true`) if a cycle is present, and `0` (or `false`) otherwise.
 
 **Input Format:**
-The code stub reads from stdin and passes the appropriate argument to your function. The custom
-test cases format will not be described for this question due to its complexity. Expand the section for
-the main function and review the code if you would like to figure out how to create a custom case.
+The code stub reads from stdin and passes the appropriate argument to your function. The custom test cases format will not be described for this question due to its complexity. Expand the section for the main function and review the code if you would like to figure out how to create a custom case.
 
 **Output Format:**
-• int:     if there is a cycle or       if there is not
-                                                                                                             Suggest Edits
-Note: If the list is empty,              will be null.
+- `int`: `1` if there is a cycle or `0` if there is not.
+- *Note:* If the list is empty, `head` will be `null`.
 
 **Constraints:**
-• $
+- $0 \leq \text{list size} \leq 1000$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `References to each of the following linked lists are passed as arguments to your function:` | `0<br>     1` |
+**Sample Input 0**
+
+References to each of the following linked lists are passed as arguments to your function:
+
+```text
+List 1: 1 -> NULL
+List 2: 1 -> 2 -> 3 -> 1 (cycle back to node 1)
+```
+
+**Sample Output 0**
+
+```text
+0
+1
+```
+
+*Explanation:*
+1. The first list has no cycle, so return `0`.
+2. The second list has a cycle where node `3` points back to node `1`, so return `1`.
 
 ---
 
@@ -58,15 +66,11 @@ Here is exactly how the C++ implementation works:
 
 ---
 
----
-
 ## Complexity Analysis
 | | Complexity |
 |--|--|
 | **Time** | **$O(N)$** — If there is no cycle, the `fast` pointer reaches the end in $N/2$ steps. If there is a cycle, the `fast` and `slow` pointers will collide in at most $N$ steps after entering the loop. Thus, the time scales linearly with the number of nodes $N$. |
 | **Space** | **$O(1)$** — The algorithm only requires two node pointers (`slow` and `fast`) regardless of how large the linked list is, making it highly memory efficient. |
-
----
 
 ---
 

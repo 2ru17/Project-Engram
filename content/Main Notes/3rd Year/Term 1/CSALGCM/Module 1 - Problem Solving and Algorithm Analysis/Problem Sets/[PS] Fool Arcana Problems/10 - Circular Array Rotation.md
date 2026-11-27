@@ -7,38 +7,53 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Arrays
 ---
+# Circular Array Rotation
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Fool Arcana]] #[[Arrays]] #[[Modular Arithmetic]]
 
 ---
-
-# Circular Array Rotation
 
 ## Problem Description
 
 John Watson performs `k` **right rotations** on an array. In one right rotation, the last element moves to the front. After `k` rotations, Watson asks `q` queries — for each query index `m`, what value is at position `m`?
 
 **Input Format:**
-- First line: `n k q` (array size, rotations, queries)
-- Second line: `n` space-separated integers (the array)
-- Next `q` lines: one query index `m` per line (0-indexed)
+- First line: three space-separated integers $n$, $k$, and $q$ (array size, rotation count, number of queries)
+- Second line: $n$ space-separated integers $a[i]$ ($0 \leq i < n$)
+- Next $q$ lines: a single integer `queries[i]` per line (0-indexed position to return)
 
 **Output Format:**
-- For each query: the value at position `m` after `k` rotations.
+- For each query: the value at position `queries[i]` after $k$ right rotations.
 
-**Constraints:** $1 \leq n \leq 10^5$; $1 \leq k \leq 10^5$; $1 \leq q \leq 500$; $0 \leq m < n$
+**Constraints:**
+- $1 \leq n \leq 10^5$
+- $1 \leq a[i] \leq 10^5$
+- $1 \leq k \leq 10^5$
+- $1 \leq q \leq 500$
+- $0 \leq \text{queries}[i] < n$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `3 2 3`<br>`1 2 3`<br>`0`<br>`1`<br>`2` | `2`<br>`3`<br>`1` |
+**Sample Input 0**
 
-*After 2 right rotations: [1,2,3] → [3,1,2] → [2,3,1]. Query 0→2, 1→3, 2→1.*
+```text
+3 2 3
+1 2 3
+0
+1
+2
+```
+
+**Sample Output 0**
+
+```text
+2
+3
+1
+```
+
+*Explanation: After 2 right rotations: $[1, 2, 3] \to [3, 1, 2] \to [2, 3, 1]$. Query $0 \to 2$, $1 \to 3$, $2 \to 1$.*
 
 ---
 

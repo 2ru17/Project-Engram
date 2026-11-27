@@ -7,60 +7,85 @@ status: solved
 difficulty: Hard
 hackerrank_domain: Divide and Conquer
 ---
-> [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
-
-**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Order Statistics]] #[[Merge Sort Tree]]
-
----
 
 # It's Like I Have ESPN Or Something
 
-## Problem Description
-Karen can read minds within a certain range based on her energy level. Given the coordinates of $N$ people in a cafeteria, her goal is to find out how many people she can reach for $Q$ queries, each specifying a different energy level. The distance between Karen and any person is defined as the Manhattan distance ($|x_1 - x_2| + |y_1 - y_2|$).
+> [!info] Document Metadata
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
-**Input Format:**
-Input consists of one test case beginning with three space-separated integers $N$, $K_x$, and $K_y$ which are the number of people in the cafeteria, and Karen's location respectively.
-$N$ lines follow, the $i$-th of which containing two space-separated integers $x_i$ and $y_i$ denoting the coordinates of the $i$-th person.
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Order Statistics]] #[[Merge Sort Tree]]
+---
+
+## Problem Description
+
+Karen Smith can read minds within a limited range based on her ESPN energy $E$. If she accumulates $E$ energy, she can read the minds of people who are at most $E$ units away from her, where the distance between two points $(x_1, y_1)$ and $(x_2, y_2)$ is defined as the Manhattan distance $D = |x_1 - x_2| + |y_1 - y_2|$. Positioned at coordinates $(K_x, K_y)$ in a cafeteria with $N$ people, Karen must answer $Q$ queries, each specifying an energy level $E$ and asking how many people she can collect gossip from.
+
+### Input Format
+
+Input consists of one test case beginning with three space-separated integers $N$, $K_x$, and $K_y$, which are the number of people in the cafeteria and Karen's location respectively.
+
+$N$ lines follow, the $i$-th of which containing two space-separated integers $X_i$ and $Y_i$ denoting the coordinates of the $i$-th person.
+
 The next line contains a single integer $Q$. You must answer $Q$ queries.
+
 The next $Q$ lines contain an integer $E$, which is the energy of Karen for that query.
 
-**Output Format:**
+### Output Format
+
 For each query, output one line containing a single integer which denotes the number of people within range of Karen's ESPN.
 
-**Constraints:**
+### Constraints
 
+- $0 \le N \le 10^5$
+- $0 \le |K_x|, |K_y|, |X_i|, |Y_i| \le 10^8$
+- $0 \le E \le 4 \cdot 10^8$
+- $1 \le Q \le 10^5$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `3 6 7`<br>`-10 10`<br>`-6 0`<br>`8 7`<br>`3`<br>`30`<br>`6`<br>`1` | `3`<br>`1`<br>`0` |
+### Sample Test Cases
+
+**Sample Input 0**
+```text
+3 6 7
+-10 10
+-6 0
+8 7
+3
+30
+6
+1
+```
+
+**Sample Output 0**
+```text
+3
+1
+0
+```
+
+*Sample 0 Explanation:* The Manhattan distances of the 3 people from $(6, 7)$ are $19$, $19$, and $2$. With $E = 30$, Karen can reach all $3$ of them. With $E = 6$, she can only reach the one $2$ units away. With $E = 1$, she cannot reach any of them.
 
 ---
 
 ## Approach & Intuition
-> ** Abstract the problem**
-> Karen can read minds up to distance `e`. Given `n` people scattered on a grid and `q` queries each asking "how many people can Karen sense at energy level e?", answer each query.
-> "Sense" = Manhattan distance ≤ e.
 
-> ** Dumb sol?**
-> For every query, loop through ALL `n` people and check each one's distance.
-> **O(n × q)** — if n = q = 100,000, that's **10 billion ops** → TLE.
+> **Problem Abstraction:**
+> Karen can read minds up to Manhattan distance $E$. Given $N$ people scattered on a 2D integer grid and $Q$ queries each specifying an energy level $E$, count how many people satisfy $|X_i - K_x| + |Y_i - K_y| \le E$.
 
-> ** Smart sol?**
-> Compute ALL distances once upfront, sort them. Each query becomes a single binary search (`upper_bound`) to count how many distances ≤ e.
-> **O(n log n + q log n)** — fast enough for any input.
+> **Brute-Force Approach:**
+> For every query, scan all $N$ people and recompute each Manhattan distance against $E$.
+> This takes $O(N \cdot Q)$ time: for $N = Q = 10^5$, that is $10^{10}$ operations, resulting in Time Limit Exceeded (TLE).
+
+> **Optimal Approach:**
+> Precompute all $N$ Manhattan distances once upfront and sort them in ascending order. Each query reduces to a single binary search (`upper_bound`) to count how many distances are $\le E$.
+> This achieves $O(N \log N + Q \log N)$ time, well within the time limit.
 
 ---
 
 ## What Is Manhattan Distance?
 
-**Manhattan Distance** = |x₁ - x₂| + |y₁ - y₂|. Think of a city grid: you can't cut diagonally through buildings — only move up/down/left/right.
+**Manhattan Distance** is $|x_1 - x_2| + |y_1 - y_2|$. On a city grid, movement is restricted to horizontal and vertical axes without diagonal shortcuts.
 
-```
+```text
    ^ y
    |
 10 +  P1(-10,10)
@@ -79,15 +104,16 @@ For each query, output one line containing a single integer which denotes the nu
 
 ```mermaid
 flowchart TD
-    A["Read n, Karen's position kx,ky"] --> B
-    B["Read all n people positions"] --> C
-    C["Compute distance for each person\ndist[j] = abs(px-kx) + abs(py-ky)"] --> D
-    D["Sort all distances\nascending order"] --> E
-    E["Read q queries"] --> F
-    F["For each query energy e:"] --> G
-    G["Binary search: upper_bound(dists, e)\nreturns iterator to first dist > e"] --> H
-    H["Count = iterator - dists.begin()\n(all elements before are ≤ e)"] --> I
-    I["Print count"] --> F
+    A["Read N and Karen coordinates kx, ky"] --> B["Read N person coordinates"]
+    B --> C["Compute Manhattan distance dist[j] = abs(px - kx) + abs(py - ky)"]
+    C --> D["Sort all distances in ascending order"]
+    D --> E["Read Q queries"]
+    E --> F{"Next query energy e?"}
+    F -->|"Yes"| G["Binary search upper_bound(dists, e)"]
+    G --> H["Count = upper_bound index (distances <= e)"]
+    H --> I["Print count"]
+    I --> F
+    F -->|"No"| J["Done"]
 ```
 
 ---
@@ -139,48 +165,50 @@ int main() {
 
 ---
 
-## Step-by-Step Trace (Sample Input)
+## Step-by-Step Trace (Sample Input 0)
 
-**Input:** Karen at (6,7). People: (-10,10), (-6,0), (8,7). Queries: 30, 6, 1.
+**Input:** Karen at $(6, 7)$. People: $(-10, 10)$, $(-6, 0)$, $(8, 7)$. Queries: $30, 6, 1$.
 
 **Step 1 — Compute Distances:**
-| Person | Coords | Calculation | Distance |
-|---|---|---|---|
-| 0 | (-10, 10) | \|(-10)-6\| + \|10-7\| = 16 + 3 | **19** |
-| 1 | (-6, 0) | \|(-6)-6\| + \|0-7\| = 12 + 7 | **19** |
-| 2 | (8, 7) | \|8-6\| + \|7-7\| = 2 + 0 | **2** |
+
+| Person | Coordinates | Calculation | Distance |
+| :--- | :--- | :--- | :--- |
+| 0 | $(-10, 10)$ | $\lvert (-10) - 6 \rvert + \lvert 10 - 7 \rvert = 16 + 3$ | **19** |
+| 1 | $(-6, 0)$ | $\lvert (-6) - 6 \rvert + \lvert 0 - 7 \rvert = 12 + 7$ | **19** |
+| 2 | $(8, 7)$ | $\lvert 8 - 6 \rvert + \lvert 7 - 7 \rvert = 2 + 0$ | **2** |
 
 **Step 2 — Sort:**
-```
+```text
 Before sort: [19, 19, 2]
 After sort:  [2, 19, 19]
               ^index 0
 ```
 
-**Step 3 — Queries using upper_bound:**
-```
-Query e=30: upper_bound([2,19,19], 30) → past last element → index 3. Answer: 3 
-Query e=6:  upper_bound([2,19,19], 6)  → points to first 19  → index 1. Answer: 1 
-Query e=1:  upper_bound([2,19,19], 1)  → points to 2         → index 0. Answer: 0 
+**Step 3 — Queries using `upper_bound`:**
+```text
+Query e=30: upper_bound([2,19,19], 30) -> past last element -> index 3. Answer: 3
+Query e=6:  upper_bound([2,19,19], 6)  -> points to first 19  -> index 1. Answer: 1
+Query e=1:  upper_bound([2,19,19], 1)  -> points to 2         -> index 0. Answer: 0
 ```
 
 ```mermaid
 flowchart LR
-    subgraph Sorted ["Sorted Distances: [2, 19, 19]"]
-        D0["[0]=2"]
-        D1["[1]=19"]
-        D2["[2]=19"]
+    subgraph Sorted["Sorted Distances: 2, 19, 19"]
+        D0["Index 0: 2"]
+        D1["Index 1: 19"]
+        D2["Index 2: 19"]
     end
-    Q1["Query e=30\nupper_bound past end\nCount=3"] --> D0
-    Q2["Query e=6\nupper_bound at index 1\nCount=1"] --> D0
-    Q3["Query e=1\nupper_bound at index 0\nCount=0"] --> D0
+    Q1["Query e = 30 -> upper_bound past end -> Count = 3"] --> D0
+    Q2["Query e = 6 -> upper_bound at index 1 -> Count = 1"] --> D0
+    Q3["Query e = 1 -> upper_bound at index 0 -> Count = 0"] --> D0
 ```
 
 ## Complexity Analysis
-| | Complexity |
-|--|--|
-| **Time** | O(n log n + q log n) |
-| **Space** | O(n) |
+
+| Metric | Complexity | Rationale |
+| :--- | :--- | :--- |
+| **Time** | $O(N \log N + Q \log N)$ | Computing all $N$ Manhattan distances takes $O(N)$, sorting them requires $O(N \log N)$, and each of the $Q$ queries executes `upper_bound` in $O(\log N)$ time. |
+| **Space** | $O(N)$ | Storing the coordinate pairs and the sorted `dists` array of size $N$ requires linear auxiliary memory. |
 
 ---
 
@@ -188,33 +216,34 @@ flowchart LR
 
 ```cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 
+int n, q, ans;
+long long kx, ky, x, y, e, people[100000][2];
+
 int main() {
-    int n, q;
-    int kx, ky;
-    cin >> kx >> ky >> n;
-
-    for (int i = 0; i < n; i++) {
-        int x, y;
-        cin >> x >> y;
-        // Write your code here
-    }
-
-    cin >> q;
-    while (q--) {
-        long long e;
-        cin >> e;
-        // Write your code here
-    }
-
-    return 0;
+	cin >> n >> kx >> ky;
+	for(int i = 0; i < n; i++) {
+      	// using fscanf to prevent TLE
+		fscanf(stdin,"%lld%lld",&people[i][0],&people[i][1]);
+	}
+	cin >> q;
+	for(int i = 0; i < q; i++) {
+		fscanf(stdin,"%lld",&e);
+		// solve for ans here
+      	ans = 0;
+      
+      	
+		fprintf(stdout,"%d\n",ans);
+	}
 }
 ```
 
 ---
 
 ## Full Solution
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -247,8 +276,8 @@ int main() {
 }
 ```
 
-
 ## References & Navigation
-- **Related Notes:** [[Divide and Conquer Introduction]]
+
 - **Next Problem:** [[02 - Laughter Is The Best Medicine]]
 - **Parent Set:** [[[PS] Priestess Arcana|Priestess Arcana Index]]
+- **Related Notes:** [[Divide and Conquer Introduction]]

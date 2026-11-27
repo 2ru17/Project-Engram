@@ -7,42 +7,49 @@ status: solved
 difficulty: Medium
 hackerrank_domain: Trees
 ---
+# Is This a Binary Search Tree?
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Trees]] #[[BST]]
 
 ---
 
----
-
-# Is This a Binary Search Tree?
-
 ## Problem Description
-Determine whether a given binary tree is a valid Binary Search Tree (BST). A binary tree is a valid BST if the values of all nodes in a node's left subtree are strictly less than its data value, and the values of all nodes in its right subtree are strictly greater than its data value. There are no duplicate values allowed.
+
+For the purposes of this challenge, a binary tree is a valid Binary Search Tree (BST) if:
+- The $data$ value of every node in a node's left subtree is strictly less than the $data$ value of that node.
+- The $data$ value of every node in a node's right subtree is strictly greater than the $data$ value of that node.
+
+Given the root node of a binary tree (with $1$ parameter: a pointer to the root), return a boolean denoting whether or not it is a binary search tree. Duplicate values are not allowed.
 
 **Input Format:**
-You are not responsible for reading any input from stdin. Hidden code stubs will assemble a binary
-                                                                                                                  
-tree and pass its root node to your function as an argument.                                                  M O R E D E TA I LS
+You are not responsible for reading any input from stdin. Hidden code stubs will assemble a binary tree and pass its root node to your function as an argument.
 
 **Output Format:**
- Suggest Edits
-You are not responsible for printing any output to stdout. Your function must return true if the tree is a
-binary search tree; otherwise, it must return false. Hidden code stubs will print this result as a Yes or
-No answer on a new line.
+You are not responsible for printing any output to stdout. Your function must return `true` if the tree is a binary search tree; otherwise, it must return `false`. Hidden code stubs will print this result as a `Yes` or `No` answer on a new line.
 
 **Constraints:**
- Download problem statement$
- • $ Download all test cases$
+- $0 \leq data \leq 10^4$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `` | `No` |
+**Sample Input 0**
+
+```text
+      3
+    /   \
+   5     2
+  / \   /
+ 1   4 6
+```
+
+**Sample Output 0**
+
+```text
+No
+```
+
+*Explanation: Node `5` is in the left subtree of `3` ($5 > 3$) and node `2` is in the right subtree of `3` ($2 < 3$), violating the BST ordering invariant.*
 
 ---
 
@@ -62,15 +69,11 @@ Here is the step-by-step breakdown of the C++ code:
 
 ---
 
----
-
 ## Complexity Analysis
 | | Complexity |
 |--|--|
 | **Time** | **$O(N)$** — The recursive function visits every node in the binary tree exactly once. The work done at each node (comparisons and logical ANDs) is $O(1)$, resulting in an overall time linear to the number of nodes $N$. |
 | **Space** | **$O(H)$** — We do not use auxiliary data structures, but the recursive call stack takes space proportional to the maximum height of the tree $H$. In the worst-case (a completely skewed, linked-list-like tree), $H = N$, making space $O(N)$. In the best/average case (a balanced tree), space is $O(\log N)$. |
-
----
 
 ---
 

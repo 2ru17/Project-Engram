@@ -7,35 +7,45 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Strings
 ---
+# Repeated String
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Fool Arcana]] #[[Strings]] #[[Math]] #[[Modular Arithmetic]]
 
 ---
-
-# Repeated String
 
 ## Problem Description
 
 Lilah has a string `s` that she repeats infinitely. Given `s` and an integer `n`, count the number of times the character `'a'` appears in the first `n` characters of the infinite repetition.
 
 **Input Format:**
-- Line 1: string `s`
-- Line 2: long integer `n`
+- Line 1: string $s$
+- Line 2: long integer $n$
 
 **Output Format:**
-- A single long integer: the count of `'a'` in the first `n` characters.
+- A single long integer: the count of `'a'` in the first $n$ characters.
 
-**Constraints:** $1 \leq |s| \leq 100$; $1 \leq n \leq 10^{12}$
+**Constraints:**
+- $1 \leq |s| \leq 100$
+- $1 \leq n \leq 10^{12}$
+- For $25\%$ of the test cases, $n \leq 10^6$
 
-**Sample:**
-| Input | Output | Explanation |
-|-------|--------|-------------|
-| `aba`<br>`10` | `7` | `ababababab` (first 10 chars). Counting character `a` across the repeated prefix yields 7 occurrences. |
+**Sample Input 0**
+
+```text
+aba
+10
+```
+
+**Sample Output 0**
+
+```text
+7
+```
+
+*Explanation: The first $n = 10$ characters of the infinite string are `abaabaabaa`, which contain $7$ occurrences of `'a'`.*
 
 ---
 
