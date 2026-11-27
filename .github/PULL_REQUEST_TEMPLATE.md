@@ -3,7 +3,7 @@
 - **Affected Courses, Simulators, or Routes:**
 
 ## Content & Vault Sync Reminder
-> **Vault First, Then Sync:** If this PR modifies or adds academic monographs, always author changes in the primary Obsidian vault first (`/home/2ru17/Documents/Obsidian/2ru17-engram-vault/main/Main Notes/`), sync into `content/Main Notes/` via `rsync -av --delete`, and synchronize `COURSE_REGISTRY` counts with `npm run sync:counts`.
+> **Content Hygiene & Sync:** Author academic monographs directly in `./content/Main Notes/` (or when syncing from a local Obsidian vault, use `rsync -av --delete --prune-empty-dirs --include='*/' --include='*.md' --exclude='*' "<OBSIDIAN_VAULT>/Main Notes/" "./content/Main Notes/"`), and synchronize `COURSE_REGISTRY` counts with `npm run sync:counts`.
 
 ## Verification Checklist
 - [ ] `npm run sync:counts` — Synchronized per-course monograph counts in `src/lib/course-registry.ts` (if notes were added, moved, or removed)

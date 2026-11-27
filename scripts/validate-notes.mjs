@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
 import fs from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(__dirname, "..");
-const CONTENT_ROOT = path.join(PROJECT_ROOT, "content", "Main Notes");
+const CONTENT_ALLOWLIST_ROOT = path.join(PROJECT_ROOT, "content");
+const CONTENT_ROOT = path.join(CONTENT_ALLOWLIST_ROOT, "Main Notes");
 const SRC_ROOT = path.join(PROJECT_ROOT, "src");
 const CONCURRENCY_LIMIT = 16;
 
@@ -689,6 +691,62 @@ function runParserSelfTests() {
   assert.equal(malformedRes.mcqItems.length, 0);
 }
 
+/**
+ * Recursively finds any file or symlink inside `rootDir` that is neither `.md` nor `.gitkeep`.
+ */
+async function findDisallowedContentFiles(rootDir) {
+  const disallowed = [];
+
+  async function recurse(dir) {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    const subDirs = [];
+
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        subDirs.push(fullPath);
+      } else if (entry.isFile() || entry.isSymbolicLink()) {
+        if (entry.name !== ".gitkeep" && !entry.name.endsWith(".md")) {
+          disallowed.push(path.relative(rootDir, fullPath).split(path.sep).join("/"));
+        }
+      }
+    }
+
+    if (subDirs.length > 0) {
+      await Promise.all(subDirs.map((sub) => recurse(sub)));
+    }
+  }
+
+  await recurse(rootDir);
+  return disallowed.sort();
+}
+
+/**
+ * Verifies Gate 0 content allowlist detection against Markdown, .gitkeep, binary, and hidden files.
+ */
+async function runContentAllowlistSelfTests() {
+  const tmpDir = await fs.mkdtemp(path.join(os.tmpdir(), "engram-allowlist-"));
+  try {
+    await fs.mkdir(path.join(tmpDir, "Main Notes", "CSALGCM", "Resources"), { recursive: true });
+    await fs.writeFile(path.join(tmpDir, ".gitkeep"), "", "utf8");
+    await fs.writeFile(path.join(tmpDir, "Main Notes", "CSALGCM", "Valid Note.md"), "# Ok\n", "utf8");
+    await fs.writeFile(path.join(tmpDir, "Main Notes", "CSALGCM", "Resources", "Leaked.pdf"), "pdf", "utf8");
+    await fs.writeFile(path.join(tmpDir, "Main Notes", "CSALGCM", "Resources", "Slide.pptx"), "pptx", "utf8");
+    await fs.writeFile(path.join(tmpDir, "Main Notes", "CSALGCM", "UPPER.MD"), "# Bad ext\n", "utf8");
+    await fs.writeFile(path.join(tmpDir, "Main Notes", ".DS_Store"), "junk", "utf8");
+
+    const found = await findDisallowedContentFiles(tmpDir);
+    assert.deepEqual(found, [
+      "Main Notes/.DS_Store",
+      "Main Notes/CSALGCM/Resources/Leaked.pdf",
+      "Main Notes/CSALGCM/Resources/Slide.pptx",
+      "Main Notes/CSALGCM/UPPER.MD",
+    ]);
+  } finally {
+    await fs.rm(tmpDir, { recursive: true, force: true });
+  }
+}
+
 // --- Async Directory Traversal & Bounded Concurrency ---
 
 async function walkTree(rootDir) {
@@ -974,6 +1032,18 @@ async function main() {
   const shouldSync = process.argv.includes("--sync");
   const errors = [];
 
+  // Gate 0 Self-Test & Content Allowlist Check (.md and .gitkeep only under content/)
+  try {
+    await runContentAllowlistSelfTests();
+  } catch (err) {
+    errors.push(`[Gate 0] Content allowlist self-test failed: ${err.message}`);
+  }
+
+  const disallowedContentFiles = await findDisallowedContentFiles(CONTENT_ALLOWLIST_ROOT);
+  for (const relPath of disallowedContentFiles) {
+    errors.push(`[Gate 0] Disallowed non-Markdown file in content/: "content/${relPath}"`);
+  }
+
   // Gate 3 Self-Test (verifies MCQ, [MSQ], [INPUT], [BLANK] syntax & grading)
   try {
     runParserSelfTests();
@@ -1189,7 +1259,9 @@ async function main() {
   console.log(
     `Assessments: ${assessmentSuccessNotes}/${notesWithAssessments} sections valid (${parseRate}) | Questions: ${totalQuestions} (MCQ: ${questionTypeCounts.mcq}, MSQ: ${questionTypeCounts.msq}, INPUT: ${questionTypeCounts.input}, BLANK: ${questionTypeCounts.blank})`
   );
-  console.log(`Gate 6 Codebase Invariants: ${gate6Errors.length === 0 ? "PASS" : `FAIL (${gate6Errors.length})`}`);
+  console.log(
+    `Gate 0 Content Allowlist: ${disallowedContentFiles.length === 0 ? "PASS (0 non-Markdown files)" : `FAIL (${disallowedContentFiles.length} disallowed file(s))`} | Gate 6 Codebase Invariants: ${gate6Errors.length === 0 ? "PASS" : `FAIL (${gate6Errors.length})`}`
+  );
 
   if (process.env.GITHUB_STEP_SUMMARY) {
     const summaryLines = [
@@ -1197,6 +1269,7 @@ async function main() {
       "",
       "| Metric | Result |",
       "| :--- | :--- |",
+      `| Content Allowlist Gate (MD / .gitkeep Only) | ${disallowedContentFiles.length === 0 ? "PASS" : `FAIL (${disallowedContentFiles.length})`} |`,
       `| Standard Notes / Reviewers / Utility Files | ${standardCount} / ${reviewerCount} / ${utilityCount} (${mdFiles.length} total) |`,
       `| Malformed Folders / Hollow Modules | ${gate1.malformedFolders} / ${gate1.hollowModules} |`,
       `| Interactive Questions Parsed | ${totalQuestions} (MCQ: ${questionTypeCounts.mcq}, MSQ: ${questionTypeCounts.msq}, INPUT: ${questionTypeCounts.input}, BLANK: ${questionTypeCounts.blank}) |`,
@@ -1218,7 +1291,7 @@ async function main() {
     process.exit(1);
   }
 
-  console.log("\nPASS: All 6 governance gates cleared with 0 violations.");
+  console.log("\nPASS: All governance gates (Gates 0-6) cleared with 0 violations.");
 }
 
 main().catch((err) => {
