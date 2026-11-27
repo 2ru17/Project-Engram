@@ -7,64 +7,95 @@ status: solved
 difficulty: Hard
 hackerrank_domain: Divide and Conquer
 ---
-> [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
-
-**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Segment Tree]] #[[Range Queries]]
-
----
 
 # The Monkey's Paw
 
+> [!info] Document Metadata
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
+
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Segment Tree]] #[[Range Queries]]
+---
+
 ## Problem Description
-Richie is at a cineplex and wants to watch the longest movies possible. He has a budget $B$ and each ticket costs $C$. Given $N$ movies with their runtimes (ignoring credits), Richie will answer $Q$ queries. In each query, he considers a specific range of movies $[L, R]$. He will continuously pick the longest unseen movie in that range until his budget runs out. The task is to output the runtime of the last movie he watches for each query.
 
-**Input Format:**
+Richie is at a cineplex with $N$ movies showing, each having total runtime $R_i$ and credits length $C_i$. Because Richie always leaves before the credits, each movie's effective watchable runtime is $R_i - C_i$. Given $Q$ queries, each specifying a 0-based inclusive range of movies $[S, E]$, Richie's budget $A$, and a uniform ticket price $K$, Richie repeatedly picks the longest unwatched movie in $[S, E]$ until he can no longer afford another ticket. For each query, output the net runtime of the last movie Richie watches, or `-1` if he cannot afford any movie.
+
+### Input Format
+
 Input starts with a line containing a single integer $N$ denoting the number of movies showing in the theater.
-$N$ lines follow, the $i$-th of which contains two space-separated integers $R_i$ and $C_i$. $R_i$ is the runtime of the film. $C_i$ is the length of the credits. Richie always leaves before the credits, so you can subtract the credits from the runtime when computing for the answer.
+
+$N$ lines follow, the $i$-th of which contains two space-separated integers $R_i$ and $C_i$. $R_i$ is the runtime of the film and $C_i$ is the length of the credits. Richie always leaves before the credits, so you can subtract the credits from the runtime when computing the answer.
+
 This is followed by a line containing a single integer $Q$ denoting the number of queries.
-$Q$ lines follow, each containing 4 space-separated integers $L$, $R$, $B$, and $C$ denoting the start index, end index, Richie's budget, and the cost of a single ticket respectively. Indices are 0-based.
 
-**Output Format:**
-For each query, output one line containing the length of the last movie Richie watches, without the credits, given the strategy described in the problem statement. If Richie can't watch any movie, output -1.
+$Q$ lines follow, each containing $4$ space-separated integers $S$, $E$, $A$, and $K$ denoting the start index, end index, Richie's budget, and the cost of a single ticket respectively. Indices are 0-based.
 
-**Constraints:**
+### Output Format
 
+For each query, output one line containing the length of the last movie Richie watches, without the credits, given the strategy described in the problem statement. If Richie cannot watch any movie, output `-1`.
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `8`<br>`148 116`<br>`157 100`<br>`169 15`<br>`188 98`<br>`91 68`<br>`165 70`<br>`145 2`<br>`11 6`<br>`3`<br>`2 6 52 12`<br>`2 6 13 7`<br>`0 4 2 3` | `90`<br>`154`<br>`-1` |
+### Constraints
+
+- $1 \le N \le 10^6$
+- $1 \le C_i \le R_i \le 10^9$
+- $1 \le Q \le 4000$
+- $0 \le S \le E < N$
+- $0 \le E - S < 10^4$
+- $1 \le A, K \le 10^9$
+
+### Sample Test Cases
+
+**Sample Input 0**
+```text
+8
+148 116
+157 100
+169 15
+188 98
+91 68
+165 70
+145 2
+11 6
+3
+2 6 52 12
+2 6 13 7
+0 4 2 3
+```
+
+**Sample Output 0**
+```text
+90
+154
+-1
+```
 
 ---
 
 ## Approach & Intuition
-> ** Abstract the problem**
-> Richie has a budget and wants to watch as many movies as possible, each costing a fixed ticket price. He always picks the longest movie (by net runtime = runtime − credits). Given multiple queries over movie sub-ranges, output the runtime of the LAST movie he watches per query, or -1 if he can't afford any.
 
-> ** Dumb sol?**
-> For each query, collect all movies in range, sort them descending, greedily buy them.
-> **O(q × r log r)** where r = range size. With Q=4000 and r=10,000: ~5×10⁸ comparisons → TLE.
+> **Problem Abstraction:**
+> For each query $(S, E, A, K)$, Richie can purchase $\lfloor A / K \rfloor$ movies and always picks the largest net runtimes $R_i - C_i$ in subarray $[S, E]$. Return the $\lfloor A / K \rfloor$-th largest net runtime in $[S, E]$, the minimum if he buys all $E - S + 1$ movies, or `-1` if $\lfloor A / K \rfloor = 0$.
 
-> ** Smart sol?**
-> Observe: we only need the **k-th largest** element, not the full sorted order. `nth_element` finds exactly the k-th largest in **O(r) average** — no full sort needed.
-> **O(q × r)** ≈ 4×10⁷ ops → 
+> **Brute-Force Approach:**
+> Copy the subarray $[S, E]$ of length $r = E - S + 1$, sort it in descending order, and return the $\text{cnt}$-th element.
+> Sorting takes $O(Q \cdot r \log r)$ time: with $Q = 4000$ and $r = 10^4$, $\approx 5.6 \times 10^8$ comparisons risk Time Limit Exceeded (TLE).
+
+> **Optimal Approach:**
+> Only the $\text{cnt}$-th largest element is needed rather than full sorted order. Using Quickselect (`std::nth_element`) places the $(m - \text{cnt})$-th smallest element in $O(r)$ average time without sorting either side.
+> This reduces work to $O(N + Q \cdot r) \approx 4 \times 10^7$ operations, passing well within the time limit.
 
 ---
 
 ## Key Insight: We Don't Need Full Sorted Order
 
-Richie can afford exactly `cnt = floor(budget / ticketCost)` movies. We don't care about the order — we just need to know: *"what is the cnt-th largest net runtime in this range?"* That's the last movie he watches.
+Richie can afford at most $\text{cnt} = \lfloor A / K \rfloor$ movies. Rather than sorting the entire range, we only need the $\text{cnt}$-th largest net runtime in $[S, E]$, which is the last movie he watches.
 
-```
-cnt = floor(A / K)  ← how many movies max
+```text
+cnt = floor(A / K)  <- how many movies max
 
-If cnt = 0          → output -1 (can't buy any)
-If cnt ≥ range_size → output min(range) (buys all, last = smallest)
-Else                → output the cnt-th largest in range
+If cnt = 0          -> output -1 (can't buy any)
+If cnt >= range_size -> output min(range) (buys all, last = smallest)
+Else                -> output the cnt-th largest in range
                       (use nth_element in O(r))
 ```
 
@@ -72,7 +103,7 @@ Else                → output the cnt-th largest in range
 
 ## Why `nth_element` Not `sort`
 
-```
+```text
 sort:         O(r log r) per query — must arrange entire array
 nth_element:  O(r) average  — only guarantees the k-th position is correct
 
@@ -81,25 +112,26 @@ nth_element is the right tool: it places the k-th element correctly
 and partitions the rest (smaller left, larger right) — but doesn't sort either side.
 
 Performance:
-  sort:         4000 queries × 10000 × 14 steps ≈ 560,000,000 → TLE
-  nth_element:  4000 queries × 10000 steps       ≈  40,000,000 → 
+  sort:         4000 queries x 10000 x 14 steps ~ 560,000,000 -> TLE
+  nth_element:  4000 queries x 10000 steps      ~  40,000,000 -> Pass
 ```
 
 ---
 
 ## Greedy Correctness: Why "Longest First" Is Optimal
 
-**Claim:** Always buying the longest available movie maximizes the count of movies bought.
+**Claim:** Always buying the longest available movie reaches the same count $\text{cnt} = \lfloor A / K \rfloor$ while yielding the exact $\text{cnt}$-th largest runtime as the last movie watched.
 
-**Proof by exchange argument:** Suppose you bought a shorter movie S before a longer movie L. Swap them: buy L first, then S. Total cost is identical (still 2K). Total movies watched is the same. But by always picking the longest first, you never skip a "reachable" movie — and since the goal is to maximize count (to find the "last"), longest-first is always at least as good.
+**Proof by exchange argument:** Every movie costs the same ticket price $K$, so Richie always buys $\min(\lfloor A / K \rfloor, m)$ movies regardless of order. Picking strictly in decreasing order of net runtime guarantees the subset watched consists of the top $\text{cnt}$ longest films, making the final film the $\text{cnt}$-th largest.
 
 ---
 
-## Step-by-Step Trace (Sample Query 1: s=2, e=6, A=52, K=12)
+## Step-by-Step Trace (Sample Query 1: $S=2, E=6, A=52, K=12$)
 
-**Step 1 — Net Runtimes in range [2..6]:**
-| Index | Runtime | Credits | Net |
-|---|---|---|---|
+**Step 1 — Net Runtimes in range $[2..6]$:**
+
+| Index | Runtime ($R_i$) | Credits ($C_i$) | Net ($R_i - C_i$) |
+| :--- | :--- | :--- | :--- |
 | 2 | 169 | 15 | **154** |
 | 3 | 188 | 98 | **90** |
 | 4 | 91 | 68 | **23** |
@@ -107,24 +139,24 @@ Performance:
 | 6 | 145 | 2 | **143** |
 
 **Step 2 — How many can he buy?**
-```
+```text
 cnt = floor(52 / 12) = 4
 range_size = 5
-cnt < range_size → use nth_element to find 4th largest
+cnt < range_size -> use nth_element to find 4th largest
 ```
 
 **Step 3 — `nth_element` finds 4th largest:**
-```
+```text
 buf = [154, 90, 23, 95, 143]   (m=5, cnt=4, so pivot index = m-cnt = 1)
 After nth_element(buf, buf+1, buf+5):
-  buf[1] = 4th largest = 90   (everything at index<1 is ≥90, index>1 is ≤90)
-Output: buf[m-cnt] = buf[1] = 90 
+  buf[1] = 4th largest = 90   (everything at index<1 is <=90, index>1 is >=90)
+Output: buf[m-cnt] = buf[1] = 90
 ```
 
 ```mermaid
 flowchart LR
-    BG["budget=52, cost=12\ncnt=52/12=4"] --> NTH
-    NTH["nth_element finds\n4th largest in [154,90,23,95,143]\n= 90"] --> OUT["Print 90 "]
+    BG["budget A = 52, cost K = 12, cnt = 52 / 12 = 4"] --> NTH["nth_element finds 4th largest in [154, 90, 23, 95, 143] = 90"]
+    NTH --> OUT["Print 90"]
 ```
 
 ---
@@ -154,17 +186,17 @@ for(int cc = 0; cc < q; cc++) {
     }
 
     if (cnt >= m) {
-        // Can buy ALL movies in range → last watched = the shortest one
+        // Can buy ALL movies -> last watched = the shortest one
         printf("%d\n", *min_element(buf, buf + m));
     } else {
         // Need the cnt-th largest value.
         // nth_element places buf[m-cnt] = the (m-cnt)-th smallest
         //                              = the cnt-th largest
-        // All elements at index < m-cnt will be ≥ buf[m-cnt]
-        // All elements at index > m-cnt will be ≤ buf[m-cnt]
+        // All elements at index < m-cnt will be <= buf[m-cnt]
+        // All elements at index > m-cnt will be >= buf[m-cnt]
         nth_element(buf, buf + (m - cnt), buf + m);
         printf("%d\n", buf[m - cnt]);
-        // This is the runtime of the last (cheapest-among-bought) movie.
+        // This is the runtime of the last movie watched.
     }
 }
 ```
@@ -173,17 +205,18 @@ for(int cc = 0; cc < q; cc++) {
 
 ## All Three Sample Queries Traced
 
-| Query | Range | Net Runtimes | cnt=A/K | m | cnt≥m? | Answer |
-|---|---|---|---|---|---|---|
-| 2 6 52 12 | [2..6] | 154,90,23,95,143 | 4 | 5 | No → nth_element | **90** |
-| 2 6 13 7 | [2..6] | 154,90,23,95,143 | 1 | 5 | No → nth_element | **154** |
-| 0 4 2 3 | [0..4] | 32,57,154,90,23 | 0 | 5 | cnt=0 → skip | **-1** |
+| Query | Range | Net Runtimes | $\text{cnt} = \lfloor A / K \rfloor$ | $m$ | $\text{cnt} \ge m$? | Answer |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `2 6 52 12` | $[2..6]$ | `154, 90, 23, 95, 143` | 4 | 5 | No $\to$ `nth_element` | **90** |
+| `2 6 13 7` | $[2..6]$ | `154, 90, 23, 95, 143` | 1 | 5 | No $\to$ `nth_element` | **154** |
+| `0 4 2 3` | $[0..4]$ | `32, 57, 154, 90, 23` | 0 | 5 | $\text{cnt} = 0 \to$ skip | **-1** |
 
 ## Complexity Analysis
-| | Complexity |
-|--|--|
-| **Time** | O(q × r) |
-| **Space** | O(r) |
+
+| Metric | Complexity | Rationale |
+| :--- | :--- | :--- |
+| **Time** | $O(N + Q \cdot r)$ | Reading all $N$ movie runtimes and credits takes $O(N)$, and each of the $Q$ queries copies $r = E - S + 1 < 10^4$ net runtimes and invokes `nth_element` in $O(r)$ average time. |
+| **Space** | $O(N + r)$ | Storing the $N$ movie `(runtime, credits)` pairs takes $O(N)$ static storage, and the reusable `buf` scratch buffer uses $O(r)$ ($\le 10^4$) space. |
 
 ---
 
@@ -191,31 +224,30 @@ for(int cc = 0; cc < q; cc++) {
 
 ```cpp
 #include <bits/stdc++.h>
+
 using namespace std;
 
+int q, n, s, e, a, k, r, c, movies[1000000][2];
+
 int main() {
-    int n;
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        int r, c;
-        cin >> r >> c;
-        // Write your code here
+    scanf("%d",&n);
+    for(int i = 0; i < n; i++) {
+        scanf("%d%d",&movies[i][0],&movies[i][1]);
     }
-    
-    int Q;
-    cin >> Q;
-    while (Q--) {
-        int L, R, B, C;
-        cin >> L >> R >> B >> C;
-        // Write your code here
+    scanf("%d",&q);
+    for(int cc = 0; cc < q; cc++) {
+        scanf("%d%d%d%d",&s,&e,&a,&k);
+        // compute for answer here
+      
+      	
     }
-    return 0;
 }
 ```
 
 ---
 
 ## Full Solution
+
 ```cpp
 #include <bits/stdc++.h>
 
@@ -260,8 +292,8 @@ int main() {
 }
 ```
 
-
 ## References & Navigation
-- **Related Notes:** [[Divide and Conquer Introduction]]
+
 - **Previous Problem:** [[05 - Shattering The Towers Of Algorythmos]]
 - **Parent Set:** [[[PS] Priestess Arcana|Priestess Arcana Index]]
+- **Related Notes:** [[Divide and Conquer Introduction]]

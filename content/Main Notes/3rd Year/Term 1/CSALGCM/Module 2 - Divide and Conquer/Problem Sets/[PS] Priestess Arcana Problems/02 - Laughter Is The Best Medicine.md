@@ -7,56 +7,88 @@ status: solved
 difficulty: Hard
 hackerrank_domain: Divide and Conquer
 ---
-> [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
-
-**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Merge Sort]] #[[Inversion Count]]
-
----
 
 # Laughter Is The Best Medicine
 
+> [!info] Document Metadata
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
+
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Priestess Arcana]] #[[Merge Sort]] #[[Inversion Count]]
+---
+
 ## Problem Description
-The Laughter sequence is defined recursively: $L(0) = \text{"H"}$, $L(1) = \text{"A"}$, and $L(n) = L(n-1) + L(n-2)$ for $n \ge 2$. Given $n$ and $k$, the task is to determine whether the $k$-th character (0-indexed) in the string $L(n)$ is an "H" or an "A".
 
-**Input Format:**
-Input consists of one test case. Each test case consists of one line with two space separated integers $N$ and $K$, denoting the index of the string in the Laughter sequence, and the index of the character to be checked. $K$ is a 0-based index.
+Let us define the Laughter sequence as a sequence of strings only containing either the character `"H"` or `"A"`. This sequence is defined recursively as:
 
-**Output Format:**
-Output consists of one line containing "H" (without the quotes), if the $K$-th character in $L(N)$ is an H, or "A" (also without quotes), if the $K$-th character in $L(N)$ is an A.
+$$L_0 = \text{"H"}, \quad L_1 = \text{"A"}, \quad L_i = L_{i-2} \cdot L_{i-1} \text{ for } i > 1$$
 
-**Constraints:**
+where $S_1 \cdot S_2$ denotes string concatenation of $S_1$ followed by $S_2$. The first few strings in the Laughter sequence are `H`, `A`, `HA`, `AHA`, `HAAHA`, `AHAHAAHA`. Given $i$ and $k$, determine whether the $k$-th character (0-indexed) in $L_i$ is an `"H"` or an `"A"`.
 
+### Input Format
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `3 1` | `H` |
-| `4 3` | `H` |
-| `10 4` | `A` |
+Input consists of one test case. Each test case consists of one line with two space-separated integers $i$ and $k$, denoting the index of the string in the Laughter sequence and the index of the character to be checked. $k$ is a 0-based index.
+
+### Output Format
+
+Output consists of one line containing `"H"` (without the quotes) if the $k$-th character in $L_i$ is an `H`, or `"A"` (also without quotes) if the $k$-th character in $L_i$ is an `A`.
+
+### Constraints
+
+- $0 \le i \le 10^5$
+- $0 \le k < \min(10^{18}, |L_i|)$
+
+### Sample Test Cases
+
+**Sample Input 0**
+```text
+3 1
+```
+
+**Sample Output 0**
+```text
+H
+```
+
+**Sample Input 1**
+```text
+4 3
+```
+
+**Sample Output 1**
+```text
+H
+```
+
+**Sample Input 2**
+```text
+10 4
+```
+
+**Sample Output 2**
+```text
+A
+```
 
 ---
 
 ## Approach & Intuition
-> ** Abstract the problem**
-> A string sequence is built recursively where each string = previous-previous + previous. Given a huge string index `n` and a character position `k`, find which character ('H' or 'A') is at that position — without building the string.
 
-> ** Dumb sol?**
-> Actually build `L(0)`, `L(1)`, ..., `L(n)` by concatenation, then index into it.
-> **Impossible** — L(50) has 12.5 billion characters. You'd run out of RAM at L(40).
+> **Problem Abstraction:**
+> A Fibonacci-like string sequence is defined recursively where each term concatenates $L_{i-2}$ followed by $L_{i-1}$. Given string index $i$ and 0-based position $k$, determine whether $L_i[k]$ is `'H'` or `'A'` without materializing the string.
 
-> ** Smart sol?**
-> Use the Fibonacci-length structure to *navigate* which half of the string the character falls in, cutting the problem in half each step — like binary search on a tree.
-> **O(n)** to build the length table, **O(n)** descent steps — handles any n up to 10^18.
+> **Brute-Force Approach:**
+> Explicitly construct $L_0, L_1, \dots, L_i$ via string concatenation and return index $k$.
+> This is impossible under memory and time limits because $|L_{50}| > 1.25 \times 10^{10}$ bytes and $|L_{90}| > 2.88 \times 10^{18}$.
+
+> **Optimal Approach:**
+> Precompute the Fibonacci lengths $|L_n|$ using saturating 64-bit arithmetic up to index $90$ (since $|L_{90}| > 10^{18}$ exceeds every valid $k$). Repeatedly compare $k$ against $|L_{n-2}|$ to descend into either the left prefix $L_{n-2}$ or the right suffix $L_{n-1}$ until reaching base case $n \in \{0, 1\}$.
+> This runs in $O(1)$ bounded time (at most $90$ steps) and $O(1)$ space.
 
 ---
 
 ## Building The First Few Strings
 
-```
+```text
 L(0) = "H"                    length = 1
 L(1) = "A"                    length = 1
 L(2) = L(0)+L(1) = "HA"       length = 2
@@ -65,24 +97,24 @@ L(4) = L(2)+L(3) = "HAAHA"    length = 5
 L(5) = L(3)+L(4) = "AHAHAAHA" length = 8
 ```
 
-Notice: the **lengths are Fibonacci numbers**! L(n) is ALWAYS L(n-2) on the left, L(n-1) on the right.
+Notice: the **lengths are Fibonacci numbers**, and $L(n)$ always places $L(n-2)$ on the left and $L(n-1)$ on the right.
 
 ## Why We Cannot Build The String
 
-```
+```text
 L(10)  has 89                       characters
 L(20)  has 10,946                   characters
 L(50)  has 12,586,269,025           characters (~12.5 billion!)
-L(90)  has 2,880,067,194,370,816,120 characters (max uint64!)
+L(90)  has 2,880,067,194,370,816,120 characters (near max uint64!)
 ```
 
-We need to **navigate** the structure instead of building it.
+We must **navigate** the recursive structure using subarray lengths instead of constructing the string.
 
 ---
 
 ## The Critical Bug: Wrong Recursion Direction
 
-```
+```text
 WRONG (old code):
   L(n) = L(n-1) + L(n-2)   <- assumes n-1 comes FIRST
   lenPrev = fib[n-1]        <- wrong split point!
@@ -94,8 +126,9 @@ CORRECT (fixed code):
 
 ### Why This Matters — A Concrete Example
 
-Verify: `L(4) = "HAAHA"`. Character at index 2:
-```
+Verify $L(4) = \text{"HAAHA"}$ at index $k = 2$:
+
+```text
 With WRONG split (n-1 first):
   L(4) = L(3)+L(2) = "AHA" + "HA"
   lenPrev = fib[3] = 3
@@ -107,13 +140,13 @@ With CORRECT split (n-2 first):
   k=2 < 2? NO -> k=2-2=0, look in "AHA" -> position 0 -> 'A'
 ```
 
-Both give 'A' here by coincidence! But on other positions they diverge — that's why it passed SOME test cases but not all.
+Both yield `'A'` at $k = 2$ by coincidence, whereas at $k = 1$ the wrong split returns `'H'` from `"AHA"[1]`? Wait: `"AHA"[1]` is `'H'` while `"HAAHA"[1]` is `'A'`. That is why an inverted split passes some test cases while failing others.
 
 ---
 
 ## The Fibonacci Length Table
 
-```
+```text
 fib[0] = 1    (length of L(0) = "H")
 fib[1] = 1    (length of L(1) = "A")
 fib[2] = 2    (length of L(2) = "HA")
@@ -123,38 +156,30 @@ fib[5] = 8    ...
 fib[90] = 2,880,067,194,370,816,120  <- near max of unsigned long long
 ```
 
-We cap at 90 levels and use **saturating arithmetic** — if sum would overflow, clamp to `UINT64_MAX` to prevent the length from wrapping back to a small number and causing wrong branch selection.
+We cap at $90$ levels and use **saturating arithmetic** — if addition would overflow, clamp to `UINT64_MAX` so a wrapped length never tricks the descent into taking the wrong branch.
 
 ---
 
 ## Algorithm: Recursive Descent
 
-Think of L(n) as a folder containing two sub-folders: `L(n-2)` on the left, `L(n-1)` on the right. We keep choosing which sub-folder our character is in.
+Think of $L(n)$ as a node containing two children: $L(n-2)$ on the left and $L(n-1)$ on the right. At each step, compare $k$ against $|L(n-2)|$ to choose which child contains the target character.
 
 ```mermaid
 flowchart TD
-    Start["n=10, k=4\nWe want L(10)[4]"] --> Check1
-
-    Check1{"k < fib[n-2] = fib[8] = 34?"}
-    Check1 -->|"4 < 34 YES\ngo to L(n-2)=L(8)"| N8
-    Check1 -->|NO| SkipA["..."]
-
-    N8["n=8, k=4\nfib[6]=13"] --> Check2
-    Check2{"4 < 13?"}
-    Check2 -->|"YES -> L(6)"| N6
-    N6["n=6, k=4\nfib[4]=5"] --> Check3
-    Check3{"4 < 5?"}
-    Check3 -->|"YES -> L(4)"| N4
-    N4["n=4, k=4\nfib[2]=2"] --> Check4
-    Check4{"4 < 2?"}
-    Check4 -->|"NO\nk = 4-2 = 2\ngo to L(3)"| N3
-    N3["n=3, k=2\nfib[1]=1"] --> Check5
-    Check5{"2 < 1?"}
-    Check5 -->|"NO\nk = 2-1 = 1\ngo to L(2)"| N2
-    N2["n=2, k=1\nfib[0]=1"] --> Check6
-    Check6{"1 < 1?"}
-    Check6 -->|"NO\nk = 1-1 = 0\ngo to L(1)"| N1
-    N1["n=1, k=0\nBase case! L(1)='A'"] --> Result["Return 'A' "]
+    Start["n = 10, k = 4 (find L(10)[4])"] --> Check1{"k < fib[8] = 34?"}
+    Check1 -->|"Yes: go to L(8)"| N8["n = 8, k = 4, fib[6] = 13"]
+    Check1 -->|"No"| SkipA["Subtract fib[8], go to L(9)"]
+    N8 --> Check2{"4 < 13?"}
+    Check2 -->|"Yes: go to L(6)"| N6["n = 6, k = 4, fib[4] = 5"]
+    N6 --> Check3{"4 < 5?"}
+    Check3 -->|"Yes: go to L(4)"| N4["n = 4, k = 4, fib[2] = 2"]
+    N4 --> Check4{"4 < 2?"}
+    Check4 -->|"No: k = 4 - 2 = 2, go to L(3)"| N3["n = 3, k = 2, fib[1] = 1"]
+    N3 --> Check5{"2 < 1?"}
+    Check5 -->|"No: k = 2 - 1 = 1, go to L(2)"| N2["n = 2, k = 1, fib[0] = 1"]
+    N2 --> Check6{"1 < 1?"}
+    Check6 -->|"No: k = 1 - 1 = 0, go to L(1)"| N1["n = 1, k = 0: Base case L(1) = 'A'"]
+    N1 --> Result["Return 'A'"]
 ```
 
 ---
@@ -204,47 +229,50 @@ char solve(int n, unsigned long long int k) {
 
 ---
 
-## Trace Table: L(10)[4] → expected 'A'
+## Trace Table: $L(10)[4] \to$ `'A'`
 
-| Step | n | k | lenFirst = fib[n-2] | k < lenFirst? | Action |
-|---|---|---|---|---|---|
-| 1 | 10 | 4 | fib[8] = 34 | 4 < 34  | n = 8 |
-| 2 | 8 | 4 | fib[6] = 13 | 4 < 13  | n = 6 |
-| 3 | 6 | 4 | fib[4] = 5 | 4 < 5  | n = 4 |
-| 4 | 4 | 4 | fib[2] = 2 | 4 < 2  | k = 4−2 = 2, n = 3 |
-| 5 | 3 | 2 | fib[1] = 1 | 2 < 1  | k = 2−1 = 1, n = 2 |
-| 6 | 2 | 1 | fib[0] = 1 | 1 < 1  | k = 1−1 = 0, n = 1 |
-| — | 1 | 0 | — | n=1, exit loop | **return 'A'**  |
+| Step | $n$ | $k$ | $\text{lenFirst} = \text{fib}[n-2]$ | $k < \text{lenFirst}$? | Action |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 | 10 | 4 | $\text{fib}[8] = 34$ | Yes ($4 < 34$) | $n = 8$ |
+| 2 | 8 | 4 | $\text{fib}[6] = 13$ | Yes ($4 < 13$) | $n = 6$ |
+| 3 | 6 | 4 | $\text{fib}[4] = 5$ | Yes ($4 < 5$) | $n = 4$ |
+| 4 | 4 | 4 | $\text{fib}[2] = 2$ | No ($4 \ge 2$) | $k = 4 - 2 = 2$, $n = 3$ |
+| 5 | 3 | 2 | $\text{fib}[1] = 1$ | No ($2 \ge 1$) | $k = 2 - 1 = 1$, $n = 2$ |
+| 6 | 2 | 1 | $\text{fib}[0] = 1$ | No ($1 \ge 1$) | $k = 1 - 1 = 0$, $n = 1$ |
+| — | 1 | 0 | — | Base case ($n = 1$) | **Return `'A'`** |
 
 ## Complexity Analysis
-| | Complexity |
-|--|--|
-| **Time** | O(n) build + O(log n) per query |
-| **Space** | O(1) |
+
+| Metric | Complexity | Rationale |
+| :--- | :--- | :--- |
+| **Time** | $O(\min(i, 90))$ | Building the saturating Fibonacci length table up to index $90$ and descending to $n \le 1$ each take at most $90$ constant-time iterations, yielding $O(1)$ bounded runtime. |
+| **Space** | $O(1)$ | The fixed-size `fib[91]` array and scalar loop indices use constant memory independent of $i$ and $k$. |
 
 ---
 
 ## Original Stub (HackerRank Template)
 
-```cpp
+```c
 #include <stdio.h>
 
-char solve(int n, unsigned long long int k) {
-    // Write your code here
+char solve(int n, unsigned long long int k){
+    // solve for the answer here. Return the correct answer
+    
 }
 
 int main() {
-    int n;
-    unsigned long long int k;
-    scanf("%d%llu",&n,&k);
-    printf("%c\n",solve(n,k));
+  	int n;
+  	unsigned long long int k;
+	scanf("%d%llu",&n,&k);
+	printf("%c\n",solve(n,k));
 }
 ```
 
 ---
 
 ## Full Solution
-```cpp
+
+```c
 #include <stdio.h>
 
 char solve(int n, unsigned long long int k){
@@ -278,9 +306,9 @@ int main() {
 }
 ```
 
-
 ## References & Navigation
-- **Related Notes:** [[Divide and Conquer Introduction]]
+
 - **Previous Problem:** [[01 - Its Like I Have ESPN Or Something]]
 - **Next Problem:** [[03 - Lets Plant Rice]]
 - **Parent Set:** [[[PS] Priestess Arcana|Priestess Arcana Index]]
+- **Related Notes:** [[Divide and Conquer Introduction]]

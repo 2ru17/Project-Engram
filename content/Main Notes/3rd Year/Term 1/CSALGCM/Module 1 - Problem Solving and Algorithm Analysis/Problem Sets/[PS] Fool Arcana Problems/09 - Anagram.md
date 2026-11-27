@@ -7,17 +7,14 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Strings
 ---
+# Anagram
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Fool Arcana]] #[[Strings]] #[[Frequency Count]]
 
 ---
-
-# Anagram
 
 ## Problem Description
 

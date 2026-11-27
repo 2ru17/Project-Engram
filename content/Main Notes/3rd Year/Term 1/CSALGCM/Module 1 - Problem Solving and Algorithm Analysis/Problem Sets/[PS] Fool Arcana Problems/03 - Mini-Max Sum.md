@@ -7,17 +7,14 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Warmup
 ---
+# Mini-Max Sum
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Fool Arcana]] #[[Arrays]] #[[Math]]
 
 ---
-
-# Mini-Max Sum
 
 ## Problem Description
 
@@ -36,7 +33,7 @@ Given five positive integers, find the minimum and maximum values that can be ca
 |-------|--------|
 | `1 2 3 4 5` | `10 14` |
 
-*Explanation: Min = 1+2+3+4=10 (drop the max). Max = 2+3+4+5=14 (drop the min).*
+*Explanation: Min $= 1+2+3+4 = 10$ (drop the max). Max $= 2+3+4+5 = 14$ (drop the min).*
 
 ---
 
@@ -55,7 +52,7 @@ Then:
 This avoids sorting and runs in a single linear pass!
 
 > [!warning] Integer Overflow
-> Each element can be up to $10^9$. Four of them can sum to $4 \times 10^9$, which exceeds the range of a 32-bit signed integer (`INT_MAX` ≈ $2.1 \times 10^9$). You **must** use `long long` for the accumulator, otherwise you get silent overflow and wrong answers.
+> Each element can be up to $10^9$. Four of them can sum to $4 \times 10^9$, which exceeds the range of a 32-bit signed integer (`INT_MAX` $\approx 2.1 \times 10^9$). You **must** use `long long` for the accumulator, otherwise you get silent overflow and wrong answers.
 
 ---
 

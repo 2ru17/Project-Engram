@@ -7,35 +7,42 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Warmup
 ---
+# Simple Array Sum
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Fool Arcana]] #[[Arrays]]
 
 ---
-
-# Simple Array Sum
 
 ## Problem Description
 
 Given an array of integers, find the sum of its elements.
 
 **Input Format:**
-- First line: integer `n` (size of the array)
-- Second line: `n` space-separated integers
+- First line: integer $n$ (size of the array)
+- Second line: $n$ space-separated integers representing the array's elements $ar[i]$
 
 **Output Format:**
 - A single integer representing the sum of all elements
 
-**Constraints:** $0 < n \leq 1000$; each element $0 < a[i] \leq 1000$
+**Constraints:** $0 < n, ar[i] \leq 1000$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `6`<br>`1 2 3 4 10 11` | `31` |
+**Sample Input 0**
+
+```text
+6
+1 2 3 4 10 11
+```
+
+**Sample Output 0**
+
+```text
+31
+```
+
+*Explanation: Print the sum of the array's elements: $1 + 2 + 3 + 4 + 10 + 11 = 31$.*
 
 ---
 

@@ -41,6 +41,12 @@ audit-report.json
 AUDIT_SUMMARY.md
 *.scratch*
 
+# Content lockdown: allow only Markdown notes and .gitkeep under content/
+content/**
+!content/**/
+!content/**/*.md
+!content/.gitkeep
+
 # Obsidian local workspace & backup files
 .obsidian/
 .trash/

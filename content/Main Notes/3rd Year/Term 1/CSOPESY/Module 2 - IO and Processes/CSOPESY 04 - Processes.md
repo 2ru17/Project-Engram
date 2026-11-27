@@ -302,4 +302,4 @@ int main(void) {
 
 - **Previous Topic:** [[CSOPESY 03 - IO and Display]]
 - **Next Topic:** [[CSOPESY 05 - Threads]]
-- **Related Notes:** 
+- **Related Notes:** [[[EX] Exercise 4 - Process Control Block Analysis]], [[[QZ] CSOPESY Midterm Examination Compilation]]

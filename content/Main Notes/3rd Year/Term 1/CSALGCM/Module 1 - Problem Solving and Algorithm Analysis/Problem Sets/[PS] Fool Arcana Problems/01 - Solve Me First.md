@@ -7,17 +7,14 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Warmup
 ---
+# Solve Me First
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Fool Arcana]] #[[Warmup]]
 
 ---
-
-# Solve Me First
 
 > [!tip] Purpose
 > This is a warmup problem designed to confirm that your development environment is configured correctly and that you can read input, call a function, and produce output on HackerRank.
@@ -27,18 +24,28 @@ hackerrank_domain: Warmup
 Complete the `solveMeFirst` function so that it computes the sum of two integers.
 
 **Input Format:**
-- First line: integer `a`
-- Second line: integer `b`
+- First line: integer $a$
+- Second line: integer $b$
 
 **Output Format:**
-- Print the integer sum `a + b`
+- Print the integer sum $a + b$
 
 **Constraints:** $1 \leq a, b \leq 1000$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `2`<br>`3` | `5` |
+**Sample Input 0**
+
+```text
+2
+3
+```
+
+**Sample Output 0**
+
+```text
+5
+```
+
+*Explanation: $2 + 3 = 5$.*
 
 ---
 

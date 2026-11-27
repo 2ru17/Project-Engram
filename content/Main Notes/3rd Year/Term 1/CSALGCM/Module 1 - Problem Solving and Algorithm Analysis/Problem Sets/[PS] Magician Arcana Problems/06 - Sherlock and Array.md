@@ -7,40 +7,74 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Arrays
 ---
+# Sherlock and Array
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Arrays]] #[[Prefix Sum]]
 
 ---
 
----
-
-# Sherlock and Array
-
 ## Problem Description
-Given an array of integers, determine if there exists an element such that the sum of the elements on its left is strictly equal to the sum of the elements on its right. If it exists, return "YES", otherwise return "NO". (Elements outside the bounds of the array are considered to have a sum of $0$).
+
+Given an array of integers, determine if there exists an element such that the sum of the elements on its left is strictly equal to the sum of the elements on its right. If it exists, return `YES`; otherwise return `NO`. (Elements outside the bounds of the array are considered to have a sum of $0$).
 
 **Input Format:**
-The first line contains    , the number of test cases.
-The next       pairs of lines each represent a test case.
-- The first line contains , the number of elements in the array           .
-- The second line contains       space-separated integers             where              .
+The first line contains $T$, the number of test cases.
+The next $T$ pairs of lines each represent a test case:
+- The first line contains $n$, the number of elements in the array $arr$.
+- The second line contains $n$ space-separated integers $arr[i]$ where $0 \leq i < n$.
 
 **Output Format:**
- Suggest Edits
- • string: either YES or NO
+- `string`: either `YES` or `NO` (printed on a new line per test case).
 
 **Constraints:**
-$
+- $1 \leq T \leq 10$
+- $1 \leq n \leq 10^5$
+- $1 \leq arr[i] \leq 2 \times 10^4$
+- $0 \leq i < n$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `0<br><br><br>   2<br>   3<br>   123<br>   4<br>   1233` | `0<br><br><br>   NO<br>   YES` |
+**Sample Input 0**
+
+```text
+2
+3
+1 2 3
+4
+1 2 3 3
+```
+
+**Sample Output 0**
+
+```text
+NO
+YES
+```
+
+*Explanation 0:* In the first test case, no valid pivot index exists. In the second test case, $arr[0] + arr[1] = arr[3]$ ($1 + 2 = 3$), so index $2$ satisfies the condition.
+
+**Sample Input 1**
+
+```text
+3
+5
+1 1 4 1 1
+4
+2 0 0 0
+4
+0 0 2 0
+```
+
+**Sample Output 1**
+
+```text
+YES
+YES
+YES
+```
+
+*Explanation 1:* In each case ($arr[2]=4$, $arr[0]=2$, $arr[2]=2$), the left and right subarray sums are equal ($2$, $0$, and $0$, respectively).
 
 ---
 
@@ -58,15 +92,11 @@ Here is how the C++ code achieves this step-by-step:
 
 ---
 
----
-
 ## Complexity Analysis
 | | Complexity |
 |--|--|
 | **Time** | **$O(N)$** — We pass through the array exactly twice: once to calculate the total sum ($O(N)$), and once to find the balance point ($O(N)$). This yields a linear overall time complexity. |
 | **Space** | **$O(1)$** — We achieve the result using only three scalar variables (`total`, `leftSum`, and `rightSum`), meaning the memory footprint remains constant regardless of the array's size. |
-
----
 
 ---
 

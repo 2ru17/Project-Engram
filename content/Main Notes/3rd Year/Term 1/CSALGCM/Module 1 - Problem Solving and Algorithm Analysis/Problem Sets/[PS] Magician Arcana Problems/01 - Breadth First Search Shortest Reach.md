@@ -7,43 +7,59 @@ status: solved
 difficulty: Medium
 hackerrank_domain: Graphs
 ---
+# Breadth First Search: Shortest Reach
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[BFS]] #[[Graphs]]
 
 ---
 
----
-
-# Breadth First Search: Shortest Reach
-
 ## Problem Description
-Given an undirected graph where each edge has a uniform weight of 6 units, you need to find the shortest distance from a starting node to all other nodes. You should return an array of the shortest distances in node number order (excluding the start node). If a node is unreachable from the starting position, its distance should be `-1`.
+
+Consider an undirected graph where each edge weighs $6$ units. Each of the nodes is labeled consecutively from $1$ to $n$.
+
+You will be given a number of queries. For each query, you will be given a list of edges describing an undirected graph. After you create a representation of the graph, you must determine and report the shortest distance to each of the other nodes from a given starting position $s$ using the breadth-first search algorithm (BFS). Return an array of distances from the start node in node number order (excluding the start node). If a node is unreachable, return `-1` for that node.
 
 **Input Format:**
-The first line contains an integer , the number of queries. Each of the following          sets of lines has the
-following format:
- • The first line contains two space-separated integers           and    , the number of nodes and edges in
-     the graph.
- • Each line of the          subsequent lines contains two space-separated integers,         and , that
-     describe an edge between nodes            and .
- • The last line contains a single integer, , the node number to start from.
+The first line contains an integer $q$, the number of queries. Each of the following $q$ sets of lines has the following format:
+- The first line contains two space-separated integers $n$ and $m$, the number of nodes and edges in the graph.
+- Each line $i$ of the $m$ subsequent lines contains two space-separated integers, $u$ and $v$, that describe an edge between nodes $u$ and $v$.
+- The last line contains a single integer, $s$, the node number to start from.
 
 **Output Format:**
-int[n-1]: the distances to nodes in increasing node number order, not including the start node (-1 if a
-node is not reachable)
+- `int[n-1]`: the distances to nodes in increasing node number order, not including the start node (`-1` if a node is not reachable), printed as space-separated integers on a single line per query.
 
 **Constraints:**
-• $• $• $• $
+- $1 \leq q \leq 10$
+- $2 \leq n \leq 1000$
+- $1 \leq m \leq \frac{n \cdot (n - 1)}{2}$
+- $1 \leq u, v, s \leq n$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `2<br>     4 2<br>     1 2<br>     1 3<br>     1<br>     3 1<br>     2 3<br>     2` | `6 6 -1<br>     -1 6` |
+**Sample Input 0**
+
+```text
+2
+4 2
+1 2
+1 3
+1
+3 1
+2 3
+2
+```
+
+**Sample Output 0**
+
+```text
+6 6 -1
+-1 6
+```
+
+*Explanation:*
+1. Query 1 ($n = 4, s = 1$): nodes $2$ and $3$ are 1 edge ($6$ units) away, and node $4$ is unreachable (`-1`), giving `[6, 6, -1]`.
+2. Query 2 ($n = 3, s = 2$): node $1$ is unreachable (`-1`), and node $3$ is 1 edge ($6$ units) away, giving `[-1, 6]`.
 
 ---
 
@@ -59,15 +75,11 @@ BFS explores the graph radially, level by level, moving outwards from the starti
 
 ---
 
----
-
 ## Complexity Analysis
 | | Complexity |
 |--|--|
 | **Time** | **$O(V + E)$** — We build the adjacency list in $O(E)$ time. During the BFS, each of the $V$ vertices is pushed and popped from the queue exactly once, and we iterate through all of their neighbors, visiting each of the $E$ edges at most twice (once from each end). This makes the overall traversal time linear with respect to the graph size. |
 | **Space** | **$O(V + E)$** — The adjacency list requires $O(V + E)$ space to store the nodes and all undirected edges. Additionally, the BFS queue and the `dist` array each take $O(V)$ auxiliary space. |
-
----
 
 ---
 

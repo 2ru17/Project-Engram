@@ -7,44 +7,56 @@ status: solved
 difficulty: Medium
 hackerrank_domain: Strings
 ---
+# Sparse Arrays
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Strings]] #[[Hash Map]]
 
 ---
 
----
-
-# Sparse Arrays
-
 ## Problem Description
-Given a collection of input strings (`stringList`) and a collection of query strings (`queries`), determine how many times each query string occurs in the input list. The result should be an array of counts mapping iteratively to the query requests.
+
+Given a collection of input strings (`stringList`) and a collection of query strings (`queries`), determine how many times each query string occurs in the list of input strings. Return an array of the results.
 
 **Input Format:**
- Suggest Edits
-The first line contains and integer , the size of                                     .
-Each of the next       lines contains a string                                .
-The next line contains , the size of                           .
-Each of the next      lines contains a string                        .
+- The first line contains an integer $n$, the size of `stringList[]`.
+- Each of the next $n$ lines contains a string `stringList[i]`.
+- The next line contains $q$, the size of `queries[]`.
+- Each of the next $q$ lines contains a string `queries[i]`.
 
 **Output Format:**
- Download problem statement
- •          : the results of each query
-                                                                                                                          Download all test cases
+- `int[q]`: the results of each query (printed one integer per line).
 
 **Constraints:**
-.$
-$
-                                                                                                         Copy Download$
+- $1 \leq n \leq 1000$
+- $1 \leq q \leq 1000$
+- $1 \leq |\text{stringList}[i]|, |\text{queries}[i]| \leq 20$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `1<br><br><br><br>                                                                                                      4<br>                   aba baba aba xzxb                                                                  aba<br>                                                                                                      baba<br>                       Array: stringList                                                              aba<br>                                                                                                      xzxb<br>                                                                                                      3<br>                                                                                                      aba<br>                                                                                                      xzxb<br>                                                                                                      ab<br><br>                     aba xzxb ab<br>                      Array: queries` | `1<br><br><br>     2<br>     1<br>     0` |
+**Sample Input 0**
+
+```text
+4
+aba
+baba
+aba
+xzxb
+3
+aba
+xzxb
+ab
+```
+
+**Sample Output 0**
+
+```text
+2
+1
+0
+```
+
+*Explanation:* `"aba"` occurs twice (first and third strings), `"xzxb"` occurs once (fourth string), and `"ab"` does not occur at all.
 
 ---
 
@@ -60,15 +72,11 @@ Here is the step-by-step logic of the C++ implementation:
 
 ---
 
----
-
 ## Complexity Analysis
 | | Complexity |
 |--|--|
 | **Time** | **$O(N \cdot L + Q \cdot L)$** — where $N$ is the size of `stringList`, $Q$ is the number of `queries`, and $L$ is the maximum length of a string. We spend $O(N \cdot L)$ to hash all input strings into the map and $O(Q \cdot L)$ to hash and look up the queries. This is significantly faster than the $O(Q \cdot N \cdot L)$ naive approach. |
 | **Space** | **$O(N \cdot L)$** — In the worst-case scenario where every string in the input list is completely unique, the hash map will store $N$ distinct strings of length up to $L$, consuming linear space relative to the input size. |
-
----
 
 ---
 

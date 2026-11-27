@@ -7,100 +7,118 @@ status: solved
 difficulty: Medium
 hackerrank_domain: Recursion & Binary Search
 ---
-> [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
-
-**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
-
----
 
 # QUIIIIICKSOOOOORT!!!!!!!!!!!
 
+> [!info] Document Metadata
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
+
+**Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Empress Arcana]]
+---
+
 ## Problem Description
-While taking CSALGCM, you got so fascinated by the quicksort algorithm. On average, quicksort has
-a time complexity of O(N log_2 N).
-One way to estimate how long it will take an algorithm to run is to simply substitute a value for N.
-For example, if N = 10^7, N log_2 N = 232,534,966.6421. After this, you divide the result by 10^8.
-The result is the number of seconds it will take to execute the program. (assuming a processor can
-execute 10^8 operations sequentially in a second.)
-For our example, this will yield 2.3253 seconds. For this problem, you can simply take the ceiling of
-the time, which yields ceil(2.3253) = 3 seconds. Depending on our time limit, we may or may not be
-able to sort 10^7 elements.
-Given the time limit T in seconds, determine the largest array size N you can apply quicksort to that
-will not exceed the time limit.
 
-**Input Format:**
-Input consists of a single test case consisting of a line with a single integer T which is the number of
-seconds you have to execute quicksort.
+While taking CSALGCM, you got fascinated by the quicksort algorithm. On average, quicksort has a time complexity of $O(N \log_2 N)$.
 
-**Output Format:**
-Output one line with a single integer N denoting the maximum array size that you can sort in T
-seconds. It is guaranteed that N will not exceed 2 \cdot 10^{15}.
+One way to estimate how long an algorithm takes to run is to substitute a value for $N$. For example, if $N = 10^7$, $N \log_2 N = 232,534,966.6421$. Dividing the result by $10^8$ yields the execution time in seconds (assuming a processor can execute $10^8$ operations sequentially in a second), which gives $2.3253$ seconds. Taking the ceiling of the time yields $\lceil 2.3253 \rceil = 3$ seconds. Depending on our time limit, we may or may not be able to sort $10^7$ elements.
 
-**Constraints:**
-$1 \le T \le 10^9$
+Given the time limit $T$ in seconds, determine the largest array size $N$ you can apply quicksort to that will not exceed the time limit.
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `1` | `4523071` |
+### Input Format
+
+Input consists of a single test case consisting of a line with a single integer $T$ which is the number of seconds you have to execute quicksort.
+
+### Output Format
+
+Output one line with a single integer $N$ denoting the maximum array size that you can sort in $T$ seconds. It is guaranteed that $N$ will not exceed $2 \cdot 10^{15}$.
+
+### Constraints
+
+- $1 \le T \le 10^9$
+
+### Sample Test Cases
+
+**Sample Input 0**
+```text
+1
+```
+
+**Sample Output 0**
+```text
+4523071
+```
+
+**Sample Input 1**
+```text
+5
+```
+
+**Sample Output 1**
+```text
+20580553
+```
+
+**Sample Input 2**
+```text
+7
+```
+
+**Sample Output 2**
+```text
+28279132
+```
 
 ---
 
 ## Approach & Intuition
 
-**Abstract the problem:**
-Quicksort runs in $N \log_2(N)$ operations. A processor executes $10^8$ operations per second. Given $T$ seconds, find the **largest** array size $N$ that can be sorted within the time limit:
-$$\left\lceil \frac{N \log_2 N}{10^8} \right\rceil \le T \iff N \log_2 N \le T \cdot 10^8$$
+> **Problem Abstraction:**
+> Assuming quicksort executes $N \log_2 N$ operations on an array of size $N$ at $10^8$ operations per second, find the largest integer $N$ satisfying:
+> $$\left\lceil \frac{N \log_2 N}{10^8} \right\rceil \le T \iff N \log_2 N \le T \cdot 10^8$$
 
-**Brute Force Approach:**
-Linearly test $N = 1, 2, 3, \dots$ until $N \log_2 N$ exceeds the threshold.
-Time Complexity: $O(N)$ — since $N$ can reach $2 \cdot 10^{16}$, this is completely intractable.
+> **Brute-Force Approach:**
+> Linearly test $N = 1, 2, 3, \dots$ until $N \log_2 N$ exceeds $T \cdot 10^8$.
+> Because $N$ can reach $2 \cdot 10^{15}$, linear iteration takes $O(N)$ steps and is completely intractable.
 
-**Optimal Monotonic Binary Search:**
-The function $f(N) = N \log_2 N$ is **strictly monotonically increasing** for $N \ge 1$. Hence, the predicate $P(N) = (N \log_2 N \le T \cdot 10^8)$ produces a monotonic boolean sequence $[T, T, \dots, T, F, F, \dots]$. We can binary search for the boundary in $O(\log(\text{MAX\_N})) \approx 54$ iterations.
+> **Optimal Approach:**
+> Because $f(N) = N \log_2 N$ is strictly monotonically increasing for $N \ge 1$, the feasibility predicate $f(N) \le T \cdot 10^8$ partitions $[1, 2 \cdot 10^{16}]$ into a true prefix followed by a false suffix. Binary searching for the upper-bound boundary converges in $O(\log(2 \cdot 10^{16})) \approx 54$ iterations and $O(1)$ space.
 
 ```mermaid
 flowchart TD
-    InitBS["Binary Search Bounds: [lo = 1, hi = 2 * 10^16]"] --> LoopBS{"lo <= hi?"}
-    LoopBS -- "Yes" --> Mid["mid = lo + (hi - lo) / 2"]
-    Mid --> Cost["Compute operations: ops = mid * log2(mid)"]
+    InitBS["Set Binary Search Bounds: lo = 1, hi = 2 * 10^16"] --> LoopBS{"lo < hi?"}
+    LoopBS -->|"Yes"| Mid["mid = lo + (hi - lo + 1) / 2"]
+    Mid --> Cost["Compute ops = mid * log2(mid)"]
     Cost --> CompTarget{"ops <= T * 10^8?"}
-    CompTarget -- "Yes (Feasible)" --> Feas["ans = mid<br/>lo = mid + 1 (Search right for larger N)"]
-    CompTarget -- "No (Time Exceeded)" --> Infeas["hi = mid - 1 (Search left for smaller N)"]
+    CompTarget -->|"Yes (feasible)"| Feas["Set lo = mid (search right for larger N)"]
+    CompTarget -->|"No (exceeds limit)"| Infeas["Set hi = mid - 1 (search left for smaller N)"]
     Feas --> LoopBS
     Infeas --> LoopBS
-    LoopBS -- "No" --> TerminateBS["Return ans (Maximum valid array size N)"]
+    LoopBS -->|"No"| TerminateBS["Return lo (maximum valid array size N)"]
 ```
 
 ## Theoretical Framework: QuickSort Partitioning Mechanism
 
 ```mermaid
-graph TD
+flowchart TD
     subgraph QSTree["QuickSort Recursive Divide-and-Conquer Partition"]
-        Root["Array [p..r]<br/>Pivot Key x = A[r]"] --> Left["Left Subarray A[p..q-1]<br/>Invariant: all keys <= x"]
-        Root --> Pivot["Pivot Slot A[q] = x<br/>(Permanently Sorted Position)"]
-        Root --> Right["Right Subarray A[q+1..r]<br/>Invariant: all keys >= x"]
-        Left --> L_rec["Recursive QuickSort(A, p, q-1)"]
-        Right --> R_rec["Recursive QuickSort(A, q+1, r)"]
+        Root["Array [p..r], Pivot Key x = A[r]"] --> Left["Left Subarray A[p..q-1]: all keys <= x"]
+        Root --> Pivot["Pivot Slot A[q] = x (permanently placed)"]
+        Root --> Right["Right Subarray A[q+1..r]: all keys >= x"]
+        Left --> L_rec["Recursive QuickSort(A, p, q - 1)"]
+        Right --> R_rec["Recursive QuickSort(A, q + 1, r)"]
     end
 ```
 
 ## Why Binary Search Works
 
 $f(N) = N \log_2(N)$ is **strictly increasing** for $N \ge 1$:
-- $N$ grows linearly
-- $\log_2(N)$ grows monotonically
-- Product $N \log_2 N$ is strictly monotonic
-
-So if $f(\text{mid}) \le \text{target}$, all smaller values are guaranteed feasible, allowing pruning of the entire left half.
+- $N$ grows linearly.
+- $\log_2(N)$ grows monotonically.
+- Their product $N \log_2 N$ is strictly monotonic, so any feasible $N$ guarantees all smaller array sizes are also feasible.
 
 ---
 
-## Trace (T = 1)
+## Trace ($T = 1$)
 
 ```text
 target = 1 * 10^8 = 100,000,000
@@ -115,30 +133,30 @@ Binary search between lo = 1 and hi = 2 * 10^16:
 
 ## Pitfall: Integer Overflow and Precision Considerations
 
-```
-target = T × 10^8 where T can be 10^9
-target = 10^17 — fits in unsigned long long (max ~1.8×10^19) [Pass]
+```text
+target = T * 10^8 where T <= 10^9
+target <= 10^17 — fits comfortably in unsigned long long (max ~1.8 * 10^19)
 
-N can be up to 2×10^16 — also fits [Pass]
+N <= 2 * 10^15 (and search bound 2 * 10^16) — also fits in unsigned long long
 
-But N × log2(N) ≈ 2×10^16 × 54 ≈ 10^18 — we compute this as double,
-which has ~15 significant digits. At 10^18, precision is ±1000.
-For this problem that's fine since we're comparing against target which
-is also in double.
+Note on double precision:
+N * log2(N) ~ 2 * 10^16 * 54 ~ 10^18, while IEEE 754 double has ~15-17 significant digits.
+At 10^17, double precision suffices for matching the reference threshold comparisons.
 ```
 
 ---
 
 ## Complexity Analysis
 
-| | Complexity |
-|--|--|
-| **Time** | $O(\log(2\cdot 10^{16}))$ | Based on optimal algorithm
-| **Space** | $O(1)$ | Required memory
+| Metric | Complexity | Rationale |
+| :--- | :--- | :--- |
+| **Time** | $O(\log M)$ | Binary search over the search interval $[1, M]$ with $M = 2 \cdot 10^{16}$ halves the range on every iteration, converging in at most $\lceil \log_2(2 \cdot 10^{16}) \rceil = 55$ constant-time floating-point checks. |
+| **Space** | $O(1)$ | Only a fixed number of `unsigned long long` bounds and `double` temporaries are allocated. |
 
 ---
 
 ## Original Stub (HackerRank Template)
+
 ```c
 #include <stdio.h>
 
@@ -155,6 +173,7 @@ int main() {
 ```
 
 ## Full Solution
+
 ```c
 #include <stdio.h>
 
@@ -186,9 +205,9 @@ int main() {
 }
 ```
 
-
 ## References & Navigation
-- **Related Notes:** [[Divide and Conquer Introduction]]
+
 - **Previous Problem:** [[04 - Never Fade Away]]
 - **Next Problem:** [[06 - Swapper, No Swapping!!!]]
 - **Parent Set:** [[[PS] Empress Arcana|Empress Arcana Index]]
+- **Related Notes:** [[Divide and Conquer Introduction]]

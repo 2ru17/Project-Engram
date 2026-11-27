@@ -7,17 +7,14 @@ status: solved
 difficulty: Easy
 hackerrank_domain: Math
 ---
+# Sherlock and Squares
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Fool Arcana]] #[[Math]] #[[Square Roots]]
 
 ---
-
-# Sherlock and Squares
 
 ## Problem Description
 
@@ -26,18 +23,30 @@ Watson gives Sherlock two integers, `a` and `b`. Sherlock must count the number 
 A perfect square is an integer that is the square of another integer (e.g., 1, 4, 9, 16, 25…).
 
 **Input Format:**
-- First line: `q` (number of test cases)
-- Next `q` lines: two integers `a` and `b`
+- First line: $q$ (number of test cases)
+- Next $q$ lines: two space-separated integers $a$ and $b$
 
 **Output Format:**
-- For each test case, a single integer: the count of perfect squares in `[a, b]`.
+- For each test case, a single integer: the count of perfect squares in $[a, b]$.
 
-**Constraints:** $1 \leq a \leq b \leq 10^9$; $1 \leq q \leq 100$
+**Constraints:** $1 \leq q \leq 100$; $1 \leq a \leq b \leq 10^9$
 
-**Sample:**
-| Input | Output | Explanation |
-|-------|--------|-------------|
-| `2`<br>`3 9`<br>`17 24` | `2`<br>`0` | Squares in [3,9]: 4=2², 9=3² → 2. Squares in [17,24]: none → 0 |
+**Sample Input 0**
+
+```text
+2
+3 9
+17 24
+```
+
+**Sample Output 0**
+
+```text
+2
+0
+```
+
+*Explanation: In $[3, 9]$, the square integers are $4 = 2^2$ and $9 = 3^2$ (count = $2$). In $[17, 24]$, there are no square integers (count = $0$).*
 
 ---
 

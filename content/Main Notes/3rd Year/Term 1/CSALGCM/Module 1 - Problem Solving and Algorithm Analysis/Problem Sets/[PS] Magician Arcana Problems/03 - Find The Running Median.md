@@ -7,38 +7,64 @@ status: solved
 difficulty: Hard
 hackerrank_domain: Heaps
 ---
+# Find the Running Median
+
 > [!info] Document Metadata
-> - **Course:** `=this.course`
-> - **Topic:** `=this.topic`
-> - **Status:** `=this.status`
-> - **Difficulty:** `=this.difficulty`
+> **Course:** `=this.course` | **Topic:** `=this.topic` | **Status:** `=this.status` | **Difficulty:** `=this.difficulty`
 
 **Tags:** #[[Computer Science]] #[[CSALGCM]] #[[Algorithms and Complexity]] #[[HackerRank]] #[[Magician Arcana]] #[[Heaps]] #[[Priority Queue]]
 
 ---
 
----
-
-# Find the Running Median
-
 ## Problem Description
-Given a data stream of $N$ integers, you must keep track of a "running list" of integers and print the median of this updated list every time a new integer is added. The output should be formatted as a double-precision float scaled to 1 decimal place.
+
+Given a data stream of $n$ integers, perform the following task for each $i$-th integer:
+1. Add the $i$-th integer to a running list of integers.
+2. Find the median of the updated list (for the first element through the $i$-th element).
+3. Print the updated median on a new line as a double-precision floating-point number scaled to $1$ decimal place (e.g., `12.3`).
 
 **Input Format:**
-The first line contains a single integer, , the number of integers in the data stream.
-Each line of the          subsequent lines contains an integer,         , to be inserted into the list.
+- The first line contains a single integer, $n$, the number of integers in the data stream.
+- Each line $i$ of the $n$ subsequent lines contains an integer, $a[i]$, to be inserted into the list.
 
 **Output Format:**
-- float[n]: the median of the array after each insertion, modify the print statement in main to get
-proper formatting.
+- `float[n]`: the median of the array after each insertion, printed one per line formatted to $1$ decimal place (modify the print statement in `main` to get proper formatting).
 
 **Constraints:**
-• $• $
+- $1 \leq n \leq 10^5$
+- $0 \leq a[i] \leq 10^5$
 
-**Sample:**
-| Input | Output |
-|-------|--------|
-| `STDIN           Function<br>     -----           --------<br>     6               a[] size n = 6<br>     12              a = [12, 4, 5, 3, 8, 7]<br>     4<br>     5<br>     3<br>     8<br>     7` | `12.0<br>     8.0<br>     5.0<br>     4.5<br>     5.0<br>     6.0` |
+**Sample Input 0**
+
+```text
+6
+12
+4
+5
+3
+8
+7
+```
+
+**Sample Output 0**
+
+```text
+12.0
+8.0
+5.0
+4.5
+5.0
+6.0
+```
+
+*Explanation:*
+There are $n = 6$ integers, so the running medians after each insertion are:
+1. $\{12\} \to 12.0$
+2. $\{4, 12\} \to \frac{4 + 12}{2} = 8.0$
+3. $\{4, 5, 12\} \to 5.0$
+4. $\{3, 4, 5, 12\} \to \frac{4 + 5}{2} = 4.5$
+5. $\{3, 4, 5, 8, 12\} \to 5.0$
+6. $\{3, 4, 5, 7, 8, 12\} \to \frac{5 + 7}{2} = 6.0$
 
 ---
 
@@ -56,15 +82,11 @@ The C++ solution implements this using the **Two Heaps Pattern**:
 
 ---
 
----
-
 ## Complexity Analysis
 | | Complexity |
 |--|--|
 | **Time** | **$O(N \log N)$** — For each of the $N$ integers in the stream, we perform $O(1)$ heap insertions and deletions. A heap push or pop takes $O(\log K)$ time, where $K$ is the size of the heap. Over $N$ elements, the total time is bounded by $O(N \log N)$. |
 | **Space** | **$O(N)$** — We store all $N$ elements from the data stream inside the two priority queues, taking linear space. |
-
----
 
 ---
 
